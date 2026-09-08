@@ -1,0 +1,1502 @@
+[
+  {
+    "taskId": "colorbench-001",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-001.png",
+    "imageFilename": "colorbench-001.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#2563eb",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-002",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-002.png",
+    "imageFilename": "colorbench-002.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#e2e8f0",
+      "text_color": "#0f172a"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-003",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-003.png",
+    "imageFilename": "colorbench-003.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#16a34a",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-004",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-004.png",
+    "imageFilename": "colorbench-004.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#d97706",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-005",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-005.png",
+    "imageFilename": "colorbench-005.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#dc2626",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-006",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-006.png",
+    "imageFilename": "colorbench-006.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#0284c7",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-007",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-007.png",
+    "imageFilename": "colorbench-007.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#3b82f6",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-008",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-008.png",
+    "imageFilename": "colorbench-008.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#334155",
+      "text_color": "#f8fafc"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-009",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-009.png",
+    "imageFilename": "colorbench-009.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#22c55e",
+      "text_color": "#052e16"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-010",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-010.png",
+    "imageFilename": "colorbench-010.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#f59e0b",
+      "text_color": "#451a03"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-011",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-011.png",
+    "imageFilename": "colorbench-011.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#ef4444",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-012",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-012.png",
+    "imageFilename": "colorbench-012.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#38bdf8",
+      "text_color": "#082f49"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-013",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-013.png",
+    "imageFilename": "colorbench-013.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#eff6ff",
+      "text_color": "#1d4ed8"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-014",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-014.png",
+    "imageFilename": "colorbench-014.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#f0fdf4",
+      "text_color": "#15803d"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-015",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-015.png",
+    "imageFilename": "colorbench-015.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#fffbeb",
+      "text_color": "#b45309"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-016",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-016.png",
+    "imageFilename": "colorbench-016.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#fef2f2",
+      "text_color": "#b91c1c"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-017",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-017.png",
+    "imageFilename": "colorbench-017.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#f0f9ff",
+      "text_color": "#0369a1"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-018",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-018.png",
+    "imageFilename": "colorbench-018.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#172554",
+      "text_color": "#93c5fd"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-019",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-019.png",
+    "imageFilename": "colorbench-019.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#052e16",
+      "text_color": "#86efac"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-020",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-020.png",
+    "imageFilename": "colorbench-020.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#451a03",
+      "text_color": "#fde047"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-021",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-021.png",
+    "imageFilename": "colorbench-021.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#450a0a",
+      "text_color": "#fca5a5"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-022",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-022.png",
+    "imageFilename": "colorbench-022.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#082f49",
+      "text_color": "#7dd3fc"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-023",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-023.png",
+    "imageFilename": "colorbench-023.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "outline-transparent",
+      "theme": "light",
+      "bg_color": "transparent",
+      "text_color": "#2563eb"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-024",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-024.png",
+    "imageFilename": "colorbench-024.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "outline-transparent",
+      "theme": "light",
+      "bg_color": "transparent",
+      "text_color": "#475569"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-025",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-025.png",
+    "imageFilename": "colorbench-025.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "outline-transparent",
+      "theme": "light",
+      "bg_color": "transparent",
+      "text_color": "#16a34a"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-026",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-026.png",
+    "imageFilename": "colorbench-026.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "outline-transparent",
+      "theme": "light",
+      "bg_color": "transparent",
+      "text_color": "#dc2626"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-027",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-027.png",
+    "imageFilename": "colorbench-027.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "outline-transparent",
+      "theme": "dark",
+      "bg_color": "transparent",
+      "text_color": "#60a5fa"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-028",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-028.png",
+    "imageFilename": "colorbench-028.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "outline-transparent",
+      "theme": "dark",
+      "bg_color": "transparent",
+      "text_color": "#94a3b8"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-029",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-029.png",
+    "imageFilename": "colorbench-029.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "outline-transparent",
+      "theme": "dark",
+      "bg_color": "transparent",
+      "text_color": "#4ade80"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-030",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-030.png",
+    "imageFilename": "colorbench-030.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "outline-transparent",
+      "theme": "dark",
+      "bg_color": "transparent",
+      "text_color": "#f87171"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-031",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-031.png",
+    "imageFilename": "colorbench-031.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "linear-gradient",
+      "theme": "light",
+      "bg_color": "linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-032",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-032.png",
+    "imageFilename": "colorbench-032.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "linear-gradient",
+      "theme": "light",
+      "bg_color": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-033",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-033.png",
+    "imageFilename": "colorbench-033.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "large-text-subdued",
+      "fill_type": "linear-gradient",
+      "theme": "light",
+      "bg_color": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-034",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-034.png",
+    "imageFilename": "colorbench-034.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "linear-gradient",
+      "theme": "light",
+      "bg_color": "linear-gradient(135deg, #dc2626 0%, #e11d48 100%)",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-035",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-035.png",
+    "imageFilename": "colorbench-035.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "linear-gradient",
+      "theme": "light",
+      "bg_color": "linear-gradient(135deg, #0284c7 0%, #06b6d4 100%)",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-036",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-036.png",
+    "imageFilename": "colorbench-036.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "linear-gradient",
+      "theme": "dark",
+      "bg_color": "linear-gradient(135deg, #1e3a8a 0%, #4338ca 100%)",
+      "text_color": "#e0e7ff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-037",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-037.png",
+    "imageFilename": "colorbench-037.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "linear-gradient",
+      "theme": "dark",
+      "bg_color": "linear-gradient(135deg, #881337 0%, #991b1b 100%)",
+      "text_color": "#fecdd3"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-038",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-038.png",
+    "imageFilename": "colorbench-038.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "linear-gradient",
+      "theme": "dark",
+      "bg_color": "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+      "text_color": "#f8fafc"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-039",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-039.png",
+    "imageFilename": "colorbench-039.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#ffffff",
+      "text_color": "#000000"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-040",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-040.png",
+    "imageFilename": "colorbench-040.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#0f172a",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-041",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-041.png",
+    "imageFilename": "colorbench-041.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#1e1b4b",
+      "text_color": "#c7d2fe"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-042",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-042.png",
+    "imageFilename": "colorbench-042.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#022c22",
+      "text_color": "#a7f3d0"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-043",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-043.png",
+    "imageFilename": "colorbench-043.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#ffffff",
+      "text_color": "#475569"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-044",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-044.png",
+    "imageFilename": "colorbench-044.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#ffffff",
+      "text_color": "#2563eb"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-045",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-045.png",
+    "imageFilename": "colorbench-045.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#18181b",
+      "text_color": "#a1a1aa"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-046",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-046.png",
+    "imageFilename": "colorbench-046.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "large-text-subdued",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#ffffff",
+      "text_color": "#94a3b8"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-047",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-047.png",
+    "imageFilename": "colorbench-047.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "large-text-subdued",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#f8fafc",
+      "text_color": "#38bdf8"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-048",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-048.png",
+    "imageFilename": "colorbench-048.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "large-text-subdued",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#090d16",
+      "text_color": "#64748b"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-049",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-049.png",
+    "imageFilename": "colorbench-049.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "failing-disabled",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#ffffff",
+      "text_color": "#cbd5e1"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-050",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-050.png",
+    "imageFilename": "colorbench-050.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "failing-disabled",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#f1f5f9",
+      "text_color": "#94a3b8"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-051",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-051.png",
+    "imageFilename": "colorbench-051.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "failing-disabled",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#1e293b",
+      "text_color": "#475569"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-052",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-052.png",
+    "imageFilename": "colorbench-052.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "failing-disabled",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#2563eb",
+      "text_color": "#60a5fa"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-053",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-053.png",
+    "imageFilename": "colorbench-053.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#090d16",
+      "text_color": "#f8fafc"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-054",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-054.png",
+    "imageFilename": "colorbench-054.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "elevated-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#131b2e",
+      "text_color": "#f8fafc"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-055",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-055.png",
+    "imageFilename": "colorbench-055.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "elevated-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#1e293b",
+      "text_color": "#f8fafc"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-056",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-056.png",
+    "imageFilename": "colorbench-056.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "elevated-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#334155",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-057",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-057.png",
+    "imageFilename": "colorbench-057.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#ffffff",
+      "text_color": "#0f172a"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-058",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-058.png",
+    "imageFilename": "colorbench-058.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#f8fafc",
+      "text_color": "#0f172a"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-059",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-059.png",
+    "imageFilename": "colorbench-059.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "subtle-tint",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#f1f5f9",
+      "text_color": "#0f172a"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-060",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-060.png",
+    "imageFilename": "colorbench-060.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#3b82f6",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-061",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-061.png",
+    "imageFilename": "colorbench-061.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aa-standard",
+      "fill_type": "outline-transparent",
+      "theme": "light",
+      "bg_color": "transparent",
+      "text_color": "#16a34a"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-062",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-062.png",
+    "imageFilename": "colorbench-062.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#fef3c7",
+      "text_color": "#92400e"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-063",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-063.png",
+    "imageFilename": "colorbench-063.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#fee2e2",
+      "text_color": "#991b1b"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-064",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-064.png",
+    "imageFilename": "colorbench-064.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#e0f2fe",
+      "text_color": "#075985"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-065",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-065.png",
+    "imageFilename": "colorbench-065.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#1e3a8a",
+      "text_color": "#bfdbfe"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-066",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-066.png",
+    "imageFilename": "colorbench-066.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#064e3b",
+      "text_color": "#6ee7b7"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-067",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-067.png",
+    "imageFilename": "colorbench-067.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#7f1d1d",
+      "text_color": "#fca5a5"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-068",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-068.png",
+    "imageFilename": "colorbench-068.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#78350f",
+      "text_color": "#fde68a"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-069",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-069.png",
+    "imageFilename": "colorbench-069.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#4f46e5",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-070",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-070.png",
+    "imageFilename": "colorbench-070.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#4f46e5",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-071",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-071.png",
+    "imageFilename": "colorbench-071.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#6366f1",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-072",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-072.png",
+    "imageFilename": "colorbench-072.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#6366f1",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-073",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-073.png",
+    "imageFilename": "colorbench-073.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#7c3aed",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-074",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-074.png",
+    "imageFilename": "colorbench-074.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#7c3aed",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-075",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-075.png",
+    "imageFilename": "colorbench-075.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#8b5cf6",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-076",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-076.png",
+    "imageFilename": "colorbench-076.png",
+    "groundTruth": {
+      "semantic_role": "primary",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#8b5cf6",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-077",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-077.png",
+    "imageFilename": "colorbench-077.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#059669",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-078",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-078.png",
+    "imageFilename": "colorbench-078.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#059669",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-079",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-079.png",
+    "imageFilename": "colorbench-079.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#10b981",
+      "text_color": "#064e3b"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-080",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-080.png",
+    "imageFilename": "colorbench-080.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#10b981",
+      "text_color": "#064e3b"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-081",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-081.png",
+    "imageFilename": "colorbench-081.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#14b8a6",
+      "text_color": "#042f2e"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-082",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-082.png",
+    "imageFilename": "colorbench-082.png",
+    "groundTruth": {
+      "semantic_role": "success",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#14b8a6",
+      "text_color": "#042f2e"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-083",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-083.png",
+    "imageFilename": "colorbench-083.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#ea580c",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-084",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-084.png",
+    "imageFilename": "colorbench-084.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#ea580c",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-085",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-085.png",
+    "imageFilename": "colorbench-085.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#f97316",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-086",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-086.png",
+    "imageFilename": "colorbench-086.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#f97316",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-087",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-087.png",
+    "imageFilename": "colorbench-087.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#eab308",
+      "text_color": "#422006"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-088",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-088.png",
+    "imageFilename": "colorbench-088.png",
+    "groundTruth": {
+      "semantic_role": "warning",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#eab308",
+      "text_color": "#422006"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-089",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-089.png",
+    "imageFilename": "colorbench-089.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#b91c1c",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-090",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-090.png",
+    "imageFilename": "colorbench-090.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#b91c1c",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-091",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-091.png",
+    "imageFilename": "colorbench-091.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#e11d48",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-092",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-092.png",
+    "imageFilename": "colorbench-092.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#e11d48",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-093",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-093.png",
+    "imageFilename": "colorbench-093.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#f43f5e",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-094",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-094.png",
+    "imageFilename": "colorbench-094.png",
+    "groundTruth": {
+      "semantic_role": "danger",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#f43f5e",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-095",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-095.png",
+    "imageFilename": "colorbench-095.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#0891b2",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-096",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-096.png",
+    "imageFilename": "colorbench-096.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#0891b2",
+      "text_color": "#ffffff"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-097",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-097.png",
+    "imageFilename": "colorbench-097.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#06b6d4",
+      "text_color": "#164e63"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-098",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-098.png",
+    "imageFilename": "colorbench-098.png",
+    "groundTruth": {
+      "semantic_role": "info",
+      "surface_role": "brand-fill",
+      "contrast_tier": "aa-standard",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#06b6d4",
+      "text_color": "#164e63"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-099",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-099.png",
+    "imageFilename": "colorbench-099.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "light",
+      "bg_color": "#ffffff",
+      "text_color": "#0f172a"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  },
+  {
+    "taskId": "colorbench-100",
+    "imagePath": "/mnt/disks/data/colorbench/dataset/rendered/colorbench-100.png",
+    "imageFilename": "colorbench-100.png",
+    "groundTruth": {
+      "semantic_role": "secondary",
+      "surface_role": "neutral-surface",
+      "contrast_tier": "aaa-high",
+      "fill_type": "solid",
+      "theme": "dark",
+      "bg_color": "#111827",
+      "text_color": "#f9fafb"
+    },
+    "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot. Output a JSON object with:\n- semantic_role: \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"danger\" | \"info\"\n- surface_role: \"neutral-surface\" | \"subtle-tint\" | \"brand-fill\" | \"elevated-surface\"\n- contrast_tier: \"aaa-high\" | \"aa-standard\" | \"large-text-subdued\" | \"failing-disabled\"\n- fill_type: \"solid\" | \"linear-gradient\" | \"outline-transparent\"\n- theme: \"light\" | \"dark\""
+  }
+]

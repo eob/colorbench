@@ -1,0 +1,133 @@
+{
+  "benchmark_id": "colorbench-1",
+  "name": "ColorBench-1",
+  "version": "1.0.0",
+  "description": "Visual semantic color role, surface treatment, WCAG contrast tier, and fill style identification benchmark for multimodal vision-language models.",
+  "eval_date": "2026-09-08",
+  "generated_at": "2026-09-08T03:12:21.989536+00:00",
+  "total_tasks_per_model": 100,
+  "taxonomies": {
+    "attributes": [
+      "all_correct",
+      "semantic_role",
+      "surface_role",
+      "contrast_tier",
+      "fill_type",
+      "theme"
+    ],
+    "semantic_roles": [
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger",
+      "info"
+    ],
+    "surface_roles": [
+      "neutral-surface",
+      "subtle-tint",
+      "brand-fill",
+      "elevated-surface"
+    ],
+    "contrast_tiers": [
+      "aaa-high",
+      "aa-standard",
+      "large-text-subdued",
+      "failing-disabled"
+    ],
+    "fill_types": [
+      "solid",
+      "linear-gradient",
+      "outline-transparent"
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  "models": [
+    {
+      "model_id": "gemini-3.5-flash-lite",
+      "display_name": "Gemini 3.5 Flash-Lite",
+      "provider": "google",
+      "family": "Gemini",
+      "total_tasks": 10,
+      "evaluated_at": "2026-09-08T03:12:19.954177+00:00",
+      "all_correct_accuracy": 1.0,
+      "semantic_role_accuracy": 2.0,
+      "surface_role_accuracy": 10.0,
+      "contrast_tier_accuracy": 6.0,
+      "fill_type_accuracy": 10.0,
+      "theme_accuracy": 6.0,
+      "avg_latency_sec": 0.0,
+      "avg_cost_usd": 0.00033,
+      "pricing": {
+        "input_per_m": 0.3,
+        "output_per_m": 2.5
+      },
+      "by_role": {
+        "secondary": {
+          "total": 2,
+          "exact_accuracy": 0.0,
+          "role_accuracy": 0.0
+        },
+        "primary": {
+          "total": 2,
+          "exact_accuracy": 50.0,
+          "role_accuracy": 100.0
+        },
+        "warning": {
+          "total": 2,
+          "exact_accuracy": 0.0,
+          "role_accuracy": 0.0
+        },
+        "success": {
+          "total": 2,
+          "exact_accuracy": 0.0,
+          "role_accuracy": 0.0
+        },
+        "info": {
+          "total": 1,
+          "exact_accuracy": 0.0,
+          "role_accuracy": 0.0
+        },
+        "danger": {
+          "total": 1,
+          "exact_accuracy": 0.0,
+          "role_accuracy": 0.0
+        }
+      },
+      "by_contrast": {
+        "aaa-high": {
+          "total": 4,
+          "exact_accuracy": 0.0,
+          "role_accuracy": 0.0
+        },
+        "aa-standard": {
+          "total": 6,
+          "exact_accuracy": 16.7,
+          "role_accuracy": 33.3
+        }
+      },
+      "by_fill": {
+        "solid": {
+          "total": 10,
+          "exact_accuracy": 10.0,
+          "role_accuracy": 20.0
+        }
+      },
+      "by_theme": {
+        "light": {
+          "total": 6,
+          "exact_accuracy": 16.7,
+          "role_accuracy": 16.7
+        },
+        "dark": {
+          "total": 4,
+          "exact_accuracy": 0.0,
+          "role_accuracy": 25.0
+        }
+      }
+    }
+  ]
+}
