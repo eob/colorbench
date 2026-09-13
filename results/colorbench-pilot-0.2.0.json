@@ -1,0 +1,6416 @@
+{
+  "schema_version": 1,
+  "dataset_git_commit": "1013fdb0deb1c2a4d2df6fba3c5bc38d05cab473",
+  "dataset_fingerprint": "65414cebf600b83c2f4874cd1823f81fe6b6d8af5940e109fa2f0ef4a1b853fe",
+  "expected_task_count": 72,
+  "run_id": "pilot-20260913",
+  "mock": false,
+  "grading_version": "2",
+  "release": "0.2.0",
+  "evaluation_protocol": "f77174aee4df2f17eaab4474b1a3fa36dc70d6f6ec250182b26895f0e660bf25",
+  "finalized_at": "2026-09-13T02:44:59.825400+00:00",
+  "source_updated_at": "2026-09-13T02:44:45.005685+00:00",
+  "source_git_commit": "ef4ffaabe3f95aac83a0491084219dba80adb1c4",
+  "finalizer_git_commit": "ef4ffaabe3f95aac83a0491084219dba80adb1c4",
+  "finalizer_git_dirty": false,
+  "artifact_type": "colorbench-final-results",
+  "publication_status": "finalized",
+  "benchmark_id": "colorbench",
+  "version": "0.2.0",
+  "status": "pilot",
+  "human_validation": "not_performed",
+  "numeric_scoring": {
+    "distance": "euclidean-oklab",
+    "score_ceiling": 0.2,
+    "score_formula": "100 * (1 - min(delta_e_ok / 0.2, 1))",
+    "hue_chroma_threshold": 0.02,
+    "interpretation": "Engineering normalization; not a just-noticeable-difference threshold."
+  },
+  "dataset_manifest": "dataset/colorbench-v0.2/manifest.json",
+  "dataset_path": "dataset/colorbench-v0.2",
+  "comparison": {
+    "scope": "full",
+    "count": 72,
+    "task_ids": [
+      "colorbench-binding-01",
+      "colorbench-binding-02",
+      "colorbench-binding-03",
+      "colorbench-binding-04",
+      "colorbench-binding-05",
+      "colorbench-binding-06",
+      "colorbench-binding-07",
+      "colorbench-binding-08",
+      "colorbench-chroma-01",
+      "colorbench-chroma-02",
+      "colorbench-chroma-03",
+      "colorbench-chroma-04",
+      "colorbench-chroma-05",
+      "colorbench-chroma-06",
+      "colorbench-chroma-07",
+      "colorbench-chroma-08",
+      "colorbench-gradient-01",
+      "colorbench-gradient-02",
+      "colorbench-gradient-03",
+      "colorbench-gradient-04",
+      "colorbench-gradient-05",
+      "colorbench-gradient-06",
+      "colorbench-gradient-07",
+      "colorbench-gradient-08",
+      "colorbench-hsl-01",
+      "colorbench-hsl-02",
+      "colorbench-hsl-03",
+      "colorbench-hsl-04",
+      "colorbench-hsl-05",
+      "colorbench-hsl-06",
+      "colorbench-hsl-07",
+      "colorbench-hsl-08",
+      "colorbench-hue-01",
+      "colorbench-hue-02",
+      "colorbench-hue-03",
+      "colorbench-hue-04",
+      "colorbench-hue-05",
+      "colorbench-hue-06",
+      "colorbench-hue-07",
+      "colorbench-hue-08",
+      "colorbench-lightness-01",
+      "colorbench-lightness-02",
+      "colorbench-lightness-03",
+      "colorbench-lightness-04",
+      "colorbench-lightness-05",
+      "colorbench-lightness-06",
+      "colorbench-lightness-07",
+      "colorbench-lightness-08",
+      "colorbench-matching-01",
+      "colorbench-matching-02",
+      "colorbench-matching-03",
+      "colorbench-matching-04",
+      "colorbench-matching-05",
+      "colorbench-matching-06",
+      "colorbench-matching-07",
+      "colorbench-matching-08",
+      "colorbench-oklch-01",
+      "colorbench-oklch-02",
+      "colorbench-oklch-03",
+      "colorbench-oklch-04",
+      "colorbench-oklch-05",
+      "colorbench-oklch-06",
+      "colorbench-oklch-07",
+      "colorbench-oklch-08",
+      "colorbench-rgb-01",
+      "colorbench-rgb-02",
+      "colorbench-rgb-03",
+      "colorbench-rgb-04",
+      "colorbench-rgb-05",
+      "colorbench-rgb-06",
+      "colorbench-rgb-07",
+      "colorbench-rgb-08"
+    ],
+    "cohort_fingerprint": "2bb48882c03ccd9d033220219f0d162cbaecfc527b0e3b3b1c91d7c7a976be80",
+    "model_ids": [
+      "claude-fable-5-1",
+      "claude-haiku-4-5-20251001",
+      "claude-opus-5",
+      "claude-sonnet-5",
+      "gemini-3.1-pro-preview",
+      "gemini-3.5-flash-lite",
+      "gemini-3.8-flash",
+      "gpt-5.6-luna",
+      "gpt-5.6-sol",
+      "gpt-5.6-terra",
+      "gpt-6-astra",
+      "muse-spark-1.2",
+      "muse-spark-1.3"
+    ]
+  },
+  "cost_basis": "Recorded metered token usage multiplied by recorded model pricing per scored input; excludes unmetered reserves and separate infrastructure attempts.",
+  "statistical_scope": "Descriptive finite pilot. Related images share groups; no independent-sample confidence intervals or combined nine-family score.",
+  "campaign": {
+    "final_response_count": 936,
+    "attempt_count": 936,
+    "infrastructure_attempt_count": 0,
+    "infrastructure_error_kinds": {},
+    "spent_cost_usd": 5.115191399999995,
+    "budget_usd": 25.0,
+    "cost_incomplete": false,
+    "estimated_cost_attempt_count": 0
+  },
+  "models": [
+    {
+      "model_id": "claude-fable-5-1",
+      "model_config": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": null,
+        "display_name": "Claude Fable 5.1",
+        "enabled": true,
+        "id": "claude-fable-5-1",
+        "input_per_m": 10.0,
+        "max_output_tokens": 4096,
+        "model": "claude-fable-5-1",
+        "notes": "Latest Fable. Adaptive thinking is always on; default effort is high.",
+        "output_per_m": 50.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "provider": "anthropic",
+        "source_url": "https://platform.claude.com/docs/en/models/overview"
+      },
+      "model_config_fingerprint": "5651e81821421e372074e9b58db5cced4e5fb6d05ec21248e07c30ed8d2aa366",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.01022,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.2358989286149153,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.009984999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.354099277748901,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.010209999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.31892322312342,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.010370000000000002,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.282986093501677,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.01025,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.0982556626258884,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.01036,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.218346490742988,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 97.66507598259682,
+          "mean_delta_e_ok": 0.0046698480348063495,
+          "median_delta_e_ok": 0.005231086081944019,
+          "p90_delta_e_ok": 0.007484541752525388,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 1.5,
+            "g": 1.0,
+            "r": 1.375
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.011010000000000002,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.4611716976287425,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.31945921015138,
+          "mean_delta_e_ok": 0.007361081579697227,
+          "median_delta_e_ok": 0.007065570590557794,
+          "p90_delta_e_ok": 0.010749463927954003,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.3283490105025066,
+            "l": 0.5637254901960778,
+            "s": 1.5740878647452785
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0113875,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.2969148850097554,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 94.69329867548204,
+          "mean_delta_e_ok": 0.010613402649035913,
+          "median_delta_e_ok": 0.008896701967108712,
+          "p90_delta_e_ok": 0.019830179428497418,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.004310577537861375,
+            "h": 1.477587986227982,
+            "l": 0.008419271160585287
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.011576249999999998,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.4609959320077905,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.010596527777777778,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 3.303065799000453,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "claude-haiku-4-5-20251001",
+      "model_config": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": null,
+        "display_name": "Claude Haiku 4.5",
+        "enabled": true,
+        "id": "claude-haiku-4-5-20251001",
+        "input_per_m": 1.0,
+        "max_output_tokens": 1024,
+        "model": "claude-haiku-4-5-20251001",
+        "notes": "Latest Haiku, using its dated snapshot ID.",
+        "output_per_m": 5.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "provider": "anthropic",
+        "source_url": "https://platform.claude.com/docs/en/models/overview"
+      },
+      "model_config_fingerprint": "0955227c94c7dc3da8e437be80ebacb3226b826411a0b59e4d37966e425f2a3c",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 6,
+          "accuracy": 0.75,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "C": 1,
+              "B": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0009459999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9202667167555774,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.000922,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8831628288826323,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 3,
+              "A": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0009425000000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8936044441288686,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0009589999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8871994874934899,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 3,
+          "accuracy": 0.375,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 1,
+              "C": 1
+            },
+            "B": {
+              "B": 1,
+              "A": 1
+            },
+            "C": {
+              "C": 1,
+              "A": 1
+            },
+            "D": {
+              "B": 1,
+              "A": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.000947,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9111733086247114,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 6,
+          "accuracy": 0.75,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "D": 1,
+              "A": 1
+            },
+            "B": {
+              "D": 1,
+              "B": 1
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0009573749999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8615306621359196,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 87.38577748945889,
+          "mean_delta_e_ok": 0.025228445021082235,
+          "median_delta_e_ok": 0.028512595049424102,
+          "p90_delta_e_ok": 0.04193480467257202,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 6.875,
+            "g": 5.75,
+            "r": 7.875
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.00104,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.3560098766101873,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 67.45544991493267,
+          "mean_delta_e_ok": 0.06508910017013468,
+          "median_delta_e_ok": 0.05808187952253004,
+          "p90_delta_e_ok": 0.10067057624030339,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 2.607812147108494,
+            "l": 4.191176470588234,
+            "s": 9.285820271737665
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.001052375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.1715357012290042,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 66.77889040460143,
+          "mean_delta_e_ok": 0.06644221919079714,
+          "median_delta_e_ok": 0.06576368233189522,
+          "p90_delta_e_ok": 0.08955173764659585,
+          "out_of_srgb_count": 2,
+          "mean_component_errors": {
+            "c": 0.040697837160178676,
+            "h": 19.319274174279712,
+            "l": 0.033818508791824485
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0010898750000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.302234027250961,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.000984013888888889,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 1.0207463392345946,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "claude-opus-5",
+      "model_config": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": null,
+        "display_name": "Claude Opus 5",
+        "enabled": true,
+        "id": "claude-opus-5",
+        "input_per_m": 5.0,
+        "max_output_tokens": 4096,
+        "model": "claude-opus-5",
+        "notes": "Latest Opus. Default model effort is high.",
+        "output_per_m": 25.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "provider": "anthropic",
+        "source_url": "https://platform.claude.com/docs/en/models/overview"
+      },
+      "model_config_fingerprint": "6873f7552015a1feec5bf8277ba96cf05c60c4667842dddb5aa6a1dbbec3598c",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.006159375000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.735824332004995,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.004982499999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0966232665232383,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.005095,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.9968579301348655,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.005375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.250243718990532,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0061556250000000005,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.8239989596258965,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.005335625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.233112910493219,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.46371587088782,
+          "mean_delta_e_ok": 0.007072568258224348,
+          "median_delta_e_ok": 0.008101956650599132,
+          "p90_delta_e_ok": 0.012019860803439603,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 2.25,
+            "g": 1.875,
+            "r": 1.5
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.005560625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.3401006378553575,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.3598853671507,
+          "mean_delta_e_ok": 0.007280229265698593,
+          "median_delta_e_ok": 0.00665181488225389,
+          "p90_delta_e_ok": 0.011611586376322857,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.8825353432389906,
+            "l": 0.7941176470588229,
+            "s": 1.5740878647452785
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.009549375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.023151493878686,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.2390136866268,
+          "mean_delta_e_ok": 0.007521972626746366,
+          "median_delta_e_ok": 0.009239290310633029,
+          "p90_delta_e_ok": 0.012227798457365747,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.0030485969220980834,
+            "h": 2.190201593552773,
+            "l": 0.004854051051810776
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.02123125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 8.932585366113926,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.007716041666666667,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 3.2702776239578575,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "claude-sonnet-5",
+      "model_config": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": null,
+        "display_name": "Claude Sonnet 5",
+        "enabled": true,
+        "id": "claude-sonnet-5",
+        "input_per_m": 2.0,
+        "max_output_tokens": 4096,
+        "model": "claude-sonnet-5",
+        "notes": "Latest Sonnet. Default model effort is high.",
+        "output_per_m": 10.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "provider": "anthropic",
+        "source_url": "https://platform.claude.com/docs/en/models/overview"
+      },
+      "model_config_fingerprint": "3eea74f353075099be73c9595a094bb3f7a468c7688d17c3b5cd217c93d9bb88",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "A": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0024725000000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0598759546337533,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0019929999999999995,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.677713007607963,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0021617499999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.7145854131231317,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0020699999999999994,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.642400205746526,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "B": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0023459999999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.983292790253472,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0023242500000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8740266104941838,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 95.52711940792337,
+          "mean_delta_e_ok": 0.008945761184153278,
+          "median_delta_e_ok": 0.005799290980067825,
+          "p90_delta_e_ok": 0.02228322740895568,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 4.125,
+            "g": 1.75,
+            "r": 1.0
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.0022205000000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8156953778816387,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 89.90176149971984,
+          "mean_delta_e_ok": 0.020196477000560303,
+          "median_delta_e_ok": 0.01873226322199467,
+          "p90_delta_e_ok": 0.0348095334184539,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 2.0442604106244335,
+            "l": 1.870098039215684,
+            "s": 4.928097254035537
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.00226975,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.6457859187503345,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 89.10152974253882,
+          "mean_delta_e_ok": 0.021796940514922356,
+          "median_delta_e_ok": 0.016960564035861336,
+          "p90_delta_e_ok": 0.04253876068868045,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.009532106202914703,
+            "h": 2.7633022719422677,
+            "l": 0.015832754880227576
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.00231375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.832535431625729,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.0022412777777777782,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 1.8051011900129703,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "gemini-3.1-pro-preview",
+      "model_config": {
+        "api_key_env": "GEMINI_API_KEY",
+        "base_url": null,
+        "display_name": "Gemini 3.1 Pro Preview",
+        "enabled": true,
+        "id": "gemini-3.1-pro-preview",
+        "input_per_m": 2.0,
+        "max_output_tokens": 4096,
+        "model": "gemini-3.1-pro-preview",
+        "notes": "Latest documented Pro model. Preview; no announced shutdown date at verification.",
+        "output_per_m": 12.0,
+        "pricing_notes": "Standard online rates for prompts up to 200k tokens. Above 200k: $4 input / $18 output per million tokens. Output includes thinking tokens.",
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "provider": "google",
+        "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview"
+      },
+      "model_config_fingerprint": "6ef3a6e5b007c672a50902258a256900e6fc450affd9ab4d9373ac0ef70d0ce8",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0088175,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 6.953477814880898,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0039305,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.282081160752568,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0042905,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.6583090281274053,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0063295,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.026095721863385,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "A": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0078045,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.973512252377986,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.019014,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 13.76108841336827,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.37808563296669,
+          "mean_delta_e_ok": 0.00724382873406664,
+          "median_delta_e_ok": 0.007974906235242614,
+          "p90_delta_e_ok": 0.013070172599774697,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 2.625,
+            "g": 1.5,
+            "r": 1.75
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.016928,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 12.326670313996146,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.17370328994744,
+          "mean_delta_e_ok": 0.007652593420105108,
+          "median_delta_e_ok": 0.007284384933287994,
+          "p90_delta_e_ok": 0.013306829646432417,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.3241606420071514,
+            "l": 0.7500000000000013,
+            "s": 2.7372807528373198
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.02128,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 14.586213714130281,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 89.90901786299878,
+          "mean_delta_e_ok": 0.020181964274002446,
+          "median_delta_e_ok": 0.021150840444178677,
+          "p90_delta_e_ok": 0.029724121860618034,
+          "out_of_srgb_count": 1,
+          "mean_component_errors": {
+            "c": 0.007595521743616367,
+            "h": 1.8422387149420516,
+            "l": 0.017298990121204227
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.023807500000000002,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 16.09913019562373,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.01246688888888889,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 9.185175401680075,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "gemini-3.5-flash-lite",
+      "model_config": {
+        "api_key_env": "GEMINI_API_KEY",
+        "base_url": null,
+        "display_name": "Gemini 3.5 Flash-Lite",
+        "enabled": true,
+        "id": "gemini-3.5-flash-lite",
+        "input_per_m": 0.3,
+        "max_output_tokens": 1024,
+        "model": "gemini-3.5-flash-lite",
+        "notes": "Latest Flash-Lite cost-focused model.",
+        "output_per_m": 2.5,
+        "pricing_notes": "Standard text/image input and output rates. Output includes thinking tokens; no caching or batch discount assumed.",
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "provider": "google",
+        "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite"
+      },
+      "model_config_fingerprint": "1a87916f5fd901358d0a3564408464c0392096bd2f7b7412b727f9a9751abfe9",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 3,
+          "accuracy": 0.375,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "A": 2
+            },
+            "C": {
+              "A": 1,
+              "C": 1
+            },
+            "D": {
+              "A": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00036529999999999993,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9732894648623187,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0003617,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8639649123724666,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0003671,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8288588166324189,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00036763750000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8892388644890161,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 5,
+          "accuracy": 0.625,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "A": 1,
+              "B": 1
+            },
+            "C": {
+              "C": 1,
+              "A": 1
+            },
+            "D": {
+              "A": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.00036590000000000006,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8931567709878436,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0003679375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9155077762625297,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.01909640343625,
+          "mean_delta_e_ok": 0.017961807193127486,
+          "median_delta_e_ok": 0.020329999663122236,
+          "p90_delta_e_ok": 0.02747931398661984,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 7.875,
+            "g": 4.375,
+            "r": 4.125
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.00040917499999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9135173165122978,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 90.98523952443684,
+          "mean_delta_e_ok": 0.018029520951126338,
+          "median_delta_e_ok": 0.016545408295552993,
+          "p90_delta_e_ok": 0.02938740925901267,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.609352385845495,
+            "l": 2.1249999999999987,
+            "s": 5.240754531411943
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0004141374999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9169199425014085,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 88.61655776980005,
+          "mean_delta_e_ok": 0.02276688446039985,
+          "median_delta_e_ok": 0.024933167624186063,
+          "p90_delta_e_ok": 0.029375547163385828,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.009919195958180822,
+            "h": 5.189332273938745,
+            "l": 0.011448369567800681
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0004319499999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9010387691378128,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.0003834263888888886,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 0.8994991815286792,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "gemini-3.8-flash",
+      "model_config": {
+        "api_key_env": "GEMINI_API_KEY",
+        "base_url": null,
+        "display_name": "Gemini 3.8 Flash",
+        "enabled": true,
+        "id": "gemini-3.8-flash",
+        "input_per_m": 0.75,
+        "max_output_tokens": 4096,
+        "model": "gemini-3.8-flash",
+        "notes": "Latest stable Flash; supports low, medium and high thinking, not minimal.",
+        "output_per_m": 3.75,
+        "pricing_notes": "Standard introductory rates through 2026-12-31. From 2027-01-01: $1.50 input / $7.50 output per million tokens. Output includes thinking tokens.",
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "provider": "google",
+        "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      "model_config_fingerprint": "7de720d7bc3a5dd06ed19c22ff2574e4c880b911ce7efdfc8a824db7afb0be77",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "B": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.00394809375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.8736107091390295,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0013220624999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.4377711948618526,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0013543125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.484717987870681,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0014603437499999998,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.5819998055085307,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0038661562499999994,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.60956619962235,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0028814062500000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.805626729990763,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.92253682230037,
+          "mean_delta_e_ok": 0.016154926355399262,
+          "median_delta_e_ok": 0.016099692600555132,
+          "p90_delta_e_ok": 0.02302979504290216,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 6.125,
+            "g": 3.75,
+            "r": 4.375
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.002290125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.3641976831277134,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.03544832189445,
+          "mean_delta_e_ok": 0.015929103356211116,
+          "median_delta_e_ok": 0.015172608003152906,
+          "p90_delta_e_ok": 0.024437721494633302,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 0.839627205991235,
+            "l": 1.5539215686274512,
+            "s": 2.5857059496877124
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0034745625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.958938693125674,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 86.96855967963072,
+          "mean_delta_e_ok": 0.026062880640738573,
+          "median_delta_e_ok": 0.027270482510995397,
+          "p90_delta_e_ok": 0.04004405215823055,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.007720521743616368,
+            "h": 2.332690568951392,
+            "l": 0.023298990121204233
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0061333125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.53731882750435,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.002970041666666666,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 3.1837497589723274,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_config": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": null,
+        "display_name": "GPT-5.6 Luna",
+        "enabled": true,
+        "id": "gpt-5.6-luna",
+        "input_per_m": 0.2,
+        "max_output_tokens": 4096,
+        "model": "gpt-5.6-luna",
+        "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+        "output_per_m": 1.2,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://developers.openai.com/api/docs/models",
+        "provider": "openai",
+        "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+      },
+      "model_config_fingerprint": "ba032b15a2527d5994d3971633f9b2f69ae89aed5cdbc739c70e747bf4acd2cd",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0002777,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0385132990049897,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.00016195000000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9768461003695847,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.00018375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.2413802509981906,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0001972,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.2117202891386114,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 6,
+          "accuracy": 0.75,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "A": 1,
+              "B": 1
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "A": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.00031615000000000007,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.3894276470091427,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00028274999999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8573583417382906,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 95.38132611989548,
+          "mean_delta_e_ok": 0.009237347760209057,
+          "median_delta_e_ok": 0.008686243739349609,
+          "p90_delta_e_ok": 0.01693096013883768,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.0,
+            "g": 2.5,
+            "r": 2.375
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.00042215000000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.5375811307458207,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 93.58705885177176,
+          "mean_delta_e_ok": 0.012825882296456467,
+          "median_delta_e_ok": 0.011518303542185528,
+          "p90_delta_e_ok": 0.01959493259354103,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 0.6667093902162752,
+            "l": 0.9363480392156842,
+            "s": 1.8372807528373194
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0006755,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.852875061245868,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 83.36059297647158,
+          "mean_delta_e_ok": 0.033278814047056834,
+          "median_delta_e_ok": 0.014169161285689267,
+          "p90_delta_e_ok": 0.07052775195978463,
+          "out_of_srgb_count": 1,
+          "mean_component_errors": {
+            "c": 0.01990487605450312,
+            "h": 6.859981502197536,
+            "l": 0.013974349160272681
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0017967500000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 14.776137495115108,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.0004793222222222222,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 3.7646488461517342,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_config": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": null,
+        "display_name": "GPT-5.6 Sol",
+        "enabled": true,
+        "id": "gpt-5.6-sol",
+        "input_per_m": 4.0,
+        "max_output_tokens": 4096,
+        "model": "gpt-5.6-sol",
+        "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+        "output_per_m": 20.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://developers.openai.com/api/docs/models",
+        "provider": "openai",
+        "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+      },
+      "model_config_fingerprint": "e9c56323e22fab739cc8759d763c0705a149bee0b28088ae08172377899983a3",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 1,
+              "A": 1
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0053985000000000005,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.418678567126335,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0031430000000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.1687621887540445,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0034245,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.443121844997222,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.003473,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.2868681686377386,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00443,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.1736095141095575,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.004685000000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.3861475953744957,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.1456165996811,
+          "mean_delta_e_ok": 0.015708766800637795,
+          "median_delta_e_ok": 0.014964599255627905,
+          "p90_delta_e_ok": 0.02666260432923885,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.25,
+            "g": 4.625,
+            "r": 4.875
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.005926000000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.9870824173704023,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.27032760308954,
+          "mean_delta_e_ok": 0.015459344793820913,
+          "median_delta_e_ok": 0.015469415940338387,
+          "p90_delta_e_ok": 0.02629785887572231,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.0524236759305592,
+            "l": 1.3499999999999983,
+            "s": 2.06228075283732
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.009049,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 6.558492778771324,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.97508421252179,
+          "mean_delta_e_ok": 0.016049831574956437,
+          "median_delta_e_ok": 0.015147528325528643,
+          "p90_delta_e_ok": 0.0259887368014986,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.002686263961613279,
+            "h": 1.3385529307689692,
+            "l": 0.015076009878795774
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0314335,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 27.83752374711912,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.007884722222222222,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 5.584476313584471,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_config": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": null,
+        "display_name": "GPT-5.6 Terra",
+        "enabled": true,
+        "id": "gpt-5.6-terra",
+        "input_per_m": 2.0,
+        "max_output_tokens": 4096,
+        "model": "gpt-5.6-terra",
+        "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+        "output_per_m": 12.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://developers.openai.com/api/docs/models",
+        "provider": "openai",
+        "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+      },
+      "model_config_fingerprint": "c31dbe50cff3b0093ab5b1c1005c42ff65dbb381ff73eafe5cecac17441bcb51",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.002183,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.5506738376279827,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0018444999999999998,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.3101502718782285,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0020789999999999997,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.3414609812462004,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.002074,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.2380934351167525,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0036399999999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.9587604452608502,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "C": 1,
+              "A": 1
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.004833,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.8271113755035913,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 93.1545343306239,
+          "mean_delta_e_ok": 0.01369093133875217,
+          "median_delta_e_ok": 0.01084988634051716,
+          "p90_delta_e_ok": 0.027668613474648288,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.875,
+            "g": 3.75,
+            "r": 4.375
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.0030515,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.730608395875606,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.96665726740618,
+          "mean_delta_e_ok": 0.014066685465187656,
+          "median_delta_e_ok": 0.013018610073641653,
+          "p90_delta_e_ok": 0.025685951328392444,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.0938522473591297,
+            "l": 1.1657598039215684,
+            "s": 2.16103075283732
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0037730000000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.1629009072494227,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.73259118016676,
+          "mean_delta_e_ok": 0.016534817639666476,
+          "median_delta_e_ok": 0.01758929381765935,
+          "p90_delta_e_ok": 0.02473770376703635,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.005678405303213244,
+            "h": 6.040410109438101,
+            "l": 0.012354051051810783
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.007707499999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 7.28702495212201,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.0034650555555555563,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 2.8229760668756274,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "gpt-6-astra",
+      "model_config": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": null,
+        "display_name": "GPT-6 Astra",
+        "enabled": true,
+        "id": "gpt-6-astra",
+        "input_per_m": 10.0,
+        "max_output_tokens": 4096,
+        "model": "gpt-6-astra",
+        "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+        "output_per_m": 50.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://developers.openai.com/api/docs/models",
+        "provider": "openai",
+        "source_url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      "model_config_fingerprint": "70ce5d3852fae44d4189b37a379a61c6f34d59005fd8c127cad33a584c18cb3a",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.008065000000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0006130876136012,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.007469999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8698928516168962,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.007629999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8985761123694829,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00777,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.937594759008789,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00826875,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0231187135141226,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00825625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.1773868770178524,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.99782512282965,
+          "mean_delta_e_ok": 0.00600434975434069,
+          "median_delta_e_ok": 0.005246032457005252,
+          "p90_delta_e_ok": 0.0098705125167276,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 1.75,
+            "g": 1.625,
+            "r": 1.875
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.01250875,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.200197095007752,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 97.04827685382315,
+          "mean_delta_e_ok": 0.005903446292353685,
+          "median_delta_e_ok": 0.005654079204803153,
+          "p90_delta_e_ok": 0.009974987967761629,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.455431194727546,
+            "l": 0.639950980392157,
+            "s": 1.3482059496877126
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.01366625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.2545857058721595,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.87090083094645,
+          "mean_delta_e_ok": 0.00625819833810711,
+          "median_delta_e_ok": 0.005832408196720824,
+          "p90_delta_e_ok": 0.008750291003266224,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.0025955217436163646,
+            "h": 2.004878919474131,
+            "l": 0.0037621304718027937
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.022146250000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 8.69150854786858,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.010642361111111116,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 3.2281637499876927,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "muse-spark-1.2",
+      "model_config": {
+        "api_key_env": "MODEL_API_KEY",
+        "base_url": "https://api.meta.ai/v1",
+        "display_name": "Muse Spark 1.2",
+        "enabled": true,
+        "id": "muse-spark-1.2",
+        "input_per_m": 1.25,
+        "max_output_tokens": 16384,
+        "model": "muse-spark-1.2",
+        "notes": "Meta Muse Spark 1.2 Standard tier via the OpenAI-compatible Meta Model API Responses endpoint. Reasoning model; uses model-default reasoning settings. 16384 output cap matches 1.3 so both Muse configurations share identical inference settings. Same $1.25/$4.25 standard pricing as 1.3; prompts never train Meta models.",
+        "output_per_m": 4.25,
+        "pricing_notes": "Standard tier rates in USD per million tokens; cached input $0.15/M not assumed. Output includes reasoning tokens.",
+        "pricing_source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "provider": "openai",
+        "source_url": "https://dev.meta.ai/docs/models"
+      },
+      "model_config_fingerprint": "24aa8541bfef7a62fbb06d7bb882a0cb7acc8341dc8f956b52124454dddf4967",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00551346875,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 7.048612204729579,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0031002187499999997,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.419119010635768,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.00362278125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.736688395241799,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00278403125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.3886770943863667,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.005820187500000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 8.139801149001869,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00731965625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 10.580732185124361,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.79159614543613,
+          "mean_delta_e_ok": 0.01641680770912773,
+          "median_delta_e_ok": 0.014345538450738004,
+          "p90_delta_e_ok": 0.02757519557857651,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.625,
+            "g": 4.375,
+            "r": 5.25
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.003781,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.677221879879653,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.50951859931553,
+          "mean_delta_e_ok": 0.014980962801368933,
+          "median_delta_e_ok": 0.015041626695466423,
+          "p90_delta_e_ok": 0.021856375513955015,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.1792407185370652,
+            "l": 1.3259803921568634,
+            "s": 5.23728075283732
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0061104374999999995,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 7.023601915498148,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.49025485720242,
+          "mean_delta_e_ok": 0.015019490285595152,
+          "median_delta_e_ok": 0.013952414852703512,
+          "p90_delta_e_ok": 0.026384275523684157,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.005659107151369206,
+            "h": 3.7008003465931303,
+            "l": 0.01148933471399996
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.012158062499999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 13.485692825866863,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.005578871527777778,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 6.94446074004049,
+      "latency_known_response_count": 72
+    },
+    {
+      "model_id": "muse-spark-1.3",
+      "model_config": {
+        "api_key_env": "MODEL_API_KEY",
+        "base_url": "https://api.meta.ai/v1",
+        "display_name": "Muse Spark 1.3",
+        "enabled": true,
+        "id": "muse-spark-1.3",
+        "input_per_m": 1.25,
+        "max_output_tokens": 16384,
+        "model": "muse-spark-1.3",
+        "notes": "Meta Muse Spark 1.3 Standard tier via the OpenAI-compatible Meta Model API Responses endpoint. Reasoning model at model-default high effort; uses model-default reasoning settings. 16384 output cap: the 4096-cap probe returned status incomplete with all 4096 tokens spent on reasoning, and live outputs reach ~6900 tokens, so 16384 keeps headroom above observed reasoning volume. Same $1.25/$4.25 standard pricing as 1.2; prompts never train Meta models.",
+        "output_per_m": 4.25,
+        "pricing_notes": "Standard tier rates in USD per million tokens; cached input $0.15/M not assumed. Output includes reasoning tokens.",
+        "pricing_source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "provider": "openai",
+        "source_url": "https://dev.meta.ai/docs/models"
+      },
+      "model_config_fingerprint": "d501fb0c8f92e13a48222500e057dda2fad8750852df8848583d413832d05bb5",
+      "status": "finalized",
+      "coverage_status": "complete",
+      "observed_task_count": 72,
+      "expected_task_count": 72,
+      "comparison_task_count": 72,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 1,
+              "C": 1
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0075189375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 18.296203220997995,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0025960625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.5353553527384065,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.00364084375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 6.564711855746282,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0029009062500000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 6.426693368382985,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "B": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0062515625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 13.692030889127636,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.007827,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 16.20371910137328,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 93.82746194596415,
+          "mean_delta_e_ok": 0.012345076108071696,
+          "median_delta_e_ok": 0.010943821655623853,
+          "p90_delta_e_ok": 0.021726110111575013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.75,
+            "g": 2.375,
+            "r": 5.75
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.00394940625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 7.425028202116664,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.59739178841154,
+          "mean_delta_e_ok": 0.01480521642317695,
+          "median_delta_e_ok": 0.014252187653664287,
+          "p90_delta_e_ok": 0.022082787542553238,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.2681986345626632,
+            "l": 1.4950980392156858,
+            "s": 2.9872807528373198
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0057236875000000005,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 10.57773201463715,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 93.28857149010321,
+          "mean_delta_e_ok": 0.013422857019793599,
+          "median_delta_e_ok": 0.012931474666917468,
+          "p90_delta_e_ok": 0.02451390232310079,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.005690495058479366,
+            "h": 2.8920966633790135,
+            "l": 0.0077885291039276605
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0103135625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 23.031361666871817,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      },
+      "mean_api_response_cost_usd": 0.005635774305555555,
+      "cost_known_response_count": 72,
+      "mean_latency_sec": 11.972537296888024,
+      "latency_known_response_count": 72
+    }
+  ],
+  "specimens": [
+    {
+      "task_id": "colorbench-binding-01",
+      "family": "binding",
+      "group_id": "match-binding-01",
+      "image_filename": "binding-01.png",
+      "image_sha256": "417d8646929923246bab25f24212c005cb9bfd5a7ad24b19c696e5c27ebc3626",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "sourceRgb": [
+          172,
+          132,
+          128
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 25
+        },
+        "intendedSeparation": 0.08,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "image_filename": "binding-02.png",
+      "image_sha256": "82b1959cc1996346d7300376bd81bb1224fb7ea9f54069e1c402aa2614a0228b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          163,
+          138,
+          110
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 70
+        },
+        "intendedSeparation": 0.012,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-binding-03",
+      "family": "binding",
+      "group_id": "match-binding-03",
+      "image_filename": "binding-03.png",
+      "image_sha256": "fc7366599e63cf8234ed49160d318f3ac931643e242978a0b82524529f90aeab",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "wide",
+        "sourceRgb": [
+          142,
+          147,
+          112
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 115
+        },
+        "intendedSeparation": 35,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-binding-04",
+      "family": "binding",
+      "group_id": "match-binding-04",
+      "image_filename": "binding-04.png",
+      "image_sha256": "86f81768187ec2eb2e41099827bf55e9895b83670302507978908503e8dbb112",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          117,
+          153,
+          133
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 160
+        },
+        "intendedSeparation": 0.04,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-binding-05",
+      "family": "binding",
+      "group_id": "match-binding-05",
+      "image_filename": "binding-05.png",
+      "image_sha256": "9a5f5fecf773253320d34fc41f37da7787b93af70eace997aae0fd3788577eeb",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "sourceRgb": [
+          107,
+          152,
+          158
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 205
+        },
+        "intendedSeparation": 0.025,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-binding-06",
+      "family": "binding",
+      "group_id": "match-binding-06",
+      "image_filename": "binding-06.png",
+      "image_sha256": "ab79100617bfd11e3e3396e3b5142510ea425f8a6175a243a466561d3839508a",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          120,
+          146,
+          173
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 250
+        },
+        "intendedSeparation": 15,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-binding-07",
+      "family": "binding",
+      "group_id": "match-binding-07",
+      "image_filename": "binding-07.png",
+      "image_sha256": "ecfb01ccb79a31fec2f60316e7a63ca2cbcffbc7485836a37b07f6094af0df15",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "sourceRgb": [
+          145,
+          138,
+          171
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 295
+        },
+        "intendedSeparation": 0.08,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-binding-08",
+      "family": "binding",
+      "group_id": "match-binding-08",
+      "image_filename": "binding-08.png",
+      "image_sha256": "d3286bb1b9f25961c94ef5ddb0cc81164c22f1b5e1076c069bc769362c7eac96",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          165,
+          132,
+          153
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 340
+        },
+        "intendedSeparation": 0.012,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-chroma-01",
+      "family": "chroma",
+      "group_id": "chroma-01",
+      "image_filename": "chroma-01.png",
+      "image_sha256": "3546f0e8da343241fe669db86d1fc6b7e1a65b026c2cbac49fbe5d7123cb4443",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which patch, A or B, is more colorful? The gray-to-color examples show the intended dimension: more colorful means farther from gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "direction": "more",
+        "intendedHue": 25,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              155,
+              139,
+              137
+            ],
+            [
+              166,
+              134,
+              131
+            ],
+            [
+              177,
+              129,
+              125
+            ],
+            [
+              187,
+              124,
+              118
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6495169038461353,
+            "c": 0.09010184469434239,
+            "h": 25.077877296239762
+          },
+          {
+            "l": 0.6505478535807704,
+            "c": 0.02470635760175536,
+            "h": 27.919491399161075
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-chroma-02",
+      "family": "chroma",
+      "group_id": "chroma-02",
+      "image_filename": "chroma-02.png",
+      "image_sha256": "b130ef6416c566876ed585efcd37273a5fbd213345f7ca2cdfd7e792d07d6a1b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which patch, A or B, is more colorful? The gray-to-color examples show the intended dimension: more colorful means farther from gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "direction": "more",
+        "intendedHue": 70,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              151,
+              141,
+              130
+            ],
+            [
+              159,
+              139,
+              117
+            ],
+            [
+              167,
+              137,
+              103
+            ],
+            [
+              175,
+              135,
+              88
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.649942952681236,
+            "c": 0.02489282130440376,
+            "h": 71.6320184290555
+          },
+          {
+            "l": 0.648835083510306,
+            "c": 0.09000599867340862,
+            "h": 70.16069199038009
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-chroma-03",
+      "family": "chroma",
+      "group_id": "chroma-03",
+      "image_filename": "chroma-03.png",
+      "image_sha256": "e254e28f54c7e120411676134b438b736267823052111ee44992d2138cb1580f",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which patch, A or B, is less colorful? The gray-to-color examples show the intended dimension: less colorful means closer to gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "direction": "less",
+        "intendedHue": 115,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              142,
+              145,
+              131
+            ],
+            [
+              142,
+              146,
+              119
+            ],
+            [
+              142,
+              148,
+              106
+            ],
+            [
+              141,
+              149,
+              91
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6492243598067242,
+            "c": 0.024850706920496363,
+            "h": 115.22006266722542
+          },
+          {
+            "l": 0.6502963280833581,
+            "c": 0.08987809442815395,
+            "h": 115.31278476622731
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-chroma-04",
+      "family": "chroma",
+      "group_id": "chroma-04",
+      "image_filename": "chroma-04.png",
+      "image_sha256": "a33c0f26477147929763b53b7e1ab2ffcca134f1d8a88d93e0b80a9bbc78cfcf",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which patch, A or B, is less colorful? The gray-to-color examples show the intended dimension: less colorful means closer to gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "direction": "less",
+        "intendedHue": 160,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              133,
+              147,
+              139
+            ],
+            [
+              123,
+              151,
+              135
+            ],
+            [
+              111,
+              155,
+              131
+            ],
+            [
+              98,
+              158,
+              126
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6492615748956733,
+            "c": 0.09003673741886895,
+            "h": 160.03655773534604
+          },
+          {
+            "l": 0.6499624995569464,
+            "c": 0.024411846293793813,
+            "h": 159.8756511193991
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-chroma-05",
+      "family": "chroma",
+      "group_id": "chroma-05",
+      "image_filename": "chroma-05.png",
+      "image_sha256": "ddfb49af554d67422f017ee26a6a2d526ee019efba3f22607a4f4a0c553203c0",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which patch, A or B, is more colorful? The gray-to-color examples show the intended dimension: more colorful means farther from gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "direction": "more",
+        "intendedHue": 205,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              130,
+              147,
+              149
+            ],
+            [
+              115,
+              151,
+              155
+            ],
+            [
+              98,
+              154,
+              161
+            ],
+            [
+              76,
+              157,
+              166
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6488828460216745,
+            "c": 0.07986938397397013,
+            "h": 205.05641396748348
+          },
+          {
+            "l": 0.6493854766256434,
+            "c": 0.04943619558099753,
+            "h": 206.3937898632672
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-chroma-06",
+      "family": "chroma",
+      "group_id": "chroma-06",
+      "image_filename": "chroma-06.png",
+      "image_sha256": "18f0ee2f6f0f3ea51c0de6dafed31d82df6fa556763019e4c1602c2cf814c2d9",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which patch, A or B, is more colorful? The gray-to-color examples show the intended dimension: more colorful means farther from gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "direction": "more",
+        "intendedHue": 250,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              134,
+              144,
+              155
+            ],
+            [
+              125,
+              146,
+              167
+            ],
+            [
+              115,
+              146,
+              179
+            ],
+            [
+              105,
+              147,
+              190
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6496277515144894,
+            "c": 0.05017282365668099,
+            "h": 249.5779150485822
+          },
+          {
+            "l": 0.6495177224922519,
+            "c": 0.07953301740306734,
+            "h": 249.70851949252528
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-chroma-07",
+      "family": "chroma",
+      "group_id": "chroma-07",
+      "image_filename": "chroma-07.png",
+      "image_sha256": "ceb42d5d2af1dae927b04a80fa22ed69ec5c02599304eb446be0c6c59727ef0f",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which patch, A or B, is less colorful? The gray-to-color examples show the intended dimension: less colorful means closer to gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "direction": "less",
+        "intendedHue": 295,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              144,
+              141,
+              154
+            ],
+            [
+              144,
+              139,
+              166
+            ],
+            [
+              145,
+              136,
+              177
+            ],
+            [
+              146,
+              134,
+              187
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6509810035818934,
+            "c": 0.04918482406507,
+            "h": 294.7201012676501
+          },
+          {
+            "l": 0.6503872926255827,
+            "c": 0.0789337182565593,
+            "h": 294.49111157868845
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-chroma-08",
+      "family": "chroma",
+      "group_id": "chroma-08",
+      "image_filename": "chroma-08.png",
+      "image_sha256": "acafaacac124b265c2a6d515fec599c606efd680cafa088f81dd452a50d57724",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which patch, A or B, is less colorful? The gray-to-color examples show the intended dimension: less colorful means closer to gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "direction": "less",
+        "intendedHue": 340,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              152,
+              139,
+              147
+            ],
+            [
+              161,
+              134,
+              151
+            ],
+            [
+              169,
+              129,
+              155
+            ],
+            [
+              177,
+              124,
+              159
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6506457676369368,
+            "c": 0.08079041816396396,
+            "h": 339.90585797105285
+          },
+          {
+            "l": 0.6509901239007432,
+            "c": 0.04971414361706087,
+            "h": 340.13958697413415
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "image_filename": "gradient-01.png",
+      "image_sha256": "d04a950d6a6703fed82a22c561cae29c7df46edf3ca01e58168595d3232caf93",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "forward",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "task_id": "colorbench-gradient-02",
+      "family": "gradient",
+      "group_id": "gradient-02",
+      "image_filename": "gradient-02.png",
+      "image_sha256": "5ba3ac93c1dcd2480e11358fc13a7c02a2f168beebc0f3f72300c534579ce97c",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "reverse",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "task_id": "colorbench-gradient-03",
+      "family": "gradient",
+      "group_id": "gradient-03",
+      "image_filename": "gradient-03.png",
+      "image_sha256": "60a7752de3ae05e50ea4cb6d5d21988c1876e95305d25022b560b11f21ec120b",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "forward",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "image_filename": "gradient-04.png",
+      "image_sha256": "2c546b5c15e077cf1f6de08792fb0c2413c88360b6ad9c5db67dedc19b6a8076",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "reverse",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "image_filename": "gradient-05.png",
+      "image_sha256": "5112152e63cf70f73dbfea656a119b6aa6916bf61226ace037d704dca93d92f9",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "forward",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "task_id": "colorbench-gradient-06",
+      "family": "gradient",
+      "group_id": "gradient-06",
+      "image_filename": "gradient-06.png",
+      "image_sha256": "b095376af9ab491f64d26fa8ad5c851f31e8d848f5e4542c28a4677a92dc14d7",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "reverse",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "task_id": "colorbench-gradient-07",
+      "family": "gradient",
+      "group_id": "gradient-07",
+      "image_filename": "gradient-07.png",
+      "image_sha256": "4938941b47ee35217d08e4704f4b600bed5d4127f6f72ffedffdd9f16b6a468d",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "forward",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "task_id": "colorbench-gradient-08",
+      "family": "gradient",
+      "group_id": "gradient-08",
+      "image_filename": "gradient-08.png",
+      "image_sha256": "6c899b7508d87db5d6e5caca06abbd92edd92af2e73193fb5e826e2ea171f4d6",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "reverse",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "image_filename": "numeric-01.png",
+      "image_sha256": "b368c5062523baa1d742b22e9ad1a04664210fc2974c214ac7235127fa201ad4",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-hsl-02",
+      "family": "hsl",
+      "group_id": "numeric-02",
+      "image_filename": "numeric-02.png",
+      "image_sha256": "b70e79c86cfdfba12becb8cf4e734e23c6228fe9c57bb8978d02d0be904ed084",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          38,
+          112,
+          190
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-hsl-03",
+      "family": "hsl",
+      "group_id": "numeric-03",
+      "image_filename": "numeric-03.png",
+      "image_sha256": "93cf0480171265f4ab7aaa4261f52e8f17562140a485f4eded81256088360b26",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "image_filename": "numeric-04.png",
+      "image_sha256": "954785045b2443bb0bb057313c34212711b4410a4e51d2c99cafce2db33c40f0",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          185,
+          135,
+          45
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-hsl-05",
+      "family": "hsl",
+      "group_id": "numeric-05",
+      "image_filename": "numeric-05.png",
+      "image_sha256": "5bae8234424f935cb236b7db44d5794471f07514aedbd4c2ece03be99f27ce61",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "image_filename": "numeric-06.png",
+      "image_sha256": "3de3d66ae6360dc0806fd29b763d4c448803dc8fa5207405032bdb9e30f4d05c",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          22,
+          48,
+          75
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-hsl-07",
+      "family": "hsl",
+      "group_id": "numeric-07",
+      "image_filename": "numeric-07.png",
+      "image_sha256": "d316c4c5f9c4e4d46dfbe76228d4399cdfa0186f45305be38a6e234b6c606770",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-hsl-08",
+      "family": "hsl",
+      "group_id": "numeric-08",
+      "image_filename": "numeric-08.png",
+      "image_sha256": "f5ebeb60954b76f8f2f0f465c71c4d4dd4503b9b49184ddba6aef9ccbe299a86",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "achromatic",
+        "sourceRgb": [
+          128,
+          128,
+          128
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-hue-01",
+      "family": "hue",
+      "group_id": "hue-01",
+      "image_filename": "hue-01.png",
+      "image_sha256": "f95a7ab2a33d6abef4a706ad20a0aebad9dfbd385c05affbc7703a6ab64e85ea",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "fixed-lightness-chroma",
+        "sourceRgb": [
+          185,
+          125,
+          120
+        ],
+        "intendedHue": 25,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "task_id": "colorbench-hue-02",
+      "family": "hue",
+      "group_id": "hue-02",
+      "image_filename": "hue-02.png",
+      "image_sha256": "ebb5787927069f3d93333af2212ef5519b86d7452dc2397aefa11aa968834ed1",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "fixed-lightness-chroma",
+        "sourceRgb": [
+          173,
+          135,
+          92
+        ],
+        "intendedHue": 70,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "task_id": "colorbench-hue-03",
+      "family": "hue",
+      "group_id": "hue-03",
+      "image_filename": "hue-03.png",
+      "image_sha256": "3fbdae74a2572c1f5918d541ea4fd1bd3a76e7d53af6fac474417478fda7de4b",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "fixed-lightness-chroma",
+        "sourceRgb": [
+          141,
+          149,
+          95
+        ],
+        "intendedHue": 115,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "task_id": "colorbench-hue-04",
+      "family": "hue",
+      "group_id": "hue-04",
+      "image_filename": "hue-04.png",
+      "image_sha256": "20900885626f2a29c271246d1b133ae2ff2987cbae9cdec8476f2b3eb26d9d05",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "fixed-lightness-chroma",
+        "sourceRgb": [
+          101,
+          158,
+          127
+        ],
+        "intendedHue": 160,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "task_id": "colorbench-hue-05",
+      "family": "hue",
+      "group_id": "hue-05",
+      "image_filename": "hue-05.png",
+      "image_sha256": "6e43b86cf8e8b7e10cfcead97873619ebab3ad8e0bb873f7159bb40a10fee5fc",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "varying-lightness-chroma",
+        "sourceRgb": [
+          82,
+          157,
+          165
+        ],
+        "intendedHue": 205,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "task_id": "colorbench-hue-06",
+      "family": "hue",
+      "group_id": "hue-06",
+      "image_filename": "hue-06.png",
+      "image_sha256": "3f84234a992016dc3a5d9493f3013697b86801b5b45e974ed164eace98256401",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "varying-lightness-chroma",
+        "sourceRgb": [
+          108,
+          147,
+          188
+        ],
+        "intendedHue": 250,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "task_id": "colorbench-hue-07",
+      "family": "hue",
+      "group_id": "hue-07",
+      "image_filename": "hue-07.png",
+      "image_sha256": "6a58ccfc40709d72a5275e7e2137979989484e7b093a70db70205c9b66811a81",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "varying-lightness-chroma",
+        "sourceRgb": [
+          146,
+          134,
+          185
+        ],
+        "intendedHue": 295,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "image_filename": "hue-08.png",
+      "image_sha256": "33390307ecb1d16153c3b2e0050a859bd1633763b4b6e5754f7c3d30a0d6fdf1",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "varying-lightness-chroma",
+        "sourceRgb": [
+          175,
+          125,
+          158
+        ],
+        "intendedHue": 340,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-01",
+      "image_filename": "lightness-01.png",
+      "image_sha256": "2283c7bc8902107aef72ba263f5f430c274e399c591ddb3c7db36209865998b4",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which patch is lighter, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "direction": "lighter",
+        "intendedHue": 25,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.7412252673769428,
+            "c": 0,
+            "h": 0
+          },
+          {
+            "l": 0.4996955681708059,
+            "c": 0,
+            "h": 0
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-lightness-02",
+      "family": "lightness",
+      "group_id": "lightness-02",
+      "image_filename": "lightness-02.png",
+      "image_sha256": "2014f4d28aebc3969452183b14f1cc8b71951a85aa8e9c586e71cfac39d6d764",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which patch is lighter, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "direction": "lighter",
+        "intendedHue": 70,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.4996955681708059,
+            "c": 0,
+            "h": 0
+          },
+          {
+            "l": 0.7412252673769428,
+            "c": 0,
+            "h": 0
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-lightness-03",
+      "family": "lightness",
+      "group_id": "lightness-03",
+      "image_filename": "lightness-03.png",
+      "image_sha256": "54fb900fe4f7353eb7072ffcf7cfb8e748fe4f0133850f84719abba744b2b7b3",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which patch is darker, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "direction": "darker",
+        "intendedHue": 115,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.49891616012838524,
+            "c": 0.05922310438235577,
+            "h": 114.38606614948787
+          },
+          {
+            "l": 0.7402620609408345,
+            "c": 0.06091233939707218,
+            "h": 115.25435016314839
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-04",
+      "image_filename": "lightness-04.png",
+      "image_sha256": "160231dcdc730a90b8cf3523a806be6992b651b4d10e324df84b65a5e64f5a81",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which patch is darker, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "direction": "darker",
+        "intendedHue": 160,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.73998247555987,
+            "c": 0.060101740993747536,
+            "h": 160.16882714274823
+          },
+          {
+            "l": 0.5002151547471297,
+            "c": 0.060043175059629514,
+            "h": 159.2706163780324
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-lightness-05",
+      "family": "lightness",
+      "group_id": "lightness-05",
+      "image_filename": "lightness-05.png",
+      "image_sha256": "5eeaa11863b77df8e56a2f6393b6c321233f096a983e64ccf10d5c7ab1620b22",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which patch is lighter, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "direction": "lighter",
+        "intendedHue": 205,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.69125136622084,
+            "c": 0.06009702025120797,
+            "h": 204.2563504938344
+          },
+          {
+            "l": 0.5904879088925954,
+            "c": 0.0597210143812245,
+            "h": 204.4736148984962
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-lightness-06",
+      "family": "lightness",
+      "group_id": "lightness-06",
+      "image_filename": "lightness-06.png",
+      "image_sha256": "06e835f2994312c7a7219a5f8f472a9335433c577748912da2321706ac3f7791",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which patch is lighter, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "direction": "lighter",
+        "intendedHue": 250,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.5891883156308646,
+            "c": 0.0601651307604451,
+            "h": 250.4887381546513
+          },
+          {
+            "l": 0.6904476521845887,
+            "c": 0.06043366221182862,
+            "h": 249.50087903731665
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-07",
+      "image_filename": "lightness-07.png",
+      "image_sha256": "55d488473a2ec0ffecf348393d5cb4a8c052d2309520b65175160c9fb8a57d1d",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which patch is darker, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "direction": "darker",
+        "intendedHue": 295,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.5888069503612579,
+            "c": 0.061148009568141794,
+            "h": 294.77024517217313
+          },
+          {
+            "l": 0.6894471311695753,
+            "c": 0.06041680147019484,
+            "h": 295.95850500955015
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-08",
+      "image_filename": "lightness-08.png",
+      "image_sha256": "b5c48cb71bde055112bf163fd7142e337f0dbf9f3eb57db53bae973b2dcefd5d",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which patch is darker, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "direction": "darker",
+        "intendedHue": 340,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6891077749780568,
+            "c": 0.05986755485410589,
+            "h": 339.70168248188224
+          },
+          {
+            "l": 0.5891685644016678,
+            "c": 0.06123983659653297,
+            "h": 339.2407726858251
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "colorbench-matching-01",
+      "family": "matching",
+      "group_id": "match-binding-01",
+      "image_filename": "matching-01.png",
+      "image_sha256": "806fb947615eb0a562fe0c602736b32b49434b3d7f20c9a868bc6da8bbdf0564",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "sourceRgb": [
+          172,
+          132,
+          128
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 25
+        },
+        "intendedSeparation": 0.08,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-matching-02",
+      "family": "matching",
+      "group_id": "match-binding-02",
+      "image_filename": "matching-02.png",
+      "image_sha256": "ee4f62a7f50176b741c2e909b1867635ae252f210dd71f50368608a7fb7dc9a4",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          163,
+          138,
+          110
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 70
+        },
+        "intendedSeparation": 0.012,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-matching-03",
+      "family": "matching",
+      "group_id": "match-binding-03",
+      "image_filename": "matching-03.png",
+      "image_sha256": "79aa7ab1c130c4070d3d5d57f5ada2c677a8b27c13b90e715b03bdf96500982e",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "wide",
+        "sourceRgb": [
+          142,
+          147,
+          112
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 115
+        },
+        "intendedSeparation": 35,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-matching-04",
+      "family": "matching",
+      "group_id": "match-binding-04",
+      "image_filename": "matching-04.png",
+      "image_sha256": "7bdc00669d3d65048b8510b153fcaea08a146aefc65cb33f63359f64574dce4c",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          117,
+          153,
+          133
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 160
+        },
+        "intendedSeparation": 0.04,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-matching-05",
+      "family": "matching",
+      "group_id": "match-binding-05",
+      "image_filename": "matching-05.png",
+      "image_sha256": "72c64804fcb5282e5ea828f6425a3bb0982d0bcd5cccaea0fe1ff16cf665853d",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "sourceRgb": [
+          107,
+          152,
+          158
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 205
+        },
+        "intendedSeparation": 0.025,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-matching-06",
+      "family": "matching",
+      "group_id": "match-binding-06",
+      "image_filename": "matching-06.png",
+      "image_sha256": "56d260e8790f2395ec25ded4580dba32b30a6d55ea76df126a4b3050822c8374",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "hue",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          120,
+          146,
+          173
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 250
+        },
+        "intendedSeparation": 15,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-matching-07",
+      "family": "matching",
+      "group_id": "match-binding-07",
+      "image_filename": "matching-07.png",
+      "image_sha256": "00624b04041e3c292b6afad11237034280cac2555dfde3e94cf0d921e481c126",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "sourceRgb": [
+          145,
+          138,
+          171
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 295
+        },
+        "intendedSeparation": 0.08,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-matching-08",
+      "family": "matching",
+      "group_id": "match-binding-08",
+      "image_filename": "matching-08.png",
+      "image_sha256": "61ce0149fb5f9a2794920afef003e26e4d1444723dc96d8f1f909fc909914a31",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          165,
+          132,
+          153
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 340
+        },
+        "intendedSeparation": 0.012,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-oklch-01",
+      "family": "oklch",
+      "group_id": "numeric-01",
+      "image_filename": "numeric-01.png",
+      "image_sha256": "b368c5062523baa1d742b22e9ad1a04664210fc2974c214ac7235127fa201ad4",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "image_filename": "numeric-02.png",
+      "image_sha256": "b70e79c86cfdfba12becb8cf4e734e23c6228fe9c57bb8978d02d0be904ed084",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          38,
+          112,
+          190
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "image_filename": "numeric-03.png",
+      "image_sha256": "93cf0480171265f4ab7aaa4261f52e8f17562140a485f4eded81256088360b26",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "image_filename": "numeric-04.png",
+      "image_sha256": "954785045b2443bb0bb057313c34212711b4410a4e51d2c99cafce2db33c40f0",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          185,
+          135,
+          45
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "image_filename": "numeric-05.png",
+      "image_sha256": "5bae8234424f935cb236b7db44d5794471f07514aedbd4c2ece03be99f27ce61",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-oklch-06",
+      "family": "oklch",
+      "group_id": "numeric-06",
+      "image_filename": "numeric-06.png",
+      "image_sha256": "3de3d66ae6360dc0806fd29b763d4c448803dc8fa5207405032bdb9e30f4d05c",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          22,
+          48,
+          75
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-oklch-07",
+      "family": "oklch",
+      "group_id": "numeric-07",
+      "image_filename": "numeric-07.png",
+      "image_sha256": "d316c4c5f9c4e4d46dfbe76228d4399cdfa0186f45305be38a6e234b6c606770",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-oklch-08",
+      "family": "oklch",
+      "group_id": "numeric-08",
+      "image_filename": "numeric-08.png",
+      "image_sha256": "f5ebeb60954b76f8f2f0f465c71c4d4dd4503b9b49184ddba6aef9ccbe299a86",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "achromatic",
+        "sourceRgb": [
+          128,
+          128,
+          128
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-rgb-01",
+      "family": "rgb",
+      "group_id": "numeric-01",
+      "image_filename": "numeric-01.png",
+      "image_sha256": "b368c5062523baa1d742b22e9ad1a04664210fc2974c214ac7235127fa201ad4",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-rgb-02",
+      "family": "rgb",
+      "group_id": "numeric-02",
+      "image_filename": "numeric-02.png",
+      "image_sha256": "b70e79c86cfdfba12becb8cf4e734e23c6228fe9c57bb8978d02d0be904ed084",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          38,
+          112,
+          190
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-rgb-03",
+      "family": "rgb",
+      "group_id": "numeric-03",
+      "image_filename": "numeric-03.png",
+      "image_sha256": "93cf0480171265f4ab7aaa4261f52e8f17562140a485f4eded81256088360b26",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-rgb-04",
+      "family": "rgb",
+      "group_id": "numeric-04",
+      "image_filename": "numeric-04.png",
+      "image_sha256": "954785045b2443bb0bb057313c34212711b4410a4e51d2c99cafce2db33c40f0",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          185,
+          135,
+          45
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-rgb-05",
+      "family": "rgb",
+      "group_id": "numeric-05",
+      "image_filename": "numeric-05.png",
+      "image_sha256": "5bae8234424f935cb236b7db44d5794471f07514aedbd4c2ece03be99f27ce61",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-rgb-06",
+      "family": "rgb",
+      "group_id": "numeric-06",
+      "image_filename": "numeric-06.png",
+      "image_sha256": "3de3d66ae6360dc0806fd29b763d4c448803dc8fa5207405032bdb9e30f4d05c",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          22,
+          48,
+          75
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-rgb-07",
+      "family": "rgb",
+      "group_id": "numeric-07",
+      "image_filename": "numeric-07.png",
+      "image_sha256": "d316c4c5f9c4e4d46dfbe76228d4399cdfa0186f45305be38a6e234b6c606770",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "colorbench-rgb-08",
+      "family": "rgb",
+      "group_id": "numeric-08",
+      "image_filename": "numeric-08.png",
+      "image_sha256": "f5ebeb60954b76f8f2f0f465c71c4d4dd4503b9b49184ddba6aef9ccbe299a86",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "achromatic",
+        "sourceRgb": [
+          128,
+          128,
+          128
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    }
+  ],
+  "source_run_path": "results/runs/0.2.0/pilot-20260913",
+  "final_results_sha256": "5e1a99f42a3a8b5bd2a24880ec682a51b9f433d0caaa9eb476192b0db5513f2e",
+  "finalization_sha256": "c211595c74625e8ebe485ee232497a3aa81aea90de9698f4afa754e8c08e7d52"
+}

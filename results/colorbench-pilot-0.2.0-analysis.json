@@ -1,0 +1,4539 @@
+{
+  "release": "0.2.0",
+  "run_id": "pilot-20260913",
+  "campaign": {
+    "final_response_count": 936,
+    "attempt_count": 936,
+    "infrastructure_attempt_count": 0,
+    "infrastructure_error_kinds": {},
+    "spent_cost_usd": 5.115191399999995,
+    "budget_usd": 25.0,
+    "cost_incomplete": false,
+    "estimated_cost_attempt_count": 0
+  },
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference.",
+  "model_count": 13,
+  "question_count": 72,
+  "group_count": 48,
+  "families": {
+    "matching": {
+      "responses_across_models": {
+        "kind": "choice",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "correct_count": 93,
+        "accuracy": 0.8942307692307693,
+        "chance_accuracy": 0.25,
+        "confusion": {
+          "A": {
+            "A": 25,
+            "C": 1
+          },
+          "B": {
+            "B": 23,
+            "A": 3
+          },
+          "C": {
+            "C": 25,
+            "A": 1
+          },
+          "D": {
+            "D": 20,
+            "B": 2,
+            "C": 1,
+            "A": 3
+          }
+        }
+      },
+      "models": [
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.01022,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.2358989286149153,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.006159375000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.735824332004995,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0088175,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 6.953477814880898,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0002777,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0385132990049897,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.002183,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.5506738376279827,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.008065000000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0006130876136012,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00551346875,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 7.048612204729579,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "A": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0024725000000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0598759546337533,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "B": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.00394809375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.8736107091390295,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 1,
+              "A": 1
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0053985000000000005,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.418678567126335,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 1,
+              "C": 1
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0075189375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 18.296203220997995,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 6,
+          "accuracy": 0.75,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "C": 1,
+              "B": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0009459999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9202667167555774,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 3,
+          "accuracy": 0.375,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "A": 2
+            },
+            "C": {
+              "A": 1,
+              "C": 1
+            },
+            "D": {
+              "A": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00036529999999999993,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9732894648623187,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "narrow": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 43,
+            "accuracy": 0.8269230769230769,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {},
+              "B": {
+                "B": 23,
+                "A": 3
+              },
+              "C": {},
+              "D": {
+                "D": 20,
+                "B": 2,
+                "C": 1,
+                "A": 3
+              }
+            }
+          },
+          "wide": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 50,
+            "accuracy": 0.9615384615384616,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 25,
+                "C": 1
+              },
+              "B": {},
+              "C": {
+                "C": 25,
+                "A": 1
+              },
+              "D": {}
+            }
+          }
+        },
+        "axis": {
+          "chroma": {
+            "kind": "choice",
+            "count": 39,
+            "valid_count": 39,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 33,
+            "accuracy": 0.8461538461538461,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 13
+              },
+              "B": {
+                "B": 11,
+                "A": 2
+              },
+              "C": {},
+              "D": {
+                "D": 9,
+                "C": 1,
+                "A": 2,
+                "B": 1
+              }
+            }
+          },
+          "hue": {
+            "kind": "choice",
+            "count": 26,
+            "valid_count": 26,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 25,
+            "accuracy": 0.9615384615384616,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {},
+              "B": {
+                "B": 12,
+                "A": 1
+              },
+              "C": {
+                "C": 13
+              },
+              "D": {}
+            }
+          },
+          "lightness": {
+            "kind": "choice",
+            "count": 39,
+            "valid_count": 39,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 35,
+            "accuracy": 0.8974358974358975,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 12,
+                "C": 1
+              },
+              "B": {},
+              "C": {
+                "C": 12,
+                "A": 1
+              },
+              "D": {
+                "D": 11,
+                "B": 1,
+                "A": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "lightness": {
+      "responses_across_models": {
+        "kind": "choice",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "correct_count": 104,
+        "accuracy": 1.0,
+        "chance_accuracy": 0.5,
+        "confusion": {
+          "A": {
+            "A": 52
+          },
+          "B": {
+            "B": 52
+          }
+        }
+      },
+      "models": [
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.009984999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.354099277748901,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.000922,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8831628288826323,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.004982499999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0966232665232383,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0019929999999999995,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.677713007607963,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0039305,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.282081160752568,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0003617,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8639649123724666,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0013220624999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.4377711948618526,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.00016195000000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9768461003695847,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0031430000000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.1687621887540445,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0018444999999999998,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.3101502718782285,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.007469999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8698928516168962,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0031002187499999997,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.419119010635768,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0025960625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.5353553527384065,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "narrow": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 52,
+            "accuracy": 1.0,
+            "chance_accuracy": 0.5,
+            "confusion": {
+              "A": {
+                "A": 26
+              },
+              "B": {
+                "B": 26
+              }
+            }
+          },
+          "wide": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 52,
+            "accuracy": 1.0,
+            "chance_accuracy": 0.5,
+            "confusion": {
+              "A": {
+                "A": 26
+              },
+              "B": {
+                "B": 26
+              }
+            }
+          }
+        },
+        "axis": {
+          "lightness": {
+            "kind": "choice",
+            "count": 104,
+            "valid_count": 104,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 104,
+            "accuracy": 1.0,
+            "chance_accuracy": 0.5,
+            "confusion": {
+              "A": {
+                "A": 52
+              },
+              "B": {
+                "B": 52
+              }
+            }
+          }
+        }
+      }
+    },
+    "chroma": {
+      "responses_across_models": {
+        "kind": "choice",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "correct_count": 103,
+        "accuracy": 0.9903846153846154,
+        "chance_accuracy": 0.5,
+        "confusion": {
+          "A": {
+            "A": 52
+          },
+          "B": {
+            "B": 51,
+            "A": 1
+          }
+        }
+      },
+      "models": [
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.010209999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.31892322312342,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.005095,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.9968579301348655,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0021617499999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.7145854131231317,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0042905,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.6583090281274053,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0003671,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8288588166324189,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0013543125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.484717987870681,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.00018375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.2413802509981906,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0034245,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.443121844997222,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.0020789999999999997,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.3414609812462004,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.007629999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8985761123694829,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.00362278125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.736688395241799,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 4
+            }
+          },
+          "mean_api_response_cost_usd": 0.00364084375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 6.564711855746282,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {
+              "A": 4
+            },
+            "B": {
+              "B": 3,
+              "A": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0009425000000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8936044441288686,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "narrow": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 51,
+            "accuracy": 0.9807692307692307,
+            "chance_accuracy": 0.5,
+            "confusion": {
+              "A": {
+                "A": 26
+              },
+              "B": {
+                "B": 25,
+                "A": 1
+              }
+            }
+          },
+          "wide": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 52,
+            "accuracy": 1.0,
+            "chance_accuracy": 0.5,
+            "confusion": {
+              "A": {
+                "A": 26
+              },
+              "B": {
+                "B": 26
+              }
+            }
+          }
+        },
+        "axis": {
+          "chroma": {
+            "kind": "choice",
+            "count": 104,
+            "valid_count": 104,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 103,
+            "accuracy": 0.9903846153846154,
+            "chance_accuracy": 0.5,
+            "confusion": {
+              "A": {
+                "A": 52
+              },
+              "B": {
+                "B": 51,
+                "A": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "hue": {
+      "responses_across_models": {
+        "kind": "choice",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "correct_count": 104,
+        "accuracy": 1.0,
+        "chance_accuracy": 0.25,
+        "confusion": {
+          "A": {
+            "A": 26
+          },
+          "B": {
+            "B": 26
+          },
+          "C": {
+            "C": 26
+          },
+          "D": {
+            "D": 26
+          }
+        }
+      },
+      "models": [
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.010370000000000002,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.282986093501677,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0009589999999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8871994874934899,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.005375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.250243718990532,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0020699999999999994,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.642400205746526,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0063295,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.026095721863385,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00036763750000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8892388644890161,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0014603437499999998,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.5819998055085307,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0001972,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.2117202891386114,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.003473,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.2868681686377386,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.002074,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.2380934351167525,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00777,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.937594759008789,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00278403125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.3886770943863667,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0029009062500000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 6.426693368382985,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "fixed-lightness-chroma": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 52,
+            "accuracy": 1.0,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 13
+              },
+              "B": {
+                "B": 13
+              },
+              "C": {
+                "C": 13
+              },
+              "D": {
+                "D": 13
+              }
+            }
+          },
+          "varying-lightness-chroma": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 52,
+            "accuracy": 1.0,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 13
+              },
+              "B": {
+                "B": 13
+              },
+              "C": {
+                "C": 13
+              },
+              "D": {
+                "D": 13
+              }
+            }
+          }
+        },
+        "axis": {
+          "hue": {
+            "kind": "choice",
+            "count": 104,
+            "valid_count": 104,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 104,
+            "accuracy": 1.0,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 26
+              },
+              "B": {
+                "B": 26
+              },
+              "C": {
+                "C": 26
+              },
+              "D": {
+                "D": 26
+              }
+            }
+          }
+        }
+      }
+    },
+    "binding": {
+      "responses_across_models": {
+        "kind": "choice",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "correct_count": 91,
+        "accuracy": 0.875,
+        "chance_accuracy": 0.25,
+        "confusion": {
+          "A": {
+            "A": 25,
+            "C": 1
+          },
+          "B": {
+            "B": 23,
+            "A": 3
+          },
+          "C": {
+            "C": 24,
+            "A": 2
+          },
+          "D": {
+            "D": 19,
+            "A": 4,
+            "B": 3
+          }
+        }
+      },
+      "models": [
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.01025,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.0982556626258884,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0061556250000000005,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.8239989596258965,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0038661562499999994,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.60956619962235,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00443,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.1736095141095575,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0036399999999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.9587604452608502,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00826875,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.0231187135141226,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.005820187500000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 8.139801149001869,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "B": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0023459999999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.983292790253472,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "A": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0078045,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.973512252377986,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "B": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.0062515625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 13.692030889127636,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 6,
+          "accuracy": 0.75,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "A": 1,
+              "B": 1
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "A": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.00031615000000000007,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.3894276470091427,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 5,
+          "accuracy": 0.625,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "A": 1,
+              "B": 1
+            },
+            "C": {
+              "C": 1,
+              "A": 1
+            },
+            "D": {
+              "A": 1,
+              "D": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.00036590000000000006,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8931567709878436,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 3,
+          "accuracy": 0.375,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 1,
+              "C": 1
+            },
+            "B": {
+              "B": 1,
+              "A": 1
+            },
+            "C": {
+              "C": 1,
+              "A": 1
+            },
+            "D": {
+              "B": 1,
+              "A": 1
+            }
+          },
+          "mean_api_response_cost_usd": 0.000947,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9111733086247114,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "narrow": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 42,
+            "accuracy": 0.8076923076923077,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {},
+              "B": {
+                "B": 23,
+                "A": 3
+              },
+              "C": {},
+              "D": {
+                "D": 19,
+                "A": 4,
+                "B": 3
+              }
+            }
+          },
+          "wide": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 49,
+            "accuracy": 0.9423076923076923,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 25,
+                "C": 1
+              },
+              "B": {},
+              "C": {
+                "C": 24,
+                "A": 2
+              },
+              "D": {}
+            }
+          }
+        },
+        "axis": {
+          "chroma": {
+            "kind": "choice",
+            "count": 39,
+            "valid_count": 39,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 30,
+            "accuracy": 0.7692307692307693,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 12,
+                "C": 1
+              },
+              "B": {
+                "B": 11,
+                "A": 2
+              },
+              "C": {},
+              "D": {
+                "D": 7,
+                "B": 3,
+                "A": 3
+              }
+            }
+          },
+          "hue": {
+            "kind": "choice",
+            "count": 26,
+            "valid_count": 26,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 25,
+            "accuracy": 0.9615384615384616,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {},
+              "B": {
+                "B": 12,
+                "A": 1
+              },
+              "C": {
+                "C": 13
+              },
+              "D": {}
+            }
+          },
+          "lightness": {
+            "kind": "choice",
+            "count": 39,
+            "valid_count": 39,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 36,
+            "accuracy": 0.9230769230769231,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 13
+              },
+              "B": {},
+              "C": {
+                "C": 11,
+                "A": 2
+              },
+              "D": {
+                "D": 12,
+                "A": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "gradient": {
+      "responses_across_models": {
+        "kind": "choice",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "correct_count": 101,
+        "accuracy": 0.9711538461538461,
+        "chance_accuracy": 0.25,
+        "confusion": {
+          "A": {
+            "A": 24,
+            "D": 1,
+            "C": 1
+          },
+          "B": {
+            "B": 25,
+            "D": 1
+          },
+          "C": {
+            "C": 26
+          },
+          "D": {
+            "D": 26
+          }
+        }
+      },
+      "models": [
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.01036,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.218346490742988,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.005335625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.233112910493219,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0023242500000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8740266104941838,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.019014,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 13.76108841336827,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0003679375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9155077762625297,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0028814062500000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.805626729990763,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00028274999999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8573583417382906,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.004685000000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.3861475953744957,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00825625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.1773868770178524,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.00731965625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 10.580732185124361,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 8,
+          "accuracy": 1.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "A": 2
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.007827,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 16.20371910137328,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 7,
+          "accuracy": 0.875,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "C": 1,
+              "A": 1
+            },
+            "B": {
+              "B": 2
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.004833,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.8271113755035913,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "choice",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 6,
+          "accuracy": 0.75,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {
+              "D": 1,
+              "A": 1
+            },
+            "B": {
+              "D": 1,
+              "B": 1
+            },
+            "C": {
+              "C": 2
+            },
+            "D": {
+              "D": 2
+            }
+          },
+          "mean_api_response_cost_usd": 0.0009573749999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.8615306621359196,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "forward": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 50,
+            "accuracy": 0.9615384615384616,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 24,
+                "D": 1,
+                "C": 1
+              },
+              "B": {},
+              "C": {
+                "C": 26
+              },
+              "D": {}
+            }
+          },
+          "reverse": {
+            "kind": "choice",
+            "count": 52,
+            "valid_count": 52,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 51,
+            "accuracy": 0.9807692307692307,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {},
+              "B": {
+                "B": 25,
+                "D": 1
+              },
+              "C": {},
+              "D": {
+                "D": 26
+              }
+            }
+          }
+        },
+        "axis": {
+          "spatial-color-progression": {
+            "kind": "choice",
+            "count": 104,
+            "valid_count": 104,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "correct_count": 101,
+            "accuracy": 0.9711538461538461,
+            "chance_accuracy": 0.25,
+            "confusion": {
+              "A": {
+                "A": 24,
+                "D": 1,
+                "C": 1
+              },
+              "B": {
+                "B": 25,
+                "D": 1
+              },
+              "C": {
+                "C": 26
+              },
+              "D": {
+                "D": 26
+              }
+            }
+          }
+        }
+      }
+    },
+    "rgb": {
+      "responses_across_models": {
+        "kind": "numeric",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "mean_score": 93.81998214415383,
+        "mean_delta_e_ok": 0.012360035711692214,
+        "median_delta_e_ok": 0.009961085906039573,
+        "p90_delta_e_ok": 0.025000265728236548,
+        "out_of_srgb_count": 0,
+        "mean_component_errors": {
+          "b": 3.8942307692307665,
+          "g": 3.0192307692307674,
+          "r": 3.5769230769230758
+        },
+        "component_known_count": {
+          "b": 104,
+          "g": 104,
+          "r": 104
+        }
+      },
+      "models": [
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 97.66507598259682,
+          "mean_delta_e_ok": 0.0046698480348063495,
+          "median_delta_e_ok": 0.005231086081944019,
+          "p90_delta_e_ok": 0.007484541752525388,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 1.5,
+            "g": 1.0,
+            "r": 1.375
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.011010000000000002,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.4611716976287425,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.99782512282965,
+          "mean_delta_e_ok": 0.00600434975434069,
+          "median_delta_e_ok": 0.005246032457005252,
+          "p90_delta_e_ok": 0.0098705125167276,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 1.75,
+            "g": 1.625,
+            "r": 1.875
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.01250875,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.200197095007752,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.46371587088782,
+          "mean_delta_e_ok": 0.007072568258224348,
+          "median_delta_e_ok": 0.008101956650599132,
+          "p90_delta_e_ok": 0.012019860803439603,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 2.25,
+            "g": 1.875,
+            "r": 1.5
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.005560625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.3401006378553575,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.37808563296669,
+          "mean_delta_e_ok": 0.00724382873406664,
+          "median_delta_e_ok": 0.007974906235242614,
+          "p90_delta_e_ok": 0.013070172599774697,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 2.625,
+            "g": 1.5,
+            "r": 1.75
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.016928,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 12.326670313996146,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 95.52711940792337,
+          "mean_delta_e_ok": 0.008945761184153278,
+          "median_delta_e_ok": 0.005799290980067825,
+          "p90_delta_e_ok": 0.02228322740895568,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 4.125,
+            "g": 1.75,
+            "r": 1.0
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.0022205000000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.8156953778816387,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 95.38132611989548,
+          "mean_delta_e_ok": 0.009237347760209057,
+          "median_delta_e_ok": 0.008686243739349609,
+          "p90_delta_e_ok": 0.01693096013883768,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.0,
+            "g": 2.5,
+            "r": 2.375
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.00042215000000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.5375811307458207,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 93.82746194596415,
+          "mean_delta_e_ok": 0.012345076108071696,
+          "median_delta_e_ok": 0.010943821655623853,
+          "p90_delta_e_ok": 0.021726110111575013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.75,
+            "g": 2.375,
+            "r": 5.75
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.00394940625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 7.425028202116664,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 93.1545343306239,
+          "mean_delta_e_ok": 0.01369093133875217,
+          "median_delta_e_ok": 0.01084988634051716,
+          "p90_delta_e_ok": 0.027668613474648288,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.875,
+            "g": 3.75,
+            "r": 4.375
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.0030515,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.730608395875606,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.1456165996811,
+          "mean_delta_e_ok": 0.015708766800637795,
+          "median_delta_e_ok": 0.014964599255627905,
+          "p90_delta_e_ok": 0.02666260432923885,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.25,
+            "g": 4.625,
+            "r": 4.875
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.005926000000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.9870824173704023,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.92253682230037,
+          "mean_delta_e_ok": 0.016154926355399262,
+          "median_delta_e_ok": 0.016099692600555132,
+          "p90_delta_e_ok": 0.02302979504290216,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 6.125,
+            "g": 3.75,
+            "r": 4.375
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.002290125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.3641976831277134,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.79159614543613,
+          "mean_delta_e_ok": 0.01641680770912773,
+          "median_delta_e_ok": 0.014345538450738004,
+          "p90_delta_e_ok": 0.02757519557857651,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 3.625,
+            "g": 4.375,
+            "r": 5.25
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.003781,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.677221879879653,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.01909640343625,
+          "mean_delta_e_ok": 0.017961807193127486,
+          "median_delta_e_ok": 0.020329999663122236,
+          "p90_delta_e_ok": 0.02747931398661984,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 7.875,
+            "g": 4.375,
+            "r": 4.125
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.00040917499999999996,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9135173165122978,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 87.38577748945889,
+          "mean_delta_e_ok": 0.025228445021082235,
+          "median_delta_e_ok": 0.028512595049424102,
+          "p90_delta_e_ok": 0.04193480467257202,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "b": 6.875,
+            "g": 5.75,
+            "r": 7.875
+          },
+          "component_known_count": {
+            "b": 8,
+            "g": 8,
+            "r": 8
+          },
+          "mean_api_response_cost_usd": 0.00104,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.3560098766101873,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "achromatic": {
+            "kind": "numeric",
+            "count": 13,
+            "valid_count": 13,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 96.759293292897,
+            "mean_delta_e_ok": 0.00648141341420602,
+            "median_delta_e_ok": 0.0,
+            "p90_delta_e_ok": 0.02626051866170853,
+            "out_of_srgb_count": 0,
+            "mean_component_errors": {
+              "b": 1.9230769230769231,
+              "g": 1.9230769230769231,
+              "r": 1.9230769230769231
+            },
+            "component_known_count": {
+              "b": 13,
+              "g": 13,
+              "r": 13
+            }
+          },
+          "chromatic": {
+            "kind": "numeric",
+            "count": 91,
+            "valid_count": 91,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 93.40008055147625,
+            "mean_delta_e_ok": 0.01319983889704738,
+            "median_delta_e_ok": 0.010314035419789874,
+            "p90_delta_e_ok": 0.024681513251213386,
+            "out_of_srgb_count": 0,
+            "mean_component_errors": {
+              "b": 4.175824175824173,
+              "g": 3.175824175824174,
+              "r": 3.8131868131868125
+            },
+            "component_known_count": {
+              "b": 91,
+              "g": 91,
+              "r": 91
+            }
+          }
+        },
+        "axis": {
+          "numeric-estimation": {
+            "kind": "numeric",
+            "count": 104,
+            "valid_count": 104,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 93.81998214415383,
+            "mean_delta_e_ok": 0.012360035711692214,
+            "median_delta_e_ok": 0.009961085906039573,
+            "p90_delta_e_ok": 0.025000265728236548,
+            "out_of_srgb_count": 0,
+            "mean_component_errors": {
+              "b": 3.8942307692307665,
+              "g": 3.0192307692307674,
+              "r": 3.5769230769230758
+            },
+            "component_known_count": {
+              "b": 104,
+              "g": 104,
+              "r": 104
+            }
+          }
+        }
+      }
+    },
+    "hsl": {
+      "responses_across_models": {
+        "kind": "numeric",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "mean_score": 91.55462908400395,
+        "mean_delta_e_ok": 0.016890741831992153,
+        "median_delta_e_ok": 0.012256029734158812,
+        "p90_delta_e_ok": 0.03008202324145324,
+        "out_of_srgb_count": 0,
+        "mean_component_errors": {
+          "h": 1.4116886928193495,
+          "l": 1.443167420814478,
+          "s": 3.3507072463903893
+        },
+        "component_known_count": {
+          "h": 91,
+          "l": 104,
+          "s": 104
+        }
+      },
+      "models": [
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 97.04827685382315,
+          "mean_delta_e_ok": 0.005903446292353685,
+          "median_delta_e_ok": 0.005654079204803153,
+          "p90_delta_e_ok": 0.009974987967761629,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.455431194727546,
+            "l": 0.639950980392157,
+            "s": 1.3482059496877126
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.01366625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.2545857058721595,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.3598853671507,
+          "mean_delta_e_ok": 0.007280229265698593,
+          "median_delta_e_ok": 0.00665181488225389,
+          "p90_delta_e_ok": 0.011611586376322857,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.8825353432389906,
+            "l": 0.7941176470588229,
+            "s": 1.5740878647452785
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.009549375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 4.023151493878686,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.31945921015138,
+          "mean_delta_e_ok": 0.007361081579697227,
+          "median_delta_e_ok": 0.007065570590557794,
+          "p90_delta_e_ok": 0.010749463927954003,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.3283490105025066,
+            "l": 0.5637254901960778,
+            "s": 1.5740878647452785
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0113875,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.2969148850097554,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.17370328994744,
+          "mean_delta_e_ok": 0.007652593420105108,
+          "median_delta_e_ok": 0.007284384933287994,
+          "p90_delta_e_ok": 0.013306829646432417,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.3241606420071514,
+            "l": 0.7500000000000013,
+            "s": 2.7372807528373198
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.02128,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 14.586213714130281,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 93.58705885177176,
+          "mean_delta_e_ok": 0.012825882296456467,
+          "median_delta_e_ok": 0.011518303542185528,
+          "p90_delta_e_ok": 0.01959493259354103,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 0.6667093902162752,
+            "l": 0.9363480392156842,
+            "s": 1.8372807528373194
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0006755,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.852875061245868,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.96665726740618,
+          "mean_delta_e_ok": 0.014066685465187656,
+          "median_delta_e_ok": 0.013018610073641653,
+          "p90_delta_e_ok": 0.025685951328392444,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.0938522473591297,
+            "l": 1.1657598039215684,
+            "s": 2.16103075283732
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0037730000000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.1629009072494227,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.59739178841154,
+          "mean_delta_e_ok": 0.01480521642317695,
+          "median_delta_e_ok": 0.014252187653664287,
+          "p90_delta_e_ok": 0.022082787542553238,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.2681986345626632,
+            "l": 1.4950980392156858,
+            "s": 2.9872807528373198
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0057236875000000005,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 10.57773201463715,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.50951859931553,
+          "mean_delta_e_ok": 0.014980962801368933,
+          "median_delta_e_ok": 0.015041626695466423,
+          "p90_delta_e_ok": 0.021856375513955015,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.1792407185370652,
+            "l": 1.3259803921568634,
+            "s": 5.23728075283732
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0061104374999999995,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 7.023601915498148,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.27032760308954,
+          "mean_delta_e_ok": 0.015459344793820913,
+          "median_delta_e_ok": 0.015469415940338387,
+          "p90_delta_e_ok": 0.02629785887572231,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.0524236759305592,
+            "l": 1.3499999999999983,
+            "s": 2.06228075283732
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.009049,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 6.558492778771324,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.03544832189445,
+          "mean_delta_e_ok": 0.015929103356211116,
+          "median_delta_e_ok": 0.015172608003152906,
+          "p90_delta_e_ok": 0.024437721494633302,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 0.839627205991235,
+            "l": 1.5539215686274512,
+            "s": 2.5857059496877124
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0034745625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 2.958938693125674,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 90.98523952443684,
+          "mean_delta_e_ok": 0.018029520951126338,
+          "median_delta_e_ok": 0.016545408295552993,
+          "p90_delta_e_ok": 0.02938740925901267,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 1.609352385845495,
+            "l": 2.1249999999999987,
+            "s": 5.240754531411943
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.0004141374999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9169199425014085,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 89.90176149971984,
+          "mean_delta_e_ok": 0.020196477000560303,
+          "median_delta_e_ok": 0.01873226322199467,
+          "p90_delta_e_ok": 0.0348095334184539,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 2.0442604106244335,
+            "l": 1.870098039215684,
+            "s": 4.928097254035537
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.00226975,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.6457859187503345,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 67.45544991493267,
+          "mean_delta_e_ok": 0.06508910017013468,
+          "median_delta_e_ok": 0.05808187952253004,
+          "p90_delta_e_ok": 0.10067057624030339,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "h": 2.607812147108494,
+            "l": 4.191176470588234,
+            "s": 9.285820271737665
+          },
+          "component_known_count": {
+            "h": 7,
+            "l": 8,
+            "s": 8
+          },
+          "mean_api_response_cost_usd": 0.001052375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.1715357012290042,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "achromatic": {
+            "kind": "numeric",
+            "count": 13,
+            "valid_count": 13,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 94.08006096128139,
+            "mean_delta_e_ok": 0.011839878077437206,
+            "median_delta_e_ok": 0.0016900750842691059,
+            "p90_delta_e_ok": 0.03141722105504481,
+            "out_of_srgb_count": 0,
+            "mean_component_errors": {
+              "h": null,
+              "l": 1.3800301659125187,
+              "s": 0.0
+            },
+            "component_known_count": {
+              "h": 0,
+              "l": 13,
+              "s": 13
+            }
+          },
+          "chromatic": {
+            "kind": "numeric",
+            "count": 91,
+            "valid_count": 91,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 91.1938531015357,
+            "mean_delta_e_ok": 0.017612293796928573,
+            "median_delta_e_ok": 0.013380292485277839,
+            "p90_delta_e_ok": 0.028866448772182248,
+            "out_of_srgb_count": 0,
+            "mean_component_errors": {
+              "h": 1.4116886928193495,
+              "l": 1.452187028657615,
+              "s": 3.8293797101604423
+            },
+            "component_known_count": {
+              "h": 91,
+              "l": 91,
+              "s": 91
+            }
+          }
+        },
+        "axis": {
+          "numeric-estimation": {
+            "kind": "numeric",
+            "count": 104,
+            "valid_count": 104,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 91.55462908400395,
+            "mean_delta_e_ok": 0.016890741831992153,
+            "median_delta_e_ok": 0.012256029734158812,
+            "p90_delta_e_ok": 0.03008202324145324,
+            "out_of_srgb_count": 0,
+            "mean_component_errors": {
+              "h": 1.4116886928193495,
+              "l": 1.443167420814478,
+              "s": 3.3507072463903893
+            },
+            "component_known_count": {
+              "h": 91,
+              "l": 104,
+              "s": 104
+            }
+          }
+        }
+      }
+    },
+    "oklch": {
+      "responses_across_models": {
+        "kind": "numeric",
+        "count": 104,
+        "valid_count": 104,
+        "invalid_count": 0,
+        "validity_rate": 1.0,
+        "mean_score": 89.38652795146854,
+        "mean_delta_e_ok": 0.021226944097062935,
+        "median_delta_e_ok": 0.015837160010804048,
+        "p90_delta_e_ok": 0.04007611389518538,
+        "out_of_srgb_count": 4,
+        "mean_component_errors": {
+          "c": 0.009618386657020073,
+          "h": 4.457796004283524,
+          "l": 0.013801180005789764
+        },
+        "component_known_count": {
+          "c": 104,
+          "h": 91,
+          "l": 104
+        }
+      },
+      "models": [
+        {
+          "id": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.87090083094645,
+          "mean_delta_e_ok": 0.00625819833810711,
+          "median_delta_e_ok": 0.005832408196720824,
+          "p90_delta_e_ok": 0.008750291003266224,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.0025955217436163646,
+            "h": 2.004878919474131,
+            "l": 0.0037621304718027937
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.022146250000000003,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 8.69150854786858,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 96.2390136866268,
+          "mean_delta_e_ok": 0.007521972626746366,
+          "median_delta_e_ok": 0.009239290310633029,
+          "p90_delta_e_ok": 0.012227798457365747,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.0030485969220980834,
+            "h": 2.190201593552773,
+            "l": 0.004854051051810776
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.02123125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 8.932585366113926,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 94.69329867548204,
+          "mean_delta_e_ok": 0.010613402649035913,
+          "median_delta_e_ok": 0.008896701967108712,
+          "p90_delta_e_ok": 0.019830179428497418,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.004310577537861375,
+            "h": 1.477587986227982,
+            "l": 0.008419271160585287
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.011576249999999998,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 3.4609959320077905,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.3",
+          "name": "Muse Spark 1.3",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 93.28857149010321,
+          "mean_delta_e_ok": 0.013422857019793599,
+          "median_delta_e_ok": 0.012931474666917468,
+          "p90_delta_e_ok": 0.02451390232310079,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.005690495058479366,
+            "h": 2.8920966633790135,
+            "l": 0.0077885291039276605
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0103135625,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 23.031361666871817,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "muse-spark-1.2",
+          "name": "Muse Spark 1.2",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 92.49025485720242,
+          "mean_delta_e_ok": 0.015019490285595152,
+          "median_delta_e_ok": 0.013952414852703512,
+          "p90_delta_e_ok": 0.026384275523684157,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.005659107151369206,
+            "h": 3.7008003465931303,
+            "l": 0.01148933471399996
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.012158062499999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 13.485692825866863,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.97508421252179,
+          "mean_delta_e_ok": 0.016049831574956437,
+          "median_delta_e_ok": 0.015147528325528643,
+          "p90_delta_e_ok": 0.0259887368014986,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.002686263961613279,
+            "h": 1.3385529307689692,
+            "l": 0.015076009878795774
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0314335,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 27.83752374711912,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 91.73259118016676,
+          "mean_delta_e_ok": 0.016534817639666476,
+          "median_delta_e_ok": 0.01758929381765935,
+          "p90_delta_e_ok": 0.02473770376703635,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.005678405303213244,
+            "h": 6.040410109438101,
+            "l": 0.012354051051810783
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.007707499999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 7.28702495212201,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 89.90901786299878,
+          "mean_delta_e_ok": 0.020181964274002446,
+          "median_delta_e_ok": 0.021150840444178677,
+          "p90_delta_e_ok": 0.029724121860618034,
+          "out_of_srgb_count": 1,
+          "mean_component_errors": {
+            "c": 0.007595521743616367,
+            "h": 1.8422387149420516,
+            "l": 0.017298990121204227
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.023807500000000002,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 16.09913019562373,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 89.10152974253882,
+          "mean_delta_e_ok": 0.021796940514922356,
+          "median_delta_e_ok": 0.016960564035861336,
+          "p90_delta_e_ok": 0.04253876068868045,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.009532106202914703,
+            "h": 2.7633022719422677,
+            "l": 0.015832754880227576
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.00231375,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.832535431625729,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 88.61655776980005,
+          "mean_delta_e_ok": 0.02276688446039985,
+          "median_delta_e_ok": 0.024933167624186063,
+          "p90_delta_e_ok": 0.029375547163385828,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.009919195958180822,
+            "h": 5.189332273938745,
+            "l": 0.011448369567800681
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0004319499999999999,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 0.9010387691378128,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gemini-3.8-flash",
+          "name": "Gemini 3.8 Flash",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 86.96855967963072,
+          "mean_delta_e_ok": 0.026062880640738573,
+          "median_delta_e_ok": 0.027270482510995397,
+          "p90_delta_e_ok": 0.04004405215823055,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.007720521743616368,
+            "h": 2.332690568951392,
+            "l": 0.023298990121204233
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0061333125,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 5.53731882750435,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 83.36059297647158,
+          "mean_delta_e_ok": 0.033278814047056834,
+          "median_delta_e_ok": 0.014169161285689267,
+          "p90_delta_e_ok": 0.07052775195978463,
+          "out_of_srgb_count": 1,
+          "mean_component_errors": {
+            "c": 0.01990487605450312,
+            "h": 6.859981502197536,
+            "l": 0.013974349160272681
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0017967500000000004,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 14.776137495115108,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        },
+        {
+          "id": "claude-haiku-4-5-20251001",
+          "name": "Claude Haiku 4.5",
+          "kind": "numeric",
+          "count": 8,
+          "valid_count": 8,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 66.77889040460143,
+          "mean_delta_e_ok": 0.06644221919079714,
+          "median_delta_e_ok": 0.06576368233189522,
+          "p90_delta_e_ok": 0.08955173764659585,
+          "out_of_srgb_count": 2,
+          "mean_component_errors": {
+            "c": 0.040697837160178676,
+            "h": 19.319274174279712,
+            "l": 0.033818508791824485
+          },
+          "component_known_count": {
+            "c": 8,
+            "h": 7,
+            "l": 8
+          },
+          "mean_api_response_cost_usd": 0.0010898750000000001,
+          "cost_known_response_count": 8,
+          "mean_latency_sec": 1.302234027250961,
+          "latency_known_response_count": 8,
+          "group_count": 8
+        }
+      ],
+      "slices": {
+        "difficulty": {
+          "achromatic": {
+            "kind": "numeric",
+            "count": 13,
+            "valid_count": 13,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 93.07220647442311,
+            "mean_delta_e_ok": 0.0138555870511538,
+            "median_delta_e_ok": 0.0038708017071823124,
+            "p90_delta_e_ok": 0.03192919829289018,
+            "out_of_srgb_count": 0,
+            "mean_component_errors": {
+              "c": 0.0015384615384615385,
+              "h": null,
+              "l": 0.013491353452203605
+            },
+            "component_known_count": {
+              "c": 13,
+              "h": 0,
+              "l": 13
+            }
+          },
+          "chromatic": {
+            "kind": "numeric",
+            "count": 91,
+            "valid_count": 91,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 88.86000244818929,
+            "mean_delta_e_ok": 0.022279995103621386,
+            "median_delta_e_ok": 0.016268153187269214,
+            "p90_delta_e_ok": 0.04136323486732063,
+            "out_of_srgb_count": 4,
+            "mean_component_errors": {
+              "c": 0.010772661673957013,
+              "h": 4.457796004283524,
+              "l": 0.01384544094201636
+            },
+            "component_known_count": {
+              "c": 91,
+              "h": 91,
+              "l": 91
+            }
+          }
+        },
+        "axis": {
+          "numeric-estimation": {
+            "kind": "numeric",
+            "count": 104,
+            "valid_count": 104,
+            "invalid_count": 0,
+            "validity_rate": 1.0,
+            "mean_score": 89.38652795146854,
+            "mean_delta_e_ok": 0.021226944097062935,
+            "median_delta_e_ok": 0.015837160010804048,
+            "p90_delta_e_ok": 0.04007611389518538,
+            "out_of_srgb_count": 4,
+            "mean_component_errors": {
+              "c": 0.009618386657020073,
+              "h": 4.457796004283524,
+              "l": 0.013801180005789764
+            },
+            "component_known_count": {
+              "c": 104,
+              "h": 91,
+              "l": 104
+            }
+          }
+        }
+      }
+    }
+  },
+  "matching_binding_pairs": {
+    "claude-fable-5-1": {
+      "count": 8,
+      "both_correct": 8,
+      "matching_only_correct": 0,
+      "binding_only_correct": 0,
+      "both_incorrect": 0
+    },
+    "claude-haiku-4-5-20251001": {
+      "count": 8,
+      "both_correct": 3,
+      "matching_only_correct": 3,
+      "binding_only_correct": 0,
+      "both_incorrect": 2
+    },
+    "claude-opus-5": {
+      "count": 8,
+      "both_correct": 8,
+      "matching_only_correct": 0,
+      "binding_only_correct": 0,
+      "both_incorrect": 0
+    },
+    "claude-sonnet-5": {
+      "count": 8,
+      "both_correct": 7,
+      "matching_only_correct": 0,
+      "binding_only_correct": 0,
+      "both_incorrect": 1
+    },
+    "gemini-3.1-pro-preview": {
+      "count": 8,
+      "both_correct": 7,
+      "matching_only_correct": 1,
+      "binding_only_correct": 0,
+      "both_incorrect": 0
+    },
+    "gemini-3.5-flash-lite": {
+      "count": 8,
+      "both_correct": 3,
+      "matching_only_correct": 0,
+      "binding_only_correct": 2,
+      "both_incorrect": 3
+    },
+    "gemini-3.8-flash": {
+      "count": 8,
+      "both_correct": 7,
+      "matching_only_correct": 0,
+      "binding_only_correct": 1,
+      "both_incorrect": 0
+    },
+    "gpt-5.6-luna": {
+      "count": 8,
+      "both_correct": 6,
+      "matching_only_correct": 2,
+      "binding_only_correct": 0,
+      "both_incorrect": 0
+    },
+    "gpt-5.6-sol": {
+      "count": 8,
+      "both_correct": 7,
+      "matching_only_correct": 0,
+      "binding_only_correct": 1,
+      "both_incorrect": 0
+    },
+    "gpt-5.6-terra": {
+      "count": 8,
+      "both_correct": 8,
+      "matching_only_correct": 0,
+      "binding_only_correct": 0,
+      "both_incorrect": 0
+    },
+    "gpt-6-astra": {
+      "count": 8,
+      "both_correct": 8,
+      "matching_only_correct": 0,
+      "binding_only_correct": 0,
+      "both_incorrect": 0
+    },
+    "muse-spark-1.2": {
+      "count": 8,
+      "both_correct": 8,
+      "matching_only_correct": 0,
+      "binding_only_correct": 0,
+      "both_incorrect": 0
+    },
+    "muse-spark-1.3": {
+      "count": 8,
+      "both_correct": 6,
+      "matching_only_correct": 1,
+      "binding_only_correct": 1,
+      "both_incorrect": 0
+    }
+  },
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 104,
+      "first_lower_error": 64,
+      "second_lower_error": 40,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -0.004530706120299941
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 104,
+      "first_lower_error": 75,
+      "second_lower_error": 29,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -0.008866908385370732
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 104,
+      "first_lower_error": 59,
+      "second_lower_error": 45,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -0.004336202265070791
+    }
+  }
+}
