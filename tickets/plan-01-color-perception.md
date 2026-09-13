@@ -1,6 +1,6 @@
 # plan-01: ColorBench perception design
 
-- **Status:** In Progress; implementing and measuring the first pilot
+- **Status:** In Review
 - **Date:** 2026-09-13
 - **Assignee:** Edward Benson
 - **Branch:** `valid-01-perceptual-pilot`
@@ -367,3 +367,27 @@ concurrency 6, and a cumulative $25 budget cap. Each saved malformed model
 answer remains a final zero-score observation. Infrastructure retries, if
 needed, retain their original attempt records and costs. No second benchmark
 revision will run until the first results have been critiqued and discussed.
+
+
+## First measured pilot and critique
+
+Run `results/runs/0.2.0/pilot-20260913` completed 936/936 responses, 13 models ×
+72 questions, at $5.1151914 estimated from fully recorded usage. There were no
+invalid responses, infrastructure failures, or retries. Source startup was
+clean commit `3481d5d`; checkpoint commit `ef4ffaa`; independently replayed
+finalization, compact export, and analysis commit
+`58fb5dfa5011a7ab21c51e16243407f2e950df57`. Source GitHub CI passed both push/PR
+checks on the frozen implementation. Raw failure logs preserve their original
+whitespace; production source passes diff whitespace checks.
+
+The critique is in `results/first-pilot.md`. The important design finding is
+within-difficulty position confounding in matching/binding: wide => A/C,
+narrow => B/D, with different colors across difficulty sets. Overall answer
+balance was insufficient. One next experiment is proposed: each base color
+at each separation and each correct position, paired across flat/UI frames.
+No second iteration has been implemented or run. Numeric formats remain
+separate because output representation changes reconstruction error.
+
+Website actual import uses source commit `58fb5dfa...`, verified source-ledger
+replay and an independent TypeScript grader. Publication main/prod PRs and
+live verification remain pending at this checkpoint.

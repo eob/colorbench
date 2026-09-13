@@ -14,6 +14,7 @@ controlled samples do not establish general model rankings or human perceptual
 thresholds. Numeric estimation includes knowledge of color coordinates.
 
 [Results and interactive examples](https://edwardbenson.com/benchmarks/colorbench)
+· [First results and critique](results/first-pilot.md)
 · [Methodology](docs/methodology.md)
 · [Design and implementation record](tickets/plan-01-color-perception.md)
 
@@ -28,6 +29,11 @@ thresholds. Numeric estimation includes knowledge of color coordinates.
 | RGB | Estimate R as 8-bit gamma-encoded sRGB | Reconstruction error, similarity, validity |
 | HSL | Estimate R as hue degrees and saturation/lightness percentages | Reconstruction error, similarity, validity |
 | OKLCH | Estimate R as lightness, chroma, and hue degrees | Reconstruction error, similarity, validity |
+
+The first run completed all 936 responses for an estimated $5.12, with no API
+or answer-format failures. Lightness and hue reached ceiling; matching/binding
+difficulty slices confound color separation with answer position. See the
+critique before interpreting those slices.
 
 There is no combined score across these different tasks. Answer positions are
 balanced. The three numeric formats share identical target images but each gets

@@ -108,6 +108,17 @@ model distinctions. Formats sharing a target and matching/binding pairs are
 correlated observations. No independent-item confidence intervals or claims of
 human calibration are made for this first pilot.
 
+## Pilot interpretation finding
+
+The first run exposed a balance limitation in the matching/binding design.
+Wide-gap questions have correct answers at A/C; narrow-gap questions at B/D.
+Target colors also differ between these sets. Overall family answer positions
+are balanced, but differences between these difficulty slices do not isolate
+color separation from position preference or color-specific difficulty.
+The [first-pilot critique](../results/first-pilot.md) records the measurements
+and proposes counterbalancing each target and gap across all positions.
+The frozen pilot is preserved as measured.
+
 ## Execution and publication integrity
 
 A release descriptor identifies a committed dataset, its fingerprint, its
