@@ -1,4 +1,4 @@
-"""Descriptive first-pilot analysis; the source verifier must accept the sealed run."""
+"""Descriptive sealed-run analysis; the source verifier must accept the sealed run."""
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -15,7 +15,8 @@ analysis = {
     'release': report['release'],
     'run_id': report['run_id'],
     'campaign': report['campaign'],
-    'scope': 'Descriptive results on this fixed pilot; no independent-observation or population inference.',
+    'scope': ('Descriptive results on this fixed pilot; no independent-observation or population inference. '
+              'Matching/binding pairs share colors and formats sharing a target are correlated observations.'),
     'model_count': len(report['comparison']['model_ids']),
     'question_count': report['comparison']['count'],
     'group_count': len({items[task]['group_id'] for task in report['comparison']['task_ids']}),
@@ -32,9 +33,13 @@ for family in CHOICE_FAMILIES + NUMERIC_FAMILIES:
         models.append({'id': model['model_id'], 'name': model['model_config']['display_name'], **value})
     models.sort(key=lambda model: (-(model['accuracy'] if family in CHOICE_FAMILIES else model['mean_score']), model['id']))
     slices = {}
-    for dimension in ['difficulty', 'axis']:
+    for dimension in ['difficulty', 'axis', 'layout', 'same', 'direction']:
+        values = sorted({items[row['task_id']]['design'].get(dimension) for row in selected},
+                        key=lambda value: (value is None, str(value)))
+        if dimension not in ('difficulty', 'axis') and len([value for value in values if value is not None]) < 2:
+            continue
         slices[dimension] = {value: family_metrics([row for row in selected if items[row['task_id']]['design'].get(dimension) == value], family)
-                             for value in sorted({items[row['task_id']]['design'].get(dimension) for row in selected})}
+                             for value in values}
     analysis['families'][family] = {'responses_across_models': overall, 'models': models, 'slices': slices}
 paired = defaultdict(dict)
 for row in rows:
@@ -61,4 +66,4 @@ Path(sys.argv[2]).write_text(json.dumps(analysis, indent=2, allow_nan=False) + '
 print(json.dumps({key: value for key, value in analysis.items() if key not in {'families', 'matching_binding_pairs'}}, indent=2))
 for family, value in analysis['families'].items():
     metric = value['responses_across_models']
-    print(family, json.dumps({key: metric.get(key) for key in ['count', 'valid_count', 'accuracy', 'mean_score', 'mean_delta_e_ok', 'out_of_srgb_count']}))
+    print(family, json.dumps({key: metric.get(key) for key in ['count', 'valid_count', 'accuracy', 'mean_score', 'mean_tight_score', 'mean_delta_e_ok', 'band_hit_rate', 'out_of_srgb_count']}))
