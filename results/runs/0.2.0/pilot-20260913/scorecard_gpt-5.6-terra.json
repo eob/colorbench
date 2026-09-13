@@ -1,0 +1,2794 @@
+{
+  "total_tasks": 72,
+  "expected_task_count": 72,
+  "families": {
+    "matching": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "lightness": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "chroma": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "hue": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "binding": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "gradient": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 7,
+      "accuracy": 0.875,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "C": 1,
+          "A": 1
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "rgb": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 93.1545343306239,
+      "mean_delta_e_ok": 0.01369093133875217,
+      "median_delta_e_ok": 0.01084988634051716,
+      "p90_delta_e_ok": 0.027668613474648288,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "b": 3.875,
+        "g": 3.75,
+        "r": 4.375
+      },
+      "component_known_count": {
+        "b": 8,
+        "g": 8,
+        "r": 8
+      }
+    },
+    "hsl": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 92.96665726740618,
+      "mean_delta_e_ok": 0.014066685465187656,
+      "median_delta_e_ok": 0.013018610073641653,
+      "p90_delta_e_ok": 0.025685951328392444,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 1.0938522473591297,
+        "l": 1.1657598039215684,
+        "s": 2.16103075283732
+      },
+      "component_known_count": {
+        "h": 7,
+        "l": 8,
+        "s": 8
+      }
+    },
+    "oklch": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 91.73259118016676,
+      "mean_delta_e_ok": 0.016534817639666476,
+      "median_delta_e_ok": 0.01758929381765935,
+      "p90_delta_e_ok": 0.02473770376703635,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "c": 0.005678405303213244,
+        "h": 6.040410109438101,
+        "l": 0.012354051051810783
+      },
+      "component_known_count": {
+        "c": 8,
+        "h": 7,
+        "l": 8
+      }
+    }
+  },
+  "avg_latency_sec": 2.8229760668756274,
+  "model_name": "gpt-5.6-terra",
+  "provider": "openai",
+  "timestamp": "2026-09-13T02:44:45.080648+00:00",
+  "grading_version": "2",
+  "evaluation_protocol": "f77174aee4df2f17eaab4474b1a3fa36dc70d6f6ec250182b26895f0e660bf25",
+  "cohort_sha256": "2bb48882c03ccd9d033220219f0d162cbaecfc527b0e3b3b1c91d7c7a976be80",
+  "status": "complete",
+  "tasks": [
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"l\":0.537,\"c\":0.127,\"h\":313}",
+      "prediction": {
+        "l": 0.537,
+        "c": 0.127,
+        "h": 313.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 89.404224501465,
+      "delta_e_ok": 0.021191550997069993,
+      "component_errors": {
+        "l": 0.00709335712590764,
+        "c": 0.01612555162844062,
+        "h": 5.007140960468064
+      },
+      "out_of_srgb": false,
+      "latency_sec": 5.977814591024071,
+      "input_tokens": 739,
+      "output_tokens": 474,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.007166,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:00.424323+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"h\":351.94,\"s\":52.55,\"l\":49.8}",
+      "prediction": {
+        "h": 351.94,
+        "s": 52.55,
+        "l": 49.8
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.94437189121133,
+      "delta_e_ok": 0.00611125621757733,
+      "component_errors": {
+        "h": 0.5600000000000023,
+        "s": 2.1562992125984266,
+        "l": 0.39607843137255117
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.5721445080125704,
+      "input_tokens": 736,
+      "output_tokens": 143,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003188,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:19.146144+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-06",
+      "family": "rgb",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"r\":28,\"g\":56,\"b\":83}",
+      "prediction": {
+        "r": 28,
+        "g": 56,
+        "b": 83
+      },
+      "valid": true,
+      "correct": null,
+      "score": 85.24883528597854,
+      "delta_e_ok": 0.029502329428042918,
+      "component_errors": {
+        "r": 6,
+        "g": 8,
+        "b": 8
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.9168837690376677,
+      "input_tokens": 709,
+      "output_tokens": 200,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003818,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:31.857743+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-08",
+      "family": "rgb",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"r\":136,\"g\":136,\"b\":136}",
+      "prediction": {
+        "r": 136,
+        "g": 136,
+        "b": 136
+      },
+      "valid": true,
+      "correct": null,
+      "score": 86.55863239554613,
+      "delta_e_ok": 0.026882735208907733,
+      "component_errors": {
+        "r": 8,
+        "g": 8,
+        "b": 8
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.6124156639561988,
+      "input_tokens": 709,
+      "output_tokens": 88,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002474,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:38.549651+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-07",
+      "family": "matching",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6999959539971314,
+      "input_tokens": 694,
+      "output_tokens": 72,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002252,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:45.552024+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-04.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0650357429985888,
+      "input_tokens": 677,
+      "output_tokens": 30,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001714,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:52.639809+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-04",
+      "family": "rgb",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"r\":190,\"g\":141,\"b\":42}",
+      "prediction": {
+        "r": 190,
+        "g": 141,
+        "b": 42
+      },
+      "valid": true,
+      "correct": null,
+      "score": 90.56785044210397,
+      "delta_e_ok": 0.01886429911579205,
+      "component_errors": {
+        "r": 5,
+        "g": 6,
+        "b": 3
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.7760289270081557,
+      "input_tokens": 709,
+      "output_tokens": 217,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.004022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:01.928234+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-03",
+      "family": "hsl",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"h\":151.1,\"s\":39.9,\"l\":39.8}",
+      "prediction": {
+        "h": 151.1,
+        "s": 39.9,
+        "l": 39.8
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.72120669282042,
+      "delta_e_ok": 0.006557586614359171,
+      "component_errors": {
+        "h": 1.0999999999999943,
+        "s": 0.10000000000000142,
+        "l": 0.5843137254901904
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.210849880008027,
+      "input_tokens": 736,
+      "output_tokens": 176,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003584,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:09.444345+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-08",
+      "family": "matching",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7044385090121068,
+      "input_tokens": 694,
+      "output_tokens": 73,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002264,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:22.494872+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-07",
+      "family": "chroma",
+      "group_id": "chroma-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-07.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.200293802015949,
+      "input_tokens": 693,
+      "output_tokens": 38,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001842,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:32.279581+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-07.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.715626367018558,
+      "input_tokens": 677,
+      "output_tokens": 50,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001954,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:40.788294+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-08",
+      "family": "hsl",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"h\":0,\"s\":0,\"l\":53.33}",
+      "prediction": {
+        "h": 0.0,
+        "s": 0.0,
+        "l": 53.33
+      },
+      "valid": true,
+      "correct": null,
+      "score": 86.57283652218652,
+      "delta_e_ok": 0.026854326955626968,
+      "component_errors": {
+        "h": null,
+        "s": 0.0,
+        "l": 3.13392156862745
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.3661914269905537,
+      "input_tokens": 736,
+      "output_tokens": 66,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002264,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:48.565611+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.409620597027242,
+      "input_tokens": 695,
+      "output_tokens": 163,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003346,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:59.098709+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.8871471349848434,
+      "input_tokens": 677,
+      "output_tokens": 37,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001798,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:07.657317+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-04",
+      "family": "chroma",
+      "group_id": "chroma-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-04.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2053903389605694,
+      "input_tokens": 693,
+      "output_tokens": 56,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:13.279946+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-05",
+      "family": "rgb",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"r\":137,\"g\":84,\"b\":178}",
+      "prediction": {
+        "r": 137,
+        "g": 84,
+        "b": 178
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.79417746897727,
+      "delta_e_ok": 0.006411645062045489,
+      "component_errors": {
+        "r": 2,
+        "g": 1,
+        "b": 3
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.5563517580158077,
+      "input_tokens": 709,
+      "output_tokens": 109,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002726,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:18.466307+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-08",
+      "family": "binding",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 12.559147374995518,
+      "input_tokens": 695,
+      "output_tokens": 921,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.012442,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:36.075037+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-03",
+      "family": "chroma",
+      "group_id": "chroma-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-03.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3162480519968085,
+      "input_tokens": 693,
+      "output_tokens": 50,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001986,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:36.254263+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-08",
+      "family": "chroma",
+      "group_id": "chroma-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-08.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.532618407974951,
+      "input_tokens": 693,
+      "output_tokens": 81,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002358,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:43.440400+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-07",
+      "family": "rgb",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"r\":227,\"g\":218,\"b\":189}",
+      "prediction": {
+        "r": 227,
+        "g": 218,
+        "b": 189
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.81603414414094,
+      "delta_e_ok": 0.008367931711718093,
+      "component_errors": {
+        "r": 2,
+        "g": 3,
+        "b": 1
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.722781425982248,
+      "input_tokens": 709,
+      "output_tokens": 209,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003926,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:53.435540+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-08",
+      "family": "oklch",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"l\":0.627,\"c\":0,\"h\":0}",
+      "prediction": {
+        "l": 0.627,
+        "c": 0.0,
+        "h": 0.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 86.43540085355424,
+      "delta_e_ok": 0.02712919829289151,
+      "component_errors": {
+        "l": 0.027129198292882295,
+        "c": 0.0,
+        "h": null
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.056272832036484,
+      "input_tokens": 739,
+      "output_tokens": 123,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002954,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:03.110683+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-05",
+      "family": "hue",
+      "group_id": "hue-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3667117499862798,
+      "input_tokens": 707,
+      "output_tokens": 66,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002206,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:11.638985+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-03",
+      "family": "lightness",
+      "group_id": "lightness-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-03.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0374773839721456,
+      "input_tokens": 677,
+      "output_tokens": 33,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00175,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:18.982137+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-08.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3611678630113602,
+      "input_tokens": 677,
+      "output_tokens": 46,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001906,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:23.337461+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-05",
+      "family": "chroma",
+      "group_id": "chroma-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.446010835992638,
+      "input_tokens": 693,
+      "output_tokens": 67,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00219,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:27.910432+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-08",
+      "family": "gradient",
+      "group_id": "gradient-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.0173959499807097,
+      "input_tokens": 705,
+      "output_tokens": 106,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002682,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:33.368629+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-03",
+      "family": "binding",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.4023096049786545,
+      "input_tokens": 695,
+      "output_tokens": 57,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002074,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:40.318250+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-01",
+      "family": "binding",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.451914907025639,
+      "input_tokens": 695,
+      "output_tokens": 77,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002314,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:49.410221+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-02",
+      "family": "gradient",
+      "group_id": "gradient-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.142764929041732,
+      "input_tokens": 705,
+      "output_tokens": 55,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00207,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:55.661524+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"h\":208.4,\"s\":53.3,\"l\":21}",
+      "prediction": {
+        "h": 208.4,
+        "s": 53.3,
+        "l": 21.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 87.40739054163976,
+      "delta_e_ok": 0.025185218916720504,
+      "component_errors": {
+        "h": 2.166037735849045,
+        "s": 1.3391752577319664,
+        "l": 1.9803921568627452
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.6623052280046977,
+      "input_tokens": 736,
+      "output_tokens": 159,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00338,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:07.607608+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-02",
+      "family": "hsl",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"h\":210.6,\"s\":60.3,\"l\":46.5}",
+      "prediction": {
+        "h": 210.6,
+        "s": 60.3,
+        "l": 46.5
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.63610130609516,
+      "delta_e_ok": 0.0167277973878097,
+      "component_errors": {
+        "h": 0.18947368421055444,
+        "s": 6.36666666666666,
+        "l": 1.794117647058819
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.7204088870203122,
+      "input_tokens": 736,
+      "output_tokens": 150,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003272,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:21.790517+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-04",
+      "family": "binding",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3625238109962083,
+      "input_tokens": 695,
+      "output_tokens": 72,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002254,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:30.940217+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-03",
+      "family": "matching",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2320830959943123,
+      "input_tokens": 694,
+      "output_tokens": 44,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001916,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:40.126185+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-05",
+      "family": "hsl",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"h\":274.2,\"s\":35.6,\"l\":51.2}",
+      "prediction": {
+        "h": 274.2,
+        "s": 35.6,
+        "l": 51.2
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.66716227761724,
+      "delta_e_ok": 0.004665675444765536,
+      "component_errors": {
+        "h": 0.8666666666666742,
+        "s": 0.3999999999999986,
+        "l": 0.21960784313726123
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.9492459959583357,
+      "input_tokens": 736,
+      "output_tokens": 177,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003596,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:49.526623+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-02",
+      "family": "lightness",
+      "group_id": "lightness-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.177974522986915,
+      "input_tokens": 677,
+      "output_tokens": 35,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001774,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:57.941084+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"l\":0.672,\"c\":0.125,\"h\":80.0}",
+      "prediction": {
+        "l": 0.672,
+        "c": 0.125,
+        "h": 80.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.69951268665318,
+      "delta_e_ok": 0.016600974626693663,
+      "component_errors": {
+        "l": 0.015145762438994348,
+        "c": 0.005361814369457998,
+        "h": 1.9572279593992903
+      },
+      "out_of_srgb": false,
+      "latency_sec": 12.235873101977631,
+      "input_tokens": 739,
+      "output_tokens": 883,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.012074,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:16.392397+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-05.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 14.228482773993164,
+      "input_tokens": 705,
+      "output_tokens": 1229,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.016158,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:36.771259+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"h\":40.13,\"s\":65.94,\"l\":44.9}",
+      "prediction": {
+        "h": 40.13,
+        "s": 65.94,
+        "l": 44.9
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.43890028741578,
+      "delta_e_ok": 0.017122199425168433,
+      "component_errors": {
+        "h": 1.5585714285714403,
+        "s": 5.0704347826087,
+        "l": 0.19803921568627914
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.24725410802057,
+      "input_tokens": 736,
+      "output_tokens": 131,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003044,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:43.930751+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-03",
+      "family": "rgb",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"r\":59,\"g\":140,\"b\":99}",
+      "prediction": {
+        "r": 59,
+        "g": 140,
+        "b": 99
+      },
+      "valid": true,
+      "correct": null,
+      "score": 99.11551160349825,
+      "delta_e_ok": 0.0017689767930034938,
+      "component_errors": {
+        "r": 1,
+        "g": 0,
+        "b": 1
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.408844958001282,
+      "input_tokens": 709,
+      "output_tokens": 94,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002546,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:55.144461+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-05",
+      "family": "lightness",
+      "group_id": "lightness-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3233573090401478,
+      "input_tokens": 677,
+      "output_tokens": 49,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001942,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:04.051107+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-04",
+      "family": "hue",
+      "group_id": "hue-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.239343856985215,
+      "input_tokens": 707,
+      "output_tokens": 60,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002134,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:09.369048+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-07",
+      "family": "hsl",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"h\":45,\"s\":40,\"l\":82}",
+      "prediction": {
+        "h": 45.0,
+        "s": 40.0,
+        "l": 82.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.34528862026319,
+      "delta_e_ok": 0.009309422759473607,
+      "component_errors": {
+        "h": 1.2162162162161962,
+        "s": 1.8556701030928053,
+        "l": 1.0196078431372513
+      },
+      "out_of_srgb": false,
+      "latency_sec": 7.574807223980315,
+      "input_tokens": 736,
+      "output_tokens": 532,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.007856,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:21.358738+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-06",
+      "family": "gradient",
+      "group_id": "gradient-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.407498313987162,
+      "input_tokens": 705,
+      "output_tokens": 86,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002442,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:24.694120+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-05",
+      "family": "binding",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.397983851027675,
+      "input_tokens": 695,
+      "output_tokens": 63,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002146,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:30.539577+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-05",
+      "family": "matching",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2980836619972251,
+      "input_tokens": 694,
+      "output_tokens": 75,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002288,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:39.377646+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.479781500995159,
+      "input_tokens": 705,
+      "output_tokens": 171,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.003462,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:46.403324+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-02",
+      "family": "chroma",
+      "group_id": "chroma-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3493102790089324,
+      "input_tokens": 693,
+      "output_tokens": 52,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00201,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:55.314172+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-01",
+      "family": "rgb",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"r\":194,\"g\":62,\"b\":79}",
+      "prediction": {
+        "r": 194,
+        "g": 62,
+        "b": 79
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.80115378940431,
+      "delta_e_ok": 0.004397692421191374,
+      "component_errors": {
+        "r": 2,
+        "g": 2,
+        "b": 1
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.8227198320091702,
+      "input_tokens": 709,
+      "output_tokens": 84,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002426,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:01.224555+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-06",
+      "family": "lightness",
+      "group_id": "lightness-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9134158510132693,
+      "input_tokens": 677,
+      "output_tokens": 47,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001918,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:08.128618+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-03",
+      "family": "hue",
+      "group_id": "hue-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2745428910129704,
+      "input_tokens": 707,
+      "output_tokens": 68,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00223,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:14.181919+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3212231919751503,
+      "input_tokens": 705,
+      "output_tokens": 68,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002226,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:19.323719+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2073057999950834,
+      "input_tokens": 707,
+      "output_tokens": 50,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002014,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:26.091619+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-07",
+      "family": "binding",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5521381570142694,
+      "input_tokens": 695,
+      "output_tokens": 74,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002278,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:33.333353+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-01",
+      "family": "matching",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6073390889796428,
+      "input_tokens": 694,
+      "output_tokens": 65,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002168,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:39.488166+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-01",
+      "family": "oklch",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"l\":0.553,\"c\":0.166,\"h\":17.5}",
+      "prediction": {
+        "l": 0.553,
+        "c": 0.166,
+        "h": 17.5
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.46492462968315,
+      "delta_e_ok": 0.005070150740633704,
+      "component_errors": {
+        "l": 0.00392608597799704,
+        "c": 0.002879893259451982,
+        "h": 0.4922292400114259
+      },
+      "out_of_srgb": false,
+      "latency_sec": 11.987324824964162,
+      "input_tokens": 739,
+      "output_tokens": 922,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.012542,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:56.824872+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-03",
+      "family": "gradient",
+      "group_id": "gradient-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.501466369023547,
+      "input_tokens": 705,
+      "output_tokens": 495,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00735,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:14.995762+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-01",
+      "family": "chroma",
+      "group_id": "chroma-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5223625189973973,
+      "input_tokens": 693,
+      "output_tokens": 67,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00219,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:19.643321+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-01",
+      "family": "hue",
+      "group_id": "hue-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3673940689768642,
+      "input_tokens": 707,
+      "output_tokens": 52,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:26.925782+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-06",
+      "family": "chroma",
+      "group_id": "chroma-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.1594536150223576,
+      "input_tokens": 693,
+      "output_tokens": 51,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001998,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:32.000969+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"l\":0.58,\"c\":0.099,\"h\":160.6}",
+      "prediction": {
+        "l": 0.58,
+        "c": 0.099,
+        "h": 160.6
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.30234935847282,
+      "delta_e_ok": 0.003395301283054373,
+      "component_errors": {
+        "l": 0.0010975177863857821,
+        "c": 0.0017053031417421788,
+        "h": 1.5626494718361243
+      },
+      "out_of_srgb": false,
+      "latency_sec": 6.414621155010536,
+      "input_tokens": 739,
+      "output_tokens": 463,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.007034,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:42.867991+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"l\":0.553,\"c\":0.13,\"h\":251.8}",
+      "prediction": {
+        "l": 0.553,
+        "c": 0.13,
+        "h": 251.8
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.46645369315932,
+      "delta_e_ok": 0.01706709261368135,
+      "component_errors": {
+        "l": 0.012346700659183196,
+        "c": 0.011403039047677643,
+        "h": 1.2547281413394558
+      },
+      "out_of_srgb": false,
+      "latency_sec": 5.783777896023821,
+      "input_tokens": 739,
+      "output_tokens": 418,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.006494,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:02.489260+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-06",
+      "family": "hue",
+      "group_id": "hue-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0636821439838968,
+      "input_tokens": 707,
+      "output_tokens": 44,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001942,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:23.757755+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-07",
+      "family": "gradient",
+      "group_id": "gradient-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.518277975032106,
+      "input_tokens": 705,
+      "output_tokens": 72,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002274,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:34.143953+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-06",
+      "family": "oklch",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"l\":0.321,\"c\":0.059,\"h\":249.2}",
+      "prediction": {
+        "l": 0.321,
+        "c": 0.059,
+        "h": 249.2
+      },
+      "valid": true,
+      "correct": null,
+      "score": 90.94425248918134,
+      "delta_e_ok": 0.018111495021637346,
+      "component_errors": {
+        "l": 0.018001064544980627,
+        "c": 0.00026326222465768156,
+        "h": 1.9267650681498765
+      },
+      "out_of_srgb": false,
+      "latency_sec": 5.522119833971374,
+      "input_tokens": 739,
+      "output_tokens": 385,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.006098,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:52.456792+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-07",
+      "family": "hue",
+      "group_id": "hue-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2823645769967698,
+      "input_tokens": 707,
+      "output_tokens": 56,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002086,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:01.017012+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-04",
+      "family": "matching",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6197133180103265,
+      "input_tokens": 694,
+      "output_tokens": 71,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.00224,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:12.120760+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-07",
+      "family": "oklch",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"l\":0.866,\"c\":0.03,\"h\":60}",
+      "prediction": {
+        "l": 0.866,
+        "c": 0.03,
+        "h": 60.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 88.14361122916507,
+      "delta_e_ok": 0.02371277754166986,
+      "component_errors": {
+        "l": 0.014092721588155332,
+        "c": 0.007688378754277844,
+        "h": 30.08212992486247
+      },
+      "out_of_srgb": false,
+      "latency_sec": 7.318395381968003,
+      "input_tokens": 739,
+      "output_tokens": 485,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.007298,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:26.812990+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-02",
+      "family": "rgb",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"r\":47,\"g\":114,\"b\":184}",
+      "prediction": {
+        "r": 47,
+        "g": 114,
+        "b": 184
+      },
+      "valid": true,
+      "correct": null,
+      "score": 93.33407951534188,
+      "delta_e_ok": 0.013331840969316226,
+      "component_errors": {
+        "r": 9,
+        "g": 2,
+        "b": 6
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.0288408329943195,
+      "input_tokens": 709,
+      "output_tokens": 88,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002474,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:43.641163+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-02",
+      "family": "hue",
+      "group_id": "hue-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.1034023929969408,
+      "input_tokens": 707,
+      "output_tokens": 44,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.001942,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:51.494437+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-06",
+      "family": "binding",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5344452590215951,
+      "input_tokens": 695,
+      "output_tokens": 73,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002266,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:58.169056+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-06",
+      "family": "matching",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6155734640196897,
+      "input_tokens": 694,
+      "output_tokens": 53,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002024,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:05.786099+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-02",
+      "family": "matching",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.628163609013427,
+      "input_tokens": 694,
+      "output_tokens": 77,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-terra",
+      "provider": "openai",
+      "cost_usd": 0.002312,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:12.533105+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "run_id": "pilot-20260913",
+  "release": "0.2.0",
+  "dataset_git_commit": "1013fdb0deb1c2a4d2df6fba3c5bc38d05cab473",
+  "dataset_fingerprint": "65414cebf600b83c2f4874cd1823f81fe6b6d8af5940e109fa2f0ef4a1b853fe",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/manifest.json",
+  "mock": false,
+  "runner_git_commit": "3481d5d067a6c0413f75b3d3e91956b11316b1cf",
+  "runner_git_dirty": false,
+  "created_at": "2026-09-13T02:32:52.260235+00:00",
+  "updated_at": "2026-09-13T02:44:45.005685+00:00",
+  "model_config": {
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": null,
+    "display_name": "GPT-5.6 Terra",
+    "enabled": true,
+    "id": "gpt-5.6-terra",
+    "input_per_m": 2.0,
+    "max_output_tokens": 4096,
+    "model": "gpt-5.6-terra",
+    "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+    "output_per_m": 12.0,
+    "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+    "pricing_source_url": "https://developers.openai.com/api/docs/models",
+    "provider": "openai",
+    "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+  },
+  "model_config_fingerprint": "c31dbe50cff3b0093ab5b1c1005c42ff65dbb381ff73eafe5cecac17441bcb51",
+  "max_output_tokens": 4096,
+  "model_id": "gpt-5.6-terra",
+  "display_name": "GPT-5.6 Terra",
+  "pricing": {
+    "input_per_m": 2.0,
+    "output_per_m": 12.0
+  }
+}

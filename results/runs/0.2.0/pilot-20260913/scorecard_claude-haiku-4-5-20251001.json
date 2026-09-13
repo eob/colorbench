@@ -1,0 +1,2801 @@
+{
+  "total_tasks": 72,
+  "expected_task_count": 72,
+  "families": {
+    "matching": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 6,
+      "accuracy": 0.75,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "C": 1,
+          "B": 1
+        }
+      }
+    },
+    "lightness": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "chroma": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 7,
+      "accuracy": 0.875,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 3,
+          "A": 1
+        }
+      }
+    },
+    "hue": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "binding": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 3,
+      "accuracy": 0.375,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 1,
+          "C": 1
+        },
+        "B": {
+          "B": 1,
+          "A": 1
+        },
+        "C": {
+          "C": 1,
+          "A": 1
+        },
+        "D": {
+          "B": 1,
+          "A": 1
+        }
+      }
+    },
+    "gradient": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 6,
+      "accuracy": 0.75,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "D": 1,
+          "A": 1
+        },
+        "B": {
+          "D": 1,
+          "B": 1
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "rgb": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 87.38577748945889,
+      "mean_delta_e_ok": 0.025228445021082235,
+      "median_delta_e_ok": 0.028512595049424102,
+      "p90_delta_e_ok": 0.04193480467257202,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "b": 6.875,
+        "g": 5.75,
+        "r": 7.875
+      },
+      "component_known_count": {
+        "b": 8,
+        "g": 8,
+        "r": 8
+      }
+    },
+    "hsl": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 67.45544991493267,
+      "mean_delta_e_ok": 0.06508910017013468,
+      "median_delta_e_ok": 0.05808187952253004,
+      "p90_delta_e_ok": 0.10067057624030339,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 2.607812147108494,
+        "l": 4.191176470588234,
+        "s": 9.285820271737665
+      },
+      "component_known_count": {
+        "h": 7,
+        "l": 8,
+        "s": 8
+      }
+    },
+    "oklch": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 66.77889040460143,
+      "mean_delta_e_ok": 0.06644221919079714,
+      "median_delta_e_ok": 0.06576368233189522,
+      "p90_delta_e_ok": 0.08955173764659585,
+      "out_of_srgb_count": 2,
+      "mean_component_errors": {
+        "c": 0.040697837160178676,
+        "h": 19.319274174279712,
+        "l": 0.033818508791824485
+      },
+      "component_known_count": {
+        "c": 8,
+        "h": 7,
+        "l": 8
+      }
+    }
+  },
+  "avg_latency_sec": 1.0207463392345946,
+  "model_name": "claude-haiku-4-5-20251001",
+  "provider": "anthropic",
+  "timestamp": "2026-09-13T02:44:45.022111+00:00",
+  "grading_version": "2",
+  "evaluation_protocol": "f77174aee4df2f17eaab4474b1a3fa36dc70d6f6ec250182b26895f0e660bf25",
+  "cohort_sha256": "2bb48882c03ccd9d033220219f0d162cbaecfc527b0e3b3b1c91d7c7a976be80",
+  "status": "complete",
+  "tasks": [
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"l\": 0.58, \"c\": 0.21, \"h\": 290}",
+      "prediction": {
+        "l": 0.58,
+        "c": 0.21,
+        "h": 290.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 53.3596456234555,
+      "delta_e_ok": 0.093280708753089,
+      "component_errors": {
+        "l": 0.03590664287409229,
+        "c": 0.06687444837155937,
+        "h": 17.992859039531936
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.111553447030019,
+      "input_tokens": 968,
+      "output_tokens": 25,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001093,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:32:54.431340+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"h\": 350, \"s\": 55, \"l\": 55}",
+      "prediction": {
+        "h": 350.0,
+        "s": 55.0,
+        "l": 55.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 80.41040727916501,
+      "delta_e_ok": 0.03917918544166996,
+      "component_errors": {
+        "h": 2.5,
+        "s": 4.6062992125984294,
+        "l": 4.803921568627452
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.216057171986904,
+      "input_tokens": 963,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001068,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:14.983772+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-06",
+      "family": "rgb",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"r\": 28, \"g\": 50, \"b\": 75}",
+      "prediction": {
+        "r": 28,
+        "g": 50,
+        "b": 75
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.8274869276721,
+      "delta_e_ok": 0.010345026144655808,
+      "component_errors": {
+        "r": 6,
+        "g": 2,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.0717389450292103,
+      "input_tokens": 935,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.00104,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:27.927362+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-08",
+      "family": "rgb",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"r\": 128, \"g\": 128, \"b\": 128}",
+      "prediction": {
+        "r": 128,
+        "g": 128,
+        "b": 128
+      },
+      "valid": true,
+      "correct": null,
+      "score": 100.0,
+      "delta_e_ok": 0.0,
+      "component_errors": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.3102544389548711,
+      "input_tokens": 935,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.00104,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:37.261694+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-07",
+      "family": "matching",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2756601760047488,
+      "input_tokens": 901,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000946,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:43.831922+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-04.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.994825845991727,
+      "input_tokens": 877,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000922,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:51.429637+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-04",
+      "family": "rgb",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"r\": 184, \"g\": 145, \"b\": 39}",
+      "prediction": {
+        "r": 184,
+        "g": 145,
+        "b": 39
+      },
+      "valid": true,
+      "correct": null,
+      "score": 86.20272789587871,
+      "delta_e_ok": 0.02759454420824258,
+      "component_errors": {
+        "r": 1,
+        "g": 10,
+        "b": 6
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.1882496170001104,
+      "input_tokens": 935,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.00104,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:58.700059+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-03",
+      "family": "hsl",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"h\":150,\"s\":45,\"l\":50}",
+      "prediction": {
+        "h": 150.0,
+        "s": 45.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 34.645210616850605,
+      "delta_e_ok": 0.1307095787662988,
+      "component_errors": {
+        "h": 0.0,
+        "s": 5.0,
+        "l": 10.784313725490193
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.3390648989588954,
+      "input_tokens": 963,
+      "output_tokens": 16,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001043,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:04.973406+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-08",
+      "family": "matching",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-08.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8001504369894974,
+      "input_tokens": 901,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000946,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:20.027140+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-07",
+      "family": "chroma",
+      "group_id": "chroma-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-07.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0446055500069633,
+      "input_tokens": 897,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000942,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:30.924429+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-07.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.018417626968585,
+      "input_tokens": 877,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000922,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:39.056190+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-08",
+      "family": "hsl",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"h\":0,\"s\":0,\"l\":54}",
+      "prediction": {
+        "h": 0.0,
+        "s": 0.0,
+        "l": 54.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 83.72102771005036,
+      "delta_e_ok": 0.032557944579899266,
+      "component_errors": {
+        "h": null,
+        "s": 0.0,
+        "l": 3.8039215686274517
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.1818095099879429,
+      "input_tokens": 963,
+      "output_tokens": 16,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001043,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:47.462372+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9425103520043194,
+      "input_tokens": 902,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000947,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:55.178661+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8112350740120746,
+      "input_tokens": 877,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000922,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:04.989430+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-04",
+      "family": "chroma",
+      "group_id": "chroma-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-04.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7826016930048354,
+      "input_tokens": 897,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000942,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:12.047472+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-05",
+      "family": "rgb",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"r\": 155, \"g\": 89, \"b\": 182}",
+      "prediction": {
+        "r": 155,
+        "g": 89,
+        "b": 182
+      },
+      "valid": true,
+      "correct": null,
+      "score": 80.39905073327128,
+      "delta_e_ok": 0.03920189853345744,
+      "component_errors": {
+        "r": 20,
+        "g": 4,
+        "b": 7
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.928535288956482,
+      "input_tokens": 935,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.00104,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:17.142687+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-08",
+      "family": "binding",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-08.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.1490642720018514,
+      "input_tokens": 902,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000947,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:23.619377+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-03",
+      "family": "chroma",
+      "group_id": "chroma-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-03.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0981140360236168,
+      "input_tokens": 897,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000942,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:34.831730+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-08",
+      "family": "chroma",
+      "group_id": "chroma-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-08.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7615758909960277,
+      "input_tokens": 897,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000942,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:41.872664+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-07",
+      "family": "rgb",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"r\": 230, \"g\": 216, \"b\": 180}",
+      "prediction": {
+        "r": 230,
+        "g": 216,
+        "b": 180
+      },
+      "valid": true,
+      "correct": null,
+      "score": 93.46169535741949,
+      "delta_e_ok": 0.013076609285161026,
+      "component_errors": {
+        "r": 5,
+        "g": 1,
+        "b": 8
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.260109396011103,
+      "input_tokens": 935,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.00104,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:49.562699+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-08",
+      "family": "oklch",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"l\": 0.56, \"c\": 0.02, \"h\": 0}",
+      "prediction": {
+        "l": 0.56,
+        "c": 0.02,
+        "h": 0.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 77.69708075819258,
+      "delta_e_ok": 0.04460583848361484,
+      "component_errors": {
+        "l": 0.039870801707117653,
+        "c": 0.02,
+        "h": null
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.4665051670162939,
+      "input_tokens": 968,
+      "output_tokens": 25,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001093,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:59.968661+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-05",
+      "family": "hue",
+      "group_id": "hue-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7586750100017525,
+      "input_tokens": 914,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000959,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:09.924060+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-03",
+      "family": "lightness",
+      "group_id": "lightness-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-03.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.6950517810182646,
+      "input_tokens": 877,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000922,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:17.464973+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-08.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0364665560191497,
+      "input_tokens": 877,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000922,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:22.246858+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-05",
+      "family": "chroma",
+      "group_id": "chroma-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8919397720019333,
+      "input_tokens": 898,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000943,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:26.427796+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-08",
+      "family": "gradient",
+      "group_id": "gradient-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9932293920428492,
+      "input_tokens": 913,
+      "output_tokens": 8,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000953,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:31.292667+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-03",
+      "family": "binding",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8503162909764796,
+      "input_tokens": 902,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000947,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:38.882590+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-01",
+      "family": "binding",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9601239530020393,
+      "input_tokens": 902,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000947,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:47.085697+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-02",
+      "family": "gradient",
+      "group_id": "gradient-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-02.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7980642309994437,
+      "input_tokens": 913,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000958,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:54.347155+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"h\":210,\"s\":60,\"l\":25}",
+      "prediction": {
+        "h": 210.0,
+        "s": 60.0,
+        "l": 25.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 68.10639544229291,
+      "delta_e_ok": 0.06378720911541418,
+      "component_errors": {
+        "h": 0.5660377358490507,
+        "s": 5.360824742268036,
+        "l": 5.980392156862745
+      },
+      "out_of_srgb": false,
+      "latency_sec": 0.7787678839522414,
+      "input_tokens": 963,
+      "output_tokens": 16,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001043,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:03.092040+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-02",
+      "family": "hsl",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"h\":217,\"s\":76,\"l\":46}",
+      "prediction": {
+        "h": 217.0,
+        "s": 76.0,
+        "l": 46.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 73.81172503517705,
+      "delta_e_ok": 0.05237654992964591,
+      "component_errors": {
+        "h": 6.210526315789451,
+        "s": 9.333333333333343,
+        "l": 1.294117647058819
+      },
+      "out_of_srgb": false,
+      "latency_sec": 0.8198074700194411,
+      "input_tokens": 963,
+      "output_tokens": 16,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001043,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:17.525864+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-04",
+      "family": "binding",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-04.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8548095099977218,
+      "input_tokens": 902,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000947,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:29.541599+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-03",
+      "family": "matching",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.152092490985524,
+      "input_tokens": 901,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000946,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:38.064852+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-05",
+      "family": "hsl",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"h\": 270, \"s\": 60, \"l\": 50}",
+      "prediction": {
+        "h": 270.0,
+        "s": 60.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 56.836620590240415,
+      "delta_e_ok": 0.08632675881951918,
+      "component_errors": {
+        "h": 3.3333333333333144,
+        "s": 24.0,
+        "l": 0.9803921568627416
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.2731623179861344,
+      "input_tokens": 963,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001068,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:46.151303+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-02",
+      "family": "lightness",
+      "group_id": "lightness-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8888251010212116,
+      "input_tokens": 877,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000922,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:56.701970+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"l\": 0.62, \"c\": 0.15, \"h\": 60}",
+      "prediction": {
+        "l": 0.62,
+        "c": 0.15,
+        "h": 60.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 68.19977746812718,
+      "delta_e_ok": 0.06360044506374564,
+      "component_errors": {
+        "l": 0.0368542375610057,
+        "c": 0.030361814369457993,
+        "h": 18.04277204060071
+      },
+      "out_of_srgb": true,
+      "latency_sec": 0.8608007509610616,
+      "input_tokens": 968,
+      "output_tokens": 25,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001093,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:03.827058+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-05.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7591297220205888,
+      "input_tokens": 913,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000958,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:20.742565+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"h\":43,\"s\":65,\"l\":50}",
+      "prediction": {
+        "h": 43.0,
+        "s": 65.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 56.101640992561606,
+      "delta_e_ok": 0.08779671801487679,
+      "component_errors": {
+        "h": 4.428571428571445,
+        "s": 4.1304347826087024,
+        "l": 4.901960784313722
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.312103281961754,
+      "input_tokens": 963,
+      "output_tokens": 16,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001043,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:41.109566+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-03",
+      "family": "rgb",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"r\": 76, \"g\": 155, \"b\": 106}",
+      "prediction": {
+        "r": 76,
+        "g": 155,
+        "b": 106
+      },
+      "valid": true,
+      "correct": null,
+      "score": 75.84420716808032,
+      "delta_e_ok": 0.048311585663839376,
+      "component_errors": {
+        "r": 16,
+        "g": 15,
+        "b": 6
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.3505371879437007,
+      "input_tokens": 935,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.00104,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:52.302988+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-05",
+      "family": "lightness",
+      "group_id": "lightness-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7128214979893528,
+      "input_tokens": 877,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000922,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:02.276728+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-04",
+      "family": "hue",
+      "group_id": "hue-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-04.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9344855379895307,
+      "input_tokens": 914,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000959,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:08.546563+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-07",
+      "family": "hsl",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"h\": 45, \"s\": 60, \"l\": 80}",
+      "prediction": {
+        "h": 45.0,
+        "s": 60.0,
+        "l": 80.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 86.01057165312336,
+      "delta_e_ok": 0.02797885669375329,
+      "component_errors": {
+        "h": 1.2162162162161962,
+        "s": 21.855670103092805,
+        "l": 0.9803921568627487
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.4515130749787204,
+      "input_tokens": 963,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001068,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:13.738109+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-06",
+      "family": "gradient",
+      "group_id": "gradient-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0963201480335556,
+      "input_tokens": 913,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000958,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:22.973927+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-05",
+      "family": "binding",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-05.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.6665326069924049,
+      "input_tokens": 902,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000947,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:28.952643+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-05",
+      "family": "matching",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.5265717490110546,
+      "input_tokens": 901,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000946,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:38.043999+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-04.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9444713559933007,
+      "input_tokens": 913,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000958,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:43.849959+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-02",
+      "family": "chroma",
+      "group_id": "chroma-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.825963027018588,
+      "input_tokens": 898,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000943,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:52.683353+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-01",
+      "family": "rgb",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"r\": 200, \"g\": 68, \"b\": 102}",
+      "prediction": {
+        "r": 200,
+        "g": 68,
+        "b": 102
+      },
+      "valid": true,
+      "correct": null,
+      "score": 83.06637477865199,
+      "delta_e_ok": 0.03386725044269603,
+      "component_errors": {
+        "r": 8,
+        "g": 4,
+        "b": 22
+      },
+      "out_of_srgb": false,
+      "latency_sec": 0.8709398760111071,
+      "input_tokens": 935,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.00104,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:59.185431+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-06",
+      "family": "lightness",
+      "group_id": "lightness-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9076591480406933,
+      "input_tokens": 877,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000922,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:06.882709+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-03",
+      "family": "hue",
+      "group_id": "hue-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9721236390178092,
+      "input_tokens": 914,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000959,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:12.801908+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.6687273639836349,
+      "input_tokens": 913,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000958,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:17.754902+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-08.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9507196469930932,
+      "input_tokens": 914,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000959,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:24.842851+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-07",
+      "family": "binding",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-07.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8721408160054125,
+      "input_tokens": 902,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000947,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:31.708328+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-01",
+      "family": "matching",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9702682360075414,
+      "input_tokens": 901,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000946,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:37.807249+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-01",
+      "family": "oklch",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"l\": 0.58, \"c\": 0.18, \"h\": 12}",
+      "prediction": {
+        "l": 0.58,
+        "c": 0.18,
+        "h": 12.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 83.8639329939691,
+      "delta_e_ok": 0.032272134012061804,
+      "component_errors": {
+        "l": 0.023073914022002873,
+        "c": 0.016879893259451967,
+        "h": 5.007770759988574
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.1542200979893096,
+      "input_tokens": 968,
+      "output_tokens": 25,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001093,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:44.790220+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-03",
+      "family": "gradient",
+      "group_id": "gradient-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8982742929947563,
+      "input_tokens": 913,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000958,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:06.406806+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-01",
+      "family": "chroma",
+      "group_id": "chroma-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7823353999992833,
+      "input_tokens": 898,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000943,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:17.762418+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-01",
+      "family": "hue",
+      "group_id": "hue-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9847045980277471,
+      "input_tokens": 914,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000959,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:25.319932+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-06",
+      "family": "chroma",
+      "group_id": "chroma-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9617001839797013,
+      "input_tokens": 898,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000943,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:30.579949+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"l\":0.58,\"c\":0.15,\"h\":142}",
+      "prediction": {
+        "l": 0.58,
+        "c": 0.15,
+        "h": 142.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 69.35265585693861,
+      "delta_e_ok": 0.06129468828612276,
+      "component_errors": {
+        "l": 0.0010975177863857821,
+        "c": 0.04929469685825781,
+        "h": 17.03735052816387
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.4842782550258562,
+      "input_tokens": 968,
+      "output_tokens": 20,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001068,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:36.409051+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"l\": 0.52, \"c\": 0.22, \"h\": 264}",
+      "prediction": {
+        "l": 0.52,
+        "c": 0.22,
+        "h": 264.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 56.02319641380775,
+      "delta_e_ok": 0.0879536071723845,
+      "component_errors": {
+        "l": 0.020653299340816833,
+        "c": 0.07859696095232235,
+        "h": 10.945271858660533
+      },
+      "out_of_srgb": false,
+      "latency_sec": 0.7877946489606984,
+      "input_tokens": 968,
+      "output_tokens": 25,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001093,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:54.465941+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-06",
+      "family": "hue",
+      "group_id": "hue-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.5132646159618162,
+      "input_tokens": 914,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000959,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:21.304743+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-07",
+      "family": "gradient",
+      "group_id": "gradient-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7340287910192274,
+      "input_tokens": 913,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000958,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:31.577645+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-06",
+      "family": "oklch",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"l\": 0.25, \"c\": 0.08, \"h\": 220}",
+      "prediction": {
+        "l": 0.25,
+        "c": 0.08,
+        "h": 220.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 66.0365401999776,
+      "delta_e_ok": 0.06792691960004481,
+      "component_errors": {
+        "l": 0.05299893545501938,
+        "c": 0.021263262224657686,
+        "h": 31.126765068149865
+      },
+      "out_of_srgb": true,
+      "latency_sec": 1.2852701719966717,
+      "input_tokens": 968,
+      "output_tokens": 25,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001093,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:42.511949+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-07",
+      "family": "hue",
+      "group_id": "hue-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0906204669736326,
+      "input_tokens": 914,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000959,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:59.688062+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-04",
+      "family": "matching",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-04.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.7778010580223054,
+      "input_tokens": 901,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000946,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:10.451342+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-07",
+      "family": "oklch",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"l\": 0.82, \"c\": 0.08, \"h\": 55}",
+      "prediction": {
+        "l": 0.82,
+        "c": 0.08,
+        "h": 55.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 59.69829392234315,
+      "delta_e_ok": 0.0806034121553137,
+      "component_errors": {
+        "l": 0.06009272158815537,
+        "c": 0.04231162124572216,
+        "h": 35.08212992486247
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.2674496790277772,
+      "input_tokens": 968,
+      "output_tokens": 25,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.001093,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:18.763087+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-02",
+      "family": "rgb",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"r\": 31, \"g\": 102, \"b\": 184}",
+      "prediction": {
+        "r": 31,
+        "g": 102,
+        "b": 184
+      },
+      "valid": true,
+      "correct": null,
+      "score": 85.28467705469718,
+      "delta_e_ok": 0.029430645890605622,
+      "component_errors": {
+        "r": 7,
+        "g": 10,
+        "b": 6
+      },
+      "out_of_srgb": false,
+      "latency_sec": 0.8677142629749142,
+      "input_tokens": 935,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.00104,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:39.870241+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-02",
+      "family": "hue",
+      "group_id": "hue-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8930023849825375,
+      "input_tokens": 914,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000959,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:50.583706+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-06",
+      "family": "binding",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-06.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9938886680174619,
+      "input_tokens": 902,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000947,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:56.583604+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-06",
+      "family": "matching",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9079102830146439,
+      "input_tokens": 901,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000946,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:03.195330+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-02",
+      "family": "matching",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9516793040093035,
+      "input_tokens": 901,
+      "output_tokens": 9,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "cost_usd": 0.000946,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:10.705504+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "run_id": "pilot-20260913",
+  "release": "0.2.0",
+  "dataset_git_commit": "1013fdb0deb1c2a4d2df6fba3c5bc38d05cab473",
+  "dataset_fingerprint": "65414cebf600b83c2f4874cd1823f81fe6b6d8af5940e109fa2f0ef4a1b853fe",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/manifest.json",
+  "mock": false,
+  "runner_git_commit": "3481d5d067a6c0413f75b3d3e91956b11316b1cf",
+  "runner_git_dirty": false,
+  "created_at": "2026-09-13T02:32:52.260235+00:00",
+  "updated_at": "2026-09-13T02:44:45.005685+00:00",
+  "model_config": {
+    "api_key_env": "ANTHROPIC_API_KEY",
+    "base_url": null,
+    "display_name": "Claude Haiku 4.5",
+    "enabled": true,
+    "id": "claude-haiku-4-5-20251001",
+    "input_per_m": 1.0,
+    "max_output_tokens": 1024,
+    "model": "claude-haiku-4-5-20251001",
+    "notes": "Latest Haiku, using its dated snapshot ID.",
+    "output_per_m": 5.0,
+    "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+    "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "provider": "anthropic",
+    "source_url": "https://platform.claude.com/docs/en/models/overview"
+  },
+  "model_config_fingerprint": "0955227c94c7dc3da8e437be80ebacb3226b826411a0b59e4d37966e425f2a3c",
+  "max_output_tokens": 1024,
+  "model_id": "claude-haiku-4-5-20251001",
+  "display_name": "Claude Haiku 4.5",
+  "pricing": {
+    "input_per_m": 1.0,
+    "output_per_m": 5.0
+  }
+}

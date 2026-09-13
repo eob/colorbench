@@ -1,0 +1,2793 @@
+{
+  "total_tasks": 72,
+  "expected_task_count": 72,
+  "families": {
+    "matching": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "lightness": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "chroma": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "hue": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "binding": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "gradient": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "rgb": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 96.99782512282965,
+      "mean_delta_e_ok": 0.00600434975434069,
+      "median_delta_e_ok": 0.005246032457005252,
+      "p90_delta_e_ok": 0.0098705125167276,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "b": 1.75,
+        "g": 1.625,
+        "r": 1.875
+      },
+      "component_known_count": {
+        "b": 8,
+        "g": 8,
+        "r": 8
+      }
+    },
+    "hsl": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 97.04827685382315,
+      "mean_delta_e_ok": 0.005903446292353685,
+      "median_delta_e_ok": 0.005654079204803153,
+      "p90_delta_e_ok": 0.009974987967761629,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 1.455431194727546,
+        "l": 0.639950980392157,
+        "s": 1.3482059496877126
+      },
+      "component_known_count": {
+        "h": 7,
+        "l": 8,
+        "s": 8
+      }
+    },
+    "oklch": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 96.87090083094645,
+      "mean_delta_e_ok": 0.00625819833810711,
+      "median_delta_e_ok": 0.005832408196720824,
+      "p90_delta_e_ok": 0.008750291003266224,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "c": 0.0025955217436163646,
+        "h": 2.004878919474131,
+        "l": 0.0037621304718027937
+      },
+      "component_known_count": {
+        "c": 8,
+        "h": 7,
+        "l": 8
+      }
+    }
+  },
+  "avg_latency_sec": 3.2281637499876927,
+  "model_name": "gpt-6-astra",
+  "provider": "openai",
+  "timestamp": "2026-09-13T02:44:45.087813+00:00",
+  "grading_version": "2",
+  "evaluation_protocol": "f77174aee4df2f17eaab4474b1a3fa36dc70d6f6ec250182b26895f0e660bf25",
+  "cohort_sha256": "2bb48882c03ccd9d033220219f0d162cbaecfc527b0e3b3b1c91d7c7a976be80",
+  "status": "complete",
+  "tasks": [
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"l\":0.538,\"c\":0.14,\"h\":310}",
+      "prediction": {
+        "l": 0.538,
+        "c": 0.14,
+        "h": 310.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.77254808300727,
+      "delta_e_ok": 0.008454903833985462,
+      "component_errors": {
+        "l": 0.006093357125907639,
+        "c": 0.0031255516284406093,
+        "h": 2.007140960468064
+      },
+      "out_of_srgb": false,
+      "latency_sec": 9.229007893009111,
+      "input_tokens": 739,
+      "output_tokens": 267,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.02074,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:01.550590+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"h\":351,\"s\":50,\"l\":49}",
+      "prediction": {
+        "h": 351.0,
+        "s": 50.0,
+        "l": 49.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.77130640524722,
+      "delta_e_ok": 0.010457387189505573,
+      "component_errors": {
+        "h": 1.5,
+        "s": 0.39370078740157055,
+        "l": 1.1960784313725483
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.687935352034401,
+      "input_tokens": 736,
+      "output_tokens": 120,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01336,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:17.665492+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-06",
+      "family": "rgb",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"r\":24,\"g\":49,\"b\":73}",
+      "prediction": {
+        "r": 24,
+        "g": 49,
+        "b": 73
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.97948834211707,
+      "delta_e_ok": 0.006041023315765868,
+      "component_errors": {
+        "r": 2,
+        "g": 1,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.2839873610064387,
+      "input_tokens": 709,
+      "output_tokens": 75,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01084,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:29.537390+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-08",
+      "family": "rgb",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"r\":127,\"g\":127,\"b\":127}",
+      "prediction": {
+        "r": 127,
+        "g": 127,
+        "b": 127
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.30932760918112,
+      "delta_e_ok": 0.003381344781637765,
+      "component_errors": {
+        "r": 1,
+        "g": 1,
+        "b": 1
+      },
+      "out_of_srgb": false,
+      "latency_sec": 5.4514067330164835,
+      "input_tokens": 709,
+      "output_tokens": 177,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01594,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:41.790611+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-07",
+      "family": "matching",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3631551769794896,
+      "input_tokens": 694,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00764,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:46.108367+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-04.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.158784882980399,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00747,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:53.759739+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-04",
+      "family": "rgb",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"r\":183,\"g\":136,\"b\":43}",
+      "prediction": {
+        "r": 183,
+        "g": 136,
+        "b": 43
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.62668627679915,
+      "delta_e_ok": 0.0047466274464016975,
+      "component_errors": {
+        "r": 2,
+        "g": 1,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.739803745003883,
+      "input_tokens": 709,
+      "output_tokens": 98,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01199,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:01.477495+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-03",
+      "family": "hsl",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"h\":151,\"s\":39,\"l\":39}",
+      "prediction": {
+        "h": 151.0,
+        "s": 39.0,
+        "l": 39.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.0691963939933,
+      "delta_e_ok": 0.005861607212013399,
+      "component_errors": {
+        "h": 1.0,
+        "s": 1.0,
+        "l": 0.2156862745098067
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.26196767098736,
+      "input_tokens": 736,
+      "output_tokens": 121,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01341,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:09.251791+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-08",
+      "family": "matching",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.433868657972198,
+      "input_tokens": 694,
+      "output_tokens": 42,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00904,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:23.328491+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-07",
+      "family": "chroma",
+      "group_id": "chroma-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-07.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.960364785976708,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00763,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:32.425210+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-07.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.4894381079939194,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00747,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:40.029941+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-08",
+      "family": "hsl",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"h\":0,\"s\":0,\"l\":49.8}",
+      "prediction": {
+        "h": 0.0,
+        "s": 0.0,
+        "l": 49.8
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.29240880225412,
+      "delta_e_ok": 0.0034151823954917692,
+      "component_errors": {
+        "h": null,
+        "s": 0.0,
+        "l": 0.39607843137255117
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.7892590410192497,
+      "input_tokens": 736,
+      "output_tokens": 105,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01261,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:50.306471+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.8924913699738681,
+      "input_tokens": 695,
+      "output_tokens": 42,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00905,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:56.670450+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.392007882008329,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00747,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:05.833815+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-04",
+      "family": "chroma",
+      "group_id": "chroma-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-04.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.9230449339956976,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00763,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:13.704260+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-05",
+      "family": "rgb",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"r\":136,\"g\":82,\"b\":170}",
+      "prediction": {
+        "r": 136,
+        "g": 82,
+        "b": 170
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.19253845208033,
+      "delta_e_ok": 0.009614923095839325,
+      "component_errors": {
+        "r": 1,
+        "g": 3,
+        "b": 5
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.136686768033542,
+      "input_tokens": 709,
+      "output_tokens": 128,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01349,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:19.624975+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-08",
+      "family": "binding",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.0967186840134673,
+      "input_tokens": 695,
+      "output_tokens": 40,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00895,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:24.818220+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-03",
+      "family": "chroma",
+      "group_id": "chroma-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-03.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.665824869996868,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00763,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:35.846223+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-08",
+      "family": "chroma",
+      "group_id": "chroma-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-08.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7279187960084528,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00763,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:43.199425+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-07",
+      "family": "rgb",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"r\":226,\"g\":217,\"b\":189}",
+      "prediction": {
+        "r": 226,
+        "g": 217,
+        "b": 189
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.3281206066144,
+      "delta_e_ok": 0.005343758786771212,
+      "component_errors": {
+        "r": 1,
+        "g": 2,
+        "b": 1
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.57782770099584,
+      "input_tokens": 709,
+      "output_tokens": 103,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01224,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:52.217481+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-08",
+      "family": "oklch",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"l\":0.596,\"c\":0,\"h\":0}",
+      "prediction": {
+        "l": 0.596,
+        "c": 0.0,
+        "h": 0.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.06459914640885,
+      "delta_e_ok": 0.0038708017071823124,
+      "component_errors": {
+        "l": 0.0038708017071177325,
+        "c": 0.0,
+        "h": null
+      },
+      "out_of_srgb": false,
+      "latency_sec": 5.89546207600506,
+      "input_tokens": 739,
+      "output_tokens": 118,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01329,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:05.089577+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-05",
+      "family": "hue",
+      "group_id": "hue-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7583806359907612,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00777,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:11.001361+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-03",
+      "family": "lightness",
+      "group_id": "lightness-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-03.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.362881065986585,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00747,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:19.862182+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-08.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.4358871239819564,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00747,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:22.761554+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-05",
+      "family": "chroma",
+      "group_id": "chroma-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3812009840039536,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00763,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:27.084548+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-08",
+      "family": "gradient",
+      "group_id": "gradient-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.231999978015665,
+      "input_tokens": 705,
+      "output_tokens": 41,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.0091,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:32.830227+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-03",
+      "family": "binding",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6892373710288666,
+      "input_tokens": 695,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00765,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:40.027989+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-01",
+      "family": "binding",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5375754850101657,
+      "input_tokens": 695,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00765,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:48.662961+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-02",
+      "family": "gradient",
+      "group_id": "gradient-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.884159482026007,
+      "input_tokens": 705,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00775,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:55.627441+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"h\":209.4,\"s\":50.5,\"l\":19.0}",
+      "prediction": {
+        "h": 209.4,
+        "s": 50.5,
+        "l": 19.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.00511647113512,
+      "delta_e_ok": 0.005989767057729761,
+      "component_errors": {
+        "h": 1.166037735849045,
+        "s": 4.139175257731964,
+        "l": 0.019607843137254832
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.233584392000921,
+      "input_tokens": 736,
+      "output_tokens": 137,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01421,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:07.370016+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-02",
+      "family": "hsl",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"h\":211,\"s\":65,\"l\":45}",
+      "prediction": {
+        "h": 211.0,
+        "s": 65.0,
+        "l": 45.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 99.0294400241161,
+      "delta_e_ok": 0.0019411199517677933,
+      "component_errors": {
+        "h": 0.21052631578945125,
+        "s": 1.6666666666666572,
+        "l": 0.29411764705881893
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.924909213965293,
+      "input_tokens": 736,
+      "output_tokens": 144,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01456,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:21.836797+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-04",
+      "family": "binding",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6723291370435618,
+      "input_tokens": 695,
+      "output_tokens": 38,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00885,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:30.450389+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-03",
+      "family": "matching",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.039047435973771,
+      "input_tokens": 694,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00764,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:39.292729+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-05",
+      "family": "hsl",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"h\":277,\"s\":35,\"l\":49.4}",
+      "prediction": {
+        "h": 277.0,
+        "s": 35.0,
+        "l": 49.4
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.11587727792146,
+      "delta_e_ok": 0.009768245444157083,
+      "component_errors": {
+        "h": 3.6666666666666856,
+        "s": 1.0,
+        "l": 1.580392156862743
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.474430031958036,
+      "input_tokens": 736,
+      "output_tokens": 141,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01441,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:49.803577+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-02",
+      "family": "lightness",
+      "group_id": "lightness-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5443478290108033,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00747,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:57.403596+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"l\":0.654,\"c\":0.121,\"h\":81}",
+      "prediction": {
+        "l": 0.654,
+        "c": 0.121,
+        "h": 81.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.51587800189003,
+      "delta_e_ok": 0.006968243996219928,
+      "component_errors": {
+        "l": 0.002854237561005668,
+        "c": 0.0013618143694579948,
+        "h": 2.9572279593992903
+      },
+      "out_of_srgb": false,
+      "latency_sec": 9.516775653988589,
+      "input_tokens": 739,
+      "output_tokens": 348,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.02479,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:12.611353+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6983066400280222,
+      "input_tokens": 705,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00775,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:22.489956+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"h\":39.6,\"s\":62.7,\"l\":44.1}",
+      "prediction": {
+        "h": 39.6,
+        "s": 62.7,
+        "l": 44.1
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.8261450547144,
+      "delta_e_ok": 0.0043477098905711905,
+      "component_errors": {
+        "h": 1.0285714285714391,
+        "s": 1.8304347826087053,
+        "l": 0.9980392156862763
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.870304588985164,
+      "input_tokens": 736,
+      "output_tokens": 139,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01431,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:45.210765+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-03",
+      "family": "rgb",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"r\":62,\"g\":139,\"b\":102}",
+      "prediction": {
+        "r": 62,
+        "g": 139,
+        "b": 102
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.42584693638035,
+      "delta_e_ok": 0.005148306127239291,
+      "component_errors": {
+        "r": 2,
+        "g": 1,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.983142375014722,
+      "input_tokens": 709,
+      "output_tokens": 82,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01119,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:56.876965+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-05",
+      "family": "lightness",
+      "group_id": "lightness-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5177881349809468,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00747,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:03.790145+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-04",
+      "family": "hue",
+      "group_id": "hue-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.673148615984246,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00777,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:10.623363+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-07",
+      "family": "hsl",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"h\":45.4,\"s\":38.9,\"l\":81.4}",
+      "prediction": {
+        "h": 45.4,
+        "s": 38.9,
+        "l": 81.4
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.27672440120354,
+      "delta_e_ok": 0.005446551197592908,
+      "component_errors": {
+        "h": 1.616216216216202,
+        "s": 0.7556701030928039,
+        "l": 0.41960784313725696
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.7942953560268506,
+      "input_tokens": 736,
+      "output_tokens": 102,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01246,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:16.157490+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-06",
+      "family": "gradient",
+      "group_id": "gradient-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.0034982680226676,
+      "input_tokens": 705,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00775,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:25.021410+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-05",
+      "family": "binding",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.381454354035668,
+      "input_tokens": 695,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00765,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:30.752033+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-05",
+      "family": "matching",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.444948336982634,
+      "input_tokens": 694,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00764,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:39.230048+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.33435305202147,
+      "input_tokens": 705,
+      "output_tokens": 33,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.0087,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:46.072725+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-02",
+      "family": "chroma",
+      "group_id": "chroma-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.208856705983635,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00763,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:54.346676+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-01",
+      "family": "rgb",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"r\":188,\"g\":61,\"b\":79}",
+      "prediction": {
+        "r": 188,
+        "g": 61,
+        "b": 79
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.76655608393322,
+      "delta_e_ok": 0.010466887832133575,
+      "component_errors": {
+        "r": 4,
+        "g": 3,
+        "b": 1
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.74690061097499,
+      "input_tokens": 709,
+      "output_tokens": 103,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01224,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:03.861616+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-06",
+      "family": "lightness",
+      "group_id": "lightness-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.058007785992231,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00747,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:08.376733+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-03",
+      "family": "hue",
+      "group_id": "hue-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.4871459220303223,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00777,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:14.141633+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5501632330124266,
+      "input_tokens": 705,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00775,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:19.242986+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.9709604340023361,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00777,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:26.257864+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-07",
+      "family": "binding",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5072555990191177,
+      "input_tokens": 695,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00765,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:33.210195+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-01",
+      "family": "matching",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3509414219879545,
+      "input_tokens": 694,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00764,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:38.730211+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-01",
+      "family": "oklch",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"l\":0.548,\"c\":0.162,\"h\":16}",
+      "prediction": {
+        "l": 0.548,
+        "c": 0.162,
+        "h": 16.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.28023613420599,
+      "delta_e_ok": 0.009439527731588002,
+      "component_errors": {
+        "l": 0.008926085977997045,
+        "c": 0.0011201067405480214,
+        "h": 1.0077707599885741
+      },
+      "out_of_srgb": false,
+      "latency_sec": 8.67252257297514,
+      "input_tokens": 739,
+      "output_tokens": 300,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.02239,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:53.175865+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-03",
+      "family": "gradient",
+      "group_id": "gradient-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.994905062019825,
+      "input_tokens": 705,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00775,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:08.445276+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-01",
+      "family": "chroma",
+      "group_id": "chroma-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.9992258049896918,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00763,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:19.394788+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-01",
+      "family": "hue",
+      "group_id": "hue-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.531944303016644,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00777,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:27.280706+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-06",
+      "family": "chroma",
+      "group_id": "chroma-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.322172018000856,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00763,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:32.126901+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"l\":0.579,\"c\":0.097,\"h\":160.0}",
+      "prediction": {
+        "l": 0.579,
+        "c": 0.097,
+        "h": 160.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.96922342693007,
+      "delta_e_ok": 0.00406155314613986,
+      "component_errors": {
+        "l": 9.751778638578124e-05,
+        "c": 0.0037053031417421806,
+        "h": 0.96264947183613
+      },
+      "out_of_srgb": false,
+      "latency_sec": 7.469189368013758,
+      "input_tokens": 739,
+      "output_tokens": 302,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.02249,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:42.788996+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"l\":0.542,\"c\":0.137,\"h\":253}",
+      "prediction": {
+        "l": 0.542,
+        "c": 0.137,
+        "h": 253.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.69684833556536,
+      "delta_e_ok": 0.004606303328869264,
+      "component_errors": {
+        "l": 0.0013467006591831865,
+        "c": 0.004403039047677637,
+        "h": 0.05472814133946713
+      },
+      "out_of_srgb": false,
+      "latency_sec": 9.161619176971726,
+      "input_tokens": 739,
+      "output_tokens": 316,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.02319,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:03.672585+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-06",
+      "family": "hue",
+      "group_id": "hue-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7397042050142772,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00777,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:22.648584+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-07",
+      "family": "gradient",
+      "group_id": "gradient-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.7217093009967357,
+      "input_tokens": 705,
+      "output_tokens": 49,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.0095,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:35.150338+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-06",
+      "family": "oklch",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"l\":0.306,\"c\":0.052,\"h\":248}",
+      "prediction": {
+        "l": 0.306,
+        "c": 0.052,
+        "h": 248.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.01615971817483,
+      "delta_e_ok": 0.00796768056365034,
+      "component_errors": {
+        "l": 0.003001064544980614,
+        "c": 0.006736737775342318,
+        "h": 3.126765068149865
+      },
+      "out_of_srgb": false,
+      "latency_sec": 7.162529347988311,
+      "input_tokens": 739,
+      "output_tokens": 257,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.02024,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:49.723988+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-07",
+      "family": "hue",
+      "group_id": "hue-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.673546256031841,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00777,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:00.766666+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-04",
+      "family": "matching",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.200798056961503,
+      "input_tokens": 694,
+      "output_tokens": 38,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00884,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:12.524566+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-07",
+      "family": "oklch",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"l\":0.884,\"c\":0.038,\"h\":94}",
+      "prediction": {
+        "l": 0.884,
+        "c": 0.038,
+        "h": 94.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.65171380138914,
+      "delta_e_ok": 0.0046965723972217195,
+      "component_errors": {
+        "l": 0.0039072784118446835,
+        "c": 0.00031162124572215594,
+        "h": 3.917870075137529
+      },
+      "out_of_srgb": false,
+      "latency_sec": 12.424962293996941,
+      "input_tokens": 739,
+      "output_tokens": 453,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.03004,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:31.239192+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-02",
+      "family": "rgb",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"r\":40,\"g\":113,\"b\":190}",
+      "prediction": {
+        "r": 40,
+        "g": 113,
+        "b": 190
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.3540366755316,
+      "delta_e_ok": 0.003291926648936781,
+      "component_errors": {
+        "r": 2,
+        "g": 1,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.6818214660161175,
+      "input_tokens": 709,
+      "output_tokens": 101,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.01214,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:42.982136+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-02",
+      "family": "hue",
+      "group_id": "hue-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6659276999998838,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00777,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:51.889647+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-06",
+      "family": "binding",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.407887707988266,
+      "input_tokens": 695,
+      "output_tokens": 35,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.0087,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:59.183573+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-06",
+      "family": "matching",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5532237570150755,
+      "input_tokens": 694,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00764,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:04.802753+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-02",
+      "family": "matching",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6189218570361845,
+      "input_tokens": 694,
+      "output_tokens": 30,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-6-astra",
+      "provider": "openai",
+      "cost_usd": 0.00844,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:11.816713+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "run_id": "pilot-20260913",
+  "release": "0.2.0",
+  "dataset_git_commit": "1013fdb0deb1c2a4d2df6fba3c5bc38d05cab473",
+  "dataset_fingerprint": "65414cebf600b83c2f4874cd1823f81fe6b6d8af5940e109fa2f0ef4a1b853fe",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/manifest.json",
+  "mock": false,
+  "runner_git_commit": "3481d5d067a6c0413f75b3d3e91956b11316b1cf",
+  "runner_git_dirty": false,
+  "created_at": "2026-09-13T02:32:52.260235+00:00",
+  "updated_at": "2026-09-13T02:44:45.005685+00:00",
+  "model_config": {
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": null,
+    "display_name": "GPT-6 Astra",
+    "enabled": true,
+    "id": "gpt-6-astra",
+    "input_per_m": 10.0,
+    "max_output_tokens": 4096,
+    "model": "gpt-6-astra",
+    "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+    "output_per_m": 50.0,
+    "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+    "pricing_source_url": "https://developers.openai.com/api/docs/models",
+    "provider": "openai",
+    "source_url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+  },
+  "model_config_fingerprint": "70ce5d3852fae44d4189b37a379a61c6f34d59005fd8c127cad33a584c18cb3a",
+  "max_output_tokens": 4096,
+  "model_id": "gpt-6-astra",
+  "display_name": "GPT-6 Astra",
+  "pricing": {
+    "input_per_m": 10.0,
+    "output_per_m": 50.0
+  }
+}
