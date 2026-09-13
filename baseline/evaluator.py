@@ -74,12 +74,14 @@ def grade_prediction(family: str, prediction: dict | None, ground_truth: dict) -
     choice = family in CHOICE_FAMILIES
     if prediction is None:
         return dict(valid=False, correct=False if choice else None, score=0.0,
-                    delta_e_ok=None, component_errors=None, out_of_srgb=None)
+                    tight_score=None if choice else 0.0, delta_e_ok=None, component_errors=None,
+                    within_bands=None, out_of_srgb=None)
     prediction = parse_prediction(json.dumps(prediction, allow_nan=False), family)
     if choice:
         correct = prediction["choice"] == ground_truth["choice"]
         return dict(valid=True, correct=correct, score=100.0 if correct else 0.0,
-                    delta_e_ok=None, component_errors=None, out_of_srgb=None)
+                    tight_score=None, delta_e_ok=None, component_errors=None,
+                    within_bands=None, out_of_srgb=None)
     target_rgb = ground_truth["rgb"]
     target_lab = rgb_to_oklab(target_rgb)
     target_lch = rgb_to_oklch(target_rgb)
@@ -106,7 +108,10 @@ def grade_prediction(family: str, prediction: dict | None, ground_truth: dict) -
             components["s"] = None
     distance = math.dist(predicted_lab, target_lab)
     return dict(valid=True, correct=None, score=100 * (1 - min(distance / NUMERIC_SCORING["score_ceiling"], 1)),
-                delta_e_ok=distance, component_errors=components, out_of_srgb=outside)
+                tight_score=100 * (1 - min(distance / NUMERIC_SCORING["tight_ceiling"], 1)),
+                delta_e_ok=distance, component_errors=components,
+                within_bands={str(band): distance <= band for band in NUMERIC_SCORING["exact_bands"]},
+                out_of_srgb=outside)
 
 
 @dataclass
@@ -122,8 +127,10 @@ class TaskEvaluationResult:
     valid: bool
     correct: bool | None
     score: float
+    tight_score: float | None
     delta_e_ok: float | None
     component_errors: dict | None
+    within_bands: dict | None
     out_of_srgb: bool | None
     latency_sec: float | None
     input_tokens: int | None = None

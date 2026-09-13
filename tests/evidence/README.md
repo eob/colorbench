@@ -13,3 +13,7 @@ Scope: Python protocol, parser, grading, release and image gates, native provide
 After isolated reversions, 36 focused parser, wire-schema, subtotal and profile checks passed again. All native requests in tests use `httpx.MockTransport`; no paid inference was issued by this lane. The actual 72-question frozen dataset passed the independent pixel gate with zero errors. Model availability and current pricing checks are recorded separately in the root ticket's readiness evidence.
 
 The implementation keeps choice accuracy and all three numeric-format scores separate. Numeric invalid responses contribute zero to the bounded mean score; raw error statistics describe valid predictions only. Related images retain group identity. Per-family costs and latency use the same scored rows, with unknown measurements retained as null. Sealed publications replay raw answers, compare committed checkpoints, and refuse further resume.
+
+0.3.x Red/Green evidence lives in `tickets/plan-02-harder-tasks.md` (Red
+evidence, adversarial review, gate matrix) rather than in per-log files;
+the 0.2.0 logs above are preserved as the engine's construction record.

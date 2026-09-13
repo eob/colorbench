@@ -5,6 +5,9 @@ export const FAMILIES = [
   "hue",
   "binding",
   "gradient",
+  "samediff",
+  "context",
+  "smallmatch",
   "rgb",
   "hsl",
   "oklch",
@@ -43,7 +46,7 @@ export interface ColorSpecimenConfig {
     axis: string;
     difficulty: string;
     sourceRgb?: Rgb;
-    direction?: "lighter" | "darker" | "more" | "less";
+    direction?: "lighter" | "darker" | "more" | "less" | "sameA" | "sameB";
     reference?: Record<string, unknown>;
     [key: string]: unknown;
   };

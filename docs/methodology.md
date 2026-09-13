@@ -1,6 +1,6 @@
-# ColorBench 0.2.0 methodology
+# ColorBench 0.3.1 methodology
 
-This first pilot measures responses to controlled rendered color tasks through
+This pilot measures responses to controlled rendered color tasks through
 providers' image-input interfaces. It does not isolate visual processing from
 instruction following, image preprocessing, or coordinate-system knowledge.
 It asks about visible properties, not aesthetic quality, semantic intent,
@@ -8,10 +8,12 @@ accessibility compliance, or which color a designer should choose.
 
 ## Stimuli and references
 
-There are 72 questions: eight each for matching, lightness, chroma, hue,
-color-to-component binding, gradient matching, RGB, HSL, and OKLCH. The three
-numeric families reuse the same eight opaque colors, yielding 56 unique PNGs.
-Each request starts independently; other predictions are never supplied.
+There are 248 questions: 48 matching, 48 color-to-component binding, 16 each
+for lightness, chroma, hue, same–different, surround-shifted context, and
+small-region matching, 8 gradient matching, and 16 each for RGB, HSL, and
+OKLCH. The three numeric families reuse the same 16 opaque colors, yielding
+216 unique PNGs. Each request starts independently; other predictions are
+never supplied.
 
 Images are 800 × 640 device pixels at DPR 1 on an sRGB neutral background
 `rgb(238,238,238)`. Flat color fields are written as exact RGB canvas pixels.
@@ -25,13 +27,29 @@ and option positions. Binding adds neutral component frames. Their difference
 is a controlled transfer to this UI treatment; it does not isolate every
 possible source of object-binding difficulty.
 
-Lightness and chroma prompts balance both answer positions and question
-directions (lighter/darker, more/less). Visible reference ramps illustrate the
-requested dimension. Comparisons use decoded OKLCH coordinates and verify
-that the intended ordering survives 8-bit sRGB conversion. Hue questions use
-chromatic targets and a unique closest coordinate-defined hue, with half the
-questions varying lightness and chroma. Human hue-equivalence judgments remain
-unmeasured; coordinate equality is a construction rule, not a perceptual proof.
+Matching and binding run a separation sweep: three axes (lightness, chroma,
+hue) at four separations each, with every axis–separation cell appearing at
+all four answer positions. Lightness and chroma sweep four pair separations
+across both question directions and both positions; hue sweeps four
+minimum-distractor separations across all positions, half with fixed and half
+with varying lightness/chroma per level. The dataset gate enforces this
+crossing explicitly: a corpus that drifts a separation or drops a position
+fails validation. Near-threshold levels were chosen before any model results;
+coordinate separation is a stimulus descriptor, not a measured
+just-noticeable difference.
+
+Same–different trials show two patches with no reference: half are
+pixel-identical, half differ by a small recorded gap. The A/B mapping for
+"same" lives only in the external prompt and is crossed with trial type, so
+images stay mapping-neutral. Context trials place option interiors on four
+fixed per-position surrounds while R stays neutral; ground truth is interior
+equality, and ring pixels are probed against the recorded surrounds.
+Small-region trials use 20px dots or 3px outlines at mid separations. Visible
+reference ramps illustrate the lightness/chroma dimensions. Comparisons use
+decoded OKLCH coordinates and verify that the intended ordering survives 8-bit
+sRGB conversion. Hue questions use chromatic targets and a unique closest
+coordinate-defined hue. Human hue-equivalence judgments remain unmeasured;
+coordinate equality is a construction rule, not a perceptual proof.
 
 Gradient targets and choices have equal dimensions. Exactly one choice repeats
 the target's complete decoded field. Distractors reverse or cyclically shift
@@ -39,7 +57,8 @@ its columns, preserving the color histogram. The task therefore requires
 spatial color progression rather than merely detecting the available colors.
 It does not ask for invisible CSS syntax or stop counts.
 
-Numeric targets are seven chromatic colors and one neutral gray. They have no
+Numeric targets are thirteen chromatic colors, one neutral gray, and two
+near-neutral extremes, including saturated boundary colors. They have no
 labeled color calibration chart. Each format uses exactly the same image bytes,
 including prompt-neutral image text. The external prompt names the requested
 coordinate system and units. Ground truth is the decoded opaque interior RGB
@@ -54,9 +73,10 @@ does not score Tailwind color names.
 
 Each image has one question. Choice answers contain exactly `{"choice":"A"}`
 with an available option letter. Case and surrounding letter whitespace are
-normalized. Four-choice families have a 25% chance baseline; lightness and
-chroma have a 50% baseline. Balanced ground truth makes a constant-letter
-predictor attain those same accuracies over the complete pilot family.
+normalized. Four-choice families have a 25% chance baseline; lightness,
+chroma, and same–different have a 50% baseline. Balanced ground truth makes a
+constant-letter predictor attain those same accuracies over the complete
+pilot family.
 
 Numeric response contracts are:
 
@@ -88,6 +108,12 @@ Report validity with similarity and raw error statistics; conditional error
 among valid predictions alone could reward a model that frequently fails to
 answer. Choice accuracy likewise counts invalid answers as incorrect.
 
+Near-exact reconstruction is measured separately from the headline
+similarity: a tight score with a 0.05 cap, hit rates at ΔE_OK ∈ {0.005,
+0.01, 0.02, 0.05} over valid answers, and for RGB the share of valid answers
+within ±2 and ±5 LSB on all channels. These bands describe how often models
+come close to exact; they are not visibility thresholds either.
+
 Component errors remain in each format's units. Hue error takes the shorter
 circular distance and is reported only when the target has OKLCH chroma at
 least 0.02. This cutoff is a declared diagnostic convention. HSL saturation
@@ -96,28 +122,52 @@ applies. Achromatic reference colors use zero chroma and canonical zero hue.
 
 A numeric control always predicts decoded sRGB `[128,128,128]`, expressed in
 each requested space. It was selected before the first paid run and obtains
-about 30.56 similarity on these eight targets (mean ΔE_OK about 0.16204).
-The tiny OKLCH round-trip difference is matrix precision, not a distinct
-predictor. Exact predictions and metrics are saved in
-`tickets/evidence/constant-gray-baseline.json`. This is an image-independent
-reference, not a trained or optimized baseline.
+about 18.11 similarity on these sixteen targets. The tiny OKLCH round-trip
+difference is matrix precision, not a distinct predictor. Exact predictions
+and metrics are saved in
+`tickets/evidence/constant-gray-baseline-0.3.0.json`. The sixteen numeric
+targets are byte-identical between 0.3.0 and 0.3.1, so the baseline carries
+over unchanged. This is an image-independent reference, not a trained or
+optimized baseline.
 
 There is no pooled ranking across choice accuracy and numeric similarity.
-Results describe eight fixed questions per family and do not warrant fine
+Results describe the fixed per-family questions and do not warrant fine
 model distinctions. Formats sharing a target and matching/binding pairs are
 correlated observations. No independent-item confidence intervals or claims of
-human calibration are made for this first pilot.
+human calibration are made for this pilot.
 
 ## Pilot interpretation finding
 
-The first run exposed a balance limitation in the matching/binding design.
+The 0.2.0 run exposed a balance limitation in the matching/binding design.
 Wide-gap questions have correct answers at A/C; narrow-gap questions at B/D.
 Target colors also differ between these sets. Overall family answer positions
 are balanced, but differences between these difficulty slices do not isolate
 color separation from position preference or color-specific difficulty.
 The [first-pilot critique](../results/first-pilot.md) records the measurements
 and proposes counterbalancing each target and gap across all positions.
-The frozen pilot is preserved as measured.
+The frozen 0.2.0 pilot is preserved as measured.
+
+Release 0.3.1 implements that proposal: every sweep separation appears at
+every answer position, enforced by the dataset gate rather than by
+construction convention alone. The near-threshold levels will depress accuracy
+relative to 0.2.0 by design; cross-release score comparisons remain invalid
+because the stimuli differ.
+
+Two further construction rules come from the pre-run adversarial review of
+the superseded 0.3.0 corpus. Exact-match distractors rotate between rank-2
+`{−1,+1,+2}Δ` and rank-3 `{−2,−1,+1}Δ` sets, crossed with position, so the
+target rank alone caps at 50% and any correct answer still requires reference
+comparison or guessing. Base hues, gray variants, samediff gradients, and
+hue jitter rotations are assigned by two-dimensional (cell, position)
+functions, pinned by confound-audit tests, so no stimulus property predicts
+the answer. Gradient direction is fully crossed with position.
+
+Filenames, task IDs, and group IDs encode family and answer position for
+harness bookkeeping and must never reach the model; providers send only
+image bytes and the frozen prompt, which the provider tests pin. A blind
+redistribution would rename files. `GRADING_VERSION` stayed `"2"` across
+0.2.0 and 0.3.x because grading semantics are backward compatible; the
+evaluation-protocol fingerprint distinguishes the releases.
 
 ## Execution and publication integrity
 

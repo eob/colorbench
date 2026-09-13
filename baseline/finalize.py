@@ -215,7 +215,7 @@ def _report(source: dict, items: list[dict], scope: str, roster: list[str], prov
             'comparison': dict(scope=scope, count=len(cohort), task_ids=sorted(cohort),
                                cohort_fingerprint=hashlib.sha256(json.dumps(sorted(cohort)).encode()).hexdigest(), model_ids=sorted(roster)),
             'cost_basis': 'Recorded metered token usage multiplied by recorded model pricing per scored input; excludes unmetered reserves and separate infrastructure attempts.',
-            'statistical_scope': 'Descriptive finite pilot. Related images share groups; no independent-sample confidence intervals or combined nine-family score.',
+            'statistical_scope': 'Descriptive finite pilot. Related images share groups; no independent-sample confidence intervals or combined cross-family score.',
             'campaign': dict(final_response_count=len(source['results']), attempt_count=len(source['attempts']),
                              infrastructure_attempt_count=sum(error_kinds.values()), infrastructure_error_kinds=dict(sorted(error_kinds.items())),
                              spent_cost_usd=source['summary']['spent_cost_usd'], budget_usd=source['summary'].get('budget_usd'),

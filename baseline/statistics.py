@@ -2,7 +2,7 @@
 
 import math
 
-from baseline.protocol import CHOICE_FAMILIES, FAMILIES, choice_labels
+from baseline.protocol import CHOICE_FAMILIES, FAMILIES, NUMERIC_SCORING, choice_labels
 
 
 def quantile(values: list[float], probability: float) -> float | None:
@@ -41,11 +41,20 @@ def family_metrics(tasks: list[dict], family: str) -> dict:
             selected = [row["component_errors"][key] for row in valid if row["component_errors"].get(key) is not None]
             means[key] = sum(value / len(selected) for value in selected) if selected else None
             known[key] = len(selected)
+        bands = [str(band) for band in NUMERIC_SCORING["exact_bands"]]
+        hits = {band: sum(row["within_bands"][band] is True for row in valid) / len(valid) if valid else None
+                for band in bands}
+        lsb = ([max(row["component_errors"][key] for key in "rgb") for row in valid]
+               if family == "rgb" else [])
         value.update(mean_score=sum(row["score"] for row in rows) / count if count else None,
+                     mean_tight_score=sum(row["tight_score"] for row in rows) / count if count else None,
                      mean_delta_e_ok=sum(error / len(errors) for error in errors) if errors else None,
                      median_delta_e_ok=quantile(errors, .5), p90_delta_e_ok=quantile(errors, .9),
                      out_of_srgb_count=sum(row["out_of_srgb"] is True for row in valid),
-                     mean_component_errors=means, component_known_count=known)
+                     mean_component_errors=means, component_known_count=known,
+                     band_hit_rate=hits,
+                     rgb_within_2_lsb=sum(error <= 2 for error in lsb) / len(lsb) if lsb else None,
+                     rgb_within_5_lsb=sum(error <= 5 for error in lsb) / len(lsb) if lsb else None)
     return value
 
 
