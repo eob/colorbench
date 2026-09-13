@@ -1,6 +1,6 @@
 # plan-02: Harder color perception tasks (release 0.3.1)
 
-- **Status:** In progress
+- **Status:** Done (branch `feat-02-harder-tasks`, unpushed, PR not opened)
 - **Date:** 2026-09-13
 - **Branch:** `feat-02-harder-tasks`
 - **Scope:** Five harder-but-perceptual slices for a new 248-question release:
@@ -270,6 +270,10 @@ constant-gray 0.3.0 evidence, docs (methodology, README), results doc.
 | Frozen-byte re-audit (0.3.1) | `96ee427` | hue×pos 0 leaks; ranks 24/24, 8/8, 4/4; samediff 8/8; gray 4/4/4/4; hue-min ±3°; gradient 8/8; gaps in tolerance |
 | `bun run validate:release` (0.3.1) | `96ee427` + code | valid, 248 tasks |
 | `bun run benchmark:mock` (0.3.1 smoke) | branch head | completes |
+| Paid campaign (13 models × 248) | `49f7df5` | 3,224/3,224, zero invalid, $21.49 of $25 |
+| `finalize --scope full` + `--verify` | `0a7bdea` | sealed; replay clean |
+| `analyze_pilot.py` + `second-pilot.md` | `0a7bdea` | ceiling broken; gradients clean; samediff bias found |
+| Final `bun run test` + frozen check | HEAD | 244 pytest; 29 bun; typecheck; 4 frozen paths verified |
 
 ## Red evidence
 
