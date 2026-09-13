@@ -15,6 +15,82 @@ from baseline.protocol import CHOICE_FAMILIES, FAMILIES, NUMERIC_FAMILIES, choic
 
 FONT_SHA256 = "abdc775b21b1bc470d50c97e790d276f2054b7504e56e5bd3e64f48d68582322"
 VIEWPORT = {"width": 800, "height": 640, "deviceScaleFactor": 1}
+COMPLETE_FAMILY_COUNTS = {
+    "matching": 48, "binding": 48, "lightness": 16, "chroma": 16, "hue": 16, "gradient": 8,
+    "samediff": 16, "context": 16, "smallmatch": 16, "rgb": 16, "hsl": 16, "oklch": 16}
+SWEEP_SEPARATIONS = {
+    "matching": {"lightness": [0.08, 0.04, 0.02, 0.01], "chroma": [0.025, 0.012, 0.007, 0.004],
+                 "hue": [35, 15, 8, 4]},
+    "binding": {"lightness": [0.08, 0.04, 0.02, 0.01], "chroma": [0.025, 0.012, 0.007, 0.004],
+                "hue": [35, 15, 8, 4]},
+    "lightness": {"lightness": [0.10, 0.05, 0.02, 0.01]},
+    "chroma": {"chroma": [0.06, 0.03, 0.015, 0.008]},
+    "hue": {"hue": [70, 30, 12, 6]}}
+CONTEXT_HUES = [25, 115, 205, 295]
+EXACT_MATCH_FAMILIES = ("matching", "binding", "gradient", "context", "smallmatch")
+PAIR_DIRECTIONS = {"lightness": ("lighter", "darker"), "chroma": ("more", "less")}
+
+
+def check_crossing(items):
+    """Pin the pilot's lesson: every separation at every answer position."""
+    errors = []
+    by_family = defaultdict(list)
+    for item in items:
+        by_family[item["family"]].append(item)
+    for family, axes in SWEEP_SEPARATIONS.items():
+        rows = by_family.get(family, [])
+        if not rows:
+            continue
+        pair = family in PAIR_DIRECTIONS
+        observed = {(row["design"].get("axis"), row["design"].get("intendedSeparation"),
+                     row["design"].get("direction")) for row in rows} if pair else {
+                         (row["design"].get("axis"), row["design"].get("intendedSeparation")) for row in rows}
+        expected = {(axis, sep, direction) for axis, seps in axes.items() for sep in seps
+                    for direction in PAIR_DIRECTIONS[family]} if pair else {
+                        (axis, sep) for axis, seps in axes.items() for sep in seps}
+        if observed != expected:
+            errors.append(f"{family} separation cells differ from the frozen sweep")
+            continue
+        cells = defaultdict(list)
+        for row in rows:
+            key = (row["design"].get("axis"), row["design"].get("intendedSeparation"))
+            if pair:
+                key += (row["design"].get("direction"),)
+            cells[key].append(row["groundTruth"]["choice"])
+        want = ["A", "B"] if pair else ["A", "B", "C", "D"]
+        for cell, choices in cells.items():
+            if sorted(choices) != want:
+                errors.append(f"{family} cell {cell} is not counterbalanced across positions")
+    hues = by_family.get("hue", [])
+    if hues:
+        per_sep = defaultdict(Counter)
+        for row in hues:
+            per_sep[row["design"].get("intendedSeparation")][row["design"].get("difficulty")] += 1
+        for sep, counts in per_sep.items():
+            if counts != Counter({"fixed-lightness-chroma": 2, "varying-lightness-chroma": 2}):
+                errors.append(f"hue separation {sep} is not balanced across fixed/varying contexts")
+    sames = by_family.get("samediff", [])
+    if sames:
+        cells = Counter((row["design"].get("same"), row["design"].get("direction")) for row in sames)
+        if set(cells) != {(True, "sameA"), (True, "sameB"), (False, "sameA"), (False, "sameB")} or len(set(cells.values())) != 1:
+            errors.append("samediff is not crossed across equality and answer mapping")
+    contexts = by_family.get("context", [])
+    if contexts:
+        if {row["design"].get("intendedHue") for row in contexts} != set(CONTEXT_HUES):
+            errors.append("context hues differ from the frozen set")
+        else:
+            per_hue = defaultdict(list)
+            for row in contexts:
+                per_hue[row["design"].get("intendedHue")].append(row["groundTruth"]["choice"])
+            for hue, choices in per_hue.items():
+                if sorted(choices) != ["A", "B", "C", "D"]:
+                    errors.append(f"context hue {hue} is not counterbalanced across positions")
+    smalls = by_family.get("smallmatch", [])
+    if smalls:
+        cells = Counter((row["design"].get("layout"), row["groundTruth"]["choice"]) for row in smalls)
+        if {layout for layout, _ in cells} != {"dot", "frame"} or len(cells) != 8 or any(value != 2 for value in cells.values()):
+            errors.append("smallmatch is not crossed across layout and position")
+    return errors
 
 
 def _require(condition, message):
@@ -41,6 +117,18 @@ def _region(image, region):
         _require(isinstance(rgb, list) and len(rgb) == 3 and all(type(v) is int and 0 <= v <= 255 for v in rgb), "Invalid region RGB")
         _require(crop.getextrema() == tuple((channel, channel) for channel in rgb), "Region is not the claimed uniform color")
     return crop
+
+
+def _separation_matches(axis, coordinates, intended):
+    if type(intended) not in (int, float) or axis not in ("lightness", "chroma", "hue"):
+        return False
+    labels = sorted(coordinates)
+    if axis == "hue":
+        gap = abs((coordinates[labels[0]]["h"] - coordinates[labels[1]]["h"] + 180) % 360 - 180)
+        return abs(gap - intended) <= max(2.5, .35 * intended)
+    dimension = "l" if axis == "lightness" else "c"
+    gap = abs(coordinates[labels[0]][dimension] - coordinates[labels[1]][dimension])
+    return abs(gap - intended) <= max(.01, .35 * intended)
 
 
 def _item(item, directory):
@@ -80,21 +168,50 @@ def _item(item, directory):
     targets = [region for region in regions if region["role"] == "target"]
     family = item["family"]
     _require(set(options) == (set(choice_labels(family)) if family in CHOICE_FAMILIES else set()), "Option count or labels disagree with family")
-    _require(len(targets) == (0 if family in ("lightness", "chroma") else 1), "Unexpected target count")
+    _require(len(targets) == (0 if family in ("lightness", "chroma", "samediff") else 1), "Unexpected target count")
     if family in NUMERIC_FAMILIES:
         _require(targets[0].get("rgb") == item["groundTruth"]["rgb"], "Numeric target differs from decoded pixels")
-    elif family in ("matching", "binding", "gradient"):
+    elif family in EXACT_MATCH_FAMILIES:
         target = crops[("target", targets[0]["id"])]
         matches = [label for label in options if crops[("option", label)].size == target.size and crops[("option", label)].tobytes() == target.tobytes()]
         _require(matches == [item["groundTruth"]["choice"]], "Matching target must have exactly one correct option")
         _require(len({crops[("option", label)].tobytes() for label in options}) == len(options), "Distractor colors must remain distinct")
+        if family == "context":
+            surround = item["design"].get("surround")
+            _require(isinstance(surround, dict) and set(surround) == set(options)
+                     and all(isinstance(value, list) and len(value) == 3
+                             and all(type(channel) is int and 0 <= channel <= 255 for channel in value)
+                             for value in surround.values()), "Context surround must record one RGB color per option")
+            for label, region in options.items():
+                probe = image.getpixel((region["x"] - 6, region["y"] - 6))
+                _require(list(probe) == surround[label], f"Surround ring pixels differ from the recorded surround at {label}")
+    elif family == "samediff":
+        _require(all("rgb" in region for region in options.values()), "Color-coordinate tasks require flat option colors")
+        equal = crops[("option", "A")].tobytes() == crops[("option", "B")].tobytes()
+        flag = item["design"].get("same")
+        _require(type(flag) is bool and flag == equal, "Same-different equality flag disagrees with decoded pixels")
+        direction = item["design"].get("direction")
+        _require(direction in ("sameA", "sameB"), "Same-different mapping must be recorded")
+        intended = item["design"].get("intendedSeparation")
+        if equal:
+            _require(intended == 0, "Identical patches must record a zero intended separation")
+        else:
+            coordinates = {label: rgb_to_oklch(region["rgb"]) for label, region in options.items()}
+            _require(_separation_matches(item["design"].get("axis"), coordinates, intended),
+                     "Same-different decoded separation differs from the recorded separation")
+        same_choice = "A" if direction == "sameA" else "B"
+        answer = same_choice if equal else ("B" if same_choice == "A" else "A")
+        _require(answer == item["groundTruth"]["choice"], "Ground truth disagrees with decoded equality and mapping")
     else:
         _require(all("rgb" in region for region in options.values()), "Color-coordinate tasks require flat option colors")
         coordinates = {label: rgb_to_oklch(region["rgb"]) for label, region in options.items()}
         if family in ("lightness", "chroma"):
             dimension = "l" if family == "lightness" else "c"
             ordered = sorted(coordinates, key=lambda label: coordinates[label][dimension])
-            _require(abs(coordinates[ordered[0]][dimension] - coordinates[ordered[-1]][dimension]) > .005, "Ordering gap vanished after rendering")
+            gap = abs(coordinates[ordered[0]][dimension] - coordinates[ordered[-1]][dimension])
+            _require(gap > .005, "Ordering gap vanished after rendering")
+            _require(_separation_matches(family, coordinates, item["design"].get("intendedSeparation")),
+                     "Ordering decoded separation differs from the recorded separation")
             high = item["design"].get("direction") in ("lighter", "more")
             answer = ordered[-1 if high else 0]
         else:
@@ -102,7 +219,12 @@ def _item(item, directory):
             _require(target["c"] >= .02 and all(value["c"] >= .02 for value in coordinates.values()), "Hue target and options require chromatic colors")
             errors = {label: abs((value["h"] - target["h"] + 180) % 360 - 180) for label, value in coordinates.items()}
             ordered = sorted(errors, key=errors.get)
-            _require(errors[ordered[0]] <= 3 and errors[ordered[1]] >= 35, "Hue reference is ambiguous after rendering")
+            reference = item["design"].get("reference") or {}
+            minimum = reference.get("minimumDistractorDegrees")
+            _require(type(minimum) in (int, float), "Hue reference must record its minimum distractor separation")
+            _require(errors[ordered[0]] <= 1 and errors[ordered[1]] - errors[ordered[0]] >= 2.5
+                     and abs(errors[ordered[1]] - minimum) <= max(2.5, .35 * minimum),
+                     "Hue reference is ambiguous after rendering")
             answer = ordered[0]
         _require(answer == item["groundTruth"]["choice"], "Ground truth disagrees with decoded color coordinates")
     if targets and item["design"].get("sourceRgb") is not None:
@@ -128,7 +250,8 @@ def validate_dataset(manifest_path, *, require_complete=True):
         try:
             evidence[item["taskId"]] = _item(item, directory)
             images[item["imageSha256"]].append(item)
-            masks[(item["family"], item["design"].get("direction"))].add(evidence[item["taskId"]]["masked_hash"])
+            masks[(item["family"], item["design"].get("direction"), item["design"].get("layout"))].add(
+                evidence[item["taskId"]]["masked_hash"])
         except (OSError, ValueError, TypeError, KeyError, IndexError) as error:
             errors.append(f"{item['taskId']}: {error}")
     for copies in images.values():
@@ -140,13 +263,15 @@ def validate_dataset(manifest_path, *, require_complete=True):
         errors.append("Pixels outside stimulus regions vary within a family and direction; possible answer leakage")
     if require_complete:
         counts = Counter(item["family"] for item in items)
-        if counts != Counter({family: 8 for family in FAMILIES}):
-            errors.append("Pilot requires exactly eight tasks in each of nine families (72 total)")
+        if counts != Counter(COMPLETE_FAMILY_COUNTS):
+            errors.append("Release 0.3.0 requires its frozen per-family task counts (248 total)")
         for family in CHOICE_FAMILIES:
             labels = choice_labels(family)
+            expected = COMPLETE_FAMILY_COUNTS[family] // len(labels)
             counts = Counter(item["groundTruth"]["choice"] for item in items if item["family"] == family)
-            if counts != Counter({label: 8 // len(labels) for label in labels}):
+            if counts != Counter({label: expected for label in labels}):
                 errors.append(f"Correct option positions are not balanced for {family}")
+        errors.extend(check_crossing(items))
         grouped = defaultdict(list)
         for item in items:
             grouped[item["groupId"]].append(item)

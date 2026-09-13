@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "benchmark_version": "0.3.0",
+  "status": "pilot",
+  "human_validation": "not_performed",
+  "dataset_manifest": "dataset/colorbench-v0.3/manifest.json",
+  "dataset_path": "dataset/colorbench-v0.3",
+  "dataset_git_commit": "9885454a67c727cd19074515ccae69d3069a6ae3",
+  "dataset_fingerprint": "1dad92d7e133f5b7c2543ac5037efe2d6e631f1a662beae6731abd0bca538559",
+  "evaluation_protocol_fingerprint": "a69ef1881b837a291a96f7f7995e31fbd19092b8cac59c3c7cfdadef158d84ce",
+  "expected_task_count": 248
+}

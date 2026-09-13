@@ -4,13 +4,17 @@ import json
 import math
 from pathlib import Path
 
-CHOICE_FAMILIES = ("matching", "lightness", "chroma", "hue", "binding", "gradient")
+CHOICE_FAMILIES = ("matching", "lightness", "chroma", "hue", "binding", "gradient",
+                   "samediff", "context", "smallmatch")
 NUMERIC_FAMILIES = ("rgb", "hsl", "oklch")
 FAMILIES = CHOICE_FAMILIES + NUMERIC_FAMILIES
 NUMERIC_SCORING = {
     "distance": "euclidean-oklab",
     "score_ceiling": 0.2,
     "score_formula": "100 * (1 - min(delta_e_ok / 0.2, 1))",
+    "tight_ceiling": 0.05,
+    "tight_formula": "100 * (1 - min(delta_e_ok / 0.05, 1))",
+    "exact_bands": [0.005, 0.01, 0.02, 0.05],
     "hue_chroma_threshold": 0.02,
     "interpretation": "Engineering normalization; not a just-noticeable-difference threshold.",
 }
@@ -19,7 +23,7 @@ NUMERIC_SCORING = {
 def choice_labels(family: str) -> list[str]:
     if family not in CHOICE_FAMILIES:
         raise ValueError(f"Not a choice family: {family}")
-    return list("AB" if family in ("lightness", "chroma") else "ABCD")
+    return list("AB" if family in ("lightness", "chroma", "samediff") else "ABCD")
 
 
 def prediction_schema(family: str) -> dict:
@@ -89,7 +93,7 @@ def parse_prediction(raw_text: str, family: str) -> dict:
 def get_prompt(family: str, direction: str | None = None) -> str:
     prediction_schema(family)
     prompts = json.loads(Path(__file__).with_name("prompts.json").read_text())
-    key = f"{family}-{direction}" if family in ("lightness", "chroma") else family
+    key = f"{family}-{direction}" if family in ("lightness", "chroma", "samediff") else family
     if key not in prompts:
         raise ValueError(f"Unknown task prompt: {key}")
     return prompts[key]

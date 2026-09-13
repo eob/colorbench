@@ -5,7 +5,7 @@ import { createHash } from "node:crypto";
 import { hueDistance, rgbToOklch } from "./colors.ts";
 import { getPrompt, PROMPTS } from "./prompts.ts";
 import { REPOSITORY, resolveCandidateOutput } from "./output.ts";
-import { SPECIMENS } from "./specimens.ts";
+import { CONTEXT_SURROUNDS, SPECIMENS } from "./specimens.ts";
 import type {
   Choice,
   ColorBenchmarkManifestItem,
@@ -29,44 +29,90 @@ interface PlacedField extends ColorField {
   y: number;
   width: number;
   height: number;
+  canvasX: number;
+  canvasY: number;
+  canvasWidth: number;
+  canvasHeight: number;
+  ring?: { color: Rgb; width: number };
+  interior?: Rgb;
 }
+const PAGE_BACKGROUND: Rgb = [238, 238, 238];
 export function placeFields(s: ColorSpecimenConfig): PlacedField[] {
   const fields: PlacedField[] = [];
   const numeric = ["rgb", "hsl", "oklch"].includes(s.family);
   const gradient = s.family === "gradient";
-  if (s.target)
+  const dot = s.family === "smallmatch" && s.design.layout === "dot";
+  const frame = s.family === "smallmatch" && s.design.layout === "frame";
+  const context = s.family === "context";
+  const push = (
+    color: ColorField,
+    role: PixelRegion["role"],
+    id: string,
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    extra?: {
+      canvasX?: number;
+      canvasY?: number;
+      canvasWidth?: number;
+      canvasHeight?: number;
+      ring?: { color: Rgb; width: number };
+      interior?: Rgb;
+    },
+  ) => {
     fields.push({
-      ...s.target,
-      role: "target",
-      id: "R",
-      x: numeric ? 320 : gradient ? 280 : 358,
-      y: numeric ? 210 : gradient ? 135 : 140,
-      width: numeric ? 160 : gradient ? 240 : 84,
-      height: numeric ? 160 : gradient ? 60 : 84,
+      ...color,
+      role,
+      id,
+      x,
+      y,
+      width,
+      height,
+      canvasX: extra?.canvasX ?? x,
+      canvasY: extra?.canvasY ?? y,
+      canvasWidth: extra?.canvasWidth ?? width,
+      canvasHeight: extra?.canvasHeight ?? height,
+      ...(extra?.ring ? { ring: extra.ring } : {}),
+      ...(extra?.interior ? { interior: extra.interior } : {}),
     });
+  };
+  if (s.target) {
+    if (numeric) push(s.target, "target", "R", 320, 210, 160, 160);
+    else if (gradient) push(s.target, "target", "R", 280, 135, 240, 60);
+    else if (dot) push(s.target, "target", "R", 390, 140, 20, 20);
+    else if (frame)
+      push(s.target, "target", "R", 358, 140, 84, 84, {
+        ring: { color: s.target.rgb!, width: 3 },
+        interior: PAGE_BACKGROUND,
+      });
+    else push(s.target, "target", "R", 358, 140, 84, 84);
+  }
   for (const [i, option] of s.options.entries()) {
     const pair = s.options.length === 2;
-    fields.push({
-      ...option,
-      role: "option",
-      id: "ABCD"[i]!,
-      x: gradient ? [80, 480][i % 2]! : pair ? [220, 496][i]! : [96, 270, 444, 618][i]!,
-      y: gradient ? [300, 465][Math.floor(i / 2)]! : pair ? 330 : 360,
-      width: gradient ? 240 : 84,
-      height: gradient ? 60 : 84,
-    });
+    const id = "ABCD"[i]!;
+    if (gradient) push(option, "option", id, [80, 480][i % 2]!, [300, 465][Math.floor(i / 2)]!, 240, 60);
+    else if (dot) push(option, "option", id, [128, 302, 476, 650][i]!, 392, 20, 20);
+    else if (frame)
+      push(option, "option", id, [96, 270, 444, 618][i]!, 360, 84, 84, {
+        ring: { color: option.rgb!, width: 3 },
+        interior: PAGE_BACKGROUND,
+      });
+    else if (context) {
+      const canvasX = [84, 258, 432, 606][i]!;
+      push(option, "option", id, canvasX + 12, 360, 84, 84, {
+        canvasX,
+        canvasY: 348,
+        canvasWidth: 108,
+        canvasHeight: 108,
+        ring: { color: CONTEXT_SURROUNDS[i]!, width: 12 },
+      });
+    } else if (pair) push(option, "option", id, [220, 496][i]!, 330, 84, 84);
+    else push(option, "option", id, [96, 270, 444, 618][i]!, 360, 84, 84);
   }
   const referenceColors = s.design.reference?.colors as Rgb[] | undefined;
   for (const [i, rgb] of (referenceColors ?? []).entries())
-    fields.push({
-      rgb,
-      role: "reference",
-      id: `example-${i}`,
-      x: 160 + i * 96,
-      y: 155,
-      width: 64,
-      height: 28,
-    });
+    push({ rgb }, "reference", `example-${i}`, 160 + i * 96, 155, 64, 28);
   return fields;
 }
 function imageQuestion(s: ColorSpecimenConfig): string {
@@ -83,6 +129,12 @@ function imageQuestion(s: ColorSpecimenConfig): string {
       return `Which patch is ${s.design.direction} colorful, A or B?`;
     case "gradient":
       return "Which strip has exactly R’s left-to-right color progression?";
+    case "samediff":
+      return "Are A and B the same color?";
+    case "context":
+      return "Which interior matches R? Ignore the surrounds.";
+    case "smallmatch":
+      return "Which small swatch matches R?";
     default:
       return "Estimate the interior color of R in the requested format.";
   }
@@ -94,12 +146,12 @@ export function generateHtml(s: ColorSpecimenConfig): string {
       const label =
         field.role === "reference"
           ? ""
-          : `<div class="label" style="left:${field.x}px;top:${field.y - 30}px;width:${field.width}px">${field.id}</div>`;
+          : `<div class="label" style="left:${field.canvasX}px;top:${field.canvasY - 30}px;width:${field.canvasWidth}px">${field.id}</div>`;
       const frame =
         s.family === "binding" && field.role === "option"
           ? `<div class="component" style="left:${field.x - 20}px;top:${field.y - 50}px"><div class="line"></div><div class="line bottom"></div></div>`
           : "";
-      return `${frame}${label}<canvas data-region="${field.id}" width="${field.width}" height="${field.height}" style="left:${field.x}px;top:${field.y}px"></canvas>`;
+      return `${frame}${label}<canvas data-region="${field.id}" width="${field.canvasWidth}" height="${field.canvasHeight}" style="left:${field.canvasX}px;top:${field.canvasY}px"></canvas>`;
     })
     .join("");
   const explanation =
@@ -108,6 +160,10 @@ export function generateHtml(s: ColorSpecimenConfig): string {
       : s.family === "lightness"
         ? "Dimension reference: dark → light"
         : "";
+  const footer =
+    s.family === "smallmatch" && s.design.layout === "frame"
+      ? "Compare the colored outlines. Labels and neutral areas are not part of the color."
+      : "Compare the colored interiors. Labels and neutral frames are not part of the color.";
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
   @font-face{font-family:ColorBench;src:url(data:font/ttf;base64,${FONT_BYTES.toString("base64")}) format("truetype");font-weight:400;font-style:normal}
   *{box-sizing:border-box}html,body{margin:0;width:800px;height:640px;background:rgb(238,238,238);overflow:hidden}
@@ -120,8 +176,8 @@ export function generateHtml(s: ColorSpecimenConfig): string {
   .footer{position:absolute;left:40px;bottom:28px;width:720px;text-align:center;color:#555}
   </style></head><body><h1 id="question">${imageQuestion(s)}</h1>
   ${explanation ? `<div class="explanation">${explanation}</div>` : ""}${shapes}
-  <div class="footer">Compare the colored interiors. Labels and neutral frames are not part of the color.</div>
-  <script>(()=>{const fields=${JSON.stringify(fields)};for(const f of fields){const canvas=document.querySelector('[data-region="'+f.id+'"]');const ctx=canvas.getContext('2d',{colorSpace:'srgb'});const img=ctx.createImageData(f.width,f.height);for(let y=0;y<f.height;y++)for(let x=0;x<f.width;x++){const color=f.columns?f.columns[x]:f.rgb;const offset=(y*f.width+x)*4;img.data[offset]=color[0];img.data[offset+1]=color[1];img.data[offset+2]=color[2];img.data[offset+3]=255;}ctx.putImageData(img,0,0);}})();</script>
+  <div class="footer">${footer}</div>
+  <script>(()=>{const fields=${JSON.stringify(fields)};for(const f of fields){const canvas=document.querySelector('[data-region="'+f.id+'"]');const ctx=canvas.getContext('2d',{colorSpace:'srgb'});const img=ctx.createImageData(f.canvasWidth,f.canvasHeight);for(let y=0;y<f.canvasHeight;y++)for(let x=0;x<f.canvasWidth;x++){const ring=f.ring&&(x<f.ring.width||x>=f.canvasWidth-f.ring.width||y<f.ring.width||y>=f.canvasHeight-f.ring.width);const color=ring?f.ring.color:f.interior?f.interior:f.columns?f.columns[x]:f.rgb;const offset=(y*f.canvasWidth+x)*4;img.data[offset]=color[0];img.data[offset+1]=color[1];img.data[offset+2]=color[2];img.data[offset+3]=255;}ctx.putImageData(img,0,0);}})();</script>
   </body></html>`;
 }
 export async function inspectPixels(
@@ -162,7 +218,7 @@ export async function inspectPixels(
   );
   return fields.map((field, i) => {
     const actual = decoded[i]!;
-    if (field.rgb && (!actual.uniform || JSON.stringify(field.rgb) !== JSON.stringify(actual.rgb)))
+    if (field.rgb && !field.interior && (!actual.uniform || JSON.stringify(field.rgb) !== JSON.stringify(actual.rgb)))
       throw new Error(`Decoded flat pixels differ for ${field.id}`);
     return {
       role: field.role,
@@ -187,10 +243,19 @@ export function groundTruthFromPixels(
     return { rgb: target.rgb };
   }
   let selected: PixelRegion | undefined;
-  if (["matching", "binding", "gradient"].includes(s.family)) {
+  if (["matching", "binding", "gradient", "context", "smallmatch"].includes(s.family)) {
     const matches = options.filter((r) => r.pixelSha256 === target?.pixelSha256);
     if (matches.length !== 1) throw new Error("Exactly one decoded option must match the target");
     selected = matches[0];
+  } else if (s.family === "samediff") {
+    const a = options.find((r) => r.id === "A")!;
+    const b = options.find((r) => r.id === "B")!;
+    const equal = a.pixelSha256 === b.pixelSha256;
+    if (equal !== s.design.same) throw new Error("Decoded same-different equality differs");
+    const sameChoice = s.design.direction === "sameA" ? "A" : "B";
+    const choice = equal ? sameChoice : sameChoice === "A" ? "B" : "A";
+    if (choice !== s.answer) throw new Error(`Decoded ground truth differs for ${s.taskId}`);
+    return { choice: choice as Choice };
   } else {
     const targetColor = target?.rgb ? rgbToOklch(target.rgb) : undefined;
     if (s.family === "hue" && (!targetColor || targetColor.c < 0.02))
@@ -313,7 +378,7 @@ export async function renderDataset(requested?: string): Promise<ColorBenchmarkM
         {
           schemaVersion: 1,
           artifactType: "colorbench-pilot-candidate",
-          version: "0.2.0",
+          version: "0.3.0",
           status: "human-pilot-pending",
           questionCount: manifest.length,
           uniqueImageCount: imageCache.size,
