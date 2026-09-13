@@ -1,8 +1,10 @@
 import { describe, expect, test } from "bun:test";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { chromium } from "playwright";
 import { PROMPTS, getPrompt } from "./prompts.ts";
-import { generateHtml, groundTruthFromPixels, placeFields } from "./render.ts";
+import { generateHtml, groundTruthFromPixels, placeFields, VIEWPORT } from "./render.ts";
+import { SPECIMENS } from "./specimens.ts";
 import type { ColorSpecimenConfig, PixelRegion } from "./types.ts";
 
 const region = (role: PixelRegion["role"], id: string, sha: string, rgb?: [number, number, number]) =>
@@ -122,5 +124,29 @@ describe("harder family rendering", () => {
     const html = generateHtml(frame);
     expect(html).toContain("238,238,238");
     expect(html).toContain("colored outlines");
+  });
+  test("frame canvases paint ring color on the border and background inside", async () => {
+    const specimen = SPECIMENS.find(
+      (s) => s.family === "smallmatch" && s.design.layout === "frame",
+    )!;
+    const browser = await chromium.launch({ args: ["--force-color-profile=srgb"] });
+    try {
+      const page = await browser.newPage({
+        viewport: { width: VIEWPORT.width, height: VIEWPORT.height },
+        deviceScaleFactor: 1,
+      });
+      await page.setContent(generateHtml(specimen));
+      await page.evaluate(() => document.fonts.ready);
+      const pixels = await page.evaluate(() => {
+        const canvas = document.querySelector<HTMLCanvasElement>('canvas[data-region="R"]')!;
+        const ctx = canvas.getContext("2d")!;
+        const at = (x: number, y: number) => Array.from(ctx.getImageData(x, y, 1, 1).data);
+        return { border: at(1, 1), middle: at(42, 42) };
+      });
+      expect(pixels.border.slice(0, 3)).toEqual(specimen.target!.rgb!);
+      expect(pixels.middle).toEqual([238, 238, 238, 255]);
+    } finally {
+      await browser.close();
+    }
   });
 });

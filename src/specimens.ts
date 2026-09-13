@@ -1,4 +1,4 @@
-import { fromOklch, rgbToOklch } from "./colors.ts";
+import { fromOklch, hueDistance, rgbToOklch } from "./colors.ts";
 import type { Choice, ColorField, ColorSpecimenConfig, Rgb } from "./types.ts";
 
 export const GRADIENT_WIDTH = 240;
@@ -39,8 +39,10 @@ const NEUTRAL: Rgb = [238, 238, 238];
 const choices: Choice[] = ["A", "B", "C", "D"];
 const solid = (rgb: Rgb): ColorField => ({ rgb });
 const index = (i: number) => String(i + 1).padStart(2, "0");
-// Spread hues across cells without letting position determine hue.
-const spreadHue = (n: number) => HUES[(n * 3 + 1) % 8]!;
+// Hue assignment is always a 2-D function of (cell, position): a 1-D stride
+// over a period-4 inner loop aliases hue to position (adversarial finding).
+const RANK2 = [-1, 1, 2];
+const RANK3 = [-2, -1, 1];
 function optionsWithAnswer(
   target: ColorField,
   distractors: ColorField[],
@@ -63,10 +65,25 @@ function shifted(
     hue + (axis === "hue" ? multiplier * sep : 0),
   );
 }
+function nearestGap(
+  axis: (typeof AXES)[number],
+  target: Rgb,
+  distractors: Rgb[],
+): number {
+  const center = rgbToOklch(target);
+  const gaps = distractors.map((rgb) => {
+    const value = rgbToOklch(rgb);
+    if (axis === "hue") return hueDistance(value.h, center.h);
+    const dimension = axis === "lightness" ? "l" : "c";
+    return Math.abs(value[dimension] - center[dimension]);
+  });
+  return Math.min(...gaps);
+}
 function resolveBase(
   axis: (typeof AXES)[number],
   sep: number,
   hue: number,
+  multipliers: number[],
 ): { l: number; c: number } {
   const candidates =
     axis === "hue"
@@ -78,12 +95,13 @@ function resolveBase(
             { l: 0.65, c: 0.06 },
             { l: 0.65, c: 0.04 },
           ];
+  const tolerance = axis === "hue" ? Math.max(2.5, 0.25 * sep) : Math.max(0.01, 0.35 * sep);
   for (const base of candidates) {
     try {
-      const colors = [0, -1, 1, 2].map((m) =>
-        JSON.stringify(shifted(axis, base, hue, sep, m)),
-      );
-      if (new Set(colors).size === 4) return base;
+      const rgbs = [0, ...multipliers].map((m) => shifted(axis, base, hue, sep, m));
+      if (new Set(rgbs.map((rgb) => JSON.stringify(rgb))).size !== 1 + multipliers.length) continue;
+      const gap = nearestGap(axis, rgbs[0]!, rgbs.slice(1));
+      if (Math.abs(gap - sep) <= tolerance) return base;
     } catch {
       continue;
     }
@@ -102,13 +120,15 @@ export const SPECIMENS: ColorSpecimenConfig[] = [];
 // Matching/binding separation sweep: 3 axes x 4 separations x 4 positions.
 {
   let n = 0;
-  for (const axis of AXES) {
+  for (const [axisIndex, axis] of AXES.entries()) {
     for (const [level, sep] of MATCH_SEPS[axis].entries()) {
       for (let position = 0; position < 4; position++) {
-        const hue = spreadHue(n);
-        const base = resolveBase(axis, sep, hue);
+        const cell = axisIndex * 4 + level;
+        const hue = HUES[(cell + position) % 8]!;
+        const multipliers = (cell + position) % 2 === 0 ? RANK2 : RANK3;
+        const base = resolveBase(axis, sep, hue, multipliers);
         const target = solid(fromOklch(base.l, base.c, hue));
-        const distractors = [-1, 1, 2].map((m) => solid(shifted(axis, base, hue, sep, m)));
+        const distractors = multipliers.map((m) => solid(shifted(axis, base, hue, sep, m)));
         const options = optionsWithAnswer(target, distractors, position);
         const id = index(n);
         n += 1;
@@ -142,14 +162,23 @@ for (const family of ["lightness", "chroma"] as const) {
   const separations = family === "lightness" ? [0.1, 0.05, 0.02, 0.01] : [0.06, 0.03, 0.015, 0.008];
   const directions =
     family === "lightness" ? (["lighter", "darker"] as const) : (["more", "less"] as const);
+  // Even HUES entries; each lands on both positions across the chromatic cells.
+  const spread4 = [HUES[0]!, HUES[2]!, HUES[4]!, HUES[6]!];
   let k = 0;
+  let chromaticSeen = 0;
   for (const [level, sep] of separations.entries()) {
-    for (const direction of directions) {
+    for (const [directionIndex, direction] of directions.entries()) {
       for (let position = 0; position < 2; position++) {
-        const hue = spreadHue(k);
-        // Gray/chromatic alternates by item index: a recorded stimulus variant,
-        // not a crossed factor (any 8/8 split aliases some crossed dimension).
-        const gray = family === "lightness" && k % 2 === 0;
+        // Checkerboard: one gray + one chromatic per cell, 4/4 per position.
+        // Aliases only the forced 3-way interaction, never the answer.
+        const gray = family === "lightness" && (level + directionIndex + position) % 2 === 0;
+        const cellPair = level * 2 + directionIndex;
+        const hue =
+          family === "lightness"
+            ? gray
+              ? 0
+              : spread4[Math.floor(chromaticSeen++ / 2) % 4]!
+            : HUES[(cellPair + position) % 8]!;
         const pair =
           family === "lightness"
             ? [fromOklch(0.62 - sep / 2, gray ? 0 : 0.06, hue), fromOklch(0.62 + sep / 2, gray ? 0 : 0.06, hue)]
@@ -199,15 +228,17 @@ for (const family of ["lightness", "chroma"] as const) {
 for (const [level, sep] of [70, 30, 12, 6].entries()) {
   for (let position = 0; position < 4; position++) {
     const k = level * 4 + position;
-    const hue = spreadHue(k);
-    const varying = position % 2 === 1;
+    const hue = HUES[(2 * level + position) % 8]!;
+    const varying = (level + position) % 2 === 1;
     const target = solid(fromOklch(0.65, 0.075, hue));
-    const optionHues = [hue, hue + sep, hue + sep + 120, hue + sep + 240];
+    // Minimum circular distance is exactly sep at every level: [d,d+120,d+240]
+    // wraps at d=70 (310 lands 50 away). 150/250 stay clear of all levels.
+    const optionHues = [hue, hue + sep, hue + 150, hue + 250];
     const fields = optionHues.map((h, j) =>
       solid(
         fromOklch(
-          varying ? [0.55, 0.73, 0.59, 0.69][(j + k) % 4]! : 0.65,
-          varying ? [0.045, 0.07, 0.055, 0.065][(j + k) % 4]! : 0.075,
+          varying ? [0.55, 0.73, 0.59, 0.69][(j + 2 * position + level) % 4]! : 0.65,
+          varying ? [0.045, 0.07, 0.055, 0.065][(j + 2 * position + level) % 4]! : 0.075,
           h,
         ),
       ),
@@ -233,12 +264,13 @@ for (const [level, sep] of [70, 30, 12, 6].entries()) {
   }
 }
 
-// Gradient matching keeps the 0.2.0 continuity-anchor construction.
+// Gradient matching: direction fully crossed with position (the 0.2.0
+// direction-parity confound is removed rather than preserved as an anchor).
 for (let i = 0; i < 8; i++) {
   const a = NUMERIC_TARGETS[i]!,
     b = NUMERIC_TARGETS[(i + 3) % 8]!;
   const forward = gradientColumns(a, b);
-  const columns = i % 2 === 0 ? forward : [...forward].reverse();
+  const columns = i < 4 ? forward : [...forward].reverse();
   const target = { columns };
   const shifted = (offset: number): ColorField => ({
     columns: [...columns.slice(offset), ...columns.slice(0, offset)],
@@ -258,7 +290,7 @@ for (let i = 0; i < 8; i++) {
     answer: choices[i % 4],
     design: {
       axis: "spatial-color-progression",
-      difficulty: i % 2 === 0 ? "forward" : "reverse",
+      difficulty: i < 4 ? "forward" : "reverse",
       sourceRgb: columns[0],
       reference: {
         kind: "exact-color-field",
@@ -284,7 +316,8 @@ for (let i = 0; i < 8; i++) {
   ];
   for (let i = 0; i < 8; i++) {
     const direction = i % 2 === 0 ? "sameA" : "sameB";
-    const rgb = fromOklch(0.65, 0.05, HUES[i]!);
+    const hue = HUES[i]!;
+    const rgb = fromOklch(0.65, 0.05, hue);
     SPECIMENS.push({
       taskId: `colorbench-samediff-${index(i)}`,
       family: "samediff",
@@ -298,12 +331,15 @@ for (let i = 0; i < 8; i++) {
         direction,
         same: true,
         intendedSeparation: 0,
+        intendedHue: hue,
       },
     });
   }
+  // Same hue and direction sequences as the identical block: each hue gets
+  // one A trial and one B trial, so hue carries no answer information.
   different.forEach(({ axis, sep }, i) => {
     const direction = i % 2 === 0 ? "sameA" : "sameB";
-    const hue = spreadHue(i);
+    const hue = HUES[i]!;
     const base = axis === "hue" ? { l: 0.65, c: 0.09 } : { l: 0.65, c: 0.05 };
     const lo = solid(shifted(axis, base, hue, sep, 0));
     const hi = solid(shifted(axis, base, hue, sep, 1));
@@ -314,8 +350,8 @@ for (let i = 0; i < 8; i++) {
       family: "samediff",
       groupId: `samediff-${index(i + 8)}`,
       imageId: `samediff-${index(i + 8)}`,
-      // Lower/duller patch left in half the trials.
-      options: i % 2 === 0 ? [lo, hi] : [hi, lo],
+      // Lower/duller patch left in half the trials, decoupled from answer.
+      options: Math.floor(i / 2) % 2 === 0 ? [lo, hi] : [hi, lo],
       answer: direction === "sameA" ? "B" : "A",
       design: {
         axis,
@@ -323,6 +359,7 @@ for (let i = 0; i < 8; i++) {
         direction,
         same: false,
         intendedSeparation: sep,
+        intendedHue: hue,
       },
     });
   });
@@ -331,13 +368,14 @@ for (let i = 0; i < 8; i++) {
 // Surround-shifted matching: 4 hues x 4 positions, fixed per-position surrounds.
 {
   let k = 0;
-  for (const hue of CONTEXT_HUES) {
+  for (const [hueIndex, hue] of CONTEXT_HUES.entries()) {
     for (let position = 0; position < 4; position++) {
       const axis = AXES[k % 3]!;
       const sep = axis === "lightness" ? 0.04 : axis === "chroma" ? 0.012 : 15;
-      const base = resolveBase(axis, sep, hue);
+      const multipliers = (hueIndex + position) % 2 === 0 ? RANK2 : RANK3;
+      const base = resolveBase(axis, sep, hue, multipliers);
       const target = solid(fromOklch(base.l, base.c, hue));
-      const distractors = [-1, 1, 2].map((m) => solid(shifted(axis, base, hue, sep, m)));
+      const distractors = multipliers.map((m) => solid(shifted(axis, base, hue, sep, m)));
       const surround: Record<string, Rgb> = {
         A: CONTEXT_SURROUNDS[0]!,
         B: CONTEXT_SURROUNDS[1]!,
@@ -370,14 +408,16 @@ for (let i = 0; i < 8; i++) {
 
 // Small-region matching: 2 layouts x 4 positions x 2, axes cycle.
 for (let k = 0; k < 16; k++) {
-  const layout = Math.floor(k / 4) % 2 === 0 ? "dot" : "frame";
+  const block = Math.floor(k / 4);
+  const layout = block % 2 === 0 ? "dot" : "frame";
   const position = k % 4;
   const axis = AXES[k % 3]!;
   const sep = axis === "lightness" ? 0.03 : axis === "chroma" ? 0.01 : 10;
-  const hue = spreadHue(k);
-  const base = resolveBase(axis, sep, hue);
+  const hue = HUES[(2 * block + position) % 8]!;
+  const multipliers = (block + position) % 2 === 0 ? RANK2 : RANK3;
+  const base = resolveBase(axis, sep, hue, multipliers);
   const target = solid(fromOklch(base.l, base.c, hue));
-  const distractors = [-1, 1, 2].map((m) => solid(shifted(axis, base, hue, sep, m)));
+  const distractors = multipliers.map((m) => solid(shifted(axis, base, hue, sep, m)));
   SPECIMENS.push({
     taskId: `colorbench-smallmatch-${index(k)}`,
     family: "smallmatch",

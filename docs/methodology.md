@@ -1,4 +1,4 @@
-# ColorBench 0.3.0 methodology
+# ColorBench 0.3.1 methodology
 
 This pilot measures responses to controlled rendered color tasks through
 providers' image-input interfaces. It does not isolate visual processing from
@@ -125,8 +125,10 @@ each requested space. It was selected before the first paid run and obtains
 about 18.11 similarity on these sixteen targets. The tiny OKLCH round-trip
 difference is matrix precision, not a distinct predictor. Exact predictions
 and metrics are saved in
-`tickets/evidence/constant-gray-baseline-0.3.0.json`. This is an
-image-independent reference, not a trained or optimized baseline.
+`tickets/evidence/constant-gray-baseline-0.3.0.json`. The sixteen numeric
+targets are byte-identical between 0.3.0 and 0.3.1, so the baseline carries
+over unchanged. This is an image-independent reference, not a trained or
+optimized baseline.
 
 There is no pooled ranking across choice accuracy and numeric similarity.
 Results describe the fixed per-family questions and do not warrant fine
@@ -145,11 +147,27 @@ The [first-pilot critique](../results/first-pilot.md) records the measurements
 and proposes counterbalancing each target and gap across all positions.
 The frozen 0.2.0 pilot is preserved as measured.
 
-Release 0.3.0 implements that proposal: every sweep separation appears at
+Release 0.3.1 implements that proposal: every sweep separation appears at
 every answer position, enforced by the dataset gate rather than by
 construction convention alone. The near-threshold levels will depress accuracy
 relative to 0.2.0 by design; cross-release score comparisons remain invalid
 because the stimuli differ.
+
+Two further construction rules come from the pre-run adversarial review of
+the superseded 0.3.0 corpus. Exact-match distractors rotate between rank-2
+`{−1,+1,+2}Δ` and rank-3 `{−2,−1,+1}Δ` sets, crossed with position, so the
+target rank alone caps at 50% and any correct answer still requires reference
+comparison or guessing. Base hues, gray variants, samediff gradients, and
+hue jitter rotations are assigned by two-dimensional (cell, position)
+functions, pinned by confound-audit tests, so no stimulus property predicts
+the answer. Gradient direction is fully crossed with position.
+
+Filenames, task IDs, and group IDs encode family and answer position for
+harness bookkeeping and must never reach the model; providers send only
+image bytes and the frozen prompt, which the provider tests pin. A blind
+redistribution would rename files. `GRADING_VERSION` stayed `"2"` across
+0.2.0 and 0.3.x because grading semantics are backward compatible; the
+evaluation-protocol fingerprint distinguishes the releases.
 
 ## Execution and publication integrity
 

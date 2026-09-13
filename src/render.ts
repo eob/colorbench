@@ -378,7 +378,7 @@ export async function renderDataset(requested?: string): Promise<ColorBenchmarkM
         {
           schemaVersion: 1,
           artifactType: "colorbench-pilot-candidate",
-          version: "0.3.0",
+          version: "0.3.1",
           status: "human-pilot-pending",
           questionCount: manifest.length,
           uniqueImageCount: imageCache.size,

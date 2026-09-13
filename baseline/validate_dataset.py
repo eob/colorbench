@@ -29,6 +29,9 @@ SWEEP_SEPARATIONS = {
 CONTEXT_HUES = [25, 115, 205, 295]
 EXACT_MATCH_FAMILIES = ("matching", "binding", "gradient", "context", "smallmatch")
 PAIR_DIRECTIONS = {"lightness": ("lighter", "darker"), "chroma": ("more", "less")}
+ALLOWED_DIRECTIONS = {
+    "lightness": ("lighter", "darker"), "chroma": ("more", "less"), "samediff": ("sameA", "sameB")}
+ALLOWED_LAYOUTS = {"smallmatch": ("dot", "frame")}
 
 
 def check_crossing(items):
@@ -167,6 +170,10 @@ def _item(item, directory):
     options = {region["id"]: region for region in regions if region["role"] == "option"}
     targets = [region for region in regions if region["role"] == "target"]
     family = item["family"]
+    _require(item["design"].get("direction") in ALLOWED_DIRECTIONS.get(family, (None,)),
+             f"Design direction is not allowed for {family}")
+    _require(item["design"].get("layout") in ALLOWED_LAYOUTS.get(family, (None,)),
+             f"Design layout is not allowed for {family}")
     _require(set(options) == (set(choice_labels(family)) if family in CHOICE_FAMILIES else set()), "Option count or labels disagree with family")
     _require(len(targets) == (0 if family in ("lightness", "chroma", "samediff") else 1), "Unexpected target count")
     if family in NUMERIC_FAMILIES:
@@ -176,6 +183,22 @@ def _item(item, directory):
         matches = [label for label in options if crops[("option", label)].size == target.size and crops[("option", label)].tobytes() == target.tobytes()]
         _require(matches == [item["groundTruth"]["choice"]], "Matching target must have exactly one correct option")
         _require(len({crops[("option", label)].tobytes() for label in options}) == len(options), "Distractor colors must remain distinct")
+        if family in ("matching", "binding", "context") or item["design"].get("layout") == "dot":
+            axis = item["design"].get("axis")
+            intended = item["design"].get("intendedSeparation")
+            _require(axis in ("lightness", "chroma", "hue") and type(intended) in (int, float),
+                     "Exact-match sweep items must record their axis and separation")
+            center = rgb_to_oklch(targets[0]["rgb"])
+            gaps = []
+            for label in options:
+                if label in matches:
+                    continue
+                value = rgb_to_oklch(options[label]["rgb"])
+                gaps.append(abs((value["h"] - center["h"] + 180) % 360 - 180) if axis == "hue"
+                            else abs(value["l" if axis == "lightness" else "c"] - center["l" if axis == "lightness" else "c"]))
+            tolerance = max(2.5, .25 * intended) if axis == "hue" else max(.01, .35 * intended)
+            _require(abs(min(gaps) - intended) <= tolerance,
+                     "Matching decoded separation differs from the recorded separation")
         if family == "context":
             surround = item["design"].get("surround")
             _require(isinstance(surround, dict) and set(surround) == set(options)
@@ -193,11 +216,14 @@ def _item(item, directory):
         direction = item["design"].get("direction")
         _require(direction in ("sameA", "sameB"), "Same-different mapping must be recorded")
         intended = item["design"].get("intendedSeparation")
+        axis = item["design"].get("axis")
         if equal:
+            _require(axis == "identity", "Identical patches must record the identity axis")
             _require(intended == 0, "Identical patches must record a zero intended separation")
         else:
+            _require(axis in ("lightness", "chroma", "hue"), "Differing patches must record a color axis")
             coordinates = {label: rgb_to_oklch(region["rgb"]) for label, region in options.items()}
-            _require(_separation_matches(item["design"].get("axis"), coordinates, intended),
+            _require(_separation_matches(axis, coordinates, intended),
                      "Same-different decoded separation differs from the recorded separation")
         same_choice = "A" if direction == "sameA" else "B"
         answer = same_choice if equal else ("B" if same_choice == "A" else "A")
@@ -223,7 +249,7 @@ def _item(item, directory):
             minimum = reference.get("minimumDistractorDegrees")
             _require(type(minimum) in (int, float), "Hue reference must record its minimum distractor separation")
             _require(errors[ordered[0]] <= 1 and errors[ordered[1]] - errors[ordered[0]] >= 2.5
-                     and abs(errors[ordered[1]] - minimum) <= max(2.5, .35 * minimum),
+                     and abs(errors[ordered[1]] - minimum) <= max(2.5, .25 * minimum),
                      "Hue reference is ambiguous after rendering")
             answer = ordered[0]
         _require(answer == item["groundTruth"]["choice"], "Ground truth disagrees with decoded color coordinates")
@@ -264,7 +290,7 @@ def validate_dataset(manifest_path, *, require_complete=True):
     if require_complete:
         counts = Counter(item["family"] for item in items)
         if counts != Counter(COMPLETE_FAMILY_COUNTS):
-            errors.append("Release 0.3.0 requires its frozen per-family task counts (248 total)")
+            errors.append("Release 0.3.1 requires its frozen per-family task counts (248 total)")
         for family in CHOICE_FAMILIES:
             labels = choice_labels(family)
             expected = COMPLETE_FAMILY_COUNTS[family] // len(labels)

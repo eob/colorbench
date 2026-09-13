@@ -164,6 +164,175 @@ describe("harder 0.3.0 corpus design", () => {
     for (const s of SPECIMENS.filter((st) => st.family === "samediff" && st.design.same))
       expect(JSON.stringify(s.options[0])).toBe(JSON.stringify(s.options[1]));
   });
+  test("base hue never determines the answer position", () => {
+    for (const family of ["matching", "binding"]) {
+      const examples = SPECIMENS.filter((s) => s.family === family);
+      const perPosition = new Map<string, Set<number>>();
+      const perHue = new Map<number, Set<string>>();
+      for (const s of examples) {
+        const hue = (s.design.intendedTargetOklch as { h: number }).h;
+        if (!perPosition.has(s.answer!)) perPosition.set(s.answer!, new Set());
+        perPosition.get(s.answer!)!.add(hue);
+        if (!perHue.has(hue)) perHue.set(hue, new Set());
+        perHue.get(hue)!.add(s.answer!);
+      }
+      for (const hues of perPosition.values()) expect(hues.size).toBe(8);
+      for (const answers of perHue.values()) expect(answers.size).toBeGreaterThanOrEqual(2);
+    }
+    for (const family of ["smallmatch", "hue"]) {
+      const examples = SPECIMENS.filter((s) => s.family === family);
+      const perHue = new Map<number, Set<string>>();
+      for (const s of examples) {
+        const hue =
+          family === "hue"
+            ? (s.design.intendedHue as number)
+            : (s.design.intendedTargetOklch as { h: number }).h;
+        if (!perHue.has(hue)) perHue.set(hue, new Set());
+        perHue.get(hue)!.add(s.answer!);
+      }
+      for (const answers of perHue.values()) expect(answers.size).toBeGreaterThanOrEqual(2);
+    }
+    for (const family of ["lightness", "chroma"]) {
+      const examples = SPECIMENS.filter((s) => s.family === family && !(s.design.intendedHue === 0));
+      const perHue = new Map<number, Set<string>>();
+      for (const s of examples) {
+        const hue = s.design.intendedHue as number;
+        if (!perHue.has(hue)) perHue.set(hue, new Set());
+        perHue.get(hue)!.add(s.answer!);
+      }
+      for (const answers of perHue.values()) expect(answers).toEqual(new Set(["A", "B"]));
+    }
+  });
+  test("target rank rotates so reference comparison stays necessary", () => {
+    const rankOf = (s: (typeof SPECIMENS)[number]) => {
+      const axis = s.design.axis as string;
+      if (axis === "hue") {
+        const target = rgbToOklch(s.target!.rgb!);
+        const offsets = s.options.map((o) => {
+          const h = rgbToOklch(o.rgb!).h;
+          return ((h - target.h + 540) % 360) - 180;
+        });
+        return [...offsets].sort((a, b) => a - b).indexOf(0) + 1;
+      }
+      const dimension = axis === "lightness" ? "l" : "c";
+      const values = s.options.map((o) => rgbToOklch(o.rgb!)[dimension]);
+      return [...values].sort((a, b) => a - b).indexOf(rgbToOklch(s.target!.rgb!)[dimension]) + 1;
+    };
+    for (const family of ["matching", "binding"]) {
+      const examples = SPECIMENS.filter((s) => s.family === family);
+      const cells = new Map<string, number[]>();
+      for (const s of examples) {
+        const key = `${s.design.axis}@${s.design.intendedSeparation}`;
+        cells.set(key, [...(cells.get(key) ?? []), rankOf(s)]);
+      }
+      for (const ranks of cells.values()) expect(ranks.sort()).toEqual([2, 2, 3, 3]);
+      for (const position of ["A", "B", "C", "D"]) {
+        const ranks = examples.filter((s) => s.answer === position).map(rankOf).sort();
+        expect(ranks).toEqual([2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3]);
+      }
+    }
+    for (const family of ["context", "smallmatch"]) {
+      const examples = SPECIMENS.filter((s) => s.family === family);
+      const ranks = examples.map(rankOf).sort();
+      expect(ranks).toEqual([2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3]);
+      for (const position of ["A", "B", "C", "D"]) {
+        const atPosition = examples.filter((s) => s.answer === position).map(rankOf).sort();
+        expect(atPosition).toEqual([2, 2, 3, 3]);
+      }
+    }
+  });
+  test("samediff hue and gradient direction carry no answer information", () => {
+    const sames = SPECIMENS.filter((s) => s.family === "samediff");
+    const perHue = new Map<number, Set<string>>();
+    for (const s of sames) {
+      const hue = s.design.intendedHue as number;
+      if (!perHue.has(hue)) perHue.set(hue, new Set());
+      perHue.get(hue)!.add(s.answer!);
+    }
+    expect(perHue.size).toBe(8);
+    for (const answers of perHue.values()) expect(answers).toEqual(new Set(["A", "B"]));
+    for (const answer of ["A", "B"]) {
+      const signs = sames
+        .filter((s) => !s.design.same && s.answer === answer)
+        .map((s) => {
+          const [a, b] = s.options.map((o) => rgbToOklch(o.rgb!));
+          const axis = s.design.axis as string;
+          if (axis === "hue") return ((b!.h - a!.h + 540) % 360) - 180;
+          const dimension = axis === "lightness" ? "l" : "c";
+          return b![dimension] - a![dimension];
+        });
+      expect(signs.filter((v) => v < 0)).toHaveLength(2);
+      expect(signs.filter((v) => v > 0)).toHaveLength(2);
+    }
+  });
+  test("lightness gray variant never determines the answer", () => {
+    const examples = SPECIMENS.filter((s) => s.family === "lightness");
+    for (const position of ["A", "B"]) {
+      const atPosition = examples.filter((s) => s.answer === position);
+      expect(atPosition.filter((s) => s.design.intendedHue === 0)).toHaveLength(4);
+      expect(atPosition.filter((s) => s.design.intendedHue !== 0)).toHaveLength(4);
+    }
+    const cells = new Map<string, number>();
+    for (const s of examples) {
+      const key = `${s.design.intendedSeparation}@${s.design.direction}`;
+      cells.set(key, (cells.get(key) ?? 0) + (s.design.intendedHue === 0 ? 1 : 0));
+    }
+    for (const gray of cells.values()) expect(gray).toBe(1);
+  });
+  test("hue offsets realize the recorded minimum at every level", () => {
+    for (const s of SPECIMENS.filter((st) => st.family === "hue")) {
+      const target = rgbToOklch(s.target!.rgb!);
+      const errors = s.options.map((o) => hueDistance(rgbToOklch(o.rgb!).h, target.h));
+      const ordered = [...errors].sort((a, b) => a - b);
+      const minimum = s.design.intendedSeparation as number;
+      expect(Math.abs(ordered[1]! - minimum)).toBeLessThanOrEqual(3);
+    }
+  });
+  test("hue varying contexts checkerboard across levels and positions", () => {
+    const hues = SPECIMENS.filter((s) => s.family === "hue");
+    const varyingRanks: number[] = [];
+    for (const position of ["A", "B", "C", "D"]) {
+      const atPosition = hues.filter((s) => s.answer === position);
+      expect(atPosition.filter((s) => s.design.difficulty === "fixed-lightness-chroma")).toHaveLength(2);
+      const varying = atPosition.filter((s) => s.design.difficulty === "varying-lightness-chroma");
+      expect(varying).toHaveLength(2);
+      const ranks = varying.map((s) => {
+        const values = s.options.map((o) => rgbToOklch(o.rgb!).l);
+        const correct = s.options["ABCD".indexOf(s.answer!)]!;
+        return [...values].sort((a, b) => a - b).indexOf(rgbToOklch(correct.rgb!).l) + 1;
+      });
+      expect(new Set(ranks).size).toBe(2);
+      varyingRanks.push(...ranks);
+    }
+    expect(varyingRanks.sort()).toEqual([1, 1, 2, 2, 3, 3, 4, 4]);
+  });
+  test("gradient direction crosses all positions", () => {
+    const gradients = SPECIMENS.filter((s) => s.family === "gradient");
+    for (const difficulty of ["forward", "reverse"]) {
+      const answers = gradients.filter((s) => s.design.difficulty === difficulty).map((s) => s.answer!);
+      expect(answers.sort()).toEqual(["A", "B", "C", "D"]);
+    }
+  });
+  test("exact-match nearest gaps realize the recorded separation", () => {
+    for (const s of SPECIMENS.filter((st) =>
+      ["matching", "binding", "context", "smallmatch"].includes(st.family),
+    )) {
+      const axis = s.design.axis as string;
+      const intended = s.design.intendedSeparation as number;
+      const target = rgbToOklch(s.target!.rgb!);
+      const gaps = s.options
+        .filter((o) => JSON.stringify(o.rgb) !== JSON.stringify(s.target!.rgb))
+        .map((o) => {
+          const value = rgbToOklch(o.rgb!);
+          if (axis === "hue") return hueDistance(value.h, target.h);
+          const dimension = axis === "lightness" ? "l" : "c";
+          return Math.abs(value[dimension] - target[dimension]);
+        });
+      const nearest = Math.min(...gaps);
+      const tolerance = axis === "hue" ? Math.max(2.5, 0.25 * intended) : Math.max(0.01, 0.35 * intended);
+      expect(Math.abs(nearest - intended)).toBeLessThanOrEqual(tolerance);
+    }
+  });
   test("hue winners share decoded pixels and runners-up track the minimum", () => {
     for (const s of SPECIMENS.filter((st) => st.family === "hue")) {
       const target = rgbToOklch(s.target!.rgb!);
@@ -172,7 +341,7 @@ describe("harder 0.3.0 corpus design", () => {
       const minimum = (s.design.reference as Record<string, number>).minimumDistractorDegrees!;
       expect(ordered[0]).toBeLessThanOrEqual(1);
       expect(ordered[1]! - ordered[0]!).toBeGreaterThanOrEqual(2.5);
-      expect(Math.abs(ordered[1]! - minimum)).toBeLessThanOrEqual(Math.max(2.5, 0.35 * minimum));
+      expect(Math.abs(ordered[1]! - minimum)).toBeLessThanOrEqual(Math.max(2.5, 0.25 * minimum));
     }
   });
 });

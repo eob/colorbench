@@ -39,7 +39,8 @@ def manifest(tmp_path):
     item = dict(taskId="fixture-1", family="matching", groupId="fixture", imageFilename="sample.png",
                 imageSha256=hashlib.sha256((tmp_path / "sample.png").read_bytes()).hexdigest(),
                 groundTruth={"choice": "A"}, prompt=get_prompt("matching"),
-                design={"axis": "hue", "difficulty": "wide", "sourceRgb": [192, 64, 80]},
+                design={"axis": "lightness", "difficulty": "wide", "sourceRgb": [192, 64, 80],
+                        "intendedSeparation": 0.0020769128407567283},
                 rendered=dict(width=800, height=640, browserVersion="145.0", platform="linux", colorSpace="srgb",
                               viewport=dict(width=800, height=640, deviceScaleFactor=1), regions=regions,
                               font=dict(path="fonts/DejaVuSans.ttf", sha256=hashlib.sha256(font.read_bytes()).hexdigest(),
@@ -182,8 +183,8 @@ def test_context_checks_interior_match_and_surround_probes(tmp_path):
     regions = [dict(role="target", id="R", x=358, y=140, width=84, height=84, rgb=target)]
     regions += [dict(role="option", id=label, x=x + 12, y=y + 12, width=84, height=84, rgb=fills[label])
                 for label, (x, y) in boxes.items()]
-    design = {"axis": "test", "difficulty": "mid", "intendedSeparation": 0, "intendedHue": 25,
-              "sourceRgb": target, "surround": surround,
+    design = {"axis": "lightness", "difficulty": "mid", "intendedSeparation": 0.006257038803287318,
+              "intendedHue": 25, "sourceRgb": target, "surround": surround,
               "reference": {"kind": "surround-shift", "neutralSurround": [238, 238, 238]}}
     _paint(builder, tmp_path, "ctx.png", "context", paint, regions, {"choice": "B"},
            get_prompt("context"), design)
@@ -210,8 +211,9 @@ def test_smallmatch_accepts_dot_and_frame_layouts(tmp_path):
            [dict(role="option", id=label, x=dot_x[label], y=392, width=20, height=20, rgb=rgb)
             for label, rgb in dots.items()],
            {"choice": "B"}, get_prompt("smallmatch"),
-           {"axis": "test", "difficulty": "mid", "layout": "dot", "intendedSeparation": 0,
-            "sourceRgb": target, "reference": {"kind": "small-region", "neutralSurround": [238, 238, 238]}})
+           {"axis": "lightness", "difficulty": "mid", "layout": "dot",
+            "intendedSeparation": 0.006257038803287318, "sourceRgb": target,
+            "reference": {"kind": "small-region", "neutralSurround": [238, 238, 238]}})
 
     def frame_paint(draw):
         _flat(draw, 358, 140, 84, 84, [238, 238, 238])
@@ -312,6 +314,60 @@ def test_complete_counts_and_crossing_rules_pin_the_248_question_release():
     assert module.check_crossing(items[:-1]) != []
     broken = [dict(item, design={**item["design"], "intendedSeparation": 0.5}) for item in items[:1]] + items[1:]
     assert module.check_crossing(broken) != []
+
+
+def test_design_direction_and_layout_are_whitelisted_per_family(tmp_path):
+    builder = []
+    rgb = [150, 90, 90]
+    _paint(builder, tmp_path, "m.png", "matching",
+           lambda draw: (_flat(draw, 358, 140, 84, 84, rgb), _flat(draw, 96, 360, 84, 84, rgb),
+                         _flat(draw, 270, 360, 84, 84, [1, 2, 3]), _flat(draw, 444, 360, 84, 84, [4, 5, 6]),
+                         _flat(draw, 618, 360, 84, 84, [7, 8, 9])),
+           [dict(role="target", id="R", x=358, y=140, width=84, height=84, rgb=rgb)] +
+           [dict(role="option", id=label, x=x, y=360, width=84, height=84, rgb=color)
+            for label, x, color in zip("ABCD", [96, 270, 444, 618],
+                                       [rgb, [1, 2, 3], [4, 5, 6], [7, 8, 9]])],
+           {"choice": "A"}, get_prompt("matching"),
+           {"axis": "test", "difficulty": "wide", "direction": "leak-split", "intendedSeparation": 0})
+    report = gate().validate_dataset(_write_manifest(tmp_path, builder), require_complete=False)
+    assert not report["valid"]
+    assert any("direction" in error and "matching" in error for error in report["errors"])
+
+
+def test_samediff_axis_is_validated_on_same_and_different_pairs(tmp_path):
+    from baseline.protocol import get_prompt
+    builder = []
+    rgb = [150, 90, 90]
+    _paint(builder, tmp_path, "same.png", "samediff",
+           lambda draw: (_flat(draw, 220, 330, 84, 84, rgb), _flat(draw, 496, 330, 84, 84, rgb)),
+           [dict(role="option", id="A", x=220, y=330, width=84, height=84, rgb=rgb),
+            dict(role="option", id="B", x=496, y=330, width=84, height=84, rgb=rgb)],
+           {"choice": "A"}, get_prompt("samediff", "sameA"),
+           {"axis": "nonsense-axis", "difficulty": "same", "direction": "sameA", "same": True,
+            "intendedSeparation": 0})
+    report = gate().validate_dataset(_write_manifest(tmp_path, builder), require_complete=False)
+    assert not report["valid"]
+    assert any("axis" in error for error in report["errors"])
+
+
+def test_exact_match_families_verify_decoded_nearest_gaps(tmp_path):
+    builder = []
+    target = [107, 152, 158]
+    near = [107, 152, 161]
+    _paint(builder, tmp_path, "gap.png", "matching",
+           lambda draw: (_flat(draw, 358, 140, 84, 84, target), _flat(draw, 96, 360, 84, 84, target),
+                         _flat(draw, 270, 360, 84, 84, near), _flat(draw, 444, 360, 84, 84, [4, 5, 6]),
+                         _flat(draw, 618, 360, 84, 84, [7, 8, 9])),
+           [dict(role="target", id="R", x=358, y=140, width=84, height=84, rgb=target)] +
+           [dict(role="option", id=label, x=x, y=360, width=84, height=84, rgb=color)
+            for label, x, color in zip("ABCD", [96, 270, 444, 618],
+                                       [target, near, [4, 5, 6], [7, 8, 9]])],
+           {"choice": "A"}, get_prompt("matching"),
+           {"axis": "hue", "difficulty": "narrow", "intendedSeparation": 8,
+            "intendedTargetOklch": {"l": 0.65, "c": 0.05, "h": 205}})
+    report = gate().validate_dataset(_write_manifest(tmp_path, builder), require_complete=False)
+    assert not report["valid"]
+    assert any("decoded separation" in error for error in report["errors"])
 
 
 def test_lightness_decoded_gap_must_match_the_recorded_separation(tmp_path):

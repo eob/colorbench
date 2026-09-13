@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 
 from baseline.evaluator import GRADING_VERSION, cohort_fingerprint, evaluation_protocol_fingerprint
 
-from baseline.protocol import FAMILIES
+from baseline.protocol import FAMILIES, NUMERIC_FAMILIES, NUMERIC_SCORING
 from baseline.statistics import metrics
 
 def scorecard_tasks(card: dict, *, dataset_fingerprint: str | None = None, complete: bool = False) -> list[dict]:
@@ -42,7 +42,25 @@ def scorecard_tasks(card: dict, *, dataset_fingerprint: str | None = None, compl
             raise ValueError("Infrastructure failures are not completed measurements")
         if not finite_nonnegative(task.get("score")) or task["score"] > 100:
             raise ValueError("Invalid observation score")
-    if card.get("families") != metrics(tasks):
+        if task["family"] in NUMERIC_FAMILIES:
+            if not finite_nonnegative(task.get("tight_score")) or task["tight_score"] > 100:
+                raise ValueError("Invalid tight observation score")
+            bands = task.get("within_bands")
+            if task["valid"]:
+                if (not isinstance(bands, dict) or set(bands) != {str(band) for band in NUMERIC_SCORING["exact_bands"]}
+                        or not all(type(hit) is bool for hit in bands.values())):
+                    raise ValueError("Malformed band flags")
+            elif bands is not None:
+                raise ValueError("Malformed band flags")
+            if task.get("delta_e_ok") is not None and not finite_nonnegative(task["delta_e_ok"]):
+                raise ValueError("Invalid observation distance")
+        elif task.get("tight_score") is not None or task.get("within_bands") is not None:
+            raise ValueError("Choice tasks carry no tight metrics")
+    try:
+        recomputed = metrics(tasks)
+    except KeyError as error:
+        raise ValueError(f"Task rows are missing grade fields: {error}") from error
+    if card.get("families") != recomputed:
         raise ValueError("Stored family metrics disagree with task rows")
     return tasks
 
@@ -99,7 +117,7 @@ def validate_task_result(task: dict, item: dict, model: dict) -> None:
     if parsed is None and not invalid:
         raise ValueError("Malformed raw prediction was not graded invalid")
     flags = grade_prediction(item["family"], parsed, item["groundTruth"])
-    if any(type(task.get(key)) is not type(value) or task[key] != value for key, value in flags.items()):
+    if any(key not in task or type(task.get(key)) is not type(value) or task[key] != value for key, value in flags.items()):
         raise ValueError("Task grades disagree with raw prediction replay")
     if task.get("prediction") != (parsed or {}):
         raise ValueError("Stored prediction disagrees with raw prediction")

@@ -1,4 +1,4 @@
-# plan-02: Harder color perception tasks (release 0.3.0)
+# plan-02: Harder color perception tasks (release 0.3.1)
 
 - **Status:** In progress
 - **Date:** 2026-09-13
@@ -21,8 +21,11 @@ confounded with answer position (wide→A/C, narrow→B/D).
 
 ## Frozen corpus design (chosen before any new model results)
 
-Release 0.3.0 is a new 248-question corpus. Scores never transfer across
-releases. All construction is deterministic; no RNG anywhere.
+Release 0.3.1 is a new 248-question corpus. Scores never transfer across
+releases. All construction is deterministic; no RNG anywhere. The 0.3.0
+corpus below was amended by the pre-run adversarial review (hue assignment,
+rank rotation, samediff layout, gray checkerboard, hue offsets, gradient
+cross); every amendment predates any model result.
 
 | Family | n | Labels | Construction |
 | --- | --- | --- | --- |
@@ -45,17 +48,29 @@ Total 248 questions; 216 unique images; 3224 responses at 13 models.
 - matching/binding chroma ΔC: 0.025, 0.012, 0.007, 0.004 (base C 0.05)
 - matching/binding hue ΔH: 35°, 15°, 8°, 4° (hue axis base C resolved
   deterministically from [0.05, 0.07, 0.09, 0.11], first all-distinct wins)
-- lightness pairs ΔL: 0.10, 0.05, 0.02, 0.01 centered at 0.62; items alternate
-  achromatic (C 0) and chromatic (C 0.06)
+- lightness pairs ΔL: 0.10, 0.05, 0.02, 0.01 centered at 0.62; gray vs
+  chromatic (C 0.06) follows a `(level+direction+position)%2` checkerboard
+  (one gray + one chromatic per cell, 4/4 per position)
 - chroma pairs ΔC: 0.06, 0.03, 0.015, 0.008 centered at C 0.055, L 0.65
 - hue minimum distractor distance: 70°, 30°, 12°, 6°; distractors at
-  d, d+120, d+240; fixed vs varying lightness/chroma alternates by answer
-  position parity (2 fixed + 2 varying per level)
+  offsets `[sep, 150, 250]` (exact minimum at every level); fixed vs
+  varying follows a `(level+position)%2` checkerboard (2/2 per level and
+  per position); varying jitter rotates `(j+2*pos+level)%4`
 - samediff different-trials: ΔL 0.015 (×3), ΔC 0.008 (×3), ΔH 6° at C 0.09
-  (×2); darker/less patch left in half the different-trials
+  (×2); same hue and direction sequences in both blocks (each hue one A
+  and one B); darker/less patch left follows `(i//2)%2`, decoupled from
+  the answer
 - context interiors: axis cycles lightness (Δ0.04), chroma (Δ0.012), hue
-  (Δ15°); distractors at −1/+1/+2 Δ as in matching
-- smallmatch: axis cycles lightness (Δ0.03), chroma (Δ0.010), hue (Δ10°)
+  (Δ15°); distractor sets rotate rank-2 `{−1,+1,+2}` / rank-3
+  `{−2,−1,+1}` by `(hueIndex+position)%2`
+- smallmatch: axis cycles lightness (Δ0.03), chroma (Δ0.010), hue (Δ10°);
+  rank sets rotate by `(block+position)%2`
+- matching/binding distractor sets rotate rank-2/rank-3 by
+  `(cell+position)%2` (2/2 per cell, 6/6 per position); base hues follow
+  `(cell+position)%8` (every position sees all eight hues)
+- gradient direction fully crossed with position (forward items 01–04,
+  reverse 05–08); the 0.2.0 direction-parity confound is removed, not
+  preserved
 
 ### Frozen context surrounds (verified in-gamut 2026-09-13, pre-model)
 
@@ -139,12 +154,92 @@ smallmatch `Which small swatch matches R?`.
 
 ## Explicit non-goals
 
-- Gradient hardening (kept as the 0.2.0 continuity anchor).
+- Gradient stop-hardening (kept near the 0.2.0 stimuli, but direction is
+  now fully crossed with position — the continuity anchor was dropped when
+  review found its direction-parity leak).
 - Human agreement measurement (still `not_performed`; small-separation hue
   items especially need it before any threshold claim).
 - Website import (external repo; in-repo deliverables are the sealed run,
   structured export, analysis JSON, and results doc).
 - Any change to frozen 0.2.0/1.x artifacts, model catalog, or pricing.
+
+## Adversarial review (2026-09-13, pre-paid-run)
+
+Three independent read-only reviewers audited the branch at `405f672`
+against the frozen 0.3.0 bytes. Every blocker below was re-verified by me
+with independent tabulations before fixing.
+
+**Stimulus (4 blockers, 3 majors, 8 minors):**
+
+1. Blocker, confirmed: `(3n+1)%8` stride aliases position — each base hue
+   lands at exactly one answer position (6/6) in matching/binding, 2/2 in
+   smallmatch/hue. My "position cannot determine hue" comment was wrong:
+   `n ≡ 3(h−1) (mod 8)` fixes `n mod 4`. Fix: 2-D hue assignment.
+2. Blocker, confirmed: `[-1,+1,+2]` distractors put the target at rank 2/4
+   on every trial (16/16 lightness) — "pick second-highest" scores 100%
+   without R. Fix: rotate rank-2 `{-1,+1,+2}` / rank-3 `{-2,-1,+1}` sets,
+   crossed with position. Rank-only knowledge then caps at 50%, and any
+   correct answer still requires reference comparison or guessing.
+3. Blocker, confirmed: samediff answer redundant with base-hue parity
+   (16/16) and with signed left−right gap in different-trials (8/8). Fix:
+   identical hue and direction sequences in both blocks (each hue gets one
+   A and one B); lo-left decoupled via `(i//2)%2`.
+4. Blocker, confirmed: lightness gray/chromatic variant predicts the answer
+   (gray→A 8/8). Fix: `(level+dirIdx+pos)%2` checkerboard, aliasing only
+   the forced 3-way interaction.
+5. Major, confirmed: hue wide-level offsets `[d,d+120,d+240]` wrap at d=70
+   (actual minimum ~50°). Fix: uniform offsets `[sep,150,250]`; tighten
+   validator hue tolerance to `max(2.5°, 0.25×intended)`.
+6. Major, confirmed: hue varying ⟺ B/D plus L/C-extremum keying. Fix:
+   `(level+pos)%2` checkerboard and `(j+2*pos+level)%4` jitter rotation
+   (the reviewer's `(j+pos+level)` would still key correct-L rank to
+   varying-ness; the `2*pos` term spreads all four L-ranks across the
+   varying cells, each twice).
+7. Major, confirmed: gradient direction ⟺ position parity (inherited 0.2.0
+   confound). Fix: rebuild gradient with direction × position fully
+   crossed instead of documenting it — the continuity anchor is not worth
+   a known leak, and cross-release comparisons are invalid anyway.
+8. Minor: context/smallmatch axis beats are already optimal given cell
+   counts (`k%3 ≡ (block+pos)%3`); no change.
+9. Minor: ordering-hue coupling — fixed by the 2-D hue assignment.
+10. Minor: filenames/task IDs encode answers (harness-internal; providers
+    send bytes+prompt only, pinned by test). Noted for blind releases.
+11. Minor: matching/binding pairing halves effective N for position
+    inference — will state in analysis.
+12. Minor: frame ring color never asserted vs decoded pixels — adding a
+    browser ring-pixel test.
+13–14. Minors: surround-induction and near-hue threshold caveats — already
+    gated on unmeasured human agreement; holding the line in write-ups.
+
+**Grader (1 major, 5 minors):** masked-group bypass via unconstrained
+direction/layout (fix: per-family whitelist); scorecard tight-metric
+range checks; two KeyError-vs-ValueError clean rejections; samediff
+same-branch axis validation; separation-tolerance looseness accepted as
+quantization backstop (TS construction tests pin gaps tightly).
+
+**Release (2 majors, 6 minors):** matching-42/binding-42 hue-8 pair
+decodes a 4.99° nearest gap (fix: decoded-gap fidelity checks for
+exact-match families + gap-aware resolver, riding the rebuild);
+"nine-family" string in finalize.py (fix: count-agnostic wording);
+freeze-commit mixing (committed note; 0.3.1 freeze will be pure);
+unpinned mock coverage (adding FAMILIES-parametrized test);
+tests/evidence pointer; budget-basis + output-cap watch note;
+GRADING_VERSION "2" spans both releases (documented, not churned).
+
+**Rebuild decision:** blockers 1–4 require new pixels, so the corpus is
+rebuilt and refrozen as **0.3.1** (0.3.0 was never measured or published;
+its descriptor stays in history). No model results existed before any fix,
+so all amended levels remain pre-registered. Findings 5–7 and every minor
+fix ride the same rebuild.
+
+## Provenance note
+
+The dataset-freeze commit `9885454` also carries the staged deletion of
+`src/specimens.test.ts` (41 lines), whose 72-question assertions were
+superseded by `src/harder-design.test.ts`. The release gate verifies only the
+manifest bytes and the `dataset/colorbench-v0.3` census, so the extra path
+does not affect release identity; `validate:release` passes. Recorded here so
+the commit's mixed content is not mistaken for a data change.
 
 ## Implementation checklist
 
@@ -169,6 +264,12 @@ constant-gray 0.3.0 evidence, docs (methodology, README), results doc.
 | Visual review (rendered PNGs) | branch head | context, smallmatch dot+frame, samediff inspected; frame footer fixed |
 | `bun run validate:release` (0.3.0) | `9885454` + code | valid, 248 tasks |
 | `bun run benchmark:mock` (0.3.0 smoke) | branch head | completes; new metric fields flow through scorecards |
+| Adversarial review (3 agents) | `405f672` | 4 blockers + 4 majors + 19 minors, all confirmed empirically |
+| `bun run test` (0.3.1 rebuild) | branch head | 244 pytest; 29 bun / 1413 assertions; typecheck clean |
+| `bun run render` + `validate:candidate` (0.3.1) | branch head | 248/216; gate valid, zero errors |
+| Frozen-byte re-audit (0.3.1) | `96ee427` | hue×pos 0 leaks; ranks 24/24, 8/8, 4/4; samediff 8/8; gray 4/4/4/4; hue-min ±3°; gradient 8/8; gaps in tolerance |
+| `bun run validate:release` (0.3.1) | `96ee427` + code | valid, 248 tasks |
+| `bun run benchmark:mock` (0.3.1 smoke) | branch head | completes |
 
 ## Red evidence
 
@@ -196,6 +297,13 @@ samediff`, `ValueError: Unknown task prompt: samediff-sameA`, `KeyError:
 'tight_score'`, `AttributeError: module 'baseline.validate_dataset' has no
 attribute 'COMPLETE_FAMILY_COUNTS'`. Each fails for absence of the new
 surface, not for fixture syntax.
+
+Rebuild Red (adversarial findings): 8/8 new TS confound audits fail
+(hue×position, rank rotation, samediff hue/gradient, gray checkerboard,
+hue offsets, varying checkerboard, gradient cross, exact-match gaps) while
+all 8 prior design tests stay green; 5/5 new Python gate tests fail
+(direction/layout whitelist, samediff axis, exact-match gaps, scorecard
+tight checks, replay KeyError). The 12 mock-family pins pass unmodified.
 
 TypeScript corpus surface, 13 failed / 0 passed after de-vacuuming two
 passes (empty families trivially balanced; pair layout accidentally fits

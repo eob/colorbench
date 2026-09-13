@@ -112,3 +112,58 @@ def test_hsl_extreme_targets_suppress_undefined_component_errors(color):
     grade = grade_prediction('hsl', {'h': 300., 's': 80., 'l': 50.}, {'rgb': color})
     assert grade['component_errors']['h'] is None and grade['component_errors']['s'] is None
     assert grade['component_errors']['l'] == 50 and grade['score'] < 100
+
+
+def _mock_card(family):
+    from dataclasses import asdict
+    from baseline.evaluator import BaselineEvaluator, cohort_fingerprint, evaluation_protocol_fingerprint, GRADING_VERSION
+    from baseline.protocol import CHOICE_FAMILIES
+    from baseline.statistics import metrics
+    evaluator = BaselineEvaluator(mock=True)
+    truth = {'choice': 'A'} if family in CHOICE_FAMILIES else {'rgb': [128, 128, 128]}
+    item = dict(taskId='fixture', family=family, groupId='fixture', imagePath='unused', prompt='frozen', groundTruth=truth)
+    task = asdict(evaluator._eval_single_task(item))
+    return dict(tasks=[task], total_tasks=1, expected_task_count=1, grading_version=GRADING_VERSION,
+                evaluation_protocol=evaluation_protocol_fingerprint(), dataset_fingerprint='fixture',
+                cohort_sha256=cohort_fingerprint(['fixture']), mock=True, status='complete',
+                families=metrics([task])), task, item
+
+
+def test_scorecard_integrity_rejects_forged_or_missing_tight_metrics():
+    import copy
+    from baseline.reporting import scorecard_tasks
+    card, _, _ = _mock_card('rgb')
+    assert scorecard_tasks(copy.deepcopy(card)) is not None
+    forged = copy.deepcopy(card)
+    forged['tasks'][0]['tight_score'] = 999.0
+    with pytest.raises(ValueError):
+        scorecard_tasks(forged)
+    missing = copy.deepcopy(card)
+    del missing['tasks'][0]['within_bands']
+    with pytest.raises(ValueError):
+        scorecard_tasks(missing)
+
+
+def test_task_replay_rejects_missing_grade_keys_cleanly():
+    import copy
+    from baseline.reporting import validate_task_result
+    _, task, item = _mock_card('rgb')
+    model = {'model': 'gemini-3.5-flash-lite', 'provider': 'google'}
+    stamped = dict(copy.deepcopy(task), recorded_at='2026-09-13T00:00:00+00:00',
+                   latency_sec=0.1, cost_usd=0.0, input_tokens=1, output_tokens=1,
+                   request_attempts=1, unmetered_attempts=0)
+    validate_task_result(stamped, item, model)
+    del stamped['correct']
+    with pytest.raises(ValueError):
+        validate_task_result(stamped, item, model)
+
+
+@pytest.mark.parametrize('family', FAMILIES)
+def test_mock_predictions_parse_and_grade_in_every_family(family):
+    from baseline.evaluator import BaselineEvaluator, grade_prediction
+    from baseline.protocol import CHOICE_FAMILIES, parse_prediction
+    evaluator = BaselineEvaluator(mock=True)
+    response = evaluator.predict_image('unused.png', 'frozen', family)
+    parsed = parse_prediction(response.raw_text, family)
+    truth = {'choice': 'A'} if family in CHOICE_FAMILIES else {'rgb': [128, 128, 128]}
+    assert grade_prediction(family, parsed, truth)['valid']
