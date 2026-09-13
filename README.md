@@ -1,5 +1,9 @@
 # ColorBench
 
+Perception redesign is being planned in [the ColorBench question-design plan](tickets/plan-01-color-perception.md).
+The 100-image prototype described below includes semantic judgments and visible
+answer labels; its results are not valid evidence for the planned perception benchmark.
+
 **ColorBench** is a vision-language benchmark evaluating multimodal AI models on semantic color perception, surface roles, WCAG contrast discrimination, and gradient fill understanding in software screenshots.
 
 It forms the fourth foundational benchmark in Ted Benson's design perception suite:
