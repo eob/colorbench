@@ -1,0 +1,164 @@
+{
+  "recordedAt": "2026-09-13T02:25:08.360982+00:00",
+  "baseCommit": "0501e300c8f69a7ddef459dcdff8899afd74e1be",
+  "scope": "Renderer source and its tests on the 0.2.0 pilot branch; candidate still awaits release freeze and human review.",
+  "gates": [
+    {
+      "command": "bun test src",
+      "exitCode": 0,
+      "passedTests": 10,
+      "failedTests": 0,
+      "assertions": 386
+    },
+    {
+      "command": "bunx tsc --noEmit",
+      "exitCode": 0
+    },
+    {
+      "command": "biome format --indent-style=space --indent-width=2 --line-width=100 src/*.ts",
+      "biomeVersion": "1.9.4",
+      "exitCode": 0,
+      "filesChecked": 10,
+      "filesChanged": 0
+    },
+    {
+      "command": "bun run src/render.ts",
+      "exitCode": 0,
+      "questions": 72,
+      "uniqueImages": 56,
+      "repeatedRenders": 3,
+      "filesComparedPerRender": 60,
+      "changedFiles": []
+    },
+    {
+      "command": ".venv/bin/python -m baseline.validate_dataset dataset/candidate-rendered/manifest.json",
+      "exitCode": 0,
+      "result": {
+        "valid": true,
+        "task_count": 72,
+        "family_counts": {
+          "binding": 8,
+          "chroma": 8,
+          "gradient": 8,
+          "hsl": 8,
+          "hue": 8,
+          "lightness": 8,
+          "matching": 8,
+          "oklch": 8,
+          "rgb": 8
+        },
+        "errors": []
+      }
+    }
+  ],
+  "manifestSha256": "073c8ed9e75453db56828867b4610734869c4a62d1b7907687316947993bb3e8",
+  "catalogSha256": "d40f94ebfec3f928512f4bf5933875edf08604e0efb67c116e07c5dff95cf368",
+  "fontSha256": "abdc775b21b1bc470d50c97e790d276f2054b7504e56e5bd3e64f48d68582322",
+  "artifactSha256": {
+    "binding-01.png": "417d8646929923246bab25f24212c005cb9bfd5a7ad24b19c696e5c27ebc3626",
+    "binding-02.png": "82b1959cc1996346d7300376bd81bb1224fb7ea9f54069e1c402aa2614a0228b",
+    "binding-03.png": "fc7366599e63cf8234ed49160d318f3ac931643e242978a0b82524529f90aeab",
+    "binding-04.png": "86f81768187ec2eb2e41099827bf55e9895b83670302507978908503e8dbb112",
+    "binding-05.png": "9a5f5fecf773253320d34fc41f37da7787b93af70eace997aae0fd3788577eeb",
+    "binding-06.png": "ab79100617bfd11e3e3396e3b5142510ea425f8a6175a243a466561d3839508a",
+    "binding-07.png": "ecfb01ccb79a31fec2f60316e7a63ca2cbcffbc7485836a37b07f6094af0df15",
+    "binding-08.png": "d3286bb1b9f25961c94ef5ddb0cc81164c22f1b5e1076c069bc769362c7eac96",
+    "catalog.json": "d40f94ebfec3f928512f4bf5933875edf08604e0efb67c116e07c5dff95cf368",
+    "chroma-01.png": "3546f0e8da343241fe669db86d1fc6b7e1a65b026c2cbac49fbe5d7123cb4443",
+    "chroma-02.png": "b130ef6416c566876ed585efcd37273a5fbd213345f7ca2cdfd7e792d07d6a1b",
+    "chroma-03.png": "e254e28f54c7e120411676134b438b736267823052111ee44992d2138cb1580f",
+    "chroma-04.png": "a33c0f26477147929763b53b7e1ab2ffcca134f1d8a88d93e0b80a9bbc78cfcf",
+    "chroma-05.png": "ddfb49af554d67422f017ee26a6a2d526ee019efba3f22607a4f4a0c553203c0",
+    "chroma-06.png": "18f0ee2f6f0f3ea51c0de6dafed31d82df6fa556763019e4c1602c2cf814c2d9",
+    "chroma-07.png": "ceb42d5d2af1dae927b04a80fa22ed69ec5c02599304eb446be0c6c59727ef0f",
+    "chroma-08.png": "acafaacac124b265c2a6d515fec599c606efd680cafa088f81dd452a50d57724",
+    "fonts/DejaVuSans.LICENSE": "e180b3d65bf650dffffd71dd21b6180767b469a18dd87e1d8552be69bb9ecdf0",
+    "fonts/DejaVuSans.ttf": "abdc775b21b1bc470d50c97e790d276f2054b7504e56e5bd3e64f48d68582322",
+    "gradient-01.png": "d04a950d6a6703fed82a22c561cae29c7df46edf3ca01e58168595d3232caf93",
+    "gradient-02.png": "5ba3ac93c1dcd2480e11358fc13a7c02a2f168beebc0f3f72300c534579ce97c",
+    "gradient-03.png": "60a7752de3ae05e50ea4cb6d5d21988c1876e95305d25022b560b11f21ec120b",
+    "gradient-04.png": "2c546b5c15e077cf1f6de08792fb0c2413c88360b6ad9c5db67dedc19b6a8076",
+    "gradient-05.png": "5112152e63cf70f73dbfea656a119b6aa6916bf61226ace037d704dca93d92f9",
+    "gradient-06.png": "b095376af9ab491f64d26fa8ad5c851f31e8d848f5e4542c28a4677a92dc14d7",
+    "gradient-07.png": "4938941b47ee35217d08e4704f4b600bed5d4127f6f72ffedffdd9f16b6a468d",
+    "gradient-08.png": "6c899b7508d87db5d6e5caca06abbd92edd92af2e73193fb5e826e2ea171f4d6",
+    "hue-01.png": "f95a7ab2a33d6abef4a706ad20a0aebad9dfbd385c05affbc7703a6ab64e85ea",
+    "hue-02.png": "ebb5787927069f3d93333af2212ef5519b86d7452dc2397aefa11aa968834ed1",
+    "hue-03.png": "3fbdae74a2572c1f5918d541ea4fd1bd3a76e7d53af6fac474417478fda7de4b",
+    "hue-04.png": "20900885626f2a29c271246d1b133ae2ff2987cbae9cdec8476f2b3eb26d9d05",
+    "hue-05.png": "6e43b86cf8e8b7e10cfcead97873619ebab3ad8e0bb873f7159bb40a10fee5fc",
+    "hue-06.png": "3f84234a992016dc3a5d9493f3013697b86801b5b45e974ed164eace98256401",
+    "hue-07.png": "6a58ccfc40709d72a5275e7e2137979989484e7b093a70db70205c9b66811a81",
+    "hue-08.png": "33390307ecb1d16153c3b2e0050a859bd1633763b4b6e5754f7c3d30a0d6fdf1",
+    "lightness-01.png": "2283c7bc8902107aef72ba263f5f430c274e399c591ddb3c7db36209865998b4",
+    "lightness-02.png": "2014f4d28aebc3969452183b14f1cc8b71951a85aa8e9c586e71cfac39d6d764",
+    "lightness-03.png": "54fb900fe4f7353eb7072ffcf7cfb8e748fe4f0133850f84719abba744b2b7b3",
+    "lightness-04.png": "160231dcdc730a90b8cf3523a806be6992b651b4d10e324df84b65a5e64f5a81",
+    "lightness-05.png": "5eeaa11863b77df8e56a2f6393b6c321233f096a983e64ccf10d5c7ab1620b22",
+    "lightness-06.png": "06e835f2994312c7a7219a5f8f472a9335433c577748912da2321706ac3f7791",
+    "lightness-07.png": "55d488473a2ec0ffecf348393d5cb4a8c052d2309520b65175160c9fb8a57d1d",
+    "lightness-08.png": "b5c48cb71bde055112bf163fd7142e337f0dbf9f3eb57db53bae973b2dcefd5d",
+    "manifest.json": "073c8ed9e75453db56828867b4610734869c4a62d1b7907687316947993bb3e8",
+    "matching-01.png": "806fb947615eb0a562fe0c602736b32b49434b3d7f20c9a868bc6da8bbdf0564",
+    "matching-02.png": "ee4f62a7f50176b741c2e909b1867635ae252f210dd71f50368608a7fb7dc9a4",
+    "matching-03.png": "79aa7ab1c130c4070d3d5d57f5ada2c677a8b27c13b90e715b03bdf96500982e",
+    "matching-04.png": "7bdc00669d3d65048b8510b153fcaea08a146aefc65cb33f63359f64574dce4c",
+    "matching-05.png": "72c64804fcb5282e5ea828f6425a3bb0982d0bcd5cccaea0fe1ff16cf665853d",
+    "matching-06.png": "56d260e8790f2395ec25ded4580dba32b30a6d55ea76df126a4b3050822c8374",
+    "matching-07.png": "00624b04041e3c292b6afad11237034280cac2555dfde3e94cf0d921e481c126",
+    "matching-08.png": "61ce0149fb5f9a2794920afef003e26e4d1444723dc96d8f1f909fc909914a31",
+    "numeric-01.png": "b368c5062523baa1d742b22e9ad1a04664210fc2974c214ac7235127fa201ad4",
+    "numeric-02.png": "b70e79c86cfdfba12becb8cf4e734e23c6228fe9c57bb8978d02d0be904ed084",
+    "numeric-03.png": "93cf0480171265f4ab7aaa4261f52e8f17562140a485f4eded81256088360b26",
+    "numeric-04.png": "954785045b2443bb0bb057313c34212711b4410a4e51d2c99cafce2db33c40f0",
+    "numeric-05.png": "5bae8234424f935cb236b7db44d5794471f07514aedbd4c2ece03be99f27ce61",
+    "numeric-06.png": "3de3d66ae6360dc0806fd29b763d4c448803dc8fa5207405032bdb9e30f4d05c",
+    "numeric-07.png": "d316c4c5f9c4e4d46dfbe76228d4399cdfa0186f45305be38a6e234b6c606770",
+    "numeric-08.png": "f5ebeb60954b76f8f2f0f465c71c4d4dd4503b9b49184ddba6aef9ccbe299a86"
+  },
+  "sourceSha256": {
+    "src/assets/DejaVuSans.LICENSE": "e180b3d65bf650dffffd71dd21b6180767b469a18dd87e1d8552be69bb9ecdf0",
+    "src/assets/DejaVuSans.ttf": "abdc775b21b1bc470d50c97e790d276f2054b7504e56e5bd3e64f48d68582322",
+    "src/colors.test.ts": "b8caa1fc03c480951b0754073c10a1358d1ccc85fc30bf5318c0695ede86e914",
+    "src/colors.ts": "2e5e19e94189ba106db50f29c3354aca288830ad7120416223e404cbab00b371",
+    "src/output.test.ts": "49be617bd3288f7c42217b53e9ab80f5e617689cf3f45ee73e1e0661c10c0da8",
+    "src/output.ts": "e10ba9319079484cecef793ea6e7a7140a9874398c54946c1a048c9447fbd89b",
+    "src/prompts.ts": "5ace7509c9866e406ab05c9e8485c64cdd8a4ba31d503bda9a0d82db98f4faf9",
+    "src/render.test.ts": "129b51ea66689f9c3d6b9c02eb6dd44d6b14537d536a13b9c1e4c1629c37fce4",
+    "src/render.ts": "c8814671ddfa5695c11e35a35961da40bcd2f0213085aa14d243123e59d720c5",
+    "src/specimens.test.ts": "5f1aba91fe82b3a6b49e1f4b5c40da0a2c681f3ea660a7e9659a079e45737ccf",
+    "src/specimens.ts": "41d041874b0525894bb94d1a0a8e998feedab899548c006a86935374363ac22d",
+    "src/types.ts": "25a11f78fc014a7530156cf103bbd5f2e4097837b4599172e880d9f6de8d4d1c"
+  },
+  "reversionProofs": [
+    {
+      "log": "tests/evidence/renderer-design-reversion.log",
+      "mutation": "In an isolated temporary source tree, replace src/specimens.ts with HEAD prototype while retaining new tests.",
+      "expectedFailure": "72 expected; 100 received. Balanced choice and shared numeric groups absent."
+    },
+    {
+      "log": "tests/evidence/renderer-script-reversion.log",
+      "mutation": "In an isolated temporary source tree, remove the inline script function scope while retaining new browser tests.",
+      "expectedFailure": "Repeated page.setContent leaves a transparent canvas after duplicate lexical declaration; decoded flat pixels differ."
+    }
+  ],
+  "visualReview": {
+    "files": [
+      "matching-01.png",
+      "lightness-01.png",
+      "chroma-01.png",
+      "hue-05.png",
+      "binding-01.png",
+      "gradient-01.png",
+      "numeric-01.png"
+    ],
+    "result": "Labels, reference swatches, target and option spacing, gradient fields and numeric target are visible without clipping. Root independently reviewed representative final PNGs, including gradient-07."
+  },
+  "simplificationReview": "Removed a broad Family cast, compute and validate the target hue once before comparison, and format rewritten source/tests. All 60 candidate files remain byte-identical.",
+  "limitations": [
+    "Eight examples per family are pilot coverage, not a population sample.",
+    "Hue ordering uses OKLCH coordinates and has not been validated against human agreement.",
+    "Binding is a paired neutral UI-frame task with controlled positions; it does not establish general object-color binding.",
+    "Gradient distractors preserve the exact color histogram and include reversal and cyclic shifts; other gradient or pattern skills are unmeasured."
+  ]
+}

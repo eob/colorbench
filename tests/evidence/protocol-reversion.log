@@ -1,0 +1,136 @@
+FFFFFF                                                                   [100%]
+=================================== FAILURES ===================================
+_________ test_choice_families_use_only_arbitrary_option_ids[matching] _________
+
+family = 'matching'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'matching'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+________ test_choice_families_use_only_arbitrary_option_ids[lightness] _________
+
+family = 'lightness'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'lightness'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+__________ test_choice_families_use_only_arbitrary_option_ids[chroma] __________
+
+family = 'chroma'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'chroma'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+___________ test_choice_families_use_only_arbitrary_option_ids[hue] ____________
+
+family = 'hue'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'hue'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_________ test_choice_families_use_only_arbitrary_option_ids[binding] __________
+
+family = 'binding'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'binding'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_________ test_choice_families_use_only_arbitrary_option_ids[gradient] _________
+
+family = 'gradient'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'gradient'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[matching]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[lightness]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[chroma]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[hue]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[binding]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[gradient]
+6 failed in 0.08s

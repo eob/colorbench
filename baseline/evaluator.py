@@ -1,54 +1,131 @@
-"""Evaluation logic and scorecard generation for ColorBench."""
+"""Evaluate color perception without pooling choice and numeric reconstruction."""
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
+import hashlib
 import json
-from pathlib import Path
+import math
+from pathlib import Path, PurePosixPath
+import re
 import time
-from typing import Any, Dict, List
 
-from baseline.providers import (
-    ErrorKind,
-    PredictionClient,
-    PredictionResponse,
-    ColorPrediction,
-)
+from baseline.color_math import hsl_to_rgb, oklab_to_linear_rgb, oklch_to_oklab, rgb_to_hsl, rgb_to_oklab, rgb_to_oklch
+from baseline.protocol import CHOICE_FAMILIES, FAMILIES, NUMERIC_SCORING, get_prompt, parse_prediction, prediction_schema
+from baseline.providers import PredictionClient, PredictionResponse
+
+GRADING_VERSION = "2"
+
+
+def evaluation_protocol_fingerprint() -> str:
+    digest = hashlib.sha256(json.dumps({"grading_version": GRADING_VERSION, "numeric_scoring": NUMERIC_SCORING,
+                                      "schemas": {family: prediction_schema(family) for family in FAMILIES}}, sort_keys=True).encode())
+    for filename in ("evaluator.py", "providers.py", "protocol.py", "color_math.py", "statistics.py", "prompts.json"):
+        digest.update(Path(__file__).with_name(filename).read_bytes().replace(b"\r\n", b"\n"))
+    return digest.hexdigest()
+
+
+def cohort_fingerprint(ids: list[str]) -> str:
+    return hashlib.sha256(json.dumps(sorted(ids)).encode()).hexdigest()
 
 
 def load_manifest(manifest_path: str | Path) -> list[dict]:
-    with open(manifest_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    if isinstance(data, dict) and "tasks" in data:
-        return data["tasks"]
-    if isinstance(data, list):
-        return data
-    raise ValueError("Manifest must be a JSON object with 'tasks' or a JSON array")
+    manifest = Path(manifest_path).resolve()
+    data = json.loads(manifest.read_text())
+    if not isinstance(data, list) or not data:
+        raise ValueError("Manifest must be a nonempty array")
+    seen = set()
+    for item in data:
+        if not isinstance(item, dict) or item.get("family") not in FAMILIES:
+            raise ValueError("Manifest item has an unknown family")
+        for key in ("taskId", "groupId"):
+            if not isinstance(item.get(key), str) or not re.fullmatch(r"[a-z0-9][a-z0-9-]*", item[key]):
+                raise ValueError(f"Manifest requires an opaque {key}")
+        if item["taskId"] in seen:
+            raise ValueError("Duplicate task identity")
+        seen.add(item["taskId"])
+        filename = item.get("imageFilename")
+        if (not isinstance(filename, str) or PurePosixPath(filename).name != filename
+                or "\\" in filename or not filename.endswith(".png")):
+            raise ValueError("Images must be PNG basenames beside the manifest")
+        image = manifest.parent / filename
+        if image.is_symlink() or not image.is_file():
+            raise ValueError("Manifest image is missing or a symlink")
+        item["imagePath"] = str(image)
+        family = item["family"]
+        ground_truth = item.get("groundTruth")
+        if family in CHOICE_FAMILIES:
+            if parse_prediction(json.dumps(ground_truth), family) != ground_truth:
+                raise ValueError("Ground truth must use canonical option labels")
+        elif (not isinstance(ground_truth, dict) or set(ground_truth) != {"rgb"}
+              or not isinstance(ground_truth["rgb"], list) or len(ground_truth["rgb"]) != 3
+              or any(type(value) is not int or not 0 <= value <= 255 for value in ground_truth["rgb"])):
+            raise ValueError("Numeric ground truth requires exactly three decoded integer RGB channels")
+        if not isinstance(item.get("design"), dict):
+            raise ValueError("Missing design evidence")
+        if item.get("prompt") != get_prompt(family, item["design"].get("direction")):
+            raise ValueError("Item prompt differs from its canonical family prompt")
+    return data
+
+
+def grade_prediction(family: str, prediction: dict | None, ground_truth: dict) -> dict:
+    prediction_schema(family)
+    choice = family in CHOICE_FAMILIES
+    if prediction is None:
+        return dict(valid=False, correct=False if choice else None, score=0.0,
+                    delta_e_ok=None, component_errors=None, out_of_srgb=None)
+    prediction = parse_prediction(json.dumps(prediction, allow_nan=False), family)
+    if choice:
+        correct = prediction["choice"] == ground_truth["choice"]
+        return dict(valid=True, correct=correct, score=100.0 if correct else 0.0,
+                    delta_e_ok=None, component_errors=None, out_of_srgb=None)
+    target_rgb = ground_truth["rgb"]
+    target_lab = rgb_to_oklab(target_rgb)
+    target_lch = rgb_to_oklch(target_rgb)
+    if family == "rgb":
+        predicted_lab = rgb_to_oklab([prediction[key] for key in "rgb"])
+        components = {key: abs(prediction[key] - target) for key, target in zip("rgb", target_rgb)}
+        outside = False
+    else:
+        if family == "hsl":
+            target = rgb_to_hsl(target_rgb)
+            predicted_lab = rgb_to_oklab(hsl_to_rgb(prediction["h"], prediction["s"], prediction["l"]))
+            outside = False
+        else:
+            target = target_lch
+            predicted_lab = oklch_to_oklab(prediction["l"], prediction["c"], prediction["h"])
+            try:
+                outside = any(not -1e-7 <= channel <= 1 + 1e-7 for channel in oklab_to_linear_rgb(predicted_lab))
+            except OverflowError:
+                outside = True
+        components = {key: abs(prediction[key] - target[key]) for key in prediction}
+        components["h"] = (abs((prediction["h"] - target["h"] + 180) % 360 - 180)
+                           if target_lch["c"] >= NUMERIC_SCORING["hue_chroma_threshold"] else None)
+        if family == "hsl" and target["l"] in (0, 100):
+            components["s"] = None
+    distance = math.dist(predicted_lab, target_lab)
+    return dict(valid=True, correct=None, score=100 * (1 - min(distance / NUMERIC_SCORING["score_ceiling"], 1)),
+                delta_e_ok=distance, component_errors=components, out_of_srgb=outside)
 
 
 @dataclass
 class TaskEvaluationResult:
     task_id: str
-    semantic_role_gt: str
-    surface_role_gt: str
-    contrast_tier_gt: str
-    fill_type_gt: str
-    theme: str
+    family: str
+    group_id: str
+    ground_truth: dict
+    prompt_sha256: str
     image_path: str
     raw_prediction: str
-    predicted_semantic_role: str
-    predicted_surface_role: str
-    predicted_contrast_tier: str
-    predicted_fill_type: str
-    predicted_theme: str
-    semantic_role_correct: bool
-    surface_role_correct: bool
-    contrast_tier_correct: bool
-    fill_type_correct: bool
-    theme_correct: bool
-    all_correct: bool
-    latency_sec: float
+    prediction: dict
+    valid: bool
+    correct: bool | None
+    score: float
+    delta_e_ok: float | None
+    component_errors: dict | None
+    out_of_srgb: bool | None
+    latency_sec: float | None
     input_tokens: int | None = None
     output_tokens: int | None = None
     request_attempts: int | None = None
@@ -62,183 +139,68 @@ class TaskEvaluationResult:
 @dataclass
 class ColorBenchScorecard:
     total_tasks: int
-    overall_exact_match: float
-    semantic_role_accuracy: float
-    surface_role_accuracy: float
-    contrast_tier_accuracy: float
-    fill_type_accuracy: float
-    theme_accuracy: float
-    avg_latency_sec: float
-    accuracy_by_role: Dict[str, Dict[str, float]]
-    accuracy_by_contrast: Dict[str, Dict[str, float]]
-    accuracy_by_fill: Dict[str, Dict[str, float]]
-    accuracy_by_theme: Dict[str, Dict[str, float]]
+    expected_task_count: int
+    families: dict
+    avg_latency_sec: float | None
     model_name: str
+    provider: str
     timestamp: str
-    expected_task_count: int = 0
-    grading_version: str = "1"
-    provider: str = "google"
-    task_results: List[TaskEvaluationResult] = field(default_factory=list)
+    grading_version: str
+    evaluation_protocol: str
+    cohort_sha256: str
+    status: str
+    task_results: list[TaskEvaluationResult] = field(default_factory=list)
 
 
 class BaselineEvaluator:
-    def __init__(
-        self,
-        model_name: str = "gemini-3.5-flash",
-        mock: bool = False,
-        provider: str = "google",
-        api_key_env: str | None = None,
-        base_url: str | None = None,
-        max_output_tokens: int = 1024,
-    ):
-        self.model_name = model_name
-        self.provider = provider
-        self.mock = mock
-        self._client = None if mock else PredictionClient(
-            provider, model_name, api_key_env=api_key_env,
-            base_url=base_url, max_output_tokens=max_output_tokens,
-        )
+    def __init__(self, model_name="gemini-3.5-flash-lite", mock=False, provider="google",
+                 api_key_env=None, base_url=None, max_output_tokens=1024):
+        self.model_name, self.mock, self.provider = model_name, mock, provider
+        self._client = None if mock else PredictionClient(provider, model_name, api_key_env=api_key_env,
+                                                          base_url=base_url, max_output_tokens=max_output_tokens)
 
-    def close(self) -> None:
+    def close(self):
         if self._client is not None:
             self._client.close()
 
-    def predict_image(self, image_path: str, prompt: str) -> PredictionResponse:
+    def predict_image(self, image_path: str, prompt: str, family: str = "matching") -> PredictionResponse:
         if self.mock:
-            prediction = {
-                "semantic_role": "primary",
-                "surface_role": "brand-fill",
-                "contrast_tier": "aa-standard",
-                "fill_type": "solid",
-                "theme": "light",
-            }
+            prediction = {"choice": "A"} if family in CHOICE_FAMILIES else (
+                {"r": 128, "g": 128, "b": 128} if family == "rgb" else
+                {"h": 0., "s": 0., "l": 50.} if family == "hsl" else {"l": .5, "c": 0., "h": 0.})
             return PredictionResponse(json.dumps(prediction), prediction, input_tokens=0, output_tokens=0)
-        return self._client.predict(image_path, prompt)
+        return self._client.predict(image_path, prompt, family)
 
-    def _eval_single_task(self, item: dict, prompt_default: str) -> TaskEvaluationResult:
-        image_path = item["imagePath"]
+    def _eval_single_task(self, item: dict, prompt_default: str = "") -> TaskEvaluationResult:
         prompt = item.get("prompt", prompt_default)
-
-        start_t = time.perf_counter()
-        response = self.predict_image(image_path, prompt)
-        latency = time.perf_counter() - start_t
-        raw_pred = response.raw_text
-        parsed_pred = response.parsed if not response.error else {}
-
-        pred_role = str(parsed_pred.get("semantic_role", "")).strip().lower()
-        pred_surf = str(parsed_pred.get("surface_role", "")).strip().lower()
-        pred_contrast = str(parsed_pred.get("contrast_tier", "")).strip().lower()
-        pred_fill = str(parsed_pred.get("fill_type", "")).strip().lower()
-        pred_theme = str(parsed_pred.get("theme", "")).strip().lower()
-
-        gt = item.get("groundTruth", {})
-        gt_role = str(gt.get("semantic_role", "")).strip().lower()
-        gt_surf = str(gt.get("surface_role", "")).strip().lower()
-        gt_contrast = str(gt.get("contrast_tier", "")).strip().lower()
-        gt_fill = str(gt.get("fill_type", "")).strip().lower()
-        gt_theme = str(gt.get("theme", "light")).strip().lower()
-
-        role_correct = pred_role == gt_role
-        surf_correct = pred_surf == gt_surf
-        contrast_correct = pred_contrast == gt_contrast
-        fill_correct = pred_fill == gt_fill
-        theme_correct = pred_theme == gt_theme
-
-        all_correct = (
-            not response.error
-            and role_correct
-            and surf_correct
-            and contrast_correct
-            and fill_correct
-            and theme_correct
-        )
-
-        return TaskEvaluationResult(
-            task_id=item["taskId"],
-            semantic_role_gt=gt_role,
-            surface_role_gt=gt_surf,
-            contrast_tier_gt=gt_contrast,
-            fill_type_gt=gt_fill,
-            theme=gt_theme,
-            image_path=image_path,
-            raw_prediction=raw_pred,
-            predicted_semantic_role=pred_role,
-            predicted_surface_role=pred_surf,
-            predicted_contrast_tier=pred_contrast,
-            predicted_fill_type=pred_fill,
-            predicted_theme=pred_theme,
-            semantic_role_correct=role_correct,
-            surface_role_correct=surf_correct,
-            contrast_tier_correct=contrast_correct,
-            fill_type_correct=fill_correct,
-            theme_correct=theme_correct,
-            all_correct=all_correct,
-            latency_sec=latency,
-            input_tokens=response.input_tokens,
-            output_tokens=response.output_tokens,
-            request_attempts=response.request_attempts,
-            unmetered_attempts=response.unmetered_attempts,
-            error=response.error,
-            error_kind=response.error_kind,
-            model_name=self.model_name,
-            provider=self.provider,
-        )
+        start = time.perf_counter()
+        response = self.predict_image(item["imagePath"], prompt, item["family"])
+        latency = time.perf_counter() - start
+        parsed = None
+        if not response.error:
+            try:
+                parsed = parse_prediction(response.raw_text, item["family"])
+            except ValueError as error:
+                response.error, response.error_kind = str(error), "invalid_response"
+        return TaskEvaluationResult(task_id=item["taskId"], family=item["family"], group_id=item["groupId"],
+                                    ground_truth=item["groundTruth"], prompt_sha256=hashlib.sha256(prompt.encode()).hexdigest(),
+                                    image_path=item["imagePath"], raw_prediction=response.raw_text, prediction=parsed or {},
+                                    **grade_prediction(item["family"], parsed, item["groundTruth"]), latency_sec=latency,
+                                    input_tokens=response.input_tokens, output_tokens=response.output_tokens,
+                                    request_attempts=response.request_attempts, unmetered_attempts=response.unmetered_attempts,
+                                    error=response.error, error_kind=response.error_kind,
+                                    model_name=self.model_name, provider=self.provider)
 
     def score_results(self, results: list[TaskEvaluationResult], expected_task_count: int = 0) -> ColorBenchScorecard:
-        total = len(results)
-        denom = float(expected_task_count) if expected_task_count > 0 else float(total or 1)
-
-        exact_matches = sum(1 for r in results if r.all_correct)
-        role_matches = sum(1 for r in results if r.semantic_role_correct)
-        surf_matches = sum(1 for r in results if r.surface_role_correct)
-        contrast_matches = sum(1 for r in results if r.contrast_tier_correct)
-        fill_matches = sum(1 for r in results if r.fill_type_correct)
-        theme_matches = sum(1 for r in results if r.theme_correct)
-
-        avg_latency = (sum(r.latency_sec for r in results) / total) if total > 0 else 0.0
-
-        def build_slice(key_fn) -> Dict[str, Dict[str, float]]:
-            buckets: Dict[str, Dict[str, int]] = {}
-            for r in results:
-                k = key_fn(r)
-                if k not in buckets:
-                    buckets[k] = {"total": 0, "exact": 0, "role": 0}
-                buckets[k]["total"] += 1
-                if r.all_correct:
-                    buckets[k]["exact"] += 1
-                if r.semantic_role_correct:
-                    buckets[k]["role"] += 1
-            out = {}
-            for k, b in buckets.items():
-                tot = b["total"]
-                out[k] = {
-                    "total": tot,
-                    "exact_accuracy": round((b["exact"] / tot) * 100, 1) if tot > 0 else 0.0,
-                    "role_accuracy": round((b["role"] / tot) * 100, 1) if tot > 0 else 0.0,
-                }
-            return out
-
-        by_role = build_slice(lambda r: r.semantic_role_gt)
-        by_contrast = build_slice(lambda r: r.contrast_tier_gt)
-        by_fill = build_slice(lambda r: r.fill_type_gt)
-        by_theme = build_slice(lambda r: r.theme)
-
-        return ColorBenchScorecard(
-            total_tasks=total,
-            overall_exact_match=round((exact_matches / denom) * 100, 2),
-            semantic_role_accuracy=round((role_matches / denom) * 100, 2),
-            surface_role_accuracy=round((surf_matches / denom) * 100, 2),
-            contrast_tier_accuracy=round((contrast_matches / denom) * 100, 2),
-            fill_type_accuracy=round((fill_matches / denom) * 100, 2),
-            theme_accuracy=round((theme_matches / denom) * 100, 2),
-            avg_latency_sec=round(avg_latency, 3),
-            accuracy_by_role=by_role,
-            accuracy_by_contrast=by_contrast,
-            accuracy_by_fill=by_fill,
-            accuracy_by_theme=by_theme,
-            model_name=self.model_name,
-            timestamp=datetime.now(timezone.utc).isoformat(),
-            expected_task_count=expected_task_count or total,
-            provider=self.provider,
-            task_results=results,
-        )
+        from baseline.statistics import metrics
+        observed = [result for result in results if not result.error or result.error_kind == "invalid_response"]
+        total = len(observed)
+        expected = expected_task_count or total
+        latencies = [row.latency_sec for row in observed]
+        latency = sum(latencies) / total if total and all(value is not None for value in latencies) else None
+        return ColorBenchScorecard(total_tasks=total, expected_task_count=expected, families=metrics([asdict(row) for row in observed]),
+                                   avg_latency_sec=latency, model_name=self.model_name, provider=self.provider,
+                                   timestamp=datetime.now(timezone.utc).isoformat(), grading_version=GRADING_VERSION,
+                                   evaluation_protocol=evaluation_protocol_fingerprint(),
+                                   cohort_sha256=cohort_fingerprint([row.task_id for row in observed]),
+                                   status="complete" if total == expected else "partial", task_results=observed)

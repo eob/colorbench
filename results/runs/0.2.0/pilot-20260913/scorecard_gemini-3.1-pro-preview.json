@@ -1,0 +1,2794 @@
+{
+  "total_tasks": 72,
+  "expected_task_count": 72,
+  "families": {
+    "matching": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "lightness": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "chroma": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "hue": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "binding": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 7,
+      "accuracy": 0.875,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "A": 1,
+          "D": 1
+        }
+      }
+    },
+    "gradient": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "rgb": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 96.37808563296669,
+      "mean_delta_e_ok": 0.00724382873406664,
+      "median_delta_e_ok": 0.007974906235242614,
+      "p90_delta_e_ok": 0.013070172599774697,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "b": 2.625,
+        "g": 1.5,
+        "r": 1.75
+      },
+      "component_known_count": {
+        "b": 8,
+        "g": 8,
+        "r": 8
+      }
+    },
+    "hsl": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 96.17370328994744,
+      "mean_delta_e_ok": 0.007652593420105108,
+      "median_delta_e_ok": 0.007284384933287994,
+      "p90_delta_e_ok": 0.013306829646432417,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 1.3241606420071514,
+        "l": 0.7500000000000013,
+        "s": 2.7372807528373198
+      },
+      "component_known_count": {
+        "h": 7,
+        "l": 8,
+        "s": 8
+      }
+    },
+    "oklch": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 89.90901786299878,
+      "mean_delta_e_ok": 0.020181964274002446,
+      "median_delta_e_ok": 0.021150840444178677,
+      "p90_delta_e_ok": 0.029724121860618034,
+      "out_of_srgb_count": 1,
+      "mean_component_errors": {
+        "c": 0.007595521743616367,
+        "h": 1.8422387149420516,
+        "l": 0.017298990121204227
+      },
+      "component_known_count": {
+        "c": 8,
+        "h": 7,
+        "l": 8
+      }
+    }
+  },
+  "avg_latency_sec": 9.185175401680075,
+  "model_name": "gemini-3.1-pro-preview",
+  "provider": "google",
+  "timestamp": "2026-09-13T02:44:45.044170+00:00",
+  "grading_version": "2",
+  "evaluation_protocol": "f77174aee4df2f17eaab4474b1a3fa36dc70d6f6ec250182b26895f0e660bf25",
+  "cohort_sha256": "2bb48882c03ccd9d033220219f0d162cbaecfc527b0e3b3b1c91d7c7a976be80",
+  "status": "complete",
+  "tasks": [
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"l\": 0.522, \"c\": 0.134, \"h\": 310.8}",
+      "prediction": {
+        "l": 0.522,
+        "c": 0.134,
+        "h": 310.8
+      },
+      "valid": true,
+      "correct": null,
+      "score": 87.57603409013713,
+      "delta_e_ok": 0.024847931819725756,
+      "component_errors": {
+        "l": 0.022093357125907653,
+        "c": 0.009125551628440615,
+        "h": 2.8071409604680753
+      },
+      "out_of_srgb": false,
+      "latency_sec": 19.789944275980815,
+      "input_tokens": 1169,
+      "output_tokens": 2129,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.027886,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:16.551133+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-06",
+      "family": "rgb",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"r\": 24, \"g\": 49, \"b\": 73}",
+      "prediction": {
+        "r": 24,
+        "g": 49,
+        "b": 73
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.97948834211707,
+      "delta_e_ok": 0.006041023315765868,
+      "component_errors": {
+        "r": 2,
+        "g": 1,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 6.3924553180113435,
+      "input_tokens": 1141,
+      "output_tokens": 535,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.008702,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:35.941093+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"h\": 351, \"s\": 55, \"l\": 49}",
+      "prediction": {
+        "h": 351.0,
+        "s": 55.0,
+        "l": 49.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.07752915433989,
+      "delta_e_ok": 0.011844941691320233,
+      "component_errors": {
+        "h": 1.5,
+        "s": 4.6062992125984294,
+        "l": 1.1960784313725483
+      },
+      "out_of_srgb": false,
+      "latency_sec": 17.611509940994438,
+      "input_tokens": 1169,
+      "output_tokens": 1844,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.024466,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:36.857730+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-08",
+      "family": "rgb",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"r\":128,\"g\":128,\"b\":128}",
+      "prediction": {
+        "r": 128,
+        "g": 128,
+        "b": 128
+      },
+      "valid": true,
+      "correct": null,
+      "score": 100.0,
+      "delta_e_ok": 0.0,
+      "component_errors": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 11.165023156965617,
+      "input_tokens": 1141,
+      "output_tokens": 1202,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.016706,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:48.453425+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-07",
+      "family": "matching",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 9.53646548598772,
+      "input_tokens": 1126,
+      "output_tokens": 737,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.011096,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:55.072109+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-04.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.237986747000832,
+      "input_tokens": 1114,
+      "output_tokens": 196,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00458,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:57.894875+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-04",
+      "family": "rgb",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"r\":185,\"g\":135,\"b\":45}",
+      "prediction": {
+        "r": 185,
+        "g": 135,
+        "b": 45
+      },
+      "valid": true,
+      "correct": null,
+      "score": 100.0,
+      "delta_e_ok": 0.0,
+      "component_errors": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 22.040533780003898,
+      "input_tokens": 1141,
+      "output_tokens": 2328,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.030218,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:20.769740+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-03",
+      "family": "hsl",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"h\": 148, \"s\": 36, \"l\": 40}",
+      "prediction": {
+        "h": 148.0,
+        "s": 36.0,
+        "l": 40.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.44979402328993,
+      "delta_e_ok": 0.005100411953420142,
+      "component_errors": {
+        "h": 2.0,
+        "s": 4.0,
+        "l": 0.7843137254901933
+      },
+      "out_of_srgb": false,
+      "latency_sec": 16.031725519977044,
+      "input_tokens": 1169,
+      "output_tokens": 1757,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.023422,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:25.301308+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-08",
+      "family": "matching",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-08.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.443547735048924,
+      "input_tokens": 1126,
+      "output_tokens": 519,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00848,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:27.965863+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-07",
+      "family": "chroma",
+      "group_id": "chroma-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-07.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.4737815289990976,
+      "input_tokens": 1132,
+      "output_tokens": 172,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.004328,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:35.926776+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-07.png",
+      "raw_prediction": "{\n  \"choice\": \"A\"\n}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3272406610194594,
+      "input_tokens": 1114,
+      "output_tokens": 129,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.003776,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:43.372975+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-08",
+      "family": "hsl",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\n  \"h\": 0,\n  \"s\": 0,\n  \"l\": 50\n}",
+      "prediction": {
+        "h": 0.0,
+        "s": 0.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 99.15496245786545,
+      "delta_e_ok": 0.0016900750842691059,
+      "component_errors": {
+        "h": null,
+        "s": 0.0,
+        "l": 0.19607843137254832
+      },
+      "out_of_srgb": false,
+      "latency_sec": 6.713355101004709,
+      "input_tokens": 1169,
+      "output_tokens": 499,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.008326,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:54.219914+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.576785604003817,
+      "input_tokens": 1128,
+      "output_tokens": 573,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.009132,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:04.064133+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.8433344560326077,
+      "input_tokens": 1114,
+      "output_tokens": 257,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.005312,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:09.905439+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-04",
+      "family": "chroma",
+      "group_id": "chroma-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-04.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.5098918880103156,
+      "input_tokens": 1132,
+      "output_tokens": 158,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00416,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:15.803265+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-05",
+      "family": "rgb",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"r\": 136, \"g\": 85, \"b\": 165}",
+      "prediction": {
+        "r": 136,
+        "g": 85,
+        "b": 165
+      },
+      "valid": true,
+      "correct": null,
+      "score": 92.0232036837183,
+      "delta_e_ok": 0.015953592632563424,
+      "component_errors": {
+        "r": 1,
+        "g": 0,
+        "b": 10
+      },
+      "out_of_srgb": false,
+      "latency_sec": 5.528394280001521,
+      "input_tokens": 1141,
+      "output_tokens": 417,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.007286,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:22.699683+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-08",
+      "family": "binding",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-08.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 9.313966266985517,
+      "input_tokens": 1128,
+      "output_tokens": 914,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.013224,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:32.968291+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-03",
+      "family": "chroma",
+      "group_id": "chroma-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-03.png",
+      "raw_prediction": "{\n  \"choice\": \"A\"\n}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.691687610000372,
+      "input_tokens": 1132,
+      "output_tokens": 151,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.004076,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:39.568078+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-08",
+      "family": "chroma",
+      "group_id": "chroma-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-08.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.4287074619787745,
+      "input_tokens": 1132,
+      "output_tokens": 212,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.004808,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:47.629238+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-07",
+      "family": "rgb",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"r\":222,\"g\":211,\"b\":183}",
+      "prediction": {
+        "r": 222,
+        "g": 211,
+        "b": 183
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.08278942142452,
+      "delta_e_ok": 0.011834421157150958,
+      "component_errors": {
+        "r": 3,
+        "g": 4,
+        "b": 5
+      },
+      "out_of_srgb": false,
+      "latency_sec": 12.858865148969926,
+      "input_tokens": 1141,
+      "output_tokens": 1320,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.018122,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:05.166455+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-08",
+      "family": "oklch",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"l\": 0.596, \"c\": 0.0, \"h\": 0.0}",
+      "prediction": {
+        "l": 0.596,
+        "c": 0.0,
+        "h": 0.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.06459914640885,
+      "delta_e_ok": 0.0038708017071823124,
+      "component_errors": {
+        "l": 0.0038708017071177325,
+        "c": 0.0,
+        "h": null
+      },
+      "out_of_srgb": false,
+      "latency_sec": 17.049657210009173,
+      "input_tokens": 1169,
+      "output_tokens": 1959,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.025846,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:17.498938+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-05",
+      "family": "hue",
+      "group_id": "hue-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-05.png",
+      "raw_prediction": "{\n  \"choice\": \"A\"\n}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.421718658006284,
+      "input_tokens": 1139,
+      "output_tokens": 443,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.007594,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:18.139253+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-03",
+      "family": "lightness",
+      "group_id": "lightness-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-03.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.94256185303675,
+      "input_tokens": 1114,
+      "output_tokens": 83,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.003224,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:21.208508+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-08.png",
+      "raw_prediction": "{\n  \"choice\": \"B\"\n}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.2932073869742453,
+      "input_tokens": 1114,
+      "output_tokens": 135,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.003848,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:25.665430+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-05",
+      "family": "chroma",
+      "group_id": "chroma-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-05.png",
+      "raw_prediction": "{\n  \"choice\": \"A\"\n}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.844486155023333,
+      "input_tokens": 1132,
+      "output_tokens": 252,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.005288,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:31.622535+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-03",
+      "family": "binding",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.4415214320179075,
+      "input_tokens": 1128,
+      "output_tokens": 327,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00618,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:45.551245+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-08",
+      "family": "gradient",
+      "group_id": "gradient-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-08.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 19.758474631991703,
+      "input_tokens": 1140,
+      "output_tokens": 2128,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.027816,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:51.420857+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-01",
+      "family": "binding",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.213134735997301,
+      "input_tokens": 1128,
+      "output_tokens": 259,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.005364,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:52.918696+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"h\": 211, \"s\": 44, \"l\": 18}",
+      "prediction": {
+        "h": 211.0,
+        "s": 44.0,
+        "l": 18.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.6410492291529,
+      "delta_e_ok": 0.016717901541694183,
+      "component_errors": {
+        "h": 0.4339622641509493,
+        "s": 10.639175257731964,
+        "l": 1.0196078431372548
+      },
+      "out_of_srgb": false,
+      "latency_sec": 14.313865319010802,
+      "input_tokens": 1169,
+      "output_tokens": 1484,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.020146,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:21.718460+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-02",
+      "family": "gradient",
+      "group_id": "gradient-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-02.png",
+      "raw_prediction": "{\n  \"choice\": \"B\"\n}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 33.04057014698628,
+      "input_tokens": 1140,
+      "output_tokens": 3576,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.045192,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:28.740136+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-04",
+      "family": "binding",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-04.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.427110205986537,
+      "input_tokens": 1128,
+      "output_tokens": 292,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00576,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:35.096389+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-02",
+      "family": "hsl",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\n  \"h\": 210,\n  \"s\": 66,\n  \"l\": 44\n}",
+      "prediction": {
+        "h": 210.0,
+        "s": 66.0,
+        "l": 44.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.98017536873333,
+      "delta_e_ok": 0.00603964926253335,
+      "component_errors": {
+        "h": 0.7894736842105488,
+        "s": 0.6666666666666572,
+        "l": 0.7058823529411811
+      },
+      "out_of_srgb": false,
+      "latency_sec": 17.588916902022902,
+      "input_tokens": 1169,
+      "output_tokens": 2015,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.026518,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:39.348762+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-03",
+      "family": "matching",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 8.884048684034497,
+      "input_tokens": 1126,
+      "output_tokens": 454,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.0077,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:48.274211+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-05",
+      "family": "hsl",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\n  \"h\": 272,\n  \"s\": 36,\n  \"l\": 52\n}",
+      "prediction": {
+        "h": 272.0,
+        "s": 36.0,
+        "l": 52.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.73543969797869,
+      "delta_e_ok": 0.008529120604042638,
+      "component_errors": {
+        "h": 1.3333333333333144,
+        "s": 0.0,
+        "l": 1.0196078431372584
+      },
+      "out_of_srgb": false,
+      "latency_sec": 13.915937887039036,
+      "input_tokens": 1169,
+      "output_tokens": 1619,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.021766,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:02.229942+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-02",
+      "family": "lightness",
+      "group_id": "lightness-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 7.593507687968668,
+      "input_tokens": 1114,
+      "output_tokens": 91,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00332,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:05.033161+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"l\": 0.64, \"c\": 0.14, \"h\": 76}",
+      "prediction": {
+        "l": 0.64,
+        "c": 0.14,
+        "h": 76.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 86.58398928988166,
+      "delta_e_ok": 0.026832021420236683,
+      "component_errors": {
+        "l": 0.01685423756100568,
+        "c": 0.02036181436945801,
+        "h": 2.0427720406007097
+      },
+      "out_of_srgb": true,
+      "latency_sec": 19.25235252996208,
+      "input_tokens": 1169,
+      "output_tokens": 2181,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.02851,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:27.147456+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 22.63133233098779,
+      "input_tokens": 1140,
+      "output_tokens": 2710,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.0348,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:47.713498+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\n  \"h\": 39,\n  \"s\": 61,\n  \"l\": 45\n}",
+      "prediction": {
+        "h": 39.0,
+        "s": 61.0,
+        "l": 45.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.98597239475447,
+      "delta_e_ok": 0.0020280552104910603,
+      "component_errors": {
+        "h": 0.4285714285714448,
+        "s": 0.13043478260870245,
+        "l": 0.09803921568627771
+      },
+      "out_of_srgb": false,
+      "latency_sec": 18.489132078015245,
+      "input_tokens": 1169,
+      "output_tokens": 2022,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.026602,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:02.977517+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-03",
+      "family": "rgb",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\n  \"r\": 63,\n  \"g\": 143,\n  \"b\": 100\n}",
+      "prediction": {
+        "r": 63,
+        "g": 143,
+        "b": 100
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.04560542264032,
+      "delta_e_ok": 0.009908789154719358,
+      "component_errors": {
+        "r": 3,
+        "g": 3,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 12.642282343993429,
+      "input_tokens": 1141,
+      "output_tokens": 1196,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.016634,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:07.838501+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-05",
+      "family": "lightness",
+      "group_id": "lightness-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.867824170971289,
+      "input_tokens": 1114,
+      "output_tokens": 165,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.004208,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:07.958389+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-04",
+      "family": "hue",
+      "group_id": "hue-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.9348553129821084,
+      "input_tokens": 1139,
+      "output_tokens": 171,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00433,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:12.321116+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-07",
+      "family": "hsl",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"h\": 41, \"s\": 40, \"l\": 80}",
+      "prediction": {
+        "h": 41.0,
+        "s": 40.0,
+        "l": 80.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.36470399346493,
+      "delta_e_ok": 0.00927059201307015,
+      "component_errors": {
+        "h": 2.7837837837838038,
+        "s": 1.8556701030928053,
+        "l": 0.9803921568627487
+      },
+      "out_of_srgb": false,
+      "latency_sec": 12.025266964978073,
+      "input_tokens": 1169,
+      "output_tokens": 1388,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.018994,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:26.065696+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-06",
+      "family": "gradient",
+      "group_id": "gradient-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.412001727963798,
+      "input_tokens": 1140,
+      "output_tokens": 332,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.006264,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:30.140677+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-05",
+      "family": "binding",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.874568989034742,
+      "input_tokens": 1128,
+      "output_tokens": 514,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.008424,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:37.481057+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-05",
+      "family": "matching",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.5216958569944836,
+      "input_tokens": 1126,
+      "output_tokens": 216,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.004844,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:42.787604+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-04.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 9.182401859026868,
+      "input_tokens": 1140,
+      "output_tokens": 802,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.011904,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:54.014609+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-02",
+      "family": "chroma",
+      "group_id": "chroma-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.9354744159500115,
+      "input_tokens": 1132,
+      "output_tokens": 127,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.003788,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:57.336705+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-01",
+      "family": "rgb",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"r\": 191, \"g\": 65, \"b\": 78}",
+      "prediction": {
+        "r": 191,
+        "g": 65,
+        "b": 78
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.99152750291282,
+      "delta_e_ok": 0.004016944994174375,
+      "component_errors": {
+        "r": 1,
+        "g": 1,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 8.50133406301029,
+      "input_tokens": 1141,
+      "output_tokens": 804,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.01193,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:09.711646+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-06",
+      "family": "lightness",
+      "group_id": "lightness-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.1509863230166957,
+      "input_tokens": 1114,
+      "output_tokens": 79,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.003176,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:11.279966+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-03",
+      "family": "hue",
+      "group_id": "hue-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.802114254969638,
+      "input_tokens": 1139,
+      "output_tokens": 269,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.005506,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:17.939242+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-01.png",
+      "raw_prediction": "{\n  \"choice\": \"A\"\n}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.985641152015887,
+      "input_tokens": 1140,
+      "output_tokens": 495,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00822,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:24.364962+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-08.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.626498796977103,
+      "input_tokens": 1139,
+      "output_tokens": 243,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.005194,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:30.763934+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-07",
+      "family": "binding",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.612475944973994,
+      "input_tokens": 1128,
+      "output_tokens": 297,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00582,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:36.711470+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-01",
+      "family": "matching",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-01.png",
+      "raw_prediction": "{\n  \"choice\": \"A\"\n}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.68048059695866,
+      "input_tokens": 1126,
+      "output_tokens": 424,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00734,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:44.453447+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-03",
+      "family": "gradient",
+      "group_id": "gradient-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.326666943961754,
+      "input_tokens": 1140,
+      "output_tokens": 415,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.00726,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:15.444558+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-01",
+      "family": "oklch",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\n  \"l\": 0.549,\n  \"c\": 0.155,\n  \"h\": 16.4\n}",
+      "prediction": {
+        "l": 0.549,
+        "c": 0.155,
+        "h": 16.4
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.26406309952927,
+      "delta_e_ok": 0.011471873800941485,
+      "component_errors": {
+        "l": 0.007926085977997044,
+        "c": 0.008120106740548028,
+        "h": 0.6077707599885684
+      },
+      "out_of_srgb": false,
+      "latency_sec": 25.436839191999752,
+      "input_tokens": 1169,
+      "output_tokens": 3219,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.040966,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:18.656301+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-01",
+      "family": "chroma",
+      "group_id": "chroma-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-01.png",
+      "raw_prediction": "{\n  \"choice\": \"A\"\n}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3718997860560194,
+      "input_tokens": 1132,
+      "output_tokens": 152,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.004088,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:22.810212+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-01",
+      "family": "hue",
+      "group_id": "hue-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.133238522976171,
+      "input_tokens": 1139,
+      "output_tokens": 523,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.008554,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:31.825715+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-06",
+      "family": "chroma",
+      "group_id": "chroma-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-06.png",
+      "raw_prediction": "{\n  \"choice\": \"B\"\n}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.0105433790013194,
+      "input_tokens": 1132,
+      "output_tokens": 127,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.003788,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:34.879607+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"l\": 0.55, \"c\": 0.097, \"h\": 158.5}",
+      "prediction": {
+        "l": 0.55,
+        "c": 0.097,
+        "h": 158.5
+      },
+      "valid": true,
+      "correct": null,
+      "score": 85.42311810614468,
+      "delta_e_ok": 0.029153763787710618,
+      "component_errors": {
+        "l": 0.028902482213614133,
+        "c": 0.0037053031417421806,
+        "h": 0.53735052816387
+      },
+      "out_of_srgb": false,
+      "latency_sec": 10.384425366006326,
+      "input_tokens": 1169,
+      "output_tokens": 958,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.013834,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:51.861708+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"l\": 0.51, \"c\": 0.14, \"h\": 255}",
+      "prediction": {
+        "l": 0.51,
+        "c": 0.14,
+        "h": 255.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 84.47252131796567,
+      "delta_e_ok": 0.031054957364068676,
+      "component_errors": {
+        "l": 0.030653299340816842,
+        "c": 0.0014030390476776344,
+        "h": 1.9452718586605329
+      },
+      "out_of_srgb": false,
+      "latency_sec": 11.630029526015278,
+      "input_tokens": 1169,
+      "output_tokens": 1135,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.015958,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:14.164534+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-06",
+      "family": "hue",
+      "group_id": "hue-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.447037359990645,
+      "input_tokens": 1139,
+      "output_tokens": 349,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.006466,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:28.249907+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-07",
+      "family": "gradient",
+      "group_id": "gradient-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 8.75161851401208,
+      "input_tokens": 1140,
+      "output_tokens": 698,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.010656,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:42.654470+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-06",
+      "family": "oklch",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"l\": 0.29, \"c\": 0.048, \"h\": 256}",
+      "prediction": {
+        "l": 0.29,
+        "c": 0.048,
+        "h": 256.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.2731254656842,
+      "delta_e_ok": 0.0174537490686316,
+      "component_errors": {
+        "l": 0.0129989354550194,
+        "c": 0.010736737775342314,
+        "h": 4.873234931850135
+      },
+      "out_of_srgb": false,
+      "latency_sec": 10.184384419990238,
+      "input_tokens": 1169,
+      "output_tokens": 1006,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.01441,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:59.406023+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-07",
+      "family": "hue",
+      "group_id": "hue-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.587786307034548,
+      "input_tokens": 1139,
+      "output_tokens": 354,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.006526,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:05.584180+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-04",
+      "family": "matching",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-04.png",
+      "raw_prediction": "{\n  \"choice\": \"D\"\n}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 7.276367224985734,
+      "input_tokens": 1126,
+      "output_tokens": 760,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.011372,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:19.445051+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-07",
+      "family": "oklch",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"l\": 0.865, \"c\": 0.045, \"h\": 90.0}",
+      "prediction": {
+        "l": 0.865,
+        "c": 0.045,
+        "h": 90.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.61469238823878,
+      "delta_e_ok": 0.016770615223522446,
+      "component_errors": {
+        "l": 0.015092721588155333,
+        "c": 0.007311621245722155,
+        "h": 0.08212992486247117
+      },
+      "out_of_srgb": false,
+      "latency_sec": 15.065409045026172,
+      "input_tokens": 1169,
+      "output_tokens": 1726,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.02305,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:41.558449+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-02",
+      "family": "hue",
+      "group_id": "hue-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.25551656197058,
+      "input_tokens": 1139,
+      "output_tokens": 349,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.006466,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:55.944656+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-02",
+      "family": "rgb",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\n  \"r\": 42,\n  \"g\": 115,\n  \"b\": 188\n}",
+      "prediction": {
+        "r": 42,
+        "g": 115,
+        "b": 188
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.90207069092044,
+      "delta_e_ok": 0.010195858618159134,
+      "component_errors": {
+        "r": 4,
+        "g": 3,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 19.484474421013147,
+      "input_tokens": 1141,
+      "output_tokens": 1962,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.025826,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:02.049435+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-06",
+      "family": "binding",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.328534840024076,
+      "input_tokens": 1128,
+      "output_tokens": 523,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.008532,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:03.588008+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-06",
+      "family": "matching",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 7.19642329501221,
+      "input_tokens": 1126,
+      "output_tokens": 579,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.0092,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:11.558734+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-02",
+      "family": "matching",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 8.08879364002496,
+      "input_tokens": 1126,
+      "output_tokens": 688,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "cost_usd": 0.010508,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:19.829042+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "run_id": "pilot-20260913",
+  "release": "0.2.0",
+  "dataset_git_commit": "1013fdb0deb1c2a4d2df6fba3c5bc38d05cab473",
+  "dataset_fingerprint": "65414cebf600b83c2f4874cd1823f81fe6b6d8af5940e109fa2f0ef4a1b853fe",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/manifest.json",
+  "mock": false,
+  "runner_git_commit": "3481d5d067a6c0413f75b3d3e91956b11316b1cf",
+  "runner_git_dirty": false,
+  "created_at": "2026-09-13T02:32:52.260235+00:00",
+  "updated_at": "2026-09-13T02:44:45.005685+00:00",
+  "model_config": {
+    "api_key_env": "GEMINI_API_KEY",
+    "base_url": null,
+    "display_name": "Gemini 3.1 Pro Preview",
+    "enabled": true,
+    "id": "gemini-3.1-pro-preview",
+    "input_per_m": 2.0,
+    "max_output_tokens": 4096,
+    "model": "gemini-3.1-pro-preview",
+    "notes": "Latest documented Pro model. Preview; no announced shutdown date at verification.",
+    "output_per_m": 12.0,
+    "pricing_notes": "Standard online rates for prompts up to 200k tokens. Above 200k: $4 input / $18 output per million tokens. Output includes thinking tokens.",
+    "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "provider": "google",
+    "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview"
+  },
+  "model_config_fingerprint": "6ef3a6e5b007c672a50902258a256900e6fc450affd9ab4d9373ac0ef70d0ce8",
+  "max_output_tokens": 4096,
+  "model_id": "gemini-3.1-pro-preview",
+  "display_name": "Gemini 3.1 Pro Preview",
+  "pricing": {
+    "input_per_m": 2.0,
+    "output_per_m": 12.0
+  }
+}

@@ -1,0 +1,2793 @@
+{
+  "total_tasks": 72,
+  "expected_task_count": 72,
+  "families": {
+    "matching": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "lightness": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "chroma": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "hue": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "binding": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "gradient": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "rgb": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 97.66507598259682,
+      "mean_delta_e_ok": 0.0046698480348063495,
+      "median_delta_e_ok": 0.005231086081944019,
+      "p90_delta_e_ok": 0.007484541752525388,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "b": 1.5,
+        "g": 1.0,
+        "r": 1.375
+      },
+      "component_known_count": {
+        "b": 8,
+        "g": 8,
+        "r": 8
+      }
+    },
+    "hsl": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 96.31945921015138,
+      "mean_delta_e_ok": 0.007361081579697227,
+      "median_delta_e_ok": 0.007065570590557794,
+      "p90_delta_e_ok": 0.010749463927954003,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 1.3283490105025066,
+        "l": 0.5637254901960778,
+        "s": 1.5740878647452785
+      },
+      "component_known_count": {
+        "h": 7,
+        "l": 8,
+        "s": 8
+      }
+    },
+    "oklch": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 94.69329867548204,
+      "mean_delta_e_ok": 0.010613402649035913,
+      "median_delta_e_ok": 0.008896701967108712,
+      "p90_delta_e_ok": 0.019830179428497418,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "c": 0.004310577537861375,
+        "h": 1.477587986227982,
+        "l": 0.008419271160585287
+      },
+      "component_known_count": {
+        "c": 8,
+        "h": 7,
+        "l": 8
+      }
+    }
+  },
+  "avg_latency_sec": 3.303065799000453,
+  "model_name": "claude-fable-5-1",
+  "provider": "anthropic",
+  "timestamp": "2026-09-13T02:44:45.014536+00:00",
+  "grading_version": "2",
+  "evaluation_protocol": "f77174aee4df2f17eaab4474b1a3fa36dc70d6f6ec250182b26895f0e660bf25",
+  "cohort_sha256": "2bb48882c03ccd9d033220219f0d162cbaecfc527b0e3b3b1c91d7c7a976be80",
+  "status": "complete",
+  "tasks": [
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"l\":0.55,\"c\":0.14,\"h\":310}",
+      "prediction": {
+        "l": 0.55,
+        "c": 0.14,
+        "h": 310.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.83932614171218,
+      "delta_e_ok": 0.008321347716575654,
+      "component_errors": {
+        "l": 0.0059066428740923715,
+        "c": 0.0031255516284406093,
+        "h": 2.007140960468064
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.442279118055012,
+      "input_tokens": 1047,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01157,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:32:56.749152+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"h\": 351, \"s\": 52, \"l\": 50}",
+      "prediction": {
+        "h": 351.0,
+        "s": 52.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.05043793886165,
+      "delta_e_ok": 0.005899124122276715,
+      "component_errors": {
+        "h": 1.5,
+        "s": 1.6062992125984294,
+        "l": 0.19607843137254832
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.9031135010300204,
+      "input_tokens": 1045,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.0115,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:07.720735+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-06",
+      "family": "rgb",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"r\":23,\"g\":48,\"b\":78}",
+      "prediction": {
+        "r": 23,
+        "g": 48,
+        "b": 78
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.12709006698145,
+      "delta_e_ok": 0.005745819866037074,
+      "component_errors": {
+        "r": 1,
+        "g": 0,
+        "b": 3
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.8542106979875825,
+      "input_tokens": 1011,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01101,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:26.240863+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-08",
+      "family": "rgb",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"r\":128,\"g\":128,\"b\":128}",
+      "prediction": {
+        "r": 128,
+        "g": 128,
+        "b": 128
+      },
+      "valid": true,
+      "correct": null,
+      "score": 100.0,
+      "delta_e_ok": 0.0,
+      "component_errors": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.4568283959524706,
+      "input_tokens": 1011,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01101,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:36.325509+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-07",
+      "family": "matching",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.580007698968984,
+      "input_tokens": 967,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:43.744686+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-04.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.530413912027143,
+      "input_tokens": 943,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.00998,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:50.420132+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-04",
+      "family": "rgb",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"r\":182,\"g\":132,\"b\":48}",
+      "prediction": {
+        "r": 182,
+        "g": 132,
+        "b": 48
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.84298229010506,
+      "delta_e_ok": 0.010314035419789874,
+      "component_errors": {
+        "r": 3,
+        "g": 3,
+        "b": 3
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.6764314740430564,
+      "input_tokens": 1011,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01101,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:58.801530+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-03",
+      "family": "hsl",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"h\":152,\"s\":37,\"l\":40}",
+      "prediction": {
+        "h": 152.0,
+        "s": 37.0,
+        "l": 40.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.906336355166,
+      "delta_e_ok": 0.008187327289667999,
+      "component_errors": {
+        "h": 2.0,
+        "s": 3.0,
+        "l": 0.7843137254901933
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.3008369229501113,
+      "input_tokens": 1045,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01135,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:05.172476+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-08",
+      "family": "matching",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-08.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.144386236963328,
+      "input_tokens": 967,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:17.181737+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-07",
+      "family": "chroma",
+      "group_id": "chroma-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-07.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.218020564003382,
+      "input_tokens": 966,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01021,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:28.546569+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-07.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.358563351968769,
+      "input_tokens": 943,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.00998,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:38.513983+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-08",
+      "family": "hsl",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"h\":0,\"s\":0,\"l\":50}",
+      "prediction": {
+        "h": 0.0,
+        "s": 0.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 99.15496245786545,
+      "delta_e_ok": 0.0016900750842691059,
+      "component_errors": {
+        "h": null,
+        "s": 0.0,
+        "l": 0.19607843137254832
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.093502258998342,
+      "input_tokens": 1045,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01135,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:46.493068+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.172922194004059,
+      "input_tokens": 970,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:53.734554+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.45382650999818,
+      "input_tokens": 944,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.00999,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:04.162004+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-04",
+      "family": "chroma",
+      "group_id": "chroma-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-04.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3522788989939727,
+      "input_tokens": 966,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01021,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:10.607114+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-05",
+      "family": "rgb",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"r\":133,\"g\":83,\"b\":174}",
+      "prediction": {
+        "r": 133,
+        "g": 83,
+        "b": 174
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.86404919529397,
+      "delta_e_ok": 0.006271901609412039,
+      "component_errors": {
+        "r": 2,
+        "g": 2,
+        "b": 1
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.4870140069979243,
+      "input_tokens": 1011,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01101,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:17.248946+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-08",
+      "family": "binding",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-08.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.1632235419820063,
+      "input_tokens": 970,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:22.419572+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-03",
+      "family": "chroma",
+      "group_id": "chroma-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-03.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.501083136012312,
+      "input_tokens": 966,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01021,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:34.157179+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-08",
+      "family": "chroma",
+      "group_id": "chroma-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-08.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3087546409806237,
+      "input_tokens": 966,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01021,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:41.083515+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-07",
+      "family": "rgb",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"r\":224,\"g\":214,\"b\":186}",
+      "prediction": {
+        "r": 224,
+        "g": 214,
+        "b": 186
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.21625902648319,
+      "delta_e_ok": 0.0035674819470336203,
+      "component_errors": {
+        "r": 1,
+        "g": 1,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.345333314035088,
+      "input_tokens": 1011,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01101,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:48.081249+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-08",
+      "family": "oklch",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"l\":0.6,\"c\":0,\"h\":0}",
+      "prediction": {
+        "l": 0.6,
+        "c": 0.0,
+        "h": 0.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 99.93540085259144,
+      "delta_e_ok": 0.00012919829481709103,
+      "component_errors": {
+        "l": 0.00012919829288227103,
+        "c": 0.0,
+        "h": null
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.786729342013132,
+      "input_tokens": 1047,
+      "output_tokens": 20,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01147,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:58.464898+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-05",
+      "family": "hue",
+      "group_id": "hue-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.1580195740098134,
+      "input_tokens": 982,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01037,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:09.207330+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-03",
+      "family": "lightness",
+      "group_id": "lightness-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-03.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.2980078859836794,
+      "input_tokens": 943,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.00998,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:18.705249+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-08.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.2582299160421826,
+      "input_tokens": 943,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.00998,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:23.052166+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-05",
+      "family": "chroma",
+      "group_id": "chroma-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3443780799861997,
+      "input_tokens": 966,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01021,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:26.737483+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-08",
+      "family": "gradient",
+      "group_id": "gradient-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-08.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.332890967023559,
+      "input_tokens": 981,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01036,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:31.350804+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-03",
+      "family": "binding",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.1376383809838444,
+      "input_tokens": 970,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:37.993876+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-01",
+      "family": "binding",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.0740535839577205,
+      "input_tokens": 970,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:47.959749+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-02",
+      "family": "gradient",
+      "group_id": "gradient-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3127881679683924,
+      "input_tokens": 981,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01036,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:53.685268+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"h\":209,\"s\":53,\"l\":20}",
+      "prediction": {
+        "h": 209.0,
+        "s": 53.0,
+        "l": 20.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 93.17759869105225,
+      "delta_e_ok": 0.01364480261789549,
+      "component_errors": {
+        "h": 1.5660377358490507,
+        "s": 1.6391752577319636,
+        "l": 0.9803921568627452
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.7303165670018643,
+      "input_tokens": 1045,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01135,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:00.308748+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-02",
+      "family": "hsl",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"h\":211,\"s\":70,\"l\":45}",
+      "prediction": {
+        "h": 211.0,
+        "s": 70.0,
+        "l": 45.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.00146158117857,
+      "delta_e_ok": 0.007997076837642865,
+      "component_errors": {
+        "h": 0.21052631578945125,
+        "s": 3.333333333333343,
+        "l": 0.29411764705881893
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.4086870240280405,
+      "input_tokens": 1045,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01135,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:14.757194+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-04",
+      "family": "binding",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-04.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.244936884031631,
+      "input_tokens": 970,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:26.849500+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-03",
+      "family": "matching",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.232965143979527,
+      "input_tokens": 967,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:35.238442+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-05",
+      "family": "hsl",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"h\": 275, \"s\": 35, \"l\": 50}",
+      "prediction": {
+        "h": 275.0,
+        "s": 35.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.93296782826364,
+      "delta_e_ok": 0.0061340643434727215,
+      "component_errors": {
+        "h": 1.6666666666666856,
+        "s": 1.0,
+        "l": 0.9803921568627416
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.384057859017048,
+      "input_tokens": 1045,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.0115,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:45.287386+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-02",
+      "family": "lightness",
+      "group_id": "lightness-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.158273944980465,
+      "input_tokens": 944,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.00999,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:56.194150+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"l\":0.63,\"c\":0.12,\"h\":75}",
+      "prediction": {
+        "l": 0.63,
+        "c": 0.12,
+        "h": 75.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 86.19998934431308,
+      "delta_e_ok": 0.027600021311373835,
+      "component_errors": {
+        "l": 0.02685423756100569,
+        "c": 0.00036181436945799395,
+        "h": 3.0427720406007097
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.5152501449920237,
+      "input_tokens": 1047,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01157,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:02.930730+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.359922805975657,
+      "input_tokens": 981,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01036,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:19.801904+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"h\":38,\"s\":60,\"l\":45}",
+      "prediction": {
+        "h": 38.0,
+        "s": 60.0,
+        "l": 45.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.08621107352737,
+      "delta_e_ok": 0.0058275778529452696,
+      "component_errors": {
+        "h": 0.5714285714285552,
+        "s": 0.8695652173912976,
+        "l": 0.09803921568627771
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.5066392100416124,
+      "input_tokens": 1045,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01135,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:38.590197+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-03",
+      "family": "rgb",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"r\":59,\"g\":140,\"b\":100}",
+      "prediction": {
+        "r": 59,
+        "g": 140,
+        "b": 100
+      },
+      "valid": true,
+      "correct": null,
+      "score": 99.6189169713261,
+      "delta_e_ok": 0.0007621660573478073,
+      "component_errors": {
+        "r": 1,
+        "g": 0,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.0679918690002523,
+      "input_tokens": 1011,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01101,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:50.828225+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-05",
+      "family": "lightness",
+      "group_id": "lightness-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.55667329399148,
+      "input_tokens": 944,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.00999,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:01.523449+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-04",
+      "family": "hue",
+      "group_id": "hue-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-04.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.0942372030112892,
+      "input_tokens": 982,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01037,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:08.093788+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-07",
+      "family": "hsl",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"h\":42,\"s\":37,\"l\":80}",
+      "prediction": {
+        "h": 42.0,
+        "s": 37.0,
+        "l": 80.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.24569775529618,
+      "delta_e_ok": 0.009508604489407652,
+      "component_errors": {
+        "h": 1.7837837837838038,
+        "s": 1.1443298969071947,
+        "l": 0.9803921568627487
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.0481657370110042,
+      "input_tokens": 1045,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01135,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:13.008952+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-06",
+      "family": "gradient",
+      "group_id": "gradient-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3287974529666826,
+      "input_tokens": 981,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01036,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:21.715133+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-05",
+      "family": "binding",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.0775693080504425,
+      "input_tokens": 970,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:29.093755+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-05",
+      "family": "matching",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-05.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.088812773989048,
+      "input_tokens": 967,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:36.079400+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-04.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3665830669924617,
+      "input_tokens": 981,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01036,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:44.773176+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-02",
+      "family": "chroma",
+      "group_id": "chroma-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.1631885149981827,
+      "input_tokens": 966,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01021,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:50.407427+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-01",
+      "family": "rgb",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"r\":190,\"g\":62,\"b\":80}",
+      "prediction": {
+        "r": 190,
+        "g": 62,
+        "b": 80
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.00948645951028,
+      "delta_e_ok": 0.00598102708097942,
+      "component_errors": {
+        "r": 2,
+        "g": 2,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.218691583024338,
+      "input_tokens": 1011,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01101,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:59.815026+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-06",
+      "family": "lightness",
+      "group_id": "lightness-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.2188054069993086,
+      "input_tokens": 944,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.00999,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:07.117430+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-03",
+      "family": "hue",
+      "group_id": "hue-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.2625468769692816,
+      "input_tokens": 982,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01037,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:13.012734+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3571921859984286,
+      "input_tokens": 981,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01036,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:18.308662+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-08.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.5304248080356047,
+      "input_tokens": 982,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01037,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:23.820930+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-07",
+      "family": "binding",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.7287889089784585,
+      "input_tokens": 970,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:31.584960+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-01",
+      "family": "matching",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.408010651008226,
+      "input_tokens": 967,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:37.736487+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-01",
+      "family": "oklch",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"l\":0.55,\"c\":0.16,\"h\":18}",
+      "prediction": {
+        "l": 0.55,
+        "c": 0.16,
+        "h": 18.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.95238544641946,
+      "delta_e_ok": 0.008095229107161102,
+      "component_errors": {
+        "l": 0.006926085977997043,
+        "c": 0.003120106740548023,
+        "h": 0.9922292400114259
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.4125127469887957,
+      "input_tokens": 1047,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01157,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:44.502920+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-03",
+      "family": "gradient",
+      "group_id": "gradient-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-03.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3264624790172093,
+      "input_tokens": 981,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01036,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:03.286063+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-01",
+      "family": "chroma",
+      "group_id": "chroma-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.2176635100040585,
+      "input_tokens": 966,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01021,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:18.078467+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-01",
+      "family": "hue",
+      "group_id": "hue-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-01.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.395203327992931,
+      "input_tokens": 982,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01037,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:24.290586+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-06",
+      "family": "chroma",
+      "group_id": "chroma-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.446018440008629,
+      "input_tokens": 966,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01021,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:30.769626+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"l\":0.58,\"c\":0.1,\"h\":158}",
+      "prediction": {
+        "l": 0.58,
+        "c": 0.1,
+        "h": 158.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.88163025577876,
+      "delta_e_ok": 0.0022367394884424767,
+      "component_errors": {
+        "l": 0.0010975177863857821,
+        "c": 0.0007053031417421779,
+        "h": 1.03735052816387
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.3555108120199293,
+      "input_tokens": 1047,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01157,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:35.275753+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"l\":0.55,\"c\":0.155,\"h\":253}",
+      "prediction": {
+        "l": 0.55,
+        "c": 0.155,
+        "h": 253.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.74987640351053,
+      "delta_e_ok": 0.016500247192978955,
+      "component_errors": {
+        "l": 0.009346700659183194,
+        "c": 0.013596960952322351,
+        "h": 0.05472814133946713
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.298370532982517,
+      "input_tokens": 1047,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01157,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:50.686597+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-06",
+      "family": "hue",
+      "group_id": "hue-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.18221174296923,
+      "input_tokens": 982,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01037,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:19.196212+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-07",
+      "family": "gradient",
+      "group_id": "gradient-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.362134800001513,
+      "input_tokens": 981,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01036,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:32.659271+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-06",
+      "family": "oklch",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"l\":0.31,\"c\":0.065,\"h\":250}",
+      "prediction": {
+        "l": 0.31,
+        "c": 0.065,
+        "h": 250.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.26397189117911,
+      "delta_e_ok": 0.009472056217641769,
+      "component_errors": {
+        "l": 0.0070010645449806175,
+        "c": 0.006263262224657687,
+        "h": 1.126765068149865
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.4925742199993692,
+      "input_tokens": 1047,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01157,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:38.690508+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-07",
+      "family": "hue",
+      "group_id": "hue-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-07.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3048104449990205,
+      "input_tokens": 982,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01037,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:57.168638+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-04",
+      "family": "matching",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-04.png",
+      "raw_prediction": "{\"choice\": \"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3296369690215215,
+      "input_tokens": 967,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:08.962374+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-07",
+      "family": "oklch",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"l\": 0.87, \"c\": 0.045, \"h\": 88}",
+      "prediction": {
+        "l": 0.87,
+        "c": 0.045,
+        "h": 88.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 93.7238090683518,
+      "delta_e_ok": 0.012552381863296408,
+      "component_errors": {
+        "l": 0.010092721588155329,
+        "c": 0.007311621245722155,
+        "h": 2.082129924862471
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.3847405390115455,
+      "input_tokens": 1047,
+      "output_tokens": 25,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01172,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:17.237383+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-02",
+      "family": "rgb",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"r\":39,\"g\":112,\"b\":187}",
+      "prediction": {
+        "r": 39,
+        "g": 112,
+        "b": 187
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.64182385107452,
+      "delta_e_ok": 0.004716352297850964,
+      "component_errors": {
+        "r": 1,
+        "g": 0,
+        "b": 3
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.5828722399892285,
+      "input_tokens": 1011,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01101,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:34.872450+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-02",
+      "family": "hue",
+      "group_id": "hue-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3364347700262442,
+      "input_tokens": 982,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01037,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:49.639670+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-06",
+      "family": "binding",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.186912499018945,
+      "input_tokens": 970,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:55.725736+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-06",
+      "family": "matching",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.9887338100234047,
+      "input_tokens": 967,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:02.224000+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-02",
+      "family": "matching",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-02.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.1146381449652836,
+      "input_tokens": 967,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "cost_usd": 0.01022,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:09.130401+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "run_id": "pilot-20260913",
+  "release": "0.2.0",
+  "dataset_git_commit": "1013fdb0deb1c2a4d2df6fba3c5bc38d05cab473",
+  "dataset_fingerprint": "65414cebf600b83c2f4874cd1823f81fe6b6d8af5940e109fa2f0ef4a1b853fe",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/manifest.json",
+  "mock": false,
+  "runner_git_commit": "3481d5d067a6c0413f75b3d3e91956b11316b1cf",
+  "runner_git_dirty": false,
+  "created_at": "2026-09-13T02:32:52.260235+00:00",
+  "updated_at": "2026-09-13T02:44:45.005685+00:00",
+  "model_config": {
+    "api_key_env": "ANTHROPIC_API_KEY",
+    "base_url": null,
+    "display_name": "Claude Fable 5.1",
+    "enabled": true,
+    "id": "claude-fable-5-1",
+    "input_per_m": 10.0,
+    "max_output_tokens": 4096,
+    "model": "claude-fable-5-1",
+    "notes": "Latest Fable. Adaptive thinking is always on; default effort is high.",
+    "output_per_m": 50.0,
+    "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+    "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "provider": "anthropic",
+    "source_url": "https://platform.claude.com/docs/en/models/overview"
+  },
+  "model_config_fingerprint": "5651e81821421e372074e9b58db5cced4e5fb6d05ec21248e07c30ed8d2aa366",
+  "max_output_tokens": 4096,
+  "model_id": "claude-fable-5-1",
+  "display_name": "Claude Fable 5.1",
+  "pricing": {
+    "input_per_m": 10.0,
+    "output_per_m": 50.0
+  }
+}

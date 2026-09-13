@@ -1,0 +1,2571 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "colorbench-pilot-candidate",
+  "version": "0.2.0",
+  "status": "human-pilot-pending",
+  "questionCount": 72,
+  "uniqueImageCount": 56,
+  "promptRegistry": {
+    "matching": "Which swatch, A, B, C, or D, has the same flat fill color as reference R? Compare the colored interiors, not labels or borders. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+    "lightness-lighter": "Which patch is lighter, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+    "lightness-darker": "Which patch is darker, A or B? Compare their flat interior colors on the shared neutral background. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+    "chroma-more": "Which patch, A or B, is more colorful? The gray-to-color examples show the intended dimension: more colorful means farther from gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+    "chroma-less": "Which patch, A or B, is less colorful? The gray-to-color examples show the intended dimension: less colorful means closer to gray along that example, not lighter or darker. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+    "hue": "Which option, A, B, C, or D, has the same hue as reference R? Its lightness and colorfulness may differ. Compare the kind of color, not how light, dark, or gray it is. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+    "binding": "Which component, A, B, C, or D, has the same flat interior fill color as reference R? Ignore its neutral frame, label, and surrounding content. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+    "gradient": "Which strip, A, B, C, or D, has exactly the same left-to-right color progression as reference R? Match the entire visible color field, including where transitions occur, not just its set of colors. Return only a JSON object with one key, \"choice\", whose value is the selected option letter.",
+    "rgb": "Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys \"r\", \"g\", and \"b\", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.",
+    "hsl": "Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys \"h\" (hue in degrees, 0 inclusive to 360 exclusive), \"s\" (saturation percent, 0–100), and \"l\" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.",
+    "oklch": "Estimate the flat interior color of R in OKLCH using the D65 white point. Return only JSON with numeric keys \"l\" (lightness, 0–1), \"c\" (nonnegative chroma in OKLCH units, not percent), and \"h\" (hue in degrees, 0 inclusive to 360 exclusive). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings."
+  },
+  "font": {
+    "path": "fonts/DejaVuSans.ttf",
+    "sha256": "abdc775b21b1bc470d50c97e790d276f2054b7504e56e5bd3e64f48d68582322"
+  },
+  "tasks": [
+    {
+      "taskId": "colorbench-binding-01",
+      "family": "binding",
+      "groupId": "match-binding-01",
+      "imageFilename": "binding-01.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "sourceRgb": [
+          172,
+          132,
+          128
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 25
+        },
+        "intendedSeparation": 0.08,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-binding-02",
+      "family": "binding",
+      "groupId": "match-binding-02",
+      "imageFilename": "binding-02.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          163,
+          138,
+          110
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 70
+        },
+        "intendedSeparation": 0.012,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-binding-03",
+      "family": "binding",
+      "groupId": "match-binding-03",
+      "imageFilename": "binding-03.png",
+      "groundTruth": {
+        "choice": "C"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "wide",
+        "sourceRgb": [
+          142,
+          147,
+          112
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 115
+        },
+        "intendedSeparation": 35,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-binding-04",
+      "family": "binding",
+      "groupId": "match-binding-04",
+      "imageFilename": "binding-04.png",
+      "groundTruth": {
+        "choice": "D"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          117,
+          153,
+          133
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 160
+        },
+        "intendedSeparation": 0.04,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-binding-05",
+      "family": "binding",
+      "groupId": "match-binding-05",
+      "imageFilename": "binding-05.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "sourceRgb": [
+          107,
+          152,
+          158
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 205
+        },
+        "intendedSeparation": 0.025,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-binding-06",
+      "family": "binding",
+      "groupId": "match-binding-06",
+      "imageFilename": "binding-06.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          120,
+          146,
+          173
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 250
+        },
+        "intendedSeparation": 15,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-binding-07",
+      "family": "binding",
+      "groupId": "match-binding-07",
+      "imageFilename": "binding-07.png",
+      "groundTruth": {
+        "choice": "C"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "sourceRgb": [
+          145,
+          138,
+          171
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 295
+        },
+        "intendedSeparation": 0.08,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-binding-08",
+      "family": "binding",
+      "groupId": "match-binding-08",
+      "imageFilename": "binding-08.png",
+      "groundTruth": {
+        "choice": "D"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          165,
+          132,
+          153
+        ],
+        "pairedFamily": "matching",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 340
+        },
+        "intendedSeparation": 0.012,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-chroma-01",
+      "family": "chroma",
+      "groupId": "chroma-01",
+      "imageFilename": "chroma-01.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "direction": "more",
+        "intendedHue": 25,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              155,
+              139,
+              137
+            ],
+            [
+              166,
+              134,
+              131
+            ],
+            [
+              177,
+              129,
+              125
+            ],
+            [
+              187,
+              124,
+              118
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6495169038461353,
+            "c": 0.09010184469434239,
+            "h": 25.077877296239762
+          },
+          {
+            "l": 0.6505478535807704,
+            "c": 0.02470635760175536,
+            "h": 27.919491399161075
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-chroma-02",
+      "family": "chroma",
+      "groupId": "chroma-02",
+      "imageFilename": "chroma-02.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "direction": "more",
+        "intendedHue": 70,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              151,
+              141,
+              130
+            ],
+            [
+              159,
+              139,
+              117
+            ],
+            [
+              167,
+              137,
+              103
+            ],
+            [
+              175,
+              135,
+              88
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.649942952681236,
+            "c": 0.02489282130440376,
+            "h": 71.6320184290555
+          },
+          {
+            "l": 0.648835083510306,
+            "c": 0.09000599867340862,
+            "h": 70.16069199038009
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-chroma-03",
+      "family": "chroma",
+      "groupId": "chroma-03",
+      "imageFilename": "chroma-03.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "direction": "less",
+        "intendedHue": 115,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              142,
+              145,
+              131
+            ],
+            [
+              142,
+              146,
+              119
+            ],
+            [
+              142,
+              148,
+              106
+            ],
+            [
+              141,
+              149,
+              91
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6492243598067242,
+            "c": 0.024850706920496363,
+            "h": 115.22006266722542
+          },
+          {
+            "l": 0.6502963280833581,
+            "c": 0.08987809442815395,
+            "h": 115.31278476622731
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-chroma-04",
+      "family": "chroma",
+      "groupId": "chroma-04",
+      "imageFilename": "chroma-04.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "direction": "less",
+        "intendedHue": 160,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              133,
+              147,
+              139
+            ],
+            [
+              123,
+              151,
+              135
+            ],
+            [
+              111,
+              155,
+              131
+            ],
+            [
+              98,
+              158,
+              126
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6492615748956733,
+            "c": 0.09003673741886895,
+            "h": 160.03655773534604
+          },
+          {
+            "l": 0.6499624995569464,
+            "c": 0.024411846293793813,
+            "h": 159.8756511193991
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-chroma-05",
+      "family": "chroma",
+      "groupId": "chroma-05",
+      "imageFilename": "chroma-05.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "direction": "more",
+        "intendedHue": 205,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              130,
+              147,
+              149
+            ],
+            [
+              115,
+              151,
+              155
+            ],
+            [
+              98,
+              154,
+              161
+            ],
+            [
+              76,
+              157,
+              166
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6488828460216745,
+            "c": 0.07986938397397013,
+            "h": 205.05641396748348
+          },
+          {
+            "l": 0.6493854766256434,
+            "c": 0.04943619558099753,
+            "h": 206.3937898632672
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-chroma-06",
+      "family": "chroma",
+      "groupId": "chroma-06",
+      "imageFilename": "chroma-06.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "direction": "more",
+        "intendedHue": 250,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              134,
+              144,
+              155
+            ],
+            [
+              125,
+              146,
+              167
+            ],
+            [
+              115,
+              146,
+              179
+            ],
+            [
+              105,
+              147,
+              190
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6496277515144894,
+            "c": 0.05017282365668099,
+            "h": 249.5779150485822
+          },
+          {
+            "l": 0.6495177224922519,
+            "c": 0.07953301740306734,
+            "h": 249.70851949252528
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-chroma-07",
+      "family": "chroma",
+      "groupId": "chroma-07",
+      "imageFilename": "chroma-07.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "direction": "less",
+        "intendedHue": 295,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              144,
+              141,
+              154
+            ],
+            [
+              144,
+              139,
+              166
+            ],
+            [
+              145,
+              136,
+              177
+            ],
+            [
+              146,
+              134,
+              187
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6509810035818934,
+            "c": 0.04918482406507,
+            "h": 294.7201012676501
+          },
+          {
+            "l": 0.6503872926255827,
+            "c": 0.0789337182565593,
+            "h": 294.49111157868845
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-chroma-08",
+      "family": "chroma",
+      "groupId": "chroma-08",
+      "imageFilename": "chroma-08.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "direction": "less",
+        "intendedHue": 340,
+        "reference": {
+          "kind": "gray-to-color",
+          "colors": [
+            [
+              143,
+              143,
+              143
+            ],
+            [
+              152,
+              139,
+              147
+            ],
+            [
+              161,
+              134,
+              151
+            ],
+            [
+              169,
+              129,
+              155
+            ],
+            [
+              177,
+              124,
+              159
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6506457676369368,
+            "c": 0.08079041816396396,
+            "h": 339.90585797105285
+          },
+          {
+            "l": 0.6509901239007432,
+            "c": 0.04971414361706087,
+            "h": 340.13958697413415
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-gradient-01",
+      "family": "gradient",
+      "groupId": "gradient-01",
+      "imageFilename": "gradient-01.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "forward",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "taskId": "colorbench-gradient-02",
+      "family": "gradient",
+      "groupId": "gradient-02",
+      "imageFilename": "gradient-02.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "reverse",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "taskId": "colorbench-gradient-03",
+      "family": "gradient",
+      "groupId": "gradient-03",
+      "imageFilename": "gradient-03.png",
+      "groundTruth": {
+        "choice": "C"
+      },
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "forward",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "taskId": "colorbench-gradient-04",
+      "family": "gradient",
+      "groupId": "gradient-04",
+      "imageFilename": "gradient-04.png",
+      "groundTruth": {
+        "choice": "D"
+      },
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "reverse",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "taskId": "colorbench-gradient-05",
+      "family": "gradient",
+      "groupId": "gradient-05",
+      "imageFilename": "gradient-05.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "forward",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "taskId": "colorbench-gradient-06",
+      "family": "gradient",
+      "groupId": "gradient-06",
+      "imageFilename": "gradient-06.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "reverse",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "taskId": "colorbench-gradient-07",
+      "family": "gradient",
+      "groupId": "gradient-07",
+      "imageFilename": "gradient-07.png",
+      "groundTruth": {
+        "choice": "C"
+      },
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "forward",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "taskId": "colorbench-gradient-08",
+      "family": "gradient",
+      "groupId": "gradient-08",
+      "imageFilename": "gradient-08.png",
+      "groundTruth": {
+        "choice": "D"
+      },
+      "design": {
+        "axis": "spatial-color-progression",
+        "difficulty": "reverse",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "exact-color-field",
+          "interpolation": "encoded-srgb-linear-columns",
+          "width": 240
+        },
+        "histogramPreservingDistractors": true
+      }
+    },
+    {
+      "taskId": "colorbench-hsl-01",
+      "family": "hsl",
+      "groupId": "numeric-01",
+      "imageFilename": "numeric-01.png",
+      "groundTruth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-hsl-02",
+      "family": "hsl",
+      "groupId": "numeric-02",
+      "imageFilename": "numeric-02.png",
+      "groundTruth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          38,
+          112,
+          190
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-hsl-03",
+      "family": "hsl",
+      "groupId": "numeric-03",
+      "imageFilename": "numeric-03.png",
+      "groundTruth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-hsl-04",
+      "family": "hsl",
+      "groupId": "numeric-04",
+      "imageFilename": "numeric-04.png",
+      "groundTruth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          185,
+          135,
+          45
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-hsl-05",
+      "family": "hsl",
+      "groupId": "numeric-05",
+      "imageFilename": "numeric-05.png",
+      "groundTruth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-hsl-06",
+      "family": "hsl",
+      "groupId": "numeric-06",
+      "imageFilename": "numeric-06.png",
+      "groundTruth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          22,
+          48,
+          75
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-hsl-07",
+      "family": "hsl",
+      "groupId": "numeric-07",
+      "imageFilename": "numeric-07.png",
+      "groundTruth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-hsl-08",
+      "family": "hsl",
+      "groupId": "numeric-08",
+      "imageFilename": "numeric-08.png",
+      "groundTruth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "achromatic",
+        "sourceRgb": [
+          128,
+          128,
+          128
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-hue-01",
+      "family": "hue",
+      "groupId": "hue-01",
+      "imageFilename": "hue-01.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "fixed-lightness-chroma",
+        "sourceRgb": [
+          185,
+          125,
+          120
+        ],
+        "intendedHue": 25,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "taskId": "colorbench-hue-02",
+      "family": "hue",
+      "groupId": "hue-02",
+      "imageFilename": "hue-02.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "fixed-lightness-chroma",
+        "sourceRgb": [
+          173,
+          135,
+          92
+        ],
+        "intendedHue": 70,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "taskId": "colorbench-hue-03",
+      "family": "hue",
+      "groupId": "hue-03",
+      "imageFilename": "hue-03.png",
+      "groundTruth": {
+        "choice": "C"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "fixed-lightness-chroma",
+        "sourceRgb": [
+          141,
+          149,
+          95
+        ],
+        "intendedHue": 115,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "taskId": "colorbench-hue-04",
+      "family": "hue",
+      "groupId": "hue-04",
+      "imageFilename": "hue-04.png",
+      "groundTruth": {
+        "choice": "D"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "fixed-lightness-chroma",
+        "sourceRgb": [
+          101,
+          158,
+          127
+        ],
+        "intendedHue": 160,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "taskId": "colorbench-hue-05",
+      "family": "hue",
+      "groupId": "hue-05",
+      "imageFilename": "hue-05.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "varying-lightness-chroma",
+        "sourceRgb": [
+          82,
+          157,
+          165
+        ],
+        "intendedHue": 205,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "taskId": "colorbench-hue-06",
+      "family": "hue",
+      "groupId": "hue-06",
+      "imageFilename": "hue-06.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "varying-lightness-chroma",
+        "sourceRgb": [
+          108,
+          147,
+          188
+        ],
+        "intendedHue": 250,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "taskId": "colorbench-hue-07",
+      "family": "hue",
+      "groupId": "hue-07",
+      "imageFilename": "hue-07.png",
+      "groundTruth": {
+        "choice": "C"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "varying-lightness-chroma",
+        "sourceRgb": [
+          146,
+          134,
+          185
+        ],
+        "intendedHue": 295,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "taskId": "colorbench-hue-08",
+      "family": "hue",
+      "groupId": "hue-08",
+      "imageFilename": "hue-08.png",
+      "groundTruth": {
+        "choice": "D"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "varying-lightness-chroma",
+        "sourceRgb": [
+          175,
+          125,
+          158
+        ],
+        "intendedHue": 340,
+        "reference": {
+          "kind": "hue-reference",
+          "minimumDistractorDegrees": 70
+        },
+        "humanAgreementMeasured": false
+      }
+    },
+    {
+      "taskId": "colorbench-lightness-01",
+      "family": "lightness",
+      "groupId": "lightness-01",
+      "imageFilename": "lightness-01.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "direction": "lighter",
+        "intendedHue": 25,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.7412252673769428,
+            "c": 0,
+            "h": 0
+          },
+          {
+            "l": 0.4996955681708059,
+            "c": 0,
+            "h": 0
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-lightness-02",
+      "family": "lightness",
+      "groupId": "lightness-02",
+      "imageFilename": "lightness-02.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "direction": "lighter",
+        "intendedHue": 70,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.4996955681708059,
+            "c": 0,
+            "h": 0
+          },
+          {
+            "l": 0.7412252673769428,
+            "c": 0,
+            "h": 0
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-lightness-03",
+      "family": "lightness",
+      "groupId": "lightness-03",
+      "imageFilename": "lightness-03.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "direction": "darker",
+        "intendedHue": 115,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.49891616012838524,
+            "c": 0.05922310438235577,
+            "h": 114.38606614948787
+          },
+          {
+            "l": 0.7402620609408345,
+            "c": 0.06091233939707218,
+            "h": 115.25435016314839
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-lightness-04",
+      "family": "lightness",
+      "groupId": "lightness-04",
+      "imageFilename": "lightness-04.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "direction": "darker",
+        "intendedHue": 160,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.73998247555987,
+            "c": 0.060101740993747536,
+            "h": 160.16882714274823
+          },
+          {
+            "l": 0.5002151547471297,
+            "c": 0.060043175059629514,
+            "h": 159.2706163780324
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-lightness-05",
+      "family": "lightness",
+      "groupId": "lightness-05",
+      "imageFilename": "lightness-05.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "direction": "lighter",
+        "intendedHue": 205,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.69125136622084,
+            "c": 0.06009702025120797,
+            "h": 204.2563504938344
+          },
+          {
+            "l": 0.5904879088925954,
+            "c": 0.0597210143812245,
+            "h": 204.4736148984962
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-lightness-06",
+      "family": "lightness",
+      "groupId": "lightness-06",
+      "imageFilename": "lightness-06.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "direction": "lighter",
+        "intendedHue": 250,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.5891883156308646,
+            "c": 0.0601651307604451,
+            "h": 250.4887381546513
+          },
+          {
+            "l": 0.6904476521845887,
+            "c": 0.06043366221182862,
+            "h": 249.50087903731665
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-lightness-07",
+      "family": "lightness",
+      "groupId": "lightness-07",
+      "imageFilename": "lightness-07.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "direction": "darker",
+        "intendedHue": 295,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.5888069503612579,
+            "c": 0.061148009568141794,
+            "h": 294.77024517217313
+          },
+          {
+            "l": 0.6894471311695753,
+            "c": 0.06041680147019484,
+            "h": 295.95850500955015
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-lightness-08",
+      "family": "lightness",
+      "groupId": "lightness-08",
+      "imageFilename": "lightness-08.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "direction": "darker",
+        "intendedHue": 340,
+        "reference": {
+          "kind": "dark-to-light",
+          "colors": [
+            [
+              48,
+              48,
+              48
+            ],
+            [
+              96,
+              96,
+              96
+            ],
+            [
+              144,
+              144,
+              144
+            ],
+            [
+              192,
+              192,
+              192
+            ],
+            [
+              232,
+              232,
+              232
+            ]
+          ]
+        },
+        "decodedOptionOklch": [
+          {
+            "l": 0.6891077749780568,
+            "c": 0.05986755485410589,
+            "h": 339.70168248188224
+          },
+          {
+            "l": 0.5891685644016678,
+            "c": 0.06123983659653297,
+            "h": 339.2407726858251
+          }
+        ]
+      }
+    },
+    {
+      "taskId": "colorbench-matching-01",
+      "family": "matching",
+      "groupId": "match-binding-01",
+      "imageFilename": "matching-01.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "sourceRgb": [
+          172,
+          132,
+          128
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 25
+        },
+        "intendedSeparation": 0.08,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-matching-02",
+      "family": "matching",
+      "groupId": "match-binding-02",
+      "imageFilename": "matching-02.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          163,
+          138,
+          110
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 70
+        },
+        "intendedSeparation": 0.012,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-matching-03",
+      "family": "matching",
+      "groupId": "match-binding-03",
+      "imageFilename": "matching-03.png",
+      "groundTruth": {
+        "choice": "C"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "wide",
+        "sourceRgb": [
+          142,
+          147,
+          112
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 115
+        },
+        "intendedSeparation": 35,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-matching-04",
+      "family": "matching",
+      "groupId": "match-binding-04",
+      "imageFilename": "matching-04.png",
+      "groundTruth": {
+        "choice": "D"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          117,
+          153,
+          133
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 160
+        },
+        "intendedSeparation": 0.04,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-matching-05",
+      "family": "matching",
+      "groupId": "match-binding-05",
+      "imageFilename": "matching-05.png",
+      "groundTruth": {
+        "choice": "A"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "wide",
+        "sourceRgb": [
+          107,
+          152,
+          158
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 205
+        },
+        "intendedSeparation": 0.025,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-matching-06",
+      "family": "matching",
+      "groupId": "match-binding-06",
+      "imageFilename": "matching-06.png",
+      "groundTruth": {
+        "choice": "B"
+      },
+      "design": {
+        "axis": "hue",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          120,
+          146,
+          173
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 250
+        },
+        "intendedSeparation": 15,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-matching-07",
+      "family": "matching",
+      "groupId": "match-binding-07",
+      "imageFilename": "matching-07.png",
+      "groundTruth": {
+        "choice": "C"
+      },
+      "design": {
+        "axis": "lightness",
+        "difficulty": "wide",
+        "sourceRgb": [
+          145,
+          138,
+          171
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 295
+        },
+        "intendedSeparation": 0.08,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-matching-08",
+      "family": "matching",
+      "groupId": "match-binding-08",
+      "imageFilename": "matching-08.png",
+      "groundTruth": {
+        "choice": "D"
+      },
+      "design": {
+        "axis": "chroma",
+        "difficulty": "narrow",
+        "sourceRgb": [
+          165,
+          132,
+          153
+        ],
+        "pairedFamily": "binding",
+        "intendedTargetOklch": {
+          "l": 0.65,
+          "c": 0.05,
+          "h": 340
+        },
+        "intendedSeparation": 0.012,
+        "reference": {
+          "kind": "exact-visible-color",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-oklch-01",
+      "family": "oklch",
+      "groupId": "numeric-01",
+      "imageFilename": "numeric-01.png",
+      "groundTruth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-oklch-02",
+      "family": "oklch",
+      "groupId": "numeric-02",
+      "imageFilename": "numeric-02.png",
+      "groundTruth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          38,
+          112,
+          190
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-oklch-03",
+      "family": "oklch",
+      "groupId": "numeric-03",
+      "imageFilename": "numeric-03.png",
+      "groundTruth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-oklch-04",
+      "family": "oklch",
+      "groupId": "numeric-04",
+      "imageFilename": "numeric-04.png",
+      "groundTruth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          185,
+          135,
+          45
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-oklch-05",
+      "family": "oklch",
+      "groupId": "numeric-05",
+      "imageFilename": "numeric-05.png",
+      "groundTruth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-oklch-06",
+      "family": "oklch",
+      "groupId": "numeric-06",
+      "imageFilename": "numeric-06.png",
+      "groundTruth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          22,
+          48,
+          75
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-oklch-07",
+      "family": "oklch",
+      "groupId": "numeric-07",
+      "imageFilename": "numeric-07.png",
+      "groundTruth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-oklch-08",
+      "family": "oklch",
+      "groupId": "numeric-08",
+      "imageFilename": "numeric-08.png",
+      "groundTruth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "achromatic",
+        "sourceRgb": [
+          128,
+          128,
+          128
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-rgb-01",
+      "family": "rgb",
+      "groupId": "numeric-01",
+      "imageFilename": "numeric-01.png",
+      "groundTruth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          192,
+          64,
+          80
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-rgb-02",
+      "family": "rgb",
+      "groupId": "numeric-02",
+      "imageFilename": "numeric-02.png",
+      "groundTruth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          38,
+          112,
+          190
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-rgb-03",
+      "family": "rgb",
+      "groupId": "numeric-03",
+      "imageFilename": "numeric-03.png",
+      "groundTruth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          60,
+          140,
+          100
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-rgb-04",
+      "family": "rgb",
+      "groupId": "numeric-04",
+      "imageFilename": "numeric-04.png",
+      "groundTruth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          185,
+          135,
+          45
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-rgb-05",
+      "family": "rgb",
+      "groupId": "numeric-05",
+      "imageFilename": "numeric-05.png",
+      "groundTruth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          135,
+          85,
+          175
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-rgb-06",
+      "family": "rgb",
+      "groupId": "numeric-06",
+      "imageFilename": "numeric-06.png",
+      "groundTruth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          22,
+          48,
+          75
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-rgb-07",
+      "family": "rgb",
+      "groupId": "numeric-07",
+      "imageFilename": "numeric-07.png",
+      "groundTruth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "chromatic",
+        "sourceRgb": [
+          225,
+          215,
+          188
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    },
+    {
+      "taskId": "colorbench-rgb-08",
+      "family": "rgb",
+      "groupId": "numeric-08",
+      "imageFilename": "numeric-08.png",
+      "groundTruth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "design": {
+        "axis": "numeric-estimation",
+        "difficulty": "achromatic",
+        "sourceRgb": [
+          128,
+          128,
+          128
+        ],
+        "reference": {
+          "kind": "unreferenced-estimation",
+          "neutralSurround": [
+            238,
+            238,
+            238
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2794 @@
+{
+  "total_tasks": 72,
+  "expected_task_count": 72,
+  "families": {
+    "matching": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 7,
+      "accuracy": 0.875,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 1,
+          "A": 1
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "lightness": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "chroma": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 4
+        }
+      }
+    },
+    "hue": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "binding": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "gradient": {
+      "kind": "choice",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "rgb": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 92.1456165996811,
+      "mean_delta_e_ok": 0.015708766800637795,
+      "median_delta_e_ok": 0.014964599255627905,
+      "p90_delta_e_ok": 0.02666260432923885,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "b": 3.25,
+        "g": 4.625,
+        "r": 4.875
+      },
+      "component_known_count": {
+        "b": 8,
+        "g": 8,
+        "r": 8
+      }
+    },
+    "hsl": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 92.27032760308954,
+      "mean_delta_e_ok": 0.015459344793820913,
+      "median_delta_e_ok": 0.015469415940338387,
+      "p90_delta_e_ok": 0.02629785887572231,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 1.0524236759305592,
+        "l": 1.3499999999999983,
+        "s": 2.06228075283732
+      },
+      "component_known_count": {
+        "h": 7,
+        "l": 8,
+        "s": 8
+      }
+    },
+    "oklch": {
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 91.97508421252179,
+      "mean_delta_e_ok": 0.016049831574956437,
+      "median_delta_e_ok": 0.015147528325528643,
+      "p90_delta_e_ok": 0.0259887368014986,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "c": 0.002686263961613279,
+        "h": 1.3385529307689692,
+        "l": 0.015076009878795774
+      },
+      "component_known_count": {
+        "c": 8,
+        "h": 7,
+        "l": 8
+      }
+    }
+  },
+  "avg_latency_sec": 5.584476313584471,
+  "model_name": "gpt-5.6-sol",
+  "provider": "openai",
+  "timestamp": "2026-09-13T02:44:45.073254+00:00",
+  "grading_version": "2",
+  "evaluation_protocol": "f77174aee4df2f17eaab4474b1a3fa36dc70d6f6ec250182b26895f0e660bf25",
+  "cohort_sha256": "2bb48882c03ccd9d033220219f0d162cbaecfc527b0e3b3b1c91d7c7a976be80",
+  "status": "complete",
+  "tasks": [
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"l\":0.553,\"c\":0.141,\"h\":307.8}",
+      "prediction": {
+        "l": 0.553,
+        "c": 0.141,
+        "h": 307.8
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.41538151264481,
+      "delta_e_ok": 0.009169236974710376,
+      "component_errors": {
+        "l": 0.008906642874092374,
+        "c": 0.002125551628440636,
+        "h": 0.19285903953192474
+      },
+      "out_of_srgb": false,
+      "latency_sec": 28.722723487007897,
+      "input_tokens": 739,
+      "output_tokens": 1558,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.034116,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:21.046745+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"h\":351,\"s\":51,\"l\":50}",
+      "prediction": {
+        "h": 351.0,
+        "s": 51.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.78340210614684,
+      "delta_e_ok": 0.004433195787706342,
+      "component_errors": {
+        "h": 1.5,
+        "s": 0.6062992125984294,
+        "l": 0.19607843137254832
+      },
+      "out_of_srgb": false,
+      "latency_sec": 7.295866437023506,
+      "input_tokens": 736,
+      "output_tokens": 380,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.010544,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:22.301392+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-06",
+      "family": "rgb",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"r\":28,\"g\":55,\"b\":79}",
+      "prediction": {
+        "r": 28,
+        "g": 55,
+        "b": 79
+      },
+      "valid": true,
+      "correct": null,
+      "score": 87.43156303366247,
+      "delta_e_ok": 0.02513687393267505,
+      "component_errors": {
+        "r": 6,
+        "g": 7,
+        "b": 4
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.887604336021468,
+      "input_tokens": 709,
+      "output_tokens": 101,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.004856,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:29.906401+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-08",
+      "family": "rgb",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"r\":137,\"g\":137,\"b\":137}",
+      "prediction": {
+        "r": 137,
+        "g": 137,
+        "b": 137
+      },
+      "valid": true,
+      "correct": null,
+      "score": 84.88867903938947,
+      "delta_e_ok": 0.03022264192122106,
+      "component_errors": {
+        "r": 9,
+        "g": 9,
+        "b": 9
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.259608895983547,
+      "input_tokens": 709,
+      "output_tokens": 132,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.005476,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:40.132865+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-07",
+      "family": "matching",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.722845279960893,
+      "input_tokens": 694,
+      "output_tokens": 74,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.004256,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:45.485332+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-04.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.203185830032453,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.002988,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:33:52.656521+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-04",
+      "family": "rgb",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"r\":190,\"g\":139,\"b\":45}",
+      "prediction": {
+        "r": 190,
+        "g": 139,
+        "b": 45
+      },
+      "valid": true,
+      "correct": null,
+      "score": 93.00607513199648,
+      "delta_e_ok": 0.013987849736007037,
+      "component_errors": {
+        "r": 5,
+        "g": 4,
+        "b": 0
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.960578418977093,
+      "input_tokens": 709,
+      "output_tokens": 117,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.005176,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:01.892593+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-03",
+      "family": "hsl",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"h\":150,\"s\":39,\"l\":41}",
+      "prediction": {
+        "h": 150.0,
+        "s": 39.0,
+        "l": 41.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.68151694815701,
+      "delta_e_ok": 0.016636966103685962,
+      "component_errors": {
+        "h": 0.0,
+        "s": 1.0,
+        "l": 1.7843137254901933
+      },
+      "out_of_srgb": false,
+      "latency_sec": 10.062525393033866,
+      "input_tokens": 736,
+      "output_tokens": 466,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.012264,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:15.249482+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-08",
+      "family": "matching",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.566894287010655,
+      "input_tokens": 694,
+      "output_tokens": 136,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.005496,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:23.619163+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-07",
+      "family": "chroma",
+      "group_id": "chroma-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-07.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.889779497985728,
+      "input_tokens": 693,
+      "output_tokens": 42,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003612,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:32.841512+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-07",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-07.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9112076909514144,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.002988,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:39.964172+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-08",
+      "family": "hsl",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"h\":0,\"s\":0,\"l\":54.1}",
+      "prediction": {
+        "h": 0.0,
+        "s": 0.0,
+        "l": 54.1
+      },
+      "valid": true,
+      "correct": null,
+      "score": 83.29593693550842,
+      "delta_e_ok": 0.03340812612898316,
+      "component_errors": {
+        "h": null,
+        "s": 0.0,
+        "l": 3.903921568627453
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.8364389879861847,
+      "input_tokens": 736,
+      "output_tokens": 207,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.007084,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:50.451860+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.481980161974207,
+      "input_tokens": 695,
+      "output_tokens": 216,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.0071,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:34:59.679308+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.011630710971076,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.002988,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:06.024533+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-04",
+      "family": "chroma",
+      "group_id": "chroma-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-04.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9847832909435965,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003052,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:12.952441+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-05",
+      "family": "rgb",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"r\":137,\"g\":87,\"b\":177}",
+      "prediction": {
+        "r": 137,
+        "g": 87,
+        "b": 177
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.69262527552422,
+      "delta_e_ok": 0.006614749448951551,
+      "component_errors": {
+        "r": 2,
+        "g": 2,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.1573215550160967,
+      "input_tokens": 709,
+      "output_tokens": 146,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.005756,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:18.979974+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-08",
+      "family": "binding",
+      "group_id": "match-binding-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.1624629339785315,
+      "input_tokens": 695,
+      "output_tokens": 97,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00472,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:25.138740+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-03",
+      "family": "chroma",
+      "group_id": "chroma-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-03.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8945943989674561,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003052,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:35.647320+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-08",
+      "family": "chroma",
+      "group_id": "chroma-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-08.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5431775110191666,
+      "input_tokens": 693,
+      "output_tokens": 50,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003772,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:43.173805+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-07",
+      "family": "rgb",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"r\":226,\"g\":217,\"b\":190}",
+      "prediction": {
+        "r": 226,
+        "g": 217,
+        "b": 190
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.28830884654126,
+      "delta_e_ok": 0.005423382306917486,
+      "component_errors": {
+        "r": 1,
+        "g": 2,
+        "b": 2
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.9646675449912436,
+      "input_tokens": 709,
+      "output_tokens": 117,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.005176,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:35:52.542306+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-08",
+      "family": "oklch",
+      "group_id": "numeric-08",
+      "ground_truth": {
+        "rgb": [
+          128,
+          128,
+          128
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-08.png",
+      "raw_prediction": "{\"l\":0.633,\"c\":0,\"h\":0}",
+      "prediction": {
+        "l": 0.633,
+        "c": 0.0,
+        "h": 0.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 83.43540085355508,
+      "delta_e_ok": 0.03312919829288984,
+      "component_errors": {
+        "l": 0.0331291982928823,
+        "c": 0.0,
+        "h": null
+      },
+      "out_of_srgb": false,
+      "latency_sec": 7.06126512796618,
+      "input_tokens": 739,
+      "output_tokens": 341,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.009776,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:07.064987+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-05",
+      "family": "hue",
+      "group_id": "hue-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7503109279787168,
+      "input_tokens": 707,
+      "output_tokens": 55,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003928,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:11.716886+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-03",
+      "family": "lightness",
+      "group_id": "lightness-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-03.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8912169450195506,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.002988,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:18.567866+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-08",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-08.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.607066240045242,
+      "input_tokens": 677,
+      "output_tokens": 45,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003608,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:23.122071+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-05",
+      "family": "chroma",
+      "group_id": "chroma-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.1542560330126435,
+      "input_tokens": 693,
+      "output_tokens": 37,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003512,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:27.119828+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-08",
+      "family": "gradient",
+      "group_id": "gradient-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.109048285987228,
+      "input_tokens": 705,
+      "output_tokens": 215,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00712,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:36.000446+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-03",
+      "family": "binding",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.1626372860046104,
+      "input_tokens": 695,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00306,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:39.919984+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-01",
+      "family": "binding",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.4890992000000551,
+      "input_tokens": 695,
+      "output_tokens": 52,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00382,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:48.709917+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-02",
+      "family": "gradient",
+      "group_id": "gradient-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.520536888972856,
+      "input_tokens": 705,
+      "output_tokens": 64,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.0041,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:36:55.962474+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"h\":209,\"s\":49,\"l\":21}",
+      "prediction": {
+        "h": 209.0,
+        "s": 49.0,
+        "l": 21.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 88.37469925926617,
+      "delta_e_ok": 0.023250601481467664,
+      "component_errors": {
+        "h": 1.5660377358490507,
+        "s": 5.639175257731964,
+        "l": 1.9803921568627452
+      },
+      "out_of_srgb": false,
+      "latency_sec": 5.5736004280042835,
+      "input_tokens": 736,
+      "output_tokens": 245,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.007844,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:09.530255+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-02",
+      "family": "hsl",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"h\":210,\"s\":59.8,\"l\":45.9}",
+      "prediction": {
+        "h": 210.0,
+        "s": 59.8,
+        "l": 45.9
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.16664355439248,
+      "delta_e_ok": 0.01766671289121504,
+      "component_errors": {
+        "h": 0.7894736842105488,
+        "s": 6.86666666666666,
+        "l": 1.1941176470588175
+      },
+      "out_of_srgb": false,
+      "latency_sec": 8.412894742039498,
+      "input_tokens": 736,
+      "output_tokens": 406,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.011064,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:25.987385+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-04",
+      "family": "binding",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3546535359928384,
+      "input_tokens": 695,
+      "output_tokens": 95,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00468,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:31.837057+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-03",
+      "family": "matching",
+      "group_id": "match-binding-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.328062521002721,
+      "input_tokens": 694,
+      "output_tokens": 37,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003516,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:39.437646+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-05",
+      "family": "hsl",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-05.png",
+      "raw_prediction": "{\"h\":275.2,\"s\":34.9,\"l\":51.2}",
+      "prediction": {
+        "h": 275.2,
+        "s": 34.9,
+        "l": 51.2
+      },
+      "valid": true,
+      "correct": null,
+      "score": 95.82204974177489,
+      "delta_e_ok": 0.008355900516450201,
+      "component_errors": {
+        "h": 1.8666666666666742,
+        "s": 1.1000000000000014,
+        "l": 0.21960784313726123
+      },
+      "out_of_srgb": false,
+      "latency_sec": 7.73137170803966,
+      "input_tokens": 736,
+      "output_tokens": 291,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.008764,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:53.928375+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-02",
+      "family": "lightness",
+      "group_id": "lightness-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9021202339790761,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.002988,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:37:57.132957+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.365315840987023,
+      "input_tokens": 705,
+      "output_tokens": 58,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00398,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:23.114061+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"l\":0.6704,\"c\":0.1229,\"h\":78.5}",
+      "prediction": {
+        "l": 0.6704,
+        "c": 0.1229,
+        "h": 78.5
+      },
+      "valid": true,
+      "correct": null,
+      "score": 93.01674384301624,
+      "delta_e_ok": 0.013966512313967498,
+      "component_errors": {
+        "l": 0.013545762438994302,
+        "c": 0.0032618143694579937,
+        "h": 0.4572279593992903
+      },
+      "out_of_srgb": false,
+      "latency_sec": 35.89042863401119,
+      "input_tokens": 739,
+      "output_tokens": 1785,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.038656,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:39.754473+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-04.png",
+      "raw_prediction": "{\"h\":39,\"s\":62,\"l\":46}",
+      "prediction": {
+        "h": 39.0,
+        "s": 62.0,
+        "l": 46.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 92.8490671115046,
+      "delta_e_ok": 0.014301865776990812,
+      "component_errors": {
+        "h": 0.4285714285714448,
+        "s": 1.1304347826087024,
+        "l": 0.9019607843137223
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.272478224011138,
+      "input_tokens": 736,
+      "output_tokens": 169,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.006324,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:44.435831+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-03",
+      "family": "rgb",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"r\":64,\"g\":145,\"b\":105}",
+      "prediction": {
+        "r": 64,
+        "g": 145,
+        "b": 105
+      },
+      "valid": true,
+      "correct": null,
+      "score": 92.02932561237562,
+      "delta_e_ok": 0.015941348775248772,
+      "component_errors": {
+        "r": 4,
+        "g": 5,
+        "b": 5
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.8654484569560736,
+      "input_tokens": 709,
+      "output_tokens": 161,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.006056,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:38:56.252900+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-05",
+      "family": "lightness",
+      "group_id": "lightness-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6803266790229827,
+      "input_tokens": 677,
+      "output_tokens": 45,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003608,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:04.007962+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-04",
+      "family": "hue",
+      "group_id": "hue-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2264872720115818,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003108,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:09.229019+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-07",
+      "family": "hsl",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"h\":45,\"s\":38.3,\"l\":81.6}",
+      "prediction": {
+        "h": 45.0,
+        "s": 38.3,
+        "l": 81.6
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.18930516796593,
+      "delta_e_ok": 0.005621389664068125,
+      "component_errors": {
+        "h": 1.2162162162161962,
+        "s": 0.1556701030928025,
+        "l": 0.6196078431372456
+      },
+      "out_of_srgb": false,
+      "latency_sec": 6.282766310032457,
+      "input_tokens": 736,
+      "output_tokens": 278,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.008504,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:19.351162+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-06",
+      "family": "gradient",
+      "group_id": "gradient-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.8185218989965506,
+      "input_tokens": 705,
+      "output_tokens": 66,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00414,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:25.056736+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-05",
+      "family": "binding",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.0832148430054076,
+      "input_tokens": 695,
+      "output_tokens": 66,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.0041,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:31.072312+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-05",
+      "family": "matching",
+      "group_id": "match-binding-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5972760550212115,
+      "input_tokens": 694,
+      "output_tokens": 53,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003836,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:39.519229+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.4185419090208597,
+      "input_tokens": 705,
+      "output_tokens": 104,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.0049,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:46.268996+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-02",
+      "family": "chroma",
+      "group_id": "chroma-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.1547853840165772,
+      "input_tokens": 693,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003052,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:39:53.901146+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-01",
+      "family": "rgb",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"r\":190,\"g\":63,\"b\":81}",
+      "prediction": {
+        "r": 190,
+        "g": 63,
+        "b": 81
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.42460534309181,
+      "delta_e_ok": 0.00515078931381636,
+      "component_errors": {
+        "r": 2,
+        "g": 1,
+        "b": 1
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.769520507019479,
+      "input_tokens": 709,
+      "output_tokens": 156,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.005956,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:02.996542+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-06",
+      "family": "lightness",
+      "group_id": "lightness-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/lightness-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.143343180010561,
+      "input_tokens": 677,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.002988,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:08.065903+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-03",
+      "family": "hue",
+      "group_id": "hue-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.9785721549997106,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003108,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:13.820840+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.096554008021485,
+      "input_tokens": 705,
+      "output_tokens": 68,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00418,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:19.924016+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.017824680020567,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003108,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:25.426098+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-07",
+      "family": "binding",
+      "group_id": "match-binding-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.871255358972121,
+      "input_tokens": 695,
+      "output_tokens": 68,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00414,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:33.544042+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-01",
+      "family": "matching",
+      "group_id": "match-binding-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.2721981380018406,
+      "input_tokens": 694,
+      "output_tokens": 90,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.004576,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:40.079886+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-01",
+      "family": "oklch",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-01.png",
+      "raw_prediction": "{\"l\":0.56,\"c\":0.164,\"h\":15.2}",
+      "prediction": {
+        "l": 0.56,
+        "c": 0.164,
+        "h": 15.2
+      },
+      "valid": true,
+      "correct": null,
+      "score": 96.96469620080259,
+      "delta_e_ok": 0.006070607598394821,
+      "component_errors": {
+        "l": 0.003073914022002966,
+        "c": 0.0008798932594519804,
+        "h": 1.807770759988557
+      },
+      "out_of_srgb": false,
+      "latency_sec": 15.370818054012489,
+      "input_tokens": 739,
+      "output_tokens": 793,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.018816,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:40:59.916303+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-03",
+      "family": "gradient",
+      "group_id": "gradient-03",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.1771132170106284,
+      "input_tokens": 705,
+      "output_tokens": 83,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00448,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:10.075907+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-01",
+      "family": "chroma",
+      "group_id": "chroma-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6748228470096365,
+      "input_tokens": 693,
+      "output_tokens": 39,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003552,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:19.481225+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-01",
+      "family": "hue",
+      "group_id": "hue-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3010438400087878,
+      "input_tokens": 707,
+      "output_tokens": 39,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003608,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:26.673459+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-06",
+      "family": "chroma",
+      "group_id": "chroma-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/chroma-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.2487757970229723,
+      "input_tokens": 693,
+      "output_tokens": 51,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003792,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:41:32.875113+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"l\":0.56,\"c\":0.13,\"h\":251.1}",
+      "prediction": {
+        "l": 0.56,
+        "c": 0.13,
+        "h": 251.1
+      },
+      "valid": true,
+      "correct": null,
+      "score": 88.5357304902631,
+      "delta_e_ok": 0.02292853901947378,
+      "component_errors": {
+        "l": 0.019346700659183202,
+        "c": 0.011403039047677643,
+        "h": 1.9547281413394728
+      },
+      "out_of_srgb": false,
+      "latency_sec": 21.120593069004826,
+      "input_tokens": 739,
+      "output_tokens": 1140,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.025756,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:15.935982+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-06",
+      "family": "hue",
+      "group_id": "hue-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6329739430220798,
+      "input_tokens": 707,
+      "output_tokens": 61,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.004048,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:22.984604+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-03.png",
+      "raw_prediction": "{\"l\":0.5952,\"c\":0.1014,\"h\":159.45}",
+      "prediction": {
+        "l": 0.5952,
+        "c": 0.1014,
+        "h": 159.45
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.8357278314551,
+      "delta_e_ok": 0.016328544337089787,
+      "component_errors": {
+        "l": 0.016297517786385773,
+        "c": 0.0006946968582578206,
+        "h": 0.41264947183611866
+      },
+      "out_of_srgb": false,
+      "latency_sec": 48.62091366504319,
+      "input_tokens": 739,
+      "output_tokens": 2305,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.049056,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:24.357568+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-07",
+      "family": "gradient",
+      "group_id": "gradient-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/gradient-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.5835487139993347,
+      "input_tokens": 705,
+      "output_tokens": 88,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00458,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:42:34.207323+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-07",
+      "family": "hue",
+      "group_id": "hue-07",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.4919087620219216,
+      "input_tokens": 707,
+      "output_tokens": 47,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003768,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:00.944483+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-04",
+      "family": "matching",
+      "group_id": "match-binding-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.555322084983345,
+      "input_tokens": 694,
+      "output_tokens": 80,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.004376,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:13.006990+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-06",
+      "family": "oklch",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-06.png",
+      "raw_prediction": "{\"l\":0.324,\"c\":0.056,\"h\":248.2}",
+      "prediction": {
+        "l": 0.324,
+        "c": 0.056,
+        "h": 248.2
+      },
+      "valid": true,
+      "correct": null,
+      "score": 89.30987177262725,
+      "delta_e_ok": 0.021380256454745505,
+      "component_errors": {
+        "l": 0.02100106454498063,
+        "c": 0.002736737775342314,
+        "h": 2.9267650681498765
+      },
+      "out_of_srgb": false,
+      "latency_sec": 34.73599395796191,
+      "input_tokens": 739,
+      "output_tokens": 1695,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.036856,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:17.447166+00:00"
+    },
+    {
+      "task_id": "colorbench-rgb-02",
+      "family": "rgb",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "09fd259e1933fb6529f0be5f0819e7edcbad485141fc78abea1ceadc70f0cf55",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-02.png",
+      "raw_prediction": "{\"r\":48,\"g\":119,\"b\":187}",
+      "prediction": {
+        "r": 48,
+        "g": 119,
+        "b": 187
+      },
+      "valid": true,
+      "correct": null,
+      "score": 88.40375051486748,
+      "delta_e_ok": 0.02319249897026504,
+      "component_errors": {
+        "r": 10,
+        "g": 7,
+        "b": 3
+      },
+      "out_of_srgb": false,
+      "latency_sec": 8.031909623998217,
+      "input_tokens": 709,
+      "output_tokens": 306,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.008956,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:47.952007+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-07",
+      "family": "oklch",
+      "group_id": "numeric-07",
+      "ground_truth": {
+        "rgb": [
+          225,
+          215,
+          188
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/numeric-07.png",
+      "raw_prediction": "{\"l\":0.8854,\"c\":0.0373,\"h\":91.7}",
+      "prediction": {
+        "l": 0.8854,
+        "c": 0.0373,
+        "h": 91.7
+      },
+      "valid": true,
+      "correct": null,
+      "score": 97.28712119581004,
+      "delta_e_ok": 0.005425757608379904,
+      "component_errors": {
+        "l": 0.00530727841184464,
+        "c": 0.0003883787542778433,
+        "h": 1.6178700751375459
+      },
+      "out_of_srgb": false,
+      "latency_sec": 31.17745398194529,
+      "input_tokens": 739,
+      "output_tokens": 1774,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.038436,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:50.288966+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-02",
+      "family": "hue",
+      "group_id": "hue-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/hue-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 0.8958237690385431,
+      "input_tokens": 707,
+      "output_tokens": 14,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003108,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:51.236739+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-06",
+      "family": "binding",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/binding-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7835727929486893,
+      "input_tokens": 695,
+      "output_tokens": 52,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.00382,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:43:57.780301+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-06",
+      "family": "matching",
+      "group_id": "match-binding-06",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-06.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3642091000219807,
+      "input_tokens": 694,
+      "output_tokens": 47,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.003716,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:05.004384+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-02",
+      "family": "matching",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/matching-02.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "out_of_srgb": null,
+      "latency_sec": 12.942621071008034,
+      "input_tokens": 694,
+      "output_tokens": 532,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "gpt-5.6-sol",
+      "provider": "openai",
+      "cost_usd": 0.013416,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-13T02:44:23.702341+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "run_id": "pilot-20260913",
+  "release": "0.2.0",
+  "dataset_git_commit": "1013fdb0deb1c2a4d2df6fba3c5bc38d05cab473",
+  "dataset_fingerprint": "65414cebf600b83c2f4874cd1823f81fe6b6d8af5940e109fa2f0ef4a1b853fe",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.2/manifest.json",
+  "mock": false,
+  "runner_git_commit": "3481d5d067a6c0413f75b3d3e91956b11316b1cf",
+  "runner_git_dirty": false,
+  "created_at": "2026-09-13T02:32:52.260235+00:00",
+  "updated_at": "2026-09-13T02:44:45.005685+00:00",
+  "model_config": {
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": null,
+    "display_name": "GPT-5.6 Sol",
+    "enabled": true,
+    "id": "gpt-5.6-sol",
+    "input_per_m": 4.0,
+    "max_output_tokens": 4096,
+    "model": "gpt-5.6-sol",
+    "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+    "output_per_m": 20.0,
+    "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+    "pricing_source_url": "https://developers.openai.com/api/docs/models",
+    "provider": "openai",
+    "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+  },
+  "model_config_fingerprint": "e9c56323e22fab739cc8759d763c0705a149bee0b28088ae08172377899983a3",
+  "max_output_tokens": 4096,
+  "model_id": "gpt-5.6-sol",
+  "display_name": "GPT-5.6 Sol",
+  "pricing": {
+    "input_per_m": 4.0,
+    "output_per_m": 20.0
+  }
+}

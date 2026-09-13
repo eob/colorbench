@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__________________ test_independent_dataset_gate_is_available __________________
+
+    def test_independent_dataset_gate_is_available():
+>       assert callable(gate().require_valid_dataset)
+                        ^^^^^^
+
+tests/test_dataset_gate.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def gate():
+>       assert importlib.util.find_spec("baseline.validate_dataset") is not None, "Independent image evidence gate is missing"
+E       AssertionError: Independent image evidence gate is missing
+E       assert None is not None
+E        +  where None = <function find_spec at 0x7f7575802980>('baseline.validate_dataset')
+E        +    where <function find_spec at 0x7f7575802980> = <module 'importlib.util' (frozen)>.find_spec
+E        +      where <module 'importlib.util' (frozen)> = importlib.util
+
+tests/test_dataset_gate.py:16: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_dataset_gate.py::test_independent_dataset_gate_is_available
+1 failed in 0.06s

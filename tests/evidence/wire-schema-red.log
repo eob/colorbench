@@ -1,0 +1,205 @@
+FFFFFFFFF                                                                [100%]
+=================================== FAILURES ===================================
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[rgb-openai] _
+
+provider = 'openai', family = 'rgb'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"model": "...ct": true}}}'
+E         
+E         'minimum' is contained here:
+E         ?           ^^
+E           nteger", "minimum": 0, "maximum": 255}, "g": {"type": "integer", "minimum": 0, "maximum": 255}, "b": {"type": "integer", "minimum": 0, "maximum": 255}}, "required": ["r", "g", "b"], "additionalProperties": false}, "strict": true}}}
+E         ?           ^^^^^^^^^)
+
+tests/test_evaluator.py:31: AssertionError
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[rgb-anthropic] _
+
+provider = 'anthropic', family = 'rgb'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"model": "...": false}}}}'
+E         
+E         'minimum' is contained here:
+E         ?           ^^
+E           nteger", "minimum": 0, "maximum": 255}, "g": {"type": "integer", "minimum": 0, "maximum": 255}, "b": {"type": "integer", "minimum": 0, "maximum": 255}}, "required": ["r", "g", "b"], "additionalProperties": false}}}}
+E         ?           ^^^^^^^^^)
+
+tests/test_evaluator.py:31: AssertionError
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[rgb-google] _
+
+provider = 'google', family = 'rgb'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"contents"...ens": 1024}}'
+E         
+E         'minimum' is contained here:
+E         ?           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           nteger", "minimum": 0, "maximum": 255}, "g": {"type": "integer", "minimum": 0, "maximum": 255}, "b": {"type": "integer", "minimum": 0, "maximum": 255}}, "required": ["r", "g", "b"], "additionalProperties": false}, "maxOutputTokens": 1024}}
+E         ?           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^)
+
+tests/test_evaluator.py:31: AssertionError
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[hsl-openai] _
+
+provider = 'openai', family = 'hsl'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"model": "...ct": true}}}'
+E         
+E         'minimum' is contained here:
+E           number", "minimum": 0, "maximum": 100}, "l": {"type": "number", "minimum": 0, "maximum": 100}}, "required": ["h", "s", "l"], "additionalProperties": false}, "strict": true}}}
+E         ?           +++++++)
+
+tests/test_evaluator.py:31: AssertionError
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[hsl-anthropic] _
+
+provider = 'anthropic', family = 'hsl'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"model": "...": false}}}}'
+E         
+E         'minimum' is contained here:
+E           number", "minimum": 0, "maximum": 100}, "l": {"type": "number", "minimum": 0, "maximum": 100}}, "required": ["h", "s", "l"], "additionalProperties": false}}}}
+E         ?           +++++++)
+
+tests/test_evaluator.py:31: AssertionError
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[hsl-google] _
+
+provider = 'google', family = 'hsl'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"contents"...ens": 1024}}'
+E         
+E         'minimum' is contained here:
+E           number", "minimum": 0, "maximum": 100}, "l": {"type": "number", "minimum": 0, "maximum": 100}}, "required": ["h", "s", "l"], "additionalProperties": false}, "maxOutputTokens": 1024}}
+E         ?           +++++++)
+
+tests/test_evaluator.py:31: AssertionError
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[oklch-openai] _
+
+provider = 'openai', family = 'oklch'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"model": "...ct": true}}}'
+E         
+E         'minimum' is contained here:
+E           number", "minimum": 0, "maximum": 1}, "c": {"type": "number", "minimum": 0}, "h": {"type": "number"}}, "required": ["l", "c", "h"], "additionalProperties": false}, "strict": true}}}
+E         ?           +++++++)
+
+tests/test_evaluator.py:31: AssertionError
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[oklch-anthropic] _
+
+provider = 'anthropic', family = 'oklch'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"model": "...": false}}}}'
+E         
+E         'minimum' is contained here:
+E           number", "minimum": 0, "maximum": 1}, "c": {"type": "number", "minimum": 0}, "h": {"type": "number"}}, "required": ["l", "c", "h"], "additionalProperties": false}}}}
+E         ?           +++++++)
+
+tests/test_evaluator.py:31: AssertionError
+_ test_wire_schema_uses_the_shared_provider_supported_numeric_subset[oklch-google] _
+
+provider = 'google', family = 'oklch'
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic', 'google'])
+    @pytest.mark.parametrize('family', ['rgb', 'hsl', 'oklch'])
+    def test_wire_schema_uses_the_shared_provider_supported_numeric_subset(provider, family):
+        client = PredictionClient(provider, 'fixture-model')
+        try:
+            _, _, body = client._request('image-bytes', 'image/png', 'Frozen prompt', 'fixture-key', family)
+        finally:
+            client.close()
+        encoded = json.dumps(body)
+>       assert 'minimum' not in encoded and 'maximum' not in encoded
+E       assert ('minimum' not in '{"contents"...ens": 1024}}'
+E         
+E         'minimum' is contained here:
+E           number", "minimum": 0, "maximum": 1}, "c": {"type": "number", "minimum": 0}, "h": {"type": "number"}}, "required": ["l", "c", "h"], "additionalProperties": false}, "maxOutputTokens": 1024}}
+E         ?           +++++++)
+
+tests/test_evaluator.py:31: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[rgb-openai]
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[rgb-anthropic]
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[rgb-google]
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[hsl-openai]
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[hsl-anthropic]
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[hsl-google]
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[oklch-openai]
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[oklch-anthropic]
+FAILED tests/test_evaluator.py::test_wire_schema_uses_the_shared_provider_supported_numeric_subset[oklch-google]
+9 failed in 0.46s
