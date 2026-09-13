@@ -33,7 +33,7 @@ for family in CHOICE_FAMILIES + NUMERIC_FAMILIES:
         models.append({'id': model['model_id'], 'name': model['model_config']['display_name'], **value})
     models.sort(key=lambda model: (-(model['accuracy'] if family in CHOICE_FAMILIES else model['mean_score']), model['id']))
     slices = {}
-    for dimension in ['difficulty', 'axis', 'layout', 'same', 'direction']:
+    for dimension in ['difficulty', 'axis', 'layout', 'same', 'direction', 'intendedSeparation']:
         values = sorted({items[row['task_id']]['design'].get(dimension) for row in selected},
                         key=lambda value: (value is None, str(value)))
         if dimension not in ('difficulty', 'axis') and len([value for value in values if value is not None]) < 2:
