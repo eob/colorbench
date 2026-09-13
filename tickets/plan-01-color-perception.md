@@ -1,6 +1,6 @@
 # plan-01: ColorBench perception design
 
-- **Status:** In Review
+- **Status:** Completed
 - **Date:** 2026-09-13
 - **Assignee:** Edward Benson
 - **Branch:** `valid-01-perceptual-pilot`
@@ -391,3 +391,43 @@ separate because output representation changes reconstruction error.
 Website actual import uses source commit `58fb5dfa...`, verified source-ledger
 replay and an independent TypeScript grader. Publication main/prod PRs and
 live verification remain pending at this checkpoint.
+
+## Publication completion — 2026-09-13
+
+The first measured pilot is published at
+[edwardbenson.com/benchmarks/colorbench](https://edwardbenson.com/benchmarks/colorbench).
+It includes all nine families, the 13-model comparison, RGB/HSL/OKLCH
+reconstruction, original examples, methodology, and the measured critique.
+The final website pins source commit
+`fa05e67d2c4104963a9fb78c2355555600f11143`; the later documentation and merge
+commits do not change the sealed run or release artifacts.
+
+- [Source PR #1](https://github.com/eob/colorbench/pull/1),
+  **feat(colorbench): publish reproducible 72-question perception pilot**,
+  merged at `f3d7b720eeb9068c53d78beb05e3a1a4af73dcde` and tagged `v0.2.0`.
+- [Website main PR #1404](https://github.com/eob/kaya-web/pull/1404),
+  merged at `649e49a3d89546b3a3d1cbad00dd4c60c0b12063`.
+- [Production PR #1407](https://github.com/eob/kaya-web/pull/1407),
+  merged at `1da813cd4518facae117244028aa3c3de12c4096`.
+  Its Vercel deployment succeeded at 03:34:04 UTC.
+
+The main and production candidates each passed the seven required local
+repository validation lanes, the production app build, 40 focused tests with
+1,031 assertions, and nine browser cases. Website GitHub CI could not start
+because of the account payment/spending limit; its failed jobs had zero steps.
+The source implementation's prior CI and recorded local release validation
+passed. No test failure was treated as a successful check.
+
+Live verification at 03:34 UTC confirmed the publication and existing
+FontBench, BorderBench, GPT Fly, and Tinkering routes return HTTP 200. Family
+and model controls, numeric diagnostics, mobile layout, frozen source links,
+and social metadata work without browser errors or document overflow.
+ColorBench follows BorderBench in Tinkering. The live 1200 × 630 share card
+matches the source SHA-256
+`d57bddf2d9b549efb7fbe7891f7e384e31a64750f4e16ab581a00e28f6c8f89e`.
+
+The completed campaign remains 936 responses at an estimated $5.1151914,
+with no invalid answers, infrastructure failures, or retries. Human validation
+remains unmeasured. The one proposed improvement is the counterbalanced
+color/separation/answer-position experiment in `results/first-pilot.md`;
+it has not been implemented or run.
