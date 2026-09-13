@@ -1,9 +1,9 @@
 # plan-01: ColorBench perception design
 
-- **Status:** Planning; proposed protocol, not an implemented release
+- **Status:** In Progress; implementing and measuring the first pilot
 - **Date:** 2026-09-13
 - **Assignee:** Edward Benson
-- **Branch:** `main` (local planning record; no remote configured)
+- **Branch:** `valid-01-perceptual-pilot` (source remote not yet configured)
 - **Harness / machine:** Codex / eob-dev2; session ID not exposed
 - **Scope:** Question design, validity requirements, and implementation sequence
 
@@ -17,13 +17,15 @@ and locate colors in a rendered image. Aesthetics, semantic intent, and advice
 about what a designer should choose are outside this scope.
 
 The intended inference is performance on defined visual tasks through a model's
-image-input interface. Short instructions and a small answer vocabulary reduce
-language demands; they do not isolate an internal perceptual faculty from all
-instruction-following and provider preprocessing.
+image-input interface. Short instructions reduce language demands. Numeric
+color estimation additionally measures how a model expresses a perceived color
+in a named coordinate system; report it separately from reference matching.
+Neither task isolates an internal perceptual faculty from instruction-following
+and provider preprocessing.
 
-The initial decision is which question families deserve implementation and a
-human pilot. This plan does not establish perceptual thresholds, freeze V1, or
-authorize a paid campaign. The principal hypotheses to test are that visible
+The accepted next step is to implement and publish a first measured pilot. This
+plan does not establish perceptual thresholds or human calibration. The
+principal hypotheses to test are that visible
 references reduce vocabulary dependence, controlled distractors reveal useful
 difficulty curves, and color-to-object tasks expose errors absent in isolated
 swatches. Failure of those controls should change the question design.
@@ -61,19 +63,23 @@ strict parsing, provenance, and recorded usage before producing scored data.
 
 ## Proposed question bank
 
-One image contains the complete visual reference and one scored question.
+One image contains the target and any specified visual reference, with one scored question.
 Option identifiers are neutral letters or numbers placed outside colored areas.
 Examples below specify the operation; final prompt text must be frozen after
-the pilot. Each family has its own answer schema and chance baseline.
+the pilot. Each family has its own answer schema. Discrete families have chance
+baselines; continuous estimation requires declared baseline predictors instead.
 
 | Priority / family | Example question | Construction and ground truth |
 | --- | --- | --- |
 | Core: reference matching | “Which swatch, A–D, matches the color of R?” | Exactly one candidate duplicates R's decoded interior pixels. Equal shape, size, and surround. Distractors differ in controlled ways. Four choices; chance 25%. |
 | Core: lightness comparison | “Which patch is lighter, A or B?” | Begin with neutral grays, then fixed-hue, controlled-chroma colors. Record final color-space coordinates and human agreement. Balance both answer positions and lighter/darker question direction. Two choices; chance 50%. |
 | Core: chroma comparison | “Which patch is more colorful, using the gray-to-color example above?” | Supply a small visual explanation of the dimension. Hold intended hue and lightness fixed; vary chroma. Validate converted pixels and residual coordinate differences. Two choices; chance 50%. |
-| Pilot-gated: hue matching | “Which option has R's hue, even though its lightness or colorfulness may differ?” | Begin with fixed lightness/chroma. Then vary both independently across correct and incorrect options. Exclude near-achromatic cases. Coordinate-defined hue requires human validation before claiming perceptual equivalence. Four choices; chance 25%. |
+| Exploratory pilot: hue matching | “Which option has R's hue, even though its lightness or colorfulness may differ?” | Begin with fixed lightness/chroma. Then vary both independently across correct and incorrect options. Exclude near-achromatic cases. Coordinate-defined hue requires human validation before claiming perceptual equivalence. Four choices; chance 25%. |
 | Core: color-to-object binding | “Which numbered component has the same fill color as R?” | Exactly one matching interior fill among four neutrally labeled UI components. Distinguish fill from text and outline. Pair with a swatch-only version containing the same colors, matching fill area and positions where practical. Report transfer to UI placement; isolating binding from size/shape effects requires further controls. Four choices; chance 25%. |
-| Pilot-gated: gradient matching | “Which reference strip has the same left-to-right color progression as the target?” | Exactly one option reproduces the target's full decoded color field at equal dimensions. Include a controlled subset of reversed gradients with the same color distribution; other distractors can change transition positions and therefore distributions. Control geometry and interpolation. Do not ask for invisible CSS stop counts or syntax. Four choices; chance 25%. |
+| Exploratory pilot: gradient matching | “Which reference strip has the same left-to-right color progression as the target?” | Exactly one option reproduces the target's full decoded color field at equal dimensions. Include a controlled subset of reversed gradients with the same color distribution; other distractors can change transition positions and therefore distributions. Control geometry and interpolation. Do not ask for invisible CSS stop counts or syntax. Four choices; chance 25%. |
+| Numeric: RGB estimation | “Estimate the target's sRGB color as red, green, and blue values from 0 to 255.” | Return integer `{r,g,b}`. Ground truth is the decoded flat interior's gamma-encoded 8-bit sRGB triplet. |
+| Numeric: HSL estimation | “Estimate the target's HSL color: hue in degrees, saturation and lightness in percent.” | Return numeric `{h,s,l}`. HSL is the working interpretation of HSK; derive reference coordinates from the same decoded sRGB target. |
+| Numeric: OKLCH estimation | “Estimate the target's OKLCH color: lightness from 0 to 1, chroma as a number, and hue in degrees.” | Return numeric `{l,c,h}`. Chroma is nonnegative and is not a percentage or universally bounded by 1. Reference coordinates derive from decoded sRGB. |
 
 Matching already measures discrimination when distractors get closer. Report
 its hue/lightness/chroma manipulations and difficulty levels as slices, rather
@@ -87,7 +93,7 @@ and should not displace the basic color experiments.
 
 ## References and fair quantization
 
-For the core, use visible swatches and ramps with neutral option IDs. Attach
+For comparative tasks, use visible swatches and ramps with neutral option IDs. Attach
 palette names to the result metadata and website. A default font can establish
 geometric scale in BorderBench; color needs a displayed color reference. A gray
 ramp supplies an axis example, not complete calibration of a provider's vision
@@ -142,6 +148,42 @@ accessibility compliance, exact hex transcription, and recovery of hidden alpha
 or blend mode. Different CSS constructions can produce the same final image.
 For gradients, ask about the visible color field rather than its source recipe.
 
+## Numeric color estimation protocol
+
+Show an opaque flat target on a fixed neutral surround. Reuse exactly the same
+target image bytes for RGB, HSL, and OKLCH questions, in separate fresh requests
+with no earlier answer available. Keep the three observations in the same
+stimulus group. Pin gamma-encoded sRGB/D65 conversions; do not grade against
+pre-render coordinates that changed during conversion or quantization.
+
+Grade closeness, rather than requiring exact coordinate transcription. Convert
+each valid prediction to Oklab and report its raw Euclidean color distance from
+the target. Do not clip out-of-sRGB OKLCH predictions before measuring distance;
+flag their gamut status separately. Report per-channel errors in each format's
+own units, mean/median/p90 color error among valid answers, and validity rate.
+
+For a first-pilot bounded summary, predeclare
+`100 * (1 - min(deltaE_OK / 0.2, 1))`, with invalid answers receiving zero.
+The 0.2 cap is an engineering normalization, not a human visibility threshold.
+Call it a similarity score, never exact-match accuracy. Report each format
+separately and disclose error distributions so the cap cannot conceal large
+misses. Fixed-color baselines use the same underlying color for all formats.
+
+Normalize hue circularly: 359° versus 1° is a 2° difference. Use canonical hue
+zero for achromatic ground truth, but omit hue-component error when target
+OKLCH chroma is below 0.02; this is an explicit applicability cutoff, not an
+empirical threshold. Eligibility depends on the target, so predicting gray
+cannot evade a chromatic target's hue penalty. HSL saturation diagnostics also
+omit exact black/white targets. Reconstructed-color error remains applicable.
+Strict schemas reject wrong keys, strings in numeric fields, booleans, missing
+values, non-finite numbers, out-of-range RGB/HSL lightness or saturation, and
+negative OKLCH chroma. Hue accepts equivalent turns via normalization.
+
+Numeric results combine visual estimation with coordinate-system knowledge.
+Differences between formats do not establish a change in the model's underlying
+vision. Conversion-only controls can help separate those effects in a later
+iteration if the first measurements justify that next step.
+
 ## Construction and shortcut controls
 
 - Pin browser/build, viewport/DPR, bundled font, CSS, conversion implementation,
@@ -173,7 +215,7 @@ For gradients, ask about the visible color field rather than its source recipe.
 
 ## Scoring and experimental units
 
-Report each family separately, with its chance baseline, sample count, error
+Report each family separately, with its applicable baseline, sample count, error
 rate, and difficulty breakdown. Hue regions and comparison direction need
 balanced coverage. Do not average raw percentages across different response
 spaces into an unexplained leaderboard score. Any later composite needs fixed,
@@ -222,30 +264,31 @@ and prices when a campaign is actually scheduled.
 
 ## Proposed implementation sequence
 
-1. **Question review:** Create a 48-item visual review set, eight examples per
-   proposed family, including easy examples, smaller differences, and explicit
-   counterexamples. This is a design probe, not the final V1 dataset size.
+1. **Question review:** Create a 72-question pilot, eight examples per family
+   across six comparative and three numeric tasks. The three numeric formats
+   reuse eight target images. This is a first design probe with descriptive
+   scores, not a calibrated final V1 dataset.
 2. **Validity-first renderer:** Replace leaking content and build pixel oracles,
    masks, gamut/uniqueness checks, and paired controls. Prove intended failure
    cases before implementing their validators. Preserve historical inputs.
-3. **Blinded human pilot:** Use multiple independent observers on the exact
-   images. Record display conditions, accuracy/agreement, ambiguity, and brief
-   reasons. A proposed minimum is five observations per pilot item; this is a
-   pragmatic screen, not a population estimate. Define inclusion rules before
-   collecting responses. Set core versus challenge membership before testing
-   the ranked model roster. Human display differences remain a limitation.
-4. **Protocol and coverage freeze:** Choose families, reference conventions,
-   separations, group splits, answer contracts, corpus size, and any aggregate
-   metric. Publish all exclusions and pilot evidence. Hue invariance and
-   gradients enter the main release only if their controls are convincing.
-5. **Execution parity:** Port and verify the sibling pipeline, run offline and
-   mock/resume/replay checks, then seal the candidate as a new release. No paid
-   requests are needed for these steps.
-6. **Measured campaign:** When scheduled, predeclare models and complete shared
-   blocks, verify current prices/settings, run, independently replay, seal, and
-   publish family scores, difficulty curves, and context diagnostics.
+3. **Pilot freeze:** Pin the nine families, source images, answer contracts,
+   conversions, score definitions, 72-question cohort, and model settings before
+   paid evaluation. Clearly identify hue and gradient cases as exploratory.
+4. **Execution parity:** Port and verify the sibling pipeline, run offline and
+   mock/resume/replay checks, then freeze the first pilot release.
+5. **First measured campaign:** Run the predeclared shared cohort, independently
+   replay grading, seal results, and publish at
+   `edwardbenson.com/benchmarks/colorbench`. Include raw evidence, human-validation
+   limits, family scores, numeric errors, and a critique. Propose one subsequent
+   improvement for discussion; do not silently change the measured release.
+6. **Later calibration:** A blinded human pilot remains an outstanding validity
+   step. Use multiple independent observers on the exact images, recording
+   display conditions, agreement, ambiguity, and reasons. Define inclusion rules
+   beforehand. A proposed minimum of five observations per item is a pragmatic
+   screen, not a population estimate. Any resulting changes require a new
+   version and a fresh measured cohort.
 
-The next concrete deliverable is the visual question review set. Remaining
+The next concrete deliverable is the implemented, measured pilot. Remaining
 empirical decisions are useful separation ranges, human agreement, the added
 value of binding/gradient tasks, and final corpus coverage. The existing
 prototype has not been repaired or evaluated under this proposed protocol.
@@ -256,3 +299,14 @@ The source baseline, image answer leakage, sampling, accuracy denominator,
 parser, and export paths were inspected directly. The question bank received
 an independent methodological review. Document links and whitespace are checked;
 application tests and provider calls are not part of this documentation change.
+
+## First pilot execution — 2026-09-13
+
+The accepted next step is implementation, automated validation, a first measured
+model comparison, publication at edwardbenson.com/benchmarks/colorbench, and a
+critique identifying one next improvement for discussion. Add numeric RGB,
+HSL (HSK clarification pending), and OKLCH estimation to the six perception
+families. Target 72 questions: eight per family across nine families, with
+shared underlying color groups and descriptive pilot scores. Human calibration
+remains unmeasured and must be prominent in the publication. Proposed campaign
+uses the sibling 13-model roster with an estimated $25 cap.

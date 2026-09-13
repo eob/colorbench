@@ -4,8 +4,16 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .runner.lock
-results/runs/
 test_output/
 *.tmp
 .DS_Store
 *.egg-info/
+
+*.tsbuildinfo
+results/runs/**/*.sqlite3-wal
+results/runs/**/*.sqlite3-shm
+results/runs/**/.runner.lock
+results/runs/**/input/
+results/runs/**/mock-*/
+dataset/candidate-rendered/
+dataset/*.staging-*/
