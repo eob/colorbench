@@ -1,4 +1,4 @@
-"""Native vision requests, structured predictions, and per-request usage accounting for LayoutBench."""
+"""Native vision requests, structured predictions, and per-request usage accounting for ColorBench."""
 
 from __future__ import annotations
 
@@ -14,18 +14,12 @@ from urllib.parse import quote
 
 import httpx
 from PIL import Image
-from pydantic import BaseModel, Field
 
 
 ErrorKind = Literal["credits", "rate_limit", "authentication", "unavailable", "invalid_response", "other"]
 
 
-class ColorPrediction(BaseModel):
-    semantic_role: Literal["primary", "secondary", "success", "warning", "danger", "info"]
-    surface_role: Literal["neutral-surface", "subtle-tint", "brand-fill", "elevated-surface"]
-    contrast_tier: Literal["aaa-high", "aa-standard", "large-text-subdued", "failing-disabled"]
-    fill_type: Literal["solid", "linear-gradient", "outline-transparent"]
-    theme: Literal["light", "dark"]
+from baseline.protocol import parse_prediction, wire_prediction_schema
 
 
 @dataclass
@@ -56,15 +50,18 @@ def classify_error(status: int, error: dict) -> ErrorKind:
                         "organization_spend_limit_exceeded", "project_spend_limit_exceeded",
                         "organization_usage_limit_exceeded"}
             or any(term in message for term in (
-                "insufficient quota", "exceeded your current quota", "billing account",
-                "out of credits", "credit balance is too low", "resource has been exhausted",
+                "credit balance", "insufficient credit", "out of credits", "spend limit",
+                "spending limit", "spend cap", "billing is not enabled", "billing account is disabled",
+                "billing account has been disabled", "billing_not_enabled",
             ))):
         return "credits"
-    if status == 429 or kind == "rate_limit_error" or "rate limit" in message:
-        return "rate_limit"
-    if status in {401, 403} or kind == "authentication_error" or "api key" in message:
+    if status in {401, 403} or kind == "authentication_error" or code in {"invalid_api_key", "api_key_invalid"}:
         return "authentication"
-    if status in {502, 503, 504} or "overloaded" in message:
+    if "api key not valid" in message:
+        return "authentication"
+    if status == 429:
+        return "rate_limit"
+    if status in {400, 404, 408} or status >= 500:
         return "unavailable"
     return "other"
 
@@ -89,8 +86,8 @@ class PredictionClient:
     def close(self) -> None:
         self._http.close()
 
-    def _request(self, data: str, mime_type: str, prompt: str, api_key: str) -> tuple[str, dict, dict]:
-        schema = ColorPrediction.model_json_schema()
+    def _request(self, data: str, mime_type: str, prompt: str, api_key: str, family: str = "matching") -> tuple[str, dict, dict]:
+        schema = wire_prediction_schema(family)
         schema["additionalProperties"] = False
         headers = {"Content-Type": "application/json"}
         if self.provider == "openai":
@@ -166,7 +163,7 @@ class PredictionClient:
             raise ValueError("Response contained no prediction text")
         return text
 
-    def predict(self, image_path: str, prompt: str) -> PredictionResponse:
+    def predict(self, image_path: str, prompt: str, family: str = "matching") -> PredictionResponse:
         api_key = os.environ.get(self.api_key_env)
         if not api_key and self._google_key_fallback:
             api_key = os.environ.get("GOOGLE_API_KEY")
@@ -179,7 +176,7 @@ class PredictionClient:
                 image.verify()
         except (OSError, ValueError) as error:
             return PredictionResponse("", error=str(error), error_kind="other")
-        url, headers, request_body = self._request(base64.b64encode(raw_image).decode("ascii"), mime_type, prompt, api_key)
+        url, headers, request_body = self._request(base64.b64encode(raw_image).decode("ascii"), mime_type, prompt, api_key, family)
         result = PredictionResponse("")
         for attempt in range(2):
             result.request_attempts += 1
@@ -211,15 +208,12 @@ class PredictionClient:
                 if response.is_success and not body.get("error"):
                     try:
                         result.raw_text = self._text(body).replace(api_key, "[REDACTED]")
-                        parsed = json.loads(result.raw_text)
-                        if isinstance(parsed, dict):
-                            parsed = {key: value.strip().lower() if isinstance(value, str) else value
-                                      for key, value in parsed.items()}
-                        result.parsed = ColorPrediction.model_validate(parsed).model_dump()
+                        result.parsed = parse_prediction(result.raw_text, family)
                         result.error = result.error_kind = None
                     except (ValueError, TypeError, KeyError, AttributeError) as error:
                         result.error = str(error).replace(api_key, "[REDACTED]")
                         result.error_kind = "invalid_response"
+                        result.parsed = {}
                     return result
                 error = body.get("error") or {"message": result.raw_text}
                 if not isinstance(error, dict):

@@ -64,6 +64,12 @@ Numeric response contracts are:
 - HSL: numeric `h` in degrees; `s` and `l` in 0–100 percent.
 - OKLCH: numeric `l` in 0–1; nonnegative `c` in OKLCH units; `h` in degrees.
 
+Every provider receives the same simple family-specific output schema. Numeric
+bounds are stated in the prompt and enforced by the local parser; they are
+omitted from the shared wire schema because
+[Claude structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)
+do not support numerical schema constraints.
+
 Hue is normalized modulo 360. Chroma is not treated as a percentage or clipped
 to an invented upper bound. Booleans, strings, extra fields, duplicate keys,
 nonfinite coordinates, and incompatible family schemas are rejected. Markdown

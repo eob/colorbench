@@ -1,0 +1,796 @@
+FFFFFFFFFFFFFFFFFFFFFFFFF                                                [100%]
+=================================== FAILURES ===================================
+_________ test_choice_families_use_only_arbitrary_option_ids[matching] _________
+
+family = 'matching'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'matching'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+________ test_choice_families_use_only_arbitrary_option_ids[lightness] _________
+
+family = 'lightness'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'lightness'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+__________ test_choice_families_use_only_arbitrary_option_ids[chroma] __________
+
+family = 'chroma'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'chroma'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+___________ test_choice_families_use_only_arbitrary_option_ids[hue] ____________
+
+family = 'hue'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'hue'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_________ test_choice_families_use_only_arbitrary_option_ids[binding] __________
+
+family = 'binding'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'binding'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_________ test_choice_families_use_only_arbitrary_option_ids[gradient] _________
+
+family = 'gradient'
+
+    @pytest.mark.parametrize("family", ["matching", "lightness", "chroma", "hue", "binding", "gradient"])
+    def test_choice_families_use_only_arbitrary_option_ids(family):
+>       assert parse('{"choice":" a "}', family) == {"choice": "A"}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":" a "}', family = 'gradient'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"C"}-lightness] _
+
+raw = '{"choice":"C"}', family = 'lightness'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":"C"}', family = 'lightness'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"C"}-chroma] _
+
+raw = '{"choice":"C"}', family = 'chroma'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":"C"}', family = 'chroma'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"A","why":"blue"}-matching] _
+
+raw = '{"choice":"A","why":"blue"}', family = 'matching'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":"A","why":"blue"}', family = 'matching'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"A","choice":"B"}-matching] _
+
+raw = '{"choice":"A","choice":"B"}', family = 'matching'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":"A","choice":"B"}', family = 'matching'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"A","\\u0063hoice":"B"}-matching] _
+
+raw = '{"choice":"A","\\u0063hoice":"B"}', family = 'matching'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":"A","\\u0063hoice":"B"}', family = 'matching'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":true}-matching] _
+
+raw = '{"choice":true}', family = 'matching'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"choice":true}', family = 'matching'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[```json\n{"choice":"A"}\n```-matching] _
+
+raw = '```json\n{"choice":"A"}\n```', family = 'matching'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '```json\n{"choice":"A"}\n```', family = 'matching'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"r":1,"g":2,"b":3}-matching] _
+
+raw = '{"r":1,"g":2,"b":3}', family = 'matching'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"r":1,"g":2,"b":3}', family = 'matching'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"r":true,"g":2,"b":3}-rgb] _
+
+raw = '{"r":true,"g":2,"b":3}', family = 'rgb'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"r":true,"g":2,"b":3}', family = 'rgb'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"r":1.0,"g":2,"b":3}-rgb] _
+
+raw = '{"r":1.0,"g":2,"b":3}', family = 'rgb'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"r":1.0,"g":2,"b":3}', family = 'rgb'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"r":256,"g":2,"b":3}-rgb] _
+
+raw = '{"r":256,"g":2,"b":3}', family = 'rgb'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"r":256,"g":2,"b":3}', family = 'rgb'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"h":0,"s":101,"l":50}-hsl] _
+
+raw = '{"h":0,"s":101,"l":50}', family = 'hsl'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"h":0,"s":101,"l":50}', family = 'hsl'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"h":NaN,"s":50,"l":50}-hsl] _
+
+raw = '{"h":NaN,"s":50,"l":50}', family = 'hsl'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"h":NaN,"s":50,"l":50}', family = 'hsl'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"l":0.5,"c":-0.1,"h":90}-oklch] _
+
+raw = '{"l":0.5,"c":-0.1,"h":90}', family = 'oklch'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"l":0.5,"c":-0.1,"h":90}', family = 'oklch'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"l":0.5,"c":1e999,"h":90}-oklch] _
+
+raw = '{"l":0.5,"c":1e999,"h":90}', family = 'oklch'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"l":0.5,"c":1e999,"h":90}', family = 'oklch'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_ test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"l":0.5,"c":0.1,"h":90}-unknown] _
+
+raw = '{"l":0.5,"c":0.1,"h":90}', family = 'unknown'
+
+    @pytest.mark.parametrize("raw,family", [
+        ('{"choice":"C"}', "lightness"),
+        ('{"choice":"C"}', "chroma"),
+        ('{"choice":"A","why":"blue"}', "matching"),
+        ('{"choice":"A","choice":"B"}', "matching"),
+        ('{"choice":"A","\\u0063hoice":"B"}', "matching"),
+        ('{"choice":true}', "matching"),
+        ('```json\n{"choice":"A"}\n```', "matching"),
+        ('{"r":1,"g":2,"b":3}', "matching"),
+        ('{"r":true,"g":2,"b":3}', "rgb"),
+        ('{"r":1.0,"g":2,"b":3}', "rgb"),
+        ('{"r":256,"g":2,"b":3}', "rgb"),
+        ('{"h":0,"s":101,"l":50}', "hsl"),
+        ('{"h":NaN,"s":50,"l":50}', "hsl"),
+        ('{"l":0.5,"c":-0.1,"h":90}', "oklch"),
+        ('{"l":0.5,"c":1e999,"h":90}', "oklch"),
+        ('{"l":0.5,"c":0.1,"h":90}', "unknown"),
+    ])
+    def test_strict_family_schema_rejects_ambiguous_or_wrong_answers(raw, family):
+        with pytest.raises(ValueError):
+>           parse(raw, family)
+
+tests/test_color_protocol.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"l":0.5,"c":0.1,"h":90}', family = 'unknown'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+__________ test_numeric_schema_normalizes_hue_without_clipping_chroma __________
+
+    def test_numeric_schema_normalizes_hue_without_clipping_chroma():
+>       assert parse('{"r":0,"g":255,"b":128}', "rgb") == {"r": 0, "g": 255, "b": 128}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_color_protocol.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+raw = '{"r":0,"g":255,"b":128}', family = 'rgb'
+
+    def parse(raw, family):
+>       assert hasattr(providers, "parse_prediction"), "ColorBench needs a strict family-aware parser"
+E       AssertionError: ColorBench needs a strict family-aware parser
+E       assert False
+E        +  where False = hasattr(providers, 'parse_prediction')
+
+tests/test_color_protocol.py:10: AssertionError
+_______ test_numeric_grading_keeps_formats_separate_and_uses_target_hue ________
+
+    def test_numeric_grading_keeps_formats_separate_and_uses_target_hue():
+>       from baseline.evaluator import grade_prediction
+E       ImportError: cannot import name 'grade_prediction' from 'baseline.evaluator' (/mnt/disks/data/colorbench/baseline/evaluator.py)
+
+tests/test_color_protocol.py:49: ImportError
+_ test_choice_grading_counts_observed_answers_and_invalids_without_cross_family_score _
+
+    def test_choice_grading_counts_observed_answers_and_invalids_without_cross_family_score():
+        from baseline.evaluator import BaselineEvaluator
+>       from baseline.statistics import family_metrics
+E       ModuleNotFoundError: No module named 'baseline.statistics'
+
+tests/test_color_protocol.py:63: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[matching]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[lightness]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[chroma]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[hue]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[binding]
+FAILED tests/test_color_protocol.py::test_choice_families_use_only_arbitrary_option_ids[gradient]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"C"}-lightness]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"C"}-chroma]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"A","why":"blue"}-matching]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"A","choice":"B"}-matching]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":"A","\\u0063hoice":"B"}-matching]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"choice":true}-matching]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[```json\n{"choice":"A"}\n```-matching]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"r":1,"g":2,"b":3}-matching]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"r":true,"g":2,"b":3}-rgb]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"r":1.0,"g":2,"b":3}-rgb]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"r":256,"g":2,"b":3}-rgb]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"h":0,"s":101,"l":50}-hsl]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"h":NaN,"s":50,"l":50}-hsl]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"l":0.5,"c":-0.1,"h":90}-oklch]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"l":0.5,"c":1e999,"h":90}-oklch]
+FAILED tests/test_color_protocol.py::test_strict_family_schema_rejects_ambiguous_or_wrong_answers[{"l":0.5,"c":0.1,"h":90}-unknown]
+FAILED tests/test_color_protocol.py::test_numeric_schema_normalizes_hue_without_clipping_chroma
+FAILED tests/test_color_protocol.py::test_numeric_grading_keeps_formats_separate_and_uses_target_hue
+FAILED tests/test_color_protocol.py::test_choice_grading_counts_observed_answers_and_invalids_without_cross_family_score
+25 failed in 0.22s

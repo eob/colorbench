@@ -339,3 +339,31 @@ reviewed representative matching, binding, lightness, chroma, hue, gradient,
 and numeric PNGs. A constant sRGB-128 gray predictor was fixed before paid
 inference; its exact per-format results are recorded in
 `evidence/constant-gray-baseline.json` (approximately 30.56 similarity).
+
+Independent pre-run transport audit found that Claude rejects numeric schema
+`minimum`/`maximum` constraints. Its documented SDK transformation does not
+apply to our direct HTTP transport. Before protocol freeze, all providers
+receive a common schema without those keywords; prompt units/ranges and
+strict local validation remain in force. No paid requests preceded the fix.
+
+
+## Frozen pilot execution gate
+
+Dataset commit: `1013fdb0deb1c2a4d2df6fba3c5bc38d05cab473`.
+Release descriptor: `releases/0.2.0.json`. Dataset and protocol fingerprints
+were independently recomputed before registering that descriptor.
+
+| Gate (implementation based on dataset commit above) | Result |
+| --- | --- |
+| `bun run test` | 198 Python tests; 10 TypeScript tests / 386 assertions; typecheck passed |
+| `bun run validate:release` | 72 questions; frozen commit, protocol, files, pixels, and uniqueness verified |
+| Frozen history guard against `origin/main` | Both historical dataset directories unchanged |
+| Release mock smoke | 13 models × 3 completed observations, zero cost, explicitly mock and partial |
+| Python package wheel | Built ColorBench 0.2.0 successfully |
+| Independent source audit | No remaining critical scoring, leakage, or resume issue after wire-schema correction |
+
+The first paid campaign will use all 72 questions for all 13 enabled models,
+concurrency 6, and a cumulative $25 budget cap. Each saved malformed model
+answer remains a final zero-score observation. Infrastructure retries, if
+needed, retain their original attempt records and costs. No second benchmark
+revision will run until the first results have been critiqued and discussed.

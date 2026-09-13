@@ -64,11 +64,11 @@ bun run benchmark:mock
 
 # Seal only after every requested model has completed the shared cohort.
 .venv/bin/python -m baseline.finalize \
-  --run-dir results/runs/pilot-example --scope full
+  --run-dir results/runs/0.2.0/pilot-example --scope full
 .venv/bin/python -m baseline.finalize \
-  --run-dir results/runs/pilot-example --verify
+  --run-dir results/runs/0.2.0/pilot-example --verify
 .venv/bin/python -m baseline.export_structured \
-  --run-dir results/runs/pilot-example --output results/colorbench-pilot.json
+  --run-dir results/runs/0.2.0/pilot-example --output results/colorbench-pilot.json
 ```
 
 Set the providers' API key environment variables documented in

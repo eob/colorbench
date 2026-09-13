@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "colorbench"
-version = "0.1.0"
-description = "Vision-language benchmark for evaluating multimodal AI models on UI color roles, contrast, and fills"
+version = "0.2.0"
+description = "A frozen pilot of visual color matching, discrimination, binding, gradients, and numeric reconstruction"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -21,6 +21,9 @@ dependencies = [
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["baseline*"]
+
+[tool.setuptools.package-data]
+baseline = ["prompts.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
