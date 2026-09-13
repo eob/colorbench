@@ -1,38 +1,41 @@
 import { describe, expect, test } from "bun:test";
 import { SPECIMENS } from "./specimens.ts";
 
-describe("ColorBench Specimens", () => {
-  test("generates exactly 100 specimens", () => {
-    expect(SPECIMENS.length).toBe(100);
+describe("perception pilot design", () => {
+  test("contains eight questions in each of nine families", () => {
+    expect(SPECIMENS).toHaveLength(72);
+    expect(new Set(SPECIMENS.map((s) => s.taskId)).size).toBe(72);
+    for (const family of [
+      "matching",
+      "lightness",
+      "chroma",
+      "hue",
+      "binding",
+      "gradient",
+      "rgb",
+      "hsl",
+      "oklch",
+    ]) {
+      expect(SPECIMENS.filter((s) => s.family === family)).toHaveLength(8);
+    }
   });
-
-  test("assigns unique IDs to each specimen", () => {
-    const ids = new Set(SPECIMENS.map((s) => s.id));
-    expect(ids.size).toBe(100);
+  test("balances every choice location within a family", () => {
+    for (const family of ["matching", "lightness", "chroma", "hue", "binding", "gradient"]) {
+      const examples = SPECIMENS.filter((s) => s.family === family);
+      const choices = ["lightness", "chroma"].includes(family) ? ["A", "B"] : ["A", "B", "C", "D"];
+      for (const choice of choices)
+        expect(examples.filter((s) => s.answer === choice)).toHaveLength(8 / choices.length);
+    }
   });
-
-  test("covers all semantic roles", () => {
-    const roles = new Set(SPECIMENS.map((s) => s.semantic_role));
-    expect(roles.has("primary")).toBe(true);
-    expect(roles.has("secondary")).toBe(true);
-    expect(roles.has("success")).toBe(true);
-    expect(roles.has("warning")).toBe(true);
-    expect(roles.has("danger")).toBe(true);
-    expect(roles.has("info")).toBe(true);
-  });
-
-  test("covers all contrast tiers", () => {
-    const tiers = new Set(SPECIMENS.map((s) => s.contrast_tier));
-    expect(tiers.has("aaa-high")).toBe(true);
-    expect(tiers.has("aa-standard")).toBe(true);
-    expect(tiers.has("large-text-subdued")).toBe(true);
-    expect(tiers.has("failing-disabled")).toBe(true);
-  });
-
-  test("covers all fill types", () => {
-    const fills = new Set(SPECIMENS.map((s) => s.fill_type));
-    expect(fills.has("solid")).toBe(true);
-    expect(fills.has("linear-gradient")).toBe(true);
-    expect(fills.has("outline-transparent")).toBe(true);
+  test("numeric formats share their target recipe and stimulus group", () => {
+    const numeric = SPECIMENS.filter((s) => ["rgb", "hsl", "oklch"].includes(s.family));
+    const groups = new Set(numeric.map((s) => s.groupId));
+    expect(groups.size).toBe(8);
+    for (const id of groups) {
+      const group = numeric.filter((s) => s.groupId === id);
+      expect(group.map((s) => s.family).sort()).toEqual(["hsl", "oklch", "rgb"]);
+      expect(new Set(group.map((s) => JSON.stringify(s.target))).size).toBe(1);
+      expect(new Set(group.map((s) => s.imageId)).size).toBe(1);
+    }
   });
 });

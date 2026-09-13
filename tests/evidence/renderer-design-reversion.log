@@ -1,0 +1,50 @@
+bun test v1.3.14 (0d9b296a)
+
+src/specimens.test.ts:
+1 | import { describe, expect, test } from "bun:test";
+2 | import { SPECIMENS } from "./specimens.ts";
+3 | 
+4 | describe("perception pilot design", () => {
+5 |   test("contains eight questions in each of nine families", () => {
+6 |     expect(SPECIMENS).toHaveLength(72);
+                          ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 72
+Received length: 100
+
+      at <anonymous> (/tmp/colorbench-renderer-proof-41ip8d7b/src/specimens.test.ts:6:23)
+(fail) perception pilot design > contains eight questions in each of nine families [0.26ms]
+22 |   test("balances every choice location within a family", () => {
+23 |     for (const family of ["matching", "lightness", "chroma", "hue", "binding", "gradient"]) {
+24 |       const examples = SPECIMENS.filter((s) => s.family === family);
+25 |       const choices = ["lightness", "chroma"].includes(family) ? ["A", "B"] : ["A", "B", "C", "D"];
+26 |       for (const choice of choices)
+27 |         expect(examples.filter((s) => s.answer === choice)).toHaveLength(8 / choices.length);
+                                                                 ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 2
+Received length: 0
+
+      at <anonymous> (/tmp/colorbench-renderer-proof-41ip8d7b/src/specimens.test.ts:27:61)
+(fail) perception pilot design > balances every choice location within a family [0.42ms]
+28 |     }
+29 |   });
+30 |   test("numeric formats share their target recipe and stimulus group", () => {
+31 |     const numeric = SPECIMENS.filter((s) => ["rgb", "hsl", "oklch"].includes(s.family));
+32 |     const groups = new Set(numeric.map((s) => s.groupId));
+33 |     expect(groups.size).toBe(8);
+                             ^
+error: expect(received).toBe(expected)
+
+Expected: 8
+Received: 0
+
+      at <anonymous> (/tmp/colorbench-renderer-proof-41ip8d7b/src/specimens.test.ts:33:25)
+(fail) perception pilot design > numeric formats share their target recipe and stimulus group [0.31ms]
+
+ 0 pass
+ 3 fail
+ 3 expect() calls
+Ran 3 tests across 1 file. [58.00ms]

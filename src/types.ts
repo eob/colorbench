@@ -1,37 +1,88 @@
-export type SemanticRole = "primary" | "secondary" | "success" | "warning" | "danger" | "info";
-export type SurfaceRole = "neutral-surface" | "subtle-tint" | "brand-fill" | "elevated-surface";
-export type ContrastTier = "aaa-high" | "aa-standard" | "large-text-subdued" | "failing-disabled";
-export type FillType = "solid" | "linear-gradient" | "outline-transparent";
-export type ColorTheme = "light" | "dark";
-
-export interface ColorSpecimenConfig {
-  id: string;
-  semantic_role: SemanticRole;
-  surface_role: SurfaceRole;
-  contrast_tier: ContrastTier;
-  fill_type: FillType;
-  theme: ColorTheme;
-  title: string;
-  subtitle: string;
-  tag: string;
-  bg_color: string;
-  text_color: string;
-  border_color?: string;
-  gradient_css?: string;
+export const FAMILIES = [
+  "matching",
+  "lightness",
+  "chroma",
+  "hue",
+  "binding",
+  "gradient",
+  "rgb",
+  "hsl",
+  "oklch",
+] as const;
+export type Family = (typeof FAMILIES)[number];
+export type Rgb = [number, number, number];
+export type Choice = "A" | "B" | "C" | "D";
+export interface Oklab {
+  l: number;
+  a: number;
+  b: number;
 }
-
+export interface Oklch {
+  l: number;
+  c: number;
+  h: number;
+}
+export interface Hsl {
+  h: number;
+  s: number;
+  l: number;
+}
+export interface ColorField {
+  rgb?: Rgb;
+  columns?: Rgb[];
+}
+export interface ColorSpecimenConfig {
+  taskId: string;
+  family: Family;
+  groupId: string;
+  imageId: string;
+  target?: ColorField;
+  options: ColorField[];
+  answer?: Choice;
+  design: {
+    axis: string;
+    difficulty: string;
+    sourceRgb?: Rgb;
+    direction?: "lighter" | "darker" | "more" | "less";
+    reference?: Record<string, unknown>;
+    [key: string]: unknown;
+  };
+}
+export interface PixelRegion {
+  role: "target" | "option" | "reference";
+  id: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  rgb?: Rgb;
+  pixelSha256: string;
+}
+export interface RenderedEvidence {
+  width: number;
+  height: number;
+  browserVersion: string;
+  platform: string;
+  viewport: { width: number; height: number; deviceScaleFactor: number };
+  font: {
+    path: string;
+    sha256: string;
+    family: string;
+    sizePx: number;
+    lineHeightPx: number;
+    platformFonts: { familyName: string; isCustomFont: boolean; glyphCount: number }[];
+  };
+  colorSpace: "srgb";
+  regions: PixelRegion[];
+}
 export interface ColorBenchmarkManifestItem {
   taskId: string;
-  imagePath: string;
+  family: Family;
+  groupId: string;
   imageFilename: string;
-  groundTruth: {
-    semantic_role: SemanticRole;
-    surface_role: SurfaceRole;
-    contrast_tier: ContrastTier;
-    fill_type: FillType;
-    theme: ColorTheme;
-    bg_color: string;
-    text_color: string;
-  };
+  imageSha256: string;
+  groundTruth: { choice: Choice } | { rgb: Rgb };
   prompt: string;
+  design: ColorSpecimenConfig["design"];
+  rendered: RenderedEvidence;
 }
