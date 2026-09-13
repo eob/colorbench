@@ -1,0 +1,43 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.3.14'
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: bun install --frozen-lockfile
+      - run: bunx playwright install --with-deps chromium
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -e .
+      - name: Python tests
+        run: bun run test:python
+      - name: TypeScript tests
+        run: timeout --kill-after=15s 180s bun run test:ts
+      - name: TypeScript typecheck
+        run: bun run typecheck
+      - run: bun run validate:release
+      - name: All previously registered releases remain frozen
+        env:
+          RELEASE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [[ -z "$RELEASE_BASE" || "$RELEASE_BASE" =~ ^0+$ ]]; then
+            RELEASE_BASE=$(git merge-base origin/main HEAD)
+          fi
+          .venv/bin/python scripts/check_frozen_artifacts.py --base "$RELEASE_BASE"
+      - run: .venv/bin/python -m pip wheel . --no-deps --wheel-dir /tmp/colorbench-wheels

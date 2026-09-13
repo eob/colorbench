@@ -3,9 +3,10 @@
 - **Status:** In Progress; implementing and measuring the first pilot
 - **Date:** 2026-09-13
 - **Assignee:** Edward Benson
-- **Branch:** `valid-01-perceptual-pilot` (source remote not yet configured)
+- **Branch:** `valid-01-perceptual-pilot`
 - **Harness / machine:** Codex / eob-dev2; session ID not exposed
-- **Scope:** Question design, validity requirements, and implementation sequence
+- **PR:** https://github.com/eob/colorbench/pull/1
+- **Scope:** Implement, measure, critique, and publish the first perception pilot
 
 ## Purpose and suite boundary
 
@@ -310,3 +311,31 @@ families. Target 72 questions: eight per family across nine families, with
 shared underlying color groups and descriptive pilot scores. Human calibration
 remains unmeasured and must be prominent in the publication. Proposed campaign
 uses the sibling 13-model roster with an estimated $25 cap.
+
+
+## Implementation checkpoint — 2026-09-13
+
+Source repository: https://github.com/eob/colorbench (draft PR #1). Root math
+helpers passed 17 tests, including primary anchors, 128 round trips, circular
+hue, gray coordinates, and unclipped out-of-gamut reconstruction. The frozen
+artifact CI regression first failed with `ModuleNotFoundError: No module named
+'scripts'`; adding the guard made the existing-release mutation/new-release
+addition test pass. Raw red evidence: `/tmp/colorbench-frozen-red.log`.
+
+The source-native 1200 × 630 share card was rendered and visually inspected;
+its source and bundled-font renderer are in `branding/`. Read-only provider
+availability and pricing evidence is in
+`evidence/model-readiness-2026-09-13.json`. No inference was used for that check.
+
+The actual pilot uses controlled procedural sRGB colors rather than the larger
+proposed Tailwind sampling catalog. This is now explicit in the methodology.
+The first measured run, independent replay, and publication remain pending at
+this checkpoint; no mock score is presented as measured data.
+
+Frozen artifact guard reversion reproduced the missing-module failure; restored
+implementation passed with the 17 math checks (18 tests total). Candidate
+validation passed all 72 questions in nine balanced families. Root visually
+reviewed representative matching, binding, lightness, chroma, hue, gradient,
+and numeric PNGs. A constant sRGB-128 gray predictor was fixed before paid
+inference; its exact per-format results are recorded in
+`evidence/constant-gray-baseline.json` (approximately 30.56 similarity).

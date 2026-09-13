@@ -1,0 +1,113 @@
+{
+  "checked_at": "2026-09-13T02:15:22.742227+00:00",
+  "request_type": "Authenticated read-only GET /models; no inference requests",
+  "catalog_sha256": "7926c195c48349f00ecdacb0cd01a5171149f920cb499f35449b98f10e313451",
+  "enabled_model_count": 13,
+  "endpoints": [
+    {
+      "provider": "anthropic",
+      "endpoint": "https://api.anthropic.com/v1",
+      "key_env": "ANTHROPIC_API_KEY",
+      "requested": [
+        "claude-fable-5-1",
+        "claude-opus-5",
+        "claude-sonnet-5",
+        "claude-haiku-4-5-20251001"
+      ],
+      "credential_present": true,
+      "http_status": 200,
+      "listed": [
+        "claude-fable-5-1",
+        "claude-opus-5",
+        "claude-sonnet-5",
+        "claude-haiku-4-5-20251001"
+      ],
+      "not_listed": []
+    },
+    {
+      "provider": "openai",
+      "endpoint": "https://api.openai.com/v1",
+      "key_env": "OPENAI_API_KEY",
+      "requested": [
+        "gpt-6-astra",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna"
+      ],
+      "credential_present": true,
+      "http_status": 200,
+      "listed": [
+        "gpt-6-astra",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna"
+      ],
+      "not_listed": []
+    },
+    {
+      "provider": "google",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta",
+      "key_env": "GEMINI_API_KEY",
+      "requested": [
+        "gemini-3.1-pro-preview",
+        "gemini-3.8-flash",
+        "gemini-3.5-flash-lite"
+      ],
+      "credential_present": true,
+      "http_status": 200,
+      "listed": [
+        "gemini-3.1-pro-preview",
+        "gemini-3.8-flash",
+        "gemini-3.5-flash-lite"
+      ],
+      "not_listed": []
+    },
+    {
+      "provider": "openai",
+      "endpoint": "https://api.meta.ai/v1",
+      "key_env": "MODEL_API_KEY",
+      "requested": [
+        "muse-spark-1.3",
+        "muse-spark-1.2"
+      ],
+      "credential_present": true,
+      "http_status": 200,
+      "listed": [
+        "muse-spark-1.3",
+        "muse-spark-1.2"
+      ],
+      "not_listed": []
+    }
+  ],
+  "pricing_sources_checked": [
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "finding": "Standard short-context input/output rates match catalog"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+      "finding": "Standard short-context input/output rates match catalog"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+      "finding": "Standard short-context input/output rates match catalog"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "finding": "Standard short-context input/output rates match catalog"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "finding": "All four standard rates match catalog"
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "finding": "All three enabled standard rates match catalog"
+    },
+    {
+      "url": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "finding": "JavaScript shell; rates not independently reverified. Retain FontBench catalog verification date and label costs as estimates."
+    }
+  ],
+  "limitations": "Model listing establishes visibility, not inference funding or remaining quota. Costs use configured standard rates and recorded usage; Meta rates retain earlier verification."
+}

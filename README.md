@@ -1,138 +1,89 @@
 # ColorBench
 
-Perception redesign is being planned in [the ColorBench question-design plan](tickets/plan-01-color-perception.md).
-The 100-image prototype described below includes semantic judgments and visible
-answer labels; its results are not valid evidence for the planned perception benchmark.
+Can a model see color?
 
-**ColorBench** is a vision-language benchmark evaluating multimodal AI models on semantic color perception, surface roles, WCAG contrast discrimination, and gradient fill understanding in software screenshots.
+ColorBench measures visual color matching, comparison, object association,
+gradient recognition, and numeric color estimation. It is part of the design
+perception quartet with [FontBench](https://github.com/eob/fontbench),
+[BorderBench](https://github.com/eob/borderbench), and
+[LayoutBench](https://github.com/eob/layoutbench).
 
-It forms the fourth foundational benchmark in Ted Benson's design perception suite:
-1. [FontBench](https://github.com/eob/fontbench): Typography (family, category, weight, kerning, line-height)
-2. [BorderBench](https://github.com/eob/borderbench): Surfaces & Edges (stroke width, style, sides, corner radius curvature, elevation/shadow)
-3. [LayoutBench](https://github.com/eob/layoutbench): Spatial Geometry & Flow (direction, justify-content, align-items, gap tokens, padding tokens)
-4. **ColorBench**: Semantic Palette, Surface Roles, & Contrast Tiers (primary/danger/success, wash/tint vs solid, WCAG AAA/AA/failing contrast, linear gradients)
+**Release 0.2.0 is an exploratory pilot:** 72 questions, eight per family,
+using 56 unique images. Human agreement has not been measured. These small,
+controlled samples do not establish general model rankings or human perceptual
+thresholds. Numeric estimation includes knowledge of color coordinates.
 
----
+[Results and interactive examples](https://edwardbenson.com/benchmarks/colorbench)
+· [Methodology](docs/methodology.md)
+· [Design and implementation record](tickets/plan-01-color-perception.md)
 
-## Dimensions Evaluated
+| Family | Question | Reported measure |
+| --- | --- | --- |
+| Matching | Which swatch has exactly R's color? | Four-choice accuracy |
+| Lightness | Which patch is lighter/darker? | Two-choice accuracy |
+| Chroma | Which patch is more/less colorful, using a visible reference? | Two-choice accuracy |
+| Hue | Which option has R's hue despite lightness/chroma changes? | Four-choice accuracy; exploratory |
+| Binding | Which component has R's interior fill? | Four-choice accuracy, paired with matching |
+| Gradient | Which strip reproduces R's full color progression? | Four-choice accuracy; exploratory |
+| RGB | Estimate R as 8-bit gamma-encoded sRGB | Reconstruction error, similarity, validity |
+| HSL | Estimate R as hue degrees and saturation/lightness percentages | Reconstruction error, similarity, validity |
+| OKLCH | Estimate R as lightness, chroma, and hue degrees | Reconstruction error, similarity, validity |
 
-ColorBench evaluates models across a standardized UI card container rendered on high-resolution Retina canvases (2× DPR, 560×380 px) across 5 core color dimensions:
+There is no combined score across these different tasks. Answer positions are
+balanced. The three numeric formats share identical target images but each gets
+a fresh model request. No target color names or numeric answers appear in images.
 
-1. **Semantic Role Intent** (`semantic_role`):
-   - `primary`: Core call-to-action / brand emphasis
-   - `secondary`: Neutral, supporting, or auxiliary surface
-   - `success`: Positive confirmation, verified badge, or operational health
-   - `warning`: Cautionary alert, transient advisory, or quota warning
-   - `danger`: Destructive action, error modal, or failure badge
-   - `info`: Informational callout, guide banner, or neutral telemetry
+## Reproduce
 
-2. **Surface Role Treatment** (`surface_role`):
-   - `neutral-surface`: Standard canvas/card surface (slate, gray, black, or white)
-   - `subtle-tint`: Low-opacity or high-luminance wash (e.g. soft pastel tint for badge/pill backgrounds)
-   - `brand-fill`: Bold saturated color fill
-   - `elevated-surface`: Layered surface elevation steps (surface-0 to surface-3)
-
-3. **WCAG Contrast Tier Discrimination** (`contrast_tier`):
-   - `aaa-high`: Contrast ratio >= 7.0:1 (passes enhanced accessibility)
-   - `aa-standard`: Contrast ratio between 4.5:1 and 6.9:1 (standard text body)
-   - `large-text-subdued`: Contrast ratio between 3.0:1 and 4.4:1 (large text or decorative/subdued labels)
-   - `failing-disabled`: Contrast ratio < 3.0:1 (disabled states or failing tone-on-tone contrast)
-
-4. **Visual Fill Style** (`fill_type`):
-   - `solid`: Flat opaque background fill
-   - `linear-gradient`: Directional color ramp (e.g. 135deg hue blend)
-   - `outline-transparent`: Transparent/ghost fill with colored perimeter stroke
-
-5. **Color Theme Mode** (`theme`):
-   - `light`: High-luminance canvas backgrounds
-   - `dark`: Low-luminance canvas backgrounds
-
----
-
-## Dataset Breakdown (100 Tasks)
-
-The benchmark comprises exactly 100 systematic tasks covering:
-- **Semantic Role Sweeps**: Solid fills across primary, secondary, success, warning, danger, and info in light and dark mode.
-- **Subtle Tint Washes**: Soft tint surfaces paired with matched semantic text and border strokes.
-- **Ghost Outlines**: Transparent pill badges with colored border strokes.
-- **Directional Gradients**: Saturated multi-stop linear gradients.
-- **Contrast Discrimination**: Pairs engineered at exact WCAG contrast boundaries (21:1 stark, 7:1 AAA, 4.5:1 AA, 3:1 subdued, and <2.5:1 disabled/failing).
-- **Layered Surface Elevations**: Progressive elevation tiers from canvas to card to popover.
-- **UI Component Archetypes**: Active beta pills, operational health badges, billing alert cards, failing build notices, and pro tier tags.
-
----
-
-## Quick Start
-
-### 1. Installation
+Use Bun 1.3.14 and Python 3.11. Chromium and the bundled DejaVu font are pinned
+in the renderer's dependency and artifact records.
 
 ```bash
-bun install
+bun install --frozen-lockfile
+bunx playwright install --with-deps chromium
 python3 -m venv .venv
-.venv/bin/pip install -e .
+.venv/bin/python -m pip install -e .
+bun run test
+bun run validate:release
 ```
 
-### 2. Render Benchmark Dataset
-
-Renders all 100 high-DPI screenshots with Playwright Chromium and generates `dataset/colorbench-1/manifest.json`:
-
-```bash
-bun run render
-```
-
-### 3. Run Benchmark Baseline
+`bun run render` creates a replaceable candidate in
+`dataset/candidate-rendered`; it refuses frozen and historical dataset paths.
+`bun run validate:candidate` independently checks decoded pixels, geometry,
+font evidence, canonical prompts, answer uniqueness, and controlled pairing.
+Rendering does not revise a registered release.
 
 ```bash
-# Run quick mock test
+# Offline smoke run; mock output cannot be finalized for publication.
 bun run benchmark:mock
 
-# Run real evaluation against frontier vision models
-.venv/bin/python baseline/runner.py --models gemini-3.1-pro-preview gemini-3.8-flash claude-sonnet-5 gpt-5.6-sol
+# A paid run of the frozen pilot with a shared 72-question cohort.
+.venv/bin/python -m baseline.runner --release 0.2.0 \
+  --config config/models.all.json --run-id pilot-example \
+  --max-tasks 72 --budget-usd 25
+
+# Seal only after every requested model has completed the shared cohort.
+.venv/bin/python -m baseline.finalize \
+  --run-dir results/runs/pilot-example --scope full
+.venv/bin/python -m baseline.finalize \
+  --run-dir results/runs/pilot-example --verify
+.venv/bin/python -m baseline.export_structured \
+  --run-dir results/runs/pilot-example --output results/colorbench-pilot.json
 ```
 
-### 4. Export Structured Summary
+Set the providers' API key environment variables documented in
+`config/models.all.json`. Recorded usage and catalog prices determine estimated
+cost; the runner reserves budget before dispatch. Rerunning the same unsealed
+run ID resumes its state with the same dataset, configuration, and protocol.
+Invalid answers remain scored observations; they are not retried to improve scores.
 
-```bash
-bun run export
-```
+## Historical prototype
 
----
-
-## Manifest Task Format
-
-Each task in `dataset/colorbench-1/manifest.json` provides:
-```json
-{
-  "taskId": "colorbench-001",
-  "imagePath": "/path/to/dataset/rendered/colorbench-001.png",
-  "imageFilename": "colorbench-001.png",
-  "groundTruth": {
-    "semantic_role": "primary",
-    "surface_role": "brand-fill",
-    "contrast_tier": "aa-standard",
-    "fill_type": "solid",
-    "theme": "light",
-    "bg_color": "#2563eb",
-    "text_color": "#ffffff"
-  },
-  "prompt": "Analyze the visual color design and contrast of the card container in this software screenshot..."
-}
-```
-
----
-
-## Testing
-
-```bash
-# Test specimen generation and token integrity
-bun test
-
-# Test evaluator scoring and SQLite state store
-.venv/bin/pytest tests
-```
-
----
+`dataset/colorbench-1`, `dataset/rendered`, and
+`results/colorbench_summary.json` preserve the earlier 100-image prototype.
+It included semantic judgments and visible answer labels. Its scores are **not
+valid evidence for this perception pilot** and are excluded from publication.
 
 ## License
 
-MIT © Edward Benson
+MIT © Edward Benson. The bundled DejaVu font includes its own license.

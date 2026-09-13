@@ -1,0 +1,87 @@
+{
+  "predictor": "constant-decoded-srgb-128-128-128",
+  "selected_before_first_paid_run": true,
+  "families": {
+    "rgb": {
+      "prediction": {
+        "r": 128,
+        "g": 128,
+        "b": 128
+      },
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 30.564289038628235,
+      "mean_delta_e_ok": 0.1620428831723285,
+      "median_delta_e_ok": 0.15345608909881636,
+      "p90_delta_e_ok": 0.28870950810569673,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "b": 47.625,
+        "g": 38.625,
+        "r": 61.125
+      },
+      "component_known_count": {
+        "b": 8,
+        "g": 8,
+        "r": 8
+      }
+    },
+    "hsl": {
+      "prediction": {
+        "h": 0.0,
+        "s": 0.0,
+        "l": 50.19607843137255
+      },
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 30.564289038628235,
+      "mean_delta_e_ok": 0.1620428831723285,
+      "median_delta_e_ok": 0.15345608909881636,
+      "p90_delta_e_ok": 0.28870950810569673,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 89.30948108597421,
+        "l": 10.53921568627451,
+        "s": 43.33917972826234
+      },
+      "component_known_count": {
+        "h": 7,
+        "l": 8,
+        "s": 8
+      }
+    },
+    "oklch": {
+      "prediction": {
+        "l": 0.5998708017071177,
+        "c": 0.0,
+        "h": 0.0
+      },
+      "kind": "numeric",
+      "count": 8,
+      "valid_count": 8,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 30.564287779780003,
+      "mean_delta_e_ok": 0.1620428855488882,
+      "median_delta_e_ok": 0.15345607103264358,
+      "p90_delta_e_ok": 0.2887095089591249,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "c": 0.09555216283982133,
+        "h": 87.42795300065633,
+        "l": 0.10162315051964488
+      },
+      "component_known_count": {
+        "c": 8,
+        "h": 7,
+        "l": 8
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@
     "benchmark:mock": ".venv/bin/python -m baseline.runner --release 0.2.0 --mock --max-tasks 3",
     "export": ".venv/bin/python -m baseline.export_structured",
     "validate:release": ".venv/bin/python -m baseline.releases --release 0.2.0",
-    "validate:candidate": ".venv/bin/python -m baseline.validate_dataset --manifest dataset/candidate-rendered/manifest.json",
+    "validate:candidate": ".venv/bin/python -m baseline.validate_dataset dataset/candidate-rendered/manifest.json",
     "build:branding": "bun run branding/render.ts"
   },
   "devDependencies": {
