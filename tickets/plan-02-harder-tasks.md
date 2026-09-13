@@ -1,6 +1,9 @@
 # plan-02: Harder color perception tasks (release 0.3.1)
 
-- **Status:** Done (branch `feat-02-harder-tasks`, unpushed, PR not opened)
+- **Status:** Done (branch `feat-02-harder-tasks`, PR [#3](https://github.com/eob/colorbench/pull/3))
+- **Machine:** `eob-dev2` (`/mnt/disks/data/colorbench`)
+- **Harness:** muse
+- **Session ID:** `01a09afb-e4fe-7220-874f-fb82eeeaed74`
 - **Date:** 2026-09-13
 - **Branch:** `feat-02-harder-tasks`
 - **Scope:** Five harder-but-perceptual slices for a new 248-question release:
