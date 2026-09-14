@@ -1,6 +1,6 @@
 # fix-03-publication-review: Remove choice-order shortcuts and verify publication
 
-- **Status:** In Progress
+- **Status:** In Review
 - **Branch:** `fix-03-publication-review`
 - **Machine:** `/mnt/disks/data/colorbench`
 - **Harness:** codex
@@ -44,8 +44,8 @@ metered token-price subtotal is $21.38974615.
 ## Plan and gates
 
 1. Pin a reference-free option-order control and target-rank coverage.
-2. Revise the candidate to distribute target rank over all four ranks and
-   randomize distractor order; preserve 0.3.1 artifacts.
+2. Revise the candidate to distribute target rank over all four ranks using
+   complete identical-option reference cells; preserve 0.3.1 artifacts.
 3. Render and independently validate the new corpus; audit nuisance balance,
    labels, pixel-derived answers, and option-only controls before freezing.
 4. Freeze 0.3.2 with unchanged scoring semantics; run all thirteen configured
@@ -84,3 +84,26 @@ metered token-price subtotal is $21.38974615.
 - Replayed 0.3.1 export and analysis byte-identically; independent numeric
   equations reproduce all 624 numeric grades within 3.13e-16 ΔE_OK and
   6.26e-13 score units. Supplemental accounting exposes the unmetered retry.
+
+## Completed campaign and final verification
+
+- All thirteen configurations completed the 264-question shared cohort:
+  3,432 final responses, 3,431 valid, one incomplete response retained as incorrect.
+- Final data/seal/export/audit commit: `fcba5356769862995900143cfc2a7724631e6788`.
+- Final seal verifies; compact export, detailed analysis, and independent audit
+  regenerate byte-identically.
+- Raw-answer replay verifies 3,432 grades and 156 summaries. Independent numeric
+  math reproduces 624 answers within 4.51e-16 distance / 9.09e-13 score units.
+- All 42 full-image controls balance A/B/C/D. The prior image-only order attack
+  falls to 25% expected accuracy in matching, binding, context, and smallmatch.
+- Execution: 3,432 ledger attempts / 3,437 HTTP requests / five internal retries.
+  Five requests are unmetered; no separate infrastructure failure records.
+- Cost: $22.79714445 recorded-usage subtotal plus $0.17731400 allowances equals
+  $22.97445845 ledger spending, within the actual $30 budget.
+- Final code gates: 258 Python / 35 TypeScript tests, 1,474 TS assertions,
+  typecheck, package wheel, byte-identical full re-render, and remote CI pass.
+- Durable findings: `docs/publication-review-2026-09-14.md` and
+  `results/third-pilot.md`. The report includes semantic same–different counts,
+  explicit invalids, construction dependencies, cost evidence, and limits.
+- Small-region border/outline wording is disclosed and tracked separately as
+  `fix-04-small-region-prompt`; the completed frozen campaign is preserved.

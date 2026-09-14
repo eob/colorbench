@@ -12,7 +12,7 @@ complete cell and any stochastic input-only rule 25% expected accuracy.
 
 The corpus has 264 questions and 232 PNGs, with 32 hue questions so fixed and
 varying lightness/chroma contexts both receive complete reference cells. The
-264-question campaign runs all thirteen configured models afresh. Publication
+264-question campaign completed all thirteen configured models afresh. Publication
 uses the sealed run and the [third-pilot report](../results/third-pilot.md).
 
 This review covers dataset generation, rendering and geometry, labels and
@@ -29,7 +29,7 @@ restricted to coordinate ranks two and three. Removing a misplaced option
 often restored sorted order, identifying it as the target without viewing R.
 A control reads only the four option pixels, chooses the RGB channel with the
 largest range, and retains middle-ranked candidates whose removal leaves the
-other channels monotone. It guesses uniformly among remaining candidates.
+remaining option values monotone. It guesses uniformly among remaining candidates.
 
 | Family | 0.3.1 expected control score | Options observed |
 | --- | ---: | ---: |
@@ -92,7 +92,7 @@ construction cells, not independent statistical samples.
 - The generator rejects out-of-gamut construction colors rather than clipping
   them. Decoded ordering and separation tolerances are checked after rounding.
   [Actual nearest-gap ranges](../tickets/evidence/decoded-gaps-0.3.2.json) expose
-  quantization variation: nominal matching chroma0.007 spans 0.00445–0.00745.
+  quantization variation: nominal matching chroma 0.007 spans 0.00445–0.00745.
 - Browser profile, 800 × 640 dimensions, DPR 1, font bytes and actual glyph use,
   opacity, metadata absence, neutral backgrounds, and fixed labels are checked.
   Matching, varying hue, gradient, and outline examples were visually inspected.
@@ -177,6 +177,8 @@ confirms arithmetic fidelity while leaving the experimental criticism intact.
   describe this designed corpus, not an isolated separation effect or fitted
   psychometric function. Context uses fixed surrounds by position; it does not
   isolate surround causality without an otherwise identical neutral control.
+  The matching/binding paired treatment includes both neutral frames and
+  accompanying question wording, so it does not isolate frames alone.
 - Small-region geometry is not factorial with axis/hue. Dot-versus-outline
   differences cannot establish a pure geometry effect. There are only two
   gradient option fields and sixteen numeric targets.
@@ -184,7 +186,7 @@ confirms arithmetic fidelity while leaving the experimental criticism intact.
   outline images explicitly say to compare colored outlines. The latter makes
   the scored region visible and answerable, but performance can include
   instruction resolution. A [next-protocol wording correction](../tickets/fix-04-small-region-prompt.md)
-  is tracked; the running frozen protocol is preserved.
+  is tracked; the completed run and its frozen protocol are preserved.
 - Same–different binary outcomes expose response tendency, but eight trials
   of each type per model cannot establish stable response mechanisms. A human
   agreement screen would not by itself resolve model sensitivity or criterion.
@@ -220,6 +222,45 @@ Corrected dataset commit: `09b0dd9`; clean registered runner commit: `1b3079e`.
 Additional completed gates: the final code suite passes 258 Python tests and
 35 TypeScript tests, the package wheel builds, a complete repeat render
 reproduces all 232 PNGs and the manifest byte-identically, and both remote
-GitHub Actions test jobs pass on `cb05404`.
+GitHub Actions test jobs pass on the final code commit `8312b18`.
 
-Final campaign and publication gates are recorded below after completion.
+## Completed corrected campaign
+
+The sealed 0.3.2 run contains all **3,432 final responses** across thirteen
+configurations and all 264 questions. The clean runner source was `1b3079e`;
+raw campaign artifacts were committed before finalization. The finalizer
+records a clean checkout, and verification replays the complete shared cohort.
+The [sealed data and independent audit](../results/colorbench-pilot-0.3.2-audit.json)
+were published in `fcba535`.
+
+| Final gate | Result |
+| --- | --- |
+| Full common cohort | 13 models × 264 tasks = 3,432 final responses |
+| Finalization seal verification | Pass; clean committed source and complete cohort |
+| Publication export, analysis, and audit replay | All three reproduce byte-identically |
+| Independent raw-answer grading | 3,432 answers and 156 model–family summaries reproduced |
+| Independent numeric replay | 624 answers; maximum ΔE drift 4.51e-16, score drift 9.09e-13 |
+| Decoded reference controls | All 42 cells cover A/B/C/D; deterministic baseline 25% |
+| Historical order control on 0.3.2 | 25% expected accuracy in all four affected families |
+| Response validity | 3,431 valid; one incomplete response retained as incorrect |
+| Execution accounting | 3,432 runner attempts; 3,437 HTTP requests; five internal retries |
+| Cost audit | $22.79714445 metered subtotal + $0.17731400 reserve = $22.97445845 ledger |
+
+The single invalid answer is Muse Spark 1.3 on `colorbench-context-06`, which
+exhausted its 16,384-output-token limit. It was not retried for semantic
+correctness. Five provider-internal retry requests lack complete usage;
+there are no separate infrastructure failure records. Catalog prices and
+reserve allowances remain estimates rather than billing evidence.
+
+The [third-pilot report](../results/third-pilot.md) contains measured family
+results, separation slices, paired outcomes, valid-only numeric denominators,
+and a semantic same–different response table. Identical pairs were correct in
+102/104 responses and different pairs in 35/104. There were 171/208 “same”
+answers and no invalids in this family; this demonstrates a response tendency
+on these inputs without fitting perceptual thresholds. All new conclusions
+refer to 0.3.2 alone; the old shortcut prevents longitudinal interpretation.
+
+Independent reviews by the website owner and the LayoutBench reviewer
+confirmed the full-image control construction and scoring, and identified the
+outline-wording limitation disclosed above. No frozen stimuli or protocol
+were changed after the campaign started.
