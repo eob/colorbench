@@ -1,0 +1,134 @@
+bun test v1.3.14 (0d9b296a)
+
+src/reference-control.test.ts:
+ 8 |     const groups = new Map<string, string[]>();
+ 9 |     for (const item of SPECIMENS.filter((s) => s.family === family)) {
+10 |       const key = JSON.stringify([item.options, item.design.layout]);
+11 |       groups.set(key, [...(groups.get(key) ?? []), item.answer!]);
+12 |     }
+13 |     for (const answers of groups.values()) expect(answers.sort()).toEqual(["A", "B", "C", "D"]);
+                                                                       ^
+error: expect(received).toEqual(expected)
+
+  [
+    "A",
+-   "B",
+-   "C",
+-   "D",
+  ]
+
+- Expected  - 3
++ Received  + 0
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/reference-control.test.ts:13:67)
+(fail) matching: every identical option field has all four reference answers [2.47ms]
+ 8 |     const groups = new Map<string, string[]>();
+ 9 |     for (const item of SPECIMENS.filter((s) => s.family === family)) {
+10 |       const key = JSON.stringify([item.options, item.design.layout]);
+11 |       groups.set(key, [...(groups.get(key) ?? []), item.answer!]);
+12 |     }
+13 |     for (const answers of groups.values()) expect(answers.sort()).toEqual(["A", "B", "C", "D"]);
+                                                                       ^
+error: expect(received).toEqual(expected)
+
+  [
+    "A",
+-   "B",
+-   "C",
+-   "D",
+  ]
+
+- Expected  - 3
++ Received  + 0
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/reference-control.test.ts:13:67)
+(fail) binding: every identical option field has all four reference answers [0.35ms]
+ 8 |     const groups = new Map<string, string[]>();
+ 9 |     for (const item of SPECIMENS.filter((s) => s.family === family)) {
+10 |       const key = JSON.stringify([item.options, item.design.layout]);
+11 |       groups.set(key, [...(groups.get(key) ?? []), item.answer!]);
+12 |     }
+13 |     for (const answers of groups.values()) expect(answers.sort()).toEqual(["A", "B", "C", "D"]);
+                                                                       ^
+error: expect(received).toEqual(expected)
+
+  [
+    "A",
+-   "B",
+-   "C",
+-   "D",
+  ]
+
+- Expected  - 3
++ Received  + 0
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/reference-control.test.ts:13:67)
+(fail) context: every identical option field has all four reference answers [0.16ms]
+ 8 |     const groups = new Map<string, string[]>();
+ 9 |     for (const item of SPECIMENS.filter((s) => s.family === family)) {
+10 |       const key = JSON.stringify([item.options, item.design.layout]);
+11 |       groups.set(key, [...(groups.get(key) ?? []), item.answer!]);
+12 |     }
+13 |     for (const answers of groups.values()) expect(answers.sort()).toEqual(["A", "B", "C", "D"]);
+                                                                       ^
+error: expect(received).toEqual(expected)
+
+  [
+    "A",
+-   "B",
+-   "C",
+-   "D",
+  ]
+
+- Expected  - 3
++ Received  + 0
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/reference-control.test.ts:13:67)
+(fail) smallmatch: every identical option field has all four reference answers [0.05ms]
+ 8 |     const groups = new Map<string, string[]>();
+ 9 |     for (const item of SPECIMENS.filter((s) => s.family === family)) {
+10 |       const key = JSON.stringify([item.options, item.design.layout]);
+11 |       groups.set(key, [...(groups.get(key) ?? []), item.answer!]);
+12 |     }
+13 |     for (const answers of groups.values()) expect(answers.sort()).toEqual(["A", "B", "C", "D"]);
+                                                                       ^
+error: expect(received).toEqual(expected)
+
+  [
+    "A",
+-   "B",
+-   "C",
+-   "D",
+  ]
+
+- Expected  - 3
++ Received  + 0
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/reference-control.test.ts:13:67)
+(fail) hue: every identical option field has all four reference answers [0.08ms]
+ 8 |     const groups = new Map<string, string[]>();
+ 9 |     for (const item of SPECIMENS.filter((s) => s.family === family)) {
+10 |       const key = JSON.stringify([item.options, item.design.layout]);
+11 |       groups.set(key, [...(groups.get(key) ?? []), item.answer!]);
+12 |     }
+13 |     for (const answers of groups.values()) expect(answers.sort()).toEqual(["A", "B", "C", "D"]);
+                                                                       ^
+error: expect(received).toEqual(expected)
+
+  [
+    "A",
+-   "B",
+-   "C",
+-   "D",
+  ]
+
+- Expected  - 3
++ Received  + 0
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/reference-control.test.ts:13:67)
+(fail) gradient: every identical option field has all four reference answers [2.31ms]
+
+ 0 pass
+ 6 fail
+ 6 expect() calls
+Ran 6 tests across 1 file. [24.00ms]

@@ -1,0 +1,19 @@
+{
+  "valid": true,
+  "task_count": 264,
+  "family_counts": {
+    "binding": 48,
+    "chroma": 16,
+    "context": 16,
+    "gradient": 8,
+    "hsl": 16,
+    "hue": 32,
+    "lightness": 16,
+    "matching": 48,
+    "oklch": 16,
+    "rgb": 16,
+    "samediff": 16,
+    "smallmatch": 16
+  },
+  "errors": []
+}

@@ -1,8 +1,4 @@
 """The decoded control includes the whole image outside R and the full prompt."""
-import copy
-import hashlib
-import json
-from pathlib import Path
 
 from PIL import Image, ImageDraw
 import pytest

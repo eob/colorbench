@@ -1,0 +1,14 @@
+bun test v1.3.14 (0d9b296a)
+
+src/reference-control.test.ts:
+(pass) matching: every identical option field has all four reference answers [2.24ms]
+(pass) binding: every identical option field has all four reference answers [0.28ms]
+(pass) context: every identical option field has all four reference answers [0.11ms]
+(pass) smallmatch: every identical option field has all four reference answers [0.07ms]
+(pass) hue: every identical option field has all four reference answers [0.16ms]
+(pass) gradient: every identical option field has all four reference answers [2.34ms]
+
+ 6 pass
+ 0 fail
+ 42 expect() calls
+Ran 6 tests across 1 file. [21.00ms]
