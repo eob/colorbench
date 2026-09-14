@@ -84,7 +84,12 @@ Context option interiors sit inside four fixed surrounds. R remains neutral,
 and the ground truth is interior equality. Small-region choices use 20px
 squares (the renderer's "dot" layout) or 3px colored outlines. Dot and outline
 cells also differ in hue and swept axis: their score difference does not
-isolate geometry. Similarly, base colors vary across separation levels, so
+isolate geometry. The shared external prompt also says to ignore "borders,"
+while the outline image footer explicitly instructs comparing the colored
+outlines. These tasks remain answerable, but their performance can include
+instruction resolution. The [next-protocol wording correction](../tickets/fix-04-small-region-prompt.md)
+is tracked separately; frozen inputs remain unchanged. Similarly, base colors
+vary across separation levels, so
 separation slices are descriptive and do not estimate psychometric functions.
 
 ## Rendering and independent ground truth

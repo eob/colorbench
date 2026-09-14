@@ -180,6 +180,11 @@ confirms arithmetic fidelity while leaving the experimental criticism intact.
 - Small-region geometry is not factorial with axis/hue. Dot-versus-outline
   differences cannot establish a pure geometry effect. There are only two
   gradient option fields and sixteen numeric targets.
+- Small-region external instructions say to ignore "borders," while the eight
+  outline images explicitly say to compare colored outlines. The latter makes
+  the scored region visible and answerable, but performance can include
+  instruction resolution. A [next-protocol wording correction](../tickets/fix-04-small-region-prompt.md)
+  is tracked; the running frozen protocol is preserved.
 - Same–different binary outcomes expose response tendency, but eight trials
   of each type per model cannot establish stable response mechanisms. A human
   agreement screen would not by itself resolve model sensitivity or criterion.
