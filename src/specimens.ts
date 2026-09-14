@@ -1,4 +1,4 @@
-import { fromOklch, hueDistance, rgbToOklch } from "./colors.ts";
+import { fromOklch, rgbToOklch } from "./colors.ts";
 import type { Choice, ColorField, ColorSpecimenConfig, Rgb } from "./types.ts";
 
 export const GRADIENT_WIDTH = 240;
@@ -39,18 +39,12 @@ const NEUTRAL: Rgb = [238, 238, 238];
 const choices: Choice[] = ["A", "B", "C", "D"];
 const solid = (rgb: Rgb): ColorField => ({ rgb });
 const index = (i: number) => String(i + 1).padStart(2, "0");
-// Hue assignment is always a 2-D function of (cell, position): a 1-D stride
-// over a period-4 inner loop aliases hue to position (adversarial finding).
-const RANK2 = [-1, 1, 2];
-const RANK3 = [-2, -1, 1];
-function optionsWithAnswer(
-  target: ColorField,
-  distractors: ColorField[],
-  position: number,
-): ColorField[] {
-  const options = [...distractors];
-  options.splice(position, 0, target);
-  return options;
+// Every option set is reused with all four references. The balanced rotations
+// also distribute coordinate rank independently of answer position.
+function permuteOptions(fields: ColorField[], cell: number): ColorField[] {
+  const orders = [[2, 0, 3, 1], [1, 3, 0, 2], [0, 2, 1, 3]];
+  const order = orders[Math.floor(cell / 4) % orders.length]!;
+  return Array.from({ length: 4 }, (_, i) => fields[order[(i + cell) % 4]!]!);
 }
 function shifted(
   axis: (typeof AXES)[number],
@@ -65,45 +59,15 @@ function shifted(
     hue + (axis === "hue" ? multiplier * sep : 0),
   );
 }
-function nearestGap(
-  axis: (typeof AXES)[number],
-  target: Rgb,
-  distractors: Rgb[],
-): number {
-  const center = rgbToOklch(target);
-  const gaps = distractors.map((rgb) => {
-    const value = rgbToOklch(rgb);
-    if (axis === "hue") return hueDistance(value.h, center.h);
-    const dimension = axis === "lightness" ? "l" : "c";
-    return Math.abs(value[dimension] - center[dimension]);
-  });
-  return Math.min(...gaps);
-}
-function resolveBase(
-  axis: (typeof AXES)[number],
-  sep: number,
-  hue: number,
-  multipliers: number[],
-): { l: number; c: number } {
-  const candidates =
-    axis === "hue"
-      ? [0.05, 0.07, 0.09, 0.11].map((c) => ({ l: 0.65, c }))
-      : axis === "lightness"
-        ? [0.65, 0.63, 0.67, 0.6].map((l) => ({ l, c: 0.05 }))
-        : [
-            { l: 0.65, c: 0.05 },
-            { l: 0.65, c: 0.06 },
-            { l: 0.65, c: 0.04 },
-          ];
-  const tolerance = axis === "hue" ? Math.max(2.5, 0.25 * sep) : Math.max(0.01, 0.35 * sep);
-  for (const base of candidates) {
-    try {
-      const rgbs = [0, ...multipliers].map((m) => shifted(axis, base, hue, sep, m));
-      if (new Set(rgbs.map((rgb) => JSON.stringify(rgb))).size !== 1 + multipliers.length) continue;
-      const gap = nearestGap(axis, rgbs[0]!, rgbs.slice(1));
-      if (Math.abs(gap - sep) <= tolerance) return base;
-    } catch {
-      continue;
+function optionFields(axis: (typeof AXES)[number], sep: number, hue: number): ColorField[] {
+  for (const l of [0.65, 0.7, 0.6]) {
+    for (const c of axis === "chroma" ? [0.055, 0.06, 0.05] : [0.075, 0.06, 0.05]) {
+      try {
+        const fields = [-1.5, -0.5, 0.5, 1.5].map((m) => solid(shifted(axis, { l, c }, hue, sep, m)));
+        if (new Set(fields.map((f) => JSON.stringify(f.rgb))).size === 4) return fields;
+      } catch {
+        // Try the next declared in-gamut center; never clip construction colors.
+      }
     }
   }
   throw new Error(`Unresolvable ${axis} separation ${sep} at hue ${hue}`);
@@ -117,37 +81,27 @@ export function gradientColumns(a: Rgb, b: Rgb): Rgb[] {
 }
 export const SPECIMENS: ColorSpecimenConfig[] = [];
 
-// Matching/binding separation sweep: 3 axes x 4 separations x 4 positions.
+// Three axes x four separations x four references; the option field is fixed
+// within each cell, so no rule that ignores R can beat uniform guessing.
 {
   let n = 0;
   for (const [axisIndex, axis] of AXES.entries()) {
     for (const [level, sep] of MATCH_SEPS[axis].entries()) {
+      const cell = axisIndex * 4 + level;
+      const options = permuteOptions(optionFields(axis, sep, HUES[cell % 8]!), cell);
       for (let position = 0; position < 4; position++) {
-        const cell = axisIndex * 4 + level;
-        const hue = HUES[(cell + position) % 8]!;
-        const multipliers = (cell + position) % 2 === 0 ? RANK2 : RANK3;
-        const base = resolveBase(axis, sep, hue, multipliers);
-        const target = solid(fromOklch(base.l, base.c, hue));
-        const distractors = multipliers.map((m) => solid(shifted(axis, base, hue, sep, m)));
-        const options = optionsWithAnswer(target, distractors, position);
-        const id = index(n);
-        n += 1;
+        const target = options[position]!;
+        const id = index(n++);
         for (const family of ["matching", "binding"] as const) {
           SPECIMENS.push({
-            taskId: `colorbench-${family}-${id}`,
-            family,
-            groupId: `match-binding-${id}`,
-            imageId: `${family}-${id}`,
-            target,
-            options,
-            answer: choices[position],
+            taskId: `colorbench-${family}-${id}`, family,
+            groupId: `match-binding-${id}`, imageId: `${family}-${id}`,
+            target, options, answer: choices[position],
             design: {
-              axis,
-              difficulty: DIFFICULTY[level]!,
-              sourceRgb: target.rgb,
+              axis, difficulty: DIFFICULTY[level]!, sourceRgb: target.rgb,
+              optionSetId: `matching-${index(cell)}`,
               pairedFamily: family === "matching" ? "binding" : "matching",
-              intendedTargetOklch: { l: base.l, c: base.c, h: hue },
-              intendedSeparation: sep,
+              intendedTargetOklch: rgbToOklch(target.rgb!), intendedSeparation: sep,
               reference: { kind: "exact-visible-color", neutralSurround: NEUTRAL },
             },
           });
@@ -224,82 +178,61 @@ for (const family of ["lightness", "chroma"] as const) {
   }
 }
 
-// Hue sweep: 4 minimum-distractor separations x 4 positions.
+// Four separations x two lightness/chroma contexts x four references.
 for (const [level, sep] of [70, 30, 12, 6].entries()) {
-  for (let position = 0; position < 4; position++) {
-    const k = level * 4 + position;
-    const hue = HUES[(2 * level + position) % 8]!;
-    const varying = (level + position) % 2 === 1;
-    const target = solid(fromOklch(0.65, 0.075, hue));
-    // Minimum circular distance is exactly sep at every level: [d,d+120,d+240]
-    // wraps at d=70 (310 lands 50 away). 150/250 stay clear of all levels.
-    const optionHues = [hue, hue + sep, hue + 150, hue + 250];
-    const fields = optionHues.map((h, j) =>
-      solid(
-        fromOklch(
-          varying ? [0.55, 0.73, 0.59, 0.69][(j + 2 * position + level) % 4]! : 0.65,
-          varying ? [0.045, 0.07, 0.055, 0.065][(j + 2 * position + level) % 4]! : 0.075,
-          h,
-        ),
-      ),
-    );
-    SPECIMENS.push({
-      taskId: `colorbench-hue-${index(k)}`,
-      family: "hue",
-      groupId: `hue-${index(k)}`,
-      imageId: `hue-${index(k)}`,
-      target,
-      options: optionsWithAnswer(fields[0]!, fields.slice(1), position),
-      answer: choices[position],
-      design: {
-        axis: "hue",
-        difficulty: varying ? "varying-lightness-chroma" : "fixed-lightness-chroma",
-        sourceRgb: target.rgb,
-        intendedHue: hue,
-        intendedSeparation: sep,
-        reference: { kind: "hue-reference", minimumDistractorDegrees: sep },
-        humanAgreementMeasured: false,
-      },
-    });
+  for (const varying of [false, true]) {
+    const cell = level * 2 + Number(varying);
+    const baseHue = HUES[(2 * level) % 8]!;
+    const fields = Array.from({ length: 4 }, (_, j) => solid(fromOklch(
+      varying ? [0.55, 0.73, 0.59, 0.69][j]! : 0.65,
+      varying ? [0.045, 0.07, 0.055, 0.065][j]! : 0.075,
+      baseHue + j * sep,
+    )));
+    const options = permuteOptions(fields, cell);
+    for (let position = 0; position < 4; position++) {
+      const k = cell * 4 + position;
+      const hue = rgbToOklch(options[position]!.rgb!).h;
+      const target = varying ? solid(fromOklch(0.65, 0.075, hue)) : options[position]!;
+      SPECIMENS.push({
+        taskId: `colorbench-hue-${index(k)}`, family: "hue",
+        groupId: `hue-${index(k)}`, imageId: `hue-${index(k)}`,
+        target, options, answer: choices[position],
+        design: {
+          axis: "hue", difficulty: varying ? "varying-lightness-chroma" : "fixed-lightness-chroma",
+          optionSetId: `hue-${index(cell)}`, sourceRgb: target.rgb,
+          intendedHue: hue, intendedSeparation: sep,
+          reference: { kind: "hue-reference", minimumDistractorDegrees: sep },
+          humanAgreementMeasured: false,
+        },
+      });
+    }
   }
 }
 
-// Gradient matching: direction fully crossed with position (the 0.2.0
-// direction-parity confound is removed rather than preserved as an anchor).
-for (let i = 0; i < 8; i++) {
-  const a = NUMERIC_TARGETS[i]!,
-    b = NUMERIC_TARGETS[(i + 3) % 8]!;
-  const forward = gradientColumns(a, b);
-  const columns = i < 4 ? forward : [...forward].reverse();
-  const target = { columns };
+// Two histogram-equivalent option sets; each full field becomes R once.
+for (let cell = 0; cell < 2; cell++) {
+  const columns = gradientColumns(NUMERIC_TARGETS[cell]!, NUMERIC_TARGETS[cell + 3]!);
   const shifted = (offset: number): ColorField => ({
     columns: [...columns.slice(offset), ...columns.slice(0, offset)],
   });
-  const options = optionsWithAnswer(
-    target,
-    [{ columns: [...columns].reverse() }, shifted(80), shifted(160)],
-    i % 4,
-  );
-  SPECIMENS.push({
-    taskId: `colorbench-gradient-${index(i)}`,
-    family: "gradient",
-    groupId: `gradient-${index(i)}`,
-    imageId: `gradient-${index(i)}`,
-    target,
-    options,
-    answer: choices[i % 4],
-    design: {
-      axis: "spatial-color-progression",
-      difficulty: i < 4 ? "forward" : "reverse",
-      sourceRgb: columns[0],
-      reference: {
-        kind: "exact-color-field",
-        interpolation: "encoded-srgb-linear-columns",
-        width: GRADIENT_WIDTH,
+  const options = permuteOptions([
+    { columns }, { columns: [...columns].reverse() }, shifted(80), shifted(160),
+  ], cell);
+  for (let position = 0; position < 4; position++) {
+    const k = cell * 4 + position;
+    const target = options[position]!;
+    SPECIMENS.push({
+      taskId: `colorbench-gradient-${index(k)}`, family: "gradient",
+      groupId: `gradient-${index(k)}`, imageId: `gradient-${index(k)}`,
+      target, options, answer: choices[position],
+      design: {
+        axis: "spatial-color-progression", difficulty: `set-${cell + 1}`,
+        optionSetId: `gradient-${index(cell)}`, sourceRgb: target.columns![0],
+        reference: { kind: "exact-color-field", interpolation: "encoded-srgb-linear-columns", width: GRADIENT_WIDTH },
+        histogramPreservingDistractors: true,
       },
-      histogramPreservingDistractors: true,
-    },
-  });
+    });
+  }
 }
 
 // Same-different: 8 identical pairs + 8 near-threshold pairs, mappings crossed.
@@ -365,77 +298,51 @@ for (let i = 0; i < 8; i++) {
   });
 }
 
-// Surround-shifted matching: 4 hues x 4 positions, fixed per-position surrounds.
-{
-  let k = 0;
-  for (const [hueIndex, hue] of CONTEXT_HUES.entries()) {
-    for (let position = 0; position < 4; position++) {
-      const axis = AXES[k % 3]!;
-      const sep = axis === "lightness" ? 0.04 : axis === "chroma" ? 0.012 : 15;
-      const multipliers = (hueIndex + position) % 2 === 0 ? RANK2 : RANK3;
-      const base = resolveBase(axis, sep, hue, multipliers);
-      const target = solid(fromOklch(base.l, base.c, hue));
-      const distractors = multipliers.map((m) => solid(shifted(axis, base, hue, sep, m)));
-      const surround: Record<string, Rgb> = {
-        A: CONTEXT_SURROUNDS[0]!,
-        B: CONTEXT_SURROUNDS[1]!,
-        C: CONTEXT_SURROUNDS[2]!,
-        D: CONTEXT_SURROUNDS[3]!,
-      };
-      SPECIMENS.push({
-        taskId: `colorbench-context-${index(k)}`,
-        family: "context",
-        groupId: `context-${index(k)}`,
-        imageId: `context-${index(k)}`,
-        target,
-        options: optionsWithAnswer(target, distractors, position),
-        answer: choices[position],
-        design: {
-          axis,
-          difficulty: "mid",
-          sourceRgb: target.rgb,
-          intendedTargetOklch: { l: base.l, c: base.c, h: hue },
-          intendedSeparation: sep,
-          intendedHue: hue,
-          surround,
-          reference: { kind: "surround-shift", neutralSurround: NEUTRAL },
-        },
-      });
-      k += 1;
-    }
+// Four option fields on fixed surrounds, each crossed with all references.
+for (const [cell, hue] of CONTEXT_HUES.entries()) {
+  const axis = AXES[cell % 3]!;
+  const sep = axis === "lightness" ? 0.04 : axis === "chroma" ? 0.012 : 15;
+  const options = permuteOptions(optionFields(axis, sep, hue), cell);
+  for (let position = 0; position < 4; position++) {
+    const k = cell * 4 + position;
+    const target = options[position]!;
+    SPECIMENS.push({
+      taskId: `colorbench-context-${index(k)}`, family: "context",
+      groupId: `context-${index(k)}`, imageId: `context-${index(k)}`,
+      target, options, answer: choices[position],
+      design: {
+        axis, difficulty: "mid", sourceRgb: target.rgb,
+        optionSetId: `context-${index(cell)}`,
+        intendedTargetOklch: rgbToOklch(target.rgb!), intendedSeparation: sep,
+        intendedHue: hue,
+        surround: Object.fromEntries(choices.map((choice, i) => [choice, CONTEXT_SURROUNDS[i]])),
+        reference: { kind: "surround-shift", neutralSurround: NEUTRAL },
+      },
+    });
   }
 }
 
-// Small-region matching: 2 layouts x 4 positions x 2, axes cycle.
-for (let k = 0; k < 16; k++) {
-  const block = Math.floor(k / 4);
-  const layout = block % 2 === 0 ? "dot" : "frame";
-  const position = k % 4;
-  const axis = AXES[k % 3]!;
+// Two geometries x two option fields x four references.
+for (let cell = 0; cell < 4; cell++) {
+  const layout = cell % 2 === 0 ? "dot" : "frame";
+  const axis = AXES[cell % 3]!;
   const sep = axis === "lightness" ? 0.03 : axis === "chroma" ? 0.01 : 10;
-  const hue = HUES[(2 * block + position) % 8]!;
-  const multipliers = (block + position) % 2 === 0 ? RANK2 : RANK3;
-  const base = resolveBase(axis, sep, hue, multipliers);
-  const target = solid(fromOklch(base.l, base.c, hue));
-  const distractors = multipliers.map((m) => solid(shifted(axis, base, hue, sep, m)));
-  SPECIMENS.push({
-    taskId: `colorbench-smallmatch-${index(k)}`,
-    family: "smallmatch",
-    groupId: `smallmatch-${index(k)}`,
-    imageId: `smallmatch-${index(k)}`,
-    target,
-    options: optionsWithAnswer(target, distractors, position),
-    answer: choices[position],
-    design: {
-      axis,
-      difficulty: "mid",
-      layout,
-      sourceRgb: target.rgb,
-      intendedTargetOklch: { l: base.l, c: base.c, h: hue },
-      intendedSeparation: sep,
-      reference: { kind: "small-region", neutralSurround: NEUTRAL },
-    },
-  });
+  const options = permuteOptions(optionFields(axis, sep, HUES[(2 * cell) % 8]!), cell);
+  for (let position = 0; position < 4; position++) {
+    const k = cell * 4 + position;
+    const target = options[position]!;
+    SPECIMENS.push({
+      taskId: `colorbench-smallmatch-${index(k)}`, family: "smallmatch",
+      groupId: `smallmatch-${index(k)}`, imageId: `smallmatch-${index(k)}`,
+      target, options, answer: choices[position],
+      design: {
+        axis, difficulty: "mid", layout, sourceRgb: target.rgb,
+        optionSetId: `smallmatch-${index(cell)}`,
+        intendedTargetOklch: rgbToOklch(target.rgb!), intendedSeparation: sep,
+        reference: { kind: "small-region", neutralSurround: NEUTRAL },
+      },
+    });
+  }
 }
 
 for (let i = 0; i < NUMERIC_TARGETS.length; i++) {

@@ -40,6 +40,7 @@ def check_crossing(items):
     by_family = defaultdict(list)
     for item in items:
         by_family[item["family"]].append(item)
+    reference_crossed = any(row["design"].get("optionSetId") for row in items)
     for family, axes in SWEEP_SEPARATIONS.items():
         rows = by_family.get(family, [])
         if not rows:
@@ -59,6 +60,8 @@ def check_crossing(items):
             key = (row["design"].get("axis"), row["design"].get("intendedSeparation"))
             if pair:
                 key += (row["design"].get("direction"),)
+            elif family == "hue" and reference_crossed:
+                key += (row["design"].get("difficulty"),)
             cells[key].append(row["groundTruth"]["choice"])
         want = ["A", "B"] if pair else ["A", "B", "C", "D"]
         for cell, choices in cells.items():
@@ -70,7 +73,8 @@ def check_crossing(items):
         for row in hues:
             per_sep[row["design"].get("intendedSeparation")][row["design"].get("difficulty")] += 1
         for sep, counts in per_sep.items():
-            if counts != Counter({"fixed-lightness-chroma": 2, "varying-lightness-chroma": 2}):
+            if counts != Counter({"fixed-lightness-chroma": 4 if reference_crossed else 2,
+                                  "varying-lightness-chroma": 4 if reference_crossed else 2}):
                 errors.append(f"hue separation {sep} is not balanced across fixed/varying contexts")
     sames = by_family.get("samediff", [])
     if sames:
@@ -264,6 +268,33 @@ def _item(item, directory):
     return dict(masked_hash=_hash(masked.tobytes()), target=targets, options=options)
 
 
+def check_reference_controls(items, directory):
+    """Prove chance performance for any predictor deprived of reference pixels."""
+    groups = defaultdict(list)
+    errors = []
+    for item in items:
+        if item["family"] not in (*EXACT_MATCH_FAMILIES, "hue"):
+            continue
+        if not item["design"].get("optionSetId"):
+            errors.append(f'{item["taskId"]}: missing reference-control set identity')
+        with Image.open(Path(directory) / item["imageFilename"]) as source:
+            image = source.convert("RGB")
+        draw = ImageDraw.Draw(image)
+        targets = [r for r in item["rendered"]["regions"] if r["role"] == "target"]
+        if len(targets) != 1:
+            errors.append(f'{item["taskId"]}: reference control requires exactly one target')
+            continue
+        r = targets[0]
+        draw.rectangle((r["x"], r["y"], r["x"] + r["width"] - 1, r["y"] + r["height"] - 1), fill=(0, 0, 0))
+        groups[(item["family"], item["prompt"], _hash(image.tobytes()))].append(item)
+    for rows in groups.values():
+        if sorted(row["groundTruth"]["choice"] for row in rows) != list("ABCD"):
+            errors.append(f'{rows[0]["taskId"]}: identical reference-masked images must cover A/B/C/D exactly once')
+        if len({row["design"].get("optionSetId") for row in rows}) != 1:
+            errors.append(f'{rows[0]["taskId"]}: reference-control set identities disagree')
+    return errors
+
+
 def validate_dataset(manifest_path, *, require_complete=True):
     errors = []
     try:
@@ -289,11 +320,15 @@ def validate_dataset(manifest_path, *, require_complete=True):
         errors.append("Pixels outside stimulus regions vary within a family and direction; possible answer leakage")
     if require_complete:
         counts = Counter(item["family"] for item in items)
-        if counts != Counter(COMPLETE_FAMILY_COUNTS):
-            errors.append("Release 0.3.1 requires its frozen per-family task counts (248 total)")
+        reference_crossed = any(row["design"].get("optionSetId") for row in items)
+        expected_counts = {**COMPLETE_FAMILY_COUNTS, **({"hue": 32} if reference_crossed else {})}
+        if counts != Counter(expected_counts):
+            errors.append(f"Release requires its frozen per-family task counts ({sum(expected_counts.values())} total)")
+        if reference_crossed:
+            errors.extend(check_reference_controls(items, directory))
         for family in CHOICE_FAMILIES:
             labels = choice_labels(family)
-            expected = COMPLETE_FAMILY_COUNTS[family] // len(labels)
+            expected = expected_counts[family] // len(labels)
             counts = Counter(item["groundTruth"]["choice"] for item in items if item["family"] == family)
             if counts != Counter({label: expected for label in labels}):
                 errors.append(f"Correct option positions are not balanced for {family}")

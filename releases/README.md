@@ -1,5 +1,23 @@
 # Frozen releases
 
+`0.3.2` is the current 264-question release (232 distinct images). It fixes
+reference-free option-order shortcuts by repeating each complete four-choice
+option field with every possible reference. Hue now has 32 questions to cross
+four separations with both fixed/varying lightness/chroma and all four answers.
+The decoded whole-image reference-mask gate verifies expected 25% accuracy for
+any predictor using only the remaining inputs. Human agreement is unmeasured;
+the four-reference cells are correlated observations.
+
+See the [publication review](../docs/publication-review-2026-09-14.md) and
+[current results](../results/third-pilot.md). All thirteen models are rerun on
+all 264 questions; scores do not transfer from historical corpora.
+
+## Historical releases
+
+**0.3.1 has a documented option-order shortcut.** It remains frozen as measured,
+and its report now records that limitation and corrects its retry-cost claims.
+
+
 `0.3.1` is a 248-question perception pilot: separation sweeps for matching
 (48), binding (48), lightness (16), chroma (16), and hue (16), with every
 separation crossed against every answer position; 16 same–different, 16
@@ -10,7 +28,7 @@ measured. (`0.3.0` froze the same task design with confounded stimulus
 assignments; it was adversarially reviewed, never measured, and superseded
 before any paid run.)
 
-Cost basis: the 0.2.0 campaign spent $5.12 for 936 responses. A full 0.3.1
+Historical planning estimate (before the 0.3.1 measurements): the 0.2.0 campaign spent $5.12 for 936 responses. A full 0.3.1
 campaign is 3,224 responses (248 × 13 models) at the same catalog prices,
 estimated ≈$18 under the $25 budget cap. The runner reserves worst-case
 output cost per request before sending; watch the first paid run for

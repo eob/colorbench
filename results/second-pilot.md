@@ -1,12 +1,23 @@
 # Second ColorBench pilot: results and critique
 
+**Historical release: superseded after the 2026-09-14 publication review.**
+A reference-free control reaches approximately 74–75% on matching, binding,
+context, and small-region tasks because their distractors were ordered.
+These results remain a faithful record of 0.3.1, but they cannot establish
+reference-dependent matching ability. Use the corrected 0.3.2 release for
+current publication; its results must not be compared numerically to 0.3.1.
+
 Measured 2026-09-13 using release 0.3.1. All 13 models completed the same
-248 questions: **3,224 final responses, 3,224 attempts, zero invalid
-responses, zero infrastructure errors, and no retries**. Estimated API cost
-was **$21.49166615**, using recorded token usage and catalog prices. Every
-request had complete usage evidence; no fallback token estimates or budget
-reserves entered that total. The model catalog's Meta price-verification
-limitation still applies.
+248 questions: **3,224 final responses and runner attempts, zero invalid
+final responses, and zero unresolved infrastructure failures**. There were
+**3,225 HTTP requests**, including one internal retry for GPT-5.6 Sol's
+`colorbench-oklch-10`. That retry lacks individual usage evidence.
+
+The ledger's **$21.49166615** total includes **$0.10192** reserved conservatively
+for that unmetered retry. Recorded usage multiplied by catalog prices totals
+**$21.38974615**; it is an estimate, not an invoice. The model catalog's Meta
+price-verification limitation still applies. The independently reproduced
+[publication audit](colorbench-pilot-0.3.1-audit.json) separates these quantities.
 
 The [sealed run](runs/0.3.1/pilot-20260913/) includes original responses,
 checkpoint, configuration, scores, and artifact hashes. The finalizer replayed
@@ -67,8 +78,11 @@ score 96.2% while differing pairs score 32.7%, below the 50% chance line.
 Five models score 0/8 on differing pairs while perfect on identical ones —
 a near-total "same" response bias. Only GPT-6 Astra discriminates both
 (8/8 and 8/8); Claude Opus is the only other model without a strong bias
-(5/8 identical, 4/8 differing). Without confidence ratings, sensitivity
-and response criterion cannot be separated here.
+(5/8 identical, 4/8 differing). Binary responses already expose this asymmetry through hit and false-alarm
+rates. Eight same and eight different items per model are too few, and too
+heterogeneous, to establish stable perceptual thresholds or response criteria.
+Confidence ratings would add information but are not required to report the
+observed response tendency.
 
 One model stands apart on choice tasks: GPT-6 Astra answered all 200
 choice questions correctly. That is a descriptive fact about these exact
@@ -106,10 +120,10 @@ request variability remain unseparated.
 
 ## What the benchmark itself needs to improve
 
-**Same–different confounds sensitivity with response criterion.** The
-below-chance differing-pair accuracy shows most models default to "same"
-at these gaps. A follow-up should add confidence ratings or an adaptive
-staircase so threshold and bias separate.
+**Same–different needs more observations and stimulus control.** The
+below-chance differing-pair accuracy shows a strong tendency to answer "same"
+at these gaps. Report both same and different outcomes; a larger sweep with
+repeated trials and optional confidence ratings would support richer analysis.
 
 **Chroma-near and gradient-near are still too easy.** Chroma ΔC 0.008
 scores 86.5% and gradient sits at 100%. The next sweep should push chroma
@@ -129,7 +143,7 @@ screen proposed in the 0.2.0 critique remains the next methodological step.
 
 Run the human-agreement screen on the 0.3.1 corpus before building harder
 stimuli: five blinded observations per question, scored against the same
-decoded ground truth, reported per separation. That single dataset would
-calibrate every gradient above, resolve whether the samediff asymmetry is
-criterion or sensitivity, and set principled floors for the next sweep —
-instead of chasing one model's ceiling in the dark.
+decoded ground truth, reported per separation. That dataset would describe human agreement at the sampled separations.
+It would not by itself resolve model response mechanisms or establish
+psychophysical thresholds; those need a design with repeated, controlled
+observations and explicit modeling assumptions.

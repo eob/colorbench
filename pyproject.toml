@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "colorbench"
-version = "0.3.1"
+version = "0.3.2"
 description = "A frozen pilot of visual color matching, discrimination, binding, gradients, and numeric reconstruction"
 readme = "README.md"
 requires-python = ">=3.10"
