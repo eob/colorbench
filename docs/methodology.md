@@ -46,7 +46,10 @@ are 0.08, 0.04, 0.02, and 0.01; chroma gaps are 0.025, 0.012, 0.007, and
 0.05, 0.02, and 0.01; chroma comparisons use 0.06, 0.03, 0.015, and 0.008.
 Hue matching uses minimum distractor separations 70°, 30°, 12°, and 6°.
 These are intended coordinate gaps, verified after 8-bit sRGB quantization
-within declared tolerances. They are not measured human detection thresholds.
+within declared tolerances. The [decoded gap ranges](../tickets/evidence/decoded-gaps-0.3.2.json)
+record the actual nearest-option separations. For example, matching chroma
+0.007 yields gaps from 0.00445 to 0.00745; nominal steps are not exact decoded
+coordinates. They are not measured human detection thresholds.
 
 Each matching/binding pair shares target color, geometry, option fills, and
 option positions; binding adds neutral component frames. Their difference

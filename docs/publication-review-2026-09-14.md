@@ -91,6 +91,8 @@ construction cells, not independent statistical samples.
   outlines compare the colored border; numeric targets use flat RGB interiors.
 - The generator rejects out-of-gamut construction colors rather than clipping
   them. Decoded ordering and separation tolerances are checked after rounding.
+  [Actual nearest-gap ranges](../tickets/evidence/decoded-gaps-0.3.2.json) expose
+  quantization variation: nominal matching chroma0.007 spans 0.00445–0.00745.
 - Browser profile, 800 × 640 dimensions, DPR 1, font bytes and actual glyph use,
   opacity, metadata absence, neutral backgrounds, and fixed labels are checked.
   Matching, varying hue, gradient, and outline examples were visually inspected.
@@ -209,5 +211,10 @@ Corrected dataset commit: `09b0dd9`; clean registered runner commit: `1b3079e`.
 | 0.3.1 seal verification | 3,224 raw answers replayed |
 | 0.3.1 export and analysis replay | Both byte-identical |
 | Independent historical numeric replay | 624 answers; maximum ΔE drift 3.13e-16 |
+
+Additional completed gates: the final code suite passes 258 Python tests and
+35 TypeScript tests, the package wheel builds, a complete repeat render
+reproduces all 232 PNGs and the manifest byte-identically, and both remote
+GitHub Actions test jobs pass on `cb05404`.
 
 Final campaign and publication gates are recorded below after completion.

@@ -1,0 +1,245 @@
+{
+  "release": "0.3.2",
+  "decoded_nearest_option_gaps": [
+    {
+      "family": "binding",
+      "axis": "chroma",
+      "intended": 0.004,
+      "count": 4,
+      "minimum": 0.0036287216929375837,
+      "maximum": 0.0037610569243974323
+    },
+    {
+      "family": "binding",
+      "axis": "chroma",
+      "intended": 0.007,
+      "count": 4,
+      "minimum": 0.004454331828939194,
+      "maximum": 0.007449974956420823
+    },
+    {
+      "family": "binding",
+      "axis": "chroma",
+      "intended": 0.012,
+      "count": 4,
+      "minimum": 0.010321330148523468,
+      "maximum": 0.011863274534908874
+    },
+    {
+      "family": "binding",
+      "axis": "chroma",
+      "intended": 0.025,
+      "count": 4,
+      "minimum": 0.024629677582670657,
+      "maximum": 0.025089015276249516
+    },
+    {
+      "family": "binding",
+      "axis": "hue",
+      "intended": 4,
+      "count": 4,
+      "minimum": 3.257586215706823,
+      "maximum": 4.911821533940071
+    },
+    {
+      "family": "binding",
+      "axis": "hue",
+      "intended": 8,
+      "count": 4,
+      "minimum": 7.933889014837604,
+      "maximum": 8.231821821237077
+    },
+    {
+      "family": "binding",
+      "axis": "hue",
+      "intended": 15,
+      "count": 4,
+      "minimum": 14.499801488617777,
+      "maximum": 15.323340369421743
+    },
+    {
+      "family": "binding",
+      "axis": "hue",
+      "intended": 35,
+      "count": 4,
+      "minimum": 34.367664339224234,
+      "maximum": 36.0373054163706
+    },
+    {
+      "family": "binding",
+      "axis": "lightness",
+      "intended": 0.01,
+      "count": 4,
+      "minimum": 0.009747303929266482,
+      "maximum": 0.009809204303328323
+    },
+    {
+      "family": "binding",
+      "axis": "lightness",
+      "intended": 0.02,
+      "count": 4,
+      "minimum": 0.019607870229536806,
+      "maximum": 0.019889748189355405
+    },
+    {
+      "family": "binding",
+      "axis": "lightness",
+      "intended": 0.04,
+      "count": 4,
+      "minimum": 0.039200811118596635,
+      "maximum": 0.0417235727974794
+    },
+    {
+      "family": "binding",
+      "axis": "lightness",
+      "intended": 0.08,
+      "count": 4,
+      "minimum": 0.0800391347521513,
+      "maximum": 0.0802184173104421
+    },
+    {
+      "family": "context",
+      "axis": "chroma",
+      "intended": 0.012,
+      "count": 4,
+      "minimum": 0.011942543326956906,
+      "maximum": 0.012509591276248157
+    },
+    {
+      "family": "context",
+      "axis": "hue",
+      "intended": 15,
+      "count": 4,
+      "minimum": 13.906711743370323,
+      "maximum": 14.81910657392524
+    },
+    {
+      "family": "context",
+      "axis": "lightness",
+      "intended": 0.04,
+      "count": 8,
+      "minimum": 0.038600749308046245,
+      "maximum": 0.04144602530874586
+    },
+    {
+      "family": "matching",
+      "axis": "chroma",
+      "intended": 0.004,
+      "count": 4,
+      "minimum": 0.0036287216929375837,
+      "maximum": 0.0037610569243974323
+    },
+    {
+      "family": "matching",
+      "axis": "chroma",
+      "intended": 0.007,
+      "count": 4,
+      "minimum": 0.004454331828939194,
+      "maximum": 0.007449974956420823
+    },
+    {
+      "family": "matching",
+      "axis": "chroma",
+      "intended": 0.012,
+      "count": 4,
+      "minimum": 0.010321330148523468,
+      "maximum": 0.011863274534908874
+    },
+    {
+      "family": "matching",
+      "axis": "chroma",
+      "intended": 0.025,
+      "count": 4,
+      "minimum": 0.024629677582670657,
+      "maximum": 0.025089015276249516
+    },
+    {
+      "family": "matching",
+      "axis": "hue",
+      "intended": 4,
+      "count": 4,
+      "minimum": 3.257586215706823,
+      "maximum": 4.911821533940071
+    },
+    {
+      "family": "matching",
+      "axis": "hue",
+      "intended": 8,
+      "count": 4,
+      "minimum": 7.933889014837604,
+      "maximum": 8.231821821237077
+    },
+    {
+      "family": "matching",
+      "axis": "hue",
+      "intended": 15,
+      "count": 4,
+      "minimum": 14.499801488617777,
+      "maximum": 15.323340369421743
+    },
+    {
+      "family": "matching",
+      "axis": "hue",
+      "intended": 35,
+      "count": 4,
+      "minimum": 34.367664339224234,
+      "maximum": 36.0373054163706
+    },
+    {
+      "family": "matching",
+      "axis": "lightness",
+      "intended": 0.01,
+      "count": 4,
+      "minimum": 0.009747303929266482,
+      "maximum": 0.009809204303328323
+    },
+    {
+      "family": "matching",
+      "axis": "lightness",
+      "intended": 0.02,
+      "count": 4,
+      "minimum": 0.019607870229536806,
+      "maximum": 0.019889748189355405
+    },
+    {
+      "family": "matching",
+      "axis": "lightness",
+      "intended": 0.04,
+      "count": 4,
+      "minimum": 0.039200811118596635,
+      "maximum": 0.0417235727974794
+    },
+    {
+      "family": "matching",
+      "axis": "lightness",
+      "intended": 0.08,
+      "count": 4,
+      "minimum": 0.0800391347521513,
+      "maximum": 0.0802184173104421
+    },
+    {
+      "family": "smallmatch",
+      "axis": "chroma",
+      "intended": 0.01,
+      "count": 4,
+      "minimum": 0.009483073986756754,
+      "maximum": 0.011086989085590873
+    },
+    {
+      "family": "smallmatch",
+      "axis": "hue",
+      "intended": 10,
+      "count": 4,
+      "minimum": 9.274127738157404,
+      "maximum": 11.019500716065835
+    },
+    {
+      "family": "smallmatch",
+      "axis": "lightness",
+      "intended": 0.03,
+      "count": 8,
+      "minimum": 0.028949713090486995,
+      "maximum": 0.030704744421061303
+    }
+  ]
+}
