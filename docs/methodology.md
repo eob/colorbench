@@ -1,204 +1,205 @@
-# ColorBench 0.3.1 methodology
+# ColorBench 0.3.2 methodology
 
-This pilot measures responses to controlled rendered color tasks through
-providers' image-input interfaces. It does not isolate visual processing from
-instruction following, image preprocessing, or coordinate-system knowledge.
-It asks about visible properties, not aesthetic quality, semantic intent,
-accessibility compliance, or which color a designer should choose.
+ColorBench measures how vision-language models answer controlled color tasks
+through their providers' image interfaces. It includes instruction following,
+image preprocessing, and color-coordinate knowledge; it does not isolate a
+human-like visual mechanism or assess aesthetic judgment.
 
-## Stimuli and references
+## Corpus and construction
 
-There are 248 questions: 48 matching, 48 color-to-component binding, 16 each
-for lightness, chroma, hue, same–different, surround-shifted context, and
-small-region matching, 8 gradient matching, and 16 each for RGB, HSL, and
-OKLCH. The three numeric families reuse the same 16 opaque colors, yielding
-216 unique PNGs. Each request starts independently; other predictions are
-never supplied.
+The fixed pilot has **264 questions and 232 unique 800 × 640 PNGs**:
 
-Images are 800 × 640 device pixels at DPR 1 on an sRGB neutral background
-`rgb(238,238,238)`. Flat color fields are written as exact RGB canvas pixels.
-The renderer forces Chromium's sRGB profile and records browser version,
-viewport, custom font identity, font file hash, and image hashes. DejaVu Sans
-at 16 px supplies readable neutral labels. An independent Pillow decoder checks
-all scored regions against their recorded RGB values and pixel hashes.
+| Family | Questions | Construction |
+| --- | ---: | --- |
+| Matching | 48 | Three color axes × four separations × four reference choices |
+| Component fill matching | 48 | Same targets and options as matching, with neutral UI frames |
+| Lightness | 16 | Four separations × two directions × two answer positions |
+| Chroma | 16 | Four separations × two directions × two answer positions |
+| Hue | 32 | Four separations × fixed/varying lightness and chroma × four reference choices |
+| Gradient | 8 | Two option fields × four reference choices |
+| Same–different | 16 | Eight identical and eight differing pairs, answer mapping crossed |
+| Context | 16 | Four option fields on fixed per-position surrounds × four references |
+| Small-region | 16 | Two dot fields and two outline fields × four references |
+| RGB, HSL, OKLCH | 16 each | Three formats independently estimate the same sixteen target images |
 
-Matching and binding share colors, target geometry, option fill dimensions,
-and option positions. Binding adds neutral component frames. Their difference
-is a controlled transfer to this UI treatment; it does not isolate every
-possible source of object-binding difficulty.
+Every four-choice option set is repeated with all four references. The full
+image outside the reference R, and the external prompt, remain byte-for-byte
+identical within that set. The independent dataset gate decodes each PNG,
+masks only the reference rectangle, and requires each identical visible input
+to have A, B, C, and D as its correct answer once. Thus any deterministic
+predictor deprived of R scores exactly 25% on these complete cells; a
+stochastic predictor using only those inputs has expected accuracy 25%.
+The control includes labels, surrounds, and every pixel outside R, not just
+sampled option colors.
 
-Matching and binding run a separation sweep: three axes (lightness, chroma,
-hue) at four separations each, with every axis–separation cell appearing at
-all four answer positions. Lightness and chroma sweep four pair separations
-across both question directions and both positions; hue sweeps four
-minimum-distractor separations across all positions, half with fixed and half
-with varying lightness/chroma per level. The dataset gate enforces this
-crossing explicitly: a corpus that drifts a separation or drops a position
-fails validation. Near-threshold levels were chosen before any model results;
-coordinate separation is a stimulus descriptor, not a measured
-just-noticeable difference.
+This construction removes the reference-free option-order shortcut discovered
+in 0.3.1. That historical corpus placed ordered distractors around a target
+restricted to middle ranks; a solver ignoring R reached approximately 74–75%
+on four families. Release 0.3.2 uses all four target ranks and counterbalances
+rank against answer position in matching, binding, context, and small-region
+families. Scoring semantics are unchanged, but the corpus changed, so scores
+must not be compared across releases.
 
-Same–different trials show two patches with no reference: half are
-pixel-identical, half differ by a small recorded gap. The A/B mapping for
-"same" lives only in the external prompt and is crossed with trial type, so
-images stay mapping-neutral. Context trials place option interiors on four
-fixed per-position surrounds while R stays neutral; ground truth is interior
-equality, and ring pixels are probed against the recorded surrounds.
-Small-region trials use 20px dots or 3px outlines at mid separations. Visible
-reference ramps illustrate the lightness/chroma dimensions. Comparisons use
-decoded OKLCH coordinates and verify that the intended ordering survives 8-bit
-sRGB conversion. Hue questions use chromatic targets and a unique closest
-coordinate-defined hue. Human hue-equivalence judgments remain unmeasured;
-coordinate equality is a construction rule, not a perceptual proof.
+Matching and binding use equally spaced option coordinates. Lightness gaps
+are 0.08, 0.04, 0.02, and 0.01; chroma gaps are 0.025, 0.012, 0.007, and
+0.004; hue gaps are 35°, 15°, 8°, and 4°. Lightness comparisons use 0.10,
+0.05, 0.02, and 0.01; chroma comparisons use 0.06, 0.03, 0.015, and 0.008.
+Hue matching uses minimum distractor separations 70°, 30°, 12°, and 6°.
+These are intended coordinate gaps, verified after 8-bit sRGB quantization
+within declared tolerances. They are not measured human detection thresholds.
 
-Gradient targets and choices have equal dimensions. Exactly one choice repeats
-the target's complete decoded field. Distractors reverse or cyclically shift
-its columns, preserving the color histogram. The task therefore requires
-spatial color progression rather than merely detecting the available colors.
-It does not ask for invisible CSS syntax or stop counts.
+Each matching/binding pair shares target color, geometry, option fills, and
+option positions; binding adds neutral component frames. Their difference
+measures transfer to this particular treatment. The four references sharing
+an option field are correlated stimuli as well. `groupId` identifies the
+matched image pair or numeric-format group; `design.optionSetId` additionally
+identifies the four-reference construction cell, shared by matching and
+binding. Neither identifier reaches a model.
 
-Numeric targets are thirteen chromatic colors, one neutral gray, and two
-near-neutral extremes, including saturated boundary colors. They have no
-labeled color calibration chart. Each format uses exactly the same image bytes,
-including prompt-neutral image text. The external prompt names the requested
-coordinate system and units. Ground truth is the decoded opaque interior RGB
-triplet; reference HSL and OKLCH coordinates are derived from that common truth.
+Hue references use decoded option hue to create R. In the varying condition,
+option lightness and chroma differ while R retains fixed lightness and chroma.
+The decoded winning hue is unique, with the nearest distractor at the declared
+gap within tolerance. Human hue-equivalence judgments have not been measured;
+coordinate equality is a construction rule, not perceptual proof.
 
-The pilot uses procedural, controlled sRGB colors. Tailwind remains a possible
-versioned palette source for a larger corpus, not a hidden classifier or a
-claim that adjacent class tokens have equal perceptual spacing. This pilot
-does not score Tailwind color names.
+Gradient options are a forward progression, its reversal, and two cyclic
+column shifts. All preserve the color histogram, and each complete field is
+used as R once. Some reference strips therefore contain a visible transition
+at the cyclic wrap. The question asks for exact visible progression; it does
+not infer CSS syntax, stop counts, or aesthetic smoothness.
 
-## Answers and scoring
+Same–different images contain two patches and no R. The mapping of answer
+letters to "same" and "different" appears only in the external prompt and is
+crossed with trial type. Different pairs vary along lightness, chroma, or hue.
+Same-pair and different-pair outcomes must be reported separately: aggregate
+accuracy can conceal a tendency to say "same". Binary hit and false-alarm
+rates already describe that tendency; confidence ratings are optional richer
+data, not a prerequisite for reporting it. These small heterogeneous samples
+do not establish stable sensitivity, decision criteria, or thresholds.
 
-Each image has one question. Choice answers contain exactly `{"choice":"A"}`
-with an available option letter. Case and surrounding letter whitespace are
-normalized. Four-choice families have a 25% chance baseline; lightness,
-chroma, and same–different have a 50% baseline. Balanced ground truth makes a
-constant-letter predictor attain those same accuracies over the complete
-pilot family.
+Context option interiors sit inside four fixed surrounds. R remains neutral,
+and the ground truth is interior equality. Small-region choices use 20px
+squares (the renderer's "dot" layout) or 3px colored outlines. Dot and outline
+cells also differ in hue and swept axis: their score difference does not
+isolate geometry. Similarly, base colors vary across separation levels, so
+separation slices are descriptive and do not estimate psychometric functions.
 
-Numeric response contracts are:
+## Rendering and independent ground truth
 
-- RGB: integer `r`, `g`, `b` in 0–255, gamma-encoded sRGB.
-- HSL: numeric `h` in degrees; `s` and `l` in 0–100 percent.
-- OKLCH: numeric `l` in 0–1; nonnegative `c` in OKLCH units; `h` in degrees.
+The renderer writes opaque sRGB canvas pixels on neutral `rgb(238,238,238)`
+backgrounds. Chromium uses a forced sRGB profile at device pixel ratio 1.
+The manifest records browser version, viewport, font file hash, actual glyph
+font evidence, image hash, and scored-region hashes. Bundled DejaVu Sans
+renders neutral labels at 16px. Human-readable screenshots were visually
+reviewed alongside automated checks.
 
-Every provider receives the same simple family-specific output schema. Numeric
-bounds are stated in the prompt and enforced by the local parser; they are
-omitted from the shared wire schema because
-[Claude structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)
-do not support numerical schema constraints.
+Pillow independently decodes all PNGs. The gate checks exact RGB values,
+unique answers, histogram equality for gradients, hue ordering, comparison
+gaps, prompt identity, neutral pixels, color-profile absence, and pairing.
+Ground truth comes from the decoded image rather than invisible CSS labels.
+Numeric targets are opaque flat RGB interiors; HSL and OKLCH reference
+coordinates derive from that same decoded RGB.
 
-Hue is normalized modulo 360. Chroma is not treated as a percentage or clipped
-to an invented upper bound. Booleans, strings, extra fields, duplicate keys,
-nonfinite coordinates, and incompatible family schemas are rejected. Markdown
-fences and prose are not stripped to rescue malformed output.
+Every model request starts independently. Providers receive only image bytes
+and the frozen family prompt. Task IDs, filenames, option-set IDs, manifests,
+and previous answers are not supplied. Native provider tests pin this boundary.
+Public task IDs contain family and position information for bookkeeping, so
+external redistribution should rename files before passing them to a model.
 
-All valid numeric responses are converted to OKLab. Error is the Euclidean
-OKLab distance from the target, written ΔE_OK. OKLCH predictions outside the
-sRGB gamut remain unclipped when scored and are flagged separately. This avoids
-crediting a different, gamut-clipped color. RGB and HSL inputs already have
-bounded sRGB domains.
+The numeric targets are thirteen chromatic colors, one neutral gray, and two
+near-neutral extremes. The same sixteen image byte strings are reused across
+RGB, HSL, and OKLCH requests. Images contain no numeric calibration chart,
+color names, or requested-format cue. They are procedural sRGB colors, not
+Tailwind token labels.
 
-For a bounded descriptive chart, numeric similarity is
-`100 × (1 − min(ΔE_OK / 0.2, 1))`. The 0.2 cap is an engineering normalization,
-not a human detection threshold. Invalid responses receive zero similarity.
-Report validity with similarity and raw error statistics; conditional error
-among valid predictions alone could reward a model that frequently fails to
-answer. Choice accuracy likewise counts invalid answers as incorrect.
+## Answer contracts and scoring
 
-Near-exact reconstruction is measured separately from the headline
-similarity: a tight score with a 0.05 cap, hit rates at ΔE_OK ∈ {0.005,
-0.01, 0.02, 0.05} over valid answers, and for RGB the share of valid answers
-within ±2 and ±5 LSB on all channels. These bands describe how often models
-come close to exact; they are not visibility thresholds either.
+Choice answers contain exactly `{"choice":"A"}` with an available option.
+Case and surrounding letter whitespace are normalized. Four-choice families
+have 25% chance accuracy; lightness, chroma, and same–different have 50%.
+Balanced answer labels make a constant-letter predictor attain those same
+accuracies over a complete family. Invalid answers count as incorrect.
 
-Component errors remain in each format's units. Hue error takes the shorter
-circular distance and is reported only when the target has OKLCH chroma at
-least 0.02. This cutoff is a declared diagnostic convention. HSL saturation
-error is undefined at exact target black/white. The reconstruction error still
-applies. Achromatic reference colors use zero chroma and canonical zero hue.
+Numeric contracts are RGB integers in 0–255; HSL hue in degrees with saturation
+and lightness in 0–100 percent; and OKLCH lightness in 0–1, nonnegative chroma
+in OKLCH units, and hue in degrees. Hue is normalized modulo 360. Chroma is
+neither a percentage nor clipped to an invented upper bound. Booleans, strings,
+extra fields, duplicate keys, nonfinite values, incompatible keys, Markdown
+fences, and explanatory prose are rejected.
 
-A numeric control always predicts decoded sRGB `[128,128,128]`, expressed in
-each requested space. It was selected before the first paid run and obtains
-about 18.11 similarity on these sixteen targets. The tiny OKLCH round-trip
-difference is matrix precision, not a distinct predictor. Exact predictions
-and metrics are saved in
-`tickets/evidence/constant-gray-baseline-0.3.0.json`. The sixteen numeric
-targets are byte-identical between 0.3.0 and 0.3.1, so the baseline carries
-over unchanged. This is an image-independent reference, not a trained or
-optimized baseline.
+Every provider receives the same family-specific structured output schema.
+Bounds are stated in the prompt and enforced locally. They are omitted from
+the common wire schema to remain within the providers' supported subset.
 
-There is no pooled ranking across choice accuracy and numeric similarity.
-Results describe the fixed per-family questions and do not warrant fine
-model distinctions. Formats sharing a target and matching/binding pairs are
-correlated observations. No independent-item confidence intervals or claims of
-human calibration are made for this pilot.
+Valid numeric answers convert to OKLab. Reconstruction error ΔE_OK is the
+Euclidean distance from the decoded target. Out-of-sRGB OKLCH predictions are
+scored without clipping and flagged separately; clipping would change the
+predicted color. RGB and HSL inputs already have bounded sRGB domains.
 
-## Pilot interpretation finding
+The descriptive similarity is `100 × (1 − min(ΔE_OK / 0.2, 1))`; tight
+similarity uses a 0.05 cap. Invalid answers receive zero for both. These are
+engineering normalizations, not perceptual thresholds. Raw error means,
+medians, and 90th percentiles are conditional on valid answers; validity must
+accompany them. Similarity means include invalid answers in their denominator.
 
-The 0.2.0 run exposed a balance limitation in the matching/binding design.
-Wide-gap questions have correct answers at A/C; narrow-gap questions at B/D.
-Target colors also differ between these sets. Overall family answer positions
-are balanced, but differences between these difficulty slices do not isolate
-color separation from position preference or color-specific difficulty.
-The [first-pilot critique](../results/first-pilot.md) records the measurements
-and proposes counterbalancing each target and gap across all positions.
-The frozen 0.2.0 pilot is preserved as measured.
+Near-exact hit rates at ΔE_OK ≤ 0.005, 0.01, 0.02, and 0.05 use valid-answer
+denominators. RGB also reports the share of valid responses within ±2 and ±5
+8-bit channel steps on all channels. Component errors retain each format's
+units. Circular hue error is reported only for targets with OKLCH chroma ≥0.02;
+HSL saturation error is undefined for exact black and white. These are declared
+diagnostic conventions. Achromatic reference hue is canonically zero.
 
-Release 0.3.1 implements that proposal: every sweep separation appears at
-every answer position, enforced by the dataset gate rather than by
-construction convention alone. The near-threshold levels will depress accuracy
-relative to 0.2.0 by design; cross-release score comparisons remain invalid
-because the stimuli differ.
+A fixed image-independent control always predicts decoded sRGB `[128,128,128]`,
+expressed in each requested format. It scores approximately 18.11 similarity
+on the sixteen targets. Numeric image bytes are unchanged across 0.3.0,
+0.3.1, and 0.3.2, so the archived
+[control evidence](../tickets/evidence/constant-gray-baseline-0.3.0.json)
+remains applicable. This control was chosen before paid results; it is not an
+optimized estimator.
 
-Two further construction rules come from the pre-run adversarial review of
-the superseded 0.3.0 corpus. Exact-match distractors rotate between rank-2
-`{−1,+1,+2}Δ` and rank-3 `{−2,−1,+1}Δ` sets, crossed with position, so the
-target rank alone caps at 50% and any correct answer still requires reference
-comparison or guessing. Base hues, gray variants, samediff gradients, and
-hue jitter rotations are assigned by two-dimensional (cell, position)
-functions, pinned by confound-audit tests, so no stimulus property predicts
-the answer. Gradient direction is fully crossed with position.
+There is no combined score or pooled model ranking across the twelve families.
+No independent-item confidence intervals are reported. Models share the same
+stimuli, formats share numeric targets, and references share option fields.
+The small, designed corpus describes these observations rather than a random
+sample of color perception in real interfaces.
 
-Filenames, task IDs, and group IDs encode family and answer position for
-harness bookkeeping and must never reach the model; providers send only
-image bytes and the frozen prompt, which the provider tests pin. A blind
-redistribution would rename files. `GRADING_VERSION` stayed `"2"` across
-0.2.0 and 0.3.x because grading semantics are backward compatible; the
-evaluation-protocol fingerprint distinguishes the releases.
+## Execution, provenance, and publication
 
-## Execution and publication integrity
+A release descriptor pins the committed dataset, image-content fingerprint,
+expected count, and evaluation protocol fingerprint. Loading validates those
+identities and decoded pixels before creating provider clients. The renderer
+writes only a replaceable candidate path; it cannot overwrite registered or
+historical releases. The current release retains grading version `2` and the
+same protocol fingerprint as 0.3.1 because prompts, parsing, conversion, request
+construction, and grading semantics are unchanged.
 
-A release descriptor identifies a committed dataset, its fingerprint, its
-expected task count, and the evaluation protocol fingerprint. Release loading
-verifies those identities and the decoded-pixel dataset gate before creating
-provider clients. A changed prompt, grading implementation, schema, or image
-cannot silently resume a frozen run under its old identity.
+A SQLite ledger tracks attempts, token usage, costs, and resume identity. One
+runner attempt can contain an internal retry; its `request_attempts` and
+`unmetered_attempts` fields must be inspected before making request-count or
+cost-completeness claims. Invalid model answers are scored observations, never
+retried to select better answers. Infrastructure failures remain separate.
+The runner reserves conservative budget before dispatch; an unmetered request
+can leave a reserve allowance in the ledger spending total.
 
-The model catalog matches FontBench and BorderBench's 13 enabled models. A
-read-only availability check was made on 2026-09-13; evidence and price sources
-are in `tickets/evidence/model-readiness-2026-09-13.json`. Cost is estimated from
-recorded provider token usage and catalog prices. Meta's inherited price was
-not independently reverified from its JavaScript-only documentation page at
-that check. Missing usage is never replaced by invented token counts.
+Finalization replays every raw answer against the frozen grader, verifies the
+shared cohort and source artifacts, and seals the result. The publication
+export uses an explicit verified run, not a timestamp-selected latest file.
+An additional audit independently recomputes numeric equations and choice
+counts, checks full-image reference controls, and separates metered token-price
+estimates from unmetered retry reserves.
 
-A SQLite ledger records each attempt, usage, errors, request identity, and
-budget reservation. Infrastructure errors and incomplete coverage remain
-separate from scored invalid model responses. Retries are not a way to choose
-better semantic answers. Finalization replays raw predictions with the frozen
-grader, verifies the common cohort and recorded artifacts, and seals output.
-The website importer consumes a verified explicit run; it does not choose the
-latest file by modification time or trust cached correctness flags.
+Model IDs, catalog prices, provider endpoints, output limits, and run-time Git
+identity are archived. Prices are catalog estimates rather than provider
+invoices. The 2026-09-13 availability record is in
+[tickets/evidence/model-readiness-2026-09-13.json](../tickets/evidence/model-readiness-2026-09-13.json);
+Meta's inherited price was not independently reverified from its documentation
+at that check. Provider image preprocessing and stochastic response variability
+remain part of the measurement. Human agreement has not been measured.
 
-## Sources
+## References
 
-Color definitions and conversion conventions follow
-[CSS Color 4, 8 September 2026 draft](https://www.w3.org/TR/2026/CRD-css-color-4-20260908/).
-OKLab conversion uses the author's
-[2021-01-25 updated matrices](https://bottosson.github.io/posts/oklab/), with
-independent primary-color anchors, round trips, gray handling, and sRGB transfer
-boundary tests. OKLab distance is a useful common reconstruction metric, not a
-complete model of human color differences; CSS Color 4 §20.4 notes its unequal
-sensitivity to colorfulness and lightness differences.
+Conversions follow [CSS Color 4](https://www.w3.org/TR/2026/CRD-css-color-4-20260908/)
+and [Ottosson's updated OKLab matrices](https://bottosson.github.io/posts/oklab/).
+Tests cover independent primary-color anchors, gray handling, transfer-function
+boundaries, hue wrapping, and round trips. OKLab Euclidean distance is a common
+reconstruction metric, not a complete model of human color discrimination.

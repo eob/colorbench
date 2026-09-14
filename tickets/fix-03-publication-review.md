@@ -8,7 +8,7 @@
 - **Assignee:** Edward Benson
 - **Base:** `653183f23b7855fd3c9c855c876995878631ca0f`
 - **Date:** 2026-09-14
-- **PR:** Pending
+- **PR:** https://github.com/eob/colorbench/pull/4
 
 ## Goal
 
@@ -49,7 +49,7 @@ metered token-price subtotal is $21.38974615.
 3. Render and independently validate the new corpus; audit nuisance balance,
    labels, pixel-derived answers, and option-only controls before freezing.
 4. Freeze 0.3.2 with unchanged scoring semantics; run all thirteen configured
-   models with a $50 cap and complete shared 248-question cohort.
+   models with a $50 cap and complete shared 264-question cohort.
 5. Independently replay scores, reconstruct cost/retry evidence, seal, export,
    and write a dated methodological review and measured-results report.
 6. Run full Python/TypeScript/typecheck/frozen-artifact gates, simplify changes,
@@ -67,3 +67,20 @@ metered token-price subtotal is $21.38974615.
   validity. Add independent controls that deliberately omit the reference.
 - Runner attempts aggregate provider-internal retries; do not describe their
   count as HTTP requests or infer zero transient errors from final success.
+
+## 2026-09-14 progress
+
+- Adopted a stronger repair than shuffling alone: identical option fields
+  crossed with all four references, verified on full decoded masked images
+  and canonical external prompts. Hue expands to 32 questions so both
+  contexts have complete reference cells. Total: 264 questions / 232 PNGs.
+- Source control tests: six RED failures, all six GREEN, then six failures
+  on temporary source reversion. Logs are in `tickets/evidence/option-control-*`.
+- Frozen dataset commit: `09b0dd9`; registered release/runner commit: `1b3079e`.
+- Full pre-run gates: 250 Python tests, 35 TypeScript tests (1,474 assertions),
+  TypeScript check, decoded gate, and preservation of historical releases pass.
+- Paid campaign: `results/runs/0.3.2/pilot-20260914`, all thirteen models,
+  concurrency six, $30 cap. Started from a clean checkout of `1b3079e`.
+- Replayed 0.3.1 export and analysis byte-identically; independent numeric
+  equations reproduce all 624 numeric grades within 3.13e-16 ΔE_OK and
+  6.26e-13 score units. Supplemental accounting exposes the unmetered retry.
