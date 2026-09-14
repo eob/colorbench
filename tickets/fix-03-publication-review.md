@@ -1,6 +1,6 @@
 # fix-03-publication-review: Remove choice-order shortcuts and verify publication
 
-- **Status:** In Review
+- **Status:** Completed
 - **Branch:** `fix-03-publication-review`
 - **Machine:** `/mnt/disks/data/colorbench`
 - **Harness:** codex
@@ -107,3 +107,19 @@ metered token-price subtotal is $21.38974615.
   explicit invalids, construction dependencies, cost evidence, and limits.
 - Small-region border/outline wording is disclosed and tracked separately as
   `fix-04-small-region-prompt`; the completed frozen campaign is preserved.
+
+## Integration and closure
+
+- PR https://github.com/eob/colorbench/pull/4 merged on 2026-09-14 as
+  `0d2bec59c69555fa5d113b1b867c6505fe77423b`; local main is synchronized.
+- Both final PR CI jobs passed on publication commit
+  `8fc558433146066b8e1ed9b44303689b2433478d`, supplied as the immutable website
+  import source. The repository is clean after this closure update.
+- An independent peer recomputed every report table without the production
+  scorer: all nine choice rows, thirteen semantic same–different rows, twelve
+  separation rows, 624 paired outcomes, and 624 numeric answers match. Their
+  separate colorsys/direct-matrix numeric replay differed by at most 2.33e-16
+  in ΔE_OK. They also verified the sole invalid response, request counts,
+  relative evidence links, and the disclosed prompt/geometry limitations.
+- Website integration is owned by the parent publication task. ColorBench's
+  corpus, campaign, report, review, and immutable handoff are complete.
