@@ -7,6 +7,7 @@ from collections import Counter, defaultdict
 import hashlib
 import json
 import math
+import statistics
 from pathlib import Path
 import sys
 
@@ -66,12 +67,14 @@ def audit(run_dir):
     family_counts, choice_correct = Counter(), Counter()
     maximum_delta_drift = maximum_score_drift = 0.0
     numeric_count = 0
+    independently_scored = defaultdict(list)
     for entry in rows:
         row = entry["result"]
         family = row["family"]
         family_counts[family] += 1
         if not row["valid"]:
             assert row["score"] == 0
+            independently_scored[(entry["model_id"], family)].append(dict(valid=False, correct=False, distance=None, score=0, tight=0))
             continue
         prediction = json.loads(row["raw_prediction"])
         target = items[row["task_id"]]["groundTruth"]
@@ -80,6 +83,7 @@ def audit(run_dir):
             assert correct == row["correct"]
             assert row["score"] == (100 if correct else 0)
             choice_correct[family] += correct
+            independently_scored[(entry["model_id"], family)].append(dict(valid=True, correct=correct))
         else:
             distance = independent_distance(family, prediction, target["rgb"])
             numeric_count += 1
@@ -90,6 +94,35 @@ def audit(run_dir):
                 assert math.isclose(score, row[field], rel_tol=0, abs_tol=1e-10)
             assert math.isclose(distance, row["delta_e_ok"], rel_tol=0, abs_tol=1e-12)
             assert all((distance <= float(band)) == value for band, value in row["within_bands"].items())
+            independently_scored[(entry["model_id"], family)].append(dict(valid=True, distance=distance,
+                score=max(0, 100 * (1 - distance / 0.2)), tight=max(0, 100 * (1 - distance / 0.05))))
+    summaries_verified = 0
+    for model in report["models"]:
+        for family, summary in model["families"].items():
+            scored = independently_scored[(model["model_id"], family)]
+            valid = [row for row in scored if row["valid"]]
+            expected = dict(count=len(scored), valid_count=len(valid), invalid_count=len(scored) - len(valid),
+                            validity_rate=len(valid) / len(scored) if scored else None)
+            if family in CHOICE_FAMILIES:
+                correct = sum(row["correct"] for row in scored)
+                expected.update(correct_count=correct, accuracy=correct / len(scored) if scored else None)
+            else:
+                errors = [row["distance"] for row in valid]
+                p90 = None
+                if errors:
+                    p90 = errors[0] if len(errors) == 1 else statistics.quantiles(errors, n=10, method="inclusive")[-1]
+                expected.update(mean_score=statistics.fmean(row["score"] for row in scored) if scored else None,
+                    mean_tight_score=statistics.fmean(row["tight"] for row in scored) if scored else None,
+                    mean_delta_e_ok=statistics.fmean(errors) if errors else None,
+                    median_delta_e_ok=statistics.median(errors) if errors else None,
+                    p90_delta_e_ok=p90)
+            for key, value in expected.items():
+                actual = summary[key]
+                if value is None:
+                    assert actual is None, (model["model_id"], family, key)
+                else:
+                    assert actual is not None and math.isclose(actual, value, rel_tol=0, abs_tol=1e-10), (model["model_id"], family, key, actual, value)
+            summaries_verified += 1
     attempts = [json.loads(line) for line in (directory / "attempts.jsonl").read_text().splitlines()]
     configs = {model["model_id"]: model["model_config"] for model in report["models"]}
     metered = 0.0
@@ -152,6 +185,7 @@ def audit(run_dir):
                 source_final_results_sha256=hashlib.sha256((directory / "final_results.json").read_bytes()).hexdigest(),
                 execution=execution, reference_controls=controls, reference_free_order_control=dict(order_control),
                 independent_grading=dict(response_count=len(rows), numeric_response_count=numeric_count,
+                    model_family_summaries_verified=summaries_verified,
                     choice_correct_counts=dict(choice_correct), family_response_counts=dict(family_counts),
                     maximum_delta_e_drift=maximum_delta_drift, maximum_score_drift=maximum_score_drift,
                     distance_tolerance=1e-12, score_tolerance=1e-10))

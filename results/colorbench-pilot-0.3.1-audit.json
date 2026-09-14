@@ -75,6 +75,7 @@
   "independent_grading": {
     "response_count": 3224,
     "numeric_response_count": 624,
+    "model_family_summaries_verified": 156,
     "choice_correct_counts": {
       "binding": 405,
       "chroma": 200,
