@@ -5,8 +5,9 @@ through their providers' image interfaces. Performance includes instruction
 following, image preprocessing, and coordinate knowledge. It does not isolate
 a human visual mechanism or assess aesthetic judgment.
 
-**Fresh 0.4.0 model measurements are pending.** This document describes the
-new corpus and reporting protocol. The [0.3.2 report](../results/third-pilot.md)
+**All thirteen configurations completed the 0.4.0 cohort on September 16,
+2026.** The [measured report](../results/fourth-pilot.md) accompanies this
+description of the corpus and reporting protocol. The [0.3.2 report](../results/third-pilot.md)
 remains a historical measurement of different inputs and instructions. The
 [repair notes](direct-color-repairs-0.4.0.md) explain why the construction changed.
 

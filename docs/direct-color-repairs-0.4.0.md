@@ -97,3 +97,8 @@ The dataset must pass all offline gates and be committed before freezing its
 descriptor or making paid requests. A fresh result report must name the
 completed run and verified seal; the existence of this design document is not
 evidence that a model campaign completed.
+
+The subsequent [0.4.0 measured report](../results/fourth-pilot.md) records the
+completed thirteen-configuration campaign: 6,656 fresh responses, a verified
+full-cohort seal, and independent grading/accounting audit. Historical
+observations remain unchanged.

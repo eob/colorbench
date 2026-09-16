@@ -9,14 +9,16 @@ with [FontBench](https://github.com/eob/fontbench),
 [BorderBench](https://github.com/eob/borderbench), and
 [LayoutBench](https://github.com/eob/layoutbench).
 
-**The 0.4.0 corpus contains 512 questions using 456 unique images. Fresh model
-measurements are pending.** It repairs single-patch and gradient-endpoint
+**Release 0.4.0 contains 512 questions using 456 unique images. All thirteen
+configurations completed the full cohort on September 16, 2026.** It repairs
+single-patch and gradient-endpoint
 shortcuts, clarifies outline instructions, and adds matched controls for
 surrounds, filled-square size, and outline width. The
 [repair notes](docs/direct-color-repairs-0.4.0.md) explain the changes and their
 limits. Scores from earlier releases do not transfer to this corpus.
 
-[Methodology](docs/methodology.md) · [Release and replay instructions](releases/README.md)
+[Current results](results/fourth-pilot.md) · [Methodology](docs/methodology.md)
+· [Release and replay instructions](releases/README.md)
 · [Historical 0.3.2 results](results/third-pilot.md)
 · [Website report for 0.3.2](https://edwardbenson.com/benchmarks/colorbench)
 

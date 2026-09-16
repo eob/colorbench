@@ -1,9 +1,15 @@
 # Results
 
-**Fresh 0.4.0 measurements are pending.** Its 512 questions and 456 images
-introduce new controls and require a new thirteen-model campaign. The
-[repair notes](../docs/direct-color-repairs-0.4.0.md) describe the design;
-passing offline checks does not establish model performance.
+**Release 0.4.0 is fully measured and verified.** All thirteen configurations
+completed its 512 questions on September 16, 2026, producing 6,656 final
+responses. Four invalid answers remain scored observations. The
+[repair notes](../docs/direct-color-repairs-0.4.0.md) describe the new controls.
+
+- [fourth-pilot.md](fourth-pilot.md): measured findings, paired outcomes, and limitations.
+- [colorbench-pilot-0.4.0.json](colorbench-pilot-0.4.0.json): compact verified publication data.
+- [colorbench-pilot-0.4.0-analysis.json](colorbench-pilot-0.4.0-analysis.json): family, model, paired, hue-context, and RGB recovery results.
+- [colorbench-pilot-0.4.0-audit.json](colorbench-pilot-0.4.0-audit.json): independent grades, controls, and execution accounting.
+- [runs/0.4.0/pilot-20260916](runs/0.4.0/pilot-20260916): sealed raw evidence and ledger.
 
 A new report must identify its completed run, full shared cohort, and verified
 seal. Only sources accepted by `python -m baseline.finalize --run-dir <path>

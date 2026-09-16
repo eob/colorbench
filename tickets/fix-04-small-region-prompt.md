@@ -1,23 +1,25 @@
 # fix-04-small-region-prompt: Clarify colored outlines in the next protocol
 
-- **Status:** Implemented in 0.4.0; fresh measurements tracked by fix-05
+- **Status:** Implemented and freshly measured in 0.4.0; PR #5 ready for review
 - **Assignee:** Edward Benson
 - **Found:** 2026-09-14 publication review of 0.3.2
 - **Current handling:** Disclosed in methodology and measured-results report
 
 The replacement prompt now explicitly includes colored outlines and excludes
 labels and neutral surroundings. It is shared by all four matched geometries.
-Regression tests and decoded geometry controls pass. The frozen 0.3.2 inputs
+Regression tests and decoded geometry controls pass. All thirteen models
+completed the fresh 512-question cohort, including all 64 small-region tasks.
+The sealed results and independent audit pass. The frozen 0.3.2 inputs
 remain unchanged; release and campaign evidence are tracked in
 [fix-05-direct-color-controls](fix-05-direct-color-controls.md), PR #5.
 
-The shared small-region external prompt says "compare the colored regions,
+The historical 0.3.2 small-region external prompt says "compare the colored regions,
 not labels or borders." Eight specimens score colored square outlines. Their
 image footer explicitly says "Compare the colored outlines. Labels and neutral
 areas are not part of the color." The visible task remains answerable, but
 models may need to resolve these differently phrased instructions.
 
-For the next protocol release, replace the external exclusion with "ignore
+The original repair requirement was to replace the external exclusion with "ignore
 labels and neutral surrounding UI" or otherwise explicitly include colored
 outlines. Keep the same shared smallmatch prompt for both geometries and test
 that the text describes each rendered task consistently.

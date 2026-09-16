@@ -1,13 +1,15 @@
 # Frozen releases
 
-**0.4.0 contains 512 questions and 456 distinct images. Fresh measurements are
-pending.** The new protocol repairs outline wording, gradient-endpoint and
+**0.4.0 contains 512 questions and 456 distinct images. Its full thirteen-model
+campaign completed on September 16, 2026.** The new protocol repairs outline
+wording, gradient-endpoint and
 single-patch shortcuts, and missing matched controls for surrounds and
 geometry. See the [construction changes](../docs/direct-color-repairs-0.4.0.md)
 and [methodology](../docs/methodology.md). Human agreement remains unmeasured.
 
-The planned full campaign uses thirteen configurations on every question:
-6,656 new responses. Even unchanged numeric images receive fresh requests;
+The [measured report](../results/fourth-pilot.md) covers thirteen configurations
+on every question: 6,656 new responses, with four invalid answers retained.
+Even unchanged numeric images received fresh requests;
 responses from earlier releases are never copied into the new comparison.
 
 ## Freeze and run

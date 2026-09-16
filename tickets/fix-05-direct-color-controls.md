@@ -1,10 +1,10 @@
 # fix-05-direct-color-controls: Repair direct-color task controls
 
-- **Status:** In Progress
+- **Status:** Ready for Review
 - **Assignee:** Edward Benson
 - **Branch:** `fix-05-direct-color-controls`
 - **Base:** `a91acaa8ac248136e7278531ff844993d6974cec` (`main`)
-- **Workspace:** `/mnt/disks/data/colorbench` (in-place branch; repository has no additional worktrees)
+- **Workspace:** `/mnt/disks/data/colorbench` (implementation branch; temporary main-ticket checkout removed after sync)
 - **Machine:** `eob-dev2`
 - **Harness:** `codex`
 - **Session ID:** `01a09da1-c62d-7b60-8bc1-9fd70414ed46`
@@ -110,9 +110,9 @@ that those experiments were performed may appear in the new report.
   representative actual PNGs, including all changed geometries/gradients.
 - [x] Run complete Python/TypeScript/typecheck gates and independent controls.
 - [x] Document/freeze 0.4.0 and verify historical replay at its pinned source.
-- [ ] Run and resume the new 13-configuration campaign under an explicit cap;
+- [x] Run and resume the new 13-configuration campaign under an explicit cap;
   record task count, projected cost, cap, command, and run ID before dispatch.
-- [ ] Seal/audit new results; write the repair explanation and measured report.
+- [x] Seal/audit new results; write the repair explanation and measured report.
 - [ ] Apply simplifyfu/comment review, sync main, finish PR and recovery memo.
 
 ### Construction counts and metadata
@@ -204,7 +204,7 @@ or pretending the old run used the new protocol.
 | Immutable artifacts check | Main vs feature | Historical dataset/run/seal bytes unchanged | Pass: 22 protected paths |
 | Historical finalization replay | Published 0.3.2 source pin | All 3,432 grades/seal reproduce | Pass: byte-identical export |
 | 0.4.0 release validation | Frozen dataset commit | Exact count, image inventory, fingerprints pass | Pass; offline mock 3 tasks × 13 configurations also passes |
-| New finalization and independent audit | New run source checkpoint | Complete shared cohort, raw-answer replay, no grade drift | Pending |
+| New finalization and independent audit | New run source checkpoint | Complete shared cohort, raw-answer replay, no grade drift | Pass: 6,656 grades, 156 summaries; ΔE_OK drift below 3.89e-16; score drift below 7.75e-13 |
 
 ## Decisions and durable findings
 
@@ -217,6 +217,36 @@ or pretending the old run used the new protocol.
 - Do not transfer old scores into 0.4.0 or compare releases as model progress.
 
 ## Handoff & takeover log
+
+- **2026-09-16 16:47 UTC:** Implementation and measured report complete. See
+  [fourth-pilot.md](../results/fourth-pilot.md), the
+  [independent final review](evidence/fix-05-final-review.md), and the
+  [verified visual cases](evidence/fix-05-case-review.md). All 6,656 raw
+  responses, analysis tables, accounting, and illustrated cases pass review.
+  Sealed evidence is pushed at `a8868c3`; both CI runs pass. No benchmark
+  process remains active. Final documentation, main-ticket synchronization,
+  and PR readiness are the only remaining bookkeeping.
+
+- **2026-09-16 16:36 UTC:** Campaign complete at
+  `2026-09-16T16:33:15.654273+00:00`; all 13 configurations completed all 512
+  tasks. PID `78605` / session `25290` exited 0. Closed raw evidence committed
+  as `a04d7ec`; full-cohort finalization, verification, export, analysis, and
+  independent publication audit all pass. Run artifacts are now sealed: do
+  not modify the directory or attempt another resume. Final-results SHA256
+  `c29585261d5ad9390968abca4385b547ca9983399ad7663d04fb12e59b3e4555`.
+  There are 6,656 final answers / runner attempts, four invalid answers, 6,660
+  HTTP requests, four internal retries, and four unmetered requests. Metered
+  token-price subtotal $44.20451775 plus $0.239334 reserve allowances gives
+  ledger spending $44.44385175, below $65. These are catalog estimates, not
+  invoices. The audit reproduces all 6,656 grades and 156 model-family
+  summaries, including 623 valid numeric grades, within declared tolerances.
+  The measured report and independent final review are being completed.
+  The seal honestly records `finalizer_git_dirty=true`: the untracked
+  evidence log was opened by shell redirection before finalization. Source
+  artifacts were committed at `a04d7ec`; no evaluation code was changed, and
+  the frozen protocol fingerprint verifies. Do not rewrite the seal to
+  cosmetically change this provenance flag. Export/audit/analysis all acquire
+  the run's exclusive verification lock, so execute them sequentially.
 
 - **2026-09-16 15:59 UTC:** Invocation 4 is active from clean, pushed
   checkpoint `3be11094bc0dbb1d6bb8b33e136b77c35073fd15`. PID `78605`, root tool
@@ -319,15 +349,15 @@ or pretending the old run used the new protocol.
 
 ## Recovery memo
 
-- **Verified working:** Frozen 0.3.2 replay; repaired 512-task candidate;
-  complete tests, decoded controls, independent pixel/analysis review.
-- **Pending:** Finish the active paid campaign, then seal/audit,
-  measured report, PR finalization.
-- **Resume:** Read this ticket and PR; `git status`, then `bun run test`.
-  Check run metadata before launching any paid request; resume a recorded run
-  rather than creating a duplicate campaign.
-- **Next action:** Monitor the active process above. If it exits early, inspect
-  the status and infrastructure errors before resuming with this command:
+- **Verified working:** Frozen 0.3.2 replay; frozen 512-task release; complete
+  tests, decoded controls, independent pixel/analysis review; full 6,656-response
+  campaign, verified seal, export, analysis, independent grades/accounting audit.
+- **Pending:** Final documentation commit, main-ticket synchronization, and
+  PR readiness; implementation and measurements are complete.
+- **Resume:** Read this ticket and PR, inspect `git status` and CI. All results
+  are sealed; no paid request or rerun is needed. Use the offline verification
+  commands in the measured report when auditing results.
+- **Completed campaign command (historical; the sealed run cannot resume):**
 
 ```bash
 .venv/bin/python -m baseline.runner --release 0.4.0 \
@@ -335,9 +365,7 @@ or pretending the old run used the new protocol.
   --concurrency 6 --budget-usd 65
 ```
 
-The raw run directory is `results/runs/0.4.0/pilot-20260916`. Resume only with
-this same command and run ID. A successful process exit can still mean partial
-or budget-exhausted work: require summary status `complete` and all 13 models
-at 512 completed tasks before sealing. Commit closed raw artifacts first,
-then finalize with `--scope full`, verify, export, independently audit, and
-analyze. Do not alter the dataset or protocol during the campaign.
+The sealed directory is `results/runs/0.4.0/pilot-20260916`. It has verified
+status `complete` and all 13 models at 512 tasks. Raw artifacts were committed
+before `--scope full` finalization. Further work is offline reporting only;
+never restart this run or alter its dataset, protocol, or sealed artifacts.
