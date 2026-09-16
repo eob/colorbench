@@ -1,0 +1,20 @@
+bun test v1.3.14 (0d9b296a)
+
+src/matched-render.test.ts:
+(pass) outline and neutral-surround instructions describe all matched conditions [0.09ms]
+(pass) filled-size conditions retain field centers and label positions [4.00ms]
+(pass) outline width changes only the colored stroke at fixed outer dimensions [366.79ms]
+(pass) context renders recorded neutral and rotated surrounds [0.31ms]
+
+src/harder-render.test.ts:
+(pass) harder family rendering > typescript prompts match the python protocol bytes exactly [0.27ms]
+(pass) harder family rendering > samediff places two patches with no target and keeps images mapping-neutral [4.35ms]
+(pass) harder family rendering > samediff ground truth derives choice from equality and mapping [0.63ms]
+(pass) harder family rendering > context records interior regions inside fixed surround canvases [0.32ms]
+(pass) harder family rendering > smallmatch dot uses 20px fields and frame uses outlined fields [2.75ms]
+(pass) harder family rendering > frame canvases paint ring color on the border and background inside [271.73ms]
+
+ 10 pass
+ 0 fail
+ 63 expect() calls
+Ran 10 tests across 2 files. [741.00ms]

@@ -44,6 +44,9 @@ export function placeFields(s: ColorSpecimenConfig): PlacedField[] {
   const dot = s.family === "smallmatch" && s.design.layout === "dot";
   const frame = s.family === "smallmatch" && s.design.layout === "frame";
   const context = s.family === "context";
+  const size = (s.design.sizePx as number | undefined) ?? (dot ? 20 : 84);
+  const stroke = (s.design.strokePx as number | undefined) ?? 3;
+  const surrounds = s.design.surround as Record<string, Rgb> | undefined;
   const push = (
     color: ColorField,
     role: PixelRegion["role"],
@@ -80,10 +83,10 @@ export function placeFields(s: ColorSpecimenConfig): PlacedField[] {
   if (s.target) {
     if (numeric) push(s.target, "target", "R", 320, 210, 160, 160);
     else if (gradient) push(s.target, "target", "R", 280, 135, 240, 60);
-    else if (dot) push(s.target, "target", "R", 390, 140, 20, 20);
+    else if (dot) push(s.target, "target", "R", 400 - size / 2, 182 - size / 2, size, size);
     else if (frame)
       push(s.target, "target", "R", 358, 140, 84, 84, {
-        ring: { color: s.target.rgb!, width: 3 },
+        ring: { color: s.target.rgb!, width: stroke },
         interior: PAGE_BACKGROUND,
       });
     else push(s.target, "target", "R", 358, 140, 84, 84);
@@ -92,10 +95,10 @@ export function placeFields(s: ColorSpecimenConfig): PlacedField[] {
     const pair = s.options.length === 2;
     const id = "ABCD"[i]!;
     if (gradient) push(option, "option", id, [80, 480][i % 2]!, [300, 465][Math.floor(i / 2)]!, 240, 60);
-    else if (dot) push(option, "option", id, [128, 302, 476, 650][i]!, 392, 20, 20);
+    else if (dot) push(option, "option", id, [138, 312, 486, 660][i]! - size / 2, 402 - size / 2, size, size);
     else if (frame)
       push(option, "option", id, [96, 270, 444, 618][i]!, 360, 84, 84, {
-        ring: { color: option.rgb!, width: 3 },
+        ring: { color: option.rgb!, width: stroke },
         interior: PAGE_BACKGROUND,
       });
     else if (context) {
@@ -105,7 +108,7 @@ export function placeFields(s: ColorSpecimenConfig): PlacedField[] {
         canvasY: 348,
         canvasWidth: 108,
         canvasHeight: 108,
-        ring: { color: CONTEXT_SURROUNDS[i]!, width: 12 },
+        ring: { color: surrounds?.[id] ?? CONTEXT_SURROUNDS[i]!, width: 12 },
       });
     } else if (pair) push(option, "option", id, [220, 496][i]!, 330, 84, 84);
     else push(option, "option", id, [96, 270, 444, 618][i]!, 360, 84, 84);
@@ -134,7 +137,7 @@ function imageQuestion(s: ColorSpecimenConfig): string {
     case "context":
       return "Which interior matches R? Ignore the surrounds.";
     case "smallmatch":
-      return "Which small swatch matches R?";
+      return "Which colored region matches R?";
     default:
       return "Estimate the interior color of R in the requested format.";
   }
@@ -143,10 +146,15 @@ export function generateHtml(s: ColorSpecimenConfig): string {
   const fields = placeFields(s);
   const shapes = fields
     .map((field) => {
+      // Keep labels fixed when the colored region changes size.
+      const small = s.family === "smallmatch";
+      const labelX = small ? field.x + field.width / 2 - 42 : field.canvasX;
+      const labelY = small ? (field.role === "target" ? 110 : 330) : field.canvasY - 30;
+      const labelWidth = small ? 84 : field.canvasWidth;
       const label =
         field.role === "reference"
           ? ""
-          : `<div class="label" style="left:${field.canvasX}px;top:${field.canvasY - 30}px;width:${field.canvasWidth}px">${field.id}</div>`;
+          : `<div class="label" style="left:${labelX}px;top:${labelY}px;width:${labelWidth}px">${field.id}</div>`;
       const frame =
         s.family === "binding" && field.role === "option"
           ? `<div class="component" style="left:${field.x - 20}px;top:${field.y - 50}px"><div class="line"></div><div class="line bottom"></div></div>`
@@ -161,8 +169,8 @@ export function generateHtml(s: ColorSpecimenConfig): string {
         ? "Dimension reference: dark → light"
         : "";
   const footer =
-    s.family === "smallmatch" && s.design.layout === "frame"
-      ? "Compare the colored outlines. Labels and neutral areas are not part of the color."
+    s.family === "smallmatch"
+      ? "Compare the colored interiors or colored outlines. Labels and neutral areas are not part of the color."
       : "Compare the colored interiors. Labels and neutral frames are not part of the color.";
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
   @font-face{font-family:ColorBench;src:url(data:font/ttf;base64,${FONT_BYTES.toString("base64")}) format("truetype");font-weight:400;font-style:normal}
@@ -378,7 +386,7 @@ export async function renderDataset(requested?: string): Promise<ColorBenchmarkM
         {
           schemaVersion: 1,
           artifactType: "colorbench-pilot-candidate",
-          version: "0.3.2",
+          version: "0.4.0",
           status: "human-pilot-pending",
           questionCount: manifest.length,
           uniqueImageCount: imageCache.size,

@@ -101,8 +101,8 @@ that those experiments were performed may appear in the new report.
 - [x] Read ticketfu/workfu, inspect existing tickets, verify clean baseline.
 - [x] Authoritative ticket committed on main; feature branch and draft PR #5
   created; PR linked from this main ticket.
-- [ ] Record concrete new construction counts and grouping metadata before
-  implementation; keep total corpus small enough for a practical rerun.
+- [x] Construction contract fixed at 512 questions (table below); pairing
+  and condition metadata shared with the implementation lanes.
 - [ ] Add failing decoded-control/construction checks and capture verbatim
   Red evidence under `tickets/evidence/fix-05-*`.
 - [ ] Implement generator, renderer, prompt, and gate changes.
@@ -115,11 +115,71 @@ that those experiments were performed may appear in the new report.
 - [ ] Seal/audit new results; write the repair explanation and measured report.
 - [ ] Apply simplifyfu/comment review, sync main, finish PR and recovery memo.
 
-Initial read-only lanes: `review_layoutbench` proposes comparison balancing;
-`review_borderbench` maps protocol/release compatibility; coordinator handles
-ticket, scope, and integration. Implementation ownership will be recorded
-before parallel edits. Agents share this checkout; no branch switching by
-subagents, no shared-file edits without coordination, no independent paid runs.
+### Construction counts and metadata
+
+| Family | Questions | Construction |
+| --- | ---: | --- |
+| Matching / binding | 48 each | Existing paired fields and four references |
+| Lightness / chroma | 64 each | Four five-color chains × four adjacent edges × two directions × two placements |
+| Hue | 32 | Existing fixed/varying L/C and four references |
+| Gradient | 16 | Four palettes × four references; shared endpoints/histograms, two independent interior swaps |
+| Same–different | 48 | Six endpoint pairs × four pairings × two response mappings |
+| Context | 80 | Four palettes × neutral plus four surround rotations × four references |
+| Small regions | 64 | Four palettes × filled20/filled84/outline3/outline12 × four references |
+| RGB / HSL / OKLCH | 16 each | Existing sixteen shared numeric target images |
+
+All specimens record `design.controlVersion="0.4.0"`. Ordering records
+`comparisonSetId`; equality records `pairSetId` and `mappingPairId`, reusing
+identical PNGs and group IDs across response mappings. Context/small record
+`interventionSetId`, `condition`, and a common group ID across conditions for
+one reference; `optionSetId` remains unique per condition. Small geometry
+records `layout`, `sizePx`, and `strokePx`; context records actual surrounds.
+
+The equal-output-color one-patch Bayes ceiling is 50% for equality and 62.5%
+for ordering chains, conditional on prompt and including all visible
+nonmasked pixels. Ordering gap sizes rotate through chain positions. New
+separation tables remain descriptive rather than psychometric thresholds.
+Gradient construction also limits any single-column rule to at most 50%; two
+palettes are intended to have identical 8-bit grayscale progressions across
+all options. Verify those properties on encoded PNGs before freezing.
+
+Historical cost scaling projects approximately $44.6 for 512 ×13 requests.
+Use an explicit **$65 campaign ledger cap**, concurrency6, the existing13
+configurations, and run ID `pilot-20260916` after the release is frozen. This
+is a task planning cap, not a guaranteed provider invoice amount. Stop and
+inspect any budget exhaustion; never silently raise the cap or claim a
+partial run is complete. No paid requests have started at this checkpoint.
+
+### Implementation ownership
+
+- Coordinator `/root`: renderer, prompts, matched-render tests, documentation,
+  integration, release freeze, paid campaign, result interpretation, commits.
+- `review_layoutbench`: `src/specimens.ts`, generator/construction TS tests.
+- `review_colorbench`: decoded gate and direct-control Python module/tests.
+- `review_borderbench`: current version defaults, historical-artifact guard,
+  its tests, and pinned historical replay.
+
+Agents share this checkout. No subagent branch switches, commits, shared-file
+edits outside ownership, or paid model calls. Root checkpoints finished units
+on the remote feature branch.
+
+### Renderer checkpoint — 2026-09-16
+
+New tests reproduced four failures on the old renderer/prompts:
+
+```text
+0 pass
+4 fail
+4 expect() calls
+```
+
+The failures were missing explicit outline wording, ignored84px size,
+ignored12px stroke, and hardcoded surrounds. Evidence is in
+`tickets/evidence/fix-05-render-red.log`. Fixes use recorded geometry/surrounds
+and fixed label anchors; all small conditions share external and image text.
+An isolated source reversion reproduced the same four failures in
+`fix-05-render-reversion.log`; restored-source renderer tests pass in
+`fix-05-render-green.log`. No shared files were reverted during parallel work.
 
 ## Files and release boundaries
 
@@ -168,9 +228,10 @@ or pretending the old run used the new protocol.
 
 - **Verified working:** Frozen 0.3.2 grades and numeric math replay; review
   controls above reproduce; main initially clean.
-- **Pending:** All implementation, new release, and campaign work.
+- **Pending:** Generator/decoded-gate integration, complete validation, new
+  release freeze, and campaign. Renderer/prompt repair has passed focused tests.
 - **Resume:** Read this ticket and PR; `git status`, then `bun run test`.
   Check run metadata before launching any paid request; resume a recorded run
   rather than creating a duplicate campaign.
-- **Next action:** Push the authoritative ticket, create the matching feature
-  branch and draft PR, then establish Red tests and exact construction counts.
+- **Next action:** Finish assigned generator/gate lanes, run full tests and
+  candidate rendering, inspect images, and checkpoint before release freeze.
