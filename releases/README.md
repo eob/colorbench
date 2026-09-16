@@ -1,53 +1,98 @@
 # Frozen releases
 
-`0.3.2` is the current 264-question release (232 distinct images). It fixes
-reference-free option-order shortcuts by repeating each complete four-choice
-option field with every possible reference. Hue now has 32 questions to cross
-four separations with both fixed/varying lightness/chroma and all four answers.
-The decoded whole-image reference-mask gate verifies expected 25% accuracy for
-any predictor using only the remaining inputs. Human agreement is unmeasured;
-the four-reference cells are correlated observations.
+**0.4.0 contains 512 questions and 456 distinct images. Fresh measurements are
+pending.** The new protocol repairs outline wording, gradient-endpoint and
+single-patch shortcuts, and missing matched controls for surrounds and
+geometry. See the [construction changes](../docs/direct-color-repairs-0.4.0.md)
+and [methodology](../docs/methodology.md). Human agreement remains unmeasured.
 
-See the [publication review](../docs/publication-review-2026-09-14.md) and
-[current results](../results/third-pilot.md). All thirteen models are rerun on
-all 264 questions; scores do not transfer from historical corpora.
+The planned full campaign uses thirteen configurations on every question:
+6,656 new responses. Even unchanged numeric images receive fresh requests;
+responses from earlier releases are never copied into the new comparison.
+
+## Freeze and run
+
+A descriptor records `schema_version`, `benchmark_version`, `dataset_path`,
+`dataset_manifest`, `dataset_git_commit`, `dataset_fingerprint`,
+`evaluation_protocol_fingerprint`, and `expected_task_count`. Commit the
+validated dataset before creating its descriptor. The fingerprint covers
+manifest metadata and actual PNG bytes. The release gate checks committed
+artifact bytes and inventory, canonical prompts, decoded targets, unique
+answers, construction controls, and bundled font evidence.
+
+The protocol fingerprint includes answer schemas, numeric score definitions,
+prompts, native request construction, parsing, evaluation, color conversions,
+and statistics. Changes require a new protocol identity. Version 0.4.0 retains
+grading version `2` and the numeric scoring semantics, but its revised prompts
+produce a different protocol fingerprint from 0.3.2. The new source deliberately
+rejects an old protocol instead of silently reinterpreting old observations.
+
+```bash
+.venv/bin/python -m baseline.validate_dataset dataset/colorbench-v0.4.0/manifest.json
+.venv/bin/python -m baseline.releases --release 0.4.0
+.venv/bin/python -m baseline.runner --release 0.4.0 \
+  --config config/models.all.json --run-id pilot-example \
+  --concurrency 6 --budget-usd 65
+```
+
+Omitting `--max-tasks` selects the complete frozen cohort. The configured
+roster comprises four Claude, four GPT, three Gemini, and two Muse models.
+Model identifiers, catalog prices, output limits, endpoint timeouts, Git
+identity, and invocation history are archived without API keys. Muse uses its
+configured OpenAI-compatible endpoint, a 300-second timeout, and a
+16,384-token output cap. These are the recorded configurations, not equalized
+compute budgets or isolated reasoning interventions.
+
+An unfinished run can resume under the same ID and unchanged identity. Invalid
+model answers remain final observations and receive zero credit; infrastructure
+failures remain retryable. The runner reserves estimated input and maximum
+output costs before dispatch, including retry headroom. Unmetered attempts
+leave marked conservative allowances in the ledger. These do not become
+reported mean API-response costs; incomplete metering makes that mean null.
+The budget is an accounting control based on catalog prices, not an invoice.
+
+A successful process exit alone does not establish completion. Require
+`summary.json` status `complete`, the intended thirteen-model roster, and
+512 completed tasks for each model before committing and sealing the source
+checkpoint. See [FINALIZATION.md](FINALIZATION.md). Publication uses an explicit
+verified seal, not whichever scorecard was modified most recently.
+
+The frozen-artifact gate protects registered dataset directories and
+descriptors, entire previously sealed run directories, and existing top-level
+JSON result snapshots. It allows unfinished checkpoints to advance, new runs
+and exports to be added, and prose to clarify historical limitations.
 
 ## Historical releases
 
-**0.3.1 has a documented option-order shortcut.** It remains frozen as measured,
-and its report now records that limitation and corrects its retry-cost claims.
+| Version | Questions | Distinct images | Status and interpretation |
+| --- | ---: | ---: | --- |
+| 0.3.2 | 264 | 232 | Measured; repaired the earlier option-order shortcut, but retained the task-control flaws addressed in 0.4.0. |
+| 0.3.1 | 248 | 216 | Measured; a documented option-order shortcut limits its interpretation. |
+| 0.3.0 | 248 | 216 | Superseded before a paid campaign after construction confounds were found. |
+| 0.2.0 | 72 | 56 | Measured early pilot with answer-position/separation confounds. |
 
+The [0.3.2 report](../results/third-pilot.md),
+[0.3.1 report](../results/second-pilot.md), and
+[0.2.0 report](../results/first-pilot.md) preserve their actual measurements.
+Their scores do not transfer across corpora. The older semantic prototype is
+also retained as history and is excluded from perception-benchmark results.
 
-`0.3.1` is a 248-question perception pilot: separation sweeps for matching
-(48), binding (48), lightness (16), chroma (16), and hue (16), with every
-separation crossed against every answer position; 16 same–different, 16
-surround-shifted context, and 16 small-region questions; 8 gradient questions
-with direction crossed against position; and 48 numeric questions over 16
-shared targets. There are 216 distinct images. Human agreement has not been
-measured. (`0.3.0` froze the same task design with confounded stimulus
-assignments; it was adversarially reviewed, never measured, and superseded
-before any paid run.)
+## Historical replay
 
-Historical planning estimate (before the 0.3.1 measurements): the 0.2.0 campaign spent $5.12 for 936 responses. A full 0.3.1
-campaign is 3,224 responses (248 × 13 models) at the same catalog prices,
-estimated ≈$18 under the $25 budget cap. The runner reserves worst-case
-output cost per request before sending; watch the first paid run for
-output-token growth on long numeric answers.
+Use the compatible 0.3.2 source pin in a separate checkout:
 
-`0.2.0` is a 72-question perception pilot: eight questions in each of matching, lightness, chroma, hue, binding, gradient, RGB, HSL, and OKLCH. The 24 numeric questions reuse eight target images across three fresh, format-specific requests. Matching and binding share eight color groups. There are 56 distinct images. Human agreement has not been measured. Scores never transfer across releases.
-
-A descriptor records `schema_version`, `benchmark_version`, `dataset_path`, `dataset_manifest`, `dataset_git_commit`, `dataset_fingerprint`, `evaluation_protocol_fingerprint`, and `expected_task_count`. Freeze the dataset in Git before creating the descriptor. The dataset fingerprint covers every manifest property except location fields and hashes actual PNG bytes. The release gate checks committed artifact bytes and inventory, canonical prompts, decoded color targets, option uniqueness and balance, repeated-group identity, bundled font evidence, and pixels outside declared color regions.
-
-The protocol fingerprint includes the family schemas, numeric score definition, prompts, native request construction, parser, evaluator, conversion implementation, and statistics. Any change requires a new protocol release. Numeric bounds are enforced locally; all provider requests use the same supported schema subset without numerical `minimum`/`maximum` constraints. This permits native Anthropic HTTP requests, whose structured-output schema subset does not accept those constraints.
-
-```sh
-python -m baseline.validate_dataset dataset/colorbench-v0.3.1/manifest.json
-python -m baseline.releases --release 0.3.1
-python -m baseline.runner --release 0.3.1 --run-id pilot-example --config config/models.all.json --max-tasks 248 --concurrency 6 --budget-usd 25
+```bash
+git clone https://github.com/eob/colorbench.git colorbench-replay-0.3.2
+cd colorbench-replay-0.3.2
+git checkout --detach 8fc558433146066b8e1ed9b44303689b2433478d
+python3 -m venv .venv
+.venv/bin/python -m pip install -e .
+.venv/bin/python -m baseline.finalize \
+  --run-dir results/runs/0.3.2/pilot-20260914 --verify
 ```
 
-The catalog contains 13 enabled configurations: four Claude, four GPT, three Gemini, and two Muse models. Pricing dates and official source links remain attached to each catalog. Meta uses its own OpenAI-compatible endpoint, a 300-second read timeout, and a 16,384-token output limit inherited from the measured sibling configuration. Run metadata preserves configurations, endpoint timeouts, source commits, invocation chronology, and an optional Anthropic workspace ID, without storing API keys.
-
-Partial work can resume with the same run ID and unchanged identity. Invalid model answers are final observations and receive zero credit; infrastructure failures remain retryable, with prior attempt costs retained. The budget uses conservative reservations for unmetered attempts, marked `cost_estimated`. Those reserves never become reported mean API-response costs. Reports show unknown means as null and retain known-value counts. Paid work is refused if frozen artifacts or the protocol differ.
-
-Historical prototype artifacts remain historical. They are not eligible for the pilot's release comparisons. Publication accepts an explicitly named, verified sealed run rather than selecting scorecards by file modification time. See [FINALIZATION.md](FINALIZATION.md).
+This offline replay checks all 3,432 stored observations, the dataset and
+protocol identity, and the committed seal. It makes no model requests. The
+[recorded compatibility check](../tickets/evidence/fix-05-frozen-historical-replay.log)
+also reproduces the compact 0.3.2 export byte-for-byte. Keep that checkout's
+protocol intact; do not weaken the new release gate to load historical data.

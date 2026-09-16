@@ -2,48 +2,52 @@
 
 Can a model match the color it sees?
 
-ColorBench measures color matching, lightness and chroma comparisons, hue,
-component fills, gradients, same–different judgments, and numeric color
-reconstruction. It belongs to the design-perception quartet with
-[FontBench](https://github.com/eob/fontbench),
+ColorBench tests direct color judgments: matching swatches, comparing
+lightness and chroma, identifying hue, matching color progressions, and
+estimating color coordinates. It belongs to the design-perception quartet
+with [FontBench](https://github.com/eob/fontbench),
 [BorderBench](https://github.com/eob/borderbench), and
 [LayoutBench](https://github.com/eob/layoutbench).
 
-**Release 0.3.2 contains 264 questions using 232 unique images.** Every
-four-choice option field appears with all four possible reference targets.
-The decoded-pixel gate verifies that the whole image outside R and the prompt
-stay identical, so an input-only predictor that ignores R has expected accuracy
-25%. This repairs an option-order shortcut found during the publication review
-of 0.3.1. Frozen historical releases remain available, but their scores must
-not be compared to this revised corpus.
+**The 0.4.0 corpus contains 512 questions using 456 unique images. Fresh model
+measurements are pending.** It repairs single-patch and gradient-endpoint
+shortcuts, clarifies outline instructions, and adds matched controls for
+surrounds, filled-square size, and outline width. The
+[repair notes](docs/direct-color-repairs-0.4.0.md) explain the changes and their
+limits. Scores from earlier releases do not transfer to this corpus.
 
-[Results and interactive examples](https://edwardbenson.com/benchmarks/colorbench)
-· [Current results](results/third-pilot.md)
-· [Methodology](docs/methodology.md)
-· [Publication review](docs/publication-review-2026-09-14.md)
+[Methodology](docs/methodology.md) · [Release and replay instructions](releases/README.md)
+· [Historical 0.3.2 results](results/third-pilot.md)
+· [Website report for 0.3.2](https://edwardbenson.com/benchmarks/colorbench)
 
-| Family | n | Question | Measure |
+| Family | Questions | Question | Measure |
 | --- | ---: | --- | --- |
 | Matching | 48 | Which swatch has exactly R's color? | Four-choice accuracy |
-| Lightness | 16 | Which patch is lighter/darker? | Two-choice accuracy |
-| Chroma | 16 | Which patch is more/less colorful? | Two-choice accuracy |
-| Hue | 32 | Which option has R's hue? | Four-choice accuracy; exploratory |
-| Binding | 48 | Which component has R's interior fill? | Four-choice accuracy, paired with matching |
-| Gradient | 8 | Which strip reproduces R's full progression? | Four-choice accuracy; exploratory |
-| Same–different | 16 | Are A and B exactly the same color? | Two-choice accuracy and trial-type breakdown |
-| Context | 16 | Which interior matches R across surrounds? | Four-choice accuracy |
-| Small-region | 16 | Which small square or outline matches R? | Four-choice accuracy |
-| RGB | 16 | Estimate R in 8-bit sRGB | Reconstruction error, similarity, tight metrics, validity |
-| HSL | 16 | Estimate R as hue and saturation/lightness percentages | Same reconstruction measures |
-| OKLCH | 16 | Estimate R as lightness, chroma, and hue | Same reconstruction measures; gamut flags |
+| Lightness | 64 | Which patch is lighter or darker? | Two-choice accuracy |
+| Chroma | 64 | Which patch is more or less colorful? | Two-choice accuracy |
+| Hue | 32 | Which option has R's hue? | Four-choice accuracy, split by fixed/varying lightness and chroma |
+| Component fill matching | 48 | Which component has R's interior fill? | Four-choice accuracy, paired with matching |
+| Gradient | 16 | Which strip matches R's color progression? | Four-choice accuracy |
+| Same–different | 48 | Are A and B exactly the same color? | Two-choice accuracy, trial-type counts, and answer-mapping consistency |
+| Context | 80 | Which interior matches R across surrounds? | Four-choice accuracy and paired neutral/surround outcomes |
+| Small-region | 64 | Which filled square or outline matches R? | Four-choice accuracy, with separate size and stroke-width pairs |
+| RGB | 16 | Estimate R in 8-bit sRGB | Reconstruction error, exact/tolerance counts, similarity, and validity |
+| HSL | 16 | Estimate R as hue and saturation/lightness percentages | Reconstruction error, component errors, similarity, and validity |
+| OKLCH | 16 | Estimate R as lightness, chroma, and hue | Same reconstruction measures, plus gamut flags |
 
-There is no combined score across these different tasks. Numeric formats share
-sixteen target images but use independent model requests. Matching and binding
-share image pairs; four references within an option set share the same choices.
-These correlations, the small designed sample, and unmeasured human agreement
-limit the interpretation. Separation slices do not establish human thresholds
-or isolated psychometric effects. Numeric estimates also measure coordinate
-knowledge.
+Every four-choice option field appears with all four possible reference
+colors. The decoded-image gate checks that the rest of the image and prompt
+remain identical within each group, bounding a predictor that ignores R at
+25% expected accuracy. Additional controls test whether one patch, gradient
+endpoints, or unrelated pixels reveal an answer. These are construction
+checks; they do not show which strategy a model uses.
+
+There is no combined benchmark score. Related questions share colors, option
+fields, images, or intervention conditions. Human agreement and repeated-run
+variability have not been measured. Results describe this designed corpus
+through provider image pipelines; numeric estimates also require coordinate
+knowledge. Similarity out of 100 is not an exact-reconstruction percentage or
+a human visibility threshold.
 
 ## Reproduce
 
@@ -61,47 +65,56 @@ bun run validate:release
 
 `bun run render` writes a replaceable candidate in `dataset/candidate-rendered`.
 It refuses historical and registered release paths. `bun run validate:candidate`
-checks decoded pixels, geometry, font evidence, prompts, unique answers,
-reference-masked controls, and paired fields. Rendering does not revise a release.
+checks decoded pixels, geometry, fonts, prompts, unique answers, and the
+construction controls. Rendering does not revise a frozen release.
 
 ```bash
-# Offline smoke test: mock output cannot be finalized for publication.
+# Offline smoke test; mock output cannot be published as measurements.
 bun run benchmark:mock
 
-# A full campaign over the frozen shared cohort.
-.venv/bin/python -m baseline.runner --release 0.3.2 \
+# Full shared cohort: 512 questions for all 13 configured models.
+.venv/bin/python -m baseline.runner --release 0.4.0 \
   --config config/models.all.json --run-id pilot-example \
-  --max-tasks 264 --concurrency 6 --budget-usd 30
+  --concurrency 6 --budget-usd 65
 
+# Require summary.json status "complete" and 512 completed tasks per model.
 # Commit completed source artifacts before sealing them.
 .venv/bin/python -m baseline.finalize \
-  --run-dir results/runs/0.3.2/pilot-example --scope full
+  --run-dir results/runs/0.4.0/pilot-example --scope full
 .venv/bin/python -m baseline.finalize \
-  --run-dir results/runs/0.3.2/pilot-example --verify
+  --run-dir results/runs/0.4.0/pilot-example --verify
 .venv/bin/python -m baseline.export_structured \
-  --run-dir results/runs/0.3.2/pilot-example --output results/colorbench-pilot.json
+  --run-dir results/runs/0.4.0/pilot-example --output results/colorbench-pilot-0.4.0.json
+.venv/bin/python scripts/analyze_pilot.py \
+  results/runs/0.4.0/pilot-example results/colorbench-pilot-0.4.0-analysis.json
 .venv/bin/python scripts/audit_publication.py \
-  results/runs/0.3.2/pilot-example results/colorbench-pilot-audit.json
+  results/runs/0.4.0/pilot-example results/colorbench-pilot-0.4.0-audit.json
 ```
 
-API key environment-variable names are in `config/models.all.json`. Resuming
-an unsealed run keeps its dataset, model configuration, and protocol identity.
-Invalid model answers are retained and scored rather than retried. Runner
-attempts may contain internal HTTP retries: inspect their recorded counts and
-usage coverage before interpreting cost. Catalog-price estimates and unmetered
-budget allowances are distinct from actual provider invoices.
+API key environment-variable names are in `config/models.all.json`. Resume an
+unfinished campaign with the same run ID and unchanged dataset, protocol, and
+model configurations. A paused or budget-exhausted invocation can exit zero;
+check its summary before claiming completion. Invalid answers remain scored
+observations. Infrastructure failures remain retryable, with earlier attempt
+costs retained. Catalog-price estimates and unmetered budget allowances are
+not provider invoices.
 
-## Historical releases
+## Historical results
 
-[0.3.1 results](results/second-pilot.md) preserve the measured corpus with the
-option-order flaw; [0.2.0 results](results/first-pilot.md) preserve an earlier
-pilot with answer-position/separation confounds. Neither is current evidence
-for the corrected corpus. Release 0.3.0 was superseded before a paid run.
+[0.3.2 results](results/third-pilot.md) describe 264 questions and retain the
+construction limitations repaired in 0.4.0. Its frozen inputs, raw answers,
+seals, and JSON exports remain unchanged. Replay requires compatible source
+`8fc558433146066b8e1ed9b44303689b2433478d`; see the
+[historical replay instructions](releases/README.md#historical-replay).
 
-`dataset/colorbench-1`, `dataset/rendered`, and
-`results/colorbench_summary.json` preserve a still-earlier 100-image semantic
-prototype with visible answer labels. Its scores are invalid evidence for this
-perception benchmark and are excluded from publication.
+[0.3.1 results](results/second-pilot.md) preserve the corpus with an option-order
+shortcut; [0.2.0 results](results/first-pilot.md) preserve an earlier pilot with
+answer-position/separation confounds. Release 0.3.0 was superseded before a
+paid run. Different release scores are not evidence of model improvement.
+
+`dataset/colorbench-1`, `dataset/rendered`, and `results/colorbench_summary.json`
+preserve a still-earlier 100-image prototype with visible answer labels. Its
+scores are excluded from perception-benchmark publication.
 
 ## License
 

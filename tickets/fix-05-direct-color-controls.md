@@ -109,7 +109,7 @@ that those experiments were performed may appear in the new report.
 - [x] Verify Red→Green and reversion against frozen 0.3.2 inputs; inspect
   representative actual PNGs, including all changed geometries/gradients.
 - [x] Run complete Python/TypeScript/typecheck gates and independent controls.
-- [ ] Document/freeze 0.4.0 and verify historical replay at its pinned source.
+- [x] Document/freeze 0.4.0 and verify historical replay at its pinned source.
 - [ ] Run and resume the new 13-configuration campaign under an explicit cap;
   record task count, projected cost, cap, command, and run ID before dispatch.
 - [ ] Seal/audit new results; write the repair explanation and measured report.
@@ -203,7 +203,7 @@ or pretending the old run used the new protocol.
 | Candidate decoded validation | Candidate manifest | Prompt/pixel/unique-answer and new controls pass | Pass: 512 tasks, 456 images; independent pixel review |
 | Immutable artifacts check | Main vs feature | Historical dataset/run/seal bytes unchanged | Pass: 22 protected paths |
 | Historical finalization replay | Published 0.3.2 source pin | All 3,432 grades/seal reproduce | Pass: byte-identical export |
-| 0.4.0 release validation | Frozen dataset commit | Exact count, image inventory, fingerprints pass | Pending |
+| 0.4.0 release validation | Frozen dataset commit | Exact count, image inventory, fingerprints pass | Pass; offline mock 3 tasks × 13 configurations also passes |
 | New finalization and independent audit | New run source checkpoint | Complete shared cohort, raw-answer replay, no grade drift | Pending |
 
 ## Decisions and durable findings
@@ -217,6 +217,18 @@ or pretending the old run used the new protocol.
 - Do not transfer old scores into 0.4.0 or compare releases as model progress.
 
 ## Handoff & takeover log
+
+- **2026-09-16 13:58 UTC:** Frozen dataset commit
+  `c14b9c971bd1fbe1a0126a2683ba4df8b0eeaf6c`; descriptor
+  `releases/0.4.0.json`. Dataset fingerprint
+  `3c6b248bfc25f4810c0083bbc5af3c5905fb1000795b21fdd0a57969a7aa3bc0`;
+  protocol fingerprint
+  `78be5960423e0ea7b850ffb5a5c07dbb41a4658d6c89dd8a43e9dc08c76ab502`.
+  Release gate passes; all 22 historical paths remain unchanged. Offline
+  `mock-fix05-smoke` covers three tasks per configuration (39 responses),
+  correctly reports partial coverage, and is excluded from publication.
+  All 13 loaded model configurations exactly match the prior campaign;
+  required credentials are present. No paid requests yet.
 
 - **2026-09-16 13:56 UTC:** Implementation and independent pixel/analysis
   reviews pass. Full suite: 308 Python tests, 46 TypeScript tests, 7,661 TS
@@ -241,11 +253,23 @@ or pretending the old run used the new protocol.
 
 - **Verified working:** Frozen 0.3.2 replay; repaired 512-task candidate;
   complete tests, decoded controls, independent pixel/analysis review.
-- **Pending:** New release freeze, offline mock, full paid campaign, seal/audit,
+- **Pending:** Full paid campaign, seal/audit,
   measured report, PR finalization. No paid calls have started.
 - **Resume:** Read this ticket and PR; `git status`, then `bun run test`.
   Check run metadata before launching any paid request; resume a recorded run
   rather than creating a duplicate campaign.
-- **Next action:** Commit source and candidate as new `dataset/colorbench-v0.4.0`,
-  record that commit in the new descriptor, validate release and offline mock,
-  then run the documented campaign with the recorded $65 cap.
+- **Next action:** Commit descriptor/documentation/evidence, start the following
+  command from a clean committed checkout, and record the process/run state:
+
+```bash
+.venv/bin/python -m baseline.runner --release 0.4.0 \
+  --config config/models.all.json --run-id pilot-20260916 \
+  --concurrency 6 --budget-usd 65
+```
+
+The raw run directory is `results/runs/0.4.0/pilot-20260916`. Resume only with
+this same command and run ID. A successful process exit can still mean partial
+or budget-exhausted work: require summary status `complete` and all 13 models
+at 512 completed tasks before sealing. Commit closed raw artifacts first,
+then finalize with `--scope full`, verify, export, independently audit, and
+analyze. Do not alter the dataset or protocol during the campaign.

@@ -43,10 +43,11 @@ claiming that all absolute-color information can be eliminated.
 
 Gradient controls check shared endpoint pixels, identical histograms, unique
 full-field matches, and the limited information from a single column. A
-grayscale control distinguishes conditions that require chromatic information
-from those where luminance remains informative. These are construction
-oracles with known region locations; they are not measured grayscale or
-masked-input model experiments.
+grayscale control checks that two of the four palettes become identical under
+Pillow's 8-bit grayscale conversion. This removes that grayscale representation
+as a solution, without claiming equivalence under every definition of
+luminance. These are construction oracles with known region locations; they
+are not measured grayscale or masked-input model experiments.
 
 The generator rotates gap sizes through chain positions. Nevertheless, the
 small chosen set does not establish a psychometric curve or human visibility
