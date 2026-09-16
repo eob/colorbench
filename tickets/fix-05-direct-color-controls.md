@@ -9,7 +9,7 @@
 - **Harness:** `codex`
 - **Session ID:** `01a09da1-c62d-7b60-8bc1-9fd70414ed46`
 - **Coordinator:** `/root`
-- **PR:** Pending
+- **PR:** https://github.com/eob/colorbench/pull/5
 - **Target release:** `0.4.0`; immutable historical release `0.3.2` retained
 
 ## Goal and authorized scope
@@ -99,8 +99,8 @@ that those experiments were performed may appear in the new report.
 ## Execution plan and ownership
 
 - [x] Read ticketfu/workfu, inspect existing tickets, verify clean baseline.
-- [ ] Commit/push this authoritative ticket on main; create matching branch
-  and draft PR; link PR back from the main ticket.
+- [x] Authoritative ticket committed on main; feature branch and draft PR #5
+  created; PR linked from this main ticket.
 - [ ] Record concrete new construction counts and grouping metadata before
   implementation; keep total corpus small enough for a practical rerun.
 - [ ] Add failing decoded-control/construction checks and capture verbatim
