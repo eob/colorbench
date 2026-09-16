@@ -55,14 +55,14 @@ test("outline width changes only the colored stroke at fixed outer dimensions", 
 });
 
 test("context renders recorded neutral and rotated surrounds", () => {
-  const surround = { A: [238, 238, 238], B: [238, 238, 238], C: [238, 238, 238], D: [238, 238, 238] };
+  const surround: Record<string, Rgb> = { A: [238, 238, 238], B: [238, 238, 238], C: [238, 238, 238], D: [238, 238, 238] };
   const s: ColorSpecimenConfig = { ...sample, family: "context", design: {
     axis: "lightness", difficulty: "mid", surround,
   } };
   expect(placeFields(s).filter((r) => r.role === "option").map((r) => r.ring?.color)).toEqual(
     Object.values(surround),
   );
-  const rotated = { A: [1, 2, 3], B: [4, 5, 6], C: [7, 8, 9], D: [10, 11, 12] };
+  const rotated: Record<string, Rgb> = { A: [1, 2, 3], B: [4, 5, 6], C: [7, 8, 9], D: [10, 11, 12] };
   expect(placeFields({ ...s, design: { ...s.design, surround: rotated } })
     .filter((r) => r.role === "option").map((r) => r.ring?.color)).toEqual(Object.values(rotated));
 });

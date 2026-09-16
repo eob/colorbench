@@ -1,0 +1,41 @@
+bun test v1.3.14 (0d9b296a)
+
+src/harder-design.test.ts:
+(pass) controlled 0.4.0 corpus design > contains the 512-question candidate corpus [1.14ms]
+(pass) controlled 0.4.0 corpus design > balances every choice location within a family [0.58ms]
+(pass) controlled 0.4.0 corpus design > crosses every sweep separation with every answer position [1.05ms]
+(pass) controlled 0.4.0 corpus design > crosses equality, surrounds, and layouts with positions [0.58ms]
+(pass) controlled 0.4.0 corpus design > pairs matching with binding and numeric formats with shared bytes [1.16ms]
+(pass) controlled 0.4.0 corpus design > keeps every exact-match target distinct from its distractors [0.85ms]
+(pass) controlled 0.4.0 corpus design > records decoded ordering gaps near the intended separations [0.92ms]
+(pass) controlled 0.4.0 corpus design > comparison base hue never determines the answer position [0.28ms]
+(pass) controlled 0.4.0 corpus design > target rank covers all four possibilities independently of answer position [3.08ms]
+(pass) controlled 0.4.0 corpus design > samediff hue and signed color change carry no answer information [0.48ms]
+(pass) controlled 0.4.0 corpus design > lightness gray variant never determines the answer [0.34ms]
+(pass) controlled 0.4.0 corpus design > hue offsets realize the recorded minimum at every level [0.39ms]
+(pass) controlled 0.4.0 corpus design > hue fully crosses both contexts with all references [0.20ms]
+(pass) controlled 0.4.0 corpus design > gradient option fields cross all references [0.17ms]
+(pass) controlled 0.4.0 corpus design > exact-match nearest gaps realize the recorded separation [1.71ms]
+(pass) controlled 0.4.0 corpus design > hue winners share decoded pixels and runners-up track the minimum [0.44ms]
+
+src/reference-control.test.ts:
+(pass) matching: every identical option field has all four reference answers [0.50ms]
+(pass) binding: every identical option field has all four reference answers [0.23ms]
+(pass) context: every identical option field has all four reference answers [0.48ms]
+(pass) smallmatch: every identical option field has all four reference answers [0.26ms]
+(pass) hue: every identical option field has all four reference answers [0.14ms]
+(pass) gradient: every identical option field has all four reference answers [4.24ms]
+
+src/direct-controls.test.ts:
+(pass) direct-color controls for 0.4.0 > declares every controlled task and only explicit shared-image variants [0.36ms]
+(pass) direct-color controls for 0.4.0 > same-different crosses both endpoint identities, orientation, and mapping [1.88ms]
+(pass) direct-color controls for 0.4.0 > lightness reuses interior endpoints and bounds either single-patch predictor [1.39ms]
+(pass) direct-color controls for 0.4.0 > chroma reuses interior endpoints and bounds either single-patch predictor [0.86ms]
+(pass) direct-color controls for 0.4.0 > gradient endpoints and histograms cannot identify the matching progression [6.28ms]
+(pass) direct-color controls for 0.4.0 > context interventions hold task colors fixed and cross all surround positions [1.42ms]
+(pass) direct-color controls for 0.4.0 > small-region interventions hold each palette and answer fixed across all geometries [0.69ms]
+
+ 29 pass
+ 0 fail
+ 7268 expect() calls
+Ran 29 tests across 3 files. [48.00ms]

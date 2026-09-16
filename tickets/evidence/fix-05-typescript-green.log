@@ -1,0 +1,68 @@
+bun test v1.3.14 (0d9b296a)
+
+src/harder-design.test.ts:
+(pass) controlled 0.4.0 corpus design > contains the 512-question candidate corpus [2.59ms]
+(pass) controlled 0.4.0 corpus design > balances every choice location within a family [0.62ms]
+(pass) controlled 0.4.0 corpus design > crosses every sweep separation with every answer position [1.09ms]
+(pass) controlled 0.4.0 corpus design > crosses equality, surrounds, and layouts with positions [0.61ms]
+(pass) controlled 0.4.0 corpus design > pairs matching with binding and numeric formats with shared bytes [1.18ms]
+(pass) controlled 0.4.0 corpus design > keeps every exact-match target distinct from its distractors [0.88ms]
+(pass) controlled 0.4.0 corpus design > records decoded ordering gaps near the intended separations [1.21ms]
+(pass) controlled 0.4.0 corpus design > comparison base hue never determines the answer position [0.37ms]
+(pass) controlled 0.4.0 corpus design > target rank covers all four possibilities independently of answer position [4.42ms]
+(pass) controlled 0.4.0 corpus design > samediff hue and signed color change carry no answer information [0.72ms]
+(pass) controlled 0.4.0 corpus design > lightness gray variant never determines the answer [0.42ms]
+(pass) controlled 0.4.0 corpus design > hue offsets realize the recorded minimum at every level [0.43ms]
+(pass) controlled 0.4.0 corpus design > hue fully crosses both contexts with all references [0.20ms]
+(pass) controlled 0.4.0 corpus design > gradient option fields cross all references [0.19ms]
+(pass) controlled 0.4.0 corpus design > exact-match nearest gaps realize the recorded separation [1.71ms]
+(pass) controlled 0.4.0 corpus design > hue winners share decoded pixels and runners-up track the minimum [0.46ms]
+
+src/matched-render.test.ts:
+(pass) outline and neutral-surround instructions describe all matched conditions [0.06ms]
+(pass) filled-size conditions retain field centers and label positions [11.84ms]
+(pass) outline width changes only the colored stroke at fixed outer dimensions [362.63ms]
+(pass) context renders recorded neutral and rotated surrounds [0.31ms]
+
+src/output.test.ts:
+(pass) candidate-only renderer output > refuses historical, arbitrary, symlinked and registered release outputs [2.98ms]
+
+src/harder-render.test.ts:
+(pass) harder family rendering > typescript prompts match the python protocol bytes exactly [0.27ms]
+(pass) harder family rendering > samediff places two patches with no target and keeps images mapping-neutral [5.22ms]
+(pass) harder family rendering > samediff ground truth derives choice from equality and mapping [0.55ms]
+(pass) harder family rendering > context records interior regions inside fixed surround canvases [0.42ms]
+(pass) harder family rendering > smallmatch dot uses 20px fields and frame uses outlined fields [4.26ms]
+(pass) harder family rendering > frame canvases paint ring color on the border and background inside [244.97ms]
+
+src/colors.test.ts:
+(pass) frozen color conversions > matches independently published sRGB primary Oklab values [0.17ms]
+(pass) frozen color conversions > uses explicit HSL units and canonical achromatic hue [0.37ms]
+(pass) frozen color conversions > round trips a grid including neutrals and gamut boundaries [1.34ms]
+(pass) frozen color conversions > rejects out-of-gamut construction instead of silently clipping [0.21ms]
+
+src/reference-control.test.ts:
+(pass) matching: every identical option field has all four reference answers [0.63ms]
+(pass) binding: every identical option field has all four reference answers [0.23ms]
+(pass) context: every identical option field has all four reference answers [0.50ms]
+(pass) smallmatch: every identical option field has all four reference answers [0.27ms]
+(pass) hue: every identical option field has all four reference answers [0.16ms]
+(pass) gradient: every identical option field has all four reference answers [4.34ms]
+
+src/direct-controls.test.ts:
+(pass) direct-color controls for 0.4.0 > declares every controlled task and only explicit shared-image variants [0.43ms]
+(pass) direct-color controls for 0.4.0 > same-different crosses both endpoint identities, orientation, and mapping [1.90ms]
+(pass) direct-color controls for 0.4.0 > lightness reuses interior endpoints and bounds either single-patch predictor [1.59ms]
+(pass) direct-color controls for 0.4.0 > chroma reuses interior endpoints and bounds either single-patch predictor [0.98ms]
+(pass) direct-color controls for 0.4.0 > gradient endpoints and histograms cannot identify the matching progression [7.03ms]
+(pass) direct-color controls for 0.4.0 > context interventions hold task colors fixed and cross all surround positions [1.35ms]
+(pass) direct-color controls for 0.4.0 > small-region interventions hold each palette and answer fixed across all geometries [0.64ms]
+
+src/render.test.ts:
+(pass) actual rendered evidence > repeated page renders paint fresh opaque fields and reject a corrupted target [578.43ms]
+(pass) actual rendered evidence > numeric image bytes do not reveal the requested representation [526.32ms]
+
+ 46 pass
+ 0 fail
+ 7661 expect() calls
+Ran 46 tests across 8 files. [1.58s]
