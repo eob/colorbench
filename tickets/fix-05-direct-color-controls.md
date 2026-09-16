@@ -1,15 +1,17 @@
 # fix-05-direct-color-controls: Repair direct-color task controls
 
-- **Status:** Ready for Review
+- **Status:** Completed
 - **Assignee:** Edward Benson
 - **Branch:** `fix-05-direct-color-controls`
 - **Base:** `a91acaa8ac248136e7278531ff844993d6974cec` (`main`)
-- **Workspace:** `/mnt/disks/data/colorbench` (implementation branch; temporary main-ticket checkout removed after sync)
+- **Workspace:** `/mnt/disks/data/colorbench` (`main`; temporary main-ticket checkout removed after sync)
 - **Machine:** `eob-dev2`
 - **Harness:** `codex`
 - **Session ID:** `01a09da1-c62d-7b60-8bc1-9fd70414ed46`
 - **Coordinator:** `/root`
 - **PR:** https://github.com/eob/colorbench/pull/5
+- **Merged:** `2026-09-16T18:01:15Z` by `eob` into `main`
+- **Merge commit:** `32349bbed203d6e02c6d8ecbbdded840ff47b45c`
 - **Target release:** `0.4.0`; immutable historical release `0.3.2` retained
 
 ## Goal and authorized scope
@@ -114,6 +116,7 @@ that those experiments were performed may appear in the new report.
   record task count, projected cost, cap, command, and run ID before dispatch.
 - [x] Seal/audit new results; write the repair explanation and measured report.
 - [x] Apply simplifyfu/comment review, sync main, finish PR and recovery memo.
+- [x] Verify remote merge, synchronize main, and close this ticket and incorporated fix-04.
 
 ### Construction counts and metadata
 
@@ -217,6 +220,15 @@ or pretending the old run used the new protocol.
 - Do not transfer old scores into 0.4.0 or compare releases as model progress.
 
 ## Handoff & takeover log
+
+- **2026-09-16 18:01 UTC:** PR [#5](https://github.com/eob/colorbench/pull/5)
+  merged into `main` by `eob` at `2026-09-16T18:01:15Z`, merge commit
+  `32349bbed203d6e02c6d8ecbbdded840ff47b45c`. GitHub reports `MERGED`;
+  the primary checkout is on synchronized main. This closes fix-05 and the
+  incorporated [fix-04](fix-04-small-region-prompt.md). The remote feature
+  branch is preserved at `a243f42c1ae966dbc0e63b9b51f17646a83f69ac`.
+  Benchmark implementation, fresh campaign, sealed results, report, and
+  independent reviews are complete; website promotion is a separate task.
 
 - **2026-09-16 16:50 UTC:** Synchronized main's authoritative-ticket update
   `6c18dec`; retained this branch's complete implementation and recovery log.
@@ -362,11 +374,15 @@ or pretending the old run used the new protocol.
 - **Verified working:** Frozen 0.3.2 replay; frozen 512-task release; complete
   tests, decoded controls, independent pixel/analysis review; full 6,656-response
   campaign, verified seal, export, analysis, independent grades/accounting audit.
-- **Pending:** Review/merge PR #5 and any separately scheduled website
-  promotion. No implementation or measurement work remains.
-- **Resume:** Read this ticket and PR, inspect `git status` and CI. All results
-  are sealed; no paid request or rerun is needed. Use the offline verification
-  commands in the measured report when auditing results.
+- **Pending:** None within this repository repair. Website import and
+  deployment are owned by the separate publication task.
+- **Recovery:** Use merged main at `32349bbed203d6e02c6d8ecbbdded840ff47b45c`
+  or the preserved remote feature branch. The measured report is
+  [fourth-pilot.md](../results/fourth-pilot.md); publication exports are
+  `results/colorbench-pilot-0.4.0{,-analysis,-audit}.json`. All results are
+  sealed; no paid request or rerun is needed. Use the report's sequential
+  offline verification commands when auditing results. Historical 0.3.2
+  replay still requires its compatible source checkout.
 - **Completed campaign command (historical; the sealed run cannot resume):**
 
 ```bash
