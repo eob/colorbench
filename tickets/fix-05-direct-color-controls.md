@@ -1,6 +1,6 @@
 # fix-05-direct-color-controls: Repair direct-color task controls
 
-- **Status:** In Progress
+- **Status:** Ready for Review
 - **Assignee:** Edward Benson
 - **Branch:** `fix-05-direct-color-controls`
 - **Base:** `a91acaa8ac248136e7278531ff844993d6974cec` (`main`)
@@ -11,6 +11,25 @@
 - **Coordinator:** `/root`
 - **PR:** https://github.com/eob/colorbench/pull/5
 - **Target release:** `0.4.0`; immutable historical release `0.3.2` retained
+
+## Completed delivery — 2026-09-16
+
+All focused repairs are implemented on `fix-05-direct-color-controls`, with
+fresh ColorBench 0.4.0 measurements complete: 512 questions × 13 model
+configurations = 6,656 responses. Four invalid answers remain in the sealed
+cohort. Independent grading, accounting, report, image-case, and code reviews
+pass; historical evidence is unchanged. The campaign ledger is $44.44385175
+against a $65 cap. No live benchmark process or further paid request is needed.
+
+- [PR #5](https://github.com/eob/colorbench/pull/5)
+- [Full implementation ticket and recovery history](https://github.com/eob/colorbench/blob/fix-05-direct-color-controls/tickets/fix-05-direct-color-controls.md)
+- [Measured report](https://github.com/eob/colorbench/blob/fix-05-direct-color-controls/results/fourth-pilot.md)
+- [Independent final review](https://github.com/eob/colorbench/blob/fix-05-direct-color-controls/tickets/evidence/fix-05-final-review.md)
+
+Implementation/results remain on the feature branch for review; this main
+commit updates only the authoritative ticket. The original plan below is
+retained as the pre-implementation record; use the linked feature ticket for
+completed gates and exact reproducibility commands.
 
 ## Goal and authorized scope
 
@@ -96,7 +115,7 @@ human agreement studies, and optional new color-manipulation questions are
 follow-up experiments, not prerequisites for these focused repairs. No claims
 that those experiments were performed may appear in the new report.
 
-## Execution plan and ownership
+## Original execution plan and ownership
 
 - [x] Read ticketfu/workfu, inspect existing tickets, verify clean baseline.
 - [x] Authoritative ticket committed on main; feature branch and draft PR #5
@@ -134,7 +153,7 @@ The protocol fingerprint includes prompts and implementation bytes. Historical
 prompt lands. Preserve this boundary rather than weakening fingerprint checks
 or pretending the old run used the new protocol.
 
-## Validation gate matrix
+## Original validation gate matrix
 
 | Gate | Baseline/revision | Required result | Status |
 | --- | --- | --- | --- |
@@ -158,16 +177,18 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 16:49 UTC:** Feature implementation/report pushed at `482b71f`;
+  sealed evidence at `a8868c3`. All work complete; synchronize this ticket into
+  the feature branch and finalize PR readiness. No website rollout performed.
+
 - **2026-09-16 13:32 UTC:** Started by codex on eob-dev2, session
   `01a09da1-c62d-7b60-8bc1-9fd70414ed46`; main clean at `a91acaa`.
 
 ## Recovery memo
 
-- **Verified working:** Frozen 0.3.2 grades and numeric math replay; review
-  controls above reproduce; main initially clean.
-- **Pending:** All implementation, new release, and campaign work.
-- **Resume:** Read this ticket and PR; `git status`, then `bun run test`.
-  Check run metadata before launching any paid request; resume a recorded run
-  rather than creating a duplicate campaign.
-- **Next action:** Push the authoritative ticket, create the matching feature
-  branch and draft PR, then establish Red tests and exact construction counts.
+- **Verified working:** 308 Python tests, 46 TypeScript tests, typecheck,
+  release gate, pinned historical replay, immutable-artifact checks, all
+  6,656 fresh grades, complete paired analysis, and independent report review.
+- **Pending:** Review/merge PR #5 and any separately scheduled publication.
+- **Resume:** Read the feature ticket and current PR checks. Do not resume or
+  modify the sealed run. No new inference is required.
