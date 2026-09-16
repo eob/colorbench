@@ -218,6 +218,16 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 14:00 UTC:** Paid campaign is running. Run creation time
+  `2026-09-16T13:59:47.704119+00:00`; clean source
+  `8aac23361559574e7b1d554fd3499055b4a01f2d`, recorded dirty flag `false`.
+  Process PID `4058359`, root tool session `86151`, console log
+  `/tmp/colorbench-fix05-campaign.log`. Initial snapshot: 16/6,656 completed,
+  ledger $0.1812; full 512-task identity and all 13 configurations verified.
+  Do not start another process while this one is active. Progress snapshots
+  live in `results/runs/0.4.0/pilot-20260916/summary.json`; the SQLite ledger is
+  durable. Raw run files remain unsealed until completion and reconciliation.
+
 - **2026-09-16 13:58 UTC:** Frozen dataset commit
   `c14b9c971bd1fbe1a0126a2683ba4df8b0eeaf6c`; descriptor
   `releases/0.4.0.json`. Dataset fingerprint
@@ -253,13 +263,13 @@ or pretending the old run used the new protocol.
 
 - **Verified working:** Frozen 0.3.2 replay; repaired 512-task candidate;
   complete tests, decoded controls, independent pixel/analysis review.
-- **Pending:** Full paid campaign, seal/audit,
-  measured report, PR finalization. No paid calls have started.
+- **Pending:** Finish the active paid campaign, then seal/audit,
+  measured report, PR finalization.
 - **Resume:** Read this ticket and PR; `git status`, then `bun run test`.
   Check run metadata before launching any paid request; resume a recorded run
   rather than creating a duplicate campaign.
-- **Next action:** Commit descriptor/documentation/evidence, start the following
-  command from a clean committed checkout, and record the process/run state:
+- **Next action:** Monitor the active process above. If it exits early, inspect
+  the status and infrastructure errors before resuming with this command:
 
 ```bash
 .venv/bin/python -m baseline.runner --release 0.4.0 \
