@@ -218,6 +218,12 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 15:21 UTC:** Invocation 3 is active from clean, pushed
+  checkpoint `dc419c24ff91fe7ca11ba93cff8540ae292d21f9`. PID `4175532`, root
+  tool session `25206`; same run ID, console log, full cohort, concurrency 6,
+  and cumulative $65 cap. All 3,338 prior answers loaded successfully. Resume
+  only if this process has exited; do not duplicate it.
+
 - **2026-09-16 15:20 UTC:** Invocation 2 intentionally drained for the
   second remote checkpoint. Closed WAL; 3,338 completed results = 3,338
   attempts; one invalid answer retained; ledger $23.4302059. The first
