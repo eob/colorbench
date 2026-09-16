@@ -218,6 +218,13 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 14:38 UTC:** Invocation 2 resumed successfully from clean
+  checkpoint commit `f3224a8ca4f162649b4ade6a5605e5af2165885d` (pushed).
+  Active PID `4123274`, root tool session `28522`; same console log, run ID,
+  full cohort, concurrency 6, and $65 cumulative cap. All 1,470 prior results
+  were loaded, including Luna's retained incomplete `colorbench-oklch-04`
+  answer (4,096 output tokens). Do not start a duplicate active process.
+
 - **2026-09-16 14:37 UTC:** Gracefully drained and closed invocation 1 to
   push a consistent raw checkpoint. Exit 130 is the intentional SIGINT,
   not a provider failure. Summary status `interrupted`; SQLite WAL closed;
@@ -226,7 +233,7 @@ or pretending the old run used the new protocol.
   infrastructure error remains pending. Committing raw files and resuming
   the same run ID preserves all prior observations and cumulative budget.
   Previous PID `4058359` / tool session `86151` is finished; use the newest
-  process entry below once resumed, never restart a second live process.
+  process entry above once resumed, never restart a second live process.
 
 - **2026-09-16 14:13 UTC:** The campaign remains active. Latest branch CI
   passed twice, but an earlier intermittent new browser-test failure was
