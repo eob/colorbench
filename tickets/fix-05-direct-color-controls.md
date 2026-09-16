@@ -218,6 +218,14 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 15:59 UTC:** Invocation 4 is active from clean, pushed
+  checkpoint `3be11094bc0dbb1d6bb8b33e136b77c35073fd15`. PID `78605`, root tool
+  session `25290`; same log, run ID, concurrency 6, and cumulative $65 cap.
+  The 5,134 prior results equal 5,134 attempts, including three invalids;
+  checkpoint ledger $34.54772015. Complete the remaining 1,522 responses,
+  then close/commit raw artifacts before full finalization. Never duplicate
+  this active process or retry a retained invalid answer.
+
 - **2026-09-16 15:58 UTC:** Invocation 3 drained for the last intermediate
   remote checkpoint: 5,134 completed results, closed WAL, prior 3,338-attempt
   export preserved byte-for-byte. All prior responses remain; no separate
