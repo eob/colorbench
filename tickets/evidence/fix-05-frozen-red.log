@@ -1,0 +1,400 @@
+.FFFFFFFFFFFF.                                                           [100%]
+=================================== FAILURES ===================================
+_ test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/run.json-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot0'), <function published_run.<locals>.git at 0x7f55f6952a20>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'runs/1.0.0/published/run.json', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/summary.json-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot1'), <function published_run.<locals>.git at 0x7f55f69534c0>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'runs/1.0.0/published/summary.json', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/scorecard_model.json-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot2'), <function published_run.<locals>.git at 0x7f55f6953880>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'runs/1.0.0/published/scorecard_model.json', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/attempts.jsonl-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot3'), <function published_run.<locals>.git at 0x7f55f6953b00>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'runs/1.0.0/published/attempts.jsonl', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/state.sqlite3-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot4'), <function published_run.<locals>.git at 0x7f55f6953e20>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'runs/1.0.0/published/state.sqlite3', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/final_results.json-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot5'), <function published_run.<locals>.git at 0x7f55f6953920>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'runs/1.0.0/published/final_results.json', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/finalization.json-True] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot6'), <function published_run.<locals>.git at 0x7f55f69536a0>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'runs/1.0.0/published/finalization.json', remove = True
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/extra-response.json-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot7'), <function published_run.<locals>.git at 0x7f55f6952a20>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'runs/1.0.0/published/extra-response.json', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[colorbench-pilot-1.0.0.json-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot8'), <function published_run.<locals>.git at 0x7f55f69c82c0>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'colorbench-pilot-1.0.0.json', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[colorbench-pilot-1.0.0-analysis.json-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot9'), <function published_run.<locals>.git at 0x7f55f69c8540>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'colorbench-pilot-1.0.0-analysis.json', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[colorbench-pilot-1.0.0-audit.json-True] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot10'), <function published_run.<locals>.git at 0x7f55f69c8400>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'colorbench-pilot-1.0.0-audit.json', remove = True
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+_ test_published_evidence_cannot_change_after_its_seal[colorbench_summary.json-False] _
+
+published_run = (PosixPath('/tmp/pytest-of-ted/pytest-294/test_published_evidence_cannot11'), <function published_run.<locals>.git at 0x7f55f69c8ae0>, 'be2d1476df2d32709cdd0cd63de9dc2ba771b908')
+name = 'colorbench_summary.json', remove = False
+
+    @pytest.mark.parametrize("name,remove", [
+        ("runs/1.0.0/published/run.json", False),
+        ("runs/1.0.0/published/summary.json", False),
+        ("runs/1.0.0/published/scorecard_model.json", False),
+        ("runs/1.0.0/published/attempts.jsonl", False),
+        ("runs/1.0.0/published/state.sqlite3", False),
+        ("runs/1.0.0/published/final_results.json", False),
+        ("runs/1.0.0/published/finalization.json", True),
+        ("runs/1.0.0/published/extra-response.json", False),
+        ("colorbench-pilot-1.0.0.json", False),
+        ("colorbench-pilot-1.0.0-analysis.json", False),
+        ("colorbench-pilot-1.0.0-audit.json", True),
+        ("colorbench_summary.json", False),
+    ])
+    def test_published_evidence_cannot_change_after_its_seal(published_run, name, remove):
+        root, git, base = published_run
+        path = root / "results" / name
+        if remove:
+            path.unlink()
+        else:
+            path.write_text("changed evidence\n")
+        git("add", ".")
+        git("commit", "-qm", "Attempt to change published evidence")
+>       with pytest.raises(ValueError, match="Frozen artifacts changed") as error:
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_frozen_ci.py:95: Failed
+=========================== short test summary info ============================
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/run.json-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/summary.json-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/scorecard_model.json-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/attempts.jsonl-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/state.sqlite3-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/final_results.json-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/finalization.json-True]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[runs/1.0.0/published/extra-response.json-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[colorbench-pilot-1.0.0.json-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[colorbench-pilot-1.0.0-analysis.json-False]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[colorbench-pilot-1.0.0-audit.json-True]
+FAILED tests/test_frozen_ci.py::test_published_evidence_cannot_change_after_its_seal[colorbench_summary.json-False]
+12 failed, 2 passed in 0.45s

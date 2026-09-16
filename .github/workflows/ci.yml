@@ -32,7 +32,7 @@ jobs:
       - name: TypeScript typecheck
         run: bun run typecheck
       - run: bun run validate:release
-      - name: All previously registered releases remain frozen
+      - name: Registered datasets and published evidence remain frozen
         env:
           RELEASE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: |
