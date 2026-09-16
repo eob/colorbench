@@ -99,8 +99,8 @@ that those experiments were performed may appear in the new report.
 ## Execution plan and ownership
 
 - [x] Read ticketfu/workfu, inspect existing tickets, verify clean baseline.
-- [ ] Commit/push this authoritative ticket on main; create matching branch
-  and draft PR; link PR back from the main ticket.
+- [ ] Authoritative ticket pushed on main at `393d3f2`; matching feature
+  branch created. Draft PR and main-ticket backlink pending.
 - [ ] Record concrete new construction counts and grouping metadata before
   implementation; keep total corpus small enough for a practical rerun.
 - [ ] Add failing decoded-control/construction checks and capture verbatim
@@ -157,6 +157,9 @@ or pretending the old run used the new protocol.
 - Do not transfer old scores into 0.4.0 or compare releases as model progress.
 
 ## Handoff & takeover log
+
+- **2026-09-16 13:34 UTC:** Created feature branch after publishing the ticket
+  on main; no implementation changes yet.
 
 - **2026-09-16 13:32 UTC:** Started by codex on eob-dev2, session
   `01a09da1-c62d-7b60-8bc1-9fd70414ed46`; main clean at `a91acaa`.
