@@ -1,5 +1,4 @@
 import { expect, test } from "bun:test";
-import { chromium } from "playwright";
 import { PROMPTS } from "./prompts.ts";
 import { generateHtml, placeFields, VIEWPORT } from "./render.ts";
 import type { ColorSpecimenConfig, Rgb } from "./types.ts";
@@ -37,21 +36,41 @@ test("outline width changes only the colored stroke at fixed outer dimensions", 
     ...sample, design: { ...sample.design, layout: "frame", sizePx: 84, strokePx },
   });
   expect(placeFields(frame(12)).every((r) => r.width === 84 && r.ring?.width === 12)).toBe(true);
-  const browser = await chromium.launch({ args: ["--force-color-profile=srgb"] });
-  try {
-    const page = await browser.newPage({ viewport: VIEWPORT });
-    const probes: number[][] = [];
-    for (const width of [3, 12]) {
-      await page.setContent(generateHtml(frame(width)));
-      probes.push(await page.evaluate(() => Array.from(
-        document.querySelector<HTMLCanvasElement>('canvas[data-region="R"]')!
-          .getContext("2d")!.getImageData(6, 42, 1, 1).data,
-      )));
+  // Bun can close a live DevTools pipe during garbage collection after a
+  // previous browser exits. Keep this canvas probe's browser transport in Node.
+  const probe = Bun.spawn(["node", "--input-type=module", "-e", `
+    import { readFileSync } from "node:fs";
+    import { chromium } from "playwright";
+    const { documents, viewport } = JSON.parse(readFileSync(0, "utf8"));
+    const browser = await chromium.launch({ args: ["--force-color-profile=srgb"] });
+    const pixels = [];
+    try {
+      const page = await browser.newPage({ viewport });
+      for (const html of documents) {
+        await page.setContent(html);
+        pixels.push(await page.evaluate(() => Array.from(
+          document.querySelector('canvas[data-region="R"]')
+            .getContext("2d").getImageData(6, 42, 1, 1).data,
+        )));
+      }
+    } finally {
+      await browser.close();
     }
-    expect(probes).toEqual([[238, 238, 238, 255], [80, 120, 150, 255]]);
-  } finally {
-    await browser.close();
-  }
+    console.log(JSON.stringify(pixels));
+  `], {
+    cwd: import.meta.dir,
+    stdin: new Blob([JSON.stringify({
+      documents: [3, 12].map((width) => generateHtml(frame(width))), viewport: VIEWPORT,
+    })]),
+    stdout: "pipe",
+    stderr: "pipe",
+    timeout: 4000,
+  });
+  const [output, error, exitCode] = await Promise.all([
+    new Response(probe.stdout).text(), new Response(probe.stderr).text(), probe.exited,
+  ]);
+  expect(exitCode, error).toBe(0);
+  expect(JSON.parse(output)).toEqual([[238, 238, 238, 255], [80, 120, 150, 255]]);
 });
 
 test("context renders recorded neutral and rotated surrounds", () => {

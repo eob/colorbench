@@ -1,0 +1,127 @@
+bun test v1.3.14 (0d9b296a)
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #1)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1148.41ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #2)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1126.92ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #3)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1122.17ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #4)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1145.50ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #5)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1109.55ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #6)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1130.33ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #7)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1093.77ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #8)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1119.80ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #9)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1109.45ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #10)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1089.83ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #11)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1138.77ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #12)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1117.65ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #13)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1115.34ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #14)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1161.99ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #15)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1100.87ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #16)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1126.85ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #17)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1118.66ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #18)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1115.63ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #19)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1121.47ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #20)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1110.12ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #21)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1097.72ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #22)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1124.85ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #23)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1114.87ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #24)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1124.24ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #25)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1115.90ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #26)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1145.62ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #27)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1134.84ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #28)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1139.82ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #29)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1163.64ms]
+
+../../../../tmp/colorbench-render-ci-node-active/matched-render.test.ts: (run #30)
+GC_WHILE_CHILD_BROWSER_ACTIVE=1
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1150.60ms]
+
+ 30 pass
+ 90 filtered out
+ 0 fail
+ 120 expect() calls
+Ran 30 tests across 1 file. [24.14s]

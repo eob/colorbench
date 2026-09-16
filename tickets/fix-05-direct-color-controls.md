@@ -218,6 +218,17 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 14:13 UTC:** The campaign remains active. Latest branch CI
+  passed twice, but an earlier intermittent new browser-test failure was
+  investigated rather than dismissed. Forced Bun garbage collection reproduced
+  loss of the active Chromium transport (5/10 failures). The new outline probe
+  now owns Playwright in a short Node subprocess; the same forced-GC condition
+  passes 30/30 times, and error/timeout cleanup works. The five-second test
+  deadline and pixel assertions remain. Full TS suite passes 46 tests / 7,662
+  assertions and typecheck. See `fix-05-render-ci-review.md` and adjacent logs.
+  This is test-only; the paid dataset/protocol fingerprint is unchanged.
+  Historical report links now name its pinned 0.3.2 methodology/replay source.
+
 - **2026-09-16 14:00 UTC:** Paid campaign is running. Run creation time
   `2026-09-16T13:59:47.704119+00:00`; clean source
   `8aac23361559574e7b1d554fd3499055b4a01f2d`, recorded dirty flag `false`.

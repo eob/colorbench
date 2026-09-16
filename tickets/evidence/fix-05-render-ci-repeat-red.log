@@ -1,0 +1,1045 @@
+bun test v1.3.14 (0d9b296a)
+
+src/matched-render.test.ts: (run #1)
+2026-09-16T14:02:06.308Z pw:api => launch started
+2026-09-16T14:02:06.358Z pw:api <= launch succeeded
+2026-09-16T14:02:06.360Z pw:api => newPage started
+2026-09-16T14:02:06.392Z pw:api <= newPage succeeded
+2026-09-16T14:02:06.393Z pw:api => setContent started
+2026-09-16T14:02:06.395Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:06.488Z pw:api <= setContent succeeded
+2026-09-16T14:02:06.489Z pw:api => evaluate started
+2026-09-16T14:02:06.494Z pw:api <= evaluate succeeded
+2026-09-16T14:02:06.495Z pw:api => setContent started
+2026-09-16T14:02:06.495Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:06.548Z pw:api <= setContent succeeded
+2026-09-16T14:02:06.548Z pw:api => evaluate started
+2026-09-16T14:02:06.549Z pw:api <= evaluate succeeded
+2026-09-16T14:02:06.549Z pw:api => close started
+2026-09-16T14:02:06.576Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [384.51ms]
+
+src/matched-render.test.ts: (run #2)
+2026-09-16T14:02:06.578Z pw:api => launch started
+2026-09-16T14:02:06.621Z pw:api <= launch succeeded
+2026-09-16T14:02:06.621Z pw:api => newPage started
+2026-09-16T14:02:06.645Z pw:api <= newPage succeeded
+2026-09-16T14:02:06.645Z pw:api => setContent started
+2026-09-16T14:02:06.645Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:06.736Z pw:api <= setContent succeeded
+2026-09-16T14:02:06.736Z pw:api => evaluate started
+2026-09-16T14:02:06.738Z pw:api <= evaluate succeeded
+2026-09-16T14:02:06.738Z pw:api => setContent started
+2026-09-16T14:02:06.739Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:06.788Z pw:api <= setContent succeeded
+2026-09-16T14:02:06.788Z pw:api => evaluate started
+2026-09-16T14:02:06.789Z pw:api <= evaluate succeeded
+2026-09-16T14:02:06.789Z pw:api => close started
+2026-09-16T14:02:06.802Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [318.55ms]
+
+src/matched-render.test.ts: (run #3)
+2026-09-16T14:02:06.804Z pw:api => launch started
+2026-09-16T14:02:06.845Z pw:api <= launch succeeded
+2026-09-16T14:02:06.846Z pw:api => newPage started
+2026-09-16T14:02:06.870Z pw:api <= newPage succeeded
+2026-09-16T14:02:06.870Z pw:api => setContent started
+2026-09-16T14:02:06.871Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:06.961Z pw:api <= setContent succeeded
+2026-09-16T14:02:06.961Z pw:api => evaluate started
+2026-09-16T14:02:06.963Z pw:api <= evaluate succeeded
+2026-09-16T14:02:06.964Z pw:api => setContent started
+2026-09-16T14:02:06.964Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.017Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.017Z pw:api => evaluate started
+2026-09-16T14:02:07.018Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.018Z pw:api => close started
+2026-09-16T14:02:07.043Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [340.29ms]
+
+src/matched-render.test.ts: (run #4)
+2026-09-16T14:02:07.045Z pw:api => launch started
+2026-09-16T14:02:07.087Z pw:api <= launch succeeded
+2026-09-16T14:02:07.087Z pw:api => newPage started
+2026-09-16T14:02:07.110Z pw:api <= newPage succeeded
+2026-09-16T14:02:07.111Z pw:api => setContent started
+2026-09-16T14:02:07.111Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.197Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.198Z pw:api => evaluate started
+2026-09-16T14:02:07.200Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.200Z pw:api => setContent started
+2026-09-16T14:02:07.200Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.248Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.248Z pw:api => evaluate started
+2026-09-16T14:02:07.250Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.250Z pw:api => close started
+2026-09-16T14:02:07.275Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [327.28ms]
+
+src/matched-render.test.ts: (run #5)
+2026-09-16T14:02:07.278Z pw:api => launch started
+2026-09-16T14:02:07.319Z pw:api <= launch succeeded
+2026-09-16T14:02:07.319Z pw:api => newPage started
+2026-09-16T14:02:07.343Z pw:api <= newPage succeeded
+2026-09-16T14:02:07.343Z pw:api => setContent started
+2026-09-16T14:02:07.343Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.435Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.435Z pw:api => evaluate started
+2026-09-16T14:02:07.437Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.437Z pw:api => setContent started
+2026-09-16T14:02:07.437Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.486Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.486Z pw:api => evaluate started
+2026-09-16T14:02:07.487Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.487Z pw:api => close started
+2026-09-16T14:02:07.515Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [338.10ms]
+
+src/matched-render.test.ts: (run #6)
+2026-09-16T14:02:07.518Z pw:api => launch started
+2026-09-16T14:02:07.562Z pw:api <= launch succeeded
+2026-09-16T14:02:07.562Z pw:api => newPage started
+2026-09-16T14:02:07.584Z pw:api <= newPage succeeded
+2026-09-16T14:02:07.585Z pw:api => setContent started
+2026-09-16T14:02:07.585Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.672Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.672Z pw:api => evaluate started
+2026-09-16T14:02:07.676Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.677Z pw:api => setContent started
+2026-09-16T14:02:07.677Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.727Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.727Z pw:api => evaluate started
+2026-09-16T14:02:07.728Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.728Z pw:api => close started
+2026-09-16T14:02:07.760Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [344.18ms]
+
+src/matched-render.test.ts: (run #7)
+2026-09-16T14:02:07.762Z pw:api => launch started
+2026-09-16T14:02:07.807Z pw:api <= launch succeeded
+2026-09-16T14:02:07.807Z pw:api => newPage started
+2026-09-16T14:02:07.830Z pw:api <= newPage succeeded
+2026-09-16T14:02:07.830Z pw:api => setContent started
+2026-09-16T14:02:07.830Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.917Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.917Z pw:api => evaluate started
+2026-09-16T14:02:07.921Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.921Z pw:api => setContent started
+2026-09-16T14:02:07.921Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:07.969Z pw:api <= setContent succeeded
+2026-09-16T14:02:07.969Z pw:api => evaluate started
+2026-09-16T14:02:07.970Z pw:api <= evaluate succeeded
+2026-09-16T14:02:07.971Z pw:api => close started
+2026-09-16T14:02:07.995Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [331.53ms]
+
+src/matched-render.test.ts: (run #8)
+2026-09-16T14:02:07.998Z pw:api => launch started
+2026-09-16T14:02:08.040Z pw:api <= launch succeeded
+2026-09-16T14:02:08.040Z pw:api => newPage started
+2026-09-16T14:02:08.063Z pw:api <= newPage succeeded
+2026-09-16T14:02:08.063Z pw:api => setContent started
+2026-09-16T14:02:08.063Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:08.150Z pw:api <= setContent succeeded
+2026-09-16T14:02:08.150Z pw:api => evaluate started
+2026-09-16T14:02:08.153Z pw:api <= evaluate succeeded
+2026-09-16T14:02:08.154Z pw:api => setContent started
+2026-09-16T14:02:08.154Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:08.205Z pw:api <= setContent succeeded
+2026-09-16T14:02:08.205Z pw:api => evaluate started
+2026-09-16T14:02:08.206Z pw:api <= evaluate succeeded
+2026-09-16T14:02:08.206Z pw:api => close started
+2026-09-16T14:02:08.234Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [336.78ms]
+
+src/matched-render.test.ts: (run #9)
+2026-09-16T14:02:08.237Z pw:api => launch started
+2026-09-16T14:02:08.279Z pw:api <= launch succeeded
+2026-09-16T14:02:08.279Z pw:api => newPage started
+2026-09-16T14:02:08.304Z pw:api <= newPage succeeded
+2026-09-16T14:02:08.304Z pw:api => setContent started
+2026-09-16T14:02:08.305Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:08.391Z pw:api <= setContent succeeded
+2026-09-16T14:02:08.392Z pw:api => evaluate started
+2026-09-16T14:02:08.395Z pw:api <= evaluate succeeded
+2026-09-16T14:02:08.395Z pw:api => setContent started
+2026-09-16T14:02:08.395Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:08.443Z pw:api <= setContent succeeded
+2026-09-16T14:02:08.443Z pw:api => evaluate started
+2026-09-16T14:02:08.444Z pw:api <= evaluate succeeded
+2026-09-16T14:02:08.444Z pw:api => close started
+2026-09-16T14:02:08.457Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [312.76ms]
+
+src/matched-render.test.ts: (run #10)
+2026-09-16T14:02:08.460Z pw:api => launch started
+2026-09-16T14:02:08.502Z pw:api <= launch succeeded
+2026-09-16T14:02:08.502Z pw:api => newPage started
+2026-09-16T14:02:08.526Z pw:api <= newPage succeeded
+2026-09-16T14:02:08.527Z pw:api => setContent started
+2026-09-16T14:02:08.527Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:08.613Z pw:api <= setContent succeeded
+2026-09-16T14:02:08.614Z pw:api => evaluate started
+2026-09-16T14:02:08.616Z pw:api <= evaluate succeeded
+2026-09-16T14:02:08.616Z pw:api => setContent started
+2026-09-16T14:02:08.616Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:08.665Z pw:api <= setContent succeeded
+2026-09-16T14:02:08.665Z pw:api => evaluate started
+2026-09-16T14:02:08.667Z pw:api <= evaluate succeeded
+2026-09-16T14:02:08.667Z pw:api => close started
+2026-09-16T14:02:08.695Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [335.29ms]
+
+src/matched-render.test.ts: (run #11)
+2026-09-16T14:02:08.698Z pw:api => launch started
+2026-09-16T14:02:08.739Z pw:api <= launch succeeded
+2026-09-16T14:02:08.740Z pw:api => newPage started
+2026-09-16T14:02:08.763Z pw:api <= newPage succeeded
+2026-09-16T14:02:08.763Z pw:api => setContent started
+2026-09-16T14:02:08.763Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:08.850Z pw:api <= setContent succeeded
+2026-09-16T14:02:08.850Z pw:api => evaluate started
+2026-09-16T14:02:08.854Z pw:api <= evaluate succeeded
+2026-09-16T14:02:08.854Z pw:api => setContent started
+2026-09-16T14:02:08.854Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:08.906Z pw:api <= setContent succeeded
+2026-09-16T14:02:08.906Z pw:api => evaluate started
+2026-09-16T14:02:08.907Z pw:api <= evaluate succeeded
+2026-09-16T14:02:08.907Z pw:api => close started
+2026-09-16T14:02:08.936Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [338.84ms]
+
+src/matched-render.test.ts: (run #12)
+2026-09-16T14:02:08.939Z pw:api => launch started
+2026-09-16T14:02:08.979Z pw:api <= launch succeeded
+2026-09-16T14:02:08.980Z pw:api => newPage started
+2026-09-16T14:02:09.003Z pw:api <= newPage succeeded
+2026-09-16T14:02:09.003Z pw:api => setContent started
+2026-09-16T14:02:09.003Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:09.090Z pw:api <= setContent succeeded
+2026-09-16T14:02:09.090Z pw:api => evaluate started
+2026-09-16T14:02:09.096Z pw:api <= evaluate succeeded
+2026-09-16T14:02:09.096Z pw:api => setContent started
+2026-09-16T14:02:09.096Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:09.146Z pw:api <= setContent succeeded
+2026-09-16T14:02:09.146Z pw:api => evaluate started
+2026-09-16T14:02:09.147Z pw:api <= evaluate succeeded
+2026-09-16T14:02:09.147Z pw:api => close started
+2026-09-16T14:02:09.175Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [336.69ms]
+
+src/matched-render.test.ts: (run #13)
+2026-09-16T14:02:09.177Z pw:api => launch started
+2026-09-16T14:02:09.219Z pw:api <= launch succeeded
+2026-09-16T14:02:09.219Z pw:api => newPage started
+2026-09-16T14:02:09.243Z pw:api <= newPage succeeded
+2026-09-16T14:02:09.243Z pw:api => setContent started
+2026-09-16T14:02:09.243Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:09.330Z pw:api <= setContent succeeded
+2026-09-16T14:02:09.330Z pw:api => evaluate started
+2026-09-16T14:02:09.334Z pw:api <= evaluate succeeded
+2026-09-16T14:02:09.334Z pw:api => setContent started
+2026-09-16T14:02:09.334Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:09.381Z pw:api <= setContent succeeded
+2026-09-16T14:02:09.381Z pw:api => evaluate started
+2026-09-16T14:02:09.382Z pw:api <= evaluate succeeded
+2026-09-16T14:02:09.382Z pw:api => close started
+2026-09-16T14:02:09.407Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [326.94ms]
+
+src/matched-render.test.ts: (run #14)
+2026-09-16T14:02:09.410Z pw:api => launch started
+2026-09-16T14:02:09.451Z pw:api <= launch succeeded
+2026-09-16T14:02:09.451Z pw:api => newPage started
+2026-09-16T14:02:09.473Z pw:api <= newPage succeeded
+2026-09-16T14:02:09.474Z pw:api => setContent started
+2026-09-16T14:02:09.474Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:09.565Z pw:api <= setContent succeeded
+2026-09-16T14:02:09.565Z pw:api => evaluate started
+2026-09-16T14:02:09.568Z pw:api <= evaluate succeeded
+2026-09-16T14:02:09.568Z pw:api => setContent started
+2026-09-16T14:02:09.568Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:09.615Z pw:api <= setContent succeeded
+2026-09-16T14:02:09.615Z pw:api => evaluate started
+2026-09-16T14:02:09.616Z pw:api <= evaluate succeeded
+2026-09-16T14:02:09.617Z pw:api => close started
+2026-09-16T14:02:09.645Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [335.04ms]
+
+src/matched-render.test.ts: (run #15)
+2026-09-16T14:02:09.647Z pw:api => launch started
+2026-09-16T14:02:09.688Z pw:api <= launch succeeded
+2026-09-16T14:02:09.689Z pw:api => newPage started
+2026-09-16T14:02:09.711Z pw:api <= newPage succeeded
+2026-09-16T14:02:09.711Z pw:api => setContent started
+2026-09-16T14:02:09.711Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:09.798Z pw:api <= setContent succeeded
+2026-09-16T14:02:09.798Z pw:api => evaluate started
+2026-09-16T14:02:09.801Z pw:api <= evaluate succeeded
+2026-09-16T14:02:09.802Z pw:api => setContent started
+2026-09-16T14:02:09.802Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:09.849Z pw:api <= setContent succeeded
+2026-09-16T14:02:09.850Z pw:api => evaluate started
+2026-09-16T14:02:09.851Z pw:api <= evaluate succeeded
+2026-09-16T14:02:09.851Z pw:api => close started
+2026-09-16T14:02:09.876Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [325.23ms]
+
+src/matched-render.test.ts: (run #16)
+2026-09-16T14:02:09.878Z pw:api => launch started
+2026-09-16T14:02:09.920Z pw:api <= launch succeeded
+2026-09-16T14:02:09.920Z pw:api => newPage started
+2026-09-16T14:02:09.942Z pw:api <= newPage succeeded
+2026-09-16T14:02:09.943Z pw:api => setContent started
+2026-09-16T14:02:09.943Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:10.037Z pw:api <= setContent succeeded
+2026-09-16T14:02:10.037Z pw:api => evaluate started
+2026-09-16T14:02:10.039Z pw:api <= evaluate succeeded
+2026-09-16T14:02:10.039Z pw:api => setContent started
+2026-09-16T14:02:10.039Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:10.088Z pw:api <= setContent succeeded
+2026-09-16T14:02:10.088Z pw:api => evaluate started
+2026-09-16T14:02:10.089Z pw:api <= evaluate succeeded
+2026-09-16T14:02:10.089Z pw:api => close started
+2026-09-16T14:02:10.116Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [338.70ms]
+
+src/matched-render.test.ts: (run #17)
+2026-09-16T14:02:10.119Z pw:api => launch started
+2026-09-16T14:02:10.160Z pw:api <= launch succeeded
+2026-09-16T14:02:10.160Z pw:api => newPage started
+2026-09-16T14:02:10.183Z pw:api <= newPage succeeded
+2026-09-16T14:02:10.183Z pw:api => setContent started
+2026-09-16T14:02:10.184Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:10.270Z pw:api <= setContent succeeded
+2026-09-16T14:02:10.270Z pw:api => evaluate started
+2026-09-16T14:02:10.274Z pw:api <= evaluate succeeded
+2026-09-16T14:02:10.275Z pw:api => setContent started
+2026-09-16T14:02:10.275Z pw:api setting frame content, waiting until "load"
+(fail) outline width changes only the colored stroke at fixed outer dimensions [5367.26ms]
+  ^ this test timed out after 5000ms.
+
+src/matched-render.test.ts: (run #18)
+2026-09-16T14:02:13.898Z pw:api => launch started
+2026-09-16T14:02:13.941Z pw:api <= launch succeeded
+2026-09-16T14:02:13.941Z pw:api => newPage started
+2026-09-16T14:02:13.965Z pw:api <= newPage succeeded
+2026-09-16T14:02:13.965Z pw:api => setContent started
+2026-09-16T14:02:13.968Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:14.057Z pw:api <= setContent succeeded
+2026-09-16T14:02:14.057Z pw:api => evaluate started
+2026-09-16T14:02:14.059Z pw:api <= evaluate succeeded
+2026-09-16T14:02:14.060Z pw:api => setContent started
+2026-09-16T14:02:14.060Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:14.108Z pw:api <= setContent succeeded
+2026-09-16T14:02:14.108Z pw:api => evaluate started
+2026-09-16T14:02:14.109Z pw:api <= evaluate succeeded
+2026-09-16T14:02:14.109Z pw:api => close started
+2026-09-16T14:02:14.135Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [337.26ms]
+
+src/matched-render.test.ts: (run #19)
+2026-09-16T14:02:14.139Z pw:api => launch started
+2026-09-16T14:02:14.180Z pw:api <= launch succeeded
+2026-09-16T14:02:14.181Z pw:api => newPage started
+2026-09-16T14:02:14.204Z pw:api <= newPage succeeded
+2026-09-16T14:02:14.205Z pw:api => setContent started
+2026-09-16T14:02:14.205Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:14.297Z pw:api <= setContent succeeded
+2026-09-16T14:02:14.298Z pw:api => evaluate started
+2026-09-16T14:02:14.300Z pw:api <= evaluate succeeded
+2026-09-16T14:02:14.300Z pw:api => setContent started
+2026-09-16T14:02:14.301Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:14.353Z pw:api <= setContent succeeded
+2026-09-16T14:02:14.353Z pw:api => evaluate started
+2026-09-16T14:02:14.354Z pw:api <= evaluate succeeded
+2026-09-16T14:02:14.354Z pw:api => close started
+2026-09-16T14:02:14.380Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [355.28ms]
+
+src/matched-render.test.ts: (run #20)
+2026-09-16T14:02:14.392Z pw:api => launch started
+2026-09-16T14:02:14.433Z pw:api <= launch succeeded
+2026-09-16T14:02:14.433Z pw:api => newPage started
+2026-09-16T14:02:14.456Z pw:api <= newPage succeeded
+2026-09-16T14:02:14.456Z pw:api => setContent started
+2026-09-16T14:02:14.456Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:14.542Z pw:api <= setContent succeeded
+2026-09-16T14:02:14.542Z pw:api => evaluate started
+2026-09-16T14:02:14.544Z pw:api <= evaluate succeeded
+2026-09-16T14:02:14.544Z pw:api => setContent started
+2026-09-16T14:02:14.544Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:14.596Z pw:api <= setContent succeeded
+2026-09-16T14:02:14.596Z pw:api => evaluate started
+2026-09-16T14:02:14.597Z pw:api <= evaluate succeeded
+2026-09-16T14:02:14.597Z pw:api => close started
+2026-09-16T14:02:14.623Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [338.77ms]
+
+src/matched-render.test.ts: (run #21)
+2026-09-16T14:02:14.634Z pw:api => launch started
+2026-09-16T14:02:14.675Z pw:api <= launch succeeded
+2026-09-16T14:02:14.675Z pw:api => newPage started
+2026-09-16T14:02:14.699Z pw:api <= newPage succeeded
+2026-09-16T14:02:14.699Z pw:api => setContent started
+2026-09-16T14:02:14.699Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:14.791Z pw:api <= setContent succeeded
+2026-09-16T14:02:14.792Z pw:api => evaluate started
+2026-09-16T14:02:14.794Z pw:api <= evaluate succeeded
+2026-09-16T14:02:14.794Z pw:api => setContent started
+2026-09-16T14:02:14.794Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:14.845Z pw:api <= setContent succeeded
+2026-09-16T14:02:14.846Z pw:api => evaluate started
+2026-09-16T14:02:14.847Z pw:api <= evaluate succeeded
+2026-09-16T14:02:14.847Z pw:api => close started
+2026-09-16T14:02:14.876Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [353.61ms]
+
+src/matched-render.test.ts: (run #22)
+2026-09-16T14:02:14.886Z pw:api => launch started
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+(fail) outline width changes only the colored stroke at fixed outer dimensions [9.00ms]
+
+# Unhandled error between tests
+-------------------------------
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+-------------------------------
+
+
+src/matched-render.test.ts: (run #23)
+2026-09-16T14:02:14.896Z pw:api => launch started
+2026-09-16T14:02:14.936Z pw:api <= launch succeeded
+2026-09-16T14:02:14.936Z pw:api => newPage started
+2026-09-16T14:02:14.963Z pw:api <= newPage succeeded
+2026-09-16T14:02:14.963Z pw:api => setContent started
+2026-09-16T14:02:14.963Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:15.051Z pw:api <= setContent succeeded
+2026-09-16T14:02:15.051Z pw:api => evaluate started
+2026-09-16T14:02:15.054Z pw:api <= evaluate succeeded
+2026-09-16T14:02:15.054Z pw:api => setContent started
+2026-09-16T14:02:15.054Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:15.106Z pw:api <= setContent succeeded
+2026-09-16T14:02:15.107Z pw:api => evaluate started
+2026-09-16T14:02:15.108Z pw:api <= evaluate succeeded
+2026-09-16T14:02:15.108Z pw:api => close started
+2026-09-16T14:02:15.135Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [348.90ms]
+
+src/matched-render.test.ts: (run #24)
+2026-09-16T14:02:15.144Z pw:api => launch started
+2026-09-16T14:02:15.189Z pw:api <= launch succeeded
+2026-09-16T14:02:15.189Z pw:api => newPage started
+2026-09-16T14:02:15.213Z pw:api <= newPage succeeded
+2026-09-16T14:02:15.214Z pw:api => setContent started
+2026-09-16T14:02:15.214Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:15.300Z pw:api <= setContent succeeded
+2026-09-16T14:02:15.301Z pw:api => evaluate started
+2026-09-16T14:02:15.304Z pw:api <= evaluate succeeded
+2026-09-16T14:02:15.304Z pw:api => setContent started
+2026-09-16T14:02:15.304Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:15.355Z pw:api <= setContent succeeded
+2026-09-16T14:02:15.355Z pw:api => evaluate started
+2026-09-16T14:02:15.356Z pw:api <= evaluate succeeded
+2026-09-16T14:02:15.356Z pw:api => close started
+2026-09-16T14:02:15.384Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [360.78ms]
+
+src/matched-render.test.ts: (run #25)
+2026-09-16T14:02:15.401Z pw:api => launch started
+2026-09-16T14:02:15.442Z pw:api <= launch succeeded
+2026-09-16T14:02:15.442Z pw:api => newPage started
+2026-09-16T14:02:15.465Z pw:api <= newPage succeeded
+2026-09-16T14:02:15.465Z pw:api => setContent started
+2026-09-16T14:02:15.465Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:15.552Z pw:api <= setContent succeeded
+2026-09-16T14:02:15.552Z pw:api => evaluate started
+2026-09-16T14:02:15.556Z pw:api <= evaluate succeeded
+2026-09-16T14:02:15.556Z pw:api => setContent started
+2026-09-16T14:02:15.556Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:15.607Z pw:api <= setContent succeeded
+2026-09-16T14:02:15.607Z pw:api => evaluate started
+2026-09-16T14:02:15.608Z pw:api <= evaluate succeeded
+2026-09-16T14:02:15.608Z pw:api => close started
+2026-09-16T14:02:15.636Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [353.60ms]
+
+src/matched-render.test.ts: (run #26)
+2026-09-16T14:02:15.653Z pw:api => launch started
+2026-09-16T14:02:15.695Z pw:api <= launch succeeded
+2026-09-16T14:02:15.695Z pw:api => newPage started
+2026-09-16T14:02:15.718Z pw:api <= newPage succeeded
+2026-09-16T14:02:15.719Z pw:api => setContent started
+2026-09-16T14:02:15.719Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:15.806Z pw:api <= setContent succeeded
+2026-09-16T14:02:15.806Z pw:api => evaluate started
+2026-09-16T14:02:15.809Z pw:api <= evaluate succeeded
+2026-09-16T14:02:15.810Z pw:api => setContent started
+2026-09-16T14:02:15.810Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:15.861Z pw:api <= setContent succeeded
+2026-09-16T14:02:15.861Z pw:api => evaluate started
+2026-09-16T14:02:15.862Z pw:api <= evaluate succeeded
+2026-09-16T14:02:15.862Z pw:api => close started
+2026-09-16T14:02:15.888Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [355.25ms]
+
+src/matched-render.test.ts: (run #27)
+2026-09-16T14:02:15.906Z pw:api => launch started
+2026-09-16T14:02:15.947Z pw:api <= launch succeeded
+2026-09-16T14:02:15.947Z pw:api => newPage started
+2026-09-16T14:02:15.969Z pw:api <= newPage succeeded
+2026-09-16T14:02:15.969Z pw:api => setContent started
+2026-09-16T14:02:15.970Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:16.062Z pw:api <= setContent succeeded
+2026-09-16T14:02:16.062Z pw:api => evaluate started
+2026-09-16T14:02:16.064Z pw:api <= evaluate succeeded
+2026-09-16T14:02:16.065Z pw:api => setContent started
+2026-09-16T14:02:16.065Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:16.113Z pw:api <= setContent succeeded
+2026-09-16T14:02:16.114Z pw:api => evaluate started
+2026-09-16T14:02:16.115Z pw:api <= evaluate succeeded
+2026-09-16T14:02:16.115Z pw:api => close started
+2026-09-16T14:02:16.147Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [356.15ms]
+
+src/matched-render.test.ts: (run #28)
+2026-09-16T14:02:16.160Z pw:api => launch started
+2026-09-16T14:02:16.201Z pw:api <= launch succeeded
+2026-09-16T14:02:16.201Z pw:api => newPage started
+2026-09-16T14:02:16.226Z pw:api <= newPage succeeded
+2026-09-16T14:02:16.226Z pw:api => setContent started
+2026-09-16T14:02:16.226Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:16.313Z pw:api <= setContent succeeded
+2026-09-16T14:02:16.313Z pw:api => evaluate started
+2026-09-16T14:02:16.315Z pw:api <= evaluate succeeded
+2026-09-16T14:02:16.316Z pw:api => setContent started
+2026-09-16T14:02:16.316Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:16.363Z pw:api <= setContent succeeded
+2026-09-16T14:02:16.363Z pw:api => evaluate started
+2026-09-16T14:02:16.365Z pw:api <= evaluate succeeded
+2026-09-16T14:02:16.365Z pw:api => close started
+2026-09-16T14:02:16.391Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [341.80ms]
+
+src/matched-render.test.ts: (run #29)
+2026-09-16T14:02:16.403Z pw:api => launch started
+2026-09-16T14:02:16.448Z pw:api <= launch succeeded
+2026-09-16T14:02:16.448Z pw:api => newPage started
+2026-09-16T14:02:16.471Z pw:api <= newPage succeeded
+2026-09-16T14:02:16.472Z pw:api => setContent started
+2026-09-16T14:02:16.472Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:16.559Z pw:api <= setContent succeeded
+2026-09-16T14:02:16.559Z pw:api => evaluate started
+2026-09-16T14:02:16.561Z pw:api <= evaluate succeeded
+2026-09-16T14:02:16.562Z pw:api => setContent started
+2026-09-16T14:02:16.562Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:16.611Z pw:api <= setContent succeeded
+2026-09-16T14:02:16.611Z pw:api => evaluate started
+2026-09-16T14:02:16.612Z pw:api <= evaluate succeeded
+2026-09-16T14:02:16.612Z pw:api => close started
+2026-09-16T14:02:16.639Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [345.95ms]
+
+src/matched-render.test.ts: (run #30)
+2026-09-16T14:02:16.650Z pw:api => launch started
+2026-09-16T14:02:16.691Z pw:api <= launch succeeded
+2026-09-16T14:02:16.691Z pw:api => newPage started
+2026-09-16T14:02:16.715Z pw:api <= newPage succeeded
+2026-09-16T14:02:16.715Z pw:api => setContent started
+2026-09-16T14:02:16.715Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:16.801Z pw:api <= setContent succeeded
+2026-09-16T14:02:16.801Z pw:api => evaluate started
+2026-09-16T14:02:16.805Z pw:api <= evaluate succeeded
+2026-09-16T14:02:16.805Z pw:api => setContent started
+2026-09-16T14:02:16.805Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:16.853Z pw:api <= setContent succeeded
+2026-09-16T14:02:16.853Z pw:api => evaluate started
+2026-09-16T14:02:16.854Z pw:api <= evaluate succeeded
+2026-09-16T14:02:16.854Z pw:api => close started
+2026-09-16T14:02:16.882Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [331.42ms]
+
+src/matched-render.test.ts: (run #31)
+2026-09-16T14:02:16.886Z pw:api => launch started
+2026-09-16T14:02:16.928Z pw:api <= launch succeeded
+2026-09-16T14:02:16.930Z pw:api => newPage started
+2026-09-16T14:02:16.955Z pw:api <= newPage succeeded
+2026-09-16T14:02:16.955Z pw:api => setContent started
+2026-09-16T14:02:16.955Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:17.044Z pw:api <= setContent succeeded
+2026-09-16T14:02:17.045Z pw:api => evaluate started
+2026-09-16T14:02:17.047Z pw:api <= evaluate succeeded
+2026-09-16T14:02:17.047Z pw:api => setContent started
+2026-09-16T14:02:17.047Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:17.099Z pw:api <= setContent succeeded
+2026-09-16T14:02:17.099Z pw:api => evaluate started
+2026-09-16T14:02:17.100Z pw:api <= evaluate succeeded
+2026-09-16T14:02:17.100Z pw:api => close started
+2026-09-16T14:02:17.127Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [356.89ms]
+
+src/matched-render.test.ts: (run #32)
+2026-09-16T14:02:17.141Z pw:api => launch started
+2026-09-16T14:02:17.181Z pw:api <= launch succeeded
+2026-09-16T14:02:17.184Z pw:api => newPage started
+2026-09-16T14:02:17.209Z pw:api <= newPage succeeded
+2026-09-16T14:02:17.209Z pw:api => setContent started
+2026-09-16T14:02:17.209Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:17.299Z pw:api <= setContent succeeded
+2026-09-16T14:02:17.299Z pw:api => evaluate started
+2026-09-16T14:02:17.301Z pw:api <= evaluate succeeded
+2026-09-16T14:02:17.302Z pw:api => setContent started
+2026-09-16T14:02:17.302Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:17.353Z pw:api <= setContent succeeded
+2026-09-16T14:02:17.353Z pw:api => evaluate started
+2026-09-16T14:02:17.354Z pw:api <= evaluate succeeded
+2026-09-16T14:02:17.354Z pw:api => close started
+2026-09-16T14:02:17.379Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [357.60ms]
+
+src/matched-render.test.ts: (run #33)
+2026-09-16T14:02:17.396Z pw:api => launch started
+2026-09-16T14:02:17.436Z pw:api <= launch succeeded
+2026-09-16T14:02:17.438Z pw:api => newPage started
+2026-09-16T14:02:17.465Z pw:api <= newPage succeeded
+2026-09-16T14:02:17.465Z pw:api => setContent started
+2026-09-16T14:02:17.465Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:17.554Z pw:api <= setContent succeeded
+2026-09-16T14:02:17.554Z pw:api => evaluate started
+2026-09-16T14:02:17.556Z pw:api <= evaluate succeeded
+2026-09-16T14:02:17.556Z pw:api => setContent started
+2026-09-16T14:02:17.556Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:17.603Z pw:api <= setContent succeeded
+2026-09-16T14:02:17.603Z pw:api => evaluate started
+2026-09-16T14:02:17.604Z pw:api <= evaluate succeeded
+2026-09-16T14:02:17.604Z pw:api => close started
+2026-09-16T14:02:17.631Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [336.93ms]
+
+src/matched-render.test.ts: (run #34)
+2026-09-16T14:02:17.636Z pw:api => launch started
+2026-09-16T14:02:17.677Z pw:api <= launch succeeded
+2026-09-16T14:02:17.679Z pw:api => newPage started
+2026-09-16T14:02:17.705Z pw:api <= newPage succeeded
+2026-09-16T14:02:17.705Z pw:api => setContent started
+2026-09-16T14:02:17.706Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:17.796Z pw:api <= setContent succeeded
+2026-09-16T14:02:17.797Z pw:api => evaluate started
+2026-09-16T14:02:17.800Z pw:api <= evaluate succeeded
+2026-09-16T14:02:17.800Z pw:api => setContent started
+2026-09-16T14:02:17.800Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:17.852Z pw:api <= setContent succeeded
+2026-09-16T14:02:17.852Z pw:api => evaluate started
+2026-09-16T14:02:17.853Z pw:api <= evaluate succeeded
+2026-09-16T14:02:17.853Z pw:api => close started
+2026-09-16T14:02:17.879Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [365.73ms]
+
+src/matched-render.test.ts: (run #35)
+2026-09-16T14:02:17.896Z pw:api => launch started
+2026-09-16T14:02:17.938Z pw:api <= launch succeeded
+2026-09-16T14:02:17.939Z pw:api => newPage started
+2026-09-16T14:02:17.966Z pw:api <= newPage succeeded
+2026-09-16T14:02:17.966Z pw:api => setContent started
+2026-09-16T14:02:17.966Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:18.057Z pw:api <= setContent succeeded
+2026-09-16T14:02:18.058Z pw:api => evaluate started
+2026-09-16T14:02:18.060Z pw:api <= evaluate succeeded
+2026-09-16T14:02:18.060Z pw:api => setContent started
+2026-09-16T14:02:18.060Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:18.111Z pw:api <= setContent succeeded
+2026-09-16T14:02:18.111Z pw:api => evaluate started
+2026-09-16T14:02:18.112Z pw:api <= evaluate succeeded
+2026-09-16T14:02:18.112Z pw:api => close started
+2026-09-16T14:02:18.139Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [363.82ms]
+
+src/matched-render.test.ts: (run #36)
+2026-09-16T14:02:18.155Z pw:api => launch started
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+(fail) outline width changes only the colored stroke at fixed outer dimensions [4.89ms]
+
+# Unhandled error between tests
+-------------------------------
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+-------------------------------
+
+
+src/matched-render.test.ts: (run #37)
+2026-09-16T14:02:18.162Z pw:api => launch started
+2026-09-16T14:02:18.205Z pw:api <= launch succeeded
+2026-09-16T14:02:18.205Z pw:api => newPage started
+2026-09-16T14:02:18.231Z pw:api <= newPage succeeded
+2026-09-16T14:02:18.231Z pw:api => setContent started
+2026-09-16T14:02:18.231Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:18.318Z pw:api <= setContent succeeded
+2026-09-16T14:02:18.318Z pw:api => evaluate started
+2026-09-16T14:02:18.320Z pw:api <= evaluate succeeded
+2026-09-16T14:02:18.321Z pw:api => setContent started
+2026-09-16T14:02:18.321Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:18.371Z pw:api <= setContent succeeded
+2026-09-16T14:02:18.371Z pw:api => evaluate started
+2026-09-16T14:02:18.372Z pw:api <= evaluate succeeded
+2026-09-16T14:02:18.372Z pw:api => close started
+2026-09-16T14:02:18.400Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [346.17ms]
+
+src/matched-render.test.ts: (run #38)
+2026-09-16T14:02:18.409Z pw:api => launch started
+2026-09-16T14:02:18.450Z pw:api <= launch succeeded
+2026-09-16T14:02:18.450Z pw:api => newPage started
+2026-09-16T14:02:18.473Z pw:api <= newPage succeeded
+2026-09-16T14:02:18.474Z pw:api => setContent started
+2026-09-16T14:02:18.474Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:18.562Z pw:api <= setContent succeeded
+2026-09-16T14:02:18.562Z pw:api => evaluate started
+2026-09-16T14:02:18.566Z pw:api <= evaluate succeeded
+2026-09-16T14:02:18.566Z pw:api => setContent started
+2026-09-16T14:02:18.566Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:18.621Z pw:api <= setContent succeeded
+2026-09-16T14:02:18.621Z pw:api => evaluate started
+2026-09-16T14:02:18.622Z pw:api <= evaluate succeeded
+2026-09-16T14:02:18.622Z pw:api => close started
+2026-09-16T14:02:18.647Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [353.71ms]
+
+src/matched-render.test.ts: (run #39)
+2026-09-16T14:02:18.661Z pw:api => launch started
+2026-09-16T14:02:18.702Z pw:api <= launch succeeded
+2026-09-16T14:02:18.702Z pw:api => newPage started
+2026-09-16T14:02:18.725Z pw:api <= newPage succeeded
+2026-09-16T14:02:18.726Z pw:api => setContent started
+2026-09-16T14:02:18.726Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:18.812Z pw:api <= setContent succeeded
+2026-09-16T14:02:18.813Z pw:api => evaluate started
+2026-09-16T14:02:18.816Z pw:api <= evaluate succeeded
+2026-09-16T14:02:18.816Z pw:api => setContent started
+2026-09-16T14:02:18.816Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:18.868Z pw:api <= setContent succeeded
+2026-09-16T14:02:18.868Z pw:api => evaluate started
+2026-09-16T14:02:18.869Z pw:api <= evaluate succeeded
+2026-09-16T14:02:18.869Z pw:api => close started
+2026-09-16T14:02:18.887Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [330.71ms]
+
+src/matched-render.test.ts: (run #40)
+2026-09-16T14:02:18.897Z pw:api => launch started
+2026-09-16T14:02:18.941Z pw:api <= launch succeeded
+2026-09-16T14:02:18.941Z pw:api => newPage started
+2026-09-16T14:02:18.965Z pw:api <= newPage succeeded
+2026-09-16T14:02:18.965Z pw:api => setContent started
+2026-09-16T14:02:18.966Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:19.059Z pw:api <= setContent succeeded
+2026-09-16T14:02:19.059Z pw:api => evaluate started
+2026-09-16T14:02:19.062Z pw:api <= evaluate succeeded
+2026-09-16T14:02:19.062Z pw:api => setContent started
+2026-09-16T14:02:19.062Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:19.112Z pw:api <= setContent succeeded
+2026-09-16T14:02:19.112Z pw:api => evaluate started
+2026-09-16T14:02:19.113Z pw:api <= evaluate succeeded
+2026-09-16T14:02:19.113Z pw:api => close started
+2026-09-16T14:02:19.139Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [362.34ms]
+
+src/matched-render.test.ts: (run #41)
+2026-09-16T14:02:19.155Z pw:api => launch started
+2026-09-16T14:02:19.197Z pw:api <= launch succeeded
+2026-09-16T14:02:19.197Z pw:api => newPage started
+2026-09-16T14:02:19.222Z pw:api <= newPage succeeded
+2026-09-16T14:02:19.222Z pw:api => setContent started
+2026-09-16T14:02:19.222Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:19.311Z pw:api <= setContent succeeded
+2026-09-16T14:02:19.311Z pw:api => evaluate started
+2026-09-16T14:02:19.313Z pw:api <= evaluate succeeded
+2026-09-16T14:02:19.314Z pw:api => setContent started
+2026-09-16T14:02:19.314Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:19.361Z pw:api <= setContent succeeded
+2026-09-16T14:02:19.361Z pw:api => evaluate started
+2026-09-16T14:02:19.362Z pw:api <= evaluate succeeded
+2026-09-16T14:02:19.362Z pw:api => close started
+2026-09-16T14:02:19.387Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [333.54ms]
+
+src/matched-render.test.ts: (run #42)
+2026-09-16T14:02:19.393Z pw:api => launch started
+2026-09-16T14:02:19.435Z pw:api <= launch succeeded
+2026-09-16T14:02:19.435Z pw:api => newPage started
+2026-09-16T14:02:19.459Z pw:api <= newPage succeeded
+2026-09-16T14:02:19.459Z pw:api => setContent started
+2026-09-16T14:02:19.459Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:19.549Z pw:api <= setContent succeeded
+2026-09-16T14:02:19.549Z pw:api => evaluate started
+2026-09-16T14:02:19.551Z pw:api <= evaluate succeeded
+2026-09-16T14:02:19.552Z pw:api => setContent started
+2026-09-16T14:02:19.552Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:19.597Z pw:api <= setContent succeeded
+2026-09-16T14:02:19.598Z pw:api => evaluate started
+2026-09-16T14:02:19.599Z pw:api <= evaluate succeeded
+2026-09-16T14:02:19.599Z pw:api => close started
+2026-09-16T14:02:19.629Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [355.39ms]
+
+src/matched-render.test.ts: (run #43)
+2026-09-16T14:02:19.647Z pw:api => launch started
+2026-09-16T14:02:19.688Z pw:api <= launch succeeded
+2026-09-16T14:02:19.688Z pw:api => newPage started
+2026-09-16T14:02:19.711Z pw:api <= newPage succeeded
+2026-09-16T14:02:19.711Z pw:api => setContent started
+2026-09-16T14:02:19.711Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:19.798Z pw:api <= setContent succeeded
+2026-09-16T14:02:19.798Z pw:api => evaluate started
+2026-09-16T14:02:19.801Z pw:api <= evaluate succeeded
+2026-09-16T14:02:19.802Z pw:api => setContent started
+2026-09-16T14:02:19.802Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:19.853Z pw:api <= setContent succeeded
+2026-09-16T14:02:19.853Z pw:api => evaluate started
+2026-09-16T14:02:19.854Z pw:api <= evaluate succeeded
+2026-09-16T14:02:19.854Z pw:api => close started
+2026-09-16T14:02:19.867Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [331.14ms]
+
+src/matched-render.test.ts: (run #44)
+2026-09-16T14:02:19.883Z pw:api => launch started
+2026-09-16T14:02:19.928Z pw:api <= launch succeeded
+2026-09-16T14:02:19.928Z pw:api => newPage started
+2026-09-16T14:02:19.951Z pw:api <= newPage succeeded
+2026-09-16T14:02:19.951Z pw:api => setContent started
+2026-09-16T14:02:19.952Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:20.039Z pw:api <= setContent succeeded
+2026-09-16T14:02:20.039Z pw:api => evaluate started
+2026-09-16T14:02:20.043Z pw:api <= evaluate succeeded
+2026-09-16T14:02:20.043Z pw:api => setContent started
+2026-09-16T14:02:20.043Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:20.091Z pw:api <= setContent succeeded
+2026-09-16T14:02:20.092Z pw:api => evaluate started
+2026-09-16T14:02:20.092Z pw:api <= evaluate succeeded
+2026-09-16T14:02:20.092Z pw:api => close started
+2026-09-16T14:02:20.107Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [336.78ms]
+
+src/matched-render.test.ts: (run #45)
+2026-09-16T14:02:20.123Z pw:api => launch started
+2026-09-16T14:02:20.164Z pw:api <= launch succeeded
+2026-09-16T14:02:20.165Z pw:api => newPage started
+2026-09-16T14:02:20.187Z pw:api <= newPage succeeded
+2026-09-16T14:02:20.188Z pw:api => setContent started
+2026-09-16T14:02:20.188Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:20.273Z pw:api <= setContent succeeded
+2026-09-16T14:02:20.274Z pw:api => evaluate started
+2026-09-16T14:02:20.275Z pw:api <= evaluate succeeded
+2026-09-16T14:02:20.276Z pw:api => setContent started
+2026-09-16T14:02:20.276Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:20.324Z pw:api <= setContent succeeded
+2026-09-16T14:02:20.324Z pw:api => evaluate started
+2026-09-16T14:02:20.325Z pw:api <= evaluate succeeded
+2026-09-16T14:02:20.325Z pw:api => close started
+2026-09-16T14:02:20.359Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [336.86ms]
+
+src/matched-render.test.ts: (run #46)
+2026-09-16T14:02:20.364Z pw:api => launch started
+2026-09-16T14:02:20.405Z pw:api <= launch succeeded
+2026-09-16T14:02:20.405Z pw:api => newPage started
+2026-09-16T14:02:20.429Z pw:api <= newPage succeeded
+2026-09-16T14:02:20.429Z pw:api => setContent started
+2026-09-16T14:02:20.429Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:20.517Z pw:api <= setContent succeeded
+2026-09-16T14:02:20.517Z pw:api => evaluate started
+2026-09-16T14:02:20.519Z pw:api <= evaluate succeeded
+2026-09-16T14:02:20.519Z pw:api => setContent started
+2026-09-16T14:02:20.519Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:20.571Z pw:api <= setContent succeeded
+2026-09-16T14:02:20.571Z pw:api => evaluate started
+2026-09-16T14:02:20.572Z pw:api <= evaluate succeeded
+2026-09-16T14:02:20.572Z pw:api => close started
+2026-09-16T14:02:20.599Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [344.61ms]
+
+src/matched-render.test.ts: (run #47)
+2026-09-16T14:02:20.610Z pw:api => launch started
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+(fail) outline width changes only the colored stroke at fixed outer dimensions [4.29ms]
+
+# Unhandled error between tests
+-------------------------------
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+-------------------------------
+
+
+src/matched-render.test.ts: (run #48)
+2026-09-16T14:02:20.616Z pw:api => launch started
+2026-09-16T14:02:20.656Z pw:api <= launch succeeded
+2026-09-16T14:02:20.657Z pw:api => newPage started
+2026-09-16T14:02:20.679Z pw:api <= newPage succeeded
+2026-09-16T14:02:20.680Z pw:api => setContent started
+2026-09-16T14:02:20.680Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:20.767Z pw:api <= setContent succeeded
+2026-09-16T14:02:20.767Z pw:api => evaluate started
+2026-09-16T14:02:20.773Z pw:api <= evaluate succeeded
+2026-09-16T14:02:20.773Z pw:api => setContent started
+2026-09-16T14:02:20.773Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:20.822Z pw:api <= setContent succeeded
+2026-09-16T14:02:20.822Z pw:api => evaluate started
+2026-09-16T14:02:20.823Z pw:api <= evaluate succeeded
+2026-09-16T14:02:20.823Z pw:api => close started
+2026-09-16T14:02:20.851Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [351.37ms]
+
+src/matched-render.test.ts: (run #49)
+2026-09-16T14:02:20.867Z pw:api => launch started
+2026-09-16T14:02:20.908Z pw:api <= launch succeeded
+2026-09-16T14:02:20.908Z pw:api => newPage started
+2026-09-16T14:02:20.933Z pw:api <= newPage succeeded
+2026-09-16T14:02:20.933Z pw:api => setContent started
+2026-09-16T14:02:20.933Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:21.020Z pw:api <= setContent succeeded
+2026-09-16T14:02:21.020Z pw:api => evaluate started
+2026-09-16T14:02:21.023Z pw:api <= evaluate succeeded
+2026-09-16T14:02:21.024Z pw:api => setContent started
+2026-09-16T14:02:21.024Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:21.072Z pw:api <= setContent succeeded
+2026-09-16T14:02:21.072Z pw:api => evaluate started
+2026-09-16T14:02:21.073Z pw:api <= evaluate succeeded
+2026-09-16T14:02:21.073Z pw:api => close started
+2026-09-16T14:02:21.099Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [341.29ms]
+
+src/matched-render.test.ts: (run #50)
+2026-09-16T14:02:21.110Z pw:api => launch started
+2026-09-16T14:02:21.151Z pw:api <= launch succeeded
+2026-09-16T14:02:21.151Z pw:api => newPage started
+2026-09-16T14:02:21.174Z pw:api <= newPage succeeded
+2026-09-16T14:02:21.174Z pw:api => setContent started
+2026-09-16T14:02:21.174Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:21.266Z pw:api <= setContent succeeded
+2026-09-16T14:02:21.266Z pw:api => evaluate started
+2026-09-16T14:02:21.268Z pw:api <= evaluate succeeded
+2026-09-16T14:02:21.268Z pw:api => setContent started
+2026-09-16T14:02:21.268Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:02:21.319Z pw:api <= setContent succeeded
+2026-09-16T14:02:21.320Z pw:api => evaluate started
+2026-09-16T14:02:21.321Z pw:api <= evaluate succeeded
+2026-09-16T14:02:21.321Z pw:api => close started
+2026-09-16T14:02:21.351Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [355.45ms]
+
+4 tests failed:
+(fail) outline width changes only the colored stroke at fixed outer dimensions [5367.26ms]
+  ^ this test timed out after 5000ms.
+(fail) outline width changes only the colored stroke at fixed outer dimensions [9.00ms]
+(fail) outline width changes only the colored stroke at fixed outer dimensions [4.89ms]
+(fail) outline width changes only the colored stroke at fixed outer dimensions [4.29ms]
+
+ 46 pass
+ 150 filtered out
+ 4 fail
+ 3 errors
+ 96 expect() calls
+Ran 50 tests across 1 file. [15.33s]

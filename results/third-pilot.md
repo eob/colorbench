@@ -24,7 +24,7 @@ reference cells. Grading and provider requests retain their frozen semantics.
 
 This is a new corpus. Numerical differences from 0.3.1 or 0.2.0 are not model
 improvement or deterioration. The [full review](../docs/publication-review-2026-09-14.md)
-and [methodology](../docs/methodology.md) record the construction, checks,
+and [0.3.2 methodology](https://github.com/eob/colorbench/blob/8fc558433146066b8e1ed9b44303689b2433478d/docs/methodology.md) record the construction, checks,
 and remaining limitations.
 
 ## Choice results
@@ -186,6 +186,10 @@ follow-up and repeated model requests would address different limitations.
 Those would be new measurements, not reinterpretations of this frozen run.
 
 ## Reproduce the report
+
+Use compatible source `8fc558433146066b8e1ed9b44303689b2433478d` in a
+separate checkout, following the [historical replay instructions](../releases/README.md#historical-replay).
+Current 0.4.0 source intentionally rejects the old protocol fingerprint.
 
 ```bash
 .venv/bin/python -m baseline.finalize \
