@@ -1,0 +1,25 @@
+{
+  "baseCommit": "8aac23361559574e7b1d554fd3499055b4a01f2d",
+  "testSha256": "5075be27610fe902f3fbcac7d02bebc464985f31734ff94976f29ba5e714e0e0",
+  "failedCiRun": 35105506316,
+  "passedCiRunSameCommit": 35105501198,
+  "forcedGcOriginal": {
+    "pass": 5,
+    "fail": 5
+  },
+  "forcedGcIsolatedNode": {
+    "pass": 30,
+    "fail": 0
+  },
+  "fullTypescriptSuite": {
+    "pass": 46,
+    "fail": 0,
+    "assertions": 7662
+  },
+  "typecheckPassed": true,
+  "probeErrorCleanupVerified": true,
+  "probeTimeoutCleanupVerified": true,
+  "outerTestTimeoutMs": 5000,
+  "childTimeoutMs": 4000,
+  "productionProtocolChanged": false
+}

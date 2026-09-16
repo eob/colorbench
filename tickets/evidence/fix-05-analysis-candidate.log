@@ -1,0 +1,5 @@
+OFFLINE synthetic predictions only; no model requests and no results artifact created.
+Candidate manifest SHA256: 0271b7d47a79ec8988e2edd11c986555e135419695c51d682e1981aa093addc5
+PASS: 512 candidate tasks, 2 fixture models, 1024 synthetic rows
+PASS: all 6 intervention comparisons contain 16 pairs/model, zero unmatched conditions
+PASS: 24 semantic mapping pairs/model; 16 targets/model in each hue context and RGB

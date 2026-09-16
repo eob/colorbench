@@ -1,0 +1,3313 @@
+[claude-opus-5] colorbench-oklch-03: valid | total spent: $0.0000
+[claude-fable-5-1] colorbench-oklch-03: valid | total spent: $0.0000
+[claude-haiku-4-5-20251001] colorbench-oklch-03: valid | total spent: $0.0000
+[claude-sonnet-5] colorbench-oklch-03: valid | total spent: $0.0000
+[gpt-6-astra] colorbench-oklch-03: valid | total spent: $0.0000
+[gpt-5.6-sol] colorbench-oklch-03: valid | total spent: $0.0000
+[gpt-5.6-luna] colorbench-oklch-03: valid | total spent: $0.0000
+[gpt-5.6-terra] colorbench-oklch-03: valid | total spent: $0.0000
+[gemini-3.1-pro-preview] colorbench-oklch-03: valid | total spent: $0.0000
+[gemini-3.8-flash] colorbench-oklch-03: valid | total spent: $0.0000
+[gemini-3.5-flash-lite] colorbench-oklch-03: valid | total spent: $0.0000
+[muse-spark-1.3] colorbench-oklch-03: valid | total spent: $0.0000
+[muse-spark-1.2] colorbench-oklch-03: valid | total spent: $0.0000
+[claude-fable-5-1] colorbench-binding-27: valid | total spent: $0.0000
+[claude-opus-5] colorbench-binding-27: valid | total spent: $0.0000
+[claude-sonnet-5] colorbench-binding-27: valid | total spent: $0.0000
+[gpt-6-astra] colorbench-binding-27: valid | total spent: $0.0000
+[claude-haiku-4-5-20251001] colorbench-binding-27: valid | total spent: $0.0000
+[gpt-5.6-terra] colorbench-binding-27: valid | total spent: $0.0000
+[gpt-5.6-sol] colorbench-binding-27: valid | total spent: $0.0000
+[gpt-5.6-luna] colorbench-binding-27: valid | total spent: $0.0000
+[gemini-3.1-pro-preview] colorbench-binding-27: valid | total spent: $0.0000
+[gemini-3.8-flash] colorbench-binding-27: valid | total spent: $0.0000
+[gemini-3.5-flash-lite] colorbench-binding-27: valid | total spent: $0.0000
+[muse-spark-1.2] colorbench-binding-27: valid | total spent: $0.0000
+[muse-spark-1.3] colorbench-binding-27: valid | total spent: $0.0000
+[claude-opus-5] colorbench-context-42: valid | total spent: $0.0000
+[claude-fable-5-1] colorbench-context-42: valid | total spent: $0.0000
+[claude-sonnet-5] colorbench-context-42: valid | total spent: $0.0000
+[claude-haiku-4-5-20251001] colorbench-context-42: valid | total spent: $0.0000
+[gpt-6-astra] colorbench-context-42: valid | total spent: $0.0000
+[gpt-5.6-sol] colorbench-context-42: valid | total spent: $0.0000
+[gpt-5.6-luna] colorbench-context-42: valid | total spent: $0.0000
+[gpt-5.6-terra] colorbench-context-42: valid | total spent: $0.0000
+[gemini-3.1-pro-preview] colorbench-context-42: valid | total spent: $0.0000
+[gemini-3.8-flash] colorbench-context-42: valid | total spent: $0.0000
+[gemini-3.5-flash-lite] colorbench-context-42: valid | total spent: $0.0000
+[muse-spark-1.3] colorbench-context-42: valid | total spent: $0.0000
+[muse-spark-1.2] colorbench-context-42: valid | total spent: $0.0000
+{
+  "schema_version": 1,
+  "run_id": "fix05-smoke",
+  "grading_version": "2",
+  "release": "0.4.0",
+  "dataset_git_commit": "c14b9c971bd1fbe1a0126a2683ba4df8b0eeaf6c",
+  "dataset_fingerprint": "3c6b248bfc25f4810c0083bbc5af3c5905fb1000795b21fdd0a57969a7aa3bc0",
+  "evaluation_protocol": "78be5960423e0ea7b850ffb5a5c07dbb41a4658d6c89dd8a43e9dc08c76ab502",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/manifest.json",
+  "mock": true,
+  "expected_task_count": 512,
+  "runner_git_commit": "c14b9c971bd1fbe1a0126a2683ba4df8b0eeaf6c",
+  "runner_git_dirty": true,
+  "created_at": "2026-09-16T13:56:24.005151+00:00",
+  "updated_at": "2026-09-16T13:56:24.393267+00:00",
+  "budget_usd": 25.0,
+  "spent_cost_usd": 0.0,
+  "cost_incomplete": false,
+  "interruption_signal": null,
+  "status": "partial",
+  "models": {
+    "claude-fable-5-1": {
+      "model_config": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": null,
+        "display_name": "Claude Fable 5.1",
+        "enabled": true,
+        "id": "claude-fable-5-1",
+        "input_per_m": 10.0,
+        "max_output_tokens": 4096,
+        "model": "claude-fable-5-1",
+        "notes": "Latest Fable. Adaptive thinking is always on; default effort is high.",
+        "output_per_m": 50.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "provider": "anthropic",
+        "source_url": "https://platform.claude.com/docs/en/models/overview"
+      },
+      "model_config_fingerprint": "5651e81821421e372074e9b58db5cced4e5fb6d05ec21248e07c30ed8d2aa366",
+      "max_output_tokens": 4096,
+      "provider": "anthropic",
+      "model": "claude-fable-5-1",
+      "display_name": "Claude Fable 5.1",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 1.4605970742801825e-05
+    },
+    "claude-haiku-4-5-20251001": {
+      "model_config": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": null,
+        "display_name": "Claude Haiku 4.5",
+        "enabled": true,
+        "id": "claude-haiku-4-5-20251001",
+        "input_per_m": 1.0,
+        "max_output_tokens": 1024,
+        "model": "claude-haiku-4-5-20251001",
+        "notes": "Latest Haiku, using its dated snapshot ID.",
+        "output_per_m": 5.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "provider": "anthropic",
+        "source_url": "https://platform.claude.com/docs/en/models/overview"
+      },
+      "model_config_fingerprint": "0955227c94c7dc3da8e437be80ebacb3226b826411a0b59e4d37966e425f2a3c",
+      "max_output_tokens": 1024,
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001",
+      "display_name": "Claude Haiku 4.5",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 9.736628271639347e-06
+    },
+    "claude-opus-5": {
+      "model_config": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": null,
+        "display_name": "Claude Opus 5",
+        "enabled": true,
+        "id": "claude-opus-5",
+        "input_per_m": 5.0,
+        "max_output_tokens": 4096,
+        "model": "claude-opus-5",
+        "notes": "Latest Opus. Default model effort is high.",
+        "output_per_m": 25.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "provider": "anthropic",
+        "source_url": "https://platform.claude.com/docs/en/models/overview"
+      },
+      "model_config_fingerprint": "6873f7552015a1feec5bf8277ba96cf05c60c4667842dddb5aa6a1dbbec3598c",
+      "max_output_tokens": 4096,
+      "provider": "anthropic",
+      "model": "claude-opus-5",
+      "display_name": "Claude Opus 5",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 8.504022844135761e-06
+    },
+    "claude-sonnet-5": {
+      "model_config": {
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "base_url": null,
+        "display_name": "Claude Sonnet 5",
+        "enabled": true,
+        "id": "claude-sonnet-5",
+        "input_per_m": 2.0,
+        "max_output_tokens": 4096,
+        "model": "claude-sonnet-5",
+        "notes": "Latest Sonnet. Default model effort is high.",
+        "output_per_m": 10.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "provider": "anthropic",
+        "source_url": "https://platform.claude.com/docs/en/models/overview"
+      },
+      "model_config_fingerprint": "3eea74f353075099be73c9595a094bb3f7a468c7688d17c3b5cd217c93d9bb88",
+      "max_output_tokens": 4096,
+      "provider": "anthropic",
+      "model": "claude-sonnet-5",
+      "display_name": "Claude Sonnet 5",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 8.415003928045431e-06
+    },
+    "gemini-3.1-pro-preview": {
+      "model_config": {
+        "api_key_env": "GEMINI_API_KEY",
+        "base_url": null,
+        "display_name": "Gemini 3.1 Pro Preview",
+        "enabled": true,
+        "id": "gemini-3.1-pro-preview",
+        "input_per_m": 2.0,
+        "max_output_tokens": 4096,
+        "model": "gemini-3.1-pro-preview",
+        "notes": "Latest documented Pro model. Preview; no announced shutdown date at verification.",
+        "output_per_m": 12.0,
+        "pricing_notes": "Standard online rates for prompts up to 200k tokens. Above 200k: $4 input / $18 output per million tokens. Output includes thinking tokens.",
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "provider": "google",
+        "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview"
+      },
+      "model_config_fingerprint": "6ef3a6e5b007c672a50902258a256900e6fc450affd9ab4d9373ac0ef70d0ce8",
+      "max_output_tokens": 4096,
+      "provider": "google",
+      "model": "gemini-3.1-pro-preview",
+      "display_name": "Gemini 3.1 Pro Preview",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 1.3487723966439566e-05
+    },
+    "gemini-3.5-flash-lite": {
+      "model_config": {
+        "api_key_env": "GEMINI_API_KEY",
+        "base_url": null,
+        "display_name": "Gemini 3.5 Flash-Lite",
+        "enabled": true,
+        "id": "gemini-3.5-flash-lite",
+        "input_per_m": 0.3,
+        "max_output_tokens": 1024,
+        "model": "gemini-3.5-flash-lite",
+        "notes": "Latest Flash-Lite cost-focused model.",
+        "output_per_m": 2.5,
+        "pricing_notes": "Standard text/image input and output rates. Output includes thinking tokens; no caching or batch discount assumed.",
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "provider": "google",
+        "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite"
+      },
+      "model_config_fingerprint": "1a87916f5fd901358d0a3564408464c0392096bd2f7b7412b727f9a9751abfe9",
+      "max_output_tokens": 1024,
+      "provider": "google",
+      "model": "gemini-3.5-flash-lite",
+      "display_name": "Gemini 3.5 Flash-Lite",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 8.598008813957373e-06
+    },
+    "gemini-3.8-flash": {
+      "model_config": {
+        "api_key_env": "GEMINI_API_KEY",
+        "base_url": null,
+        "display_name": "Gemini 3.8 Flash",
+        "enabled": true,
+        "id": "gemini-3.8-flash",
+        "input_per_m": 0.75,
+        "max_output_tokens": 4096,
+        "model": "gemini-3.8-flash",
+        "notes": "Latest stable Flash; supports low, medium and high thinking, not minimal.",
+        "output_per_m": 3.75,
+        "pricing_notes": "Standard introductory rates through 2026-12-31. From 2027-01-01: $1.50 input / $7.50 output per million tokens. Output includes thinking tokens.",
+        "pricing_source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "provider": "google",
+        "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      "model_config_fingerprint": "7de720d7bc3a5dd06ed19c22ff2574e4c880b911ce7efdfc8a824db7afb0be77",
+      "max_output_tokens": 4096,
+      "provider": "google",
+      "model": "gemini-3.8-flash",
+      "display_name": "Gemini 3.8 Flash",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 9.581679478287697e-06
+    },
+    "gpt-5.6-luna": {
+      "model_config": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": null,
+        "display_name": "GPT-5.6 Luna",
+        "enabled": true,
+        "id": "gpt-5.6-luna",
+        "input_per_m": 0.2,
+        "max_output_tokens": 4096,
+        "model": "gpt-5.6-luna",
+        "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+        "output_per_m": 1.2,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://developers.openai.com/api/docs/models",
+        "provider": "openai",
+        "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
+      },
+      "model_config_fingerprint": "ba032b15a2527d5994d3971633f9b2f69ae89aed5cdbc739c70e747bf4acd2cd",
+      "max_output_tokens": 4096,
+      "provider": "openai",
+      "model": "gpt-5.6-luna",
+      "display_name": "GPT-5.6 Luna",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 1.2820043290654818e-05
+    },
+    "gpt-5.6-sol": {
+      "model_config": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": null,
+        "display_name": "GPT-5.6 Sol",
+        "enabled": true,
+        "id": "gpt-5.6-sol",
+        "input_per_m": 4.0,
+        "max_output_tokens": 4096,
+        "model": "gpt-5.6-sol",
+        "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+        "output_per_m": 20.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://developers.openai.com/api/docs/models",
+        "provider": "openai",
+        "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+      },
+      "model_config_fingerprint": "e9c56323e22fab739cc8759d763c0705a149bee0b28088ae08172377899983a3",
+      "max_output_tokens": 4096,
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "display_name": "GPT-5.6 Sol",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 8.946013016005358e-06
+    },
+    "gpt-5.6-terra": {
+      "model_config": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": null,
+        "display_name": "GPT-5.6 Terra",
+        "enabled": true,
+        "id": "gpt-5.6-terra",
+        "input_per_m": 2.0,
+        "max_output_tokens": 4096,
+        "model": "gpt-5.6-terra",
+        "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+        "output_per_m": 12.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://developers.openai.com/api/docs/models",
+        "provider": "openai",
+        "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+      },
+      "model_config_fingerprint": "c31dbe50cff3b0093ab5b1c1005c42ff65dbb381ff73eafe5cecac17441bcb51",
+      "max_output_tokens": 4096,
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "display_name": "GPT-5.6 Terra",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 8.209647300342718e-06
+    },
+    "gpt-6-astra": {
+      "model_config": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": null,
+        "display_name": "GPT-6 Astra",
+        "enabled": true,
+        "id": "gpt-6-astra",
+        "input_per_m": 10.0,
+        "max_output_tokens": 4096,
+        "model": "gpt-6-astra",
+        "notes": "Explicit public API model ID; uses model-default reasoning settings.",
+        "output_per_m": 50.0,
+        "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+        "pricing_source_url": "https://developers.openai.com/api/docs/models",
+        "provider": "openai",
+        "source_url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      "model_config_fingerprint": "70ce5d3852fae44d4189b37a379a61c6f34d59005fd8c127cad33a584c18cb3a",
+      "max_output_tokens": 4096,
+      "provider": "openai",
+      "model": "gpt-6-astra",
+      "display_name": "GPT-6 Astra",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 8.382640468577543e-06
+    },
+    "muse-spark-1.2": {
+      "model_config": {
+        "api_key_env": "MODEL_API_KEY",
+        "base_url": "https://api.meta.ai/v1",
+        "display_name": "Muse Spark 1.2",
+        "enabled": true,
+        "id": "muse-spark-1.2",
+        "input_per_m": 1.25,
+        "max_output_tokens": 16384,
+        "model": "muse-spark-1.2",
+        "notes": "Meta Muse Spark 1.2 Standard tier via the OpenAI-compatible Meta Model API Responses endpoint. Reasoning model; uses model-default reasoning settings. 16384 output cap matches 1.3 so both Muse configurations share identical inference settings. Same $1.25/$4.25 standard pricing as 1.3; prompts never train Meta models.",
+        "output_per_m": 4.25,
+        "pricing_notes": "Standard tier rates in USD per million tokens; cached input $0.15/M not assumed. Output includes reasoning tokens.",
+        "pricing_source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "provider": "openai",
+        "source_url": "https://dev.meta.ai/docs/models"
+      },
+      "model_config_fingerprint": "24aa8541bfef7a62fbb06d7bb882a0cb7acc8341dc8f956b52124454dddf4967",
+      "max_output_tokens": 16384,
+      "provider": "openai",
+      "model": "muse-spark-1.2",
+      "display_name": "Muse Spark 1.2",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 8.130019220213095e-06
+    },
+    "muse-spark-1.3": {
+      "model_config": {
+        "api_key_env": "MODEL_API_KEY",
+        "base_url": "https://api.meta.ai/v1",
+        "display_name": "Muse Spark 1.3",
+        "enabled": true,
+        "id": "muse-spark-1.3",
+        "input_per_m": 1.25,
+        "max_output_tokens": 16384,
+        "model": "muse-spark-1.3",
+        "notes": "Meta Muse Spark 1.3 Standard tier via the OpenAI-compatible Meta Model API Responses endpoint. Reasoning model at model-default high effort; uses model-default reasoning settings. 16384 output cap: the 4096-cap probe returned status incomplete with all 4096 tokens spent on reasoning, and live outputs reach ~6900 tokens, so 16384 keeps headroom above observed reasoning volume. Same $1.25/$4.25 standard pricing as 1.2; prompts never train Meta models.",
+        "output_per_m": 4.25,
+        "pricing_notes": "Standard tier rates in USD per million tokens; cached input $0.15/M not assumed. Output includes reasoning tokens.",
+        "pricing_source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "provider": "openai",
+        "source_url": "https://dev.meta.ai/docs/models"
+      },
+      "model_config_fingerprint": "d501fb0c8f92e13a48222500e057dda2fad8750852df8848583d413832d05bb5",
+      "max_output_tokens": 16384,
+      "provider": "openai",
+      "model": "muse-spark-1.3",
+      "display_name": "Muse Spark 1.3",
+      "completed": 3,
+      "attempted_tasks": 3,
+      "status": "partial",
+      "reason": null,
+      "cost_usd": 0.0,
+      "families": {
+        "matching": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "lightness": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "chroma": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "hue": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "binding": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {
+              "A": 1
+            },
+            "D": {}
+          }
+        },
+        "gradient": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "samediff": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.5,
+          "confusion": {
+            "A": {},
+            "B": {}
+          }
+        },
+        "context": {
+          "kind": "choice",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "correct_count": 0,
+          "accuracy": 0.0,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {
+              "A": 1
+            },
+            "C": {},
+            "D": {}
+          }
+        },
+        "smallmatch": {
+          "kind": "choice",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "correct_count": 0,
+          "accuracy": null,
+          "chance_accuracy": 0.25,
+          "confusion": {
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {}
+          }
+        },
+        "rgb": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "hsl": {
+          "kind": "numeric",
+          "count": 0,
+          "valid_count": 0,
+          "invalid_count": 0,
+          "validity_rate": null,
+          "mean_score": null,
+          "mean_tight_score": null,
+          "mean_delta_e_ok": null,
+          "median_delta_e_ok": null,
+          "p90_delta_e_ok": null,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {},
+          "component_known_count": {},
+          "band_hit_rate": {
+            "0.005": null,
+            "0.01": null,
+            "0.02": null,
+            "0.05": null
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        },
+        "oklch": {
+          "kind": "numeric",
+          "count": 1,
+          "valid_count": 1,
+          "invalid_count": 0,
+          "validity_rate": 1.0,
+          "mean_score": 36.03289951009994,
+          "mean_tight_score": 0.0,
+          "mean_delta_e_ok": 0.12793420097980013,
+          "median_delta_e_ok": 0.12793420097980013,
+          "p90_delta_e_ok": 0.12793420097980013,
+          "out_of_srgb_count": 0,
+          "mean_component_errors": {
+            "c": 0.10070530314174218,
+            "h": 159.03735052816387,
+            "l": 0.07890248221361418
+          },
+          "component_known_count": {
+            "c": 1,
+            "h": 1,
+            "l": 1
+          },
+          "band_hit_rate": {
+            "0.005": 0.0,
+            "0.01": 0.0,
+            "0.02": 0.0,
+            "0.05": 0.0
+          },
+          "rgb_within_2_lsb": null,
+          "rgb_within_5_lsb": null
+        }
+      },
+      "avg_latency_sec": 8.770691541333994e-06
+    }
+  },
+  "invocations": 1
+}

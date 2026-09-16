@@ -1,0 +1,75 @@
+{
+  "manifestSha256": "0271b7d47a79ec8988e2edd11c986555e135419695c51d682e1981aa093addc5",
+  "taskCount": 512,
+  "pngFiles": 456,
+  "findings": [],
+  "allDeclaredImageHashesVerified": true,
+  "onePatchCeilings": {
+    "samediff": {
+      "checks": 24,
+      "minimum": 0.5,
+      "maximum": 0.5
+    },
+    "lightness": {
+      "checks": 16,
+      "minimum": 0.625,
+      "maximum": 0.625
+    },
+    "chroma": {
+      "checks": 16,
+      "minimum": 0.625,
+      "maximum": 0.625
+    }
+  },
+  "gradientSets": [
+    {
+      "set": "gradient-01",
+      "referenceCount": 4,
+      "width": 240,
+      "endpointCeiling": 0.25,
+      "maxFixedColumnCeiling": 0.5,
+      "grayscaleIdentical": false
+    },
+    {
+      "set": "gradient-02",
+      "referenceCount": 4,
+      "width": 240,
+      "endpointCeiling": 0.25,
+      "maxFixedColumnCeiling": 0.5,
+      "grayscaleIdentical": false
+    },
+    {
+      "set": "gradient-03",
+      "referenceCount": 4,
+      "width": 240,
+      "endpointCeiling": 0.25,
+      "maxFixedColumnCeiling": 0.5,
+      "grayscaleIdentical": true
+    },
+    {
+      "set": "gradient-04",
+      "referenceCount": 4,
+      "width": 240,
+      "endpointCeiling": 0.25,
+      "maxFixedColumnCeiling": 0.5,
+      "grayscaleIdentical": true
+    }
+  ],
+  "interventions": {
+    "context": {
+      "matchedReferenceGroups": 16,
+      "renderedConditionsChecked": 80,
+      "original032ColorsPreserved": true,
+      "outsideInterventionPixelsIdentical": true,
+      "fullMaximumSmallRegionFootprintValidated": false
+    },
+    "smallmatch": {
+      "matchedReferenceGroups": 16,
+      "renderedConditionsChecked": 64,
+      "original032ColorsPreserved": true,
+      "outsideInterventionPixelsIdentical": true,
+      "fullMaximumSmallRegionFootprintValidated": true
+    }
+  },
+  "retained032ImagesPixelIdentical": 176
+}

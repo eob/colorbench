@@ -10,14 +10,13 @@ from pathlib import Path, PurePosixPath
 from PIL import Image, ImageDraw
 
 from baseline.color_math import rgb_to_oklch
+from baseline.direct_controls import COMPLETE_COUNTS, CONTROL_VERSION, check_direct_controls
 from baseline.evaluator import load_manifest
 from baseline.protocol import CHOICE_FAMILIES, FAMILIES, NUMERIC_FAMILIES, choice_labels
 
 FONT_SHA256 = "abdc775b21b1bc470d50c97e790d276f2054b7504e56e5bd3e64f48d68582322"
 VIEWPORT = {"width": 800, "height": 640, "deviceScaleFactor": 1}
-COMPLETE_FAMILY_COUNTS = {
-    "matching": 48, "binding": 48, "lightness": 16, "chroma": 16, "hue": 16, "gradient": 8,
-    "samediff": 16, "context": 16, "smallmatch": 16, "rgb": 16, "hsl": 16, "oklch": 16}
+COMPLETE_FAMILY_COUNTS = COMPLETE_COUNTS
 SWEEP_SEPARATIONS = {
     "matching": {"lightness": [0.08, 0.04, 0.02, 0.01], "chroma": [0.025, 0.012, 0.007, 0.004],
                  "hue": [35, 15, 8, 4]},
@@ -44,6 +43,10 @@ def check_crossing(items):
     for family, axes in SWEEP_SEPARATIONS.items():
         rows = by_family.get(family, [])
         if not rows:
+            continue
+        if family in PAIR_DIRECTIONS and all(row["design"].get("controlVersion") == CONTROL_VERSION for row in rows):
+            # Decoded chain graphs and whole-image single-patch bounds replace
+            # the historical fixed-center separation crossing.
             continue
         pair = family in PAIR_DIRECTIONS
         observed = {(row["design"].get("axis"), row["design"].get("intendedSeparation"),
@@ -90,12 +93,14 @@ def check_crossing(items):
             for row in contexts:
                 per_hue[row["design"].get("intendedHue")].append(row["groundTruth"]["choice"])
             for hue, choices in per_hue.items():
-                if sorted(choices) != ["A", "B", "C", "D"]:
+                repeats = 5 if all(row["design"].get("controlVersion") == CONTROL_VERSION for row in contexts) else 1
+                if sorted(choices) != sorted(list("ABCD") * repeats):
                     errors.append(f"context hue {hue} is not counterbalanced across positions")
     smalls = by_family.get("smallmatch", [])
     if smalls:
         cells = Counter((row["design"].get("layout"), row["groundTruth"]["choice"]) for row in smalls)
-        if {layout for layout, _ in cells} != {"dot", "frame"} or len(cells) != 8 or any(value != 2 for value in cells.values()):
+        repeats = 8 if all(row["design"].get("controlVersion") == CONTROL_VERSION for row in smalls) else 2
+        if {layout for layout, _ in cells} != {"dot", "frame"} or len(cells) != 8 or any(value != repeats for value in cells.values()):
             errors.append("smallmatch is not crossed across layout and position")
     return errors
 
@@ -307,21 +312,33 @@ def validate_dataset(manifest_path, *, require_complete=True):
         try:
             evidence[item["taskId"]] = _item(item, directory)
             images[item["imageSha256"]].append(item)
-            masks[(item["family"], item["design"].get("direction"), item["design"].get("layout"))].add(
+            masks[(item["family"], item["design"].get("direction"), item["design"].get("layout"),
+                   item["design"].get("condition"))].add(
                 evidence[item["taskId"]]["masked_hash"])
         except (OSError, ValueError, TypeError, KeyError, IndexError) as error:
             errors.append(f"{item['taskId']}: {error}")
     for copies in images.values():
-        if len(copies) > 1 and (len({item["groupId"] for item in copies}) != 1
-                              or any(item["family"] not in NUMERIC_FAMILIES for item in copies)
-                              or len({item["family"] for item in copies}) != len(copies)):
-            errors.append("Duplicate image outside an explicitly paired numeric-format group")
+        numeric_pair = (len({item["groupId"] for item in copies}) == 1
+                        and all(item["family"] in NUMERIC_FAMILIES for item in copies)
+                        and len({item["family"] for item in copies}) == len(copies))
+        mapping_pair = (len(copies) == 2 and all(item["family"] == "samediff"
+                        and item["design"].get("controlVersion") == CONTROL_VERSION for item in copies)
+                        and len({item["groupId"] for item in copies}) == 1
+                        and all(item["design"].get("mappingPairId") == item["groupId"] for item in copies)
+                        and len({item["imageFilename"] for item in copies}) == 1
+                        and {item["design"].get("direction") for item in copies} == {"sameA", "sameB"}
+                        and {item["groundTruth"]["choice"] for item in copies} == {"A", "B"})
+        if len(copies) > 1 and not (numeric_pair or mapping_pair):
+            errors.append("Duplicate image outside an explicitly paired numeric-format or response-mapping group")
     if any(len(hashes) != 1 for hashes in masks.values()):
         errors.append("Pixels outside stimulus regions vary within a family and direction; possible answer leakage")
+    controlled = any(row["design"].get("controlVersion") == CONTROL_VERSION for row in items)
+    if require_complete or controlled:
+        errors.extend(check_direct_controls(items, directory, require_complete=require_complete))
     if require_complete:
         counts = Counter(item["family"] for item in items)
         reference_crossed = any(row["design"].get("optionSetId") for row in items)
-        expected_counts = {**COMPLETE_FAMILY_COUNTS, **({"hue": 32} if reference_crossed else {})}
+        expected_counts = COMPLETE_FAMILY_COUNTS
         if counts != Counter(expected_counts):
             errors.append(f"Release requires its frozen per-family task counts ({sum(expected_counts.values())} total)")
         if reference_crossed:

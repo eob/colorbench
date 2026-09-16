@@ -1,0 +1,443 @@
+FFFFFFF.F                                                                [100%]
+=================================== FAILURES ===================================
+______________ test_context_pairs_keep_every_condition_and_model _______________
+
+report = {'release': '0.4.0', 'run_id': 'fixture', 'campaign': {}, 'results': [{'model_id': 'alpha', 'included_in_comparison': ...'task_id': 'lightness', 'family': 'lightness', 'group_id': 'shared', 'ground_truth': {'choice': 'A'}, ...}}, ...], ...}
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-300/test_context_pairs_keep_every_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f080da73850>
+
+    def test_context_pairs_keep_every_condition_and_model(report, tmp_path, monkeypatch):
+        result = analyze(report, tmp_path, monkeypatch)
+>       pairs = result["matched_condition_pairs"]["context"]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'matched_condition_pairs'
+
+tests/test_pilot_analysis.py:83: KeyError
+----------------------------- Captured stdout call -----------------------------
+{
+  "release": "0.4.0",
+  "run_id": "fixture",
+  "campaign": {},
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference. Matching/binding pairs share colors and formats sharing a target are correlated observations.",
+  "model_count": 2,
+  "question_count": 31,
+  "group_count": 11,
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 2,
+      "first_lower_error": 0,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 2,
+      "mean_first_minus_second_error": 0.0
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    }
+  }
+}
+matching {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+lightness {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+chroma {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+hue {"count": 4, "valid_count": 4, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+binding {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+gradient {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+samediff {"count": 8, "valid_count": 7, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+context {"count": 20, "valid_count": 20, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+smallmatch {"count": 8, "valid_count": 7, "accuracy": 0.375, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+rgb {"count": 8, "valid_count": 7, "accuracy": null, "mean_score": 85.53858553781579, "mean_tight_score": 79.65434215126317, "mean_delta_e_ok": 0.004483233056421043, "band_hit_rate": {"0.005": 0.5714285714285714, "0.01": 0.8571428571428571, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+hsl {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 100.0, "mean_tight_score": 100.0, "mean_delta_e_ok": 0.0, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+oklch {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 99.99998882020918, "mean_tight_score": 99.99995528083674, "mean_delta_e_ok": 2.2359581629199253e-08, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+____________ test_size_and_stroke_are_separate_paired_interventions ____________
+
+report = {'release': '0.4.0', 'run_id': 'fixture', 'campaign': {}, 'results': [{'model_id': 'alpha', 'included_in_comparison': ...'task_id': 'lightness', 'family': 'lightness', 'group_id': 'shared', 'ground_truth': {'choice': 'A'}, ...}}, ...], ...}
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-300/test_size_and_stroke_are_separ0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f080c524710>
+
+    def test_size_and_stroke_are_separate_paired_interventions(report, tmp_path, monkeypatch):
+>       pairs = analyze(report, tmp_path, monkeypatch)["matched_condition_pairs"]["smallmatch"]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'matched_condition_pairs'
+
+tests/test_pilot_analysis.py:95: KeyError
+----------------------------- Captured stdout call -----------------------------
+{
+  "release": "0.4.0",
+  "run_id": "fixture",
+  "campaign": {},
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference. Matching/binding pairs share colors and formats sharing a target are correlated observations.",
+  "model_count": 2,
+  "question_count": 31,
+  "group_count": 11,
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 2,
+      "first_lower_error": 0,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 2,
+      "mean_first_minus_second_error": 0.0
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    }
+  }
+}
+matching {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+lightness {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+chroma {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+hue {"count": 4, "valid_count": 4, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+binding {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+gradient {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+samediff {"count": 8, "valid_count": 7, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+context {"count": 20, "valid_count": 20, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+smallmatch {"count": 8, "valid_count": 7, "accuracy": 0.375, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+rgb {"count": 8, "valid_count": 7, "accuracy": null, "mean_score": 85.53858553781579, "mean_tight_score": 79.65434215126317, "mean_delta_e_ok": 0.004483233056421043, "band_hit_rate": {"0.005": 0.5714285714285714, "0.01": 0.8571428571428571, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+hsl {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 100.0, "mean_tight_score": 100.0, "mean_delta_e_ok": 0.0, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+oklch {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 99.99998882020918, "mean_tight_score": 99.99995528083674, "mean_delta_e_ok": 2.2359581629199253e-08, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+_________ test_missing_conditions_are_reported_without_inventing_pairs _________
+
+report = {'release': '0.4.0', 'run_id': 'fixture', 'campaign': {}, 'results': [{'model_id': 'alpha', 'included_in_comparison': ...'task_id': 'lightness', 'family': 'lightness', 'group_id': 'shared', 'ground_truth': {'choice': 'A'}, ...}}, ...], ...}
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-300/test_missing_conditions_are_re0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f080c892a90>
+
+    def test_missing_conditions_are_reported_without_inventing_pairs(report, tmp_path, monkeypatch):
+        task = "context-two-surround-0"
+        report["results"] = [entry for entry in report["results"] if entry["result"]["task_id"] != task]
+>       pair = analyze(report, tmp_path, monkeypatch)["matched_condition_pairs"]["context"]["neutral_vs_surround-0"]["pooled"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'matched_condition_pairs'
+
+tests/test_pilot_analysis.py:109: KeyError
+----------------------------- Captured stdout call -----------------------------
+{
+  "release": "0.4.0",
+  "run_id": "fixture",
+  "campaign": {},
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference. Matching/binding pairs share colors and formats sharing a target are correlated observations.",
+  "model_count": 2,
+  "question_count": 31,
+  "group_count": 11,
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 2,
+      "first_lower_error": 0,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 2,
+      "mean_first_minus_second_error": 0.0
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    }
+  }
+}
+matching {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+lightness {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+chroma {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+hue {"count": 4, "valid_count": 4, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+binding {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+gradient {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+samediff {"count": 8, "valid_count": 7, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+context {"count": 18, "valid_count": 18, "accuracy": 0.4444444444444444, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+smallmatch {"count": 8, "valid_count": 7, "accuracy": 0.375, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+rgb {"count": 8, "valid_count": 7, "accuracy": null, "mean_score": 85.53858553781579, "mean_tight_score": 79.65434215126317, "mean_delta_e_ok": 0.004483233056421043, "band_hit_rate": {"0.005": 0.5714285714285714, "0.01": 0.8571428571428571, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+hsl {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 100.0, "mean_tight_score": 100.0, "mean_delta_e_ok": 0.0, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+oklch {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 99.99998882020918, "mean_tight_score": 99.99995528083674, "mean_delta_e_ok": 2.2359581629199253e-08, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+______ test_duplicate_condition_never_silently_overwrites_an_observation _______
+
+report = {'release': '0.4.0', 'run_id': 'fixture', 'campaign': {}, 'results': [{'model_id': 'alpha', 'included_in_comparison': ...'task_id': 'lightness', 'family': 'lightness', 'group_id': 'shared', 'ground_truth': {'choice': 'A'}, ...}}, ...], ...}
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-300/test_duplicate_condition_never0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f080c513310>
+
+    def test_duplicate_condition_never_silently_overwrites_an_observation(report, tmp_path, monkeypatch):
+        duplicate = deepcopy(next(entry for entry in report["results"] if entry["result"]["task_id"] == "context-one-neutral"))
+        report["results"].append(duplicate)
+>       with pytest.raises(ValueError, match="Duplicate.*condition"):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_pilot_analysis.py:117: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "release": "0.4.0",
+  "run_id": "fixture",
+  "campaign": {},
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference. Matching/binding pairs share colors and formats sharing a target are correlated observations.",
+  "model_count": 2,
+  "question_count": 31,
+  "group_count": 11,
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 2,
+      "first_lower_error": 0,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 2,
+      "mean_first_minus_second_error": 0.0
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    }
+  }
+}
+matching {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+lightness {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+chroma {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+hue {"count": 4, "valid_count": 4, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+binding {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+gradient {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+samediff {"count": 8, "valid_count": 7, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+context {"count": 21, "valid_count": 21, "accuracy": 0.5238095238095238, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+smallmatch {"count": 8, "valid_count": 7, "accuracy": 0.375, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+rgb {"count": 8, "valid_count": 7, "accuracy": null, "mean_score": 85.53858553781579, "mean_tight_score": 79.65434215126317, "mean_delta_e_ok": 0.004483233056421043, "band_hit_rate": {"0.005": 0.5714285714285714, "0.01": 0.8571428571428571, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+hsl {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 100.0, "mean_tight_score": 100.0, "mean_delta_e_ok": 0.0, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+oklch {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 99.99998882020918, "mean_tight_score": 99.99995528083674, "mean_delta_e_ok": 2.2359581629199253e-08, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+____ test_same_different_mapping_consistency_uses_semantics_and_valid_pairs ____
+
+report = {'release': '0.4.0', 'run_id': 'fixture', 'campaign': {}, 'results': [{'model_id': 'alpha', 'included_in_comparison': ...'task_id': 'lightness', 'family': 'lightness', 'group_id': 'shared', 'ground_truth': {'choice': 'A'}, ...}}, ...], ...}
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-300/test_same_different_mapping_co0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f080c8f15d0>
+
+    def test_same_different_mapping_consistency_uses_semantics_and_valid_pairs(report, tmp_path, monkeypatch):
+>       result = analyze(report, tmp_path, monkeypatch)["same_different_mapping_pairs"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'same_different_mapping_pairs'
+
+tests/test_pilot_analysis.py:122: KeyError
+----------------------------- Captured stdout call -----------------------------
+{
+  "release": "0.4.0",
+  "run_id": "fixture",
+  "campaign": {},
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference. Matching/binding pairs share colors and formats sharing a target are correlated observations.",
+  "model_count": 2,
+  "question_count": 31,
+  "group_count": 11,
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 2,
+      "first_lower_error": 0,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 2,
+      "mean_first_minus_second_error": 0.0
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    }
+  }
+}
+matching {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+lightness {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+chroma {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+hue {"count": 4, "valid_count": 4, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+binding {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+gradient {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+samediff {"count": 8, "valid_count": 7, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+context {"count": 20, "valid_count": 20, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+smallmatch {"count": 8, "valid_count": 7, "accuracy": 0.375, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+rgb {"count": 8, "valid_count": 7, "accuracy": null, "mean_score": 85.53858553781579, "mean_tight_score": 79.65434215126317, "mean_delta_e_ok": 0.004483233056421043, "band_hit_rate": {"0.005": 0.5714285714285714, "0.01": 0.8571428571428571, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+hsl {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 100.0, "mean_tight_score": 100.0, "mean_delta_e_ok": 0.0, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+oklch {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 99.99998882020918, "mean_tight_score": 99.99995528083674, "mean_delta_e_ok": 2.2359581629199253e-08, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+_______________ test_hue_contexts_remain_separate_for_each_model _______________
+
+report = {'release': '0.4.0', 'run_id': 'fixture', 'campaign': {}, 'results': [{'model_id': 'alpha', 'included_in_comparison': ...'task_id': 'lightness', 'family': 'lightness', 'group_id': 'shared', 'ground_truth': {'choice': 'A'}, ...}}, ...], ...}
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-300/test_hue_contexts_remain_separ0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f080c56df10>
+
+    def test_hue_contexts_remain_separate_for_each_model(report, tmp_path, monkeypatch):
+>       contexts = analyze(report, tmp_path, monkeypatch)["hue_contexts"]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hue_contexts'
+
+tests/test_pilot_analysis.py:134: KeyError
+----------------------------- Captured stdout call -----------------------------
+{
+  "release": "0.4.0",
+  "run_id": "fixture",
+  "campaign": {},
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference. Matching/binding pairs share colors and formats sharing a target are correlated observations.",
+  "model_count": 2,
+  "question_count": 31,
+  "group_count": 11,
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 2,
+      "first_lower_error": 0,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 2,
+      "mean_first_minus_second_error": 0.0
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    }
+  }
+}
+matching {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+lightness {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+chroma {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+hue {"count": 4, "valid_count": 4, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+binding {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+gradient {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+samediff {"count": 8, "valid_count": 7, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+context {"count": 20, "valid_count": 20, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+smallmatch {"count": 8, "valid_count": 7, "accuracy": 0.375, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+rgb {"count": 8, "valid_count": 7, "accuracy": null, "mean_score": 85.53858553781579, "mean_tight_score": 79.65434215126317, "mean_delta_e_ok": 0.004483233056421043, "band_hit_rate": {"0.005": 0.5714285714285714, "0.01": 0.8571428571428571, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+hsl {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 100.0, "mean_tight_score": 100.0, "mean_delta_e_ok": 0.0, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+oklch {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 99.99998882020918, "mean_tight_score": 99.99995528083674, "mean_delta_e_ok": 2.2359581629199253e-08, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+_______ test_rgb_exact_and_tolerance_counts_retain_invalid_denominators ________
+
+report = {'release': '0.4.0', 'run_id': 'fixture', 'campaign': {}, 'results': [{'model_id': 'alpha', 'included_in_comparison': ...'task_id': 'lightness', 'family': 'lightness', 'group_id': 'shared', 'ground_truth': {'choice': 'A'}, ...}}, ...], ...}
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-300/test_rgb_exact_and_tolerance_c0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f080c531110>
+
+    def test_rgb_exact_and_tolerance_counts_retain_invalid_denominators(report, tmp_path, monkeypatch):
+>       result = analyze(report, tmp_path, monkeypatch)["rgb_reconstruction"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'rgb_reconstruction'
+
+tests/test_pilot_analysis.py:143: KeyError
+----------------------------- Captured stdout call -----------------------------
+{
+  "release": "0.4.0",
+  "run_id": "fixture",
+  "campaign": {},
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference. Matching/binding pairs share colors and formats sharing a target are correlated observations.",
+  "model_count": 2,
+  "question_count": 31,
+  "group_count": 11,
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 2,
+      "first_lower_error": 0,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 2,
+      "mean_first_minus_second_error": 0.0
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 2,
+      "first_lower_error": 2,
+      "second_lower_error": 0,
+      "ties_within_1e_minus_8": 0,
+      "mean_first_minus_second_error": -2.2359581629199253e-08
+    }
+  }
+}
+matching {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+lightness {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+chroma {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+hue {"count": 4, "valid_count": 4, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+binding {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+gradient {"count": 2, "valid_count": 2, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+samediff {"count": 8, "valid_count": 7, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+context {"count": 20, "valid_count": 20, "accuracy": 0.5, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+smallmatch {"count": 8, "valid_count": 7, "accuracy": 0.375, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+rgb {"count": 8, "valid_count": 7, "accuracy": null, "mean_score": 85.53858553781579, "mean_tight_score": 79.65434215126317, "mean_delta_e_ok": 0.004483233056421043, "band_hit_rate": {"0.005": 0.5714285714285714, "0.01": 0.8571428571428571, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+hsl {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 100.0, "mean_tight_score": 100.0, "mean_delta_e_ok": 0.0, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+oklch {"count": 2, "valid_count": 2, "accuracy": null, "mean_score": 99.99998882020918, "mean_tight_score": 99.99995528083674, "mean_delta_e_ok": 2.2359581629199253e-08, "band_hit_rate": {"0.005": 1.0, "0.01": 1.0, "0.02": 1.0, "0.05": 1.0}, "out_of_srgb_count": 0}
+________________ test_import_does_not_verify_or_write_a_report _________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f080dd75010>
+
+    def test_import_does_not_verify_or_write_a_report(monkeypatch):
+        monkeypatch.setattr("baseline.finalize.verify_finalization", lambda _: pytest.fail("Imported analysis executed a run"))
+>       runpy.run_path(str(SCRIPT))
+
+tests/test_pilot_analysis.py:161: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+<frozen runpy>:291: in run_path
+    ???
+<frozen runpy>:98: in _run_module_code
+    ???
+<frozen runpy>:88: in _run_code
+    ???
+scripts/analyze_pilot.py:11: in <module>
+    report = verify_finalization(sys.argv[1])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+_ = 'tests/test_pilot_analysis.py'
+
+>   monkeypatch.setattr("baseline.finalize.verify_finalization", lambda _: pytest.fail("Imported analysis executed a run"))
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: Imported analysis executed a run
+
+tests/test_pilot_analysis.py:160: Failed
+=========================== short test summary info ============================
+FAILED tests/test_pilot_analysis.py::test_context_pairs_keep_every_condition_and_model
+FAILED tests/test_pilot_analysis.py::test_size_and_stroke_are_separate_paired_interventions
+FAILED tests/test_pilot_analysis.py::test_missing_conditions_are_reported_without_inventing_pairs
+FAILED tests/test_pilot_analysis.py::test_duplicate_condition_never_silently_overwrites_an_observation
+FAILED tests/test_pilot_analysis.py::test_same_different_mapping_consistency_uses_semantics_and_valid_pairs
+FAILED tests/test_pilot_analysis.py::test_hue_contexts_remain_separate_for_each_model
+FAILED tests/test_pilot_analysis.py::test_rgb_exact_and_tolerance_counts_retain_invalid_denominators
+FAILED tests/test_pilot_analysis.py::test_import_does_not_verify_or_write_a_report
+8 failed, 1 passed in 0.24s

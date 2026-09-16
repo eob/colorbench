@@ -88,12 +88,12 @@ SAMEDIFF_SAME_B = (
 )
 CONTEXT_PROMPT = (
     "Which option, A, B, C, or D, has the same flat interior fill color as reference R? "
-    "Each option sits on a different surround color; compare the interiors only, not the surrounds, labels, or borders. "
+    "Compare the colored interiors; ignore the surrounding colors, labels, and borders. "
     'Return only a JSON object with one key, "choice", whose value is the selected option letter.'
 )
 SMALLMATCH_PROMPT = (
     "Which swatch, A, B, C, or D, has the same color as reference R? "
-    "The swatches are small; compare the colored regions, not labels or borders. "
+    "Compare the colored regions, including colored outlines; ignore labels and neutral surroundings. "
     'Return only a JSON object with one key, "choice", whose value is the selected option letter.'
 )
 

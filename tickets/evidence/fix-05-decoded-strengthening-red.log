@@ -1,0 +1,51 @@
+....................FFF                                                  [100%]
+=================================== FAILURES ===================================
+_ test_matching_gradient_endpoints_cannot_relocate_the_shortcut_to_one_interior_column _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-304/test_matching_gradient_endpoin0')
+
+    def test_matching_gradient_endpoints_cannot_relocate_the_shortcut_to_one_interior_column(tmp_path):
+        rows = gradients(tmp_path, unique_columns=True)
+>       assert any("single-column" in error for error in check(rows, tmp_path))
+E       assert False
+E        +  where False = any(<generator object test_matching_gradient_endpoints_cannot_relocate_the_shortcut_to_one_interior_column.<locals>.<genexpr> at 0x7fa0e90f7c60>)
+
+tests/test_direct_controls.py:224: AssertionError
+____ test_complete_gradients_require_two_declared_grayscale_matched_fields _____
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-304/test_complete_gradients_requir0')
+
+    def test_complete_gradients_require_two_declared_grayscale_matched_fields(tmp_path):
+        from baseline.direct_controls import check_direct_controls
+        rows = [row for field in range(4) for row in gradients(tmp_path, prefix=f"gradient-{field}")]
+        errors = check_direct_controls(rows, tmp_path)
+>       assert any("two grayscale-matched" in error for error in errors)
+E       assert False
+E        +  where False = any(<generator object test_complete_gradients_require_two_declared_grayscale_matched_fields.<locals>.<genexpr> at 0x7fa0e75b9cb0>)
+
+tests/test_direct_controls.py:231: AssertionError
+___ test_small_fill_cannot_hide_an_uncontrolled_halo_inside_the_larger_mask ____
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-304/test_small_fill_cannot_hide_an0')
+
+    def test_small_fill_cannot_hide_an_uncontrolled_halo_inside_the_larger_mask(tmp_path):
+        rows = interventions(tmp_path, "smallmatch")
+        assert check(rows, tmp_path) == []
+        # Inside the84px comparison union, outside the actual20px fill.
+        change_pixel(tmp_path, rows[0], (370, 152))
+>       assert any("fill or stroke" in error for error in check(rows, tmp_path))
+E       assert False
+E        +  where False = any(<generator object test_small_fill_cannot_hide_an_uncontrolled_halo_inside_the_larger_mask.<locals>.<genexpr> at 0x7fa0e7498450>)
+
+tests/test_direct_controls.py:239: AssertionError
+=============================== warnings summary ===============================
+tests/test_direct_controls.py: 210 warnings
+  /mnt/disks/data/colorbench/baseline/direct_controls.py:161: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+    histograms = [Counter(strip.getdata()) for strip in strips]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_direct_controls.py::test_matching_gradient_endpoints_cannot_relocate_the_shortcut_to_one_interior_column
+FAILED tests/test_direct_controls.py::test_complete_gradients_require_two_declared_grayscale_matched_fields
+FAILED tests/test_direct_controls.py::test_small_fill_cannot_hide_an_uncontrolled_halo_inside_the_larger_mask
+3 failed, 20 passed, 210 warnings in 4.99s

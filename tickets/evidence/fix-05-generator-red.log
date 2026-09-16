@@ -1,0 +1,106 @@
+bun test v1.3.14 (0d9b296a)
+
+src/direct-controls.test.ts:
+24 |   return correct / rows.length;
+25 | }
+26 | 
+27 | describe("direct-color controls for 0.4.0", () => {
+28 |   test("declares every controlled task and only explicit shared-image variants", () => {
+29 |     expect(SPECIMENS).toHaveLength(512);
+                           ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 512
+Received length: 264
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/direct-controls.test.ts:29:23)
+(fail) direct-color controls for 0.4.0 > declares every controlled task and only explicit shared-image variants [0.28ms]
+32 |   });
+33 | 
+34 |   test("same-different crosses both endpoint identities, orientation, and mapping", () => {
+35 |     const rows = SPECIMENS.filter((row) => row.family === "samediff");
+36 |     const pairs = grouped(rows, (row) => row.design.pairSetId);
+37 |     expect(pairs).toHaveLength(6);
+                       ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 6
+Received length: 1
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/direct-controls.test.ts:37:19)
+(fail) direct-color controls for 0.4.0 > same-different crosses both endpoint identities, orientation, and mapping [0.72ms]
+60 | 
+61 |   for (const family of ["lightness", "chroma"] as const) {
+62 |     test(`${family} reuses interior endpoints and bounds either single-patch predictor`, () => {
+63 |       const rows = SPECIMENS.filter((row) => row.family === family);
+64 |       const chains = grouped(rows, (row) => row.design.comparisonSetId);
+65 |       expect(rows).toHaveLength(64);
+                        ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 64
+Received length: 16
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/direct-controls.test.ts:65:20)
+(fail) direct-color controls for 0.4.0 > lightness reuses interior endpoints and bounds either single-patch predictor [0.36ms]
+60 | 
+61 |   for (const family of ["lightness", "chroma"] as const) {
+62 |     test(`${family} reuses interior endpoints and bounds either single-patch predictor`, () => {
+63 |       const rows = SPECIMENS.filter((row) => row.family === family);
+64 |       const chains = grouped(rows, (row) => row.design.comparisonSetId);
+65 |       expect(rows).toHaveLength(64);
+                        ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 64
+Received length: 16
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/direct-controls.test.ts:65:20)
+(fail) direct-color controls for 0.4.0 > chroma reuses interior endpoints and bounds either single-patch predictor [0.07ms]
+84 |     });
+85 |   }
+86 | 
+87 |   test("gradient endpoints and histograms cannot identify the matching progression", () => {
+88 |     const sets = grouped(SPECIMENS.filter((row) => row.family === "gradient"), (row) => row.design.optionSetId);
+89 |     expect(sets).toHaveLength(4);
+                      ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 4
+Received length: 2
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/direct-controls.test.ts:89:18)
+(fail) direct-color controls for 0.4.0 > gradient endpoints and histograms cannot identify the matching progression [0.25ms]
+ 98 |     }
+ 99 |   });
+100 | 
+101 |   test("context interventions hold task colors fixed and cross all surround positions", () => {
+102 |     const rows = SPECIMENS.filter((row) => row.family === "context");
+103 |     expect(rows).toHaveLength(80);
+                       ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 80
+Received length: 16
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/direct-controls.test.ts:103:18)
+(fail) direct-color controls for 0.4.0 > context interventions hold task colors fixed and cross all surround positions [0.21ms]
+118 |     }
+119 |   });
+120 | 
+121 |   test("small-region interventions hold each palette and answer fixed across all geometries", () => {
+122 |     const rows = SPECIMENS.filter((row) => row.family === "smallmatch");
+123 |     expect(rows).toHaveLength(64);
+                       ^
+error: expect(received).toHaveLength(expected)
+
+Expected length: 64
+Received length: 16
+
+      at <anonymous> (/mnt/disks/data/colorbench/src/direct-controls.test.ts:123:18)
+(fail) direct-color controls for 0.4.0 > small-region interventions hold each palette and answer fixed across all geometries [0.20ms]
+
+ 0 pass
+ 7 fail
+ 7 expect() calls
+Ran 7 tests across 1 file. [21.00ms]

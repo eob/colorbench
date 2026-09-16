@@ -1,0 +1,40 @@
+bun test v1.3.14 (0d9b296a)
+
+../../../../tmp/colorbench-render-ci-timeout/matched-render.test.ts:
+65 |     timeout: 4000,
+66 |   });
+67 |   const [output, error, exitCode] = await Promise.all([
+68 |     new Response(probe.stdout).text(), new Response(probe.stderr).text(), probe.exited,
+69 |   ]);
+70 |   expect(exitCode, error).toBe(0);
+                               ^
+error: 2026-09-16T14:11:05.586Z pw:api => browserType.launch started
+2026-09-16T14:11:05.591Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-iRN7UL --remote-debugging-pipe --no-startup-window
+2026-09-16T14:11:05.595Z pw:browser <launched> pid=4089101
+2026-09-16T14:11:05.633Z pw:browser [pid=4089101][err] [0916/141105.632835:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:11:05.634Z pw:browser [pid=4089101][err] [0916/141105.634235:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:11:05.636Z pw:api <= browserType.launch succeeded
+2026-09-16T14:11:08.101Z pw:browser [pid=4089101] <gracefully close start>
+2026-09-16T14:11:08.114Z pw:browser [pid=4089101] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:11:08.114Z pw:browser [pid=4089101] starting temporary directories cleanup
+2026-09-16T14:11:08.119Z pw:browser [pid=4089101] finished temporary directories cleanup
+2026-09-16T14:11:08.119Z pw:browser [pid=4089101] <gracefully close end>
+Warning: Detected unsettled top-level await at file:///tmp/colorbench-render-ci-timeout/[eval1]:7
+    await new Promise(() => {});
+    ^
+
+
+
+
+
+Expected: 0
+Received: 13
+
+      at <anonymous> (/tmp/colorbench-render-ci-timeout/matched-render.test.ts:70:27)
+(fail) outline width changes only the colored stroke at fixed outer dimensions [4161.86ms]
+
+ 0 pass
+ 3 filtered out
+ 1 fail
+ 2 expect() calls
+Ran 1 test across 1 file. [3.27s]

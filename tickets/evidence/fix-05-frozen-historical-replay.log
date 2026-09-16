@@ -1,0 +1,11 @@
+Historical compatible source: 8fc558433146066b8e1ed9b44303689b2433478d
+Isolated local clone: /tmp/colorbench-fix05-historical-032-25nss5tc
+Command: local shared clone, detached pin, verify_finalization + byte-identical compact export
+Cloning into '/tmp/colorbench-fix05-historical-032-25nss5tc'...
+done.
+HEAD is now at 8fc5584 docs: report corrected ColorBench results and completed publication review
+Verifier source: /tmp/colorbench-fix05-historical-032-25nss5tc/baseline/finalize.py
+PASS: 13 models, 264 tasks, 3432 raw response grades and seal replay
+PASS: compact publication export reproduces byte-identically
+final_results.json 7d373266ef76a5aa93879dc2faf869ceca9a413d4ed3bb21610f0de1bb66d924
+finalization.json 9666967f1d94e102dcae481d25309801fba24eb2c8491cfd173c3148987825fa

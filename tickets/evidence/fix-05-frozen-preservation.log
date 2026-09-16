@@ -1,0 +1,25 @@
+Comparison base: a91acaa8ac248136e7278531ff844993d6974cec
+Command: check_frozen_artifacts(base), then git diff --exit-code base -- protected paths (includes working tree)
+PASS: 22 frozen dataset/publication paths unchanged
+dataset/colorbench-1
+dataset/rendered
+releases/0.2.0.json
+dataset/colorbench-v0.2
+releases/0.3.0.json
+dataset/colorbench-v0.3
+releases/0.3.1.json
+dataset/colorbench-v0.3.1
+releases/0.3.2.json
+dataset/colorbench-v0.3.2
+results/colorbench-pilot-0.2.0-analysis.json
+results/colorbench-pilot-0.2.0.json
+results/colorbench-pilot-0.3.1-analysis.json
+results/colorbench-pilot-0.3.1-audit.json
+results/colorbench-pilot-0.3.1.json
+results/colorbench-pilot-0.3.2-analysis.json
+results/colorbench-pilot-0.3.2-audit.json
+results/colorbench-pilot-0.3.2.json
+results/colorbench_summary.json
+results/runs/0.2.0/pilot-20260913
+results/runs/0.3.1/pilot-20260913
+results/runs/0.3.2/pilot-20260914

@@ -34,10 +34,10 @@ export const PROMPTS: Record<string, string> = {
     'Do patches A and B have exactly the same flat fill color? Answer "B" for same and "A" for different. Compare the colored interiors, not labels or borders.' +
     choice,
   context:
-    "Which option, A, B, C, or D, has the same flat interior fill color as reference R? Each option sits on a different surround color; compare the interiors only, not the surrounds, labels, or borders." +
+    "Which option, A, B, C, or D, has the same flat interior fill color as reference R? Compare the colored interiors; ignore the surrounding colors, labels, and borders." +
     choice,
   smallmatch:
-    "Which swatch, A, B, C, or D, has the same color as reference R? The swatches are small; compare the colored regions, not labels or borders." +
+    "Which swatch, A, B, C, or D, has the same color as reference R? Compare the colored regions, including colored outlines; ignore labels and neutral surroundings." +
     choice,
   rgb: 'Estimate the flat interior color of R as gamma-encoded sRGB. Return only JSON with keys "r", "g", and "b", each a JSON integer from 0 to 255 (no decimal fractions). Do not report alpha or hex. The target is opaque; estimate its visible fill, not its surroundings.',
   hsl: 'Estimate the flat interior color of R in HSL derived from gamma-encoded sRGB. Return only JSON with numeric keys "h" (hue in degrees, 0 inclusive to 360 exclusive), "s" (saturation percent, 0–100), and "l" (lightness percent, 0–100). Use h=0 for an achromatic gray. The target is opaque; estimate its visible fill, not its surroundings.',

@@ -1,0 +1,1069 @@
+bun test v1.3.14 (0d9b296a)
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #1)
+2026-09-16T14:04:29.695Z pw:api => launch started
+2026-09-16T14:04:29.701Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-nlbmYS --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:29.704Z pw:browser <launched> pid=4072391
+2026-09-16T14:04:29.743Z pw:browser [pid=4072391][err] [0916/140429.742771:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:29.744Z pw:browser [pid=4072391][err] [0916/140429.744140:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:29.745Z pw:api <= launch succeeded
+2026-09-16T14:04:29.746Z pw:api => newPage started
+2026-09-16T14:04:29.816Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567469816}
+2026-09-16T14:04:29.817Z pw:api => setContent started
+2026-09-16T14:04:29.818Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:29.857Z pw:browser [pid=4072391][err] [0916/140429.857244:INFO:CONSOLE:3] "--playwright--set--content--182a537e880f7154dddbf5affa647d39--", source:  (3)
+2026-09-16T14:04:29.908Z pw:api <= setContent succeeded
+2026-09-16T14:04:29.908Z pw:api => evaluate started
+2026-09-16T14:04:29.912Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567469877},{"event":"load","time":1789567469908}]}
+{"phase":"setContent","width":12,"time":1789567469913}
+2026-09-16T14:04:29.913Z pw:api => setContent started
+2026-09-16T14:04:29.913Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:29.949Z pw:browser [pid=4072391][err] [0916/140429.948910:INFO:CONSOLE:3] "--playwright--set--content--26b0127ba6f3ead710e242d02c23eecc--", source:  (3)
+2026-09-16T14:04:29.961Z pw:api <= setContent succeeded
+2026-09-16T14:04:29.961Z pw:api => evaluate started
+2026-09-16T14:04:29.962Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loading","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567469877},{"event":"load","time":1789567469908},{"event":"domcontentloaded","time":1789567469960},{"event":"load","time":1789567469960}]}
+2026-09-16T14:04:29.963Z pw:api => close started
+2026-09-16T14:04:29.963Z pw:browser [pid=4072391] <gracefully close start>
+2026-09-16T14:04:29.991Z pw:browser [pid=4072391] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:29.991Z pw:browser [pid=4072391] starting temporary directories cleanup
+2026-09-16T14:04:29.992Z pw:browser [pid=4072391] finished temporary directories cleanup
+2026-09-16T14:04:29.992Z pw:browser [pid=4072391] <gracefully close end>
+2026-09-16T14:04:29.992Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [426.39ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #2)
+2026-09-16T14:04:29.994Z pw:api => launch started
+2026-09-16T14:04:29.995Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-XHXnDX --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:29.996Z pw:browser <launched> pid=4072475
+2026-09-16T14:04:30.036Z pw:browser [pid=4072475][err] [0916/140430.035571:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:30.037Z pw:browser [pid=4072475][err] [0916/140430.037187:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:30.040Z pw:api <= launch succeeded
+2026-09-16T14:04:30.040Z pw:api => newPage started
+2026-09-16T14:04:30.089Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567470089}
+2026-09-16T14:04:30.089Z pw:api => setContent started
+2026-09-16T14:04:30.090Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:30.128Z pw:browser [pid=4072475][err] [0916/140430.128104:INFO:CONSOLE:3] "--playwright--set--content--ebf8affbffa012b8e3e78199ce46b12f--", source:  (3)
+2026-09-16T14:04:30.178Z pw:api <= setContent succeeded
+2026-09-16T14:04:30.178Z pw:api => evaluate started
+2026-09-16T14:04:30.180Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567470146},{"event":"load","time":1789567470178}]}
+{"phase":"setContent","width":12,"time":1789567470180}
+2026-09-16T14:04:30.181Z pw:api => setContent started
+2026-09-16T14:04:30.181Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:30.221Z pw:browser [pid=4072475][err] [0916/140430.220766:INFO:CONSOLE:3] "--playwright--set--content--43f4c5a84f3af84c32826182ede96214--", source:  (3)
+2026-09-16T14:04:30.233Z pw:api <= setContent succeeded
+2026-09-16T14:04:30.234Z pw:api => evaluate started
+2026-09-16T14:04:30.235Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567470146},{"event":"load","time":1789567470178},{"event":"domcontentloaded","time":1789567470231},{"event":"load","time":1789567470233}]}
+2026-09-16T14:04:30.235Z pw:api => close started
+2026-09-16T14:04:30.235Z pw:browser [pid=4072475] <gracefully close start>
+2026-09-16T14:04:30.262Z pw:browser [pid=4072475] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:30.263Z pw:browser [pid=4072475] starting temporary directories cleanup
+2026-09-16T14:04:30.263Z pw:browser [pid=4072475] finished temporary directories cleanup
+2026-09-16T14:04:30.263Z pw:browser [pid=4072475] <gracefully close end>
+2026-09-16T14:04:30.263Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [382.53ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #3)
+2026-09-16T14:04:30.266Z pw:api => launch started
+2026-09-16T14:04:30.266Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-VeBJpG --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:30.267Z pw:browser <launched> pid=4072550
+2026-09-16T14:04:30.306Z pw:browser [pid=4072550][err] [0916/140430.306045:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:30.307Z pw:api <= launch succeeded
+2026-09-16T14:04:30.308Z pw:api => newPage started
+2026-09-16T14:04:30.308Z pw:browser [pid=4072550][err] [0916/140430.307351:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:30.375Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567470375}
+2026-09-16T14:04:30.375Z pw:api => setContent started
+2026-09-16T14:04:30.375Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:30.416Z pw:browser [pid=4072550][err] [0916/140430.415957:INFO:CONSOLE:3] "--playwright--set--content--1a6ead3788e8a5a789cd9ec24fc1cd93--", source:  (3)
+2026-09-16T14:04:30.470Z pw:api <= setContent succeeded
+2026-09-16T14:04:30.470Z pw:api => evaluate started
+2026-09-16T14:04:30.474Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567470434},{"event":"load","time":1789567470469}]}
+{"phase":"setContent","width":12,"time":1789567470474}
+2026-09-16T14:04:30.475Z pw:api => setContent started
+2026-09-16T14:04:30.475Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:30.510Z pw:browser [pid=4072550][err] [0916/140430.510021:INFO:CONSOLE:3] "--playwright--set--content--e7bd4155796b698a71063e29838f5393--", source:  (3)
+2026-09-16T14:04:30.523Z pw:api <= setContent succeeded
+2026-09-16T14:04:30.523Z pw:api => evaluate started
+2026-09-16T14:04:30.525Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567470434},{"event":"load","time":1789567470469},{"event":"domcontentloaded","time":1789567470521},{"event":"load","time":1789567470523}]}
+2026-09-16T14:04:30.525Z pw:api => close started
+2026-09-16T14:04:30.525Z pw:browser [pid=4072550] <gracefully close start>
+2026-09-16T14:04:30.537Z pw:browser [pid=4072550] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:30.537Z pw:browser [pid=4072550] starting temporary directories cleanup
+2026-09-16T14:04:30.537Z pw:browser [pid=4072550] finished temporary directories cleanup
+2026-09-16T14:04:30.537Z pw:browser [pid=4072550] <gracefully close end>
+2026-09-16T14:04:30.538Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [386.63ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #4)
+2026-09-16T14:04:30.540Z pw:api => launch started
+2026-09-16T14:04:30.540Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-eOmOmf --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:30.541Z pw:browser <launched> pid=4072629
+2026-09-16T14:04:30.580Z pw:browser [pid=4072629][err] [0916/140430.579845:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:30.581Z pw:browser [pid=4072629][err] [0916/140430.581185:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:30.581Z pw:api <= launch succeeded
+2026-09-16T14:04:30.581Z pw:api => newPage started
+2026-09-16T14:04:30.614Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567470614}
+2026-09-16T14:04:30.615Z pw:api => setContent started
+2026-09-16T14:04:30.616Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:30.654Z pw:browser [pid=4072629][err] [0916/140430.653992:INFO:CONSOLE:3] "--playwright--set--content--549ef3c4bce01ded25786ee0a0e1ecf5--", source:  (3)
+2026-09-16T14:04:30.703Z pw:api <= setContent succeeded
+2026-09-16T14:04:30.703Z pw:api => evaluate started
+2026-09-16T14:04:30.706Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567470672},{"event":"load","time":1789567470703}]}
+{"phase":"setContent","width":12,"time":1789567470706}
+2026-09-16T14:04:30.706Z pw:api => setContent started
+2026-09-16T14:04:30.706Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:30.746Z pw:browser [pid=4072629][err] [0916/140430.746416:INFO:CONSOLE:3] "--playwright--set--content--e2b914bfec0a835e20c66b44eacfed55--", source:  (3)
+2026-09-16T14:04:30.759Z pw:api <= setContent succeeded
+2026-09-16T14:04:30.760Z pw:api => evaluate started
+2026-09-16T14:04:30.761Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567470672},{"event":"load","time":1789567470703},{"event":"domcontentloaded","time":1789567470757},{"event":"load","time":1789567470759}]}
+2026-09-16T14:04:30.761Z pw:api => close started
+2026-09-16T14:04:30.761Z pw:browser [pid=4072629] <gracefully close start>
+2026-09-16T14:04:30.786Z pw:browser [pid=4072629] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:30.787Z pw:browser [pid=4072629] starting temporary directories cleanup
+2026-09-16T14:04:30.787Z pw:browser [pid=4072629] finished temporary directories cleanup
+2026-09-16T14:04:30.787Z pw:browser [pid=4072629] <gracefully close end>
+2026-09-16T14:04:30.787Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [352.18ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #5)
+2026-09-16T14:04:30.790Z pw:api => launch started
+2026-09-16T14:04:30.790Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-fXVny6 --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:30.791Z pw:browser <launched> pid=4072706
+2026-09-16T14:04:30.830Z pw:browser [pid=4072706][err] [0916/140430.829927:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:30.831Z pw:api <= launch succeeded
+2026-09-16T14:04:30.831Z pw:api => newPage started
+2026-09-16T14:04:30.831Z pw:browser [pid=4072706][err] [0916/140430.831272:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:30.887Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567470887}
+2026-09-16T14:04:30.888Z pw:api => setContent started
+2026-09-16T14:04:30.888Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:30.931Z pw:browser [pid=4072706][err] [0916/140430.931724:INFO:CONSOLE:3] "--playwright--set--content--e2a2e00f63affdccde0bd6f7b72aa92a--", source:  (3)
+2026-09-16T14:04:30.984Z pw:api <= setContent succeeded
+2026-09-16T14:04:30.984Z pw:api => evaluate started
+2026-09-16T14:04:30.987Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567470950},{"event":"load","time":1789567470984}]}
+{"phase":"setContent","width":12,"time":1789567470987}
+2026-09-16T14:04:30.987Z pw:api => setContent started
+2026-09-16T14:04:30.987Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:31.024Z pw:browser [pid=4072706][err] [0916/140431.024558:INFO:CONSOLE:3] "--playwright--set--content--e8d324d34f4965d3a84c7446b34026fa--", source:  (3)
+2026-09-16T14:04:31.038Z pw:api <= setContent succeeded
+2026-09-16T14:04:31.038Z pw:api => evaluate started
+2026-09-16T14:04:31.039Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567470950},{"event":"load","time":1789567470984},{"event":"domcontentloaded","time":1789567471035},{"event":"load","time":1789567471038}]}
+2026-09-16T14:04:31.039Z pw:api => close started
+2026-09-16T14:04:31.039Z pw:browser [pid=4072706] <gracefully close start>
+2026-09-16T14:04:31.067Z pw:browser [pid=4072706] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:31.067Z pw:browser [pid=4072706] starting temporary directories cleanup
+2026-09-16T14:04:31.067Z pw:browser [pid=4072706] finished temporary directories cleanup
+2026-09-16T14:04:31.067Z pw:browser [pid=4072706] <gracefully close end>
+2026-09-16T14:04:31.067Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [395.29ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #6)
+2026-09-16T14:04:31.070Z pw:api => launch started
+2026-09-16T14:04:31.070Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-AaOmCK --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:31.071Z pw:browser <launched> pid=4072802
+2026-09-16T14:04:31.110Z pw:browser [pid=4072802][err] [0916/140431.110576:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:31.112Z pw:browser [pid=4072802][err] [0916/140431.111976:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:31.112Z pw:api <= launch succeeded
+2026-09-16T14:04:31.113Z pw:api => newPage started
+2026-09-16T14:04:31.161Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567471161}
+2026-09-16T14:04:31.161Z pw:api => setContent started
+2026-09-16T14:04:31.162Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:31.198Z pw:browser [pid=4072802][err] [0916/140431.198617:INFO:CONSOLE:3] "--playwright--set--content--c62bc91d7da5e89fc9c9c33f60eeb5fb--", source:  (3)
+2026-09-16T14:04:31.247Z pw:api <= setContent succeeded
+2026-09-16T14:04:31.247Z pw:api => evaluate started
+2026-09-16T14:04:31.250Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567471217},{"event":"load","time":1789567471247}]}
+{"phase":"setContent","width":12,"time":1789567471250}
+2026-09-16T14:04:31.250Z pw:api => setContent started
+2026-09-16T14:04:31.250Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:31.288Z pw:browser [pid=4072802][err] [0916/140431.288551:INFO:CONSOLE:3] "--playwright--set--content--f34ac2a76235fd02cafceb188e86f7cc--", source:  (3)
+2026-09-16T14:04:31.301Z pw:api <= setContent succeeded
+2026-09-16T14:04:31.302Z pw:api => evaluate started
+2026-09-16T14:04:31.303Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567471217},{"event":"load","time":1789567471247},{"event":"domcontentloaded","time":1789567471299},{"event":"load","time":1789567471301}]}
+2026-09-16T14:04:31.303Z pw:api => close started
+2026-09-16T14:04:31.303Z pw:browser [pid=4072802] <gracefully close start>
+2026-09-16T14:04:31.331Z pw:browser [pid=4072802] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:31.331Z pw:browser [pid=4072802] starting temporary directories cleanup
+2026-09-16T14:04:31.332Z pw:browser [pid=4072802] finished temporary directories cleanup
+2026-09-16T14:04:31.332Z pw:browser [pid=4072802] <gracefully close end>
+2026-09-16T14:04:31.332Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [372.65ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #7)
+2026-09-16T14:04:31.334Z pw:api => launch started
+2026-09-16T14:04:31.335Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-WA5FcW --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:31.336Z pw:browser <launched> pid=4072878
+2026-09-16T14:04:31.376Z pw:browser [pid=4072878][err] [0916/140431.375800:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:31.376Z pw:api <= launch succeeded
+2026-09-16T14:04:31.377Z pw:api => newPage started
+2026-09-16T14:04:31.377Z pw:browser [pid=4072878][err] [0916/140431.377165:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:31.434Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567471434}
+2026-09-16T14:04:31.435Z pw:api => setContent started
+2026-09-16T14:04:31.435Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:31.473Z pw:browser [pid=4072878][err] [0916/140431.472813:INFO:CONSOLE:3] "--playwright--set--content--9d584070b2c8ecb521a8fa9d371dbf39--", source:  (3)
+2026-09-16T14:04:31.523Z pw:api <= setContent succeeded
+2026-09-16T14:04:31.523Z pw:api => evaluate started
+2026-09-16T14:04:31.525Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567471491},{"event":"load","time":1789567471523}]}
+{"phase":"setContent","width":12,"time":1789567471526}
+2026-09-16T14:04:31.526Z pw:api => setContent started
+2026-09-16T14:04:31.526Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:31.563Z pw:browser [pid=4072878][err] [0916/140431.563018:INFO:CONSOLE:3] "--playwright--set--content--f5886e603a0853c862f73886adb28d22--", source:  (3)
+2026-09-16T14:04:31.576Z pw:api <= setContent succeeded
+2026-09-16T14:04:31.576Z pw:api => evaluate started
+2026-09-16T14:04:31.577Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567471491},{"event":"load","time":1789567471523},{"event":"domcontentloaded","time":1789567471574},{"event":"load","time":1789567471576}]}
+2026-09-16T14:04:31.577Z pw:api => close started
+2026-09-16T14:04:31.577Z pw:browser [pid=4072878] <gracefully close start>
+2026-09-16T14:04:31.602Z pw:browser [pid=4072878] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:31.602Z pw:browser [pid=4072878] starting temporary directories cleanup
+2026-09-16T14:04:31.603Z pw:browser [pid=4072878] finished temporary directories cleanup
+2026-09-16T14:04:31.603Z pw:browser [pid=4072878] <gracefully close end>
+2026-09-16T14:04:31.603Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [382.42ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #8)
+2026-09-16T14:04:31.606Z pw:api => launch started
+2026-09-16T14:04:31.606Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-B0x8zM --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:31.607Z pw:browser <launched> pid=4072952
+2026-09-16T14:04:31.646Z pw:browser [pid=4072952][err] [0916/140431.646214:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:31.647Z pw:api <= launch succeeded
+2026-09-16T14:04:31.647Z pw:api => newPage started
+2026-09-16T14:04:31.647Z pw:browser [pid=4072952][err] [0916/140431.647566:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:31.702Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567471702}
+2026-09-16T14:04:31.703Z pw:api => setContent started
+2026-09-16T14:04:31.703Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:31.741Z pw:browser [pid=4072952][err] [0916/140431.741084:INFO:CONSOLE:3] "--playwright--set--content--ed492c33ccc0857801c567d35825cd49--", source:  (3)
+2026-09-16T14:04:31.794Z pw:api <= setContent succeeded
+2026-09-16T14:04:31.794Z pw:api => evaluate started
+2026-09-16T14:04:31.796Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567471762},{"event":"load","time":1789567471794}]}
+{"phase":"setContent","width":12,"time":1789567471796}
+2026-09-16T14:04:31.797Z pw:api => setContent started
+2026-09-16T14:04:31.797Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:31.834Z pw:browser [pid=4072952][err] [0916/140431.833870:INFO:CONSOLE:3] "--playwright--set--content--b25bd7e9f4a40e9a23c2588139987b32--", source:  (3)
+2026-09-16T14:04:31.847Z pw:api <= setContent succeeded
+2026-09-16T14:04:31.847Z pw:api => evaluate started
+2026-09-16T14:04:31.848Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567471762},{"event":"load","time":1789567471794},{"event":"domcontentloaded","time":1789567471844},{"event":"load","time":1789567471847}]}
+2026-09-16T14:04:31.849Z pw:api => close started
+2026-09-16T14:04:31.849Z pw:browser [pid=4072952] <gracefully close start>
+2026-09-16T14:04:31.874Z pw:browser [pid=4072952] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:31.875Z pw:browser [pid=4072952] starting temporary directories cleanup
+2026-09-16T14:04:31.875Z pw:browser [pid=4072952] finished temporary directories cleanup
+2026-09-16T14:04:31.875Z pw:browser [pid=4072952] <gracefully close end>
+2026-09-16T14:04:31.875Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [383.80ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #9)
+2026-09-16T14:04:31.878Z pw:api => launch started
+2026-09-16T14:04:31.878Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-3Mfcjh --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:31.879Z pw:browser <launched> pid=4073026
+2026-09-16T14:04:31.918Z pw:browser [pid=4073026][err] [0916/140431.917831:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:31.919Z pw:api <= launch succeeded
+2026-09-16T14:04:31.919Z pw:api => newPage started
+2026-09-16T14:04:31.919Z pw:browser [pid=4073026][err] [0916/140431.919250:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:31.974Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567471974}
+2026-09-16T14:04:31.975Z pw:api => setContent started
+2026-09-16T14:04:31.975Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:32.012Z pw:browser [pid=4073026][err] [0916/140432.012367:INFO:CONSOLE:3] "--playwright--set--content--cccbe6b8aa2160e535454a22812f6ae8--", source:  (3)
+2026-09-16T14:04:32.062Z pw:api <= setContent succeeded
+2026-09-16T14:04:32.062Z pw:api => evaluate started
+2026-09-16T14:04:32.064Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567472031},{"event":"load","time":1789567472062}]}
+{"phase":"setContent","width":12,"time":1789567472064}
+2026-09-16T14:04:32.065Z pw:api => setContent started
+2026-09-16T14:04:32.065Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:32.103Z pw:browser [pid=4073026][err] [0916/140432.102230:INFO:CONSOLE:3] "--playwright--set--content--a57ba4439c7aa250c204116bb4850542--", source:  (3)
+2026-09-16T14:04:32.113Z pw:api <= setContent succeeded
+2026-09-16T14:04:32.113Z pw:api => evaluate started
+2026-09-16T14:04:32.114Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567472031},{"event":"load","time":1789567472062},{"event":"domcontentloaded","time":1789567472111},{"event":"load","time":1789567472113}]}
+2026-09-16T14:04:32.114Z pw:api => close started
+2026-09-16T14:04:32.115Z pw:browser [pid=4073026] <gracefully close start>
+2026-09-16T14:04:32.143Z pw:browser [pid=4073026] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:32.143Z pw:browser [pid=4073026] starting temporary directories cleanup
+2026-09-16T14:04:32.143Z pw:browser [pid=4073026] finished temporary directories cleanup
+2026-09-16T14:04:32.143Z pw:browser [pid=4073026] <gracefully close end>
+2026-09-16T14:04:32.143Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [377.99ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #10)
+2026-09-16T14:04:32.146Z pw:api => launch started
+2026-09-16T14:04:32.146Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-JBFlRT --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:32.147Z pw:browser <launched> pid=4073102
+2026-09-16T14:04:32.187Z pw:browser [pid=4073102][err] [0916/140432.187051:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:32.188Z pw:api <= launch succeeded
+2026-09-16T14:04:32.189Z pw:api => newPage started
+2026-09-16T14:04:32.189Z pw:browser [pid=4073102][err] [0916/140432.189155:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:32.238Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567472238}
+2026-09-16T14:04:32.239Z pw:api => setContent started
+2026-09-16T14:04:32.239Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:32.277Z pw:browser [pid=4073102][err] [0916/140432.277293:INFO:CONSOLE:3] "--playwright--set--content--47ab1a6f5c7b754a60f68a6728a6ecb1--", source:  (3)
+2026-09-16T14:04:32.328Z pw:api <= setContent succeeded
+2026-09-16T14:04:32.328Z pw:api => evaluate started
+2026-09-16T14:04:32.330Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567472296},{"event":"load","time":1789567472328}]}
+{"phase":"setContent","width":12,"time":1789567472331}
+2026-09-16T14:04:32.331Z pw:api => setContent started
+2026-09-16T14:04:32.331Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:32.370Z pw:browser [pid=4073102][err] [0916/140432.370253:INFO:CONSOLE:3] "--playwright--set--content--804966e857662a18772b2cbc50763e12--", source:  (3)
+2026-09-16T14:04:32.384Z pw:api <= setContent succeeded
+2026-09-16T14:04:32.384Z pw:api => evaluate started
+2026-09-16T14:04:32.385Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567472296},{"event":"load","time":1789567472328},{"event":"domcontentloaded","time":1789567472381},{"event":"load","time":1789567472384}]}
+2026-09-16T14:04:32.385Z pw:api => close started
+2026-09-16T14:04:32.385Z pw:browser [pid=4073102] <gracefully close start>
+2026-09-16T14:04:32.410Z pw:browser [pid=4073102] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:32.411Z pw:browser [pid=4073102] starting temporary directories cleanup
+2026-09-16T14:04:32.411Z pw:browser [pid=4073102] finished temporary directories cleanup
+2026-09-16T14:04:32.411Z pw:browser [pid=4073102] <gracefully close end>
+2026-09-16T14:04:32.411Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [377.69ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #11)
+2026-09-16T14:04:32.414Z pw:api => launch started
+2026-09-16T14:04:32.414Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-5uJKei --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:32.415Z pw:browser <launched> pid=4073179
+2026-09-16T14:04:32.453Z pw:browser [pid=4073179][err] [0916/140432.453323:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:32.454Z pw:api <= launch succeeded
+2026-09-16T14:04:32.454Z pw:api => newPage started
+2026-09-16T14:04:32.454Z pw:browser [pid=4073179][err] [0916/140432.454681:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:32.518Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567472518}
+2026-09-16T14:04:32.519Z pw:api => setContent started
+2026-09-16T14:04:32.519Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:32.555Z pw:browser [pid=4073179][err] [0916/140432.555682:INFO:CONSOLE:3] "--playwright--set--content--ff91f65aaf96df7e2f082d61c52aec4f--", source:  (3)
+2026-09-16T14:04:32.605Z pw:api <= setContent succeeded
+2026-09-16T14:04:32.605Z pw:api => evaluate started
+2026-09-16T14:04:32.607Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567472574},{"event":"load","time":1789567472605}]}
+{"phase":"setContent","width":12,"time":1789567472607}
+2026-09-16T14:04:32.608Z pw:api => setContent started
+2026-09-16T14:04:32.608Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:32.647Z pw:browser [pid=4073179][err] [0916/140432.646346:INFO:CONSOLE:3] "--playwright--set--content--e95a412de82201c203e6edc1a28f8273--", source:  (3)
+2026-09-16T14:04:32.657Z pw:api <= setContent succeeded
+2026-09-16T14:04:32.658Z pw:api => evaluate started
+2026-09-16T14:04:32.659Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567472574},{"event":"load","time":1789567472605},{"event":"domcontentloaded","time":1789567472655},{"event":"load","time":1789567472657}]}
+2026-09-16T14:04:32.659Z pw:api => close started
+2026-09-16T14:04:32.659Z pw:browser [pid=4073179] <gracefully close start>
+2026-09-16T14:04:32.686Z pw:browser [pid=4073179] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:32.687Z pw:browser [pid=4073179] starting temporary directories cleanup
+2026-09-16T14:04:32.687Z pw:browser [pid=4073179] finished temporary directories cleanup
+2026-09-16T14:04:32.687Z pw:browser [pid=4073179] <gracefully close end>
+2026-09-16T14:04:32.687Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [389.38ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #12)
+2026-09-16T14:04:32.690Z pw:api => launch started
+2026-09-16T14:04:32.690Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-1z8MGl --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:32.691Z pw:browser <launched> pid=4073257
+2026-09-16T14:04:32.730Z pw:browser [pid=4073257][err] [0916/140432.729992:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:32.731Z pw:browser [pid=4073257][err] [0916/140432.731447:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:32.732Z pw:api <= launch succeeded
+2026-09-16T14:04:32.732Z pw:api => newPage started
+2026-09-16T14:04:32.790Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567472790}
+2026-09-16T14:04:32.791Z pw:api => setContent started
+2026-09-16T14:04:32.791Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:32.833Z pw:browser [pid=4073257][err] [0916/140432.833255:INFO:CONSOLE:3] "--playwright--set--content--fbe7735e84e5c97d7f11424d549c6bf9--", source:  (3)
+2026-09-16T14:04:32.883Z pw:api <= setContent succeeded
+2026-09-16T14:04:32.883Z pw:api => evaluate started
+2026-09-16T14:04:32.885Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567472852},{"event":"load","time":1789567472883}]}
+{"phase":"setContent","width":12,"time":1789567472885}
+2026-09-16T14:04:32.886Z pw:api => setContent started
+2026-09-16T14:04:32.887Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:32.922Z pw:browser [pid=4073257][err] [0916/140432.922385:INFO:CONSOLE:3] "--playwright--set--content--a52a862927796b96ad38716032b004b0--", source:  (3)
+2026-09-16T14:04:32.933Z pw:api <= setContent succeeded
+2026-09-16T14:04:32.933Z pw:api => evaluate started
+2026-09-16T14:04:32.936Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567472852},{"event":"load","time":1789567472883},{"event":"domcontentloaded","time":1789567472931},{"event":"load","time":1789567472933}]}
+2026-09-16T14:04:32.936Z pw:api => close started
+2026-09-16T14:04:32.936Z pw:browser [pid=4073257] <gracefully close start>
+2026-09-16T14:04:32.962Z pw:browser [pid=4073257] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:32.962Z pw:browser [pid=4073257] starting temporary directories cleanup
+2026-09-16T14:04:32.963Z pw:browser [pid=4073257] finished temporary directories cleanup
+2026-09-16T14:04:32.963Z pw:browser [pid=4073257] <gracefully close end>
+2026-09-16T14:04:32.963Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [388.97ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #13)
+2026-09-16T14:04:32.965Z pw:api => launch started
+2026-09-16T14:04:32.967Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-AwPfgy --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:32.968Z pw:browser <launched> pid=4073335
+2026-09-16T14:04:33.007Z pw:browser [pid=4073335][err] [0916/140433.007096:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:33.008Z pw:api <= launch succeeded
+2026-09-16T14:04:33.008Z pw:api => newPage started
+2026-09-16T14:04:33.009Z pw:browser [pid=4073335][err] [0916/140433.008505:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:33.070Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567473071}
+2026-09-16T14:04:33.071Z pw:api => setContent started
+2026-09-16T14:04:33.071Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:33.109Z pw:browser [pid=4073335][err] [0916/140433.108876:INFO:CONSOLE:3] "--playwright--set--content--66d049051ab42bd14e39a51bee096946--", source:  (3)
+2026-09-16T14:04:33.157Z pw:api <= setContent succeeded
+2026-09-16T14:04:33.157Z pw:api => evaluate started
+2026-09-16T14:04:33.160Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567473127},{"event":"load","time":1789567473157}]}
+{"phase":"setContent","width":12,"time":1789567473160}
+2026-09-16T14:04:33.160Z pw:api => setContent started
+2026-09-16T14:04:33.160Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:33.195Z pw:browser [pid=4073335][err] [0916/140433.195573:INFO:CONSOLE:3] "--playwright--set--content--fdf8400765126c1f9f8f449f336f3b59--", source:  (3)
+2026-09-16T14:04:33.207Z pw:api <= setContent succeeded
+2026-09-16T14:04:33.207Z pw:api => evaluate started
+2026-09-16T14:04:33.209Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loading","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567473127},{"event":"load","time":1789567473157},{"event":"domcontentloaded","time":1789567473206},{"event":"load","time":1789567473207}]}
+2026-09-16T14:04:33.209Z pw:api => close started
+2026-09-16T14:04:33.209Z pw:browser [pid=4073335] <gracefully close start>
+2026-09-16T14:04:33.235Z pw:browser [pid=4073335] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:33.235Z pw:browser [pid=4073335] starting temporary directories cleanup
+2026-09-16T14:04:33.235Z pw:browser [pid=4073335] finished temporary directories cleanup
+2026-09-16T14:04:33.235Z pw:browser [pid=4073335] <gracefully close end>
+2026-09-16T14:04:33.235Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [384.03ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #14)
+2026-09-16T14:04:33.238Z pw:api => launch started
+2026-09-16T14:04:33.238Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-sSpFud --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:33.239Z pw:browser <launched> pid=4073412
+2026-09-16T14:04:33.279Z pw:browser [pid=4073412][err] [0916/140433.278319:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:33.279Z pw:browser [pid=4073412][err] [0916/140433.279636:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:33.280Z pw:api <= launch succeeded
+2026-09-16T14:04:33.280Z pw:api => newPage started
+2026-09-16T14:04:33.338Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567473338}
+2026-09-16T14:04:33.339Z pw:api => setContent started
+2026-09-16T14:04:33.339Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:33.376Z pw:browser [pid=4073412][err] [0916/140433.376464:INFO:CONSOLE:3] "--playwright--set--content--4d416855ff5296ab79e3721b73d20f2b--", source:  (3)
+2026-09-16T14:04:33.427Z pw:api <= setContent succeeded
+2026-09-16T14:04:33.427Z pw:api => evaluate started
+2026-09-16T14:04:33.429Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567473395},{"event":"load","time":1789567473427}]}
+{"phase":"setContent","width":12,"time":1789567473429}
+2026-09-16T14:04:33.430Z pw:api => setContent started
+2026-09-16T14:04:33.430Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:33.464Z pw:browser [pid=4073412][err] [0916/140433.464322:INFO:CONSOLE:3] "--playwright--set--content--b9238cacd700c7cbfced8aed3a9a2583--", source:  (3)
+2026-09-16T14:04:33.476Z pw:api <= setContent succeeded
+2026-09-16T14:04:33.476Z pw:api => evaluate started
+2026-09-16T14:04:33.478Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loading","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567473395},{"event":"load","time":1789567473427},{"event":"domcontentloaded","time":1789567473475},{"event":"load","time":1789567473476}]}
+2026-09-16T14:04:33.478Z pw:api => close started
+2026-09-16T14:04:33.478Z pw:browser [pid=4073412] <gracefully close start>
+2026-09-16T14:04:33.507Z pw:browser [pid=4073412] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:33.507Z pw:browser [pid=4073412] starting temporary directories cleanup
+2026-09-16T14:04:33.508Z pw:browser [pid=4073412] finished temporary directories cleanup
+2026-09-16T14:04:33.508Z pw:browser [pid=4073412] <gracefully close end>
+2026-09-16T14:04:33.508Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [384.96ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #15)
+2026-09-16T14:04:33.511Z pw:api => launch started
+2026-09-16T14:04:33.511Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-n3xCnH --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:33.512Z pw:browser <launched> pid=4073523
+2026-09-16T14:04:33.552Z pw:browser [pid=4073523][err] [0916/140433.551977:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:33.552Z pw:api <= launch succeeded
+2026-09-16T14:04:33.553Z pw:api => newPage started
+2026-09-16T14:04:33.553Z pw:browser [pid=4073523][err] [0916/140433.553385:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:33.610Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567473610}
+2026-09-16T14:04:33.611Z pw:api => setContent started
+2026-09-16T14:04:33.611Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:33.649Z pw:browser [pid=4073523][err] [0916/140433.648884:INFO:CONSOLE:3] "--playwright--set--content--6a8102dc929225a7d6c5eeef7d1bc0c4--", source:  (3)
+2026-09-16T14:04:33.698Z pw:api <= setContent succeeded
+2026-09-16T14:04:33.699Z pw:api => evaluate started
+2026-09-16T14:04:33.701Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567473667},{"event":"load","time":1789567473698}]}
+{"phase":"setContent","width":12,"time":1789567473701}
+2026-09-16T14:04:33.701Z pw:api => setContent started
+2026-09-16T14:04:33.701Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:33.736Z pw:browser [pid=4073523][err] [0916/140433.736550:INFO:CONSOLE:3] "--playwright--set--content--96d04addc77342996b277e966a42ae8f--", source:  (3)
+2026-09-16T14:04:33.749Z pw:api <= setContent succeeded
+2026-09-16T14:04:33.749Z pw:api => evaluate started
+2026-09-16T14:04:33.750Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567473667},{"event":"load","time":1789567473698},{"event":"domcontentloaded","time":1789567473747},{"event":"load","time":1789567473749}]}
+2026-09-16T14:04:33.751Z pw:api => close started
+2026-09-16T14:04:33.751Z pw:browser [pid=4073523] <gracefully close start>
+2026-09-16T14:04:33.775Z pw:browser [pid=4073523] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:33.775Z pw:browser [pid=4073523] starting temporary directories cleanup
+2026-09-16T14:04:33.775Z pw:browser [pid=4073523] finished temporary directories cleanup
+2026-09-16T14:04:33.775Z pw:browser [pid=4073523] <gracefully close end>
+2026-09-16T14:04:33.775Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [376.52ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #16)
+2026-09-16T14:04:33.779Z pw:api => launch started
+2026-09-16T14:04:33.780Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-ozXWfb --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:33.780Z pw:browser <launched> pid=4073600
+2026-09-16T14:04:33.819Z pw:browser [pid=4073600][err] [0916/140433.819429:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:33.820Z pw:api <= launch succeeded
+2026-09-16T14:04:33.820Z pw:api => newPage started
+2026-09-16T14:04:33.820Z pw:browser [pid=4073600][err] [0916/140433.820808:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:33.886Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567473886}
+2026-09-16T14:04:33.887Z pw:api => setContent started
+2026-09-16T14:04:33.888Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:33.929Z pw:browser [pid=4073600][err] [0916/140433.928936:INFO:CONSOLE:3] "--playwright--set--content--8838839ff4be3c06ce67ebf27db98d99--", source:  (3)
+2026-09-16T14:04:33.980Z pw:api <= setContent succeeded
+2026-09-16T14:04:33.980Z pw:api => evaluate started
+2026-09-16T14:04:33.983Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567473947},{"event":"load","time":1789567473980}]}
+{"phase":"setContent","width":12,"time":1789567473983}
+2026-09-16T14:04:33.984Z pw:api => setContent started
+2026-09-16T14:04:33.984Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:34.027Z pw:browser [pid=4073600][err] [0916/140434.021831:INFO:CONSOLE:3] "--playwright--set--content--1fa7531242c64a4a5f5833c1d387240b--", source:  (3)
+2026-09-16T14:04:34.027Z pw:browser [pid=4073600][err] [0916/140434.026864:ERROR:content/browser/devtools/devtools_pipe_handler.cc:188] Connection terminated while reading from pipe
+2026-09-16T14:04:34.027Z pw:browser [pid=4073600][err] [0916/140434.027047:ERROR:content/browser/devtools/devtools_pipe_handler.cc:274] Could not write into pipe
+2026-09-16T14:04:34.027Z pw:browser [pid=4073600][err] [0916/140434.027055:ERROR:content/browser/devtools/devtools_pipe_handler.cc:274] Could not write into pipe
+2026-09-16T14:04:34.058Z pw:browser [pid=4073600] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:34.059Z pw:browser [pid=4073600] starting temporary directories cleanup
+2026-09-16T14:04:34.059Z pw:browser [pid=4073600] finished temporary directories cleanup
+2026-09-16T14:04:36.361Z pw:api <= setContent failed
+2026-09-16T14:04:36.361Z pw:api => evaluate started
+(fail) outline width changes only the colored stroke at fixed outer dimensions [15035.22ms]
+  ^ this test timed out after 15000ms.
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #17)
+2026-09-16T14:04:44.363Z pw:api => launch started
+2026-09-16T14:04:44.364Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-0ZkJE1 --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:44.365Z pw:browser <launched> pid=4073910
+2026-09-16T14:04:44.404Z pw:browser [pid=4073910][err] [0916/140444.404525:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:44.405Z pw:api <= launch succeeded
+2026-09-16T14:04:44.406Z pw:api => newPage started
+2026-09-16T14:04:44.406Z pw:browser [pid=4073910][err] [0916/140444.405886:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:44.470Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567484470}
+2026-09-16T14:04:44.471Z pw:api => setContent started
+2026-09-16T14:04:44.471Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:44.509Z pw:browser [pid=4073910][err] [0916/140444.509234:INFO:CONSOLE:3] "--playwright--set--content--cf74f0ac265a9efe4a0e288caadc6133--", source:  (3)
+2026-09-16T14:04:44.559Z pw:api <= setContent succeeded
+2026-09-16T14:04:44.559Z pw:api => evaluate started
+2026-09-16T14:04:44.562Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567484528},{"event":"load","time":1789567484559}]}
+{"phase":"setContent","width":12,"time":1789567484562}
+2026-09-16T14:04:44.562Z pw:api => setContent started
+2026-09-16T14:04:44.562Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:44.601Z pw:browser [pid=4073910][err] [0916/140444.601650:INFO:CONSOLE:3] "--playwright--set--content--920e4eb379aa8138d39b510f6df28a11--", source:  (3)
+2026-09-16T14:04:44.615Z pw:api <= setContent succeeded
+2026-09-16T14:04:44.615Z pw:api => evaluate started
+2026-09-16T14:04:44.616Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567484528},{"event":"load","time":1789567484559},{"event":"domcontentloaded","time":1789567484612},{"event":"load","time":1789567484615}]}
+2026-09-16T14:04:44.616Z pw:api => close started
+2026-09-16T14:04:44.616Z pw:browser [pid=4073910] <gracefully close start>
+2026-09-16T14:04:44.642Z pw:browser [pid=4073910] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:44.642Z pw:browser [pid=4073910] starting temporary directories cleanup
+2026-09-16T14:04:44.643Z pw:browser [pid=4073910] finished temporary directories cleanup
+2026-09-16T14:04:44.643Z pw:browser [pid=4073910] <gracefully close end>
+2026-09-16T14:04:44.643Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [407.39ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #18)
+2026-09-16T14:04:44.653Z pw:api => launch started
+2026-09-16T14:04:44.653Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-YzFHjq --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:44.654Z pw:browser <launched> pid=4073988
+2026-09-16T14:04:44.692Z pw:browser [pid=4073988][err] [0916/140444.692474:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:44.693Z pw:api <= launch succeeded
+2026-09-16T14:04:44.694Z pw:api => newPage started
+2026-09-16T14:04:44.694Z pw:browser [pid=4073988][err] [0916/140444.693901:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:44.754Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567484754}
+2026-09-16T14:04:44.755Z pw:api => setContent started
+2026-09-16T14:04:44.755Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:44.792Z pw:browser [pid=4073988][err] [0916/140444.792134:INFO:CONSOLE:3] "--playwright--set--content--4f3889acaa92af62fcc8c67b0fb6d20b--", source:  (3)
+2026-09-16T14:04:44.842Z pw:api <= setContent succeeded
+2026-09-16T14:04:44.842Z pw:api => evaluate started
+2026-09-16T14:04:44.845Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567484810},{"event":"load","time":1789567484842}]}
+{"phase":"setContent","width":12,"time":1789567484845}
+2026-09-16T14:04:44.845Z pw:api => setContent started
+2026-09-16T14:04:44.845Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:44.883Z pw:browser [pid=4073988][err] [0916/140444.883630:INFO:CONSOLE:3] "--playwright--set--content--1a9487a0c7f30b5e5bb41a97821a4be2--", source:  (3)
+2026-09-16T14:04:44.896Z pw:api <= setContent succeeded
+2026-09-16T14:04:44.897Z pw:api => evaluate started
+2026-09-16T14:04:44.898Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567484810},{"event":"load","time":1789567484842},{"event":"domcontentloaded","time":1789567484894},{"event":"load","time":1789567484896}]}
+2026-09-16T14:04:44.898Z pw:api => close started
+2026-09-16T14:04:44.898Z pw:browser [pid=4073988] <gracefully close start>
+2026-09-16T14:04:44.927Z pw:browser [pid=4073988] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:44.927Z pw:browser [pid=4073988] starting temporary directories cleanup
+2026-09-16T14:04:44.928Z pw:browser [pid=4073988] finished temporary directories cleanup
+2026-09-16T14:04:44.928Z pw:browser [pid=4073988] <gracefully close end>
+2026-09-16T14:04:44.928Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [396.79ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #19)
+2026-09-16T14:04:44.938Z pw:api => launch started
+2026-09-16T14:04:44.939Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-lWXnaf --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:44.940Z pw:browser <launched> pid=4074084
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+(fail) outline width changes only the colored stroke at fixed outer dimensions [8.57ms]
+
+# Unhandled error between tests
+-------------------------------
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+-------------------------------
+
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #20)
+2026-09-16T14:04:44.947Z pw:api => launch started
+2026-09-16T14:04:44.947Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-zJm7Jb --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:44.948Z pw:browser <launched> pid=4074088
+2026-09-16T14:04:44.976Z pw:browser [pid=4074084][err] [0916/140444.976292:ERROR:content/browser/devtools/devtools_pipe_handler.cc:188] Connection terminated while reading from pipe
+2026-09-16T14:04:44.978Z pw:browser [pid=4074084][err] [0916/140444.978452:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:44.979Z pw:browser [pid=4074084][err] [0916/140444.979851:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:44.987Z pw:browser [pid=4074088][err] [0916/140444.987552:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:44.988Z pw:api <= launch succeeded
+2026-09-16T14:04:44.988Z pw:api => newPage started
+2026-09-16T14:04:44.989Z pw:browser [pid=4074088][err] [0916/140444.988927:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:45.002Z pw:browser [pid=4074084][err] [0916/140445.002806:WARNING:net/extras/sqlite/sqlite_persistent_store_backend_base.cc:181] Failed to post task from operator()@net/extras/sqlite/sqlite_persistent_shared_dictionary_store.cc:259 to client_task_runner_.
+2026-09-16T14:04:45.011Z pw:browser [pid=4074084] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:45.011Z pw:browser [pid=4074084] starting temporary directories cleanup
+2026-09-16T14:04:45.011Z pw:browser [pid=4074084] finished temporary directories cleanup
+2026-09-16T14:04:45.037Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567485037}
+2026-09-16T14:04:45.037Z pw:api => setContent started
+2026-09-16T14:04:45.037Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:45.075Z pw:browser [pid=4074088][err] [0916/140445.075201:INFO:CONSOLE:3] "--playwright--set--content--7d566b47315fb0a1bb5634f2615ba0b2--", source:  (3)
+2026-09-16T14:04:45.124Z pw:api <= setContent succeeded
+2026-09-16T14:04:45.125Z pw:api => evaluate started
+2026-09-16T14:04:45.128Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567485094},{"event":"load","time":1789567485124}]}
+{"phase":"setContent","width":12,"time":1789567485129}
+2026-09-16T14:04:45.129Z pw:api => setContent started
+2026-09-16T14:04:45.129Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:45.166Z pw:browser [pid=4074088][err] [0916/140445.166727:INFO:CONSOLE:3] "--playwright--set--content--75f063b704dcf0b1b0620dd3488e6cb7--", source:  (3)
+2026-09-16T14:04:45.180Z pw:api <= setContent succeeded
+2026-09-16T14:04:45.180Z pw:api => evaluate started
+2026-09-16T14:04:45.181Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567485094},{"event":"load","time":1789567485124},{"event":"domcontentloaded","time":1789567485178},{"event":"load","time":1789567485180}]}
+2026-09-16T14:04:45.182Z pw:api => close started
+2026-09-16T14:04:45.182Z pw:browser [pid=4074088] <gracefully close start>
+2026-09-16T14:04:45.210Z pw:browser [pid=4074088] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:45.211Z pw:browser [pid=4074088] starting temporary directories cleanup
+2026-09-16T14:04:45.211Z pw:browser [pid=4074088] finished temporary directories cleanup
+2026-09-16T14:04:45.211Z pw:browser [pid=4074088] <gracefully close end>
+2026-09-16T14:04:45.211Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [391.14ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #21)
+2026-09-16T14:04:45.225Z pw:api => launch started
+2026-09-16T14:04:45.225Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-TKBMvd --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:45.226Z pw:browser <launched> pid=4074223
+2026-09-16T14:04:45.265Z pw:browser [pid=4074223][err] [0916/140445.265613:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:45.267Z pw:api <= launch succeeded
+2026-09-16T14:04:45.267Z pw:api => newPage started
+2026-09-16T14:04:45.267Z pw:browser [pid=4074223][err] [0916/140445.267411:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:45.322Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567485322}
+2026-09-16T14:04:45.323Z pw:api => setContent started
+2026-09-16T14:04:45.323Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:45.360Z pw:browser [pid=4074223][err] [0916/140445.360502:INFO:CONSOLE:3] "--playwright--set--content--2ea97f1386e0997c97a9ade4a6a81c13--", source:  (3)
+2026-09-16T14:04:45.410Z pw:api <= setContent succeeded
+2026-09-16T14:04:45.410Z pw:api => evaluate started
+2026-09-16T14:04:45.413Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567485379},{"event":"load","time":1789567485410}]}
+{"phase":"setContent","width":12,"time":1789567485413}
+2026-09-16T14:04:45.413Z pw:api => setContent started
+2026-09-16T14:04:45.413Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:45.448Z pw:browser [pid=4074223][err] [0916/140445.448569:INFO:CONSOLE:3] "--playwright--set--content--995f01dcc0542bcd5c890795b17aec4d--", source:  (3)
+2026-09-16T14:04:45.460Z pw:api <= setContent succeeded
+2026-09-16T14:04:45.460Z pw:api => evaluate started
+2026-09-16T14:04:45.462Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loading","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567485379},{"event":"load","time":1789567485410},{"event":"domcontentloaded","time":1789567485459},{"event":"load","time":1789567485460}]}
+2026-09-16T14:04:45.462Z pw:api => close started
+2026-09-16T14:04:45.462Z pw:browser [pid=4074223] <gracefully close start>
+2026-09-16T14:04:45.486Z pw:browser [pid=4074223] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:45.487Z pw:browser [pid=4074223] starting temporary directories cleanup
+2026-09-16T14:04:45.487Z pw:browser [pid=4074223] finished temporary directories cleanup
+2026-09-16T14:04:45.487Z pw:browser [pid=4074223] <gracefully close end>
+2026-09-16T14:04:45.487Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [387.63ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #22)
+2026-09-16T14:04:45.501Z pw:api => launch started
+2026-09-16T14:04:45.501Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-bdzwhS --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:45.502Z pw:browser <launched> pid=4074299
+2026-09-16T14:04:45.541Z pw:browser [pid=4074299][err] [0916/140445.541052:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:45.542Z pw:api <= launch succeeded
+2026-09-16T14:04:45.542Z pw:api => newPage started
+2026-09-16T14:04:45.543Z pw:browser [pid=4074299][err] [0916/140445.542796:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:45.606Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567485607}
+2026-09-16T14:04:45.607Z pw:api => setContent started
+2026-09-16T14:04:45.607Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:45.645Z pw:browser [pid=4074299][err] [0916/140445.644960:INFO:CONSOLE:3] "--playwright--set--content--3e64429ab19006f35353b69bbd376766--", source:  (3)
+2026-09-16T14:04:45.694Z pw:api <= setContent succeeded
+2026-09-16T14:04:45.694Z pw:api => evaluate started
+2026-09-16T14:04:45.696Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567485663},{"event":"load","time":1789567485694}]}
+{"phase":"setContent","width":12,"time":1789567485696}
+2026-09-16T14:04:45.697Z pw:api => setContent started
+2026-09-16T14:04:45.697Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:45.731Z pw:browser [pid=4074299][err] [0916/140445.731670:INFO:CONSOLE:3] "--playwright--set--content--94882ba923de7ee9e856c2f93b2ab11c--", source:  (3)
+2026-09-16T14:04:45.743Z pw:api <= setContent succeeded
+2026-09-16T14:04:45.743Z pw:api => evaluate started
+2026-09-16T14:04:45.745Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loading","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567485663},{"event":"load","time":1789567485694},{"event":"domcontentloaded","time":1789567485742},{"event":"load","time":1789567485743}]}
+2026-09-16T14:04:45.745Z pw:api => close started
+2026-09-16T14:04:45.745Z pw:browser [pid=4074299] <gracefully close start>
+2026-09-16T14:04:45.770Z pw:browser [pid=4074299] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:45.770Z pw:browser [pid=4074299] starting temporary directories cleanup
+2026-09-16T14:04:45.771Z pw:browser [pid=4074299] finished temporary directories cleanup
+2026-09-16T14:04:45.771Z pw:browser [pid=4074299] <gracefully close end>
+2026-09-16T14:04:45.771Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [398.02ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #23)
+2026-09-16T14:04:45.784Z pw:api => launch started
+2026-09-16T14:04:45.784Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-hAjphT --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:45.785Z pw:browser <launched> pid=4074375
+2026-09-16T14:04:45.825Z pw:browser [pid=4074375][err] [0916/140445.824708:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:45.825Z pw:api <= launch succeeded
+2026-09-16T14:04:45.826Z pw:api => newPage started
+2026-09-16T14:04:45.826Z pw:browser [pid=4074375][err] [0916/140445.826139:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:45.894Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567485894}
+2026-09-16T14:04:45.895Z pw:api => setContent started
+2026-09-16T14:04:45.895Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:45.933Z pw:browser [pid=4074375][err] [0916/140445.932922:INFO:CONSOLE:3] "--playwright--set--content--2af0a0cbab2644f21b8aeb89ec59700b--", source:  (3)
+2026-09-16T14:04:45.983Z pw:api <= setContent succeeded
+2026-09-16T14:04:45.984Z pw:api => evaluate started
+2026-09-16T14:04:45.986Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567485951},{"event":"load","time":1789567485983}]}
+{"phase":"setContent","width":12,"time":1789567485986}
+2026-09-16T14:04:45.986Z pw:api => setContent started
+2026-09-16T14:04:45.986Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:46.028Z pw:browser [pid=4074375][err] [0916/140446.027941:INFO:CONSOLE:3] "--playwright--set--content--4384fc41f7f8a10001045ae90f4655fd--", source:  (3)
+2026-09-16T14:04:46.041Z pw:api <= setContent succeeded
+2026-09-16T14:04:46.041Z pw:api => evaluate started
+2026-09-16T14:04:46.042Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567485951},{"event":"load","time":1789567485983},{"event":"domcontentloaded","time":1789567486038},{"event":"load","time":1789567486041}]}
+2026-09-16T14:04:46.043Z pw:api => close started
+2026-09-16T14:04:46.043Z pw:browser [pid=4074375] <gracefully close start>
+2026-09-16T14:04:46.070Z pw:browser [pid=4074375] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:46.070Z pw:browser [pid=4074375] starting temporary directories cleanup
+2026-09-16T14:04:46.071Z pw:browser [pid=4074375] finished temporary directories cleanup
+2026-09-16T14:04:46.071Z pw:browser [pid=4074375] <gracefully close end>
+2026-09-16T14:04:46.071Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [416.76ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #24)
+2026-09-16T14:04:46.079Z pw:api => launch started
+2026-09-16T14:04:46.080Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-hu7JR1 --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:46.080Z pw:browser <launched> pid=4074452
+2026-09-16T14:04:46.120Z pw:browser [pid=4074452][err] [0916/140446.119928:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:46.121Z pw:browser [pid=4074452][err] [0916/140446.121340:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:46.122Z pw:api <= launch succeeded
+2026-09-16T14:04:46.122Z pw:api => newPage started
+2026-09-16T14:04:46.164Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567486164}
+2026-09-16T14:04:46.164Z pw:api => setContent started
+2026-09-16T14:04:46.165Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:46.201Z pw:browser [pid=4074452][err] [0916/140446.201415:INFO:CONSOLE:3] "--playwright--set--content--0a066dc550dde30246579f12f143d1ee--", source:  (3)
+2026-09-16T14:04:46.250Z pw:api <= setContent succeeded
+2026-09-16T14:04:46.251Z pw:api => evaluate started
+2026-09-16T14:04:46.254Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567486220},{"event":"load","time":1789567486250}]}
+{"phase":"setContent","width":12,"time":1789567486254}
+2026-09-16T14:04:46.254Z pw:api => setContent started
+2026-09-16T14:04:46.254Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:46.289Z pw:browser [pid=4074452][err] [0916/140446.288793:INFO:CONSOLE:3] "--playwright--set--content--205ad41eb1b4b6078813fb7b4ef40a24--", source:  (3)
+2026-09-16T14:04:46.302Z pw:api <= setContent succeeded
+2026-09-16T14:04:46.302Z pw:api => evaluate started
+2026-09-16T14:04:46.303Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567486220},{"event":"load","time":1789567486250},{"event":"domcontentloaded","time":1789567486299},{"event":"load","time":1789567486302}]}
+2026-09-16T14:04:46.303Z pw:api => close started
+2026-09-16T14:04:46.303Z pw:browser [pid=4074452] <gracefully close start>
+2026-09-16T14:04:46.331Z pw:browser [pid=4074452] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:46.331Z pw:browser [pid=4074452] starting temporary directories cleanup
+2026-09-16T14:04:46.331Z pw:browser [pid=4074452] finished temporary directories cleanup
+2026-09-16T14:04:46.331Z pw:browser [pid=4074452] <gracefully close end>
+2026-09-16T14:04:46.331Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [359.89ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #25)
+2026-09-16T14:04:46.335Z pw:api => launch started
+2026-09-16T14:04:46.336Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-97jvsg --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:46.337Z pw:browser <launched> pid=4074550
+2026-09-16T14:04:46.376Z pw:browser [pid=4074550][err] [0916/140446.375817:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:46.377Z pw:api <= launch succeeded
+2026-09-16T14:04:46.377Z pw:api => newPage started
+2026-09-16T14:04:46.377Z pw:browser [pid=4074550][err] [0916/140446.377174:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:46.438Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567486438}
+2026-09-16T14:04:46.439Z pw:api => setContent started
+2026-09-16T14:04:46.439Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:46.482Z pw:browser [pid=4074550][err] [0916/140446.482646:INFO:CONSOLE:3] "--playwright--set--content--e55b502099fd6fc29cc2911070f93a3f--", source:  (3)
+2026-09-16T14:04:46.533Z pw:api <= setContent succeeded
+2026-09-16T14:04:46.533Z pw:api => evaluate started
+2026-09-16T14:04:46.537Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567486501},{"event":"load","time":1789567486533}]}
+{"phase":"setContent","width":12,"time":1789567486537}
+2026-09-16T14:04:46.538Z pw:api => setContent started
+2026-09-16T14:04:46.538Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:46.572Z pw:browser [pid=4074550][err] [0916/140446.572524:INFO:CONSOLE:3] "--playwright--set--content--57f0cf78125f11be26b9a5dbbfef4d09--", source:  (3)
+2026-09-16T14:04:46.586Z pw:api <= setContent succeeded
+2026-09-16T14:04:46.586Z pw:api => evaluate started
+2026-09-16T14:04:46.587Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567486501},{"event":"load","time":1789567486533},{"event":"domcontentloaded","time":1789567486583},{"event":"load","time":1789567486586}]}
+2026-09-16T14:04:46.587Z pw:api => close started
+2026-09-16T14:04:46.587Z pw:browser [pid=4074550] <gracefully close start>
+2026-09-16T14:04:46.615Z pw:browser [pid=4074550] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:46.615Z pw:browser [pid=4074550] starting temporary directories cleanup
+2026-09-16T14:04:46.615Z pw:browser [pid=4074550] finished temporary directories cleanup
+2026-09-16T14:04:46.615Z pw:browser [pid=4074550] <gracefully close end>
+2026-09-16T14:04:46.615Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [418.33ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #26)
+2026-09-16T14:04:46.633Z pw:api => launch started
+2026-09-16T14:04:46.633Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-0i7bLh --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:46.634Z pw:browser <launched> pid=4074626
+2026-09-16T14:04:46.673Z pw:browser [pid=4074626][err] [0916/140446.673203:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:46.674Z pw:api <= launch succeeded
+2026-09-16T14:04:46.674Z pw:api => newPage started
+2026-09-16T14:04:46.674Z pw:browser [pid=4074626][err] [0916/140446.674586:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:46.734Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567486734}
+2026-09-16T14:04:46.735Z pw:api => setContent started
+2026-09-16T14:04:46.735Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:46.773Z pw:browser [pid=4074626][err] [0916/140446.773248:INFO:CONSOLE:3] "--playwright--set--content--b25f376e0588930228c113191bc97f6c--", source:  (3)
+2026-09-16T14:04:46.823Z pw:api <= setContent succeeded
+2026-09-16T14:04:46.823Z pw:api => evaluate started
+2026-09-16T14:04:46.825Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567486791},{"event":"load","time":1789567486823}]}
+{"phase":"setContent","width":12,"time":1789567486825}
+2026-09-16T14:04:46.826Z pw:api => setContent started
+2026-09-16T14:04:46.826Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:46.862Z pw:browser [pid=4074626][err] [0916/140446.862630:INFO:CONSOLE:3] "--playwright--set--content--9b0f7add82ec6339b3be3095e04517d8--", source:  (3)
+2026-09-16T14:04:46.877Z pw:api <= setContent succeeded
+2026-09-16T14:04:46.877Z pw:api => evaluate started
+2026-09-16T14:04:46.883Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567486791},{"event":"load","time":1789567486823},{"event":"domcontentloaded","time":1789567486873},{"event":"load","time":1789567486877}]}
+2026-09-16T14:04:46.884Z pw:api => close started
+2026-09-16T14:04:46.884Z pw:browser [pid=4074626] <gracefully close start>
+2026-09-16T14:04:46.911Z pw:browser [pid=4074626] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:46.911Z pw:browser [pid=4074626] starting temporary directories cleanup
+2026-09-16T14:04:46.912Z pw:browser [pid=4074626] finished temporary directories cleanup
+2026-09-16T14:04:46.912Z pw:browser [pid=4074626] <gracefully close end>
+2026-09-16T14:04:46.912Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [417.91ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #27)
+2026-09-16T14:04:46.930Z pw:api => launch started
+2026-09-16T14:04:46.930Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-OcNllp --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:46.931Z pw:browser <launched> pid=4074702
+2026-09-16T14:04:46.970Z pw:browser [pid=4074702][err] [0916/140446.970354:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:46.971Z pw:api <= launch succeeded
+2026-09-16T14:04:46.971Z pw:api => newPage started
+2026-09-16T14:04:46.971Z pw:browser [pid=4074702][err] [0916/140446.971703:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:47.026Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567487026}
+2026-09-16T14:04:47.026Z pw:api => setContent started
+2026-09-16T14:04:47.027Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:47.063Z pw:browser [pid=4074702][err] [0916/140447.063623:INFO:CONSOLE:3] "--playwright--set--content--a5eb7d8298dae4d1def5e47e430353c4--", source:  (3)
+2026-09-16T14:04:47.114Z pw:api <= setContent succeeded
+2026-09-16T14:04:47.114Z pw:api => evaluate started
+2026-09-16T14:04:47.116Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567487082},{"event":"load","time":1789567487114}]}
+{"phase":"setContent","width":12,"time":1789567487116}
+2026-09-16T14:04:47.116Z pw:api => setContent started
+2026-09-16T14:04:47.116Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:47.154Z pw:browser [pid=4074702][err] [0916/140447.154623:INFO:CONSOLE:3] "--playwright--set--content--49d4dd45031233a02b947ffb97ccede6--", source:  (3)
+2026-09-16T14:04:47.166Z pw:api <= setContent succeeded
+2026-09-16T14:04:47.166Z pw:api => evaluate started
+2026-09-16T14:04:47.167Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567487082},{"event":"load","time":1789567487114},{"event":"domcontentloaded","time":1789567487163},{"event":"load","time":1789567487166}]}
+2026-09-16T14:04:47.167Z pw:api => close started
+2026-09-16T14:04:47.167Z pw:browser [pid=4074702] <gracefully close start>
+2026-09-16T14:04:47.195Z pw:browser [pid=4074702] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:47.195Z pw:browser [pid=4074702] starting temporary directories cleanup
+2026-09-16T14:04:47.195Z pw:browser [pid=4074702] finished temporary directories cleanup
+2026-09-16T14:04:47.195Z pw:browser [pid=4074702] <gracefully close end>
+2026-09-16T14:04:47.195Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [387.86ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #28)
+2026-09-16T14:04:47.206Z pw:api => launch started
+2026-09-16T14:04:47.206Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-PIMTPP --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:47.207Z pw:browser <launched> pid=4074778
+2026-09-16T14:04:47.246Z pw:browser [pid=4074778][err] [0916/140447.246117:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:47.247Z pw:api <= launch succeeded
+2026-09-16T14:04:47.247Z pw:api => newPage started
+2026-09-16T14:04:47.248Z pw:browser [pid=4074778][err] [0916/140447.247483:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:47.318Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567487318}
+2026-09-16T14:04:47.319Z pw:api => setContent started
+2026-09-16T14:04:47.319Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:47.357Z pw:browser [pid=4074778][err] [0916/140447.356839:INFO:CONSOLE:3] "--playwright--set--content--3e2e5d3477bc44e8fd31416c2207ae73--", source:  (3)
+2026-09-16T14:04:47.406Z pw:api <= setContent succeeded
+2026-09-16T14:04:47.407Z pw:api => evaluate started
+2026-09-16T14:04:47.409Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567487375},{"event":"load","time":1789567487406}]}
+{"phase":"setContent","width":12,"time":1789567487409}
+2026-09-16T14:04:47.409Z pw:api => setContent started
+2026-09-16T14:04:47.409Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:47.444Z pw:browser [pid=4074778][err] [0916/140447.444412:INFO:CONSOLE:3] "--playwright--set--content--16be40b5daf4863c0c50e830380ed664--", source:  (3)
+2026-09-16T14:04:47.456Z pw:api <= setContent succeeded
+2026-09-16T14:04:47.456Z pw:api => evaluate started
+2026-09-16T14:04:47.457Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loading","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567487375},{"event":"load","time":1789567487406},{"event":"domcontentloaded","time":1789567487455},{"event":"load","time":1789567487456}]}
+2026-09-16T14:04:47.458Z pw:api => close started
+2026-09-16T14:04:47.458Z pw:browser [pid=4074778] <gracefully close start>
+2026-09-16T14:04:47.482Z pw:browser [pid=4074778] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:47.482Z pw:browser [pid=4074778] starting temporary directories cleanup
+2026-09-16T14:04:47.483Z pw:browser [pid=4074778] finished temporary directories cleanup
+2026-09-16T14:04:47.483Z pw:browser [pid=4074778] <gracefully close end>
+2026-09-16T14:04:47.483Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [409.32ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #29)
+2026-09-16T14:04:47.497Z pw:api => launch started
+2026-09-16T14:04:47.498Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-Hh8USi --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:47.498Z pw:browser <launched> pid=4074854
+2026-09-16T14:04:47.537Z pw:browser [pid=4074854][err] [0916/140447.537519:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:04:47.538Z pw:api <= launch succeeded
+2026-09-16T14:04:47.538Z pw:api => newPage started
+2026-09-16T14:04:47.539Z pw:browser [pid=4074854][err] [0916/140447.538901:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:04:47.594Z pw:api <= newPage succeeded
+{"phase":"setContent","width":3,"time":1789567487594}
+2026-09-16T14:04:47.595Z pw:api => setContent started
+2026-09-16T14:04:47.595Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:47.632Z pw:browser [pid=4074854][err] [0916/140447.632085:INFO:CONSOLE:3] "--playwright--set--content--71dd665b024c80d893ba28dad56ffa25--", source:  (3)
+2026-09-16T14:04:47.683Z pw:api <= setContent succeeded
+2026-09-16T14:04:47.684Z pw:api => evaluate started
+2026-09-16T14:04:47.692Z pw:api <= evaluate succeeded
+{"phase":"probe","width":3,"probe":[238,238,238,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567487650},{"event":"load","time":1789567487683}]}
+{"phase":"setContent","width":12,"time":1789567487692}
+2026-09-16T14:04:47.692Z pw:api => setContent started
+2026-09-16T14:04:47.692Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:04:47.727Z pw:browser [pid=4074854][err] [0916/140447.727487:INFO:CONSOLE:3] "--playwright--set--content--52b86388d2848e766501dce7bf60e4b4--", source:  (3)
+2026-09-16T14:04:47.744Z pw:api <= setContent succeeded
+2026-09-16T14:04:47.744Z pw:api => evaluate started
+2026-09-16T14:04:47.745Z pw:api <= evaluate succeeded
+{"phase":"probe","width":12,"probe":[80,120,150,255],"fonts":"loaded","readyState":"complete","events":[{"event":"domcontentloaded","time":1789567487650},{"event":"load","time":1789567487683},{"event":"domcontentloaded","time":1789567487736},{"event":"load","time":1789567487744}]}
+2026-09-16T14:04:47.745Z pw:api => close started
+2026-09-16T14:04:47.745Z pw:browser [pid=4074854] <gracefully close start>
+2026-09-16T14:04:47.759Z pw:browser [pid=4074854] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:04:47.759Z pw:browser [pid=4074854] starting temporary directories cleanup
+2026-09-16T14:04:47.760Z pw:browser [pid=4074854] finished temporary directories cleanup
+2026-09-16T14:04:47.760Z pw:browser [pid=4074854] <gracefully close end>
+2026-09-16T14:04:47.760Z pw:api <= close succeeded
+(pass) outline width changes only the colored stroke at fixed outer dimensions [388.81ms]
+
+../../../../tmp/colorbench-render-ci-observe/matched-render.test.ts: (run #30)
+2026-09-16T14:04:47.774Z pw:api => launch started
+2026-09-16T14:04:47.774Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-nrfJ5S --remote-debugging-pipe --no-startup-window
+2026-09-16T14:04:47.775Z pw:browser <launched> pid=4074932
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+(fail) outline width changes only the colored stroke at fixed outer dimensions [4.27ms]
+
+# Unhandled error between tests
+-------------------------------
+9320 |     env: options.env,
+9321 |     cwd: options.cwd,
+9322 |     shell: options.shell,
+9323 |     stdio
+9324 |   };
+9325 |   const spawnedProcess = childProcess.spawn(options.command, options.args || [], spawnOptions);
+                                             ^
+error: Failed to connect
+ syscall: "connect",
+   errno: -2,
+    code: "ENOENT"
+
+      at connect (node:net:516:16)
+      at #createStdioObject (node:child_process:622:42)
+      at get (node:child_process:819:68)
+      at spawn (node:child_process:701:30)
+      at spawn (node:child_process:14:39)
+      at launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:9325:39)
+      at _launchProcess (/mnt/disks/data/colorbench/node_modules/playwright-core/lib/coreBundle.js:39803:81)
+-------------------------------
+
+
+3 tests failed:
+(fail) outline width changes only the colored stroke at fixed outer dimensions [15035.22ms]
+  ^ this test timed out after 15000ms.
+(fail) outline width changes only the colored stroke at fixed outer dimensions [8.57ms]
+(fail) outline width changes only the colored stroke at fixed outer dimensions [4.27ms]
+
+ 27 pass
+ 90 filtered out
+ 3 fail
+ 2 errors
+ 57 expect() calls
+Ran 30 tests across 1 file. [18.42s]

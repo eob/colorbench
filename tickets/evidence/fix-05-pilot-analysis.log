@@ -1,0 +1,53 @@
+{
+  "release": "0.4.0",
+  "run_id": "pilot-20260916",
+  "campaign": {
+    "final_response_count": 6656,
+    "attempt_count": 6656,
+    "infrastructure_attempt_count": 0,
+    "infrastructure_error_kinds": {},
+    "spent_cost_usd": 44.44385174999941,
+    "budget_usd": 65.0,
+    "cost_incomplete": false,
+    "estimated_cost_attempt_count": 4
+  },
+  "scope": "Descriptive results on this fixed pilot; no independent-observation or population inference. Colors, numeric targets, intervention conditions and answer mappings share correlated inputs. Paired correctness includes invalid answers as incorrect; semantic consistency requires both answers valid. RGB hit counts retain total and valid response counts.",
+  "model_count": 13,
+  "question_count": 512,
+  "group_count": 200,
+  "numeric_format_pairs": {
+    "rgb_vs_hsl": {
+      "valid_pairs": 208,
+      "first_lower_error": 127,
+      "second_lower_error": 78,
+      "ties_within_1e_minus_8": 3,
+      "mean_first_minus_second_error": -0.004269151457881295
+    },
+    "rgb_vs_oklch": {
+      "valid_pairs": 207,
+      "first_lower_error": 141,
+      "second_lower_error": 65,
+      "ties_within_1e_minus_8": 1,
+      "mean_first_minus_second_error": -0.008602066469479083
+    },
+    "hsl_vs_oklch": {
+      "valid_pairs": 207,
+      "first_lower_error": 122,
+      "second_lower_error": 84,
+      "ties_within_1e_minus_8": 1,
+      "mean_first_minus_second_error": -0.004291983995711197
+    }
+  }
+}
+matching {"count": 624, "valid_count": 624, "accuracy": 0.7532051282051282, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+lightness {"count": 832, "valid_count": 832, "accuracy": 0.9014423076923077, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+chroma {"count": 832, "valid_count": 832, "accuracy": 0.9543269230769231, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+hue {"count": 416, "valid_count": 415, "accuracy": 0.875, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+binding {"count": 624, "valid_count": 624, "accuracy": 0.7355769230769231, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+gradient {"count": 208, "valid_count": 208, "accuracy": 0.9903846153846154, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+samediff {"count": 624, "valid_count": 624, "accuracy": 0.6714743589743589, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+context {"count": 1040, "valid_count": 1038, "accuracy": 0.7067307692307693, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+smallmatch {"count": 832, "valid_count": 832, "accuracy": 0.5600961538461539, "mean_score": null, "mean_tight_score": null, "mean_delta_e_ok": null, "band_hit_rate": null, "out_of_srgb_count": null}
+rgb {"count": 208, "valid_count": 208, "accuracy": null, "mean_score": 93.15819286894808, "mean_tight_score": 74.4345230862498, "mean_delta_e_ok": 0.013683614262103938, "band_hit_rate": {"0.005": 0.25, "0.01": 0.5192307692307693, "0.02": 0.7932692307692307, "0.05": 0.9807692307692307}, "out_of_srgb_count": 0}
+hsl {"count": 208, "valid_count": 208, "accuracy": null, "mean_score": 91.02361714000735, "mean_tight_score": 66.99427561880219, "mean_delta_e_ok": 0.017952765719985244, "band_hit_rate": {"0.005": 0.18269230769230768, "0.01": 0.40865384615384615, "0.02": 0.7115384615384616, "0.05": 0.9471153846153846}, "out_of_srgb_count": 0}
+oklch {"count": 208, "valid_count": 207, "accuracy": null, "mean_score": 88.42720265954446, "mean_tight_score": 60.09322271841437, "mean_delta_e_ok": 0.022291225573089327, "band_hit_rate": {"0.005": 0.13043478260869565, "0.01": 0.3333333333333333, "0.02": 0.5893719806763285, "0.05": 0.9082125603864735}, "out_of_srgb_count": 14}

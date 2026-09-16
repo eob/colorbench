@@ -1,0 +1,160 @@
+{
+  "status": "pass",
+  "source_git_commit": "a04d7ec74cfb8cd739208fcbf228228ae6653a42",
+  "final_results_sha256": "c29585261d5ad9390968abca4385b547ca9983399ad7663d04fb12e59b3e4555",
+  "finalization_sha256": "70578278488b1d53a0f578579a6327088d07b12daee35660432e795ceaed85f6",
+  "analysis_sha256": "3a2ce64d7a33d584b4c2d4876e1f10168d86dacc22cd1e302b2c8e1f5c76439d",
+  "audit_sha256": "c484a58b7f2582afaebf6c47b95d48db1f476a4bf0db1fcd8a3111fd17299f92",
+  "model_count": 13,
+  "questions_per_model": 512,
+  "unique_png_count": 456,
+  "group_count": 200,
+  "invocation_count": 4,
+  "terminal_duplicate_count": 0,
+  "runtime_source_or_configuration_drift": false,
+  "test_harness_change": "src/matched-render.test.ts: reviewed browser-probe transport change only; no runtime stimulus, protocol, provider, or grading changes",
+  "execution": {
+    "runner_attempt_count": 6656,
+    "http_request_count": 6660,
+    "rows_missing_request_counts": 0,
+    "rows_missing_unmetered_counts": 0,
+    "internal_retry_count": 4,
+    "unmetered_http_request_count": 4,
+    "rows_missing_usage_count": 0,
+    "recorded_usage_subtotal_usd": 44.20451775,
+    "ledger_spending_usd": 44.44385175,
+    "unmetered_reserve_allowance_usd": 0.239334,
+    "usage_complete": false,
+    "invalid_final_response_count": 4,
+    "final_response_count": 6656
+  },
+  "invalids": [
+    {
+      "model": "gpt-5.6-luna",
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "error": "Response did not complete: incomplete",
+      "output_tokens": 4096,
+      "score": 0,
+      "raw_sha256": "7e0794e006b839c22ca8ee25c7067ce908f31e3871ed9679823c206fdce0444f",
+      "raw_status": "incomplete",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "usage": {
+        "input_tokens": 739,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 4096,
+        "output_tokens_details": {
+          "reasoning_tokens": 4096
+        },
+        "total_tokens": 4835
+      }
+    },
+    {
+      "model": "claude-opus-5",
+      "task_id": "colorbench-hue-22",
+      "family": "hue",
+      "error": "Response did not complete: max_tokens",
+      "output_tokens": 4096,
+      "score": 0,
+      "raw_sha256": "dd55162e2e0326056726cbe4ec932a9b03f7af346aff38b50f2af7bd7c21442f",
+      "raw_status": "max_tokens",
+      "incomplete_details": null,
+      "usage": {
+        "input_tokens": 980,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 4096,
+        "output_tokens_details": {
+          "thinking_tokens": 4096
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    },
+    {
+      "model": "muse-spark-1.3",
+      "task_id": "colorbench-context-30",
+      "family": "context",
+      "error": "Response did not complete: incomplete",
+      "output_tokens": 16384,
+      "score": 0,
+      "raw_sha256": "6bf457d9363de16abde42a0720cdfa231b46ddbab01d385d8b4329ecb254a86c",
+      "raw_status": "incomplete",
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "usage": {
+        "input_tokens": 734,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 16384,
+        "output_tokens_details": {
+          "reasoning_tokens": 16381
+        },
+        "total_tokens": 17118
+      }
+    },
+    {
+      "model": "muse-spark-1.2",
+      "task_id": "colorbench-context-52",
+      "family": "context",
+      "error": "Prediction must be one JSON object",
+      "output_tokens": 5700,
+      "score": 0,
+      "raw_sha256": "c18b874335cd9bda0ff87d822f5312ee8bb3a7b0f9d222c26ad022061f857c3c",
+      "raw_text": "The surrounds distort perception \u2014 I'll sample the interior pixels to find the true match to R.{\"choice\": \"B\"}"
+    }
+  ],
+  "recovered_internal_retries": [
+    {
+      "model": "gpt-5.6-sol",
+      "task_id": "colorbench-oklch-13",
+      "request_attempts": 2,
+      "unmetered_attempts": 1,
+      "metered_cost_usd": 0.037796,
+      "reserve_usd": 0.10192,
+      "ledger_cost_usd": 0.139716
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "task_id": "colorbench-matching-29",
+      "request_attempts": 2,
+      "unmetered_attempts": 1,
+      "metered_cost_usd": 0.03116,
+      "reserve_usd": 0.059152,
+      "ledger_cost_usd": 0.090312
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "task_id": "colorbench-oklch-14",
+      "request_attempts": 2,
+      "unmetered_attempts": 1,
+      "metered_cost_usd": 0.006734,
+      "reserve_usd": 0.059152,
+      "ledger_cost_usd": 0.065886
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "task_id": "colorbench-smallmatch-52",
+      "request_attempts": 2,
+      "unmetered_attempts": 1,
+      "metered_cost_usd": 0.00462675,
+      "reserve_usd": 0.01911,
+      "ledger_cost_usd": 0.023736749999999997
+    }
+  ],
+  "numeric_valid_count": 623,
+  "maximum_independent_numeric_distance_drift": 0.0,
+  "summary_or_slice_comparisons": 319,
+  "analysis_paired_comparisons_verified": true
+}

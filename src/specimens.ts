@@ -111,68 +111,53 @@ export const SPECIMENS: ColorSpecimenConfig[] = [];
   }
 }
 
-// Lightness/chroma ordering sweeps: 4 separations x 2 directions x 2 positions.
+// Adjacent chains reuse each interior color as both the lower and higher
+// endpoint. Even a memorized one-patch rule is bounded at 5/8 within a chain.
 for (const family of ["lightness", "chroma"] as const) {
   const separations = family === "lightness" ? [0.1, 0.05, 0.02, 0.01] : [0.06, 0.03, 0.015, 0.008];
-  const directions =
-    family === "lightness" ? (["lighter", "darker"] as const) : (["more", "less"] as const);
-  // Even HUES entries; each lands on both positions across the chromatic cells.
-  const spread4 = [HUES[0]!, HUES[2]!, HUES[4]!, HUES[6]!];
+  const directions = family === "lightness" ? (["lighter", "darker"] as const) : (["more", "less"] as const);
+  const chains = family === "lightness"
+    ? [{ l: 0.36, c: 0, h: 0 }, { l: 0.43, c: 0.05, h: 25 },
+       { l: 0.50, c: 0.05, h: 115 }, { l: 0.58, c: 0.05, h: 295 }]
+    : [{ l: 0.65, c: 0.012, h: 25 }, { l: 0.70, c: 0.008, h: 70 },
+       { l: 0.66, c: 0.016, h: 145 }, { l: 0.64, c: 0.020, h: 295 }];
   let k = 0;
-  let chromaticSeen = 0;
-  for (const [level, sep] of separations.entries()) {
-    for (const [directionIndex, direction] of directions.entries()) {
-      for (let position = 0; position < 2; position++) {
-        // Checkerboard: one gray + one chromatic per cell, 4/4 per position.
-        // Aliases only the forced 3-way interaction, never the answer.
-        const gray = family === "lightness" && (level + directionIndex + position) % 2 === 0;
-        const cellPair = level * 2 + directionIndex;
-        const hue =
-          family === "lightness"
-            ? gray
-              ? 0
-              : spread4[Math.floor(chromaticSeen++ / 2) % 4]!
-            : HUES[(cellPair + position) % 8]!;
-        const pair =
-          family === "lightness"
-            ? [fromOklch(0.62 - sep / 2, gray ? 0 : 0.06, hue), fromOklch(0.62 + sep / 2, gray ? 0 : 0.06, hue)]
-            : [fromOklch(0.65, 0.055 - sep / 2, hue), fromOklch(0.65, 0.055 + sep / 2, hue)];
-        const highWanted = direction === "lighter" || direction === "more";
-        const correct = pair[highWanted ? 1 : 0]!;
-        const wrong = pair[highWanted ? 0 : 1]!;
-        const options =
-          position === 0 ? [solid(correct), solid(wrong)] : [solid(wrong), solid(correct)];
-        const referenceColors =
-          family === "chroma"
-            ? [0, 0.02, 0.04, 0.06, 0.08].map((chroma) => fromOklch(0.65, chroma, hue))
-            : ([
-                [48, 48, 48],
-                [96, 96, 96],
-                [144, 144, 144],
-                [192, 192, 192],
-                [232, 232, 232],
-              ] as Rgb[]);
-        SPECIMENS.push({
-          taskId: `colorbench-${family}-${index(k)}`,
-          family,
-          groupId: `${family}-${index(k)}`,
-          imageId: `${family}-${index(k)}`,
-          options,
-          answer: choices[position],
-          design: {
-            axis: family,
-            difficulty: DIFFICULTY[level]!,
-            direction,
-            intendedHue: gray ? 0 : hue,
-            intendedSeparation: sep,
-            reference: {
-              kind: family === "chroma" ? "gray-to-color" : "dark-to-light",
-              colors: referenceColors,
+  for (const [cell, base] of chains.entries()) {
+    const gaps = separations.map((_, edge) => separations[(edge + cell) % 4]!);
+    const values = [family === "lightness" ? base.l : base.c];
+    for (const gap of gaps) values.push(values.at(-1)! + gap);
+    const fields = values.map((value) => solid(fromOklch(
+      family === "lightness" ? value : base.l,
+      family === "chroma" ? value : base.c, base.h,
+    )));
+    const dimension = family === "lightness" ? "l" : "c";
+    for (let edge = 0; edge < 4; edge++) {
+      if (rgbToOklch(fields[edge + 1]!.rgb!)[dimension] <= rgbToOklch(fields[edge]!.rgb!)[dimension])
+        throw new Error(`Collapsed ${family} chain ${cell} at edge ${edge}`);
+      for (const direction of directions) {
+        for (let orientation = 0; orientation < 2; orientation++) {
+          const options = orientation === 0
+            ? [fields[edge]!, fields[edge + 1]!]
+            : [fields[edge + 1]!, fields[edge]!];
+          const highWanted = direction === "lighter" || direction === "more";
+          const position = highWanted ? 1 - orientation : orientation;
+          const referenceColors = family === "chroma"
+            ? [0, 0.02, 0.04, 0.06, 0.08].map((chroma) => fromOklch(base.l, chroma, base.h))
+            : [[48, 48, 48], [96, 96, 96], [144, 144, 144], [192, 192, 192], [232, 232, 232]] as Rgb[];
+          SPECIMENS.push({
+            taskId: `colorbench-${family}-${index(k)}`, family,
+            groupId: `${family}-chain-${index(cell)}-edge-${index(edge)}`,
+            imageId: `${family}-${index(k)}`, options, answer: choices[position],
+            design: {
+              axis: family, difficulty: DIFFICULTY[separations.indexOf(gaps[edge]!)]!, direction,
+              comparisonSetId: `${family}-chain-${index(cell)}`,
+              intendedHue: base.h, intendedSeparation: gaps[edge],
+              reference: { kind: family === "chroma" ? "gray-to-color" : "dark-to-light", colors: referenceColors },
+              decodedOptionOklch: options.map((option) => rgbToOklch(option.rgb!)),
             },
-            decodedOptionOklch: options.map((option) => rgbToOklch(option.rgb!)),
-          },
-        });
-        k += 1;
+          });
+          k += 1;
+        }
       }
     }
   }
@@ -209,15 +194,27 @@ for (const [level, sep] of [70, 30, 12, 6].entries()) {
   }
 }
 
-// Two histogram-equivalent option sets; each full field becomes R once.
-for (let cell = 0; cell < 2; cell++) {
-  const columns = gradientColumns(NUMERIC_TARGETS[cell]!, NUMERIC_TARGETS[cell + 3]!);
-  const shifted = (offset: number): ColorField => ({
-    columns: [...columns.slice(offset), ...columns.slice(0, offset)],
+// Shared endcaps and histograms remove endpoint/set matching. Two independent
+// interior swaps also prevent any single column from distinguishing all options.
+const gradientPalettes: { a: Rgb; b: Rgb; gray?: number }[] = [
+  { a: NUMERIC_TARGETS[0]!, b: NUMERIC_TARGETS[3]! },
+  { a: NUMERIC_TARGETS[1]!, b: NUMERIC_TARGETS[4]! },
+  { a: [144, 120, 120], b: [120, 120, 180], gray: 127 },
+  { a: [210, 142, 120], b: [140, 160, 210], gray: 160 },
+];
+for (const [cell, palette] of gradientPalettes.entries()) {
+  const columns = gradientColumns(palette.a, palette.b).map((rgb): Rgb => {
+    if (palette.gray === undefined) return rgb;
+    // Quantized Pillow-L control: solve the green channel after interpolation
+    // instead of assuming equal-gray endpoints retain equal gray after rounding.
+    const green = Math.round((palette.gray - 0.299 * rgb[0] - 0.114 * rgb[2]) / 0.587);
+    if (green < 0 || green > 255) throw new Error("Grayscale control leaves the sRGB gamut");
+    return [rgb[0], green, rgb[2]];
   });
-  const options = permuteOptions([
-    { columns }, { columns: [...columns].reverse() }, shifted(80), shifted(160),
-  ], cell);
+  const blocks = Array.from({ length: 4 }, (_, block) => columns.slice(4 + block * 58, 4 + (block + 1) * 58));
+  const options = permuteOptions([[0, 1, 2, 3], [1, 0, 2, 3], [0, 1, 3, 2], [1, 0, 3, 2]].map((order) => ({
+    columns: [...columns.slice(0, 4), ...order.flatMap((block) => blocks[block]!), ...columns.slice(-4)],
+  })), cell);
   for (let position = 0; position < 4; position++) {
     const k = cell * 4 + position;
     const target = options[position]!;
@@ -228,120 +225,107 @@ for (let cell = 0; cell < 2; cell++) {
       design: {
         axis: "spatial-color-progression", difficulty: `set-${cell + 1}`,
         optionSetId: `gradient-${index(cell)}`, sourceRgb: target.columns![0],
-        reference: { kind: "exact-color-field", interpolation: "encoded-srgb-linear-columns", width: GRADIENT_WIDTH },
-        histogramPreservingDistractors: true,
+        reference: { kind: "exact-color-field", interpolation: "encoded-srgb-linear-columns", width: GRADIENT_WIDTH,
+          interiorPermutation: "two-independent-block-swaps", grayscaleCalibration: palette.gray ?? null },
+        histogramPreservingDistractors: true, endpointMatched: true,
+        grayscaleMatched: palette.gray !== undefined,
       },
     });
   }
 }
 
-// Same-different: 8 identical pairs + 8 near-threshold pairs, mappings crossed.
-{
-  const different: { axis: (typeof AXES)[number]; sep: number }[] = [
-    { axis: "lightness", sep: 0.015 },
-    { axis: "lightness", sep: 0.015 },
-    { axis: "lightness", sep: 0.015 },
-    { axis: "chroma", sep: 0.008 },
-    { axis: "chroma", sep: 0.008 },
-    { axis: "chroma", sep: 0.008 },
-    { axis: "hue", sep: 6 },
-    { axis: "hue", sep: 6 },
-  ];
-  for (let i = 0; i < 8; i++) {
-    const direction = i % 2 === 0 ? "sameA" : "sameB";
-    const hue = HUES[i]!;
-    const rgb = fromOklch(0.65, 0.05, hue);
-    SPECIMENS.push({
-      taskId: `colorbench-samediff-${index(i)}`,
-      family: "samediff",
-      groupId: `samediff-${index(i)}`,
-      imageId: `samediff-${index(i)}`,
-      options: [solid(rgb), solid(rgb)],
-      answer: direction === "sameA" ? "A" : "B",
-      design: {
-        axis: "identity",
-        difficulty: "same",
-        direction,
-        same: true,
-        intendedSeparation: 0,
-        intendedHue: hue,
-      },
-    });
+// Reuse both endpoint colors in identical and differing pairs under both
+// answer mappings: either patch alone carries exactly zero label information.
+const equalityPairs = [
+  { axis: "lightness", l: 0.50, c: 0.04, h: 25, sep: 0.015 },
+  { axis: "lightness", l: 0.73, c: 0.065, h: 205, sep: 0.015 },
+  { axis: "chroma", l: 0.60, c: 0.035, h: 115, sep: 0.008 },
+  { axis: "chroma", l: 0.72, c: 0.075, h: 295, sep: 0.008 },
+  { axis: "hue", l: 0.58, c: 0.08, h: 70, sep: 6 },
+  { axis: "hue", l: 0.70, c: 0.06, h: 250, sep: 6 },
+] as const;
+for (const [cell, pair] of equalityPairs.entries()) {
+  const a = solid(shifted(pair.axis, pair, pair.h, pair.sep, 0));
+  const b = solid(shifted(pair.axis, pair, pair.h, pair.sep, 1));
+  if (JSON.stringify(a) === JSON.stringify(b)) throw new Error(`Collapsed same-different pair ${cell}`);
+  const pairings = [{ name: "aa", options: [a, a] }, { name: "bb", options: [b, b] },
+    { name: "ab", options: [a, b] }, { name: "ba", options: [b, a] }];
+  for (const [combination, { name, options }] of pairings.entries()) {
+    const same = combination < 2;
+    const mappingPairId = `samediff-pair-${index(cell)}-${name}`;
+    for (const [mapping, direction] of (["sameA", "sameB"] as const).entries()) {
+      const k = cell * 8 + combination * 2 + mapping;
+      SPECIMENS.push({
+        taskId: `colorbench-samediff-${index(k)}`, family: "samediff",
+        groupId: mappingPairId, imageId: mappingPairId,
+        options, answer: (same === (direction === "sameA")) ? "A" : "B",
+        design: {
+          axis: same ? "identity" : pair.axis, difficulty: same ? "same" : "narrow",
+          pairSetId: `samediff-pair-${index(cell)}`, mappingPairId,
+          direction, same, intendedSeparation: same ? 0 : pair.sep, intendedHue: pair.h,
+        },
+      });
+    }
   }
-  // Same hue and direction sequences as the identical block: each hue gets
-  // one A trial and one B trial, so hue carries no answer information.
-  different.forEach(({ axis, sep }, i) => {
-    const direction = i % 2 === 0 ? "sameA" : "sameB";
-    const hue = HUES[i]!;
-    const base = axis === "hue" ? { l: 0.65, c: 0.09 } : { l: 0.65, c: 0.05 };
-    const lo = solid(shifted(axis, base, hue, sep, 0));
-    const hi = solid(shifted(axis, base, hue, sep, 1));
-    if (JSON.stringify(lo) === JSON.stringify(hi))
-      throw new Error(`Collapsed same-different pair on ${axis} at hue ${hue}`);
-    SPECIMENS.push({
-      taskId: `colorbench-samediff-${index(i + 8)}`,
-      family: "samediff",
-      groupId: `samediff-${index(i + 8)}`,
-      imageId: `samediff-${index(i + 8)}`,
-      // Lower/duller patch left in half the trials, decoupled from answer.
-      options: Math.floor(i / 2) % 2 === 0 ? [lo, hi] : [hi, lo],
-      answer: direction === "sameA" ? "B" : "A",
-      design: {
-        axis,
-        difficulty: "narrow",
-        direction,
-        same: false,
-        intendedSeparation: sep,
-        intendedHue: hue,
-      },
-    });
-  });
 }
 
-// Four option fields on fixed surrounds, each crossed with all references.
+// Each fixed option field is tested on neutral surrounds and every cyclic
+// surround assignment; reference/answer stay paired across interventions.
 for (const [cell, hue] of CONTEXT_HUES.entries()) {
   const axis = AXES[cell % 3]!;
   const sep = axis === "lightness" ? 0.04 : axis === "chroma" ? 0.012 : 15;
   const options = permuteOptions(optionFields(axis, sep, hue), cell);
-  for (let position = 0; position < 4; position++) {
-    const k = cell * 4 + position;
-    const target = options[position]!;
-    SPECIMENS.push({
-      taskId: `colorbench-context-${index(k)}`, family: "context",
-      groupId: `context-${index(k)}`, imageId: `context-${index(k)}`,
-      target, options, answer: choices[position],
-      design: {
-        axis, difficulty: "mid", sourceRgb: target.rgb,
-        optionSetId: `context-${index(cell)}`,
-        intendedTargetOklch: rgbToOklch(target.rgb!), intendedSeparation: sep,
-        intendedHue: hue,
-        surround: Object.fromEntries(choices.map((choice, i) => [choice, CONTEXT_SURROUNDS[i]])),
-        reference: { kind: "surround-shift", neutralSurround: NEUTRAL },
-      },
-    });
+  for (let intervention = 0; intervention < 5; intervention++) {
+    const condition = intervention === 0 ? "neutral" : `surround-${intervention - 1}`;
+    for (let position = 0; position < 4; position++) {
+      const k = cell * 20 + intervention * 4 + position;
+      const target = options[position]!;
+      SPECIMENS.push({
+        taskId: `colorbench-context-${index(k)}`, family: "context",
+        groupId: `context-${index(cell)}-reference-${choices[position]!.toLowerCase()}`, imageId: `context-${index(k)}`,
+        target, options, answer: choices[position],
+        design: {
+          axis, difficulty: "mid", sourceRgb: target.rgb,
+          interventionSetId: `context-${index(cell)}`, condition,
+          optionSetId: `context-${index(cell)}-${condition}`,
+          intendedTargetOklch: rgbToOklch(target.rgb!), intendedSeparation: sep, intendedHue: hue,
+          surround: Object.fromEntries(choices.map((choice, i) => [choice,
+            intervention === 0 ? NEUTRAL : CONTEXT_SURROUNDS[(i + intervention - 1) % 4]!])),
+          reference: { kind: "surround-shift", neutralSurround: NEUTRAL },
+        },
+      });
+    }
   }
 }
 
-// Two geometries x two option fields x four references.
+// Cross the same four color fields with filled size and outline thickness,
+// keeping colors, reference rank, and answer fixed for every intervention.
+const smallConditions = [
+  { condition: "filled-20", layout: "dot", sizePx: 20, strokePx: 0 },
+  { condition: "filled-84", layout: "dot", sizePx: 84, strokePx: 0 },
+  { condition: "outline-3", layout: "frame", sizePx: 84, strokePx: 3 },
+  { condition: "outline-12", layout: "frame", sizePx: 84, strokePx: 12 },
+];
 for (let cell = 0; cell < 4; cell++) {
-  const layout = cell % 2 === 0 ? "dot" : "frame";
   const axis = AXES[cell % 3]!;
   const sep = axis === "lightness" ? 0.03 : axis === "chroma" ? 0.01 : 10;
   const options = permuteOptions(optionFields(axis, sep, HUES[(2 * cell) % 8]!), cell);
-  for (let position = 0; position < 4; position++) {
-    const k = cell * 4 + position;
-    const target = options[position]!;
-    SPECIMENS.push({
-      taskId: `colorbench-smallmatch-${index(k)}`, family: "smallmatch",
-      groupId: `smallmatch-${index(k)}`, imageId: `smallmatch-${index(k)}`,
-      target, options, answer: choices[position],
-      design: {
-        axis, difficulty: "mid", layout, sourceRgb: target.rgb,
-        optionSetId: `smallmatch-${index(cell)}`,
-        intendedTargetOklch: rgbToOklch(target.rgb!), intendedSeparation: sep,
-        reference: { kind: "small-region", neutralSurround: NEUTRAL },
-      },
-    });
+  for (const [intervention, condition] of smallConditions.entries()) {
+    for (let position = 0; position < 4; position++) {
+      const k = cell * 16 + intervention * 4 + position;
+      const target = options[position]!;
+      SPECIMENS.push({
+        taskId: `colorbench-smallmatch-${index(k)}`, family: "smallmatch",
+        groupId: `smallmatch-${index(cell)}-reference-${choices[position]!.toLowerCase()}`, imageId: `smallmatch-${index(k)}`,
+        target, options, answer: choices[position],
+        design: {
+          axis, difficulty: "mid", ...condition, sourceRgb: target.rgb,
+          interventionSetId: `smallmatch-${index(cell)}`, optionSetId: `smallmatch-${index(cell)}-${condition.condition}`,
+          intendedTargetOklch: rgbToOklch(target.rgb!), intendedSeparation: sep,
+          reference: { kind: "small-region", neutralSurround: NEUTRAL },
+        },
+      });
+    }
   }
 }
 
@@ -363,4 +347,5 @@ for (let i = 0; i < NUMERIC_TARGETS.length; i++) {
     });
   }
 }
+for (const specimen of SPECIMENS) specimen.design.controlVersion = "0.4.0";
 SPECIMENS.sort((a, b) => a.taskId.localeCompare(b.taskId));

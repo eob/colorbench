@@ -1,0 +1,37 @@
+{
+  "source_commit": "edfeef9cf7f41860615075cee6a4b1fc63b89cda",
+  "manifest_sha256": "0271b7d47a79ec8988e2edd11c986555e135419695c51d682e1981aa093addc5",
+  "tasks": 512,
+  "unique_images": 456,
+  "base_pixel_answer_check": {
+    "command": "load_manifest(candidate); _item(item, candidate.parent) for every item",
+    "checked": 512,
+    "errors": []
+  },
+  "visually_inspected": [
+    {
+      "file": "gradient-01.png",
+      "sha256": "77a7775f7b363fcedcb6f79d0f126fbb76728b93701cb97bf925b7f792a384cf"
+    },
+    {
+      "file": "gradient-09.png",
+      "sha256": "9e91d8a3916b3121605c2bf16c2a9702fb6060c4567779ce5c9aa281cb0ca350"
+    },
+    {
+      "file": "smallmatch-01.png",
+      "sha256": "eb404a940032a1d9c44e4b60e46a39f0f6cb353a6b74dbcae0e352af1532ce30"
+    },
+    {
+      "file": "smallmatch-13.png",
+      "sha256": "87d6b82449ca59ed79fc7017204db3c09358ef56ee44b44a3d52b99178234ea6"
+    },
+    {
+      "file": "context-01.png",
+      "sha256": "793523b828639f0f3c19e7b142537a52eccfc6f69d72ab22c680996253917a60"
+    },
+    {
+      "file": "context-05.png",
+      "sha256": "6ce217e7bce683abf8d2f5631ecb1312eae16fb6380200b9e9b8c1011d8e9cc7"
+    }
+  ]
+}

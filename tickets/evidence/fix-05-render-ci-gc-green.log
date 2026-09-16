@@ -1,0 +1,97 @@
+bun test v1.3.14 (0d9b296a)
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #1)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1000.85ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #2)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [994.18ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #3)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [992.38ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #4)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [979.40ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #5)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [992.29ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #6)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [983.36ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #7)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [961.93ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #8)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [997.45ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #9)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [967.22ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #10)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1000.84ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #11)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [952.02ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #12)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [985.28ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #13)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [998.14ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #14)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [1009.57ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #15)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [980.93ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #16)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [981.58ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #17)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [990.59ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #18)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [975.15ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #19)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [971.43ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #20)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [962.31ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #21)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [991.31ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #22)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [958.49ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #23)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [980.24ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #24)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [994.21ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #25)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [974.72ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #26)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [980.67ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #27)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [968.58ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #28)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [982.27ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #29)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [985.99ms]
+
+../../../../tmp/colorbench-render-ci-node/matched-render.test.ts: (run #30)
+(pass) outline width changes only the colored stroke at fixed outer dimensions [980.86ms]
+
+ 30 pass
+ 90 filtered out
+ 0 fail
+ 90 expect() calls
+Ran 30 tests across 1 file. [21.12s]

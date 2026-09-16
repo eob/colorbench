@@ -7,7 +7,7 @@ for (const family of ["matching", "binding", "context", "smallmatch", "hue", "gr
   test(`${family}: every identical option field has all four reference answers`, () => {
     const groups = new Map<string, string[]>();
     for (const item of SPECIMENS.filter((s) => s.family === family)) {
-      const key = JSON.stringify([item.options, item.design.layout]);
+      const key = JSON.stringify([item.options, item.design.layout, item.design.sizePx, item.design.strokePx, item.design.surround]);
       groups.set(key, [...(groups.get(key) ?? []), item.answer!]);
     }
     for (const answers of groups.values()) expect(answers.sort()).toEqual(["A", "B", "C", "D"]);

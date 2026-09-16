@@ -1,0 +1,182 @@
+CONTROL A: restore the pre-fix decoded validator only.
+COMMAND: /mnt/disks/data/colorbench/.venv/bin/python -m pytest tests/test_direct_controls.py tests/test_dataset_gate.py -q -k old_gradient_shortcut or duplicate_images_only_allow
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+__ test_old_gradient_shortcut_cannot_be_marked_as_current_controlled_dataset ___
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-315/test_old_gradient_shortcut_can0')
+
+    def test_old_gradient_shortcut_cannot_be_marked_as_current_controlled_dataset(tmp_path):
+        source = ROOT / "dataset/colorbench-v0.3.2"
+        rows = [r for r in json.loads((source / "manifest.json").read_text()) if r["family"] == "gradient"]
+        shutil.copytree(source / "fonts", tmp_path / "fonts")
+        for row in rows:
+            row["design"]["controlVersion"] = "0.4.0"
+            shutil.copyfile(source / row["imageFilename"], tmp_path / row["imageFilename"])
+        path = tmp_path / "manifest.json"
+        path.write_text(json.dumps(rows))
+        report = validate_dataset(path, require_complete=False)
+>       assert not report["valid"], "Old endpoint-only gradients were admitted as new controlled inputs"
+E       AssertionError: Old endpoint-only gradients were admitted as new controlled inputs
+E       assert not True
+
+tests/test_direct_controls.py:139: AssertionError
+_ test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[mapping-group] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-315/test_duplicate_images_only_all0')
+mutation = 'mapping-group'
+
+    @pytest.mark.parametrize("mutation", ["mapping-group", "third-copy", "legacy-version"])
+    def test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs(tmp_path, mutation):
+        from baseline.color_math import rgb_to_oklch
+    
+        builder = []
+        colors = ([120, 120, 120], [150, 150, 150])
+        separation = abs(rgb_to_oklch(colors[0])["l"] - rgb_to_oklch(colors[1])["l"])
+        for index, (a, b) in enumerate((a, b) for a in colors for b in colors):
+            same = a == b
+            group = f"samediff-pair-{index}"
+            for direction in ("sameA", "sameB"):
+                same_choice = "A" if direction == "sameA" else "B"
+                choice = same_choice if same else ("B" if same_choice == "A" else "A")
+                item = _paint(
+                    builder, tmp_path, f"{group}.png", "samediff",
+                    lambda draw: (_flat(draw, 220, 330, 84, 84, a), _flat(draw, 496, 330, 84, 84, b)),
+                    [dict(role="option", id="A", x=220, y=330, width=84, height=84, rgb=a),
+                     dict(role="option", id="B", x=496, y=330, width=84, height=84, rgb=b)],
+                    {"choice": choice}, get_prompt("samediff", direction),
+                    dict(controlVersion="0.4.0", pairSetId="pair-1", mappingPairId=group,
+                         same=same, direction=direction, axis="identity" if same else "lightness",
+                         intendedSeparation=0 if same else separation), group=group)
+                item["taskId"] = f"{group}-{direction.lower()}"
+        path = _write_manifest(tmp_path, builder)
+        report = gate().validate_dataset(path, require_complete=False)
+>       assert report["valid"], report["errors"]
+E       AssertionError: ['Duplicate image outside an explicitly paired numeric-format group', 'Duplicate image outside an explicitly paired nu...utside an explicitly paired numeric-format group', 'Duplicate image outside an explicitly paired numeric-format group']
+E       assert False
+
+tests/test_dataset_gate.py:172: AssertionError
+_ test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[third-copy] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-315/test_duplicate_images_only_all1')
+mutation = 'third-copy'
+
+    @pytest.mark.parametrize("mutation", ["mapping-group", "third-copy", "legacy-version"])
+    def test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs(tmp_path, mutation):
+        from baseline.color_math import rgb_to_oklch
+    
+        builder = []
+        colors = ([120, 120, 120], [150, 150, 150])
+        separation = abs(rgb_to_oklch(colors[0])["l"] - rgb_to_oklch(colors[1])["l"])
+        for index, (a, b) in enumerate((a, b) for a in colors for b in colors):
+            same = a == b
+            group = f"samediff-pair-{index}"
+            for direction in ("sameA", "sameB"):
+                same_choice = "A" if direction == "sameA" else "B"
+                choice = same_choice if same else ("B" if same_choice == "A" else "A")
+                item = _paint(
+                    builder, tmp_path, f"{group}.png", "samediff",
+                    lambda draw: (_flat(draw, 220, 330, 84, 84, a), _flat(draw, 496, 330, 84, 84, b)),
+                    [dict(role="option", id="A", x=220, y=330, width=84, height=84, rgb=a),
+                     dict(role="option", id="B", x=496, y=330, width=84, height=84, rgb=b)],
+                    {"choice": choice}, get_prompt("samediff", direction),
+                    dict(controlVersion="0.4.0", pairSetId="pair-1", mappingPairId=group,
+                         same=same, direction=direction, axis="identity" if same else "lightness",
+                         intendedSeparation=0 if same else separation), group=group)
+                item["taskId"] = f"{group}-{direction.lower()}"
+        path = _write_manifest(tmp_path, builder)
+        report = gate().validate_dataset(path, require_complete=False)
+>       assert report["valid"], report["errors"]
+E       AssertionError: ['Duplicate image outside an explicitly paired numeric-format group', 'Duplicate image outside an explicitly paired nu...utside an explicitly paired numeric-format group', 'Duplicate image outside an explicitly paired numeric-format group']
+E       assert False
+
+tests/test_dataset_gate.py:172: AssertionError
+_ test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[legacy-version] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-315/test_duplicate_images_only_all2')
+mutation = 'legacy-version'
+
+    @pytest.mark.parametrize("mutation", ["mapping-group", "third-copy", "legacy-version"])
+    def test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs(tmp_path, mutation):
+        from baseline.color_math import rgb_to_oklch
+    
+        builder = []
+        colors = ([120, 120, 120], [150, 150, 150])
+        separation = abs(rgb_to_oklch(colors[0])["l"] - rgb_to_oklch(colors[1])["l"])
+        for index, (a, b) in enumerate((a, b) for a in colors for b in colors):
+            same = a == b
+            group = f"samediff-pair-{index}"
+            for direction in ("sameA", "sameB"):
+                same_choice = "A" if direction == "sameA" else "B"
+                choice = same_choice if same else ("B" if same_choice == "A" else "A")
+                item = _paint(
+                    builder, tmp_path, f"{group}.png", "samediff",
+                    lambda draw: (_flat(draw, 220, 330, 84, 84, a), _flat(draw, 496, 330, 84, 84, b)),
+                    [dict(role="option", id="A", x=220, y=330, width=84, height=84, rgb=a),
+                     dict(role="option", id="B", x=496, y=330, width=84, height=84, rgb=b)],
+                    {"choice": choice}, get_prompt("samediff", direction),
+                    dict(controlVersion="0.4.0", pairSetId="pair-1", mappingPairId=group,
+                         same=same, direction=direction, axis="identity" if same else "lightness",
+                         intendedSeparation=0 if same else separation), group=group)
+                item["taskId"] = f"{group}-{direction.lower()}"
+        path = _write_manifest(tmp_path, builder)
+        report = gate().validate_dataset(path, require_complete=False)
+>       assert report["valid"], report["errors"]
+E       AssertionError: ['Duplicate image outside an explicitly paired numeric-format group', 'Duplicate image outside an explicitly paired nu...utside an explicitly paired numeric-format group', 'Duplicate image outside an explicitly paired numeric-format group']
+E       assert False
+
+tests/test_dataset_gate.py:172: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_direct_controls.py::test_old_gradient_shortcut_cannot_be_marked_as_current_controlled_dataset
+FAILED tests/test_dataset_gate.py::test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[mapping-group]
+FAILED tests/test_dataset_gate.py::test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[third-copy]
+FAILED tests/test_dataset_gate.py::test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[legacy-version]
+4 failed, 46 deselected in 0.74s
+CONTROL B: remove only the three review-driven strengthening checks.
+COMMAND: /mnt/disks/data/colorbench/.venv/bin/python -m pytest tests/test_direct_controls.py tests/test_dataset_gate.py -q -k relocate_the_shortcut or two_declared_grayscale or uncontrolled_halo
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_ test_matching_gradient_endpoints_cannot_relocate_the_shortcut_to_one_interior_column _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-316/test_matching_gradient_endpoin0')
+
+    def test_matching_gradient_endpoints_cannot_relocate_the_shortcut_to_one_interior_column(tmp_path):
+        rows = gradients(tmp_path, unique_columns=True)
+>       assert any("single-column" in error for error in check(rows, tmp_path))
+E       assert False
+E        +  where False = any(<generator object test_matching_gradient_endpoints_cannot_relocate_the_shortcut_to_one_interior_column.<locals>.<genexpr> at 0x7fd086cee8e0>)
+
+tests/test_direct_controls.py:222: AssertionError
+____ test_complete_gradients_require_two_declared_grayscale_matched_fields _____
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-316/test_complete_gradients_requir0')
+
+    def test_complete_gradients_require_two_declared_grayscale_matched_fields(tmp_path):
+        from baseline.direct_controls import check_direct_controls
+        rows = [row for field in range(4) for row in gradients(tmp_path, prefix=f"gradient-{field}")]
+        errors = check_direct_controls(rows, tmp_path)
+>       assert any("two grayscale-matched" in error for error in errors)
+E       assert False
+E        +  where False = any(<generator object test_complete_gradients_require_two_declared_grayscale_matched_fields.<locals>.<genexpr> at 0x7fd086d70450>)
+
+tests/test_direct_controls.py:229: AssertionError
+___ test_small_fill_cannot_hide_an_uncontrolled_halo_inside_the_larger_mask ____
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-316/test_small_fill_cannot_hide_an0')
+
+    def test_small_fill_cannot_hide_an_uncontrolled_halo_inside_the_larger_mask(tmp_path):
+        rows = interventions(tmp_path, "smallmatch")
+        assert check(rows, tmp_path) == []
+        # Inside the 84px comparison union, outside the actual 20px fill.
+        change_pixel(tmp_path, rows[0], (370, 152))
+>       assert any("fill or stroke" in error for error in check(rows, tmp_path))
+E       assert False
+E        +  where False = any(<generator object test_small_fill_cannot_hide_an_uncontrolled_halo_inside_the_larger_mask.<locals>.<genexpr> at 0x7fd0885d0ba0>)
+
+tests/test_direct_controls.py:237: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_direct_controls.py::test_matching_gradient_endpoints_cannot_relocate_the_shortcut_to_one_interior_column
+FAILED tests/test_direct_controls.py::test_complete_gradients_require_two_declared_grayscale_matched_fields
+FAILED tests/test_direct_controls.py::test_small_fill_cannot_hide_an_uncontrolled_halo_inside_the_larger_mask
+3 failed, 47 deselected in 0.68s
+Both isolated reversions reproduced their expected failures; shared source was unchanged.

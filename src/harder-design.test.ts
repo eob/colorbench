@@ -5,23 +5,23 @@ import { SPECIMENS } from "./specimens.ts";
 const COUNTS: Record<string, number> = {
   matching: 48,
   binding: 48,
-  lightness: 16,
-  chroma: 16,
+  lightness: 64,
+  chroma: 64,
   hue: 32,
-  gradient: 8,
-  samediff: 16,
-  context: 16,
-  smallmatch: 16,
+  gradient: 16,
+  samediff: 48,
+  context: 80,
+  smallmatch: 64,
   rgb: 16,
   hsl: 16,
   oklch: 16,
 };
 
-describe("reference-balanced 0.3.2 corpus design", () => {
-  test("contains the frozen 264-question corpus", () => {
-    expect(SPECIMENS).toHaveLength(264);
-    expect(new Set(SPECIMENS.map((s) => s.taskId)).size).toBe(264);
-    expect(new Set(SPECIMENS.map((s) => s.imageId)).size).toBe(232);
+describe("controlled 0.4.0 corpus design", () => {
+  test("contains the 512-question candidate corpus", () => {
+    expect(SPECIMENS).toHaveLength(512);
+    expect(new Set(SPECIMENS.map((s) => s.taskId)).size).toBe(512);
+    expect(new Set(SPECIMENS.map((s) => s.imageId)).size).toBe(456);
     for (const [family, count] of Object.entries(COUNTS))
       expect(SPECIMENS.filter((s) => s.family === family)).toHaveLength(count);
   });
@@ -67,7 +67,7 @@ describe("reference-balanced 0.3.2 corpus design", () => {
         cells.set(key, [...(cells.get(key) ?? []), s.answer!]);
       }
       expect(cells.size).toBe(8);
-      for (const answers of cells.values()) expect(answers.sort()).toEqual(["A", "B"]);
+      for (const answers of cells.values()) expect(answers.sort()).toEqual(["A", "A", "A", "A", "B", "B", "B", "B"]);
     }
     const hues = SPECIMENS.filter((s) => s.family === "hue");
     const hueCells = new Map<number, { answers: string[]; fixed: number; varying: number }>();
@@ -93,23 +93,23 @@ describe("reference-balanced 0.3.2 corpus design", () => {
       cells.set(key, (cells.get(key) ?? 0) + 1);
     }
     expect(cells.size).toBe(4);
-    for (const count of cells.values()) expect(count).toBe(4);
+    for (const count of cells.values()) expect(count).toBe(12);
     const contexts = SPECIMENS.filter((s) => s.family === "context");
     expect(new Set(contexts.map((s) => s.design.intendedHue)).size).toBe(4);
-    const perHue = new Map<number, string[]>();
+    const perHue = new Map<string, string[]>();
     for (const s of contexts) {
-      const hue = s.design.intendedHue as number;
+      const hue = `${s.design.intendedHue}@${s.design.condition}`;
       perHue.set(hue, [...(perHue.get(hue) ?? []), s.answer!]);
     }
     for (const answers of perHue.values()) expect(answers.sort()).toEqual(["A", "B", "C", "D"]);
     const smalls = SPECIMENS.filter((s) => s.family === "smallmatch");
     const layoutCells = new Map<string, number>();
     for (const s of smalls) {
-      const key = `${s.design.layout}@${s.answer}`;
+      const key = `${s.design.condition}@${s.answer}`;
       layoutCells.set(key, (layoutCells.get(key) ?? 0) + 1);
     }
-    expect(layoutCells.size).toBe(8);
-    for (const count of layoutCells.values()) expect(count).toBe(2);
+    expect(layoutCells.size).toBe(16);
+    for (const count of layoutCells.values()) expect(count).toBe(4);
   });
   test("pairs matching with binding and numeric formats with shared bytes", () => {
     const pairs = SPECIMENS.filter((s) => ["matching", "binding"].includes(s.family));
@@ -207,14 +207,14 @@ describe("reference-balanced 0.3.2 corpus design", () => {
     for (const family of ["context", "smallmatch"]) {
       const examples = SPECIMENS.filter((s) => s.family === family);
       const ranks = examples.map(rankOf).sort();
-      expect(ranks).toEqual([1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4]);
+      expect(ranks).toEqual([1, 2, 3, 4].flatMap((rank) => Array(examples.length / 4).fill(rank)));
       for (const position of ["A", "B", "C", "D"]) {
         const atPosition = examples.filter((s) => s.answer === position).map(rankOf).sort();
-        expect(atPosition).toEqual([1, 2, 3, 4]);
+        expect(atPosition).toEqual([1, 2, 3, 4].flatMap((rank) => Array(examples.length / 16).fill(rank)));
       }
     }
   });
-  test("samediff hue and gradient direction carry no answer information", () => {
+  test("samediff hue and signed color change carry no answer information", () => {
     const sames = SPECIMENS.filter((s) => s.family === "samediff");
     const perHue = new Map<number, Set<string>>();
     for (const s of sames) {
@@ -222,7 +222,7 @@ describe("reference-balanced 0.3.2 corpus design", () => {
       if (!perHue.has(hue)) perHue.set(hue, new Set());
       perHue.get(hue)!.add(s.answer!);
     }
-    expect(perHue.size).toBe(8);
+    expect(perHue.size).toBe(6);
     for (const answers of perHue.values()) expect(answers).toEqual(new Set(["A", "B"]));
     for (const answer of ["A", "B"]) {
       const signs = sames
@@ -234,23 +234,23 @@ describe("reference-balanced 0.3.2 corpus design", () => {
           const dimension = axis === "lightness" ? "l" : "c";
           return b![dimension] - a![dimension];
         });
-      expect(signs.filter((v) => v < 0)).toHaveLength(2);
-      expect(signs.filter((v) => v > 0)).toHaveLength(2);
+      expect(signs.filter((v) => v < 0)).toHaveLength(6);
+      expect(signs.filter((v) => v > 0)).toHaveLength(6);
     }
   });
   test("lightness gray variant never determines the answer", () => {
     const examples = SPECIMENS.filter((s) => s.family === "lightness");
     for (const position of ["A", "B"]) {
       const atPosition = examples.filter((s) => s.answer === position);
-      expect(atPosition.filter((s) => s.design.intendedHue === 0)).toHaveLength(4);
-      expect(atPosition.filter((s) => s.design.intendedHue !== 0)).toHaveLength(4);
+      expect(atPosition.filter((s) => s.design.intendedHue === 0)).toHaveLength(8);
+      expect(atPosition.filter((s) => s.design.intendedHue !== 0)).toHaveLength(24);
     }
     const cells = new Map<string, number>();
     for (const s of examples) {
       const key = `${s.design.intendedSeparation}@${s.design.direction}`;
       cells.set(key, (cells.get(key) ?? 0) + (s.design.intendedHue === 0 ? 1 : 0));
     }
-    for (const gray of cells.values()) expect(gray).toBe(1);
+    for (const gray of cells.values()) expect(gray).toBe(2);
   });
   test("hue offsets realize the recorded minimum at every level", () => {
     for (const s of SPECIMENS.filter((st) => st.family === "hue")) {
@@ -271,7 +271,7 @@ describe("reference-balanced 0.3.2 corpus design", () => {
   });
   test("gradient option fields cross all references", () => {
     const gradients = SPECIMENS.filter((s) => s.family === "gradient");
-    for (const difficulty of ["set-1", "set-2"]) {
+    for (const difficulty of ["set-1", "set-2", "set-3", "set-4"]) {
       expect(gradients.filter((s) => s.design.difficulty === difficulty).map((s) => s.answer!).sort())
         .toEqual(["A", "B", "C", "D"]);
     }

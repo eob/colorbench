@@ -1,0 +1,103 @@
+test	TypeScript tests	﻿2026-09-16T14:00:48.9141050Z ##[group]Run timeout --kill-after=15s 180s bun run test:ts
+test	TypeScript tests	2026-09-16T14:00:48.9141545Z ^[[36;1mtimeout --kill-after=15s 180s bun run test:ts^[[0m
+test	TypeScript tests	2026-09-16T14:00:48.9181915Z shell: /usr/bin/bash -e {0}
+test	TypeScript tests	2026-09-16T14:00:48.9182210Z env:
+test	TypeScript tests	2026-09-16T14:00:48.9182494Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+test	TypeScript tests	2026-09-16T14:00:48.9182965Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+test	TypeScript tests	2026-09-16T14:00:48.9183413Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	TypeScript tests	2026-09-16T14:00:48.9183805Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	TypeScript tests	2026-09-16T14:00:48.9184193Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	TypeScript tests	2026-09-16T14:00:48.9184580Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+test	TypeScript tests	2026-09-16T14:00:48.9184919Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:48.9283159Z $ bun test src
+test	TypeScript tests	2026-09-16T14:00:48.9314468Z bun test v1.3.14 (0d9b296a)
+test	TypeScript tests	2026-09-16T14:00:48.9436681Z 
+test	TypeScript tests	2026-09-16T14:00:48.9437852Z ##[group]src/reference-control.test.ts:
+test	TypeScript tests	2026-09-16T14:00:48.9597965Z (pass) matching: every identical option field has all four reference answers [1.49ms]
+test	TypeScript tests	2026-09-16T14:00:48.9599206Z (pass) binding: every identical option field has all four reference answers [0.26ms]
+test	TypeScript tests	2026-09-16T14:00:48.9607029Z (pass) context: every identical option field has all four reference answers [0.38ms]
+test	TypeScript tests	2026-09-16T14:00:48.9608074Z (pass) smallmatch: every identical option field has all four reference answers [0.25ms]
+test	TypeScript tests	2026-09-16T14:00:48.9608991Z (pass) hue: every identical option field has all four reference answers [0.14ms]
+test	TypeScript tests	2026-09-16T14:00:48.9642881Z (pass) gradient: every identical option field has all four reference answers [3.52ms]
+test	TypeScript tests	2026-09-16T14:00:48.9643456Z 
+test	TypeScript tests	2026-09-16T14:00:48.9644136Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:48.9644316Z 
+test	TypeScript tests	2026-09-16T14:00:48.9644708Z ##[group]src/render.test.ts:
+test	TypeScript tests	2026-09-16T14:00:51.1424294Z (pass) actual rendered evidence > repeated page renders paint fresh opaque fields and reject a corrupted target [1593.60ms]
+test	TypeScript tests	2026-09-16T14:00:51.6412507Z (pass) actual rendered evidence > numeric image bytes do not reveal the requested representation [498.83ms]
+test	TypeScript tests	2026-09-16T14:00:51.6413466Z 
+test	TypeScript tests	2026-09-16T14:00:51.6413959Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:51.6414092Z 
+test	TypeScript tests	2026-09-16T14:00:51.6414370Z ##[group]src/harder-design.test.ts:
+test	TypeScript tests	2026-09-16T14:00:51.6465487Z (pass) controlled 0.4.0 corpus design > contains the 512-question candidate corpus [1.10ms]
+test	TypeScript tests	2026-09-16T14:00:51.6471132Z (pass) controlled 0.4.0 corpus design > balances every choice location within a family [0.58ms]
+test	TypeScript tests	2026-09-16T14:00:51.6479686Z (pass) controlled 0.4.0 corpus design > crosses every sweep separation with every answer position [0.85ms]
+test	TypeScript tests	2026-09-16T14:00:51.6485497Z (pass) controlled 0.4.0 corpus design > crosses equality, surrounds, and layouts with positions [0.55ms]
+test	TypeScript tests	2026-09-16T14:00:51.6496657Z (pass) controlled 0.4.0 corpus design > pairs matching with binding and numeric formats with shared bytes [1.09ms]
+test	TypeScript tests	2026-09-16T14:00:51.6506342Z (pass) controlled 0.4.0 corpus design > keeps every exact-match target distinct from its distractors [0.97ms]
+test	TypeScript tests	2026-09-16T14:00:51.6520101Z (pass) controlled 0.4.0 corpus design > records decoded ordering gaps near the intended separations [1.37ms]
+test	TypeScript tests	2026-09-16T14:00:51.6523666Z (pass) controlled 0.4.0 corpus design > comparison base hue never determines the answer position [0.35ms]
+test	TypeScript tests	2026-09-16T14:00:51.6556626Z (pass) controlled 0.4.0 corpus design > target rank covers all four possibilities independently of answer position [3.26ms]
+test	TypeScript tests	2026-09-16T14:00:51.6561630Z (pass) controlled 0.4.0 corpus design > samediff hue and signed color change carry no answer information [0.54ms]
+test	TypeScript tests	2026-09-16T14:00:51.6565723Z (pass) controlled 0.4.0 corpus design > lightness gray variant never determines the answer [0.41ms]
+test	TypeScript tests	2026-09-16T14:00:51.6570409Z (pass) controlled 0.4.0 corpus design > hue offsets realize the recorded minimum at every level [0.42ms]
+test	TypeScript tests	2026-09-16T14:00:51.6572773Z (pass) controlled 0.4.0 corpus design > hue fully crosses both contexts with all references [0.26ms]
+test	TypeScript tests	2026-09-16T14:00:51.6574884Z (pass) controlled 0.4.0 corpus design > gradient option fields cross all references [0.21ms]
+test	TypeScript tests	2026-09-16T14:00:51.6591238Z (pass) controlled 0.4.0 corpus design > exact-match nearest gaps realize the recorded separation [1.54ms]
+test	TypeScript tests	2026-09-16T14:00:51.6598381Z (pass) controlled 0.4.0 corpus design > hue winners share decoded pixels and runners-up track the minimum [0.49ms]
+test	TypeScript tests	2026-09-16T14:00:51.6599206Z 
+test	TypeScript tests	2026-09-16T14:00:51.6600029Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:51.6601970Z 
+test	TypeScript tests	2026-09-16T14:00:51.6602573Z ##[group]src/harder-render.test.ts:
+test	TypeScript tests	2026-09-16T14:00:51.6631600Z (pass) harder family rendering > typescript prompts match the python protocol bytes exactly [0.28ms]
+test	TypeScript tests	2026-09-16T14:00:51.6695027Z (pass) harder family rendering > samediff places two patches with no target and keeps images mapping-neutral [6.31ms]
+test	TypeScript tests	2026-09-16T14:00:51.6698426Z (pass) harder family rendering > samediff ground truth derives choice from equality and mapping [0.35ms]
+test	TypeScript tests	2026-09-16T14:00:51.6701604Z (pass) harder family rendering > context records interior regions inside fixed surround canvases [0.31ms]
+test	TypeScript tests	2026-09-16T14:00:51.6735157Z (pass) harder family rendering > smallmatch dot uses 20px fields and frame uses outlined fields [3.34ms]
+test	TypeScript tests	2026-09-16T14:00:51.9514582Z (pass) harder family rendering > frame canvases paint ring color on the border and background inside [277.68ms]
+test	TypeScript tests	2026-09-16T14:00:51.9515734Z 
+test	TypeScript tests	2026-09-16T14:00:51.9516921Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:51.9517151Z 
+test	TypeScript tests	2026-09-16T14:00:51.9517809Z ##[group]src/matched-render.test.ts:
+test	TypeScript tests	2026-09-16T14:00:51.9557460Z (pass) outline and neutral-surround instructions describe all matched conditions [0.06ms]
+test	TypeScript tests	2026-09-16T14:00:51.9573504Z (pass) filled-size conditions retain field centers and label positions [1.55ms]
+test	TypeScript tests	2026-09-16T14:00:56.9595185Z (fail) outline width changes only the colored stroke at fixed outer dimensions [5000.10ms]
+test	TypeScript tests	2026-09-16T14:00:56.9595752Z   ^ this test timed out after 5000ms.
+test	TypeScript tests	2026-09-16T14:00:56.9596449Z (pass) context renders recorded neutral and rotated surrounds [0.96ms]
+test	TypeScript tests	2026-09-16T14:00:56.9596794Z 
+test	TypeScript tests	2026-09-16T14:00:56.9597594Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:56.9597732Z 
+test	TypeScript tests	2026-09-16T14:00:56.9598005Z ##[group]src/output.test.ts:
+test	TypeScript tests	2026-09-16T14:00:56.9610110Z (pass) candidate-only renderer output > refuses historical, arbitrary, symlinked and registered release outputs [1.33ms]
+test	TypeScript tests	2026-09-16T14:00:56.9610599Z 
+test	TypeScript tests	2026-09-16T14:00:56.9610861Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:56.9611001Z 
+test	TypeScript tests	2026-09-16T14:00:56.9611246Z ##[group]src/colors.test.ts:
+test	TypeScript tests	2026-09-16T14:00:56.9623934Z (pass) frozen color conversions > matches independently published sRGB primary Oklab values [0.10ms]
+test	TypeScript tests	2026-09-16T14:00:56.9627104Z (pass) frozen color conversions > uses explicit HSL units and canonical achromatic hue [0.31ms]
+test	TypeScript tests	2026-09-16T14:00:56.9637949Z (pass) frozen color conversions > round trips a grid including neutrals and gamut boundaries [1.02ms]
+test	TypeScript tests	2026-09-16T14:00:56.9639326Z (pass) frozen color conversions > rejects out-of-gamut construction instead of silently clipping [0.11ms]
+test	TypeScript tests	2026-09-16T14:00:56.9640136Z 
+test	TypeScript tests	2026-09-16T14:00:56.9640860Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:56.9641149Z 
+test	TypeScript tests	2026-09-16T14:00:56.9641662Z ##[group]src/direct-controls.test.ts:
+test	TypeScript tests	2026-09-16T14:00:56.9661640Z (pass) direct-color controls for 0.4.0 > declares every controlled task and only explicit shared-image variants [0.34ms]
+test	TypeScript tests	2026-09-16T14:00:56.9677357Z (pass) direct-color controls for 0.4.0 > same-different crosses both endpoint identities, orientation, and mapping [1.54ms]
+test	TypeScript tests	2026-09-16T14:00:56.9692296Z (pass) direct-color controls for 0.4.0 > lightness reuses interior endpoints and bounds either single-patch predictor [1.49ms]
+test	TypeScript tests	2026-09-16T14:00:56.9702198Z (pass) direct-color controls for 0.4.0 > chroma reuses interior endpoints and bounds either single-patch predictor [1.01ms]
+test	TypeScript tests	2026-09-16T14:00:56.9763982Z (pass) direct-color controls for 0.4.0 > gradient endpoints and histograms cannot identify the matching progression [6.03ms]
+test	TypeScript tests	2026-09-16T14:00:56.9776725Z (pass) direct-color controls for 0.4.0 > context interventions hold task colors fixed and cross all surround positions [1.33ms]
+test	TypeScript tests	2026-09-16T14:00:56.9785657Z (pass) direct-color controls for 0.4.0 > small-region interventions hold each palette and answer fixed across all geometries [0.89ms]
+test	TypeScript tests	2026-09-16T14:00:56.9786844Z 
+test	TypeScript tests	2026-09-16T14:00:56.9787605Z ##[endgroup]
+test	TypeScript tests	2026-09-16T14:00:56.9788015Z 
+test	TypeScript tests	2026-09-16T14:00:56.9788202Z 1 tests failed:
+test	TypeScript tests	2026-09-16T14:00:56.9788648Z (fail) outline width changes only the colored stroke at fixed outer dimensions [5000.10ms]
+test	TypeScript tests	2026-09-16T14:00:56.9789111Z   ^ this test timed out after 5000ms.
+test	TypeScript tests	2026-09-16T14:00:56.9789308Z 
+test	TypeScript tests	2026-09-16T14:00:56.9789399Z  45 pass
+test	TypeScript tests	2026-09-16T14:00:56.9789599Z  1 fail
+test	TypeScript tests	2026-09-16T14:00:56.9789810Z  7660 expect() calls
+test	TypeScript tests	2026-09-16T14:00:56.9790063Z Ran 46 tests across 8 files. [8.05s]
+test	TypeScript tests	2026-09-16T14:00:56.9913104Z error: script "test:ts" exited with code 1
+test	TypeScript tests	2026-09-16T14:00:56.9929966Z ##[error]Process completed with exit code 1.

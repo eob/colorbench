@@ -1,0 +1,29 @@
+{
+  "baseCommit": "393d3f24ef4dc7efbfbd8fad9ff37bb90df2ecd2",
+  "checkedAtCommit": "2ea984853efd44ed7a58bc4c968453c73f905917",
+  "specimensSha256": "de344ee4f804bfc315c447ba120da3d85a22b5c2eea4e5a81d40b8a43cb06069",
+  "retainedFamilyConfigurationsUnchanged": 176,
+  "taskCount": 512,
+  "imageIds": 456,
+  "gates": [
+    {
+      "command": "bun test src/direct-controls.test.ts src/harder-design.test.ts src/reference-control.test.ts",
+      "passed": 29,
+      "assertions": 7268
+    },
+    {
+      "command": "bun test src",
+      "passed": 46,
+      "assertions": 7661
+    },
+    {
+      "command": "bun run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "isolated 393d3f2 specimens.ts with new direct-controls.test.ts",
+      "failed": 7,
+      "expectedReversion": true
+    }
+  ]
+}

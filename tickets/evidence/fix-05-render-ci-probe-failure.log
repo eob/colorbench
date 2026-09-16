@@ -1,0 +1,57 @@
+bun test v1.3.14 (0d9b296a)
+
+../../../../tmp/colorbench-render-ci-fault/matched-render.test.ts:
+64 |     timeout: 4000,
+65 |   });
+66 |   const [output, error, exitCode] = await Promise.all([
+67 |     new Response(probe.stdout).text(), new Response(probe.stderr).text(), probe.exited,
+68 |   ]);
+69 |   expect(exitCode, error).toBe(0);
+                               ^
+error: 2026-09-16T14:11:05.565Z pw:api => browserType.launch started
+2026-09-16T14:11:05.569Z pw:browser <launching> /home/ted/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --force-color-profile=srgb --user-data-dir=/tmp/playwright_chromiumdev_profile-UeEIQJ --remote-debugging-pipe --no-startup-window
+2026-09-16T14:11:05.573Z pw:browser <launched> pid=4089093
+2026-09-16T14:11:05.613Z pw:browser [pid=4089093][err] [0916/141105.612716:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+2026-09-16T14:11:05.614Z pw:browser [pid=4089093][err] [0916/141105.614149:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+2026-09-16T14:11:05.615Z pw:api <= browserType.launch succeeded
+2026-09-16T14:11:05.616Z pw:api => browser.newPage started
+2026-09-16T14:11:05.672Z pw:api <= browser.newPage succeeded
+2026-09-16T14:11:05.672Z pw:api => page.setContent started
+2026-09-16T14:11:05.673Z pw:api setting frame content, waiting until "load"
+2026-09-16T14:11:05.715Z pw:browser [pid=4089093][err] [0916/141105.714827:INFO:CONSOLE:3] "--playwright--set--content--0351ec2fcba3a137ab91f1e67c636591--", source:  (3)
+2026-09-16T14:11:05.767Z pw:api <= page.setContent succeeded
+2026-09-16T14:11:05.768Z pw:api => page.evaluate started
+2026-09-16T14:11:05.773Z pw:api <= page.evaluate failed
+2026-09-16T14:11:05.774Z pw:api => browser.close started
+2026-09-16T14:11:05.774Z pw:browser [pid=4089093] <gracefully close start>
+2026-09-16T14:11:05.799Z pw:browser [pid=4089093] <process did exit: exitCode=0, signal=null>
+2026-09-16T14:11:05.799Z pw:browser [pid=4089093] starting temporary directories cleanup
+2026-09-16T14:11:05.802Z pw:browser [pid=4089093] finished temporary directories cleanup
+2026-09-16T14:11:05.802Z pw:browser [pid=4089093] <gracefully close end>
+2026-09-16T14:11:05.802Z pw:api <= browser.close succeeded
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.evaluate: TypeError: Cannot read properties of null (reading 'getContext')
+    at eval (eval at evaluate (:311:30), <anonymous>:3:13)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at /tmp/colorbench-render-ci-fault/[eval1]:11:32 {
+  log: []
+}
+
+Node.js v22.22.3
+
+
+Expected: 0
+Received: 1
+
+      at <anonymous> (/tmp/colorbench-render-ci-fault/matched-render.test.ts:69:27)
+(fail) outline width changes only the colored stroke at fixed outer dimensions [900.61ms]
+
+ 0 pass
+ 3 filtered out
+ 1 fail
+ 2 expect() calls
+Ran 1 test across 1 file. [968.00ms]
