@@ -218,6 +218,15 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 15:20 UTC:** Invocation 2 intentionally drained for the
+  second remote checkpoint. Closed WAL; 3,338 completed results = 3,338
+  attempts; one invalid answer retained; ledger $23.4302059. The first
+  checkpoint's complete attempt export remains a byte-identical prefix.
+  Luna's invalid OKLCH response still has exactly one attempt, verifying
+  that resume did not retry it. Latest CI passes both checks. PID `4123274`
+  / session `28522` finished with intentional exit 130. Commit this closed
+  checkpoint and resume the same cohort/cap once; newest entry records PID.
+
 - **2026-09-16 14:38 UTC:** Invocation 2 resumed successfully from clean
   checkpoint commit `f3224a8ca4f162649b4ade6a5605e5af2165885d` (pushed).
   Active PID `4123274`, root tool session `28522`; same console log, run ID,
