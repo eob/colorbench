@@ -1,0 +1,4377 @@
+{
+  "total_tasks": 113,
+  "expected_task_count": 512,
+  "families": {
+    "matching": {
+      "kind": "choice",
+      "count": 10,
+      "valid_count": 10,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 6,
+      "accuracy": 0.6,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2,
+          "B": 1
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "D": 1,
+          "C": 1
+        },
+        "D": {
+          "B": 1,
+          "C": 1,
+          "D": 1
+        }
+      }
+    },
+    "lightness": {
+      "kind": "choice",
+      "count": 16,
+      "valid_count": 16,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 14,
+      "accuracy": 0.875,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 6,
+          "B": 1
+        },
+        "B": {
+          "B": 8,
+          "A": 1
+        }
+      }
+    },
+    "chroma": {
+      "kind": "choice",
+      "count": 15,
+      "valid_count": 15,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 14,
+      "accuracy": 0.9333333333333333,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 6,
+          "B": 1
+        },
+        "B": {
+          "B": 8
+        }
+      }
+    },
+    "hue": {
+      "kind": "choice",
+      "count": 6,
+      "valid_count": 6,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 5,
+      "accuracy": 0.8333333333333334,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 1
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "A": 1,
+          "C": 1
+        },
+        "D": {
+          "D": 1
+        }
+      }
+    },
+    "binding": {
+      "kind": "choice",
+      "count": 10,
+      "valid_count": 10,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 5,
+      "accuracy": 0.5,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "B": 1,
+          "A": 1,
+          "C": 1
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "A": 1,
+          "C": 2
+        },
+        "D": {
+          "C": 2
+        }
+      }
+    },
+    "gradient": {
+      "kind": "choice",
+      "count": 5,
+      "valid_count": 5,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 5,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 1
+        },
+        "C": {},
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "samediff": {
+      "kind": "choice",
+      "count": 6,
+      "valid_count": 6,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 2,
+      "accuracy": 0.3333333333333333,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "B": 2,
+          "A": 1
+        },
+        "B": {
+          "A": 2,
+          "B": 1
+        }
+      }
+    },
+    "context": {
+      "kind": "choice",
+      "count": 20,
+      "valid_count": 20,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 7,
+      "accuracy": 0.35,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "C": 1,
+          "D": 3
+        },
+        "B": {
+          "B": 2,
+          "D": 3,
+          "A": 1
+        },
+        "C": {
+          "C": 5,
+          "B": 1
+        },
+        "D": {
+          "A": 1,
+          "B": 3
+        }
+      }
+    },
+    "smallmatch": {
+      "kind": "choice",
+      "count": 13,
+      "valid_count": 13,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 7,
+      "accuracy": 0.5384615384615384,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "B": 1,
+          "A": 2
+        },
+        "B": {
+          "B": 1,
+          "A": 1,
+          "D": 1
+        },
+        "C": {
+          "C": 4,
+          "B": 1
+        },
+        "D": {
+          "C": 1,
+          "B": 1
+        }
+      }
+    },
+    "rgb": {
+      "kind": "numeric",
+      "count": 0,
+      "valid_count": 0,
+      "invalid_count": 0,
+      "validity_rate": null,
+      "mean_score": null,
+      "mean_tight_score": null,
+      "mean_delta_e_ok": null,
+      "median_delta_e_ok": null,
+      "p90_delta_e_ok": null,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {},
+      "component_known_count": {},
+      "band_hit_rate": {
+        "0.005": null,
+        "0.01": null,
+        "0.02": null,
+        "0.05": null
+      },
+      "rgb_within_2_lsb": null,
+      "rgb_within_5_lsb": null
+    },
+    "hsl": {
+      "kind": "numeric",
+      "count": 5,
+      "valid_count": 5,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 89.87808207350896,
+      "mean_tight_score": 60.14092937067117,
+      "mean_delta_e_ok": 0.02024383585298209,
+      "median_delta_e_ok": 0.01482764583395504,
+      "p90_delta_e_ok": 0.03925792254864402,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 1.2761945601568243,
+        "l": 1.8000000000000007,
+        "s": 5.917094143108054
+      },
+      "component_known_count": {
+        "h": 5,
+        "l": 5,
+        "s": 5
+      },
+      "band_hit_rate": {
+        "0.005": 0.2,
+        "0.01": 0.2,
+        "0.02": 0.6,
+        "0.05": 0.8
+      },
+      "rgb_within_2_lsb": null,
+      "rgb_within_5_lsb": null
+    },
+    "oklch": {
+      "kind": "numeric",
+      "count": 7,
+      "valid_count": 7,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 90.30388959111393,
+      "mean_tight_score": 61.21555836445565,
+      "mean_delta_e_ok": 0.01939222081777217,
+      "median_delta_e_ok": 0.020514296873568892,
+      "p90_delta_e_ok": 0.022877782465663108,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "c": 0.010906703525732,
+        "h": 2.547980547508546,
+        "l": 0.010974250575163593
+      },
+      "component_known_count": {
+        "c": 7,
+        "h": 7,
+        "l": 7
+      },
+      "band_hit_rate": {
+        "0.005": 0.0,
+        "0.01": 0.0,
+        "0.02": 0.42857142857142855,
+        "0.05": 1.0
+      },
+      "rgb_within_2_lsb": null,
+      "rgb_within_5_lsb": null
+    }
+  },
+  "avg_latency_sec": 36.851606419317186,
+  "model_name": "muse-spark-1.3",
+  "provider": "openai",
+  "timestamp": "2026-09-16T14:37:02.589847+00:00",
+  "grading_version": "2",
+  "evaluation_protocol": "78be5960423e0ea7b850ffb5a5c07dbb41a4658d6c89dd8a43e9dc08c76ab502",
+  "cohort_sha256": "fb37f427878ff538a0cf95d9964bb92a71ff126c0098de14ed2c4317624fa741",
+  "status": "partial",
+  "tasks": [
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-03.png",
+      "raw_prediction": "{\"c\":0.088,\"h\":163.4,\"l\":0.581}",
+      "prediction": {
+        "l": 0.581,
+        "c": 0.088,
+        "h": 163.4
+      },
+      "valid": true,
+      "correct": null,
+      "score": 92.63150200378975,
+      "tight_score": 70.526008015159,
+      "delta_e_ok": 0.014736995992420504,
+      "component_errors": {
+        "l": 0.002097517786385783,
+        "c": 0.012705303141742189,
+        "h": 4.362649471836136
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 27.040109136956744,
+      "input_tokens": 770,
+      "output_tokens": 2329,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01086075,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:00:31.750869+00:00"
+    },
+    {
+      "task_id": "colorbench-context-42",
+      "family": "context",
+      "group_id": "context-03-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-42.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 17.103364042006433,
+      "input_tokens": 734,
+      "output_tokens": 991,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00512925,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:01:01.530792+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-27",
+      "family": "binding",
+      "group_id": "match-binding-27",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-27.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 42.58399667800404,
+      "input_tokens": 730,
+      "output_tokens": 2667,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01224725,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:01:10.728111+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-47",
+      "family": "matching",
+      "group_id": "match-binding-47",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-47.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 56.101790006039664,
+      "input_tokens": 729,
+      "output_tokens": 4206,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01878675,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:02:20.352659+00:00"
+    },
+    {
+      "task_id": "colorbench-context-05",
+      "family": "context",
+      "group_id": "context-01-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-05.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 82.95249953691382,
+      "input_tokens": 734,
+      "output_tokens": 6616,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0290355,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:02:24.501072+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-11",
+      "family": "oklch",
+      "group_id": "numeric-11",
+      "ground_truth": {
+        "rgb": [
+          44,
+          84,
+          228
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-11.png",
+      "raw_prediction": "{\"c\": 0.215, \"h\": 267, \"l\": 0.49}",
+      "prediction": {
+        "l": 0.49,
+        "c": 0.215,
+        "h": 267.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 87.17394983548267,
+      "tight_score": 48.69579934193069,
+      "delta_e_ok": 0.025652100329034658,
+      "component_errors": {
+        "l": 0.024450038841612787,
+        "c": 0.0071598516858300265,
+        "h": 0.7848480507038289
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 25.196383950999007,
+      "input_tokens": 770,
+      "output_tokens": 2268,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0106015,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:02:26.396908+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-20",
+      "family": "chroma",
+      "group_id": "chroma-chain-02-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-20.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.202657670015469,
+      "input_tokens": 732,
+      "output_tokens": 541,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00321425,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:02:42.088723+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-01.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 7.005517871933989,
+      "input_tokens": 716,
+      "output_tokens": 519,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00310075,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:03:24.135810+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-12",
+      "family": "matching",
+      "group_id": "match-binding-12",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-12.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 68.51281809795182,
+      "input_tokens": 729,
+      "output_tokens": 5090,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.02254375,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:03:32.078484+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-28",
+      "family": "smallmatch",
+      "group_id": "smallmatch-02-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-28.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 41.92783378402237,
+      "input_tokens": 732,
+      "output_tokens": 3281,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01485925,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:03:33.574723+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-01.png",
+      "raw_prediction": "{\"h\":355,\"l\":48,\"s\":50}",
+      "prediction": {
+        "h": 355.0,
+        "s": 50.0,
+        "l": 48.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 89.60622383288623,
+      "tight_score": 58.42489533154493,
+      "delta_e_ok": 0.020787552334227535,
+      "component_errors": {
+        "h": 2.5,
+        "s": 0.39370078740157055,
+        "l": 2.1960784313725483
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 15.71580200898461,
+      "input_tokens": 765,
+      "output_tokens": 1525,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0074375,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:03:51.756268+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-09",
+      "family": "hue",
+      "group_id": "hue-09",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-09.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 21.480956568033434,
+      "input_tokens": 741,
+      "output_tokens": 1433,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0070165,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:04:09.285899+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-02.png",
+      "raw_prediction": "{\"c\": 0.127, \"h\": 254.4, \"l\": 0.533}",
+      "prediction": {
+        "l": 0.533,
+        "c": 0.127,
+        "h": 254.4
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.69457830496712,
+      "tight_score": 66.77831321986851,
+      "delta_e_ok": 0.016610843390065747,
+      "component_errors": {
+        "l": 0.0076532993408168215,
+        "c": 0.014403039047677646,
+        "h": 1.3452718586605386
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 22.081026005907916,
+      "input_tokens": 770,
+      "output_tokens": 2194,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.010287,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:04:29.485049+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-55",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-55.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 15.732170925941318,
+      "input_tokens": 732,
+      "output_tokens": 957,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00498225,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:04:57.754493+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-13",
+      "family": "oklch",
+      "group_id": "numeric-13",
+      "ground_truth": {
+        "rgb": [
+          198,
+          58,
+          188
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-13.png",
+      "raw_prediction": "{\"c\": 0.217, \"h\": 334.5, \"l\": 0.608}",
+      "prediction": {
+        "l": 0.608,
+        "c": 0.217,
+        "h": 334.5
+      },
+      "valid": true,
+      "correct": null,
+      "score": 91.73115134652477,
+      "tight_score": 66.92460538609909,
+      "delta_e_ok": 0.016537697306950455,
+      "component_errors": {
+        "l": 0.007026328770219026,
+        "c": 0.006972119215071654,
+        "h": 3.4436509811210385
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 29.328055261052214,
+      "input_tokens": 770,
+      "output_tokens": 2913,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01334275,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:05:45.848702+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-30",
+      "family": "samediff",
+      "group_id": "samediff-pair-04-ab",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "0a4ab165981a50bcd6b555f867e9fb0981199d629c3115939bc1fd3f4639f344",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-04-ab.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 13.904722817940637,
+      "input_tokens": 732,
+      "output_tokens": 1216,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.006083,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:06:23.239337+00:00"
+    },
+    {
+      "task_id": "colorbench-context-20",
+      "family": "context",
+      "group_id": "context-01-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-20.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 53.97455051005818,
+      "input_tokens": 734,
+      "output_tokens": 4274,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.019082,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:06:35.140129+00:00"
+    },
+    {
+      "task_id": "colorbench-context-54",
+      "family": "context",
+      "group_id": "context-03-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-54.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 139.8861784490291,
+      "input_tokens": 734,
+      "output_tokens": 11535,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.04994125,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:06:39.571811+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-62",
+      "family": "lightness",
+      "group_id": "lightness-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-62.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 27.374485500040464,
+      "input_tokens": 716,
+      "output_tokens": 1965,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00924625,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:07:21.185271+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-25",
+      "family": "binding",
+      "group_id": "match-binding-25",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-25.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 43.078242983086966,
+      "input_tokens": 730,
+      "output_tokens": 2923,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01333525,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:08:04.285594+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-05.png",
+      "raw_prediction": "{\"c\": 0.124,\"h\": 304.9,\"l\": 0.541}",
+      "prediction": {
+        "l": 0.541,
+        "c": 0.124,
+        "h": 304.9
+      },
+      "valid": true,
+      "correct": null,
+      "score": 89.66731269552524,
+      "tight_score": 58.669250782100924,
+      "delta_e_ok": 0.020665374608949537,
+      "component_errors": {
+        "l": 0.0030933571259076365,
+        "c": 0.019125551628440624,
+        "h": 3.092859039531959
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 16.663877262966707,
+      "input_tokens": 770,
+      "output_tokens": 1805,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00863375,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:08:09.215642+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-09",
+      "family": "hsl",
+      "group_id": "numeric-09",
+      "ground_truth": {
+        "rgb": [
+          230,
+          32,
+          44
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-09.png",
+      "raw_prediction": "{\"h\":358,\"l\":52,\"s\":84}",
+      "prediction": {
+        "h": 358.0,
+        "s": 84.0,
+        "l": 52.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.17119270668324,
+      "tight_score": 76.68477082673296,
+      "delta_e_ok": 0.011657614586633518,
+      "component_errors": {
+        "h": 1.636363636363626,
+        "s": 4.161290322580655,
+        "l": 0.6274509803921617
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 19.158265298930928,
+      "input_tokens": 765,
+      "output_tokens": 1636,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00790925,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:08:34.934025+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-30",
+      "family": "lightness",
+      "group_id": "lightness-chain-02-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-30.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.268111116020009,
+      "input_tokens": 716,
+      "output_tokens": 346,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0023655,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:08:40.910886+00:00"
+    },
+    {
+      "task_id": "colorbench-context-14",
+      "family": "context",
+      "group_id": "context-01-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-14.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 147.90765908895992,
+      "input_tokens": 734,
+      "output_tokens": 12921,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.05583175,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:03.068389+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-09",
+      "family": "chroma",
+      "group_id": "chroma-chain-01-edge-03",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-09.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 30.304554051952437,
+      "input_tokens": 732,
+      "output_tokens": 2110,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0098825,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:14.413482+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-18",
+      "family": "binding",
+      "group_id": "match-binding-18",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-18.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 23.393778783036396,
+      "input_tokens": 730,
+      "output_tokens": 1633,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00785275,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:17.288701+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-26",
+      "family": "chroma",
+      "group_id": "chroma-chain-02-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-26.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 29.9113527800655,
+      "input_tokens": 732,
+      "output_tokens": 2168,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.010129,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:40.532425+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-56",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-56.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.41828089999035,
+      "input_tokens": 732,
+      "output_tokens": 222,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0018585,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:59.150741+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-40",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-40.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 22.50970233499538,
+      "input_tokens": 716,
+      "output_tokens": 1724,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.008222,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:10:29.937229+00:00"
+    },
+    {
+      "task_id": "colorbench-context-23",
+      "family": "context",
+      "group_id": "context-02-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-23.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 50.19820495706517,
+      "input_tokens": 734,
+      "output_tokens": 4006,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.017943,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:10:35.017192+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-51",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-51.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 33.87184221600182,
+      "input_tokens": 732,
+      "output_tokens": 2744,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.012577,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:11:09.839115+00:00"
+    },
+    {
+      "task_id": "colorbench-context-75",
+      "family": "context",
+      "group_id": "context-04-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-75.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 110.99554230296053,
+      "input_tokens": 734,
+      "output_tokens": 7843,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.03425025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:11:15.487777+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-59",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-59.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 31.479387646890245,
+      "input_tokens": 732,
+      "output_tokens": 2299,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01068575,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:11:52.200691+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-31",
+      "family": "smallmatch",
+      "group_id": "smallmatch-02-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-31.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 31.633981317048892,
+      "input_tokens": 732,
+      "output_tokens": 2331,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01082175,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:12:14.798126+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-47",
+      "family": "samediff",
+      "group_id": "samediff-pair-06-ba",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5e7848665b728e9630152c817156693405880e5f162e38c259dfb28921044958",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-06-ba.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.030108188977465,
+      "input_tokens": 732,
+      "output_tokens": 488,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.002989,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:12:31.299062+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 103.0906080219429,
+      "input_tokens": 740,
+      "output_tokens": 8555,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.03728375,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:12:33.563266+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-63",
+      "family": "lightness",
+      "group_id": "lightness-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-63.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 36.16118421894498,
+      "input_tokens": 716,
+      "output_tokens": 2646,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0121405,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:12:42.830958+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-12",
+      "family": "gradient",
+      "group_id": "gradient-12",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-12.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 21.742761078989133,
+      "input_tokens": 740,
+      "output_tokens": 1678,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0080565,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:13:01.658203+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-16",
+      "family": "matching",
+      "group_id": "match-binding-16",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-16.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 20.838026929995976,
+      "input_tokens": 729,
+      "output_tokens": 1403,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.006874,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:13:35.277232+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-15",
+      "family": "chroma",
+      "group_id": "chroma-chain-01-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-15.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 23.79956467601005,
+      "input_tokens": 732,
+      "output_tokens": 1794,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0085395,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:13:55.631470+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-45",
+      "family": "binding",
+      "group_id": "match-binding-45",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-45.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 62.75342639896553,
+      "input_tokens": 730,
+      "output_tokens": 4824,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0214145,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:13:59.158286+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-53",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-53.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.524997454951517,
+      "input_tokens": 732,
+      "output_tokens": 365,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00246625,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:14:09.939422+00:00"
+    },
+    {
+      "task_id": "colorbench-context-77",
+      "family": "context",
+      "group_id": "context-04-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-77.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 37.400136056006886,
+      "input_tokens": 734,
+      "output_tokens": 3174,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.014407,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:14:23.845190+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-41",
+      "family": "smallmatch",
+      "group_id": "smallmatch-03-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-41.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 30.348447947064415,
+      "input_tokens": 732,
+      "output_tokens": 2281,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01060925,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:14:51.918474+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-21",
+      "family": "chroma",
+      "group_id": "chroma-chain-02-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-21.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 22.81778588402085,
+      "input_tokens": 732,
+      "output_tokens": 1677,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00804225,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:14:56.853408+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-04.png",
+      "raw_prediction": "{\"c\":0.124,\"h\":80,\"l\":0.677}",
+      "prediction": {
+        "l": 0.677,
+        "c": 0.124,
+        "h": 80.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 89.4858813882923,
+      "tight_score": 57.943525553169195,
+      "delta_e_ok": 0.021028237223415406,
+      "component_errors": {
+        "l": 0.020145762438994352,
+        "c": 0.0043618143694579975,
+        "h": 1.9572279593992903
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 30.271370475064032,
+      "input_tokens": 770,
+      "output_tokens": 2859,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01311325,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:15:28.863347+00:00"
+    },
+    {
+      "task_id": "colorbench-context-46",
+      "family": "context",
+      "group_id": "context-03-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-46.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 31.252132914029062,
+      "input_tokens": 734,
+      "output_tokens": 2481,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01146175,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:15:48.948253+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-43",
+      "family": "chroma",
+      "group_id": "chroma-chain-03-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-43.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 9.495446335989982,
+      "input_tokens": 732,
+      "output_tokens": 764,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.004162,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:04.925424+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-28",
+      "family": "lightness",
+      "group_id": "lightness-chain-02-edge-03",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-28.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 31.309503133990802,
+      "input_tokens": 716,
+      "output_tokens": 2354,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0108995,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:07.403945+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-37",
+      "family": "chroma",
+      "group_id": "chroma-chain-03-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-37.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 30.37730016198475,
+      "input_tokens": 732,
+      "output_tokens": 2414,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0111745,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:38.687141+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-14",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-14.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 15.36176396207884,
+      "input_tokens": 716,
+      "output_tokens": 1195,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00597375,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:54.031107+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-62",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-62.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 33.19112106098328,
+      "input_tokens": 732,
+      "output_tokens": 2436,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.011268,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:55.847300+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-02",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-07.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 52.73063281504437,
+      "input_tokens": 716,
+      "output_tokens": 3626,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0163055,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:17:43.403840+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-42",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-42.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.598112085019238,
+      "input_tokens": 716,
+      "output_tokens": 443,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00277775,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:18:05.548435+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-28",
+      "family": "binding",
+      "group_id": "match-binding-28",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-28.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 39.37382611294743,
+      "input_tokens": 730,
+      "output_tokens": 2791,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01277425,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:18:20.942159+00:00"
+    },
+    {
+      "task_id": "colorbench-context-07",
+      "family": "context",
+      "group_id": "context-01-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 112.4396558389999,
+      "input_tokens": 734,
+      "output_tokens": 9930,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.04312,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:19:01.932016+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-17",
+      "family": "chroma",
+      "group_id": "chroma-chain-02-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-17.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 8.609475063043647,
+      "input_tokens": 732,
+      "output_tokens": 804,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.004332,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:19:43.419650+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-03",
+      "family": "smallmatch",
+      "group_id": "smallmatch-01-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 35.37821178208105,
+      "input_tokens": 732,
+      "output_tokens": 2727,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01250475,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:19:50.751712+00:00"
+    },
+    {
+      "task_id": "colorbench-context-25",
+      "family": "context",
+      "group_id": "context-02-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-25.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 87.87048045091797,
+      "input_tokens": 734,
+      "output_tokens": 7687,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.03358725,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:20:14.948651+00:00"
+    },
+    {
+      "task_id": "colorbench-context-16",
+      "family": "context",
+      "group_id": "context-01-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-16.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 133.4341670939466,
+      "input_tokens": 734,
+      "output_tokens": 11519,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.04987325,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:20:25.495093+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-45",
+      "family": "matching",
+      "group_id": "match-binding-45",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-45.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 33.04793752799742,
+      "input_tokens": 729,
+      "output_tokens": 2481,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0114555,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:20:28.628894+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-11",
+      "family": "chroma",
+      "group_id": "chroma-chain-01-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-11.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 27.134562864899635,
+      "input_tokens": 732,
+      "output_tokens": 2129,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00996325,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:20:51.809175+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-61",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-61.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 35.10328635002952,
+      "input_tokens": 732,
+      "output_tokens": 2646,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0121605,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:21:29.869313+00:00"
+    },
+    {
+      "task_id": "colorbench-context-18",
+      "family": "context",
+      "group_id": "context-01-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-18.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 66.12370242201723,
+      "input_tokens": 734,
+      "output_tokens": 5422,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.023961,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:21:41.355695+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 8.864025481045246,
+      "input_tokens": 730,
+      "output_tokens": 817,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00438475,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:22:18.660371+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-14",
+      "family": "gradient",
+      "group_id": "gradient-14",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-14.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 44.20398740004748,
+      "input_tokens": 740,
+      "output_tokens": 3969,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01779325,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:22:33.092275+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-14",
+      "family": "hue",
+      "group_id": "hue-14",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-14.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 18.224513760069385,
+      "input_tokens": 741,
+      "output_tokens": 1333,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0065915,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:22:47.498544+00:00"
+    },
+    {
+      "task_id": "colorbench-context-28",
+      "family": "context",
+      "group_id": "context-02-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-28.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 92.50950931501575,
+      "input_tokens": 734,
+      "output_tokens": 7764,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0339145,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:22:49.650416+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-01",
+      "family": "smallmatch",
+      "group_id": "smallmatch-01-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 19.563765255967155,
+      "input_tokens": 732,
+      "output_tokens": 1681,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00805925,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:23:12.489037+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-08.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 9.51210388704203,
+      "input_tokens": 716,
+      "output_tokens": 825,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00440125,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:23:38.743550+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-29",
+      "family": "binding",
+      "group_id": "match-binding-29",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-29.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 40.94014912599232,
+      "input_tokens": 730,
+      "output_tokens": 2981,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01358175,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:23:57.284989+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-12",
+      "family": "hsl",
+      "group_id": "numeric-12",
+      "ground_truth": {
+        "rgb": [
+          236,
+          208,
+          44
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-12.png",
+      "raw_prediction": "{\"h\":51,\"l\":60,\"s\":100}",
+      "prediction": {
+        "h": 51.0,
+        "s": 100.0,
+        "l": 60.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 74.21424865420583,
+      "tight_score": 0,
+      "delta_e_ok": 0.05157150269158834,
+      "component_errors": {
+        "h": 0.25,
+        "s": 16.52173913043478,
+        "l": 5.098039215686271
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": false
+      },
+      "out_of_srgb": false,
+      "latency_sec": 14.423987852991559,
+      "input_tokens": 765,
+      "output_tokens": 1394,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00688075,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:23:59.205667+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-15",
+      "family": "smallmatch",
+      "group_id": "smallmatch-01-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-15.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 44.309916991973296,
+      "input_tokens": 732,
+      "output_tokens": 2926,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0133505,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:24:46.441742+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-64",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-64.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 36.34388332697563,
+      "input_tokens": 732,
+      "output_tokens": 2949,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01344825,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:24:56.091571+00:00"
+    },
+    {
+      "task_id": "colorbench-context-63",
+      "family": "context",
+      "group_id": "context-04-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-63.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 16.382460797089152,
+      "input_tokens": 734,
+      "output_tokens": 1377,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00676975,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:24:59.326031+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-41",
+      "family": "samediff",
+      "group_id": "samediff-pair-06-aa",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5e7848665b728e9630152c817156693405880e5f162e38c259dfb28921044958",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-06-aa.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 7.217376256012358,
+      "input_tokens": 732,
+      "output_tokens": 522,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0031335,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:25.631734+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-22",
+      "family": "smallmatch",
+      "group_id": "smallmatch-02-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-22.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 34.10211224097293,
+      "input_tokens": 732,
+      "output_tokens": 2647,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01216475,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:30.252448+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-04",
+      "family": "samediff",
+      "group_id": "samediff-pair-01-bb",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "0a4ab165981a50bcd6b555f867e9fb0981199d629c3115939bc1fd3f4639f344",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-01-bb.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 8.377977154916152,
+      "input_tokens": 732,
+      "output_tokens": 767,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00417475,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:38.690998+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-35",
+      "family": "matching",
+      "group_id": "match-binding-35",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-35.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.315989176975563,
+      "input_tokens": 729,
+      "output_tokens": 437,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0027685,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:59.345755+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-26",
+      "family": "matching",
+      "group_id": "match-binding-26",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-26.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 16.707785781938583,
+      "input_tokens": 729,
+      "output_tokens": 1278,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00634275,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:59.455166+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 53.32239630492404,
+      "input_tokens": 740,
+      "output_tokens": 4202,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0187835,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:26:54.394569+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-61",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-61.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 37.84628167399205,
+      "input_tokens": 732,
+      "output_tokens": 2948,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.013444,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:27:02.454166+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-16",
+      "family": "samediff",
+      "group_id": "samediff-pair-02-ba",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "0a4ab165981a50bcd6b555f867e9fb0981199d629c3115939bc1fd3f4639f344",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-02-ba.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 8.240427326061763,
+      "input_tokens": 732,
+      "output_tokens": 756,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.004128,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:27:13.165352+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-54",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-54.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 28.032523746951483,
+      "input_tokens": 732,
+      "output_tokens": 2261,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01052425,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:27:17.144154+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-09",
+      "family": "oklch",
+      "group_id": "numeric-09",
+      "ground_truth": {
+        "rgb": [
+          230,
+          32,
+          44
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-09.png",
+      "raw_prediction": "{\"c\": 0.238, \"h\": 28.5, \"l\": 0.605}",
+      "prediction": {
+        "l": 0.605,
+        "c": 0.238,
+        "h": 28.5
+      },
+      "valid": true,
+      "correct": null,
+      "score": 89.74285156321555,
+      "tight_score": 58.97140625286221,
+      "delta_e_ok": 0.020514296873568892,
+      "component_errors": {
+        "l": 0.012353449722208754,
+        "c": 0.01161924559190386,
+        "h": 2.8493564713070327
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 19.96248063200619,
+      "input_tokens": 770,
+      "output_tokens": 2290,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.010695,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:27:46.703153+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-04.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 7.736658607958816,
+      "input_tokens": 716,
+      "output_tokens": 695,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00384875,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:28:28.571945+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-16",
+      "family": "binding",
+      "group_id": "match-binding-16",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-16.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 47.99568004591856,
+      "input_tokens": 730,
+      "output_tokens": 3607,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01624225,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:28:32.480286+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-22",
+      "family": "matching",
+      "group_id": "match-binding-22",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-22.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 40.31084158399608,
+      "input_tokens": 729,
+      "output_tokens": 3524,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01588825,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:28:44.808677+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-52",
+      "family": "lightness",
+      "group_id": "lightness-chain-04-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-52.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 21.303727399092168,
+      "input_tokens": 716,
+      "output_tokens": 1310,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0064625,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:28:53.849146+00:00"
+    },
+    {
+      "task_id": "colorbench-context-73",
+      "family": "context",
+      "group_id": "context-04-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-73.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 74.86446705600247,
+      "input_tokens": 734,
+      "output_tokens": 6923,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.03034025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:30:01.458209+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-40",
+      "family": "matching",
+      "group_id": "match-binding-40",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-40.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 19.9017221579561,
+      "input_tokens": 729,
+      "output_tokens": 1558,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00753275,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:30:27.347528+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-31",
+      "family": "hue",
+      "group_id": "hue-31",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-31.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 78.16678180196323,
+      "input_tokens": 741,
+      "output_tokens": 5585,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0246625,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:30:33.841036+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 102.91520504606888,
+      "input_tokens": 740,
+      "output_tokens": 9275,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.04034375,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:31:25.232487+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-29",
+      "family": "matching",
+      "group_id": "match-binding-29",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-29.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 31.63748883502558,
+      "input_tokens": 729,
+      "output_tokens": 2514,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01159575,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:31:30.666870+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-06.png",
+      "raw_prediction": "{\"h\":209,\"l\":20,\"s\":47}",
+      "prediction": {
+        "h": 209.0,
+        "s": 47.0,
+        "l": 20.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 92.58617708302248,
+      "tight_score": 70.34470833208992,
+      "delta_e_ok": 0.01482764583395504,
+      "component_errors": {
+        "h": 1.5660377358490507,
+        "s": 7.639175257731964,
+        "l": 0.9803921568627452
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 7.043727781972848,
+      "input_tokens": 765,
+      "output_tokens": 667,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.003791,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:31:41.063284+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-37",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-37.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 43.71073688403703,
+      "input_tokens": 716,
+      "output_tokens": 3377,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01524725,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:32:36.863448+00:00"
+    },
+    {
+      "task_id": "colorbench-context-66",
+      "family": "context",
+      "group_id": "context-04-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-66.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 135.18879177095369,
+      "input_tokens": 734,
+      "output_tokens": 12098,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.052334,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:32:49.098763+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-36",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-36.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 14.704611620050855,
+      "input_tokens": 716,
+      "output_tokens": 1032,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.005281,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:33:03.758665+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-58",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-58.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 35.201103956089355,
+      "input_tokens": 732,
+      "output_tokens": 2568,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.011829,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:33:35.874763+00:00"
+    },
+    {
+      "task_id": "colorbench-context-19",
+      "family": "context",
+      "group_id": "context-01-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-19.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 76.84264252393041,
+      "input_tokens": 734,
+      "output_tokens": 6124,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.0269445,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:33:38.078056+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-23",
+      "family": "binding",
+      "group_id": "match-binding-23",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-23.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 15.735339667997323,
+      "input_tokens": 730,
+      "output_tokens": 1281,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00635675,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:33:53.885247+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-15",
+      "family": "hue",
+      "group_id": "hue-15",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-15.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 22.384568275068887,
+      "input_tokens": 741,
+      "output_tokens": 955,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.004985,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:16.343161+00:00"
+    },
+    {
+      "task_id": "colorbench-context-35",
+      "family": "context",
+      "group_id": "context-02-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-35.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 72.59630636801012,
+      "input_tokens": 734,
+      "output_tokens": 5990,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.026375,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:27.131828+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-45",
+      "family": "samediff",
+      "group_id": "samediff-pair-06-ab",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5e7848665b728e9630152c817156693405880e5f162e38c259dfb28921044958",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-06-ab.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.616329864016734,
+      "input_tokens": 732,
+      "output_tokens": 644,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.003652,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:41.259836+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-64",
+      "family": "lightness",
+      "group_id": "lightness-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-64.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 21.109069733065553,
+      "input_tokens": 716,
+      "output_tokens": 1735,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00826875,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:44.096328+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-06",
+      "family": "smallmatch",
+      "group_id": "smallmatch-01-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-06.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 42.33910327591002,
+      "input_tokens": 732,
+      "output_tokens": 3413,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01542025,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:49.396726+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-10",
+      "family": "hue",
+      "group_id": "hue-10",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-10.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 19.887077001971193,
+      "input_tokens": 741,
+      "output_tokens": 519,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.003132,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:06.489322+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-15",
+      "family": "binding",
+      "group_id": "match-binding-15",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-15.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 33.811268614954315,
+      "input_tokens": 730,
+      "output_tokens": 2811,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.01285925,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:32.566015+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-47",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-47.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 24.39546016207896,
+      "input_tokens": 716,
+      "output_tokens": 1729,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00824325,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:37.371087+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-04.png",
+      "raw_prediction": "{\"h\":39,\"l\":45,\"s\":60}",
+      "prediction": {
+        "h": 39.0,
+        "s": 60.0,
+        "l": 45.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 98.81256809074699,
+      "tight_score": 95.250272362988,
+      "delta_e_ok": 0.002374863818506003,
+      "component_errors": {
+        "h": 0.4285714285714448,
+        "s": 0.8695652173912976,
+        "l": 0.09803921568627771
+      },
+      "within_bands": {
+        "0.005": true,
+        "0.01": true,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 15.473263674997725,
+      "input_tokens": 765,
+      "output_tokens": 1759,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.008432,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:46.284580+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 9.343488320009783,
+      "input_tokens": 741,
+      "output_tokens": 734,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.00404575,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:51.608040+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-21",
+      "family": "matching",
+      "group_id": "match-binding-21",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-21.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 23.424653460038826,
+      "input_tokens": 729,
+      "output_tokens": 2095,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.009815,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:36:16.067960+00:00"
+    },
+    {
+      "task_id": "colorbench-context-56",
+      "family": "context",
+      "group_id": "context-03-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-56.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 54.68031923600938,
+      "input_tokens": 734,
+      "output_tokens": 4697,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "muse-spark-1.3",
+      "provider": "openai",
+      "cost_usd": 0.02087975,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:37:02.364326+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "run_id": "pilot-20260916",
+  "release": "0.4.0",
+  "dataset_git_commit": "c14b9c971bd1fbe1a0126a2683ba4df8b0eeaf6c",
+  "dataset_fingerprint": "3c6b248bfc25f4810c0083bbc5af3c5905fb1000795b21fdd0a57969a7aa3bc0",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/manifest.json",
+  "mock": false,
+  "runner_git_commit": "8aac23361559574e7b1d554fd3499055b4a01f2d",
+  "runner_git_dirty": false,
+  "created_at": "2026-09-16T13:59:47.704119+00:00",
+  "updated_at": "2026-09-16T14:37:02.448848+00:00",
+  "model_config": {
+    "api_key_env": "MODEL_API_KEY",
+    "base_url": "https://api.meta.ai/v1",
+    "display_name": "Muse Spark 1.3",
+    "enabled": true,
+    "id": "muse-spark-1.3",
+    "input_per_m": 1.25,
+    "max_output_tokens": 16384,
+    "model": "muse-spark-1.3",
+    "notes": "Meta Muse Spark 1.3 Standard tier via the OpenAI-compatible Meta Model API Responses endpoint. Reasoning model at model-default high effort; uses model-default reasoning settings. 16384 output cap: the 4096-cap probe returned status incomplete with all 4096 tokens spent on reasoning, and live outputs reach ~6900 tokens, so 16384 keeps headroom above observed reasoning volume. Same $1.25/$4.25 standard pricing as 1.2; prompts never train Meta models.",
+    "output_per_m": 4.25,
+    "pricing_notes": "Standard tier rates in USD per million tokens; cached input $0.15/M not assumed. Output includes reasoning tokens.",
+    "pricing_source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+    "provider": "openai",
+    "source_url": "https://dev.meta.ai/docs/models"
+  },
+  "model_config_fingerprint": "d501fb0c8f92e13a48222500e057dda2fad8750852df8848583d413832d05bb5",
+  "max_output_tokens": 16384,
+  "model_id": "muse-spark-1.3",
+  "display_name": "Muse Spark 1.3",
+  "pricing": {
+    "input_per_m": 1.25,
+    "output_per_m": 4.25
+  }
+}

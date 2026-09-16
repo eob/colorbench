@@ -218,6 +218,16 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 14:37 UTC:** Gracefully drained and closed invocation 1 to
+  push a consistent raw checkpoint. Exit 130 is the intentional SIGINT,
+  not a provider failure. Summary status `interrupted`; SQLite WAL closed;
+  1,470 completed results = 1,470 attempts across all 13 models, including
+  one retained invalid answer. Ledger spending is $10.7205501. No separate
+  infrastructure error remains pending. Committing raw files and resuming
+  the same run ID preserves all prior observations and cumulative budget.
+  Previous PID `4058359` / tool session `86151` is finished; use the newest
+  process entry below once resumed, never restart a second live process.
+
 - **2026-09-16 14:13 UTC:** The campaign remains active. Latest branch CI
   passed twice, but an earlier intermittent new browser-test failure was
   investigated rather than dismissed. Forced Bun garbage collection reproduced

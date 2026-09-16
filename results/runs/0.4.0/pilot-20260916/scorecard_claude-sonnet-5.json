@@ -1,0 +1,4375 @@
+{
+  "total_tasks": 113,
+  "expected_task_count": 512,
+  "families": {
+    "matching": {
+      "kind": "choice",
+      "count": 10,
+      "valid_count": 10,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 8,
+      "accuracy": 0.8,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 3
+        },
+        "B": {
+          "D": 1,
+          "B": 1
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 2,
+          "A": 1
+        }
+      }
+    },
+    "lightness": {
+      "kind": "choice",
+      "count": 16,
+      "valid_count": 16,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 14,
+      "accuracy": 0.875,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 6,
+          "B": 1
+        },
+        "B": {
+          "B": 8,
+          "A": 1
+        }
+      }
+    },
+    "chroma": {
+      "kind": "choice",
+      "count": 15,
+      "valid_count": 15,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 13,
+      "accuracy": 0.8666666666666667,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "A": 5,
+          "B": 2
+        },
+        "B": {
+          "B": 8
+        }
+      }
+    },
+    "hue": {
+      "kind": "choice",
+      "count": 6,
+      "valid_count": 6,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 6,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 1
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "C": 2
+        },
+        "D": {
+          "D": 1
+        }
+      }
+    },
+    "binding": {
+      "kind": "choice",
+      "count": 10,
+      "valid_count": 10,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 6,
+      "accuracy": 0.6,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2,
+          "D": 1
+        },
+        "B": {
+          "B": 2
+        },
+        "C": {
+          "B": 1,
+          "C": 1,
+          "A": 1
+        },
+        "D": {
+          "D": 1,
+          "A": 1
+        }
+      }
+    },
+    "gradient": {
+      "kind": "choice",
+      "count": 5,
+      "valid_count": 5,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 5,
+      "accuracy": 1.0,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 2
+        },
+        "B": {
+          "B": 1
+        },
+        "C": {},
+        "D": {
+          "D": 2
+        }
+      }
+    },
+    "samediff": {
+      "kind": "choice",
+      "count": 6,
+      "valid_count": 6,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 2,
+      "accuracy": 0.3333333333333333,
+      "chance_accuracy": 0.5,
+      "confusion": {
+        "A": {
+          "B": 2,
+          "A": 1
+        },
+        "B": {
+          "A": 2,
+          "B": 1
+        }
+      }
+    },
+    "context": {
+      "kind": "choice",
+      "count": 20,
+      "valid_count": 20,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 14,
+      "accuracy": 0.7,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "C": 2,
+          "B": 4
+        },
+        "C": {
+          "C": 4,
+          "A": 2
+        },
+        "D": {
+          "D": 2,
+          "B": 1,
+          "A": 1
+        }
+      }
+    },
+    "smallmatch": {
+      "kind": "choice",
+      "count": 13,
+      "valid_count": 13,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "correct_count": 5,
+      "accuracy": 0.38461538461538464,
+      "chance_accuracy": 0.25,
+      "confusion": {
+        "A": {
+          "A": 1,
+          "C": 1,
+          "B": 1
+        },
+        "B": {
+          "C": 1,
+          "A": 1,
+          "B": 1
+        },
+        "C": {
+          "A": 3,
+          "C": 2
+        },
+        "D": {
+          "B": 1,
+          "D": 1
+        }
+      }
+    },
+    "rgb": {
+      "kind": "numeric",
+      "count": 0,
+      "valid_count": 0,
+      "invalid_count": 0,
+      "validity_rate": null,
+      "mean_score": null,
+      "mean_tight_score": null,
+      "mean_delta_e_ok": null,
+      "median_delta_e_ok": null,
+      "p90_delta_e_ok": null,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {},
+      "component_known_count": {},
+      "band_hit_rate": {
+        "0.005": null,
+        "0.01": null,
+        "0.02": null,
+        "0.05": null
+      },
+      "rgb_within_2_lsb": null,
+      "rgb_within_5_lsb": null
+    },
+    "hsl": {
+      "kind": "numeric",
+      "count": 5,
+      "valid_count": 5,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 91.29964398711016,
+      "mean_tight_score": 65.19857594844063,
+      "mean_delta_e_ok": 0.017400712025779686,
+      "median_delta_e_ok": 0.01914973950172823,
+      "p90_delta_e_ok": 0.022486653705795084,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "h": 1.821649105611374,
+        "l": 1.2313725490196055,
+        "s": 4.64388236190188
+      },
+      "component_known_count": {
+        "h": 5,
+        "l": 5,
+        "s": 5
+      },
+      "band_hit_rate": {
+        "0.005": 0.0,
+        "0.01": 0.0,
+        "0.02": 0.6,
+        "0.05": 1.0
+      },
+      "rgb_within_2_lsb": null,
+      "rgb_within_5_lsb": null
+    },
+    "oklch": {
+      "kind": "numeric",
+      "count": 7,
+      "valid_count": 7,
+      "invalid_count": 0,
+      "validity_rate": 1.0,
+      "mean_score": 83.92199915190629,
+      "mean_tight_score": 35.68799660762516,
+      "mean_delta_e_ok": 0.03215600169618742,
+      "median_delta_e_ok": 0.03342370439628739,
+      "p90_delta_e_ok": 0.04209620330584003,
+      "out_of_srgb_count": 0,
+      "mean_component_errors": {
+        "c": 0.014015490499473747,
+        "h": 3.009162309634316,
+        "l": 0.021008599577327085
+      },
+      "component_known_count": {
+        "c": 7,
+        "h": 7,
+        "l": 7
+      },
+      "band_hit_rate": {
+        "0.005": 0.0,
+        "0.01": 0.0,
+        "0.02": 0.14285714285714285,
+        "0.05": 1.0
+      },
+      "rgb_within_2_lsb": null,
+      "rgb_within_5_lsb": null
+    }
+  },
+  "avg_latency_sec": 2.4084868893033486,
+  "model_name": "claude-sonnet-5",
+  "provider": "anthropic",
+  "timestamp": "2026-09-16T14:37:02.493897+00:00",
+  "grading_version": "2",
+  "evaluation_protocol": "78be5960423e0ea7b850ffb5a5c07dbb41a4658d6c89dd8a43e9dc08c76ab502",
+  "cohort_sha256": "fb37f427878ff538a0cf95d9964bb92a71ff126c0098de14ed2c4317624fa741",
+  "status": "partial",
+  "tasks": [
+    {
+      "task_id": "colorbench-oklch-03",
+      "family": "oklch",
+      "group_id": "numeric-03",
+      "ground_truth": {
+        "rgb": [
+          60,
+          140,
+          100
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-03.png",
+      "raw_prediction": "{\"l\":0.6,\"c\":0.1,\"h\":155}",
+      "prediction": {
+        "l": 0.6,
+        "c": 0.1,
+        "h": 155.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 88.86912542959926,
+      "tight_score": 55.47650171839709,
+      "delta_e_ok": 0.022261749140801455,
+      "component_errors": {
+        "l": 0.0210975177863858,
+        "c": 0.0007053031417421779,
+        "h": 4.03735052816387
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.266286113997921,
+      "input_tokens": 1045,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00231,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T13:59:52.011855+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-27",
+      "family": "binding",
+      "group_id": "match-binding-27",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-27.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3928070840192959,
+      "input_tokens": 968,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002046,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:00:15.378588+00:00"
+    },
+    {
+      "task_id": "colorbench-context-42",
+      "family": "context",
+      "group_id": "context-03-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-42.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.995780974975787,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:00:38.288538+00:00"
+    },
+    {
+      "task_id": "colorbench-context-05",
+      "family": "context",
+      "group_id": "context-01-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.5074190020095557,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:00:55.653148+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-47",
+      "family": "matching",
+      "group_id": "match-binding-47",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-47.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.394003142020665,
+      "input_tokens": 965,
+      "output_tokens": 199,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00392,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:01:14.135492+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-11",
+      "family": "oklch",
+      "group_id": "numeric-11",
+      "ground_truth": {
+        "rgb": [
+          44,
+          84,
+          228
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-11.png",
+      "raw_prediction": "{\"l\":0.51,\"c\":0.19,\"h\":264}",
+      "prediction": {
+        "l": 0.51,
+        "c": 0.19,
+        "h": 264.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 83.28814780185631,
+      "tight_score": 33.15259120742522,
+      "delta_e_ok": 0.03342370439628739,
+      "component_errors": {
+        "l": 0.004450038841612769,
+        "c": 0.03215985168583002,
+        "h": 2.215151949296171
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 2.7016234289621934,
+      "input_tokens": 1045,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00231,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:01:33.227691+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-12",
+      "family": "matching",
+      "group_id": "match-binding-12",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-12.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7320886590750888,
+      "input_tokens": 965,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00204,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:02:16.591323+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-20",
+      "family": "chroma",
+      "group_id": "chroma-chain-02-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-20.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.307501450064592,
+      "input_tokens": 964,
+      "output_tokens": 47,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002398,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:02:31.748556+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-28",
+      "family": "smallmatch",
+      "group_id": "smallmatch-02-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-28.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.893636654014699,
+      "input_tokens": 974,
+      "output_tokens": 119,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.003138,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:02:42.306452+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-01",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-01.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7806607049424201,
+      "input_tokens": 942,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001994,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:03:08.963505+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-01",
+      "family": "hsl",
+      "group_id": "numeric-01",
+      "ground_truth": {
+        "rgb": [
+          192,
+          64,
+          80
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-01.png",
+      "raw_prediction": "{\"h\": 351, \"s\": 48, \"l\": 51}",
+      "prediction": {
+        "h": 351.0,
+        "s": 48.0,
+        "l": 51.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 93.69931180819697,
+      "tight_score": 74.79724723278787,
+      "delta_e_ok": 0.012601376383606065,
+      "component_errors": {
+        "h": 1.5,
+        "s": 2.3937007874015706,
+        "l": 0.8039215686274517
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 4.842956513981335,
+      "input_tokens": 1043,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002296,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:03:28.518605+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-09",
+      "family": "hue",
+      "group_id": "hue-09",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-09.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.247897797031328,
+      "input_tokens": 980,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00207,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:03:45.292675+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-02",
+      "family": "oklch",
+      "group_id": "numeric-02",
+      "ground_truth": {
+        "rgb": [
+          38,
+          112,
+          190
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-02.png",
+      "raw_prediction": "{\"l\":0.5,\"c\":0.14,\"h\":250}",
+      "prediction": {
+        "l": 0.5,
+        "c": 0.14,
+        "h": 250.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 79.31838256633968,
+      "tight_score": 17.273530265358737,
+      "delta_e_ok": 0.04136323486732063,
+      "component_errors": {
+        "l": 0.04065329934081685,
+        "c": 0.0014030390476776344,
+        "h": 3.054728141339467
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.020247939042747,
+      "input_tokens": 1045,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00231,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:03:58.249849+00:00"
+    },
+    {
+      "task_id": "colorbench-context-54",
+      "family": "context",
+      "group_id": "context-03-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-54.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.407360463985242,
+      "input_tokens": 976,
+      "output_tokens": 44,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002392,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:04:17.206260+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-55",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-55.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.299709668965079,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:04:30.802695+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-13",
+      "family": "oklch",
+      "group_id": "numeric-13",
+      "ground_truth": {
+        "rgb": [
+          198,
+          58,
+          188
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-13.png",
+      "raw_prediction": "{\"l\":0.6,\"c\":0.19,\"h\":330}",
+      "prediction": {
+        "l": 0.6,
+        "c": 0.19,
+        "h": 330.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 82.90089572963741,
+      "tight_score": 31.603582918549634,
+      "delta_e_ok": 0.03419820854072519,
+      "component_errors": {
+        "l": 0.0009736712297809813,
+        "c": 0.03397211921507165,
+        "h": 1.0563490188789615
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.8073764930013567,
+      "input_tokens": 1045,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00231,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:04:59.580383+00:00"
+    },
+    {
+      "task_id": "colorbench-context-20",
+      "family": "context",
+      "group_id": "context-01-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-20.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6703607180388644,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:05:33.698738+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-30",
+      "family": "samediff",
+      "group_id": "samediff-pair-04-ab",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "0a4ab165981a50bcd6b555f867e9fb0981199d629c3115939bc1fd3f4639f344",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-04-ab.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7874597050249577,
+      "input_tokens": 961,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002032,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:05:58.382449+00:00"
+    },
+    {
+      "task_id": "colorbench-context-14",
+      "family": "context",
+      "group_id": "context-01-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-14.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.455088314949535,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:06:25.716695+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-62",
+      "family": "lightness",
+      "group_id": "lightness-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-62.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.8729502200149,
+      "input_tokens": 942,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001994,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:06:47.033035+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-25",
+      "family": "binding",
+      "group_id": "match-binding-25",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-25.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7615316499723122,
+      "input_tokens": 968,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002046,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:07:03.891879+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-05",
+      "family": "oklch",
+      "group_id": "numeric-05",
+      "ground_truth": {
+        "rgb": [
+          135,
+          85,
+          175
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-05.png",
+      "raw_prediction": "{\"l\":0.53,\"c\":0.13,\"h\":310}",
+      "prediction": {
+        "l": 0.53,
+        "c": 0.13,
+        "h": 310.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 90.07863532648047,
+      "tight_score": 60.314541305921885,
+      "delta_e_ok": 0.019842729347039054,
+      "component_errors": {
+        "l": 0.014093357125907646,
+        "c": 0.013125551628440618,
+        "h": 2.007140960468064
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.205192995024845,
+      "input_tokens": 1045,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00231,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:07:30.762898+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-09",
+      "family": "hsl",
+      "group_id": "numeric-09",
+      "ground_truth": {
+        "rgb": [
+          230,
+          32,
+          44
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-09.png",
+      "raw_prediction": "{\"h\": 353, \"s\": 78, \"l\": 50}",
+      "prediction": {
+        "h": 353.0,
+        "s": 78.0,
+        "l": 50.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 94.58645926792435,
+      "tight_score": 78.34583707169745,
+      "delta_e_ok": 0.01082708146415128,
+      "component_errors": {
+        "h": 3.363636363636374,
+        "s": 1.8387096774193452,
+        "l": 1.3725490196078383
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.3054675590246916,
+      "input_tokens": 1043,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002296,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:08:07.498855+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-30",
+      "family": "lightness",
+      "group_id": "lightness-chain-02-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-30.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.665095769101754,
+      "input_tokens": 942,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001994,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:08:29.609394+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-09",
+      "family": "chroma",
+      "group_id": "chroma-chain-01-edge-03",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-09.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3691023690626025,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:08:41.785770+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-18",
+      "family": "binding",
+      "group_id": "match-binding-18",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-18.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.555350923910737,
+      "input_tokens": 968,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002046,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:08:49.503111+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-26",
+      "family": "chroma",
+      "group_id": "chroma-chain-02-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-26.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.8729944420047104,
+      "input_tokens": 964,
+      "output_tokens": 78,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002708,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:06.363511+00:00"
+    },
+    {
+      "task_id": "colorbench-context-75",
+      "family": "context",
+      "group_id": "context-04-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-75.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2182254259241745,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:18.532998+00:00"
+    },
+    {
+      "task_id": "colorbench-context-23",
+      "family": "context",
+      "group_id": "context-02-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-23.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.650553595041856,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:39.071521+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-56",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-56.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3617018780205399,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:09:52.758545+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-40",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-40.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3871299950405955,
+      "input_tokens": 941,
+      "output_tokens": 80,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002682,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:10:03.367375+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-51",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-51.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3144826949574053,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:10:29.767436+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-01",
+      "family": "gradient",
+      "group_id": "gradient-01",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-01.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5498456240165979,
+      "input_tokens": 979,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002068,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:10:43.266023+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-59",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-59.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.345468807965517,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:11:08.964137+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-31",
+      "family": "smallmatch",
+      "group_id": "smallmatch-02-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-31.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.308723908965476,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:11:32.059176+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-63",
+      "family": "lightness",
+      "group_id": "lightness-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-63.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.342341916053556,
+      "input_tokens": 941,
+      "output_tokens": 82,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002702,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:12:00.821320+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-47",
+      "family": "samediff",
+      "group_id": "samediff-pair-06-ba",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5e7848665b728e9630152c817156693405880e5f162e38c259dfb28921044958",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-06-ba.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.621311208931729,
+      "input_tokens": 961,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002032,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:12:19.317227+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-12",
+      "family": "gradient",
+      "group_id": "gradient-12",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-12.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3239114090101793,
+      "input_tokens": 979,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002068,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:12:33.796288+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-45",
+      "family": "binding",
+      "group_id": "match-binding-45",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-45.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.657782251946628,
+      "input_tokens": 968,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002046,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:12:50.161372+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-16",
+      "family": "matching",
+      "group_id": "match-binding-16",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-16.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.525707824039273,
+      "input_tokens": 965,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00204,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:13:08.553254+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-15",
+      "family": "chroma",
+      "group_id": "chroma-chain-01-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-15.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.2218675130279735,
+      "input_tokens": 964,
+      "output_tokens": 152,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.003448,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:13:23.983162+00:00"
+    },
+    {
+      "task_id": "colorbench-context-77",
+      "family": "context",
+      "group_id": "context-04-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-77.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.493790217093192,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:13:41.394437+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-53",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-53.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.134762969915755,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:14:03.508532+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-41",
+      "family": "smallmatch",
+      "group_id": "smallmatch-03-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-41.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.2263709700200707,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:14:12.203502+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-21",
+      "family": "chroma",
+      "group_id": "chroma-chain-02-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-21.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.581250519026071,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:14:31.056833+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-04",
+      "family": "oklch",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-04.png",
+      "raw_prediction": "{\"l\":0.68,\"c\":0.13,\"h\":70}",
+      "prediction": {
+        "l": 0.68,
+        "c": 0.13,
+        "h": 70.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 84.59663519124047,
+      "tight_score": 38.38654076496185,
+      "delta_e_ok": 0.030806729617519076,
+      "component_errors": {
+        "l": 0.023145762438994355,
+        "c": 0.010361814369458003,
+        "h": 8.04277204060071
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.521484142052941,
+      "input_tokens": 1045,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00231,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:14:43.312725+00:00"
+    },
+    {
+      "task_id": "colorbench-context-46",
+      "family": "context",
+      "group_id": "context-03-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-46.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7599932200973853,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:15:14.314112+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-28",
+      "family": "lightness",
+      "group_id": "lightness-chain-02-edge-03",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-28.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.530853068921715,
+      "input_tokens": 941,
+      "output_tokens": 89,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002772,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:15:32.813879+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-43",
+      "family": "chroma",
+      "group_id": "chroma-chain-03-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-43.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.8392579020000994,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:15:52.060343+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-37",
+      "family": "chroma",
+      "group_id": "chroma-chain-03-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-37.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.354590669972822,
+      "input_tokens": 964,
+      "output_tokens": 116,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.003088,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:01.201862+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-62",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-62.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.763990163919516,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:17.967573+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-14",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-14.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7916984790936112,
+      "input_tokens": 942,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001994,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:34.317684+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-07",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-02",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-07.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.5020771760027856,
+      "input_tokens": 941,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001992,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:16:48.821547+00:00"
+    },
+    {
+      "task_id": "colorbench-context-07",
+      "family": "context",
+      "group_id": "context-01-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-07.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.690330107929185,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:17:00.461363+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-28",
+      "family": "binding",
+      "group_id": "match-binding-28",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-28.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.398726045968942,
+      "input_tokens": 968,
+      "output_tokens": 89,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002826,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:17:23.859959+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-42",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-42.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.040816340013407,
+      "input_tokens": 942,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001994,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:17:55.544916+00:00"
+    },
+    {
+      "task_id": "colorbench-context-16",
+      "family": "context",
+      "group_id": "context-01-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-16.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2414365980075672,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:18:06.833883+00:00"
+    },
+    {
+      "task_id": "colorbench-context-25",
+      "family": "context",
+      "group_id": "context-02-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-25.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.0032897760393098,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:18:25.462558+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-03",
+      "family": "smallmatch",
+      "group_id": "smallmatch-01-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-03.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.870918411994353,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:19:06.035931+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-17",
+      "family": "chroma",
+      "group_id": "chroma-chain-02-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-17.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.299482082016766,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:19:28.665193+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-45",
+      "family": "matching",
+      "group_id": "match-binding-45",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-45.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 7.821971333003603,
+      "input_tokens": 965,
+      "output_tokens": 492,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00685,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:19:54.587605+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-11",
+      "family": "chroma",
+      "group_id": "chroma-chain-01-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "f7627aca5640b4e4bb5108ec22eda036673dd7300493ad098f17639bff610e34",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-11.png",
+      "raw_prediction": "{\"choice\": \"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.3739462989615276,
+      "input_tokens": 964,
+      "output_tokens": 154,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.003468,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:20:16.571500+00:00"
+    },
+    {
+      "task_id": "colorbench-context-18",
+      "family": "context",
+      "group_id": "context-01-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-18.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.5140583210159093,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:20:31.191844+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-61",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-61.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.550866293022409,
+      "input_tokens": 964,
+      "output_tokens": 43,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002358,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:20:46.610264+00:00"
+    },
+    {
+      "task_id": "colorbench-context-28",
+      "family": "context",
+      "group_id": "context-02-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-28.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.198294149013236,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:21:04.628153+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-14",
+      "family": "gradient",
+      "group_id": "gradient-14",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-14.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.5482101989910007,
+      "input_tokens": 979,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002068,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:21:38.192769+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-02",
+      "family": "binding",
+      "group_id": "match-binding-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-02.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.620891112019308,
+      "input_tokens": 968,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002046,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:22:03.244415+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-14",
+      "family": "hue",
+      "group_id": "hue-14",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-14.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 5.500906381988898,
+      "input_tokens": 980,
+      "output_tokens": 429,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00625,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:22:22.942122+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-01",
+      "family": "smallmatch",
+      "group_id": "smallmatch-01-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-01.png",
+      "raw_prediction": "{\"choice\": \"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.6947749740211293,
+      "input_tokens": 974,
+      "output_tokens": 202,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.003968,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:22:50.060853+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-29",
+      "family": "binding",
+      "group_id": "match-binding-29",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-29.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.1704317840049043,
+      "input_tokens": 968,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002046,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:23:06.811607+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-08",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-08.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6920616179704666,
+      "input_tokens": 941,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001992,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:23:26.210039+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-12",
+      "family": "hsl",
+      "group_id": "numeric-12",
+      "ground_truth": {
+        "rgb": [
+          236,
+          208,
+          44
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-12.png",
+      "raw_prediction": "{\"h\":49,\"s\":80,\"l\":56}",
+      "prediction": {
+        "h": 49.0,
+        "s": 80.0,
+        "l": 56.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 88.20872851492514,
+      "tight_score": 52.83491405970055,
+      "delta_e_ok": 0.023582542970149726,
+      "component_errors": {
+        "h": 2.25,
+        "s": 3.4782608695652186,
+        "l": 1.0980392156862706
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 3.5093588239979,
+      "input_tokens": 1043,
+      "output_tokens": 18,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002266,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:23:37.541403+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-15",
+      "family": "smallmatch",
+      "group_id": "smallmatch-01-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-15.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2508040870307013,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:23:56.447551+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-64",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-64.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3228002139367163,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:24:09.657962+00:00"
+    },
+    {
+      "task_id": "colorbench-context-63",
+      "family": "context",
+      "group_id": "context-04-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-63.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.6928541470551863,
+      "input_tokens": 976,
+      "output_tokens": 80,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002752,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:24:37.835170+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-22",
+      "family": "smallmatch",
+      "group_id": "smallmatch-02-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-22.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.4201184649718925,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:24:51.832841+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-41",
+      "family": "samediff",
+      "group_id": "samediff-pair-06-aa",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5e7848665b728e9630152c817156693405880e5f162e38c259dfb28921044958",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-06-aa.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.4177750599337742,
+      "input_tokens": 961,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002032,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:05.128503+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-04",
+      "family": "samediff",
+      "group_id": "samediff-pair-01-bb",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "0a4ab165981a50bcd6b555f867e9fb0981199d629c3115939bc1fd3f4639f344",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-01-bb.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.253374196938239,
+      "input_tokens": 961,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002032,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:24.527857+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-26",
+      "family": "matching",
+      "group_id": "match-binding-26",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-26.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3695929850218818,
+      "input_tokens": 965,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00204,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:38.225530+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-35",
+      "family": "matching",
+      "group_id": "match-binding-35",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-35.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3107965789968148,
+      "input_tokens": 965,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00204,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:50.532388+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-05",
+      "family": "gradient",
+      "group_id": "gradient-05",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-05.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.7159758970374241,
+      "input_tokens": 979,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002068,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:25:58.697181+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-61",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-61.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.832441317033954,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:26:12.906950+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-54",
+      "family": "smallmatch",
+      "group_id": "smallmatch-04-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-54.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.018201263039373,
+      "input_tokens": 974,
+      "output_tokens": 75,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002698,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:26:41.906804+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-16",
+      "family": "samediff",
+      "group_id": "samediff-pair-02-ba",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "0a4ab165981a50bcd6b555f867e9fb0981199d629c3115939bc1fd3f4639f344",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-02-ba.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.0552070180419832,
+      "input_tokens": 961,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002032,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:26:59.475022+00:00"
+    },
+    {
+      "task_id": "colorbench-oklch-09",
+      "family": "oklch",
+      "group_id": "numeric-09",
+      "ground_truth": {
+        "rgb": [
+          230,
+          32,
+          44
+        ]
+      },
+      "prompt_sha256": "cfc2f885cbdbcece08f23bb635b333e3e35d9a41ebaf72f1a755e461f8f494d4",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-09.png",
+      "raw_prediction": "{\"l\":0.55,\"c\":0.22,\"h\":25}",
+      "prediction": {
+        "l": 0.55,
+        "c": 0.22,
+        "h": 25.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 78.40217201819044,
+      "tight_score": 13.608688072761744,
+      "delta_e_ok": 0.04319565596361913,
+      "component_errors": {
+        "l": 0.042646550277791184,
+        "c": 0.006380754408096129,
+        "h": 0.6506435286929673
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.529625996015966,
+      "input_tokens": 1045,
+      "output_tokens": 22,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00231,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:27:14.760244+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-16",
+      "family": "binding",
+      "group_id": "match-binding-16",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-16.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.011743627022952,
+      "input_tokens": 968,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002046,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:27:33.581810+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-22",
+      "family": "matching",
+      "group_id": "match-binding-22",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-22.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.188423204002902,
+      "input_tokens": 965,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00204,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:27:52.622524+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-04",
+      "family": "lightness",
+      "group_id": "lightness-chain-01-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-04.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.6264865669654682,
+      "input_tokens": 941,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001992,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:28:14.930121+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-52",
+      "family": "lightness",
+      "group_id": "lightness-chain-04-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-52.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.63595027604606,
+      "input_tokens": 941,
+      "output_tokens": 52,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002402,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:28:27.852843+00:00"
+    },
+    {
+      "task_id": "colorbench-context-73",
+      "family": "context",
+      "group_id": "context-04-reference-a",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-73.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.7567498029675335,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:28:40.201728+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-31",
+      "family": "hue",
+      "group_id": "hue-31",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-31.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 6.313633693032898,
+      "input_tokens": 980,
+      "output_tokens": 401,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00597,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:29:03.164327+00:00"
+    },
+    {
+      "task_id": "colorbench-gradient-04",
+      "family": "gradient",
+      "group_id": "gradient-04",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "93858b61346b697f9021a41a361838e5b0b8c06fbde9b0b35f514c9e29082ee5",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/gradient-04.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 4.441597579978406,
+      "input_tokens": 979,
+      "output_tokens": 204,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.003998,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:29:35.653141+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-40",
+      "family": "matching",
+      "group_id": "match-binding-40",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-40.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3987581999972463,
+      "input_tokens": 965,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00204,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:29:56.308791+00:00"
+    },
+    {
+      "task_id": "colorbench-context-66",
+      "family": "context",
+      "group_id": "context-04-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-66.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.1793066939571872,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:30:20.030744+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-29",
+      "family": "matching",
+      "group_id": "match-binding-29",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-29.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.557680548983626,
+      "input_tokens": 965,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00204,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:30:46.063586+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-06",
+      "family": "hsl",
+      "group_id": "numeric-06",
+      "ground_truth": {
+        "rgb": [
+          22,
+          48,
+          75
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-06.png",
+      "raw_prediction": "{\"h\": 209, \"s\": 40, \"l\": 20}",
+      "prediction": {
+        "h": 209.0,
+        "s": 40.0,
+        "l": 20.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 90.42513024913589,
+      "tight_score": 61.70052099654354,
+      "delta_e_ok": 0.01914973950172823,
+      "component_errors": {
+        "h": 1.5660377358490507,
+        "s": 14.639175257731964,
+        "l": 0.9803921568627452
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": true,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.555320494924672,
+      "input_tokens": 1043,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002296,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:31:20.843790+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-37",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-02",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "64bfc83d308291dc6a447de93571b42ec09ec6278f7fe82905c059b3926629a9",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-37.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.759146151947789,
+      "input_tokens": 942,
+      "output_tokens": 57,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002454,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:31:45.433388+00:00"
+    },
+    {
+      "task_id": "colorbench-context-19",
+      "family": "context",
+      "group_id": "context-01-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-19.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.033781389007345,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:32:08.302528+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-36",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-01",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-36.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.5194304699543864,
+      "input_tokens": 941,
+      "output_tokens": 47,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002352,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:32:43.999209+00:00"
+    },
+    {
+      "task_id": "colorbench-chroma-58",
+      "family": "chroma",
+      "group_id": "chroma-chain-04-edge-03",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7cb1baae3d2170148c899969e7afaa6d6a5143997cc3086bc447697d521e10ca",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/chroma-58.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.749667349969968,
+      "input_tokens": 964,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002038,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:32:56.500104+00:00"
+    },
+    {
+      "task_id": "colorbench-context-35",
+      "family": "context",
+      "group_id": "context-02-reference-c",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-35.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.186242347001098,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:33:06.014513+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-23",
+      "family": "binding",
+      "group_id": "match-binding-23",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-23.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.6368053660262376,
+      "input_tokens": 968,
+      "output_tokens": 107,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.003006,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:33:29.664987+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-15",
+      "family": "hue",
+      "group_id": "hue-15",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-15.png",
+      "raw_prediction": "{\"choice\":\"C\"}",
+      "prediction": {
+        "choice": "C"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 3.7948154020123184,
+      "input_tokens": 980,
+      "output_tokens": 161,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00357,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:33:51.339811+00:00"
+    },
+    {
+      "task_id": "colorbench-smallmatch-06",
+      "family": "smallmatch",
+      "group_id": "smallmatch-01-reference-b",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "361c2a4e83368dd4367c64d304c6542876eb2d43fa163d496f9307f80143b32a",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/smallmatch-06.png",
+      "raw_prediction": "{\"choice\": \"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3775155689800158,
+      "input_tokens": 974,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002058,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:02.031581+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-64",
+      "family": "lightness",
+      "group_id": "lightness-chain-04-edge-04",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-64.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.763850359013304,
+      "input_tokens": 941,
+      "output_tokens": 50,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002382,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:19.059108+00:00"
+    },
+    {
+      "task_id": "colorbench-samediff-45",
+      "family": "samediff",
+      "group_id": "samediff-pair-06-ab",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "5e7848665b728e9630152c817156693405880e5f162e38c259dfb28921044958",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/samediff-pair-06-ab.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.2688693539239466,
+      "input_tokens": 961,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002032,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:29.477397+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-10",
+      "family": "hue",
+      "group_id": "hue-10",
+      "ground_truth": {
+        "choice": "B"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-10.png",
+      "raw_prediction": "{\"choice\":\"B\"}",
+      "prediction": {
+        "choice": "B"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.220066907000728,
+      "input_tokens": 980,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00207,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:42.331301+00:00"
+    },
+    {
+      "task_id": "colorbench-binding-15",
+      "family": "binding",
+      "group_id": "match-binding-15",
+      "ground_truth": {
+        "choice": "C"
+      },
+      "prompt_sha256": "8b013c5c41d5fc9d50fb2beee0bcce19f796d51330785d28880d5d12cc00ea10",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/binding-15.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": false,
+      "score": 0.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.3251801470760256,
+      "input_tokens": 968,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002046,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:34:54.818436+00:00"
+    },
+    {
+      "task_id": "colorbench-lightness-47",
+      "family": "lightness",
+      "group_id": "lightness-chain-03-edge-04",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "14500bd7eefa43cebfa107c8a8fa9fa53dddd9be742ffa97660526f7a924c308",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/lightness-47.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 2.2218296830542386,
+      "input_tokens": 941,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.001992,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:08.133923+00:00"
+    },
+    {
+      "task_id": "colorbench-hsl-04",
+      "family": "hsl",
+      "group_id": "numeric-04",
+      "ground_truth": {
+        "rgb": [
+          185,
+          135,
+          45
+        ]
+      },
+      "prompt_sha256": "d5a3e77db006cc09848010934a3ee06e3beb9ab32aa54f5bf67eb79750a81ad8",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/numeric-04.png",
+      "raw_prediction": "{\"h\": 39, \"s\": 60, \"l\": 47}",
+      "prediction": {
+        "h": 39.0,
+        "s": 60.0,
+        "l": 47.0
+      },
+      "valid": true,
+      "correct": null,
+      "score": 89.57859009536844,
+      "tight_score": 58.31436038147375,
+      "delta_e_ok": 0.020842819809263127,
+      "component_errors": {
+        "h": 0.4285714285714448,
+        "s": 0.8695652173912976,
+        "l": 1.9019607843137223
+      },
+      "within_bands": {
+        "0.005": false,
+        "0.01": false,
+        "0.02": false,
+        "0.05": true
+      },
+      "out_of_srgb": false,
+      "latency_sec": 1.507529105991125,
+      "input_tokens": 1043,
+      "output_tokens": 21,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002296,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:19.523561+00:00"
+    },
+    {
+      "task_id": "colorbench-hue-08",
+      "family": "hue",
+      "group_id": "hue-08",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "8234947471a1bb7076e1e5dfe2fd3aba8c91ae436b20be843f2b0ab51861fe52",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/hue-08.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.2541823950596154,
+      "input_tokens": 980,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00207,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:38.003801+00:00"
+    },
+    {
+      "task_id": "colorbench-matching-21",
+      "family": "matching",
+      "group_id": "match-binding-21",
+      "ground_truth": {
+        "choice": "A"
+      },
+      "prompt_sha256": "7bb3cbbd25d001a63c37abdaa654af2e999b2a271b017c1295a2d7ff51509298",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/matching-21.png",
+      "raw_prediction": "{\"choice\":\"A\"}",
+      "prediction": {
+        "choice": "A"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.3370665250113234,
+      "input_tokens": 965,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.00204,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:47.621977+00:00"
+    },
+    {
+      "task_id": "colorbench-context-56",
+      "family": "context",
+      "group_id": "context-03-reference-d",
+      "ground_truth": {
+        "choice": "D"
+      },
+      "prompt_sha256": "5375be6ce4101068f12f931778b36774c79691baf5de2df8153d5bd31bb2136e",
+      "image_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/context-56.png",
+      "raw_prediction": "{\"choice\":\"D\"}",
+      "prediction": {
+        "choice": "D"
+      },
+      "valid": true,
+      "correct": true,
+      "score": 100.0,
+      "tight_score": null,
+      "delta_e_ok": null,
+      "component_errors": null,
+      "within_bands": null,
+      "out_of_srgb": null,
+      "latency_sec": 1.1599271000595763,
+      "input_tokens": 976,
+      "output_tokens": 11,
+      "request_attempts": 1,
+      "unmetered_attempts": 0,
+      "error": null,
+      "error_kind": null,
+      "model_name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "cost_usd": 0.002062,
+      "cost_estimated": false,
+      "recorded_at": "2026-09-16T14:35:58.471607+00:00"
+    }
+  ],
+  "schema_version": 1,
+  "run_id": "pilot-20260916",
+  "release": "0.4.0",
+  "dataset_git_commit": "c14b9c971bd1fbe1a0126a2683ba4df8b0eeaf6c",
+  "dataset_fingerprint": "3c6b248bfc25f4810c0083bbc5af3c5905fb1000795b21fdd0a57969a7aa3bc0",
+  "manifest_path": "/mnt/disks/data/colorbench/dataset/colorbench-v0.4.0/manifest.json",
+  "mock": false,
+  "runner_git_commit": "8aac23361559574e7b1d554fd3499055b4a01f2d",
+  "runner_git_dirty": false,
+  "created_at": "2026-09-16T13:59:47.704119+00:00",
+  "updated_at": "2026-09-16T14:37:02.448848+00:00",
+  "model_config": {
+    "api_key_env": "ANTHROPIC_API_KEY",
+    "base_url": null,
+    "display_name": "Claude Sonnet 5",
+    "enabled": true,
+    "id": "claude-sonnet-5",
+    "input_per_m": 2.0,
+    "max_output_tokens": 4096,
+    "model": "claude-sonnet-5",
+    "notes": "Latest Sonnet. Default model effort is high.",
+    "output_per_m": 10.0,
+    "pricing_notes": "Standard online API rates in USD per million tokens; excludes caching, batch discounts and tools.",
+    "pricing_source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "provider": "anthropic",
+    "source_url": "https://platform.claude.com/docs/en/models/overview"
+  },
+  "model_config_fingerprint": "3eea74f353075099be73c9595a094bb3f7a468c7688d17c3b5cd217c93d9bb88",
+  "max_output_tokens": 4096,
+  "model_id": "claude-sonnet-5",
+  "display_name": "Claude Sonnet 5",
+  "pricing": {
+    "input_per_m": 2.0,
+    "output_per_m": 10.0
+  }
+}
