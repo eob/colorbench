@@ -218,6 +218,13 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 15:58 UTC:** Invocation 3 drained for the last intermediate
+  remote checkpoint: 5,134 completed results, closed WAL, prior 3,338-attempt
+  export preserved byte-for-byte. All prior responses remain; no separate
+  infrastructure error is pending. Latest CI passes. PID `4175532` / session
+  `25206` exited 130 intentionally. The remaining 1,522 responses will resume
+  under the same run identity and cap; no more planned pauses before completion.
+
 - **2026-09-16 15:21 UTC:** Invocation 3 is active from clean, pushed
   checkpoint `dc419c24ff91fe7ca11ba93cff8540ae292d21f9`. PID `4175532`, root
   tool session `25206`; same run ID, console log, full cohort, concurrency 6,
