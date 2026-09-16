@@ -1,0 +1,97 @@
+$ bun run test:python && bun run test:ts && bun run typecheck
+$ .venv/bin/python -m pytest
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-9.1.1, pluggy-1.6.0
+rootdir: /mnt/disks/data/colorbench
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1
+collected 308 items
+
+tests/test_color_math.py .................                               [  5%]
+tests/test_color_protocol.py ....................................        [ 17%]
+tests/test_dataset_gate.py ...........................                   [ 25%]
+tests/test_direct_controls.py .......................                    [ 33%]
+tests/test_evaluator.py ................................................ [ 49%]
+................                                                         [ 54%]
+tests/test_execution_rigor.py ........                                   [ 56%]
+tests/test_finalization.py ..................................            [ 67%]
+tests/test_frozen_ci.py ..............                                   [ 72%]
+tests/test_model_config.py ........................                      [ 80%]
+tests/test_model_parity.py ...................                           [ 86%]
+tests/test_pilot_analysis.py ...........                                 [ 89%]
+tests/test_publication_audit.py ........                                 [ 92%]
+tests/test_reference_controls.py ......                                  [ 94%]
+tests/test_run_state.py .................                                [100%]
+
+============================= 308 passed in 14.14s =============================
+$ bun test src
+bun test v1.3.14 (0d9b296a)
+
+src/harder-design.test.ts:
+(pass) controlled 0.4.0 corpus design > contains the 512-question candidate corpus [2.33ms]
+(pass) controlled 0.4.0 corpus design > balances every choice location within a family [0.60ms]
+(pass) controlled 0.4.0 corpus design > crosses every sweep separation with every answer position [1.06ms]
+(pass) controlled 0.4.0 corpus design > crosses equality, surrounds, and layouts with positions [0.60ms]
+(pass) controlled 0.4.0 corpus design > pairs matching with binding and numeric formats with shared bytes [1.08ms]
+(pass) controlled 0.4.0 corpus design > keeps every exact-match target distinct from its distractors [0.81ms]
+(pass) controlled 0.4.0 corpus design > records decoded ordering gaps near the intended separations [0.89ms]
+(pass) controlled 0.4.0 corpus design > comparison base hue never determines the answer position [0.25ms]
+(pass) controlled 0.4.0 corpus design > target rank covers all four possibilities independently of answer position [3.06ms]
+(pass) controlled 0.4.0 corpus design > samediff hue and signed color change carry no answer information [0.48ms]
+(pass) controlled 0.4.0 corpus design > lightness gray variant never determines the answer [0.33ms]
+(pass) controlled 0.4.0 corpus design > hue offsets realize the recorded minimum at every level [0.42ms]
+(pass) controlled 0.4.0 corpus design > hue fully crosses both contexts with all references [0.20ms]
+(pass) controlled 0.4.0 corpus design > gradient option fields cross all references [0.19ms]
+(pass) controlled 0.4.0 corpus design > exact-match nearest gaps realize the recorded separation [1.70ms]
+(pass) controlled 0.4.0 corpus design > hue winners share decoded pixels and runners-up track the minimum [0.46ms]
+
+src/matched-render.test.ts:
+(pass) outline and neutral-surround instructions describe all matched conditions [0.94ms]
+(pass) filled-size conditions retain field centers and label positions [3.57ms]
+(pass) outline width changes only the colored stroke at fixed outer dimensions [380.36ms]
+(pass) context renders recorded neutral and rotated surrounds [0.29ms]
+
+src/output.test.ts:
+(pass) candidate-only renderer output > refuses historical, arbitrary, symlinked and registered release outputs [1.19ms]
+
+src/harder-render.test.ts:
+(pass) harder family rendering > typescript prompts match the python protocol bytes exactly [0.29ms]
+(pass) harder family rendering > samediff places two patches with no target and keeps images mapping-neutral [4.66ms]
+(pass) harder family rendering > samediff ground truth derives choice from equality and mapping [0.58ms]
+(pass) harder family rendering > context records interior regions inside fixed surround canvases [0.31ms]
+(pass) harder family rendering > smallmatch dot uses 20px fields and frame uses outlined fields [3.16ms]
+(pass) harder family rendering > frame canvases paint ring color on the border and background inside [267.69ms]
+
+src/colors.test.ts:
+(pass) frozen color conversions > matches independently published sRGB primary Oklab values [0.17ms]
+(pass) frozen color conversions > uses explicit HSL units and canonical achromatic hue [0.42ms]
+(pass) frozen color conversions > round trips a grid including neutrals and gamut boundaries [1.33ms]
+(pass) frozen color conversions > rejects out-of-gamut construction instead of silently clipping [0.17ms]
+
+src/reference-control.test.ts:
+(pass) matching: every identical option field has all four reference answers [0.59ms]
+(pass) binding: every identical option field has all four reference answers [0.24ms]
+(pass) context: every identical option field has all four reference answers [0.48ms]
+(pass) smallmatch: every identical option field has all four reference answers [0.26ms]
+(pass) hue: every identical option field has all four reference answers [0.15ms]
+(pass) gradient: every identical option field has all four reference answers [4.33ms]
+
+src/direct-controls.test.ts:
+(pass) direct-color controls for 0.4.0 > declares every controlled task and only explicit shared-image variants [0.46ms]
+(pass) direct-color controls for 0.4.0 > same-different crosses both endpoint identities, orientation, and mapping [1.92ms]
+(pass) direct-color controls for 0.4.0 > lightness reuses interior endpoints and bounds either single-patch predictor [1.51ms]
+(pass) direct-color controls for 0.4.0 > chroma reuses interior endpoints and bounds either single-patch predictor [0.99ms]
+(pass) direct-color controls for 0.4.0 > gradient endpoints and histograms cannot identify the matching progression [7.62ms]
+(pass) direct-color controls for 0.4.0 > context interventions hold task colors fixed and cross all surround positions [1.44ms]
+(pass) direct-color controls for 0.4.0 > small-region interventions hold each palette and answer fixed across all geometries [0.70ms]
+
+src/render.test.ts:
+(pass) actual rendered evidence > repeated page renders paint fresh opaque fields and reject a corrupted target [575.96ms]
+(pass) actual rendered evidence > numeric image bytes do not reveal the requested representation [548.99ms]
+
+ 46 pass
+ 0 fail
+ 7661 expect() calls
+Ran 46 tests across 8 files. [1.60s]
+$ tsc --noEmit

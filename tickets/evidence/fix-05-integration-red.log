@@ -1,0 +1,157 @@
+$ bun run test:python && bun run test:ts && bun run typecheck
+$ .venv/bin/python -m pytest
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-9.1.1, pluggy-1.6.0
+rootdir: /mnt/disks/data/colorbench
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1
+collected 308 items
+
+tests/test_color_math.py .................                               [  5%]
+tests/test_color_protocol.py .................................F..        [ 17%]
+tests/test_dataset_gate.py .............FFF...........                   [ 25%]
+tests/test_direct_controls.py .......................                    [ 33%]
+tests/test_evaluator.py ................................................ [ 49%]
+................                                                         [ 54%]
+tests/test_execution_rigor.py ........                                   [ 56%]
+tests/test_finalization.py ..................................            [ 67%]
+tests/test_frozen_ci.py ..............                                   [ 72%]
+tests/test_model_config.py ........................                      [ 80%]
+tests/test_model_parity.py ...................                           [ 86%]
+tests/test_pilot_analysis.py ...........                                 [ 89%]
+tests/test_publication_audit.py ........                                 [ 92%]
+tests/test_reference_controls.py ......                                  [ 94%]
+tests/test_run_state.py .................                                [100%]
+
+=================================== FAILURES ===================================
+__________________ test_harder_family_prompts_are_byte_frozen __________________
+
+    def test_harder_family_prompts_are_byte_frozen():
+        from baseline.protocol import get_prompt
+        assert get_prompt("samediff", "sameA") == SAMEDIFF_SAME_A
+        assert get_prompt("samediff", "sameB") == SAMEDIFF_SAME_B
+>       assert get_prompt("context") == CONTEXT_PROMPT
+E       assert 'Which option...ption letter.' == 'Which option...ption letter.'
+E         
+E         Skipping 73 identical leading characters in diff, use -v to show
+E         - erence R? Each option sits on a different surround color; compare the interiors only, not the surrounds, labels, or borders. Return only a JSON object with one key, "choice", whose value is the selected option letter.
+E         ?           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                    ^^^^^^^  ^                        ^^
+E         + erence R? Compare the colored interiors; ignore the surrounding colors, labels, and borders. Return only a JSON object with one key, "choice", whose value is the selected opt...
+E         
+E         ...Full output truncated (2 lines hidden), use '-vv' to show
+
+tests/test_color_protocol.py:122: AssertionError
+_ test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[mapping-group] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-312/test_duplicate_images_only_all0')
+mutation = 'mapping-group'
+
+    @pytest.mark.parametrize("mutation", ["mapping-group", "third-copy", "legacy-version"])
+    def test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs(tmp_path, mutation):
+        from baseline.color_math import rgb_to_oklch
+    
+        builder = []
+        colors = ([120, 120, 120], [150, 150, 150])
+        separation = abs(rgb_to_oklch(colors[0])["l"] - rgb_to_oklch(colors[1])["l"])
+        for index, (a, b) in enumerate((a, b) for a in colors for b in colors):
+            same = a == b
+            group = f"samediff-pair-{index}"
+            for direction in ("sameA", "sameB"):
+                same_choice = "A" if direction == "sameA" else "B"
+                choice = same_choice if same else ("B" if same_choice == "A" else "A")
+                item = _paint(
+                    builder, tmp_path, f"{group}.png", "samediff",
+                    lambda draw: (_flat(draw, 220, 330, 84, 84, a), _flat(draw, 496, 330, 84, 84, b)),
+                    [dict(role="option", id="A", x=220, y=330, width=84, height=84, rgb=a),
+                     dict(role="option", id="B", x=496, y=330, width=84, height=84, rgb=b)],
+                    {"choice": choice}, get_prompt("samediff", direction),
+                    dict(controlVersion="0.4.0", pairSetId="pair-1", mappingPairId=group,
+                         same=same, direction=direction, axis="identity" if same else "lightness",
+                         intendedSeparation=0 if same else separation), group=group)
+                item["taskId"] = f"{group}-{direction}"
+        path = _write_manifest(tmp_path, builder)
+        report = gate().validate_dataset(path, require_complete=False)
+>       assert report["valid"], report["errors"]
+E       AssertionError: ['Manifest requires an opaque taskId']
+E       assert False
+
+tests/test_dataset_gate.py:172: AssertionError
+_ test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[third-copy] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-312/test_duplicate_images_only_all1')
+mutation = 'third-copy'
+
+    @pytest.mark.parametrize("mutation", ["mapping-group", "third-copy", "legacy-version"])
+    def test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs(tmp_path, mutation):
+        from baseline.color_math import rgb_to_oklch
+    
+        builder = []
+        colors = ([120, 120, 120], [150, 150, 150])
+        separation = abs(rgb_to_oklch(colors[0])["l"] - rgb_to_oklch(colors[1])["l"])
+        for index, (a, b) in enumerate((a, b) for a in colors for b in colors):
+            same = a == b
+            group = f"samediff-pair-{index}"
+            for direction in ("sameA", "sameB"):
+                same_choice = "A" if direction == "sameA" else "B"
+                choice = same_choice if same else ("B" if same_choice == "A" else "A")
+                item = _paint(
+                    builder, tmp_path, f"{group}.png", "samediff",
+                    lambda draw: (_flat(draw, 220, 330, 84, 84, a), _flat(draw, 496, 330, 84, 84, b)),
+                    [dict(role="option", id="A", x=220, y=330, width=84, height=84, rgb=a),
+                     dict(role="option", id="B", x=496, y=330, width=84, height=84, rgb=b)],
+                    {"choice": choice}, get_prompt("samediff", direction),
+                    dict(controlVersion="0.4.0", pairSetId="pair-1", mappingPairId=group,
+                         same=same, direction=direction, axis="identity" if same else "lightness",
+                         intendedSeparation=0 if same else separation), group=group)
+                item["taskId"] = f"{group}-{direction}"
+        path = _write_manifest(tmp_path, builder)
+        report = gate().validate_dataset(path, require_complete=False)
+>       assert report["valid"], report["errors"]
+E       AssertionError: ['Manifest requires an opaque taskId']
+E       assert False
+
+tests/test_dataset_gate.py:172: AssertionError
+_ test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[legacy-version] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-312/test_duplicate_images_only_all2')
+mutation = 'legacy-version'
+
+    @pytest.mark.parametrize("mutation", ["mapping-group", "third-copy", "legacy-version"])
+    def test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs(tmp_path, mutation):
+        from baseline.color_math import rgb_to_oklch
+    
+        builder = []
+        colors = ([120, 120, 120], [150, 150, 150])
+        separation = abs(rgb_to_oklch(colors[0])["l"] - rgb_to_oklch(colors[1])["l"])
+        for index, (a, b) in enumerate((a, b) for a in colors for b in colors):
+            same = a == b
+            group = f"samediff-pair-{index}"
+            for direction in ("sameA", "sameB"):
+                same_choice = "A" if direction == "sameA" else "B"
+                choice = same_choice if same else ("B" if same_choice == "A" else "A")
+                item = _paint(
+                    builder, tmp_path, f"{group}.png", "samediff",
+                    lambda draw: (_flat(draw, 220, 330, 84, 84, a), _flat(draw, 496, 330, 84, 84, b)),
+                    [dict(role="option", id="A", x=220, y=330, width=84, height=84, rgb=a),
+                     dict(role="option", id="B", x=496, y=330, width=84, height=84, rgb=b)],
+                    {"choice": choice}, get_prompt("samediff", direction),
+                    dict(controlVersion="0.4.0", pairSetId="pair-1", mappingPairId=group,
+                         same=same, direction=direction, axis="identity" if same else "lightness",
+                         intendedSeparation=0 if same else separation), group=group)
+                item["taskId"] = f"{group}-{direction}"
+        path = _write_manifest(tmp_path, builder)
+        report = gate().validate_dataset(path, require_complete=False)
+>       assert report["valid"], report["errors"]
+E       AssertionError: ['Manifest requires an opaque taskId']
+E       assert False
+
+tests/test_dataset_gate.py:172: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_color_protocol.py::test_harder_family_prompts_are_byte_frozen
+FAILED tests/test_dataset_gate.py::test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[mapping-group]
+FAILED tests/test_dataset_gate.py::test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[third-copy]
+FAILED tests/test_dataset_gate.py::test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs[legacy-version]
+======================== 4 failed, 304 passed in 13.36s ========================
+error: script "test:python" exited with code 1
+error: script "test" exited with code 1

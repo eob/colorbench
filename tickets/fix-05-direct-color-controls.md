@@ -103,12 +103,12 @@ that those experiments were performed may appear in the new report.
   created; PR linked from this main ticket.
 - [x] Construction contract fixed at 512 questions (table below); pairing
   and condition metadata shared with the implementation lanes.
-- [ ] Add failing decoded-control/construction checks and capture verbatim
+- [x] Add failing decoded-control/construction checks and capture verbatim
   Red evidence under `tickets/evidence/fix-05-*`.
-- [ ] Implement generator, renderer, prompt, and gate changes.
-- [ ] Verify Red→Green and reversion against frozen 0.3.2 inputs; inspect
+- [x] Implement generator, renderer, prompt, and gate changes.
+- [x] Verify Red→Green and reversion against frozen 0.3.2 inputs; inspect
   representative actual PNGs, including all changed geometries/gradients.
-- [ ] Run complete Python/TypeScript/typecheck gates and independent controls.
+- [x] Run complete Python/TypeScript/typecheck gates and independent controls.
 - [ ] Document/freeze 0.4.0 and verify historical replay at its pinned source.
 - [ ] Run and resume the new 13-configuration campaign under an explicit cap;
   record task count, projected cost, cap, command, and run ID before dispatch.
@@ -198,11 +198,11 @@ or pretending the old run used the new protocol.
 
 | Gate | Baseline/revision | Required result | Status |
 | --- | --- | --- | --- |
-| New construction regressions | 0.3.2 then candidate | Expected Red, then Green; same failure under reversion | Pending |
-| `bun run test` | Feature branch | Python, TypeScript, typecheck pass | Pending |
-| Candidate decoded validation | Candidate manifest | Prompt/pixel/unique-answer and new controls pass | Pending |
-| Immutable artifacts check | Main vs feature | Historical dataset/run/seal bytes unchanged | Pending |
-| Historical finalization replay | Published 0.3.2 source pin | All 3,432 grades/seal reproduce | Pending |
+| New construction regressions | 0.3.2 then candidate | Expected Red, then Green; same failure under reversion | Pass; generator, renderer, decoded, frozen, analysis logs |
+| `bun run test` | Feature branch | Python, TypeScript, typecheck pass | Pass: 308 Python, 46 TS, typecheck |
+| Candidate decoded validation | Candidate manifest | Prompt/pixel/unique-answer and new controls pass | Pass: 512 tasks, 456 images; independent pixel review |
+| Immutable artifacts check | Main vs feature | Historical dataset/run/seal bytes unchanged | Pass: 22 protected paths |
+| Historical finalization replay | Published 0.3.2 source pin | All 3,432 grades/seal reproduce | Pass: byte-identical export |
 | 0.4.0 release validation | Frozen dataset commit | Exact count, image inventory, fingerprints pass | Pending |
 | New finalization and independent audit | New run source checkpoint | Complete shared cohort, raw-answer replay, no grade drift | Pending |
 
@@ -218,6 +218,19 @@ or pretending the old run used the new protocol.
 
 ## Handoff & takeover log
 
+- **2026-09-16 13:56 UTC:** Implementation and independent pixel/analysis
+  reviews pass. Full suite: 308 Python tests, 46 TypeScript tests, 7,661 TS
+  assertions, typecheck. Initial integration failures were stale prompt
+  expectations and uppercase fixture IDs; fixed tests without relaxing gates.
+  Simplifyfu review found no unnecessary abstraction or unresolved issue.
+  Candidate manifest SHA256:
+  `0271b7d47a79ec8988e2edd11c986555e135419695c51d682e1981aa093addc5`.
+  All 176 retained task images are pixel-identical to 0.3.2. Gradient bounds,
+  all 56 single-patch checks, and every matched intervention pass independently.
+  Analysis now reports matched condition pairs, semantic mapping consistency,
+  fixed/varying hue, and exact/tolerance RGB recovery. Historical aggregates
+  reproduce exactly. Evidence is under `tickets/evidence/fix-05-*`.
+
 - **2026-09-16 13:34 UTC:** Created feature branch after publishing the ticket
   on main; no implementation changes yet.
 
@@ -226,12 +239,13 @@ or pretending the old run used the new protocol.
 
 ## Recovery memo
 
-- **Verified working:** Frozen 0.3.2 grades and numeric math replay; review
-  controls above reproduce; main initially clean.
-- **Pending:** Generator/decoded-gate integration, complete validation, new
-  release freeze, and campaign. Renderer/prompt repair has passed focused tests.
+- **Verified working:** Frozen 0.3.2 replay; repaired 512-task candidate;
+  complete tests, decoded controls, independent pixel/analysis review.
+- **Pending:** New release freeze, offline mock, full paid campaign, seal/audit,
+  measured report, PR finalization. No paid calls have started.
 - **Resume:** Read this ticket and PR; `git status`, then `bun run test`.
   Check run metadata before launching any paid request; resume a recorded run
   rather than creating a duplicate campaign.
-- **Next action:** Finish assigned generator/gate lanes, run full tests and
-  candidate rendering, inspect images, and checkpoint before release freeze.
+- **Next action:** Commit source and candidate as new `dataset/colorbench-v0.4.0`,
+  record that commit in the new descriptor, validate release and offline mock,
+  then run the documented campaign with the recorded $65 cap.

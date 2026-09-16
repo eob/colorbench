@@ -144,6 +144,46 @@ def test_samediff_accepts_matching_equality_and_mapping(tmp_path):
     assert gate().validate_dataset(_write_manifest(tmp_path, builder), require_complete=False)["valid"]
 
 
+@pytest.mark.parametrize("mutation", ["mapping-group", "third-copy", "legacy-version"])
+def test_duplicate_images_only_allow_explicit_current_samediff_mapping_pairs(tmp_path, mutation):
+    from baseline.color_math import rgb_to_oklch
+
+    builder = []
+    colors = ([120, 120, 120], [150, 150, 150])
+    separation = abs(rgb_to_oklch(colors[0])["l"] - rgb_to_oklch(colors[1])["l"])
+    for index, (a, b) in enumerate((a, b) for a in colors for b in colors):
+        same = a == b
+        group = f"samediff-pair-{index}"
+        for direction in ("sameA", "sameB"):
+            same_choice = "A" if direction == "sameA" else "B"
+            choice = same_choice if same else ("B" if same_choice == "A" else "A")
+            item = _paint(
+                builder, tmp_path, f"{group}.png", "samediff",
+                lambda draw: (_flat(draw, 220, 330, 84, 84, a), _flat(draw, 496, 330, 84, 84, b)),
+                [dict(role="option", id="A", x=220, y=330, width=84, height=84, rgb=a),
+                 dict(role="option", id="B", x=496, y=330, width=84, height=84, rgb=b)],
+                {"choice": choice}, get_prompt("samediff", direction),
+                dict(controlVersion="0.4.0", pairSetId="pair-1", mappingPairId=group,
+                     same=same, direction=direction, axis="identity" if same else "lightness",
+                     intendedSeparation=0 if same else separation), group=group)
+            item["taskId"] = f"{group}-{direction.lower()}"
+    path = _write_manifest(tmp_path, builder)
+    report = gate().validate_dataset(path, require_complete=False)
+    assert report["valid"], report["errors"]
+
+    if mutation == "mapping-group":
+        builder[0]["design"]["mappingPairId"] = "unrelated-pair"
+    elif mutation == "third-copy":
+        third = json.loads(json.dumps(builder[0]))
+        third["taskId"] = "unrelated-third-copy"
+        builder.append(third)
+    else:
+        builder[0]["design"]["controlVersion"] = "0.3.2"
+    report = gate().validate_dataset(_write_manifest(tmp_path, builder), require_complete=False)
+    assert not report["valid"]
+    assert any("Duplicate image outside an explicitly paired" in error for error in report["errors"])
+
+
 @pytest.mark.parametrize("mutation,fragment", [
     (lambda item: item["groundTruth"].update(choice="B"), "Ground truth disagrees"),
     (lambda item: item["design"].update(same=False), "equality flag"),
@@ -262,12 +302,12 @@ def test_hue_thresholds_follow_the_recorded_minimum_separation():
     assert any("Hue reference is ambiguous" in error for error in report["errors"])
 
 
-def test_complete_counts_and_crossing_rules_pin_the_248_question_release():
+def test_complete_counts_pin_512_questions_and_legacy_crossing_fixtures_still_validate():
     module = gate()
     assert module.COMPLETE_FAMILY_COUNTS == {
-        "matching": 48, "binding": 48, "lightness": 16, "chroma": 16, "hue": 16, "gradient": 8,
-        "samediff": 16, "context": 16, "smallmatch": 16, "rgb": 16, "hsl": 16, "oklch": 16}
-    assert sum(module.COMPLETE_FAMILY_COUNTS.values()) == 248
+        "matching": 48, "binding": 48, "lightness": 64, "chroma": 64, "hue": 32, "gradient": 16,
+        "samediff": 48, "context": 80, "smallmatch": 64, "rgb": 16, "hsl": 16, "oklch": 16}
+    assert sum(module.COMPLETE_FAMILY_COUNTS.values()) == 512
     assert module.SWEEP_SEPARATIONS == {
         "matching": {"lightness": [0.08, 0.04, 0.02, 0.01], "chroma": [0.025, 0.012, 0.007, 0.004],
                      "hue": [35, 15, 8, 4]},

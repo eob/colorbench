@@ -1,0 +1,445 @@
+FFFFFFFFFFFFFFFFFFFF                                                     [100%]
+=================================== FAILURES ===================================
+__ test_old_gradient_shortcut_cannot_be_marked_as_current_controlled_dataset ___
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_old_gradient_shortcut_can0')
+
+    def test_old_gradient_shortcut_cannot_be_marked_as_current_controlled_dataset(tmp_path):
+        source = ROOT / "dataset/colorbench-v0.3.2"
+        rows = [r for r in json.loads((source / "manifest.json").read_text()) if r["family"] == "gradient"]
+        shutil.copytree(source / "fonts", tmp_path / "fonts")
+        for row in rows:
+            row["design"]["controlVersion"] = "0.4.0"
+            shutil.copyfile(source / row["imageFilename"], tmp_path / row["imageFilename"])
+        path = tmp_path / "manifest.json"
+        path.write_text(json.dumps(rows))
+        report = validate_dataset(path, require_complete=False)
+>       assert not report["valid"], "Old endpoint-only gradients were admitted as new controlled inputs"
+E       AssertionError: Old endpoint-only gradients were admitted as new controlled inputs
+E       assert not True
+
+tests/test_direct_controls.py:140: AssertionError
+_ test_whole_image_single_patch_bound_and_forged_nuisance_rejection[lightness-0.625] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_whole_image_single_patch_0')
+family = 'lightness', ceiling = 0.625
+
+    @pytest.mark.parametrize("family,ceiling", [("lightness", .625), ("samediff", .5)])
+    def test_whole_image_single_patch_bound_and_forged_nuisance_rejection(tmp_path, family, ceiling):
+>       from baseline.direct_controls import single_patch_ceiling
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:146: ModuleNotFoundError
+_ test_whole_image_single_patch_bound_and_forged_nuisance_rejection[samediff-0.5] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_whole_image_single_patch_1')
+family = 'samediff', ceiling = 0.5
+
+    @pytest.mark.parametrize("family,ceiling", [("lightness", .625), ("samediff", .5)])
+    def test_whole_image_single_patch_bound_and_forged_nuisance_rejection(tmp_path, family, ceiling):
+>       from baseline.direct_controls import single_patch_ceiling
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:146: ModuleNotFoundError
+_ test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift[prompt] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_equality_crossing_rejects0')
+mutation = 'prompt'
+
+    @pytest.mark.parametrize("mutation", ["prompt", "missing", "label", "mapping-image"])
+    def test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift(tmp_path, mutation):
+        rows = pairs(tmp_path, "samediff")
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'samediff-0-sameA', 'family': 'samediff', 'groupId': 'pair-1-0', 'imageFilename': 'pair-1-0.png', ...}, {'...{'taskId': 'samediff-2-sameB', 'family': 'samediff', 'groupId': 'pair-1-2', 'imageFilename': 'pair-1-2.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_equality_crossing_rejects0')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift[missing] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_equality_crossing_rejects1')
+mutation = 'missing'
+
+    @pytest.mark.parametrize("mutation", ["prompt", "missing", "label", "mapping-image"])
+    def test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift(tmp_path, mutation):
+        rows = pairs(tmp_path, "samediff")
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'samediff-0-sameA', 'family': 'samediff', 'groupId': 'pair-1-0', 'imageFilename': 'pair-1-0.png', ...}, {'...{'taskId': 'samediff-2-sameB', 'family': 'samediff', 'groupId': 'pair-1-2', 'imageFilename': 'pair-1-2.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_equality_crossing_rejects1')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift[label] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_equality_crossing_rejects2')
+mutation = 'label'
+
+    @pytest.mark.parametrize("mutation", ["prompt", "missing", "label", "mapping-image"])
+    def test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift(tmp_path, mutation):
+        rows = pairs(tmp_path, "samediff")
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'samediff-0-sameA', 'family': 'samediff', 'groupId': 'pair-1-0', 'imageFilename': 'pair-1-0.png', ...}, {'...{'taskId': 'samediff-2-sameB', 'family': 'samediff', 'groupId': 'pair-1-2', 'imageFilename': 'pair-1-2.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_equality_crossing_rejects2')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift[mapping-image] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_equality_crossing_rejects3')
+mutation = 'mapping-image'
+
+    @pytest.mark.parametrize("mutation", ["prompt", "missing", "label", "mapping-image"])
+    def test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift(tmp_path, mutation):
+        rows = pairs(tmp_path, "samediff")
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'samediff-0-sameA', 'family': 'samediff', 'groupId': 'pair-1-0', 'imageFilename': 'pair-1-0.png', ...}, {'...{'taskId': 'samediff-2-sameB', 'family': 'samediff', 'groupId': 'pair-1-2', 'imageFilename': 'pair-1-2.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_equality_crossing_rejects3')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_gradient_interior_controls_reject_each_shortcut_and_mislabel[endpoint] __
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control0')
+mutation = 'endpoint'
+
+    @pytest.mark.parametrize("mutation", ["endpoint", "histogram", "duplicate", "prompt", "grayscale"])
+    def test_gradient_interior_controls_reject_each_shortcut_and_mislabel(tmp_path, mutation):
+        rows = gradients(tmp_path, grayscale=True)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'gradient-0', 'family': 'gradient', 'groupId': 'gradient-0', 'imageFilename': 'gradient-0.png', ...}, {'ta... ...}, {'taskId': 'gradient-3', 'family': 'gradient', 'groupId': 'gradient-3', 'imageFilename': 'gradient-3.png', ...}]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control0')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_gradient_interior_controls_reject_each_shortcut_and_mislabel[histogram] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control1')
+mutation = 'histogram'
+
+    @pytest.mark.parametrize("mutation", ["endpoint", "histogram", "duplicate", "prompt", "grayscale"])
+    def test_gradient_interior_controls_reject_each_shortcut_and_mislabel(tmp_path, mutation):
+        rows = gradients(tmp_path, grayscale=True)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'gradient-0', 'family': 'gradient', 'groupId': 'gradient-0', 'imageFilename': 'gradient-0.png', ...}, {'ta... ...}, {'taskId': 'gradient-3', 'family': 'gradient', 'groupId': 'gradient-3', 'imageFilename': 'gradient-3.png', ...}]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control1')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_gradient_interior_controls_reject_each_shortcut_and_mislabel[duplicate] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control2')
+mutation = 'duplicate'
+
+    @pytest.mark.parametrize("mutation", ["endpoint", "histogram", "duplicate", "prompt", "grayscale"])
+    def test_gradient_interior_controls_reject_each_shortcut_and_mislabel(tmp_path, mutation):
+        rows = gradients(tmp_path, grayscale=True)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'gradient-0', 'family': 'gradient', 'groupId': 'gradient-0', 'imageFilename': 'gradient-0.png', ...}, {'ta... ...}, {'taskId': 'gradient-3', 'family': 'gradient', 'groupId': 'gradient-3', 'imageFilename': 'gradient-3.png', ...}]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control2')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+__ test_gradient_interior_controls_reject_each_shortcut_and_mislabel[prompt] ___
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control3')
+mutation = 'prompt'
+
+    @pytest.mark.parametrize("mutation", ["endpoint", "histogram", "duplicate", "prompt", "grayscale"])
+    def test_gradient_interior_controls_reject_each_shortcut_and_mislabel(tmp_path, mutation):
+        rows = gradients(tmp_path, grayscale=True)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'gradient-0', 'family': 'gradient', 'groupId': 'gradient-0', 'imageFilename': 'gradient-0.png', ...}, {'ta... ...}, {'taskId': 'gradient-3', 'family': 'gradient', 'groupId': 'gradient-3', 'imageFilename': 'gradient-3.png', ...}]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control3')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_gradient_interior_controls_reject_each_shortcut_and_mislabel[grayscale] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control4')
+mutation = 'grayscale'
+
+    @pytest.mark.parametrize("mutation", ["endpoint", "histogram", "duplicate", "prompt", "grayscale"])
+    def test_gradient_interior_controls_reject_each_shortcut_and_mislabel(tmp_path, mutation):
+        rows = gradients(tmp_path, grayscale=True)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'gradient-0', 'family': 'gradient', 'groupId': 'gradient-0', 'imageFilename': 'gradient-0.png', ...}, {'ta... ...}, {'taskId': 'gradient-3', 'family': 'gradient', 'groupId': 'gradient-3', 'imageFilename': 'gradient-3.png', ...}]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_gradient_interior_control4')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_____ test_matched_interventions_compare_actual_pixels_and_groups[context] _____
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_com0')
+family = 'context'
+
+    @pytest.mark.parametrize("family", ["context", "smallmatch"])
+    def test_matched_interventions_compare_actual_pixels_and_groups(tmp_path, family):
+        rows = interventions(tmp_path, family)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:194: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'context-neutral-0', 'family': 'context', 'groupId': 'context-1-reference-A', 'imageFilename': 'context-ne...-0-1', 'family': 'context', 'groupId': 'context-1-reference-B', 'imageFilename': 'context-surround-0-1.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_com0')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+___ test_matched_interventions_compare_actual_pixels_and_groups[smallmatch] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_com1')
+family = 'smallmatch'
+
+    @pytest.mark.parametrize("family", ["context", "smallmatch"])
+    def test_matched_interventions_compare_actual_pixels_and_groups(tmp_path, family):
+        rows = interventions(tmp_path, family)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:194: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'smallmatch-filled-20-0', 'family': 'smallmatch', 'groupId': 'smallmatch-1-reference-A', 'imageFilename': ...family': 'smallmatch', 'groupId': 'smallmatch-1-reference-B', 'imageFilename': 'smallmatch-filled-84-1.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_com1')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_matched_interventions_reject_changed_color_geometry_and_metadata[context-surround] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej0')
+family = 'context', mutation = 'surround'
+
+    @pytest.mark.parametrize("family,mutation", [("context", "surround"), ("context", "target"), ("context", "prompt"),
+                                                 ("smallmatch", "stroke"), ("smallmatch", "center"), ("smallmatch", "group")])
+    def test_matched_interventions_reject_changed_color_geometry_and_metadata(tmp_path, family, mutation):
+        rows = interventions(tmp_path, family)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'context-neutral-0', 'family': 'context', 'groupId': 'context-1-reference-A', 'imageFilename': 'context-ne...-0-1', 'family': 'context', 'groupId': 'context-1-reference-B', 'imageFilename': 'context-surround-0-1.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej0')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_matched_interventions_reject_changed_color_geometry_and_metadata[context-target] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej1')
+family = 'context', mutation = 'target'
+
+    @pytest.mark.parametrize("family,mutation", [("context", "surround"), ("context", "target"), ("context", "prompt"),
+                                                 ("smallmatch", "stroke"), ("smallmatch", "center"), ("smallmatch", "group")])
+    def test_matched_interventions_reject_changed_color_geometry_and_metadata(tmp_path, family, mutation):
+        rows = interventions(tmp_path, family)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'context-neutral-0', 'family': 'context', 'groupId': 'context-1-reference-A', 'imageFilename': 'context-ne...-0-1', 'family': 'context', 'groupId': 'context-1-reference-B', 'imageFilename': 'context-surround-0-1.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej1')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_matched_interventions_reject_changed_color_geometry_and_metadata[context-prompt] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej2')
+family = 'context', mutation = 'prompt'
+
+    @pytest.mark.parametrize("family,mutation", [("context", "surround"), ("context", "target"), ("context", "prompt"),
+                                                 ("smallmatch", "stroke"), ("smallmatch", "center"), ("smallmatch", "group")])
+    def test_matched_interventions_reject_changed_color_geometry_and_metadata(tmp_path, family, mutation):
+        rows = interventions(tmp_path, family)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'context-neutral-0', 'family': 'context', 'groupId': 'context-1-reference-A', 'imageFilename': 'context-ne...-0-1', 'family': 'context', 'groupId': 'context-1-reference-B', 'imageFilename': 'context-surround-0-1.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej2')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_matched_interventions_reject_changed_color_geometry_and_metadata[smallmatch-stroke] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej3')
+family = 'smallmatch', mutation = 'stroke'
+
+    @pytest.mark.parametrize("family,mutation", [("context", "surround"), ("context", "target"), ("context", "prompt"),
+                                                 ("smallmatch", "stroke"), ("smallmatch", "center"), ("smallmatch", "group")])
+    def test_matched_interventions_reject_changed_color_geometry_and_metadata(tmp_path, family, mutation):
+        rows = interventions(tmp_path, family)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'smallmatch-filled-20-0', 'family': 'smallmatch', 'groupId': 'smallmatch-1-reference-A', 'imageFilename': ...family': 'smallmatch', 'groupId': 'smallmatch-1-reference-B', 'imageFilename': 'smallmatch-filled-84-1.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej3')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_matched_interventions_reject_changed_color_geometry_and_metadata[smallmatch-center] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej4')
+family = 'smallmatch', mutation = 'center'
+
+    @pytest.mark.parametrize("family,mutation", [("context", "surround"), ("context", "target"), ("context", "prompt"),
+                                                 ("smallmatch", "stroke"), ("smallmatch", "center"), ("smallmatch", "group")])
+    def test_matched_interventions_reject_changed_color_geometry_and_metadata(tmp_path, family, mutation):
+        rows = interventions(tmp_path, family)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'smallmatch-filled-20-0', 'family': 'smallmatch', 'groupId': 'smallmatch-1-reference-A', 'imageFilename': ...family': 'smallmatch', 'groupId': 'smallmatch-1-reference-B', 'imageFilename': 'smallmatch-filled-84-1.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej4')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+_ test_matched_interventions_reject_changed_color_geometry_and_metadata[smallmatch-group] _
+
+tmp_path = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej5')
+family = 'smallmatch', mutation = 'group'
+
+    @pytest.mark.parametrize("family,mutation", [("context", "surround"), ("context", "target"), ("context", "prompt"),
+                                                 ("smallmatch", "stroke"), ("smallmatch", "center"), ("smallmatch", "group")])
+    def test_matched_interventions_reject_changed_color_geometry_and_metadata(tmp_path, family, mutation):
+        rows = interventions(tmp_path, family)
+>       assert check(rows, tmp_path) == []
+               ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_direct_controls.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rows = [{'taskId': 'smallmatch-filled-20-0', 'family': 'smallmatch', 'groupId': 'smallmatch-1-reference-A', 'imageFilename': ...family': 'smallmatch', 'groupId': 'smallmatch-1-reference-B', 'imageFilename': 'smallmatch-filled-84-1.png', ...}, ...]
+directory = PosixPath('/tmp/pytest-of-ted/pytest-299/test_matched_interventions_rej5')
+
+    def check(rows, directory):
+>       from baseline.direct_controls import check_direct_controls
+E       ModuleNotFoundError: No module named 'baseline.direct_controls'
+
+tests/test_direct_controls.py:23: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_direct_controls.py::test_old_gradient_shortcut_cannot_be_marked_as_current_controlled_dataset
+FAILED tests/test_direct_controls.py::test_whole_image_single_patch_bound_and_forged_nuisance_rejection[lightness-0.625]
+FAILED tests/test_direct_controls.py::test_whole_image_single_patch_bound_and_forged_nuisance_rejection[samediff-0.5]
+FAILED tests/test_direct_controls.py::test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift[prompt]
+FAILED tests/test_direct_controls.py::test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift[missing]
+FAILED tests/test_direct_controls.py::test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift[label]
+FAILED tests/test_direct_controls.py::test_equality_crossing_rejects_prompt_answer_coverage_and_mapping_drift[mapping-image]
+FAILED tests/test_direct_controls.py::test_gradient_interior_controls_reject_each_shortcut_and_mislabel[endpoint]
+FAILED tests/test_direct_controls.py::test_gradient_interior_controls_reject_each_shortcut_and_mislabel[histogram]
+FAILED tests/test_direct_controls.py::test_gradient_interior_controls_reject_each_shortcut_and_mislabel[duplicate]
+FAILED tests/test_direct_controls.py::test_gradient_interior_controls_reject_each_shortcut_and_mislabel[prompt]
+FAILED tests/test_direct_controls.py::test_gradient_interior_controls_reject_each_shortcut_and_mislabel[grayscale]
+FAILED tests/test_direct_controls.py::test_matched_interventions_compare_actual_pixels_and_groups[context]
+FAILED tests/test_direct_controls.py::test_matched_interventions_compare_actual_pixels_and_groups[smallmatch]
+FAILED tests/test_direct_controls.py::test_matched_interventions_reject_changed_color_geometry_and_metadata[context-surround]
+FAILED tests/test_direct_controls.py::test_matched_interventions_reject_changed_color_geometry_and_metadata[context-target]
+FAILED tests/test_direct_controls.py::test_matched_interventions_reject_changed_color_geometry_and_metadata[context-prompt]
+FAILED tests/test_direct_controls.py::test_matched_interventions_reject_changed_color_geometry_and_metadata[smallmatch-stroke]
+FAILED tests/test_direct_controls.py::test_matched_interventions_reject_changed_color_geometry_and_metadata[smallmatch-center]
+FAILED tests/test_direct_controls.py::test_matched_interventions_reject_changed_color_geometry_and_metadata[smallmatch-group]
+20 failed in 2.02s

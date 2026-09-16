@@ -1,0 +1,25 @@
+Source: 0.3.2 sealed report, independently replayed at compatible8fc5584 in fix-05-frozen-historical-replay.log
+PASS: families exactly preserves historical analysis values
+PASS: matching_binding_pairs exactly preserves historical analysis values
+PASS: numeric_format_pairs exactly preserves historical analysis values
+PASS:208RGBanswers,13exact,107withinDeltaE0.01;416hueresponses splitfixed/varying
+{
+  "rgb_reconstruction": {
+    "response_count": 208,
+    "valid_count": 208,
+    "invalid_count": 0,
+    "exact_count": 13,
+    "within_2_lsb_count": 59,
+    "within_5_lsb_count": 117,
+    "delta_e_hit_counts": {
+      "0.005": 49,
+      "0.01": 107,
+      "0.02": 167,
+      "0.05": 205
+    }
+  },
+  "hue_context_counts": {
+    "fixed-lightness-chroma": 208,
+    "varying-lightness-chroma": 208
+  }
+}
