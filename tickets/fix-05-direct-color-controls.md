@@ -113,7 +113,7 @@ that those experiments were performed may appear in the new report.
 - [x] Run and resume the new 13-configuration campaign under an explicit cap;
   record task count, projected cost, cap, command, and run ID before dispatch.
 - [x] Seal/audit new results; write the repair explanation and measured report.
-- [ ] Apply simplifyfu/comment review, sync main, finish PR and recovery memo.
+- [x] Apply simplifyfu/comment review, sync main, finish PR and recovery memo.
 
 ### Construction counts and metadata
 
@@ -217,6 +217,16 @@ or pretending the old run used the new protocol.
 - Do not transfer old scores into 0.4.0 or compare releases as model progress.
 
 ## Handoff & takeover log
+
+- **2026-09-16 16:50 UTC:** Synchronized main's authoritative-ticket update
+  `6c18dec`; retained this branch's complete implementation and recovery log.
+  Final simplifyfu/comment review covers all 20 changed Python/TypeScript
+  files with no actionable defect, dead scaffolding, or agentic comments.
+  All 62 checked local documentation/media links resolve. Implementation,
+  frozen release, full campaign, measured report, and independent review are
+  complete. PR #5 is ready for review; final CI runs on this merged revision.
+  No active process or required paid work remains. Review/merge and any
+  separately scheduled website promotion are the next human workflow steps.
 
 - **2026-09-16 16:47 UTC:** Implementation and measured report complete. See
   [fourth-pilot.md](../results/fourth-pilot.md), the
@@ -352,8 +362,8 @@ or pretending the old run used the new protocol.
 - **Verified working:** Frozen 0.3.2 replay; frozen 512-task release; complete
   tests, decoded controls, independent pixel/analysis review; full 6,656-response
   campaign, verified seal, export, analysis, independent grades/accounting audit.
-- **Pending:** Final documentation commit, main-ticket synchronization, and
-  PR readiness; implementation and measurements are complete.
+- **Pending:** Review/merge PR #5 and any separately scheduled website
+  promotion. No implementation or measurement work remains.
 - **Resume:** Read this ticket and PR, inspect `git status` and CI. All results
   are sealed; no paid request or rerun is needed. Use the offline verification
   commands in the measured report when auditing results.
