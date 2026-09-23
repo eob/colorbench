@@ -1,11 +1,13 @@
 # feat-06-september-2026-model-runs: Measure September models on ColorBench
 
-- **Status:** In Progress
+- **Status:** Completed
 - **Assignee:** Edward Benson
 - **Branch:** `main` (direct publication requested)
 - **Harness:** `codex`
 - **Target release:** `0.4.0`
 - **Source catalog:** `config/models.2026-09-22.json`
+- **Catalog commit:** `a8c8a56acf4ba3b8cd2dad7270efc048e6a786bc`
+- **Source checkpoint commit:** `82cde01`
 
 ## Goal
 
@@ -41,4 +43,16 @@ the new models and keeps the prior campaign intact.
 
 ## Validation gate matrix
 
-Pending live run and finalization.
+| Gate | Result |
+| --- | --- |
+| `pytest -q tests/test_model_config.py` | 24 passed |
+| `python -m baseline.releases --release 0.4.0` | 512 frozen questions; dataset/protocol identity verified |
+| One-task live preflight, then full run | Three valid preflight responses; exactly 512 completed tasks for each model |
+| `python -m baseline.finalize --scope full` | Sealed all 1,536 final responses from committed source `82cde01` |
+| `python -m baseline.finalize --verify` | Passed independent seal replay |
+| `scripts/analyze_pilot.py` | Generated three-model paired and family analysis |
+| `scripts/audit_publication.py` | Independently graded 1,536 responses and 36 model-family summaries; zero invalid responses, retries, or missing usage |
+| Old and new compact export comparison | Identical 512 task IDs and cohort fingerprint `c6bb84361fdffea7887f62ebdedbfa9c6d24da6466b5c90b750c0712bed7ecfa`; disjoint model rosters |
+
+The run used 1,536 HTTP requests and cost an estimated $3.7491922 at
+catalog rates. The published costs are estimates, not provider invoices.

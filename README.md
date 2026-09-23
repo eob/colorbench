@@ -22,6 +22,11 @@ limits. Scores from earlier releases do not transfer to this corpus.
 · [Historical 0.3.2 results](results/third-pilot.md)
 · [Website report for 0.3.2](https://edwardbenson.com/benchmarks/colorbench)
 
+Three additional models completed the same frozen 512-question release on
+September 23, 2026: Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna. Their
+[separately sealed results](results/README.md#september-2026-models) use the
+same full comparison cohort as the thirteen-model September 16 campaign.
+
 | Family | Questions | Question | Measure |
 | --- | ---: | --- | --- |
 | Matching | 48 | Which swatch has exactly R's color? | Four-choice accuracy |

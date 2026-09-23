@@ -11,6 +11,20 @@ responses. Four invalid answers remain scored observations. The
 - [colorbench-pilot-0.4.0-audit.json](colorbench-pilot-0.4.0-audit.json): independent grades, controls, and execution accounting.
 - [runs/0.4.0/pilot-20260916](runs/0.4.0/pilot-20260916): sealed raw evidence and ledger.
 
+## September 2026 models
+
+Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna each completed all 512 questions
+on the same frozen 0.4.0 release on September 23, 2026. The separately sealed
+run contains 1,536 final responses, with zero invalid answers or infrastructure
+retries. Its full-cohort fingerprint matches the September 16 campaign:
+`c6bb84361fdffea7887f62ebdedbfa9c6d24da6466b5c90b750c0712bed7ecfa`.
+The prior responses were not rerun.
+
+- [colorbench-september-models-0.4.0.json](colorbench-september-models-0.4.0.json): compact verified publication data for these three models.
+- [colorbench-september-models-0.4.0-analysis.json](colorbench-september-models-0.4.0-analysis.json): family, model, paired, hue-context, and RGB recovery results.
+- [colorbench-september-models-0.4.0-audit.json](colorbench-september-models-0.4.0-audit.json): independent grades, controls, and execution accounting.
+- [runs/0.4.0/september-models-20260923](runs/0.4.0/september-models-20260923): sealed raw responses and ledger.
+
 A new report must identify its completed run, full shared cohort, and verified
 seal. Only sources accepted by `python -m baseline.finalize --run-dir <path>
 --verify` using compatible code are eligible. Mock responses, unfinished

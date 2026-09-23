@@ -1,0 +1,109 @@
+{
+  "release": "0.4.0",
+  "run_id": "september-models-20260923",
+  "source_final_results_sha256": "0e95fc27a315b80dff5b344cd7cd84deca0d90cc41c4dc4cc8841b6cd8c452f8",
+  "execution": {
+    "runner_attempt_count": 1536,
+    "http_request_count": 1536,
+    "rows_missing_request_counts": 0,
+    "rows_missing_unmetered_counts": 0,
+    "internal_retry_count": 0,
+    "unmetered_http_request_count": 0,
+    "rows_missing_usage_count": 0,
+    "recorded_usage_subtotal_usd": 3.749192200000005,
+    "ledger_spending_usd": 3.749192200000005,
+    "unmetered_reserve_allowance_usd": 0.0,
+    "usage_complete": true,
+    "invalid_final_response_count": 0,
+    "final_response_count": 1536,
+    "limitation": "Catalog-price estimates, not provider invoices. Retry errors and bodies are not preserved individually inside an aggregated runner attempt."
+  },
+  "reference_controls": {
+    "binding": {
+      "masked_image_group_count": 12,
+      "all_groups_cover_every_answer": true,
+      "deterministic_reference_free_accuracy": 0.25
+    },
+    "context": {
+      "masked_image_group_count": 20,
+      "all_groups_cover_every_answer": true,
+      "deterministic_reference_free_accuracy": 0.25
+    },
+    "gradient": {
+      "masked_image_group_count": 4,
+      "all_groups_cover_every_answer": true,
+      "deterministic_reference_free_accuracy": 0.25
+    },
+    "hue": {
+      "masked_image_group_count": 8,
+      "all_groups_cover_every_answer": true,
+      "deterministic_reference_free_accuracy": 0.25
+    },
+    "matching": {
+      "masked_image_group_count": 12,
+      "all_groups_cover_every_answer": true,
+      "deterministic_reference_free_accuracy": 0.25
+    },
+    "smallmatch": {
+      "masked_image_group_count": 16,
+      "all_groups_cover_every_answer": true,
+      "deterministic_reference_free_accuracy": 0.25
+    }
+  },
+  "reference_free_order_control": {
+    "binding": {
+      "question_count": 48,
+      "expected_correct": 12.0,
+      "expected_accuracy": 0.25
+    },
+    "context": {
+      "question_count": 80,
+      "expected_correct": 20.0,
+      "expected_accuracy": 0.25
+    },
+    "matching": {
+      "question_count": 48,
+      "expected_correct": 12.0,
+      "expected_accuracy": 0.25
+    },
+    "smallmatch": {
+      "question_count": 64,
+      "expected_correct": 16.0,
+      "expected_accuracy": 0.25
+    }
+  },
+  "independent_grading": {
+    "response_count": 1536,
+    "numeric_response_count": 144,
+    "model_family_summaries_verified": 36,
+    "choice_correct_counts": {
+      "binding": 129,
+      "chroma": 192,
+      "context": 232,
+      "gradient": 48,
+      "hue": 95,
+      "lightness": 190,
+      "matching": 130,
+      "samediff": 124,
+      "smallmatch": 151
+    },
+    "family_response_counts": {
+      "binding": 144,
+      "chroma": 192,
+      "context": 240,
+      "gradient": 48,
+      "hsl": 48,
+      "hue": 96,
+      "lightness": 192,
+      "matching": 144,
+      "oklch": 48,
+      "rgb": 48,
+      "samediff": 144,
+      "smallmatch": 192
+    },
+    "maximum_delta_e_drift": 3.122502256758253e-16,
+    "maximum_score_drift": 6.252776074688882e-13,
+    "distance_tolerance": 1e-12,
+    "score_tolerance": 1e-10
+  }
+}
